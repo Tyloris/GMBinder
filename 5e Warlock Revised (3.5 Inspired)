@@ -1,0 +1,539 @@
+<style>
+/* GLOBAL FORMATTING  */
+
+  /* Resize page to international A4 */
+  .phb {
+    width: 210mm;
+    height: 296.8mm;
+  }
+  .phb:after { content: ""; }
+
+/* Temporary Fix for heading issues */
+    .phb p{ line-height: 15px; } 
+    .phb blockquote p{ line-height: 14px; } 
+    .phb h2{ line-height: 26px; } 
+    .phb h3{ line-height: 19px; } 
+    .phb h4{ line-height: 15px; padding-bottom: 3px; } 
+    .phb h5{ line-height: 17px; } 
+    th, td { line-height: 14px; }
+
+/* TABLE OF CONTENTS  */
+
+  /* toc specifically wants black text. This resets the headers*/
+  .toc a {
+    color: inherit !important;
+  }
+  /* Allow dot leaders to fill remaining space but not overlap */
+  .toc li span:nth-child(2) {
+    width: auto;
+    overflow: hidden;
+    white-space: nowrap;
+    display: block;
+  }
+  .toc li span:nth-child(2):after {
+    font-family: BookSanity;
+    font-size: 0.317cm;
+    font-weight: normal;
+    color: black;
+    content:
+      " ........................................"
+      "........................................."
+      ".........................................";
+    }
+
+  /* Style TOC page numbers*/
+  .toc li span:first-child {
+    float: right;
+    font-family: BookSanity;
+    font-size: 0.317cm;
+    font-weight: normal;
+    color: black;
+    margin-left: 1px;
+  }
+
+  /* Adjust TOC H3 styles */
+  .toc li h3 span:nth-child(2):after {
+  	content: " ";
+  }
+  .toc li h3 {
+    margin-bottom: 4px !important;
+    margin-top: 10px !important;
+    line-height: initial !important;
+  }
+  .toc li h3 span:first-child {
+  	line-height: 1.8em !important;
+  }
+
+  /* Reduce TOC list indentation*/
+  .toc ul ul {
+  	margin-left: 10px !important;
+  }
+  .toc>ul>li {
+    margin-bottom: initial !important;
+  }
+
+
+/* TABLES AND BLOCKS */
+
+  /* Clear internal padding and add gap above for green note blocks*/
+  .phb blockquote {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .phb blockquote { margin-top: 1em;
+  }
+
+
+/* INK BLOT STYLES */
+
+  /* Root style for inkblots. Use alone, or together with
+  one of the inkb lotstyle classes below. Essentially:
+  <img url='{url}' class='inkblot inkblot-blue' />
+  */
+  .inkblot {
+    position: absolute;
+    mix-blend-mode: multiply;
+    opacity: 0.6;
+  }
+
+  .inkblot-blue {
+    filter: hue-rotate(190deg) saturate(120%)
+  }
+
+  .inkblot-green {
+    filter: hue-rotate(120deg)
+  }
+
+</style>
+
+<style>
+/* Background */
+  .phb{ background-image: url('https://gmbinder.com/images/KN1O92T.png') }
+  .phb{ background-size: cover }
+
+/* Notes */
+  .phb section blockquote {background-color: #f6e5d4}
+  .phb hr + section blockquote tr:nth-child(odd) td {background-color: transparent;}
+
+/* Tables */
+  table tr:nth-child(odd) td {background-color: #cccccc}
+
+/* Footer */
+  .phb .pageNumber {color: rgba(0, 0, 0, 0.5)}
+  .phb .footnote {color: rgba(0, 0, 0, 0.5)}
+  .phb:nth-child(odd):after{ 
+    content          : '';
+    position         : absolute;
+    bottom           : -7px;
+    left             : 10px;
+    z-index          : -1;
+    height           : 336px;
+    width            : 100%;
+    background-image : url('https://www.gmbinder.com/images/bNTz1nk.png');
+    background-size  : cover;
+}
+
+.phb:nth-child(even):after{ 
+    content          : '';
+    position         : absolute;
+    bottom           : -7px;
+    left             : -10px;
+    z-index          : -1;
+    height           : 336px;
+    width            : 100%;
+    background-image : url('https://www.gmbinder.com/images/6NCzAN0.png');
+    background-size  : cover;
+}
+
+  /* Footer with white text against dark backgrounds */
+  .phb .footnote.footnote-white,
+  .phb .footnote.footnote-white + .pageNumber,
+  .phb .footnote.footnote-white + section .pageNumber {
+    color: rgba(255,255,255,0.8);
+  }
+
+
+/* Page Number */
+.phb .pageNumber{
+    position   : absolute;
+    bottom     : 30px;
+    width      : 50px;
+    text-align : center;
+}
+.phb:nth-child(even) .pageNumber{
+    left      : 12px;
+}
+.phb:nth-child(odd) .pageNumber{
+    right      : 12px;
+}
+
+.phb .pageNumber.auto{
+    position   : absolute;
+    bottom     : 41px;
+    width      : 50px;
+    text-align : center;
+}
+.phb:nth-child(even) .pageNumber.auto{
+    left      : 12px;
+}
+.phb:nth-child(odd) .pageNumber.auto{
+    right      : 12px;
+}
+
+</style>
+
+## Warlock
+
+\pagebreakNum
+
+<div class='classTable wide'>
+
+##### The Warlock
+|Level| Proficiency<br/>Bonus | Features | Invocations<br/>Known | Cantrips</br>Known | Spells <br/> Known | Spell<br/>Slots | Slot<br/>Level
+|:---:|:--:|:-----------------------------------------------------------|:--:|:-:|:--:|:-:|:---:|
+| 1st | +2 | Otherworldly Patron, Pact Magic                            |  — | 2 |  2 | 1 | 1st |
+| 2nd | +2 | Eldritch Invocations                                       |  2 | 2 |  3 | 2 | 1st |
+| 3rd | +2 | Pact Focus                                                 |  2 | 2 |  4 | 2 | 2nd |
+| 4th | +2 | Ability Score Improvement                                  |  2 | 2 |  5 | 2 | 2nd |
+| 5th | +3 | MultiBeam (2)                                              |  3 | 3 |  6 | 3 | 3rd |
+| 6th | +3 | Otherworldly Patron feature                                |  3 | 3 |  7 | 3 | 3rd |
+| 7th | +3 | —                                                          |  4 | 3 |  8 | 3 | 4th |
+| 8th | +3 | Ability Score Improvement                                  |  4 | 3 |  9 | 3 | 4th |
+| 9th | +4 | Contact Patron                                             |  5 | 3 | 10 | 3 | 5th |
+| 10th| +4 | Otherworldly Patron feature                                |  5 | 4 | 10 | 3 | 5th |
+| 11th| +4 | MultiBeam (3)                                              |  6 | 4 | 11 | 4 | 5th |
+| 12th| +4 | Ability Score Improvement                                  |  7 | 4 | 11 | 4 | 5th |
+| 13th| +5 | —                                                          |  8 | 4 | 12 | 4 | 5th |
+| 14th| +5 | Otherworldly Patron feature                                |  8 | 4 | 12 | 4 | 5th |
+| 15th| +5 | —                                                          | 10 | 4 | 13 | 4 | 5th |
+| 16th| +5 | Ability Score Improvement                                  | 10 | 4 | 13 | 4 | 5th |
+| 17th| +6 | MultiBeam (4)                                              | 11 | 4 | 14 | 5 | 5th |
+| 18th| +6 |                                                            | 12 | 4 | 14 | 5 | 5th |
+| 19th| +6 | Ability Score Improvement                                  | 12 | 4 | 15 | 5 | 5th |
+| 20th| +6 | Patron's Might                                             | 12 | 4 | 15 | 5 | 5th |
+</div>
+
+#### Quick Build
+Charisma, then Constitution. Criminal background. Infernal pact, XXX and XXX cantrips, XXX and XXX spells.
+
+#### Optional Rule: Multiclassing
+If your group uses the optional rule on multiclassing in the *Player's Handbook*, here's what you need to know if you choose warlock as one of your classes.
+
+***Ability Score Minimum.*** As a multiclass character, you must have at least an Charisma score of 13 to take a level in this class, or to take a level in another class if you are already a warlock.
+
+***Proficiencies Gained.*** If warlock isn't your initial class, you gain skill of your choice from the warlock skill proficiencies when you take your first level of warlock.
+
+\columnbreak
+
+## Class Features
+As a warlock, you gain the following class features.
+
+#### Hit Points
+___
+- **Hit Dice:** 1d8 per warlock level
+- **Hit Points at 1st Level:** 8 + your Constitution modifier
+- **Hit Points at Higher Levels:** 1d8 (or 5) + your Constitution modifier per warlock level after 1st
+
+<div style='margin-top:-2px;'></div>
+
+#### Proficiencies
+___
+- **Armor:** Light armor
+- **Weapons:** Simple weapons
+- **Tools:** None
+___
+- **Saving Throws:** Constitution, Charisma
+- **Skills:** Choose two from Arcana, Deception, History, Insight, Intimidation, Investigation, Nature, Persuasion, and Religion
+
+<div style='margin-top:-2px;'></div>
+
+#### Equipment
+You start with the following equipment, in addition to the equipment granted by your background:
+
+- *(a)* a light crossbow and 20 bolts or *(b)* any simple weapon
+- *(a)* a component pouch or *(b)* an arcane focus
+- *(a)* a scholar's pack or *(b)* a dungeoneer's pack
+- Leather armor, any simple weapon, and two daggers
+
+\pagebreakNum
+### Otherworldly Patron
+*1st-level warlock feature* <br/>
+<div style='margin-top:-4px;'></div>
+
+At 1st level, you have struck a bargain with an otherworldly being of your choice. Your choice grants you features at 1st level and again at 6th, 10th, and 14th level.
+
+#### Patron Spells
+Each patron has a list of spells-its patron spells that you gain at the warlock levels noted in the domain description. Once you gain a patron spell, you add it your your list of spells known, and it doesn't count against the number of spells you know.
+
+If you have a patron spell that doesn't appear on the warlock spell list, the spell is nonetheless a warlock spell for you.
+
+### Pact Magic
+*1st-level warlock feature*
+<div style='margin-top:-4px'></div>
+
+Your arcane research and the magic bestowed on you by your patron have given you facility with spells. See chapter 10 of the Player's Handbook for the general rules of spellcasting.
+
+#### Eldritch Blast
+The first ability a warlock learns is the *eldritch blast*, a beam of baleful magical energy. As an action, you can make a ranged spell attack against a target you can see within 120 feet. On hit, it takes 1d8 force damage.
+
+#### Cantrips
+You know two cantrips of your choice from the warlock spell list. You learn additional warlock cantrips of your choice at higher levels, as shown in the Cantrips Known column of the Warlock table.
+
+#### Spell Slots
+The Warlock table shows how many spell slots you have to cast your warlock spells of 1st through 5th level. The table also shows what the level of those slots is; all of your spell slots are the same level. To cast one of your warlock spells of 1st level or higher, you must expend a spell slot. You regain all expended spell slots when you finish a short or long rest.
+
+For example, when you are 5th level, you have two 3rd-level spell slots. To cast the 1st-level spell *witch bolt*, you must spend one of those slots, and you cast it as a 3rd-level spell.
+
+#### Spells Known of 1st Level and Higher
+At 1st level, you know two 1st-level spells of your choice from the warlock spell list.
+
+The Spells Known column of the Warlock table shows when you learn more warlock spells of your choice of 1st level or higher. A spell you choose must be of a level no higher than what's shown in the table's Slot Level column for your level. When you reach 6th level, for example, you learn a new warlock spell, which can be 1st, 2nd, or 3rd level.
+
+Additionally, when you gain a level in this class, you can choose one of the warlock spells you know and replace it with another spell from the warlock spell list, which also must be of a level for which you have spell slots.
+
+\columnbreak
+
+#### Spellcasting Ability
+Charisma is your spellcasting ability for your warlock spells, so you use your Charisma whenever a spell refers to your spellcasting ability. In addition, you use your Charisma modifier when setting the saving throw DC for a warlock spell you cast and when making an attack roll with one.
+
+<div style="text-align: center">
+
+**Spell save DC** = 8 + your proficiency bonus + <br/> your Charisma modifier
+
+**Spell attack modifier** = your proficiency bonus + <br/> your Charisma modifier
+</div>
+
+#### Spellcasting Focus
+You can use an arcane focus as a spellcasting focus for your warlock spells.
+
+### Eldritch Invocations
+*2nd-level warlock feature* <br/>
+<div style='margin-top:-4px;'></div>
+
+In your study of occult lore, you have unearthed Eldritch Invocations, fragments of forbidden knowledge that imbue you with an abiding magical ability.
+
+At 2nd level, you gain two eldritch invocations of your choice. When you gain certain warlock levels, you gain additional invocations of your choice, as shown in the Invocations Known column of the Warlock table. A level prerequisite refers to your level in this class.
+
+Additionally, when you gain a level in this class, you can choose one of the invocations you know and replace it with another invocation that you could learn at that level.
+
+### Pact Focus
+*3rd level warlock ability*
+
+#### Pact of the Blade
+You can use your bonus action to create a pact weapon in your empty hand. You choose the form that this melee weapon takes each time you create it, and gain the following benefits:
+- You use your Charisma modifier, instead of instead of Strength or Dexterity, for the attack and damage rolls with this weapon.
+- The weapon counts as magical for the sake of overcoming resistance and immunity to non-magical attacks.
+- You are proficient with this weapon if you weren't already.
+
+The pact weapon disappears if it is more than 5 feet from you for 1 minute, if you conjure another pact weapon, if you dismiss your pact weapon (no action required), or if you die.
+
+You can bond a magic melee weapon as an pact weapon by performing a special 1-hour ritual. Once bonded, you can use a bonus action to shunt it to an extradimensional space, or to conjure it. You can only have one magic weapon bonded as an pact weapon at a time, and in order to bond a sentient magic weapon as your pact weapon it must be willing.
+
+#### Pact of the Chain
+You learn how to bind the *find familiar* spell and can cast it as a ritual. The spell doesn't count against your number of spells known. When you cast the spell, you can choose to conjure one of the pact familiars detailed at the end of this class, in addition to the normal forms a familiar can take.
+
+\pagebreakNum
+
+Your pact familiar is bound to obey your orders to the best of its abilities. In combat, it shares your initiative and it acts on your turn. However, it will only take the Dodge action on its turn unless you use your bonus action to command it to take an action from its stat block or another combat action.
+
+Finally, when you cast a warlock spell, you can choose for it to originate from your familiar if you are within 60 feet.
+with its reaction.
+
+#### Pact of the Cup
+
+#### Pact of the Talisman
+Your patron gives you an amulet, a talisman that can aid the wearer when the need is great. When the wearer fails an ability check, they can add a d4 to the roll, potentially turning the roll into a success. This benefit can be used a number of times equal to your proficiency bonus, and all expended uses are restored when you finish a long rest.
+
+If you lose the talisman, you can perform a 1-hour ceremony to receive a replacement from your patron. This ceremony can be performed during a short or long rest, and it destroys the previous amulet. The talisman turns to ash when you die.
+
+#### Pact of the Tome
+You focus your Patron's power into a dark grimoire. This pact tome contains a copy of each warlock spell you know and grants you the benefits listed below:
+- It counts as a spellcasting focus for your warlock spells.
+- At the end of each short or long rest you can touch one page in the Tome to replace one warlock spell or cantrip you know with another warlock spell of the same level.
+- You can cast any warlock spell contained within your Tome as a ritual if that warlock spell has the ritual tag.
+- When you cast a warlock cantrip or use Eldritch Blast, you add your Intelligence modifier to the damage roll.
+- You can spend 1 hour, which can be during a short or long rest, to conjure an exact copy of your Tome, destroying any of the previous Tomes. If you die your Tome turns to ash.
+
+### Ability Score Improvement
+*4th-level warlock feature* <br/>
+<div style='margin-top:-4px;'></div>
+
+When you reach 4th level, and again at 8th, 12th, 16th, and 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.
+
+#### Optional Versatility
+Whenever you reach a level in this class that grants the Ability Score Improvement feature, you can do one of the following, representing a change of focus in your occult studies:
+- Replace one cantrip you learned from this class with another cantrip from the warlock spell list.
+- Replace the option you chose for the Pact Boon feature with one of that feature's other options.
+
+If this change makes you ineligible for any of your Eldritch Invocations, you must also replace them now, choosing invocations for which you qualify.
+
+### Contact Patron
+*9th-level warlock feature* <br/>
+<div style='margin-top:-4px;'></div>
+
+In the past, you have usually contacted your patron through intermediaries. Now you can communicate directly through use of the *contact other plane* spell, which you know. With this feature, you can cast the spell without expending a spell slot to contact your patron, and you automatically succeed on the spell’s saving throw. 
+
+Once you cast the spell with this feature, you can’t do so again until you finish a long rest.
+
+### Patron's Might
+*20th-level warlock feature* <br/>
+<div style='margin-top:-4px;'></div>
+
+Your patron’s favor is evident, and your power has begun to grow past the pact you first swore, power which can easily shatter the world. You can cast the spell *wish* once without using a spell slot. Once you do, you cannot do so again for seven days.
+
+If you lose the ability to cast *wish*, you instead lose the ability to create effects that are not spells.
+
+\pagebreakNum
+
+## Otherworldly Patrons
+### Aetherborn
+Aetherborn are powerful mages who are fundamentally made of magic. Their look can be as varied as the kinds of magic that exist, but they often bear symbols or artifacts that are sources of their power.
+
+#### Raw Magic
+**[Lore text.]** Whenever you use Eldritch Blast, you deal 1d10 force damage on a hit.
+
+You learn the following Patron Spells at the Warlock levels listed below. When you gain a Warlock level you can replace one of your Patron Spells with an **[enchantment or an illusion spell of the same level from the Bard or Druid spell list.]**
+
+Warlock<br/>Level | Spells
+--------------|------------
+2nd | *magic missile*, *???*
+3rd | 
+5th | 
+7th | 
+9th | 
+
+### Archfey
+
+#### Fey Magic
+Your Patron empowers your magic with the mind-bending power of the Feywild. Whenever you use Eldritch Blast, you can choose for it to deal 1d10 psychic damage on hit.
+
+You learn the following Patron Spells at the Warlock levels listed below. When you gain a Warlock level you can replace one of your Patron Spells with an enchantment or an illusion spell of the same level from the Bard or Druid spell list.
+
+Warlock<br/>Level | Spells
+--------------|------------
+2nd | *faerie fire*, *sleep*
+3rd | *misty step*, *phantasmal force*
+5th	| *fear*, *hypnotic pattern*
+7th	| *hallucinatory terrain*, *greater invisibility*
+9th	| *mislead*, *seeming*
+
+### Beholder
+
+Warlock<br/>Level | Spells
+--------------|------------
+2nd | *magic missile*, *???*
+3rd | 
+5th | 
+7th | 
+9th | 
+
+### Celestial
+#### Holy Magic
+Warlock<br/>Level | Spells
+--------------|------------
+2nd | *magic missile*, *???*
+3rd | 
+5th | 
+7th | 
+9th | 
+
+### Djinn
+#### Genie Magic
+Warlock<br/>Level | Spells
+--------------|------------
+2nd | *magic missile*, *???*
+3rd | 
+5th | 
+7th | 
+9th | 
+
+### Dragon
+##### Draconic Patron
+d10 | Dragon  | Damage Type 
+----|----|-----------|
+1   | Black   | Acid      |
+2   | Blue    | Lightning |
+3   | Brass   | Fire      |
+4   | Bronze  | Lightning |
+5   | Copper  | Acid      |
+6   | Gold    | Fire      |
+7   | Green   | Poison    |
+8   | Red     | Fire      |
+9   | Silver  | Cold      |
+10  | White   | Cold      |
+
+Warlock<br/>Level | All     | Black | Blue  | Brass | Bronze    | Copper    
+------------------|---------|-------|-------|-------|-----------|-----------
+1st | *cause fear* ^XGE^    | 
+3rd | *dragon's breath*     |
+5th | *fly*                 |
+7th |
+9th |
+
+Warlock<br/>Level | All     | Gold  | Green | Red   | Silver    | White
+------------------|---------|-------|-------|-------|-----------|-----------
+1st | *cause fear* ^XGE^    | 
+3rd | *dragon's breath*     |
+5th | *fly*                 |
+7th |
+9th |
+
+
+#### Draconic Magic
+Your Draconic Spark empowers your magic. Whenever you use Eldritch Blast, you can choose for it to emanate from your mouth and deal 1d10 Draconic Spark damage on hit.
+
+You also learn the following Patron Spells at the Warlock levels listed below. When you gain a Warlock level you can replace one Patron Spell with a spell of the same level that deals your Draconic Spark damage from any class spell list.
+
+Warlock<br/>Level | Spells
+--------------|------------
+2nd	absorb elements XGE, chromatic orb XGE
+3rd	dragon's breath XGE, scorching ray
+5th	fireball, lightning bolt
+7th	vitriolic sphere XGE, wall of fire
+9th	dominate person, cone of cold
+
+### Fathomless
+#### Deep Magic
+### Fiend
+#### Fiendish Magic
+Your Patron empowers your magic with Hellfire. Whenever you use Eldritch Blast, you can choose for it to deal 1d10 fire damage on hit, ignoring any resistances to fire damage.
+
+You also learn the following Patron Spells at the Warlock levels listed below. When you gain a Warlock level you can replace one Patron Spell with an evocation or necromancy spell of that level from the Sorcerer or Warlock spell list.
+
+Warlock<br/>Level | Spells
+--------------|------------
+2nd	command, hellish rebuke
+3rd	blindness/deafness, flame whip W
+5th	bestow curse, fireball
+7th	blight, wall of fire
+9th	cloudkill, immolation XGE
+
+### Great Old One
+#### Aberrant Magic
+Your Patron empowers your magic with incomprehensible power. Whenever you fire a beam of your Eldritch Blast at a creature, you can force the creature to make an Intelligence saving throw in place of making the normal spell attack roll. On a failed save, the creature takes 1d8 psychic damage.
+
+You also learn the following Patron Spells at the Warlock levels listed below. When you gain a Warlock level you can replace one Patron Spell with a divination or enchantment spell of the same level from the Bard or Wizard spell list.
+
+Warlock<br/>Level | Spells
+--------------|------------
+2nd	arms of hadar, dissonant whispers
+3rd	detect thoughts, mind whip TCE
+5th	clairvoyance, hunger of hadar W
+7th	confusion, eldritch tentacles W
+9th	modify memory, telekinesis
+
+### Hexblade
+#### Shadow Magic
+### Machine
+#### Clockwork Magic
+### Undead
+#### Unholy Magic
+
+\pagebreakNum
+
+## Eldritch Invocations
+#### Amorphous Form
+
+## Spells
+#### Baleful Utterance
+[Source](https://www.gmbinder.com/share/-LFkvF33vjUeacc5lK3Z)
