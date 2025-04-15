@@ -1,0 +1,90 @@
+- Race is single gender, reproducing through parthenogenesis. Their visage form can be of a particular gender and functional sex, but in their true form they are able to reproduce asexually, as each dracthyr contains all of the genetic material of each dragon type.
+
+
+### Dracthyr Traits
+Your dracthyr character has the following traits.
+
+***Ability Score Increase.*** Your Charisma score increases by 2, and either your Strength, Dexterity, or Constitution score increases by 1.
+
+***Age.***
+
+***Creature Type.*** You are a Dragon.
+
+***Size.*** You stand between X and X feet tall and weigh about XXX pounds. Your size is Medium.
+
+***Speed.*** Your base walking speed is 30 feet.
+
+***Darkvision.*** Due to your draconic nature, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can’t discern color in darkness, only shades of gray.
+
+***Keen Senses.*** You have proficiency in Perception.
+
+***Breath Weapon.*** When you take the Attack action on your turn, you can replace one of your attacks with an exhalation of magical energy in either a 15-foot cone or a 30-foot long, 5-foot wide line.
+
+Each creature in that area must make a Dexterity saving throw (DC = 8 + your Constitution modifier + your proficiency bonus). On a failed save, the creature takes 1d8 damage of a type you choose: acid, cold, fire, lightning, or thunder damage. On a successful save, it takes half as much damage. This damage increases by 1d8 when you reach 5th level (2d8), 11th level (3d8), and 17th level (4d8).
+
+You can use your Breath Weapon a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest.
+
+***Energy Absorption.*** You can cast *absorb elements* without expending a spell slot. You can do so a number of times equal to your proficiency bonus and regain all expended uses when you finish a long rest.
+
+***Claws and Fangs.*** You have claws and a fanged maw that you can use to make unarmed strikes. When you hit with them, the strike deals 1d6 + your Strength modifier slashing or piercing damage, instead of the bludgeoning damage normal for an unarmed strike.
+
+***Natural Armor.*** You have tough, scaly skin. When you aren't wearing armor, your AC is 13 + your Dexterity modifier. You can use your natural armor to determine your AC if the armor you wear would leave you with a lower AC. A shield's benefits apply as normal while you use your natural armor.
+
+***Wings.*** Your wings allow you to glide, slowing your fall to 60 feet per round and taking no damage upon landing if you are not incapacitated. You move two feet horizontally for every foot you fall vertically.
+
+Starting at 5th level, you gain a fly speed of 20 feet while you are not wearing medium or heavy armor. At 9th level, your fly speed increases to 30 feet and you can use it while wearing medium armor. At 13th level, your fly speed matches your movement speed and you can fly in heavy armor.
+
+\pagebreakNum
+
+### Racial Feat: Draconic Combat
+*Prerequisite: Dracthyr*
+- **Tail Swipe.**
+- **Wing Buffet.**
+
+### Racial Feat: Mortal Visage
+- You can transform yourself into or out of a humanoid form as an action. This form may be of any race or gender and up to three feet taller or shorter, allowing certain transformed dracthyr to become Small size. Each dracthyr's visage is always a unique and specific humanoid which reflects their inner self; while their appearance may change, some aspects of their true nature bleed through, such as horns, patches of scales, or slitted eyes.
+
+### Racial Feat
+- You can cast absorb elements at a higher spell level
+- You can add the bonus damage to your next breath weapon attack
+
+### Racial Feat
+- Claws used for climb speed
+- Powerful build
+
+\pagebreak
+
+## Evoker
+
+\pagebreak
+
+<div class='classTable wide'>
+
+##### The Evoker
+
+|Level|Proficiency<br/>Bonus | Features   | Essence <br/> Points | &nbsp;&nbsp; | Spells<br/>Known| &nbsp;&nbsp; | 1st | &nbsp;&nbsp; | 2nd | &nbsp;&nbsp; | 3rd | &nbsp;&nbsp; | 4th | &nbsp;&nbsp; | 5th <div style="position: absolute; top:100px; right:56px; width:200px; height:25px">—Spell Slots per Spell Level—</div>|
+|:---:|:--:|:---------------------------------------------------|:-:|-|:-:|-|:-:|-|:-:|-|:-:|-|:-:|-|:-:|-|
+| 1st | +2 | Essence                                            | 1|| —||—||—||—||—||—|
+| 2nd | +2 | Spellcasting                                       | 2|| 2||2||—||—||—||—|
+| 3rd | +2 | Empower (2nd)                                      | 3|| 3||3||—||—||—||—|
+| 4th | +2 | Ability Score Improvement                          | 4|| 3||3||—||—||—||—|
+| 5th | +3 | Empower (3rd)                                      | 5|| 4||4||2||—||—||—|
+| 6th | +3 |                                                    | 6|| 4||4||2||—||—||—|
+| 7th | +3 | Empower (4th)                                      | 7|| 5||4||3||—||—||—|
+| 8th | +3 | Ability Score Improvement                          | 8|| 5||4||3||—||—||—|
+| 9th | +4 | Empower (5th)                                      | 9|| 6||4||3||2||—||—|
+| 10th| +4 |                                                    |10|| 6||4||3||3||—||—|
+| 11th| +4 | Empower (6th)                                      |11|| 7||4||3||3||—||—|
+| 12th| +4 | Ability Score Improvement                          |12|| 7||4||3||3||—||—|
+| 13th| +5 | Empower (7th)                                      |13|| 8||4||3||3||1||—|
+| 14th| +5 |                                                    |14|| 8||4||3||3||1||—|
+| 15th| +5 | Empower (8th)                                      |15|| 9||4||3||3||2||—|
+| 16th| +5 | Ability Score Improvement                          |16|| 9||4||3||3||2||—|
+| 17th| +6 | Empower (9th)                                      |17||10||4||3||3||3||1|
+| 18th| +6 |                                                    |18||10||4||3||3||3||1|
+| 19th| +6 | Ability Score Improvement                          |19||11||4||3||3||3||2|
+| 20th| +6 |                                                    |20||11||4||3||3||3||2|
+
+</div>
+
+Empower: Spend extra time and essence to boost an evoker spell you cast to a higher spell level.
