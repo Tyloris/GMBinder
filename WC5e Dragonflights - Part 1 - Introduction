@@ -1,0 +1,377 @@
+<style>
+/* GLOBAL FORMATTING  */
+
+  /* Resize page to international A4 */
+  .phb {
+    width: 210mm;
+    height: 296.8mm;
+  }
+  .phb:after { content: ""; }
+
+/* Temporary Fix for heading issues */
+    .phb p{ line-height: 15px; } 
+    .phb blockquote p{ line-height: 14px; } 
+    .phb h2{ line-height: 26px; } 
+    .phb h3{ line-height: 19px; } 
+    .phb h4{ line-height: 15px; padding-bottom: 3px; } 
+    .phb h5{ line-height: 17px; } 
+    th, td { line-height: 14px; }
+
+/* TABLE OF CONTENTS  */
+
+  /* toc specifically wants black text. This resets the headers*/
+  .toc a {
+    color: inherit !important;
+  }
+  /* Allow dot leaders to fill remaining space but not overlap */
+  .toc li span:nth-child(2) {
+    width: auto;
+    overflow: hidden;
+    white-space: nowrap;
+    display: block;
+  }
+  .toc li span:nth-child(2):after {
+    font-family: BookSanity;
+    font-size: 0.317cm;
+    font-weight: normal;
+    color: black;
+    content:
+      " ........................................"
+      "........................................."
+      ".........................................";
+    }
+
+  /* Style TOC page numbers*/
+  .toc li span:first-child {
+    float: right;
+    font-family: BookSanity;
+    font-size: 0.317cm;
+    font-weight: normal;
+    color: black;
+    margin-left: 1px;
+  }
+
+  /* Adjust TOC H3 styles */
+  .toc li h3 span:nth-child(2):after {
+  	content: " ";
+  }
+  .toc li h3 {
+    margin-bottom: 4px !important;
+    margin-top: 10px !important;
+    line-height: initial !important;
+  }
+  .toc li h3 span:first-child {
+  	line-height: 1.8em !important;
+  }
+
+  /* Reduce TOC list indentation*/
+  .toc ul ul {
+  	margin-left: 10px !important;
+  }
+  .toc>ul>li {
+    margin-bottom: initial !important;
+  }
+
+
+/* TABLES AND BLOCKS */
+
+  /* Adjust tables */
+  table tr:nth-child(odd) td { background-color: #FFF0f5; }
+  .phb hr+section blockquote tr:nth-child(odd) td { background-color: transparent; }
+
+  /* Clear internal padding and add gap above for green note blocks*/
+  .phb blockquote {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .phb blockquote { margin-top: 1em; }
+
+  /* Clear internal padding in creature statblocks */
+  .phb hr+section blockquote {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  .phb blockquote {
+    box-shadow: 1px 4px 14px rgba(0,0,0,0.42);
+  }
+
+  /* For creature statblocks within range (start and end must be specified),
+     don't show a background. Used for the appendix creatures */
+  .phb:nth-of-type(n+107):nth-of-type(-n+130) hr+section blockquote {
+      background: none;
+      border: none;
+      box-shadow: none;
+  }
+
+
+/* FOOTER */
+
+  /* Footnotes */
+  .phb .pageNumber {
+    color: #7e735c;
+    z-index: 1000;
+  }
+  .phb .footnote { color: #7e735c; }
+
+  /* On odd child pages, have the Monster Manual page tear and lettering */
+  .phb:nth-child(odd):after {
+    content: '';
+    height: 125px;
+    background-image: url(https://gmbinder.com/images/lLWeevR.png), url('https://gmbinder.com/images/YWardeu.png');
+    background-size: 120px 120px, 816px 55px;
+    background-repeat: no-repeat, no-repeat;
+    background-position: bottom right, bottom;
+  }
+
+  /* Hacked reverse of the Monster Manual page tear for alternating pages */
+  .phb:nth-child(even):after {
+    content: '';
+    height: 125px;
+    background-image: url(https://gmbinder.com/images/lLWeevR.png), url('https://gmbinder.com/images/YWardeu.png');
+    background-size: 120px 120px, 816px 55px;
+    background-repeat: no-repeat, no-repeat;
+    background-position: bottom right, bottom;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+  }
+
+  /* The letter in the Monster Manual page tear */
+  .pageLetter {
+    position: absolute;
+    right: 25px;
+    bottom: 87.5px;
+    color: #673e1c;
+    z-index: 1000;
+    font-size: 135%;
+  }
+
+  /* Reversed for alternating pages */
+  .phb:nth-child(even) .pageLetter {
+      left: 25px;
+  }
+  
+    /* Footer with white text against dark backgrounds */
+  .phb .footnote.footnote-white,
+  .phb .footnote.footnote-white + .pageNumber,
+  .phb .footnote.footnote-white + section .pageNumber {
+    color: rgba(255,255,255,0.8);
+  }
+
+
+
+/* MONSTER MANUAL LETTER SECTION HEADER */
+
+  /* Adds the surrounding framing for the big, bold monster letter headings */
+  .letterheader {
+    position: absolute;
+    top: 30px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: url(https://gmbinder.com/images/YH3aESG.png);
+    background-size: cover;
+    width: 775px;
+    height: 133px;
+  }
+
+  /* Base component for the actual letter in the heading */
+  .mmletter {
+      position: absolute;
+      top: 20px;
+      left: 0;
+      right: 0;
+      margin-left: auto;
+      margin-right: auto;
+      background-size: cover;
+      width: 163.2px;
+      height: 163.2px;
+  }
+
+  /* Use one in combination with .mmletter to show that letter */
+  .mml-a { background-image: url(https://gmbinder.com/images/fVVv93s.png); }
+  .mml-b { background-image: url(https://gmbinder.com/images/21X6N0B.png); }
+  .mml-c { background-image: url(https://gmbinder.com/images/MvnpOWF.png); }
+  .mml-d { background-image: url(https://gmbinder.com/images/AFbLU4P.png); }
+  .mml-e { background-image: url(https://gmbinder.com/images/28NVNf9.png); }
+  .mml-f { background-image: url(https://gmbinder.com/images/Oyrhmqy.png); }
+  .mml-g { background-image: url(https://gmbinder.com/images/fRyiQn4.png); }
+  .mml-h { background-image: url(https://gmbinder.com/images/N8NamlT.png); }
+  .mml-i { background-image: url(https://gmbinder.com/images/xWI93aa.png); }
+  .mml-j { background-image: url(https://gmbinder.com/images/GgIzsun.png); }
+  .mml-k { background-image: url(https://gmbinder.com/images/OcObsWl.png); }
+  .mml-l { background-image: url(https://gmbinder.com/images/B7AUyR6.png); }
+  .mml-m { background-image: url(https://gmbinder.com/images/q4wXoxt.png); }
+  .mml-n { background-image: url(https://gmbinder.com/images/OJtC4w9.png); }
+  .mml-o { background-image: url(https://gmbinder.com/images/adeRr5d.png); }
+  .mml-p { background-image: url(https://gmbinder.com/images/EEhcrSR.png); }
+  .mml-q { background-image: url(https://gmbinder.com/images/O1AhfzL.png); }
+  .mml-r { background-image: url(https://gmbinder.com/images/w66eIuZ.png); }
+  .mml-s { background-image: url(https://gmbinder.com/images/YEoe0PP.png); }
+  .mml-t { background-image: url(https://gmbinder.com/images/7Bk9D35.png); }
+  .mml-u { background-image: url(https://gmbinder.com/images/uVJZYUg.png); }
+  .mml-v { background-image: url(https://gmbinder.com/images/gKjngey.png); }
+  .mml-w { background-image: url(https://gmbinder.com/images/14WWpsC.png); }
+  .mml-x { background-image: url(https://gmbinder.com/images/ojIYjh0.png); }
+  .mml-y { background-image: url(https://gmbinder.com/images/Gi1ePwY.png); }
+  .mml-z { background-image: url(https://gmbinder.com/images/0ZTFNVs.png); }
+
+
+/* INK BLOT STYLES */
+
+  /* Root style for inkblots. Use alone, or together with
+  one of the inkb lotstyle classes below. Essentially:
+  <img url='{url}' class='inkblot inkblot-blue' />
+  */
+  .inkblot {
+    position: absolute;
+    mix-blend-mode: multiply;
+    opacity: 0.6;
+  }
+
+  .inkblot-blue {
+    filter: hue-rotate(190deg) saturate(120%)
+  }
+
+  .inkblot-green {
+    filter: hue-rotate(120deg)
+  }
+
+</style>
+
+## Dragons
+Among the greatest of all living beings on the face of Azeroth, dragons are creatures who live up to their many legends. Their power is great as great as their beauty is majestic; a tremendous force to be reckoned with. 
+
+Mature dragons are often larger than other creatures they might encounter, and their fangs and claws strong enough to destroy who might oppose them. To top it all off, most dragons are fortified further still with innate magical power. All of this taken into consideration, it is easy to see how their history is intricately twined with that of Azeroth itself -- in ways that few other beings can boast.
+
+Their connection with the world is innate; born from both their heritage and from the power of the Dragon Aspects. With its first breath of life, a dragon will weave a bond with the world with the world around it, and when its death comes to pass it does so to a tremendous upheaval; causing earthquakes, floods, and suchlike.
+
+Even young dragons, those who have not established as close a bond to the spiritual world, still make ripples in the fabric of reality when they die. Although these ripples are not always seen or felt by other races, they nonetheless garner the attention of other dragons.
+
+### Dragon Lives
+
+The life spans of dragons have not been accurately measured, but they are known to live for several centuries. A dragon begins its life as a **whelp** (or whelpling), growing from there in both size and power until it becomes a **drake** within five to ten years. After about a century or so, a drake reaches full maturity as a **dragon** -- before taking centuries therafter to become a **wyrm**.
+
+### Interacting With Dragons
+Each dragon is as individual as any mortal creature. They have their dreams, personality, quirks, and traits to make them stand out on their own. Still, there are a number of similarities that run through each dragonflight, and some that run through dragons as a whole. Some of these similarities are innate, others cultural, and others still drawn from painful lessons learned in ages past.
+
+***Distant and Grand.*** Dragons interact with the mortal races with fair infrequency. They prefer the company of their own kind, or even complete isolation, to that of creatures whose lives can be measured in mere decades. In this light, if they do have to deal with mortals, they are often more inclined to interact with longer-lived races -- elves in particular, and often dwarves as well.
+
+There is an exception to this tendency with the green and red dragonflights. Green dragons, as protectors of the natural world and the Emerald Dream, sometimes seek the aid of druids and their allies. Red dragons, in their part as protectors of life, are said to discreetly seek out mortals for the satisfaction of secretly living among them.
+
+***Long Perspective.*** Whatever the situation, it is typical for a dragon to take a sometimes exceptionally long approach; content to seed events that may not see fruition for decades, or even centuries. As long as their lives can last, sometimes even reaching millennia, they are rarely wont for time to see their plans through to the end.
+
+In the company of mortals, a dragon may very well forget that such creatures often prefer plans to take form in just a few years -- or even sooner, if possible!
+
+
+<img src='https://www.gmbinder.com/images/o3vp5PR.jpg' style='position:absolute; top:-170px; right:-140px; width:1700px; transform:rotate(15deg)' />
+<img src='https://www.gmbinder.com/images/7drSEMn.png' style='position:absolute; bottom:-20px; left:-110px; height:1230px; transform:scaleY(-1) rotate(-3deg)' />
+
+<div class='footnote footnote-white'>DRAGONS</div>
+<div class="pageLetter">D</div>
+
+\pagebreakNum
+
+***A Familiar Form.***  Dragons of the five flights are masters of true shapeshifting; at will, they may shrink and alter their shape to match any mortal race. Though this is often used to retain a disguise, particularly by the Bronze dragons who may wish to walk among history, the most common use of this trick is actually free of deceit. 
+
+Many dragons will choose a mortal form that they find comfortable, and which reflects their personality or true self; sometimes retaining draconic features such as horns, crests or unique armor, and otherwise being fully open that they are dragons still. This is often used to liaise with much smaller mortals, but some dragons far prefer to stand as mortals even in spare time, perhaps finding it freeing from the shape granted to them by birth.
+
+### Dragonflights
+Dragons are grouped together by type, referred to as dragonflights. There are only five true or "greater" dragonflights, each headed by a Dragon Aspect: black, blue, bronze, green, and red. From these have spawned at least three lesser dragonflights--infinite, netherwing, and twilight--who are the results of unnatural circumstances. All other dragons do not qualify as true dragonflights, though laymen sometimes refer to them as such.
+
+Each of the greater dragonflights has a location where they go to when their life is at an end, known as a dragonshrine. Each of the dragonshrines--the Obsidian, Azure, Bronze, Emerald, and Ruby Dragonshrines for black, blue, bronze, green, and red dragons respectively--is considered sacred for every dragonflight and is located in the region of Northrend known as Dragonblight. Nearby is the Wyrmrest Temple, an immense Titan structure used as an ancient meeting place for the five dragonflights.
+
+### The Dragon Aspects
+Long ago, the titan-forged Keeper Tyr stood against Galakrond, an immense beast known as the Father of Dragons, who consumed other proto-dragons to increase his horrific power. It was only with the aid of five remarkable proto-dragons who stood by his side that Tyr was victorious.
+
+These five proto-dragons were Alexstrasza, Malygos, Neltharion, Nozdormu, and Ysera. By the power of the Titans, they were each transformed into the first dragons and bestowed the title of Aspect.
+
+They were immortal, given charge of each their own domain on Azeroth and the tremendous power to keep it. With them, other dragons who shared kinship with any of the five were held to the same charge. They would watch over all aspects of life with vigilance, feeling the weight of their responsibilities upon their very souls. 
+
+### Dragons
+As a dragon grows older, each stage of its life is distinctly unique from the last; not only growing larger, but also considerably more powerful. These stages are generally similar across all greater and lesser dragonflights.
+
+#### Dragonwhelp
+A dragonwhelp typically measures around 4 ft. from its snout to its tail as it emerges from its egg -- in which it has already been conscious for some time. Though physically weak, and thus rarely left alone, even a newly hatched whelp hold a significant magical aptitude.
+
+\columnbreak
+
+#### Drake
+It only takes a few years for a whelp to become a drake, a fairly explosive growth by any measure, before staying as such for decades to come. Given to their youth, drakes on their own can be quick to act; preferring swift and decisive action over the slow deliberation of their older kin. 
+
+#### Dragon
+By the time a drake has reached full maturity as a dragon, a century or more, it has had more than enough time to experience the world -- and to draw wisdom from it. Even among flights who keep close together, a mature dragon is very likely try and keep its own lair secluded.
+
+#### Wyrm
+Should a dragon live long enough, centuries down the line, it will eventually become a wyrm. They are the oldest and most venerable of their flight, keeping scores of dragons under their wings and within their domain, standing second only to the Aspects themselves. 
+
+**[Unique appearance descriptor: Maybe throw in a brief description in the Wyrm section that adds what physical attributes make them distinct - specifically longer beards, horns, frills, moustaches, unique tail clubs, whatever. Might help DMs.]**
+
+**[Note: Apparently the unique descriptors for certain Aspects, like Alexstrasza's oversized horns, are supposed to be reflected in the dragonflight as a whole--ie, all red dragons have larger horns. The fact that they share a single model is due to graphical limitations.]**
+
+### Dragonkin
+There are other creatures that serve the dragonflights, usually under the command of older dragons and wyrms. Though they are not true dragons themselves, they all remain closely tied members of their respective flight.
+
+How these creatures came to be is a well-guarded secret, known only to the dragons themselves; none of whom are particularly forthcoming with this information. 
+
+#### Dragonspawn
+The dragonspawn are monstrous beings trained to guard and to care for their respective dragonflight; acting as soldiers, assistants, or even companions. Just like the dragons themselves, they are endowed with a great number of virtuous qualities and mystic abilities.
+
+Drawing comparisons to other creatures, they share similarities with centaurs -- having a lower body with four legs and a humanoid upper body with arms. Unlike centaurs however, they are lizard-like in every way; their bodies decked in scales. Some have been seen to have wings, though never large enough to permit flight.
+
+#### Drakonid
+The drakonid are typically described as half-man, half-dragon -- though just like with the dragonspawn, a dragon would never confirm whether there is anything to draw from this observation or if it is merely a coincidence.
+
+They are towering creatures that walk on two legs, reaching far taller than any mortal that would cross their path, and make great use of their impressive strength in the work they do for the flight they serve. 
+
+<!-- 
+<img src='https://images2.imgbox.com/64/1f/JEX4iEua_o.jpg' style='position:absolute; bottom:-280px; right:-580px; height:800px' />
+<img src='https://www.gmbinder.com/images/zeK0PZ5.png' style='position:absolute; bottom:-320px; right:-180px; height:1450px;' /> -->
+<img src="https://www.gmbinder.com/images/uOQOURz.png" class="inkblot" style="bottom:-580px; right:150px; height:1000px; transform: rotate(45deg)">
+
+<div class="pageLetter">D</div>
+<div class='footnote'>DRAGONS</div>
+
+\pagebreakNum
+
+<div style='margin-top:245px;'></div>
+
+### Greater Dragonflights
+In ages past, when the largest of dragons, Galakrond, reigned over the land, scores of proto-dragons of countless colours flitted across the skies of ancient Kalimdor. Through time and change, few remain, and those that have stood the test of time and risen most to prominence are called the Greater Dragonflights, or Prime Dragonflights; blessed by the gods of Azeroth, the five flights - red, black, blue, bronze, and green - were charged with safeguarding Azeroth, and representing the fundamental forces of nature.
+
+***The Dragon Aspects.*** Each of the dragonflights has a charge, a sacred duty, and among them no dragon exemplifies their role than the Dragon Aspect, each one empowered as an aspect of their granted domain, the ruler of their flight and typically the mother or father of most of it. These five dragons are the oldest, wisest and by far the most powerful of dragonkind, closer to gods than any other creature on Azeroth. They possess wisdom and memory aeons long, and seek nothing less than total peace across Azeroth, for the sake of her occupants and their own children.
+
+***The Charge of the Dragonflights.*** Each dragonflight has been charged with an eternal duty, and each dragon within their birth flight possesses fantastic powers pertaining to their charge. Intelligent from the egg, each dragon takes their flight's charge extremely seriously, and it is a rare dragon that is not acting in their brood's best interests. Between flights there has been some contention, from derisive belief in other broods' "inferior" charges to competition, but the dragonflights collectively understand that, when all is done, their charge is for the good of Azeroth, not themselves.
+
+#### Black Dragonflight
+Where the other flights are kind, loyal or focused on Azeroth's protection, the black dragonflight are cruel, backstabbing and obsessed with the destruction of life, and toppling of kingdoms.
+
+Long ago, the Black Dragonflight and its elder were charged with the protection over the Earth itself, and given a deep and intimate connection to Azeroth. In those days, the dragonflight were Azeroth's most ardent and stalwart defenders, able in one breath to extinguish and re-ignite a volcano, willing to go to any length to defend their friends, and eternally vigilant of corruption in the heart of Azeroth.
+
+However, at the turn of an age, the Aspect of Earth was driven insane, and corrupted his entire brood with that same insanity. A war that ended in calamity for dragonkind cemented the Black Dragonflight's place as the betrayers, the dragons of death and evil, and enemies of all of Azeroth.
+
+#### Blue Dragonflight
+Granted the grand task of watching over the realm of magic and enchantment across Azeroth, to ensure that the planet's latent powers are never abused, the Blue Dragonflight have perhaps the loftiest attitude towards their role, and perform it with feeling.
+
+Almost driven to extinction at the advent of the Black Dragonflight's turn to evil, the blue flight is reclusive and secular, refusing any interaction with mortals with few exceptions and hoarding arcane knowledge and artifacts for themselves in their cultural home in Northrend. A blue dragon is an intensely intelligent, crafty being, inclined more towards riddles and puzzles than to combat and active duty. They take immense (and not unwarranted) pride in their skills and knowledge, and will take any chance possible to avail those nearby with their achievements.
+
+#### Bronze Dragonflight
+The bronze dragonflight was charged not over earth or magic, or any tangible thing; rather, they were charged to ensure that time passes as it should, that the future goes unaltered and that the past stays past. To this end, they were granted power over time itself, able to travel through the endless Caverns of Time to catch and halt those who would seek to change the past.
+
+Due to their wide perspective and confusing travel between times, the bronzes are known to be extremely distant and out of tune with current events; indeed, they consider direct intervention to be only for the utmost of emergencies. Because of this, they are arguably the rarest seen of all dragons, although it is sometimes claimed that they are the most common users of mortal disguise.
+
+#### Green Dragonflight
+Ethereal and distant, the green dragonflight was charged with a role inextricably linked to all the others, but inevitably distinct; they and their leader were charged to watch over the Emerald Dream, and to uphold the life and soul of nature across Azeroth. Ever-sleeping, the emerald dragons have all but abandoned their worldly bodies that their spirits may watch over the Emerald Dream, the pristine and mystical mirror of the material world.  It is said that the greens may perceive both these realities at once, interwoven with one another.
+
+Invariably kind spirited and gentle, these dragons will help those who seek to defend Azeroth whenever they can, though their means to do so on the material world are limited.
+
+#### Red Dragonflight
+Caring and gentle, though potentially fearsome and protective, the Red Dragonflight were charged to represent life itself in all its forms, but mortal life most of all. to them, all mortal creatures are like children to be protected, and the reds feel a deep obligation to see that the world's history progresses in such a way, though war and death will happen, that mortals are yet able to live and die as mortals, rather than as food to global threats, or fodder to cruel invasions.
+
+Subsequently the red tend to be quite hands-off, preferring to interact with mortals - should they have to - in disguise, seeing that things are progressing smoothly. By preference, however, the ruby dragons will simply bide and live, keeping an eye open for greater threats, but otherwise content to let the world tick on as it should.
+
+<img src='https://www.gmbinder.com/images/JAhZ79k.png' style='position:absolute; top:-18px; left:45px; transform:rotate(4deg); filter:sepia(40%)' />
+
+<div class="pageLetter">D</div>
+<div class='footnote'>DRAGONS</div>
