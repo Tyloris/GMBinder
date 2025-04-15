@@ -1,0 +1,3168 @@
+# Extraordinary Equipment
+
+This document is intended to provide new item options for the WC5E project, ranging from altered prices for existing items due to the increased technological prowess of the races of Azeroth, to new mechanical equipment that relies more on scientific knowledge than magical enhancements, to new magical items found throughout the Warcraft setting, up to powerful artifacts.
+
+This document is still very much a work in progress, with new items being added constantly as I come across new items that I feel should make their way into the setting. 
+
+<style> .toc a { color: inherit !important; } \&#x200B; .toc li span:nth-child(2){ width: auto; overflow: hidden; white-space: nowrap; display: block; } \&#x200B; .toc li span:nth-child(2):after{ font-family : BookSanity; font-size : 0.317cm; font-weight : normal; color : black; content: " ........................................" "........................................." "........................................."; } \&#x200B; .toc li span:first-child{ float: right; font-family : BookSanity; font-size : 0.317cm; font-weight : normal; color : black; margin-left : 1px; } \&#x200B; .toc li h3 span:nth-child(2):after{ content: " "; } \&#x200B; .toc li h3 { margin-bottom: 4px !important; margin-top: 10px !important; line-height: initial !important; } \&#x200B; .toc li h3 span:first-child{ line-height: 1.8em !important; } \&#x200B; .toc ul ul { margin-left: 10px !important; } \&#x200B; .toc>ul>li { margin-bottom: initial !important; } </style>
+
+
+
+<div class='wide' style="text-align: center">
+
+
+
+###
+
+# Table of Contents
+
+###
+
+
+
+</div>
+
+
+
+<div class='toc'>
+
+- #### [<span></span><span>New Equipment</span>](#NewEquipment)
+- - ##### [<span></span><span>New Weapons</span>](#NewWeapons)
+- - ##### [<span></span><span>New Adventuring Gear</span>](#NewAA)
+- #### [<span></span><span>Mechanical Items</span>](#MechanicalItems)
+- #### [<span></span><span>Magical Items</span>](#MagicalItems)
+- #### [<span></span><span>Legendary Weapons of Azeroth</span>](#LWoA)
+- #### [<span></span><span>Heirloom Artifacts</span>](#HeirloomArtifacts)
+- #### [<span></span><span>Artifacts</span>](#Artifacts)
+
+</div>
+
+<!--
+\pagebreakNum
+
+<style> .phb#NewEquipment:after { display:none; } </style>
+# New Equipment
+
+<style> .phb#NewWeapons:after { display:none; } </style>
+## New Weapons
+
+<div class='classTable wide'>
+
+##### New Weapons
+Name|Cost|Damage|Weight|Properties
+---|---|---|---|---
+Blunderbuss of Khaz Modan|100 gp|3d4 piercing|12 lb.|Ammunition (range 30/45), heavy, scattershot (1d8), special, two-handed
+Dwarven Fishing Pole|80 gp|3d4 piercing|4 lb.|Ammunition (range 10/15), scattershot (3d4), two-handed
+Gnomish Net-o-Matic Projector|25 gp|--|5 lb.|Ammunition (range 80/320), loading, special, two-handed
+Grappling Hook Launcher|??|??|??|??
+Harpoon Gun|70 gp|1d6 piercing|15 lb.|Ammunition (range 25/100), loading, heavy, special, two-handed
+Sniper Rifle|150 gp|3d6 piercing|6 lb.|Ammunition (range 150/600), heavy, special, two-handed
+</div>
+
+#### Blunderbuss of Khaz Modan
+A dwarven invention, for those who can't be satisfied with a weapon that isn't both a hammer and a gun. This weapon is made of a blunderbuss with a heavy hammer attachment, allowing it to be used as a maul. Switching between the two modes does not count as an action.
+
+#### Dwarven Fishing Pole
+Dwarves are not known for their subtlety.
+
+#### Gnomish Net-o-Matic Projector
+This device uses nets as ammunition. It launches the net using its range increment rather than the normal net range. When you roll a 1 on your d20 attack roll, you get caught in the net as it launches, attacking you instead. Reroll your attack roll against your own Armor Class to see if the attack hits.
+
+#### Grappling Hook Launcher
+[TODO]
+
+#### Harpoon Gun
+A harpoon gun uses special barbed javelins as ammunition, which can be retrieved as normal. The harpoon also comes with a spool of silk rope, 100 feet in length. When you fire this weapon, the harpoon becomes embedded in the target on a hit. You can make an opposing Strength (Athletics) check to pull the creature 10 feet closer to you as an action, and the creature must succeed at an opposing Strength (Athletics) check to move away from you.
+
+#### Sniper Rifle
+This gun is designed to be able to fire accurately at long distances by using more gunpowder in their bullets and rifling along the barrel. In exchange they have a lower rate of fire and can only be fired once per turn, even if other effects would allow the user to fire more often.
+
+Sniper rifles use special ammunition called *heavy bullets* that are crafted separately from other bullet types. If crafted using the gunsmith's tools, you craft 3 + your proficiency bonus worth of heavy bullets over the span of a long rest. 
+
+\pagebreakNum
+<style> .phb#NewAA:after { display:none; } </style>
+## New Adventuring Gear
+Item|Cost|Weight
+----|----|------
+Bayonet|2 gp|1 lb.
+Goblin Army Knife|50 gp|4 lb.
+Parachute|25 gp|12 lb.
+Permanent Light|+50 gp|--
+Phlogiston, liquid|20 gp|1/4 lb.
+Pocket Watch|100 gp|--
+Scope|100 gp|--
+Suppressor|15 gp|--
+
+#### Bayonet
+A simple knife that can be attached to a crossbow or firearm, allowing them to be used as melee weapons. When making a melee attack with a weapon with a bayonet attached, the attack deals 1d6 piercing if the weapon has the two-handed property, or 1d4 piercing if it does not.
+
+#### Goblin Army Knife
+It’s not stylish and it’s useless as a weapon, but no sensible goblin warrior marches without this tool-of-all-trades. The goblin army knife digs trenches, saws wood, hammers nails, lights fires, sounds three different kinds of duck calls, polishes and oils armor, sews clothing, stores 25 feet of spidersilk rope with a test weight of 100 pounds, extends into a fishing rod, and unreels into a 1-person canvas tent. All this utility in just 4 pounds, and it even cuts things!
+
+Accessing any of its functions takes 3 rounds.
+
+*Source:* World of Warcraft: The Roleplaying Game
+
+#### Parachute
+A humanoid wearing this piece of gear can deploy the parachute as a reaction while falling, or as an action otherwise. The parachute requires at least a 10-foot cube of unoccupied space in which to deploy, and it doesn't open fast enough to slow a fall of less than 60 feet. If it has sufficient time and space to deploy properly, the parachute allows its wearer to land without taking falling damage. Once it has been used, the parachute takes 10 minutes to repack.
+
+*Source:* Waterdeep: Dragon Heist
+
+#### Permanent Light
+Almost every culture has designed a light source that can act indefinitely without fuel. The night elves bind wisps to cages of flora, the draenei and blood elves uses glowing crystals, the gnomes used electricity-powered glowing filaments... Whatever the source, the cost is the same.
+
+A permanent light is an addition added to another form of light such as a torch or lantern. Add the cost of a permanent light to the item to determine the cost and weight.
+
+#### Phlogiston, liquid
+Odorless, weightless, and almost undetectable — it makes steam technology practical by speeding combustion and increasing the heat produced by steam boilers. In addition to its application in technological devices, phlogiston has found use in elixirs that alter the imbiber’s abilities for a short time. Many technological devices use phlogiston as fuel.
+
+#### Pocket Watch
+A relatively delicate item, this small clockwork invention keeps perfect time as long as it is wound regularly. 
+
+#### Scope
+A specialized spyglass that can be affixed to the top of a two-handed firearm or crossbow. When you take a bonus action to aim through the scope, your next attack this turn against a creature at long range does not have disadvantage. If you already do not have disadvantage on attacks versus creatures at long range, you instead have advantage on the attack roll.
+
+In addition, you can use the scope as a standard spyglass.
+
+#### Suppressor
+Any firearm can be affixed with a suppressor. Doing so takes 1 minute. The weapon makes no sound and light when used, and thus, ignores the booming sound rules. In exchange, the range of the weapon is halved.
+
+\pagebreakNum
+## New Trinkets
+
+d100|Trinket
+--|---
+1|A finely-crafted wooden dragon toy.
+-->
+\pagebreakNum
+<style> .phb#MechanicalItems:after { display:none; } </style>
+# Mechanical Items
+
+Mechanical items are those made through advanced scientific knowledge instead of magical enchantments. Some low-level items are considered simple equipment and can be found in the above section. Others however take specialized knowledge and advanced materials to craft, and are found below.
+
+Mechanical items are not magical items as therefore those that deal damage are not considered magical weapons. They follow the standard rarity rules and are classified under existing magical item categories, such as potions or wondrous items, for ease of integration with existing rulesets. 
+
+With very rare exceptions they do not occupy attunement slots. Instead each has a chance at malfunctioning after being used, due to the prototype nature of the equipment. This prevents the equipment from being abused. When an item regains its uses, it rarely does so out of an internal recharge mechanic, but rather through the player refueling and performing maintenance on the item. Fuel is not tracked, except for very large and complex items such as a *sky golem*.
+
+#### Advanced Refrigeration Unit
+*Wondrous item, common*
+
+This chest-sized box is constantly filled with cold air, helping chill items that are placed inside. A dial on the side allows the temperature of the air to be adjusted from a couple of degrees above freezing to a couple below.
+
+#### Arcane Bomb
+*Wondrous item, rare*
+
+This grenade is made using the bile of a blue dragon, carrying some of their breath effects. You can throw this grenade as an action, targeting a point within 30 feet. Each creature in a 20-foot radius from that point must make a DC 17 Wisdom save or lose spell slots of a combined level of 1d4+1, starting with the highest available spell slot. For every spell level they lost, they take 1d10 + 4 points of psychic damage.
+
+#### The Big One
+*Wondrous item, legendary*
+
+This bomb is the pinnacle of goblin explosive technology. It is a massive, 3-foot diameter spiked red ball weighing around 200 pounds. You can detonate this device as an action or set it on a timer of up to 1 hour. While on a timer, it emits a ticking noise that can be heard up to 20 feet away. 
+
+When it detonates, it deals 20d6 fire, 10d6 thunder, and 10d6 radiant damage to all creatures in a 80-foot radius sphere, Dexterity save DC 19 for half. The blast can be seen and heard up to 5 miles away. Each creature that can see or hear the explosion must make a Constitution saving throw or gain a condition, based on how far away they are from the center of the blast:
+
+Distance|Save DC|Effects
+--------|-------|-------
+1280 to 641 feet|11|Blinded for 1 minute
+640 to 321 feet|12|Blinded and deafened for 10 minutes
+320 to 161 feet|13|Blinded, deafened, and stunned for 1 hour
+160 feet or less|14|Blinded and deafened permanently, stunned for 24 hours
+
+The detonation turns the area of effect into difficult terrain and is considered extreme heat weather for 24 hours. It damages  This duration is reduced by half if the weather is cold or arctic cold.
+
+The Big One is remarkably stable for goblin technology, and does not have a chance of malfunction.
+
+#### Deepdive Helmet
+*Wondrous item, common*
+
+This oversized helmet allows a creature to breathe underwater. In order to do so, it needs a supply of air that is fed through thick rubber hoses on the side. These hoses reach up to 50 feet before connecting to a pump source that sits on the surface of the water or a weighted balloon that can hold up to 4 hours of air.
+
+Advanced versions of this helmet come with backpacks that can filter oxygen out of the water. Such devices are *uncommon* items instead.
+
+#### Depth Charge
+*Wondrous item, uncommon*
+
+This weighted canister can activated and set on a timer as an action. The timer can last for up to 1 minute, after which it explodes and deals 2d6 bludgeoning damage to creatures within 5 feet. In the water, this item is considerably more deadly and deals 5d6 bludgeoning damage to creatures and objects within 10 feet.
+
+The depth charge can be thrown as an action with a range of up to 20 feet. If tossed into the water, it sinks at a rate of 10 feet per round.
+
+#### Dimensional Ripper
+*Wondrous item, legendary*
+
+This goblin device rips open dimensional barriers to open a 5-foot diameter *gate* that allows transportation to a location anywhere on any plane. This gate is opaque, preventing the user from seeing to the other side and lasts for 1 round before closing. After the dimensional ripper has been used, it cannot be used again for 24 hours.
+
+In order to use the device, you must spend 10 minutes carefully entering the spatial and the planar coordinates into the device and making one or two Intelligence (Arcana) checks: one for the spatial coordinates and one for the planar coordinates. 
+
+\pagebreakNum
+
+You can attempt to rush the activation to 1 minute, but this increases the DC of the check. You do not know the DC of the coordinates or the result of your roll, which is determined secretly by the DM. 
+
+If you have a coordinate code punchcard, you automatically succeed at this check if you do not rush the activation. If you fail the check, you are transported to a random location. 
+
+Planar coordinates are more finicky: If you fail to enter a proper set of planar coordinates, the portal fails to form. If you enter in the wrong set of planar coordinates, roll a d20. On a 1, the portal opens but to a different plane. 
+
+The dimensional ripper comes with coordinate analyzers that display the current spatial and planar coordinates, allowing shorter jaunts to be more accurate. If your check is not high enough, a mishap occurs. Each creature that passes through the portal must roll a d6 and determine which mishap affects them.
+
+The DCs for dimensional coordinates are noted in the Dimensional Coordinate DC table. If you attempt to transport to a different plane and lack proper spatial coordinates for that plane, you end up at a random spot on that plane. Otherwise, check for the Dimensional Ripper Accuracy table to see how close you arrive to your designated coordinates.
+
+##### Dimensional Coordinate DC
+DC|Target Location
+--|--
+0|Current Location
+0|Location of punchcard coordinates
+5|Within 1 mile
+10|Within 10 miles
+15|Within 100 miles
+20|On same plane
+25|On another plane
++10|On adjacent plane (such as the Emerald Dream)
++10|Rushed activation
+
+##### Dimensional Ripper Accuracy
+Check Result<br>vs DC|Effect
+---|---
++5 or more|Arrive at coordinates, no mishap
++0 to +4|Arrive at coordinates, mishap
+-1 to -5|Off target (as teleport), mishap
+-6 or more|Similar area (as teleport), mishap
+
+\columnbreak
+
+##### Dimensional Ripper Mishap
+d6|Mishap
+--|-----
+1|You are set on fire. You take 1d4 fire damage each round until you take an action to extinguish the flame.
+2|You are *polymorphed* into a random creature of the same type for 1 hour.
+3|You are replaced with your evil twin for 1 hour. You gain (or lose) a goatee and your alignment shifts to its opposite.
+4|You are transported to the target location but arrive 1d6 times 10 feet in the air.
+5|Roll a d6. On an odd roll, you are affected by the enlarge version of *enlarge/reduce* for 1 hour (no conventration). On an even roll, you are affected by the reduce version instead.
+6|Roll twice on this table, ignoring this effect and duplicate effects.
+
+#### Exploding Ammunition
+*Weapon (ammunition), uncommon*
+
+This ammunition can be fired from a standard projectile weapon. On a hit, the target takes 1d6 fire damage and 1d6 thunder damage. On a miss, the ammunition explodes in a random square near the target. When the ammunition explodes, it can be heard up to 200 feet away.
+
+#### Explosive Decoy
+*Wondrous item, rare*
+
+This device includes a small holoprojector that allows it to project an illusion of a creature on itself. It can also make simple noises. 
+
+You can set up an explosive decoy as an action, causing it to take on your appearance and mimicing your voice that repeats a single phrase every other round. If you set it up over the span of a minute, you can alter it to appear as another creature. You cannot cause it to look like a specific creature unless that creature is present and cooperates. 
+
+A creature who is nearby can make a DC 15 Wisdom (Insight) check to determine that the effect is an illusion, though this does not allow them to see through it. When the illusion is broken by being touched or attacked, the device explodes and deals 8d6 fire damage to all creatures within 20 feet or half with a successful DC 15 Dexterity saving throw. 
+
+The device can keep up its illusion for 10 minutes before shutting down and needing to be redeployed. It can be retrieved as an action by someone who knows that it is an illusion.
+
+If any lightning damage is dealt to any creature or object within 20 feet, the electromagnetic disturbance causes the device to prematurely explode if it has been activated.
+
+\pagebreakNum
+
+#### Explosive Sheep
+*Wondrous item, rare*
+
+You can unfold this metal box into a ball of woolen fluff and explosives as an action. Designate a target or square within 600 feet. The sheep has its own turn immediately after yours and will move at 60 feet per turn on the most direct path until it reaches the target. If the target cannot be reached within 1 minute, the sheep deactivates and needs to be redeployed.
+
+When the sheep reaches its target, it explodes and deals 8d6 fire damage to all creatures within 20 feet, or half damage with a successful DC 15 Dexterity saving throw. It also explodes if dealt at least 10 points of damage; it has an Armor Class of 15.
+
+#### EZ-Throw Dynamite
+*Wondrous item, rare*
+
+This small box is filled with small red sticks of explosive. Each stick has a sticky patch on the side allowing them to be quickly bundled together and a small dial and button on top. A found box of EZ-Throw Dynamite has 3d6 + 8 sticks remaining.
+
+You can use an action to grab a stick of dynamite, set the timer and press the activation button, then throw the dynamite at a square up to 60 feet away. If the timer is not set, it detonates when it arrives at the location. Otherwise it detonates after the timer runs out, up to 6 rounds later at the beginning of your turn.
+
+When a single stick of dynamite explodes, it deals 3d6 bludgeoning damage to each creature within 5 feet of the square it occupies, half on a DC 12 Dexterity saving throw. If you throw multiple sticks stuck together, each additional stick causes the explosion to deal an extra 1d6 damage (up to 10d6), increases the radius by 5 feet (up to 20 feet), and increases the saving throw DC by 1 (up to 15).
+
+#### Goblin Army Boots
+*Wondrous item, uncommon*
+
+These boots are heavy and unwieldy. You reduce your movement speed by half and have disadvantage on Dexterity saving throws while wearing them. In exchange, you cannot set off any pressure-sensitive traps.
+
+#### Goblin Bomb Dispenser
+*Wondrous item, uncommon*
+
+You can activate this backpack-shaped item as a bonus action. Inside the pack, a bombling is assembled, ready for use at the beginning of your next turn. When the bombling is ready, you can use your action to designate a target square within 25 feet. The bombling will then move to that location and immediately detonate. If you do not use the assembled bombling on the turn that it become available, the mechanisms in the device disassemble it for future use.
+
+A newly created bomb dispenser has enough parts to create 2d6 + 6 bomblings before becoming useless. When you use this device, roll a d20. On a 1, the bombling prematurely detonates in your square.
+
+\columnbreak
+
+#### Goblin Construction Helmet
+*Wondrous item, uncommon*
+
+When you wear this helmet, you have a shield against fire damage. Treat this as a pool of temporary hit points that are tracked separately and only apply towards fire damage. This pool equals 24 hit points, which refill at the rate of 1 per hour. Any fire damage in excess of this amount applies to you, as normal.
+
+#### Goblin Dragon Gun
+*Wondrous item, uncommon*
+
+A dragon gun is a goblin-made flamethrower. It carries a risk of malfunction each time you use it.
+
+As an action, you can cause the dragon gun to project fire in a 10-foot cone. Each creature in that area must make a DC 13 Dexterity saving throw, taking 4d6 fire damage on a failed save, or half as much damage on a successful one.
+
+Each time you use the dragon gun, roll a d10 and add the number of times you have used it since your last long rest. If the total is 11 or higher, the dragon gun malfunctions: you take 4d6 fire damage, and you can't use the dragon gun again until you finish a long rest.
+
+*Source:* Guildmaster's Guide to Ravnica, *pyroconverger*
+
+#### Goblin Glider
+*Wondrous item, common*
+
+This cloak includes a small button in the cowl that can be used to deploy telescoping legs, causing the cloak to unfurl into something that appears like a bat's wings.
+
+You can deploy the wings as a reaction when falling. Your falling speed is immediately reduced to half its normal speed. As you fall, you move forward 2 feet for every 1 foot that you fall vertically. You treat the distance that you fall as half the normal distance, and the maximum damage you can take from falling is 10d6.
+
+Once a goblin glider has been deployed, you take up the space of a Large creature and continue to do so until you remove the glider or take 1 minute to put the glider back into its cloak mode.
+
+#### Goblin Jumper Cables
+*Wondrous item, uncommon*
+
+You can attach the thick yellow cables of this battery to a creature that has died in the last minute. As an action, you can send a massive burst of electricity into their corpse and watch the body jerks off the ground and spasm mightily while electricity plays over the thinly insulated cables, causing the smell of burning hair to waft up. In addition to being fun to watch, this display sometimes revives the character.
+
+When you use the device, the creature is restore to life with 0 hit points and begins making death saves again. Once a set of goblin jumper cables has been used, it needs to recharge over the next 24 hours.
+
+\pagebreakNum
+
+#### Goblin Land Mine
+*Wondrous item, uncommon*
+
+[TODO]
+
+#### Goblin Mining Helmet
+*Wondrous item, common*
+
+This helmet has a small flashlight on the front. It also provides resistance to nonmagical bludgeoning damage from falling rocks.
+
+#### Goblin Mortar
+*Wondrous item, rare*
+
+A more portable version of the heavy dwarven mortar. A mortar has a chance of a misfire every time you use it.
+
+You can use two firing modes for the mortar. Each one charges the weapon by a certain amount. After you fire the weapon, roll a d10 and add the number of charges in the mortar to the amount. If the result is 14 or higher, the mortar misfires: you take 4d6 fire damage, and the mortar cannot be used again until the next dawn.
+
+***Molten Spray.*** You can add 1 charge as an action to loose a 30-foot cone of molten metal. Each creature in the area must make a DC 15 Dexterity saving throw, taking 5d4 fire damage on a failed save, or half as much damage on a successful one.
+
+***Bombard.*** You can add 3 charges as an action to launch a hail of molten projectiles in a 20-foot-radius, 40-foot-high cylinder centered on a point you can see within 60 feet of you. Each creature in the area must make a DC 15 Dexterity saving throw. A creature takes 5d8 fire damage on a failed save, or half as much damage on a successful one.
+
+*Source:* Guildmaster's Guide to Ravnica, *mizzium mortar*
+
+#### Goblin Rocket Boots
+*Wondrous item, uncommon*
+
+When you click your heels together as a bonus action to activate these boots, your speed is boosted to 100 feet. While these boots are active, you cannot move less than 50 feet per round. You can end the effect as a non-action at the end of each turn.
+
+At the end of each turn that the boots are active, roll a d10 and add the number of rounds the boots have been active since your last long rest. On a 12 or higher, the device malfunctions. Roll a d10. On a 1, the rocket boots explode, dealing 1d4 fire damage to you and the boots are destroyed.
+
+#### Goblin Rocket Helmet
+*Wondrous item, uncommon*
+
+You can activate this item as a bonus action. When you do, you are moved up to 30 feet in a straight line at a target. When you end your movement, you make a single melee attack against the target, dealing 1d4 + 3 bludgeoning damage on a hit. Additionally, if the target is a creature, they must make a DC 13 Strength save or be knocked prone. You must make a DC 13 Constitution save or be stunned until the end of your turn.
+
+Each time you use this helmet, roll a d10 and add one to the total for every time you have used the helmet in the last hour. On a 11 or higher, the helmet overheats and cannot be used again until you finish a short or long rest.
+
+#### Goblin Rocket Launcher
+*Wondrous item, rare*
+
+You can fire this rocket launcher as an action at a target up to 150 feet away. Make an attack roll with a +10 to hit. On a hit, the target takes 8d6 fire damage and 2d6 piercing damage and must make a DC 17 Constitution save or be knocked prone and stunned for 1 round. 
+
+When you use this device, make a DC 13 Strength save. On a failure, you are knocked prone.
+
+#### Goblin Sapper Charge
+*Wondrous item, rare*
+
+You can detonate this item as an action or set it on a timer that lasts for up to 10 minutes. When it explodes, it acts as a 5th-level *fireball* centered on the charge (DC 17). This effect deals double damage to objects and structures.
+
+#### Goblin Welder Beam
+[TODO: Can restore hp to a mechanical, or fire damage to a creature.]
+
+#### Goggles
+[TODO]
+
+\pagebreakNum
+
+#### Gnomish Alarm-o-Bot
+*Wondrous item, uncommon*
+
+A gnomish alarm-o-bot must be prepared, keying it to respond to your voice. This process takes 10 minutes. After it has been prepped, activating an alarm-o-bot is an action and it remains active for up to 24 hours or until it drops to 0 hit points. You can break the duration of operation up into 10 minute increments. 
+
+It is friendly to you and your companions. You can use a bonus action to command how the creature moves and what action it takes on its next turn, or to give it general orders, such as to attack your enemies. In absence of orders, it stands in place and actively searches for creatures.
+
+#### Gnomish Battle Chicken
+*Wondrous item, uncommon*
+
+A gnomish battle chicken must be prepared, keying it to respond to your voice. This process takes 10 minutes. After it has been prepped, activating a battle chicken is an action and it remains active for up to 8 hours or until it drops to 0 hit points. You can break the duration of operation up into 10 minute increments. 
+
+It is friendly to you and your companions. You can use a bonus action to command how the chicken moves and what action it takes on its next turn, or to give it general orders, such as to attack your enemies. In absence of orders, it acts as a chicken would.
+
+___
+> ## Battle Chicken
+> *Tiny construct, unaligned*
+> ___
+> - **Armor Class** 14 (natural armor)
+> - **Hit Points** 35 (10d4 + 10)
+> - **Speed** 30 ft., fly 20 ft.
+> ___
+> STR|DEX|CON|INT|WIS|CHA
+> ---|---|---|---|---|---
+> 16(+3)|13(+1)|13(+1)|3(-4)|11(+0)|1(-5)
+> ___
+> - **Condition Immunities** charmed, exhaustion, frightened, paralyzed, petrified, poisoned
+> - **Senses** darkvision 60 ft., passive perception 10
+> - **Languages** --
+> - **Challenge** 1/4 (50 XP)
+> ___
+> ***Clumsy Flyer.*** A battle chicken cannot sustain flight for more than one turn.
+> 
+> ***Immutable Form.*** The battle chicken is immune to any spell or effect that would alter its form.
+> 
+> ### Actions
+> ***Battle Squawk.*** *Ranged Weapon Attack:* +5 to hit, reach 5 ft., one target. *Hit:* 5 (1d4 + 3) thunder damage.
+> 
+> ***Beak.*** *Melee Weapon Attack:* +5 to hit, reach 5 ft., one target. *Hit:* 5 (1d4 + 3) piercing damage.
+> 
+> ### Bonus Actions
+> ***Rocket Boost.*** The battle chicken fires its rockets, making a Dash action using its flying speed.
+
+#### Gnomish Cloaking Device
+[TODO. Invisibility while granting see invisibility. Invisibility does not apply to other invisible creatures.]
+
+\pagebreakNum
+
+#### Gnomish Death Ray
+*Wondrous item, rare*
+
+This device can hold up to 10 charges. In order to charge it, you must expend a hit die; each hit die expended adds one charge to the death ray. If you attempt to add an 11th charge, the device expends all charges, dealing 5d6 + 20 force damage to you.
+
+As an action, you can point the death ray at a target you can see within 60 feet and pull the trigger to launch a thin green beam, expending all charges. The target must make a Dexterity save (DC 15) or take 1d6 + 4 force damage per charge, to a maximum of 10d6 + 40 force damage. If this damage reduces a creature to 0 hit points, it is disintegrated. 
+
+A disintegrated creature and everything it is wearing and carrying, except magic items, are reduced to a pile of fine gray dust. The creature can be restored to life only by means of a true resurrection or a wish spell.
+
+If you target a nonmagical object made of organic material, it is automatically disintegrated. If you expend 1 charge, this disintegrates a Tiny or smaller sized object. The size of object automatically disintegrated increases as more charges are expended: Small or smaller with 2 charges, Medium or smaller with 5 charges, and Large or smaller with 10 charges. Otherwise it disintegrates a 1 foot cube of material per charge.
+
+#### Gnomish Flame Turret
+*Wondrous item, uncommon*
+
+You can deploy this device as an action. It becomes a Tiny object that occupies your space, has an AC of 15 and 5 hit points and is immune to poison damage, psychic damage, and all conditions. If it is forced to make an ability check or a saving throw, treat all its ability scores as 10 (+0). The turret remains active until it runs out of charges or until reduced to 0 hit points.
+
+The turret has a maximum of 10 charges. Each vial of alchemist's fire you add to the turret's storage tank adds 1 charge.
+
+If you are within 60 feet of it, you can use your bonus action to designate a target up to 60 feet away from the target. The turret expends a charge and launches a bolt of flame with a +4 bonus on the attack roll against the target. On a hit, the target takes damage as if struck by alchemist's fire. The turret will continue to launch bolts of flame until commanded to stop as a bonus action, another target is designated, or if it runs out of charges. It will even continue to attack if its target is reduced to 0 hit points.
+
+#### Gnomish Harm Prevention Belt
+*Wondrous item, rare*
+
+You can activate this belt as an action to gain resistance to all damage for 1 minute. Every time you activate the belt, and each time you take damage while it is active, it gains a charge. 
+
+Every time the belt gains a charge, roll a d10 and add the number of charges in the belt to the amount. If the result is 15 or higher, the belt backfires, transporting you into the Ethereal Plane for 1 minute. At the end of this duration, you are returned to the material plane. Once the belt backfires, you cannot use it again until the next dawn.
+
+#### Gnomish Lightning Generator
+[TODO: Fires bolt of lightning. Being made of all metal, chance of shock.]
+
+#### Gnomish Mind Control Cap
+*Wondrous item, very rare*
+
+You can use the focusing dish on this cap to project the power of your mind, attempting to override the will of another. Make an opposing Intelligence check with advantage against a humanoid you can see within 60 feet. Upon a success, they are under the effects of the *dominate person* spell as long as you maintain concentration, up to 1 minute.
+
+You can safely use a Gnomish Mind Control Cap only once per short or long rest. If you attempt to use it a second time, you take 1d12 psychic damage from the mental strain. This damage cannot be reduced or avoided in any way. Each additional time you use the cap, the damage increases by one die: 2d12 for a third use, 3d12 for a fourth use, etc.
+
+\pagebreakNum
+
+#### Gnomish Poultryizer
+*Wondrous item, very rare*
+
+You can fire this gun-shaped device at a target within 60 feet that you can see. The target is affected by the *polymorph* spell for 1 hour (DC 15, no concentration required), turning into the form of a chicken.
+
+Every time you fire the device, roll a d10 and add the number of times you have fired the weapon since your last long rest. On a 11 or higher, the polarity reverses and you are affected by the device instead (no save). Once the polarity has reversed, you cannot use the poultryizer again until you finish a long rest.
+
+#### Gnomish Rocket Boots
+*Wondrous item, rare*
+
+When you click your heels together as a bonus action to activate these boots, your speed is boosted to 100 feet. While these boots are active, you cannot move less than 50 feet per round. You can end the effect as a non-action at the end of each turn.
+
+At the end of each turn that the boots are active, roll a d10 and add the number of rounds the boots have been active since your last long rest. On a 14 or higher, the device malfunctions and ceases to function. Roll a d10. On a 1, you are under the effects of the *confusion* spell for your turn. On a 10, your speed is reduced to 0 feet for 3 rounds. Otherwise, the boots simply fail to function.
+
+#### Gnomish Shrink Ray
+*Wondrous item, uncommon* 
+
+You can fire this gun-shaped device at a target within 60 feet that you can see. The target is affected by the "reduce" version of the *enlarge/reduce* spell for 1 minute (DC 13, no concentration required).
+
+Every time you fire the device, roll a d10 and add the number of times you have fired the weapon since your last long rest. On a 11 or higher, the energy releases in a random burst. Roll a d4. On a 1-2, you are affected by the "reduce" version of the spell. On a 3-4, the target is affected by the "enlarge" version of the spell instead. In either case, the weapon cannot be used again until you finish a long rest.
+
+#### Gnomish Universal Remote
+*Wondrous item, rare*
+
+You can use this complex device as an action, causing an invisible beam to strike a construct that you can see within 60 feet. The creature must make a DC 15 Wisdom save or be affected by *dominate beast*, except only affecting constructs and ignoring immunity to the charmed condition. The effect has a duration of 1 hour and does not require concentration, though you can only control one creature at a time. Issuing a command is an action, unless you pass a DC 13 Intelligence (tinker's tools) check, in which case it is a bonus action.
+
+Each time you use the device to attempt to control a construct, roll a d10 and add the number of times you have used the device since your last long rest. On a 11 or higher, the device instead superpowers the construct, causing them to have advantage on attack rolls for 1 minute or until you assert control.
+
+#### Gnomish X-Ray Specs
+*Wondrous item, rare (requires attunement)*
+
+While wearing these goggles, you can use an action to press a button and activate them. When you do so, you can see into and through solid matter for 1 minute. This vision has a radius of 30 feet. To you, solid objects within that radius appear transparent and don't prevent light from passing through them. The vision can penetrate 1 foot of stone, 1 inch of common metal, or up to 3 feet of wood or dirt. Thicker substances block the vision, as does a thin sheet of lead.
+
+Whenever you use the goggles again before taking a long rest, you must succeed on a DC 15 Constitution saving throw or gain one level of exhaustion.
+
+#### Gnomish World Enlarger
+*Wondrous item, uncommon*
+
+You can activate this device as an action to gain the benefits of the "reduce" version of the *enlarge/reduce* spell for 1d10 minutes, no concentration required. This effect stacks with other similar effects but not with itself.
+
+Every time you use this device, roll a d10 and add the number of times you have used the device since your last long rest. On a 11 or higher, the device malfunctions. You are shrunk for 24 hours; roll a d10. On a 1, roll a d4 and your height is reduced by that many inches permanently. In any case, the device ceases to function until your next long rest.
+
+#### Gnomish World Shrinker
+*Wondrous item, uncommon*
+
+You can activate this device as an action to gain the benefits of the "enlarge" version of the *enlarge/reduce* spell for 1d10 minutes, no concentration required. This effect stacks with other similar effects but not with itself.
+
+Every time you use this device, roll a d10 and add the number of times you have used the device since your last long rest. On a 11 or higher, the device malfunctions. You are enlarged for 24 hours; roll a d10. On a 1, roll a d4 and your height is increased by that many inches permanently. In any case, the device ceases to function until your next long rest.
+
+\pagebreakNum
+
+#### Grenade
+[TODO]
+
+#### Hyper-Vision Goggles
+[TODO: True seeing]
+
+#### Mechanical Squirrel
+*Wondrous item, common*
+
+This is a small mechanical squirrel. It acts as a squirrel does.
+
+#### Recombobulator
+[TODO: Restore health, dispel polymorph.]
+
+#### Sky Golem
+[TODO: Aparatus of Kwalish equivalent.]
+
+#### Smokebomb
+*Wondrous item, common*
+
+As an action, you can throw this smokebomb up to 30 feet away from you. On impact, smoke begins to billow from it, creating a heavily obscured area within a 10 foot radius and a lightly obscured area for a further 5 feet. This smoke dissipates after 1 minute, or until it is blown away by some external means.
+
+*Source:* https://www.gmbinder.com/share/-L7N3qQqUZNNLIeVT5Zx
+
+#### Ultrasafe Transporter
+
+#### Watergliding Jets
+[TODO: Increased swim speed.]
+
+#### Wormhole Generator
+[TODO: Creates a portal to a location. Like teleport, has chance of random location. Can also open portal in midair.]
+
+\pagebreakNum
+<style> .phb#MagicalItems:after { display:none; } </style>
+## Armor
+#### Aegis of the Blood God
+<img src='https://gamepedia.cursecdn.com/wowpedia/f/fd/Aegis_of_the_Blood_God_TCG.jpg?version=6fad2b2109b49a32eeeba15d5f2d77be' style='width:325px' />
+
+*Armor (shield), rare (requires attunement)*
+
+This shield grows stronger the closer you are to death. If you have full hit points, it provides an additional +1 bonus to Armor Class. If you have less than full hit points but more than half your maximum hit points, this bonus increases to +2. If you have less than half your maximum hit points, this bonus increases to +3. 
+
+#### Argent Defender
+<img src='https://gamepedia.cursecdn.com/wowpedia/c/c8/Argent_Defender.JPG' style='width:325px' />
+
+*Armor (shield), uncommon*
+
+While wearing this shield, you have an additional +1 bonus to Armor Class. You also receive a +1 bonus on your saving throws against magic spells and abilities that come from fiends, undead, death knights, demon hunters, or warlocks.
+
+#### Battering Shield
+*Shield (tower shield), rare (requires attunement)*
+
+While holding this iron tower shield, you gain a +1 bonus to AC. This bonus is in addition to the shield's normal bonus to AC.
+
+Additionally, the shield has 3 charges, and it regains 1d3 expended charges daily at dawn. If you are holding the shield and push a creature within your reach at least 5 feet away, you can expend 1 charge to push that creature an additional 10 feet, knock it prone, or both.
+
+*Source:* Explorer's Guide to Wildemount
+
+#### Blackrock Bulwark
+[Todo. Spiked tower shield.]
+
+#### Blessed Qiraji Bulwark
+[Todo. Shield. A beetle shell and legs reinforced with elementium. Dodge bonus.]
+
+#### Bulwark of the Ancient Kings
+[Todo. Very rare/legendary. Full plate. Can invoke it to gain temp hp and strength bonus.]
+
+#### Durotan's Battle Harness
+[Todo. Chainmail. ]
+
+#### Green Whelp Armor
+[Todo. Leather. Chance when struck to make foe fall asleep.]
+
+\pagebreakNum
+#### Observer's Shield
+<img src='https://gamepedia.cursecdn.com/wowpedia/6/61/Observer%27s_Shield.JPG?version=3fb6d51050b347efa1e5c1f535520bd2' style='width:325px' />
+
+*Armor (shield), uncommon*
+
+While holding this shield, you have advantage on initiative rolls and Wisdom (Perception) checks.
+
+*Source:* Dungeon Master's Guide, *sentinel shield*
+
+#### Ornate Adamantium Breastplate
+<img src='https://gamepedia.cursecdn.com/wowpedia/6/6d/Ornate_Adamantium_Breastplate.JPG?version=563e0a97d0bcc8b3861d2da8e9bf7976' style='width:325px' />
+
+*Armor (breastplate), rare*
+
+While wearing this armor, you gain a +1 bonus to Armor Class. Additionally, any critical hit against you becomes a normal hit.
+
+#### Skullflame Shield
+[Todo. When struck in combat, 1% chance to deal fire damage to adjacent creatures, 3% chance to steal life from attacker.]
+
+#### The Immovable Object
+<img src='https://gamepedia.cursecdn.com/wowpedia/a/a8/The_Immovable_Object.JPG?version=d5e858c1494c052621b17354fd62353b' style='325px' />
+
+*Shield (tower), rare (requires attunement)*
+
+While you wear this shield, you have advantage on saving throws versus any effect that would move your character. 
+
+As an action you can speak the command word and affix the shield in place as though it were an *immovable rod*. If you are wearing the shield while it is in this form, you lose the shield's bonus to Armor Class but you are immune to any effect that moves your character. You can speak the command word again to end the effect.
+
+If this shield ever touches the magic item *the unstoppable force*, both items are immediately destroyed.
+
+#### Thistefur Hide
+*Armor (hide), uncommon*
+
+Made from the hides of thistlefur furbolgs. Whenever an enemy damages you with a melee attack, they take 1d4 piercing damage.
+
+#### Truesilver Breastplate
+[Todo. Chance for Self-healing when struck.]
+
+#### Wall of the Dead
+[Todo. Shield. Chance when struck to encase wearer in bone, increasing AC.]
+
+\pagebreakNum
+## Potions
+
+#### Fel Blood
+*Potion, XXX rarity*
+
+[Todo.] You deal +1d4 damage per creature from all sources but take +1d4 damage from all sources.
+
+#### Flask of Fortification
+*Potion, rare*
+
+When you drink this potion, your current and maximum hit points increase. The amount of this increase is equal to two of your highest hit die. For example, a level 5 character with 3 levels in hunter and 2 levels in mage would increase their current and maximum points by 20. This increase lasts for 1 hour. The bright green liquid of this potion shimmers in the light.
+
+#### Focusing Draught
+*Potion, uncommon*
+
+When you drink this mildly alcoholic beverage, your mind becomes focused. If you are a character with the Focus class ability, you gain two focus points, up to your normal maximum. If you do not have this ability, you are not able to properly handle the mental strain. Instead you have advantage on the next Intelligence or Wisdom ability check that you perform before the end of your turn. At the beginning of your next turn, you are stunned for one round.
+
+#### Kaja'Cola
+[Todo. Inspiration mechanic.]
+
+#### Noggenfogger Elixir
+*Potion, uncommon*
+
+***"Drink me."***
+
+This elixir was created and trademarked by Marin Noggenfogger. Most commonly sold in packs of six, the odd mix of ingredients has led to incredibly odd results. When you drink this potion, roll a d6 and consult the table below for its effect. If you drink another elixir while already under the effects of one, alternate effects stack. If you roll the same result, the duration of the current effect is extended. The elixir is a dark green, resembling an oil at first glance. It is so thick that some feel imbibing it is more like eating an oyster -- the stuff must be swallowed whole.
+
+d6|Result
+---|---
+1-2|A puff of smoke covers you and when it clears you find that your flesh has fallen off your bones, turning you into a skeleton. You are still technically alive, but do not need to breathe. The transformation lasts for 10 minutes.
+3-4|You are under the effects of reduce, as if enlarge/reduce were cast on you. The effect lasts for 10 minutes, and you do not need to concentrate on the effect to maintain it.
+5-6|You feel oddly buoyant. You are under the effects of feather fall for 10 minutes.
+
+#### Noth's Special Brew
+*Potion, uncommon*
+
+This potion is made from the skulls of dead humanoids, twisted by Noth the Plaguebringer into a powerful brew of undeath. Any death knight who drinks this potion regains 2 expended runic power dice.
+
+To others, this potion does not provide nearly the same benefit. To anyone else the potion instead acts as a *potion of poison*. The potion's black liquid has swirling dark gray clouds, which occasionally form into screaming skulls.
+
+\pagebreakNum
+#### Pandaren Brews
+*Potions, rarity varies*
+
+Pandaren brews follow the rules for potions, but instead of being found or sold in small single-dose vials, pandaren brews are found in kegs or bottles and provide multiple doses. A keg of pandaren brew can be drunk 20 times and an unopened bottle can be drunk 10 times.
+
+***Bravery Brew (rare).*** This brew establishes a feeling of camaraderie and kinship and is a favorite of dwarven battle companies. If at least four creatures drink a dose from this keg, they are immune to the frightened condition and gain 5 temporary hit points each round as long as they can see at least one of their drinking companions. The benefits from this drink last for 10 minutes.
+
+***Black Whiskey (uncommon).*** This bottle of brew can be drunk to blend into the shadows. After 1 sip, you remain invisible for up to 30 minutes. If you move, the effect ends. If you take at least 4 sips, you become invisible and are able to move for 10 minutes but take a -2 penalty on Dexterity-based checks and saving throws for the duration. The bottle holds 12 sips instead of 10.
+
+***Chou's Hair of the Dog Ale (uncommon).*** After downing a mug of this keg of ale, you can ignore 1 level of exhaustion and can use *detect magic* at will. The benefits of this last for 4 hours.
+
+***Chou's Steadying Cider (rare).*** This brew was developed by a pandaren brewmaster who hated the Scourge and the terror and ugliness they spread. For the next 24 hours after you drink from this keg, you automatically know if there is an undead within 60 feet of you. This is blocked by 1 foot of stone, 1 inch of common metal, a thin sheet of lead, or 3 feet of wood or dirt. 
+
+Additionally, you have advantage on saves versus the frightened condition and resistance to necrotic damage for 1d4 hours.
+
+***Drunken Master's Secret Tonic (common).*** When you drink from this bottle, you appear inebriated for the next hour. This does not actually get you drunk, merely giving you the swaying motion of someone completely sloshed.
+
+***Firebelly Ale (uncommon).*** This pepper-flavored ale leaves an uncomfortable churning in your gut. After taking a swig from this keg, you can use a bonus action to let out a fiery belch that deals 2d6 fire damage to a creature within 5 feet. You can do so up to 3 times and the benefits of this ale last for 1 minute.
+
+***Hong's Fighting Lager (uncommon).*** When you drink a swig of this keg of ale as part of a short rest, you remove one level of exhaustion. If you drink the ale as a full-round action while frightened or sickened, the effect is suppressed for the duration or for 1d6 hours, whichever is shorter. Drinking the ale in a thirsty frenzy provides no benefits.
+
+***Wounded Warrior's Whiskey (rare).*** For each swig of this bottle, you restore 1d4 hit points. If you drink at least 4 swigs of this whiskey, you gain a +1 bonus on melee attack and damage rolls and your maximum hit points increase by 1 per level for 1d4 hours. If you drink all 10 swigs of this whiskey, these bonuses increase to +3 and 3 hit points per level and you gain immunity to the charmed and frightened conditions; these benefits last for 1d6 hours. For each swig of whiskey you take, you gain a -1 penalty to initiative rolls and Dexterity saving throws until the effects expire.
+
+*Source:* Magic and Mayhem
+
+
+#### Potion of Armor
+*Potion, rarity varies*
+
+When you drink this potion, your Armor Class increases to a certain amount based on the potion's rarity, as shown on the Potions of Armor table. The effects of this potion last for 8 hours. The steely gray liquid of this potion resists being jostled, moving as a single mass.
+
+**Potions of Armor**
+Potion of...|Rarity|Armor Class
+---|---|---
+Lesser Stoneshield|Common|13 + Dexterity modifier
+Greater Stoneshield|Uncommon|15 + Dexterity modifier
+Ironshield|Rare|18 + Dexterity modifier
+Indestructibility|Very Rare|20 + Dexterity modifier
+
+#### Potion of Mana
+*Potion, rarity varies*
+
+***Note: This item is designed for the Mana Variant Rule.***
+
+When you drink this potion, you regain an amount of expended mana. The amount recovered depends on the potion's rarity, as shown on the Potions of Mana table. Any mana regained in excess of your normal maximum are lost. Whatever its potency, the potion's blue liquid lets off a faint blue light. 
+
+**Potions of Mana**
+Potion of...|Rarity|Mana
+--|--|--
+Mana|Common|1
+Greater Mana|Uncommon|3
+Superior Mana|Rare|5
+Supreme Mana|Very Rare|11
+
+\pagebreakNum
+#### Potion of Rage
+*Potion, uncommon*
+
+When you drink this potion, you are enraged. A character with the Inner Rage class feature gains two rage points. Others who imbibe this potion cannot properly handle the infuriating power and instead attack recklessly, causing attack rolls against them to have advantage for 1 minute. The blood red liquid of this potion causes whatever container it fills to gain cracks, though it does not actually damage the container.
+
+#### Thistle Tea
+*Potion, uncommon*
+
+When you drink this bitter tea, you are infused with energy. A character with the Energy class ability gains two points of energy, up to their max total. Others who drink this tea are instead filled with a jittery energy that quickly burns out. Your movement speed increases by 10 feet until the end of your next turn, after which you gain a level of exhaustion.
+
+#### Troll's Blood Elixir
+*Potion, rarity varies*
+
+When you drink this potion, you gain the ability to regain lost hit points over time. You regain a number of hit points per round based on the elixir's rarity, as shown on the Troll's Blood Elixir table. The effects of this potion last for 1 hour. You regain these hit points at the start of each of your turns, starting the turn after you first take damage. The opaque, dark green liquid of this potion gradually expands to fill the confines of its container, though only one vial's worth of potion is usable.
+
+**Troll's Blood Elixir**
+[XX] Troll's Blood Elixir|Rarity|Hit Points per round
+---|---|---
+Weak|Uncommon|1
+Strong|Rare|2
+Mighty|Very Rare|3
+Major|Legendary|4
+
+\pagebreakNum
+## Rings
+#### Freezing Band
+[Todo. Chance to freeze melee attackers in ice for 1 turn.]
+
+#### Seal of Ascension
+[Todo. Can summon a ghostly red dragon.] Draconic runes appear and disappear along the inner band.
+
+#### Spider Ring
+*Ring, uncommon (requires attunement)*
+
+While you wear this ring, you ignore movement restrictions caused by webbing and while in contact with a web you know the exact location of each other creature in contact with the same web.
+
+The ring also has 3 charges. It regains 1d3 charges at dusk. You can expend 1 charge to cast the *spider climb* or *web* spells.
+
+#### The 2 Ring
+[Todo. Vastly superior to the 1 ring.]
+
+#### The 5 Ring
+[Todo. Appears to have eaten the 3 and 4 rings.]
+
+\pagebreakNum
+## Rods
+#### Dartol's Rod
+*Rod, very rare (requires attunement)*
+
+This steel rod is adorned with feathers and a furbolg skull. You can use its power to *polymorph*, as the spell, into a furbolg. This effect requires no concentration and lasts until you transform back. 
+
+While you are polymorphed, other furbolg are considered charmed by you (no save). Attacking them breaks this effect. You can also cast *suggestion* at will, but only on furbolgs.
+
+#### Fetish of Chitinous Spikes
+[Todo. Deal damage to attackers, activated as action.]
+
+#### Rod of Corrosion
+[Todo. Acid resistance/acid damage.]
+
+#### Rod of the Sun King
+[Todo. Mace. When hits, chance to generate energy or rage.]
+
+#### Scepter of the Sea
+[Todo. Summons murlocs.]
+
+#### Totem of the Elements
+*Rod, uncommon (requires attunement by a shaman)*
+
+While attuned to this totem, you can use it to cast the *control flames*, *gust*, *mold earth*, and *shape water* cantrips. You can use this totem as your druidic focus.
+
+\pagebreakNum
+## Scrolls
+#### Scroll of Flight
+[Todo. Single-use mass transport (like flightmaster)]
+
+#### Scroll of Greater Ability
+*Scroll, rarity varies* 
+
+Each *scroll of greater ability* works on a single ability score, depending on the type of scroll.
+
+##### Scroll of Greater Ability
+Ability Score|Rarity
+---|---
+Charisma|Uncommon
+Constitution|Rare
+Dexterity|Rare
+Intelligence|Uncommon
+Strength|Uncommon
+Wisdom|Rare
+
+Using an action to read the scroll causes one of your ability scores, dependent on the type of scroll, to be increased to 19 for 24 hours. The scroll has no effect if your ability score is already 19 or higher. 
+
+Once the scroll has been used, the words on it fade and it crumbles into dust.
+
+#### Scroll of Healing
+[Todo. AoE healing.]
+
+#### Scroll of Inner Peace
+[Todo. Zen flight, single use.]
+
+#### Scroll of Mana
+[Todo. Restores a number of mana points/spell slots.]
+
+#### Scroll of Mass Invisibility
+[Todo. Invisibility on multiple characters.]
+
+#### Scroll of Protection (Alternate)
+*Scroll, uncommon*
+
+When read, you use this scroll to cast *shield of faith* on up to 6 creatures you can see within 30 feet.
+
+#### Scroll of Regeneration
+*Scroll, rare*
+
+This scroll is inscribed on crisp, clean parchment that stays a brilliant white even if exposed to dirt, grime, or mud. The words inscribed thereon are magical, but easily understood, and are written in a circle that rotates when read, allowing the inscriptions to be easily repeated.
+
+You begin reading this scroll as an action. As long as you use your action to keep reading the scroll aloud (up to 1 minute), friendly creatures within 30 feet of you heal 1d4 hit points at the end of your turn. Treat this as though you were concentrating on a spell.
+
+#### Scroll of Speed
+*Scroll, uncommon*
+
+A faint whistling sounds from this scroll when it is removed from its container. As the page is unrolled, it seems to flap about as if caught in a breeze. 
+
+When you read aloud this scroll as an action, each allied creature within 30 feet of you gains a +10 bonus to their movement speed for 1 hour.
+
+#### Scroll of the Beast
+[Todo. Bonus to attack rolls for short duration.]
+
+#### Scroll of Town Portal
+[Todo. Single-use teleportation circle, set to specific permanent magic circle. Key needed?]
+
+\pagebreakNum
+## Staffs
+
+#### Ancestral Staff
+[Todo. WC3 Artifact, troll. Can summon troll berserkers, increased speed aura.]
+
+#### Fandral's Flamescythe
+*Staff, rare (requires attunement by a druid)*
+
+This staff has a red gem glowing with contained flame set on the head, around which a large metal design slowly rotates. Attacks with this staff deal an additional 1d10 fire damage.
+
+Additionally, when you use your shapeshift ability, you can choose to transform into an animal composed of flame. You retain all the normal effects of your form and you gain the following:
+- You have immunity to fire damage.
+- Your attacks deal an additional 1d10 fire damage.
+- You have the Fire Form, Illumination, and Water Susceptibility abilities of a fire elemental. 
+- 
+#### Key to the Planes
+[Todo. Staff shaped like a massive key~~blade~~. Can be used as a planar tuning fork for multiple planes.]
+
+#### Soul Harvester
+[Todo. Warlock item, staff/scythe. Deals bonus necrotic damage with spells.]
+
+#### Staff of Ammunae
+[Todo. Associated with the keeper of the Life sphere of influence.] This is a long staff with a gold head piece. In the center of the head is a green gem of some unknown mineral that allows light to shine through. The staff is warm to the touch and if left too long in one place, plants turn to face it as if facing the sun.
+
+#### Staff of the Arcane
+*Staff, very rare (requires attunement by a mage)*
+
+You have resistance to force damage while you hold this staff.
+
+The staff has 10 charges. While holding it, you can use an action to expend 1 or more of its charges to cast one of the following spells from it, using your spell save DC: *arcane explosion* ^WHH^ (3 charges), *mage armor* (1 charge), *magic missile* (1 charge), or *polymorph* (4 charges).
+
+The staff regains 1d6 + 4 expended charges daily at dawn. If you expend the last charge, roll a d20. On a 1, the staff lets out the sound of a bleating sheep and then disappears like a popping soap bubble.
+
+#### Staff of Conjuring
+[Todo. Can be used to conjure muffins.]
+
+#### Staff of Curses
+*Staff, very rare (requires attunement by a warlock)*
+
+You have resistance to force damage while you hold this staff.
+
+The staff has 10 charges. While holding it, you can use an action to expend 1 or more of its charges to cast one of the following spells from it, using your spell save DC: *bestow curse* (3 charges), *hex* (1 charge), *remove curse* (3 charges), or *toll the dead* (0 charges, damage as a cantrip of your warlock level).
+
+The staff regains 1d6 + 4 expended charges daily at dawn. If you expend the last charge, roll a d20. On a 1, the staff lets out an unearthly scream of anguish that can be heard for 300 feet before crumbling into white ash.
+
+#### Staff of Disintigration
+[Todo. Not associated with disintigration spells. Legendary item. Can be used to place mental protection field over allies, preventing stun/silence/disorient effects.]
+
+#### Staff of Dominance
+[Todo.]
+
+\pagebreakNum
+#### Staff of Elemental Balance
+*Staff, very rare (requires attunement by a shaman)*
+
+This staff can be wielded as a magic quarterstaff that grants a +2 bonus to attack and damage rolls made with it. While holding it, you gain a +2 bonus to Armor Class, saving throws, and spell attack rolls. 
+
+The staff has 20 charges for the following properties. The staff regains 2d8 + 4 expended charges daily at dawn. If you expend the last charge, roll a d20. On a 1, the staff retains its +2 bonus to attack and damage rolls but loses all other properties. On a 20, the staff regains 1d8 + 2 charges.
+
+***Elemental Strike.*** When you hit with a melee attack using the staff, you can expend 1 charge to deal an extra 1d6 damage to the target. The type of damage is your choice of acid, cold, fire, lightning, or thunder.
+
+***Spells.*** While holding this staff, you can use an action to expend 1 or more of its charges to cast one of the following spells from it, using your spell save DC and spell attack bonus: *absorb elements* ^XGE^ (1 charge), *conjure elemental* (5 charges) *elemental shock* ^WHH^ (1 charge), *elemental bane* ^XGE^, *primordial ward* ^XGE^ (6 charges), *wind wall* (3 charges), *wall of fire* (4 charges), *wall of stone* (5 charges), or *wall of water* ^XGE^ (3 charges).
+
+***Elemental Castigation.***  You can use an action to break the staff over your knee or against a solid surface, performing a elemental castigation. The staff is destroyed and releases its remaining magic in an explosion that expands to fill a 30-foot-radius sphere centered on it.
+
+You have a 50 percent chance to instantly travel to a random elemental plane, avoiding the explosion. If you fail to avoid the effect, you take damage equal to 16 x the number of charges in the staff. The damage type is simultaneously acid, cold, fire, lightning and thunder--you must have resistance to all types for the damage to be reduced. Every other creature in the area must make a DC 17 Dexterity saving throw. On a failed save, a creature takes an amount of damage based on how far away it is from the point of origin, as shown in the following table. On a successful save, a creature takes half as much damage.
+
+Distance from Origin|Damage
+---|---
+10 ft. away or closer|8 x the number of charges in the staff
+11 to 20 ft. away|6 x the number of charges in the staff
+21 to 30 ft. away|4 x the number of charges in the staff
+
+#### Staff of Fel Magic
+*Staff, very rare (requires attunement by a warlock)*
+
+You have resistance to necrotic damage while you hold this staff.
+
+The staff has 10 charges. While holding it, you can use an action to expend 1 or more of its charges to cast one of the following spells from it, using your spell save DC: *bestow curse* (3 charges), *demonfire* ^WHH^ (4 charges), *enervation* (5 charges), or *hellish rebuke** (1 charge). *Hellish rebuke* can be cast as a reaction, as normal.
+
+The staff regains 1d6 + 4 expended charges daily at dusk. If you expend the last charge, roll a d20. On a 1, the staff bursts into a green flame that consumes the staff.
+
+#### Staff of Fire
+*Staff, very rare (requires attunement by a druid, mage, shaman, or warlock)*
+
+You have resistance to fire damage while you hold this staff.
+
+The staff has 10 charges. While holding it, you can use an action to expend 1 or more of its charges to cast one of the following spells from it, using your spell save DC: *burning hands* (1 charge), *fireball* (3 charges), or *wall of fire* (4 charges).
+
+The staff regains 1d6 + 4 expended charges daily at dawn. If you expend the last charge, roll a d20. On a 1, the staff blackens, crumbles into cinders, and is destroyed.
+
+*Source:* Dungeon Master's Guide
+
+#### Staff of Frost
+*Staff, very rare (requires attunement by a druid, mage, or shaman)*
+
+You have resistance to cold damage while you hold this staff.
+
+The staff has 10 charges. While holding it, you can use an action to expend 1 or more of its charges to cast one of the following spells from it, using your spell save DC: *cone of cold* (5 charges), *fog cloud* (1 charge), *ice storm* (4 charges), or *wall of ice* (4 charges).
+
+The staff regains 1d6 + 4 expended charges daily at dawn. If you expend the last charge, roll a d20. On a 1, the staff turns to water and is destroyed.
+
+*Source:* Dungeon Master's Guide
+
+#### Staff of Gul'dan
+[Todo. Legendary warlock staff.]
+
+#### Staff of Kel'thuzad
+[Todo. Bonus to spell power/spell penetration. Staff of the magi? Also known as Soulseeker. Was second only to Atiesh in classic.]
+
+#### Staff of Negation
+[Todo. Dispel magic.] This staff of polished gray wood is cold tot he touch and inlaid with black runes. Bands of silver bind a star-shaped crystal to its tip.
+
+#### Staff of Protection
+[Todo. Bonus armor, (saves?), resistances to all energy types.]
+
+#### Staff of Rampant Growth
+[Todo. Corn cob appearance. Nature resistance, bonus healing.]
+
+#### Staff of Sorcerer-Thane Thaurissan
+[Todo.] The pieces of this staff still crackle with energy. Yet it also appears to have suffered extensive fire damage.
+
+#### Staff of Souls
+[Todo. Ner'zhul's staff.]
+
+#### Staff of Teleportation
+[Todo.]
+
+\pagebreakNum
+
+#### Staff of the Earth
+*Staff, very rare (requires attunement by a druid or shaman)*
+
+While you hold this staff, you have resistance to a single type of damage from nonmagical weapons: bludgeoning, piercing, or slashing. You can change the type as a bonus action.
+
+The staff has 10 charges. While holding it, you can use an action to expend 1 or more of its charges to cast one of the following spells from it, using your spell save DC: *earth tremor* ^XGE^ (1 charge), *earthen spike* ^WHH^ (3 charges), *stone shape* (4 charges), of *wall of stone* (5 charges).
+
+The staff regains 1d6 + 4 expended charges daily at dawn. If you expend the last charge, roll a d20. On a 1, the staff turns to sand and is destroyed.
+
+#### Staff of the Moon
+*Staff, very rare (requires attunement by a druid or priest)*
+
+You have resistance to radiant damage while you hold this staff.
+
+The staff has 10 charges. While holding it, you can use an action to expend 1 or more of its charges to cast one of the following spells from it, using your spell save DC: *moonbeam* (2 charges), *starfall* ^WHH^ (6 charges), *starfire* ^WHH^ (1 charge), or *star surge* (3 charges).
+
+The staff regains 1d6 + 4 expended charges daily at dawn. If you expend the last charge, roll a d20. On a 1, the staff turns black and fades from existence.
+
+#### Staff of the Purifier
+[Todo. Can remove diseases and poisons.]
+
+#### Staff of the Qiraji Prophets
+[Todo. Resistances to all energy damage, can reduce the resistance of others.]
+
+#### Staff of the Ruins
+[Todo. One of the best pre-BC caster staves.]
+
+#### Staff of the Shade
+[Todo. Increases damage done by Shadow spells.]
+
+#### Staff of the Waves
+*Staff, very rare (requires attunement by a druid or shaman)*
+
+While you hold this staff, you have a swim speed equal to your movement speed and can breathe underwater.
+
+The staff has 10 charges. While holding it, you can use an action to expend 1 or more of its charges to cast one of the following spells from it, using your spell save DC: *control water* (4 charges), *create or destroy water* (1 charge), *maelstrom* ^XGE^ (5 charges), *tidal wave* ^XGE^ (3 charges), or *water walk* (3 charges).
+
+The staff regains 1d6 + 4 expended charges daily at dawn. If you expend the last charge, roll a d20. On a 1, the staff turns to water and is destroyed.
+
+#### Staff of the Winds
+*Staff, very rare (requires attunement by a druid or shaman)*
+
+You have resistance to lightning and thunder damage while you hold this staff.
+
+The staff has 10 charges. While holding it, you can use an action to expend 1 or more of its charges to cast one of the following spells from it, using your spell save DC: *call lightning* (3 charges), *control winds* ^XGE^ (5 charges), *feather fall* (1 charge), *gust of wind* (2 charges), or *thunderwave* (1 charge).
+
+The staff regains 1d6 + 4 expended charges daily at dawn. If you expend the last charge, roll a d20. On a 1, the staff crumbles into dust which is carried away by a gust of wind, and is destroyed.
+
+#### Warden Staff
+[Todo. Adds to AC.]
+
+\pagebreakNum
+## Wands
+
+#### Wand of Arcane Potency
+[Todo. Bonus damage when casting force spells.]
+
+#### Wand of Blizzard
+*Wand, rare (requires attunement by a spellcaster)*
+
+This wand has 7 charges. While holding it, you can use an action to expend 1 or more of its charges to cast the *blizzard* spell (save DC 15) from it. For 1 charge, you cast the 3rd-level version of the spell. You can increase the spell slot level by one for each additional charge you expend.
+
+The wand regains 1d6 + 1 expended charges daily at dawn. If you expend the wand's last charge, roll a d20. On a 1, the wand crumbles into ashes and is destroyed.
+
+#### Wand of Dispelling
+[Todo. Dispel Magic.]
+
+#### Wand of Entangle
+*Wand, uncommon (requires attunement by a spellcaster)*
+
+This wand has 7 charges. While holding it, you can use an action to expend 1 of its charges to cast the *entangle* spell (save DC 13) from it.
+
+The wand regains 1d6 + 1 expended charges daily at dawn. If you expend the wand's last charge, roll a d20. On a 1, the wand crumbles into ashes and is destroyed.
+
+*Source:* Tales from the Yawning Portal
+
+#### Wand of Frostfire Bolt
+*Wand, uncommon*
+
+This wand has 7 charges. While holding it, you can use an action to expend 1 or more of its charges to cast the *frostfire bolt* spell from it. For 1 charge, you cast the 1st-level version of the spell. You can increase the spell slot level by one for each additional charge you expend.
+
+The wand regains 1d6 + 1 expended charges daily at dawn. If you expend the wand's last charge, roll a d20. On a 1, the wand crumbles into ashes and is destroyed.
+
+#### Wand of Jade
+[Todo. Petrification, but jade statue.]
+
+#### Wand of Lightning Shield
+[Todo.]
+
+#### Wand of Mana Stealing
+[Todo. Steal target's spell slots and give to you.]
+
+#### Wand of Prismatic Focus
+[Todo. Better damage with prismatic spells? Choice of damage type? Or deal 1 damage of each damage type.]
+
+#### Wand of Simulated Life
+[Todo. Creates simulacrums of animals. If no material component is provided, makes a sheep. If a piece of a creature is provided, it makes that type instead. Cannot recreate intelligent creatures.]
+
+#### Wand of the San'layn
+[Todo. Vampiric.]
+
+#### Wand of the Whispering Dead
+[Todo. Speak with dead.]
+
+#### Wand of Untainted Power
+[Todo. Big Bang Theory reference.]
+
+\pagebreakNum
+## Weapons
+#### [???]
+[Todo. Sentinel moonglaives that ricochet between targets. Name: Watcher's Moonglaives? (After where they were found in the WC3 mission Brothers in Blood.)]
+
+#### Ancient Bone Bow
+[Todo.] Handed down from ancestor to ancestor, this bow has seen many enemies fall before it.
+
+#### Annihilator
+[Todo. Axe. Chance to reduce target's AC. Stacks up to 3 times. Raptor ravage?]
+
+#### Arcanite Reaper
+*Weapon (greataxe), very rare (requires attunement)*
+
+[Todo: Needs edit. This was good because it was slow, meaning that abilities based on raw weapon damage gained a boost.]
+
+You gain a +2 bonus to attack and damage rolls made with this magic weapon. When you attack an object, the attack is an automatic critical hit. In addition, you can make one attack with it as a bonus action on each of your turns.
+
+#### Black Amnesty
+[Todo. Dagger, chance to decrease threat.]
+
+#### Blackfury
+[Todo. Polearm, fire resistance. Dark iron/thorium brotherhood recipe.]
+
+#### Blackgore Totem
+*Weapon (tauren totem), uncommon rarity (requires attunement)*
+
+This totem has 3 charges. It regains 1d3 charges at dawn. While attuned to this totem, you can use your bonus action to cast the *healing spirit* spell. If you are a tauren, you cast this at 3rd level.
+
+*Source:* Magic and Mayhem
+
+#### Blackguard
+[Todo. Shortsword, parry chance.]
+
+#### Blazefury
+[Todo. 1H sword, ???]
+
+#### Blazing Rapier
+[Todo. Rapier, DoT fire damage.]
+
+#### Blight
+[Todo. Polearm. Diseases target for X damage and another X damage over 10 sec.] This long-handled halberd has a narrow, razor-sharp blade and wickedly barbed tip that bears a faintly glowing, sickly green aura. The shaft is wrapped in dried skin peeled from the corpses of zombies. The faint odor of rotting eggs surrounds the wielder in combat. These nasty-looking and nasty-smelling items are not a favorite among the living for obvious reasons.
+
+#### Bloodmoon
+[Todo. 2H Axe. ???]
+
+#### Brain Hacker
+[Todo. 2H Axe. Intelligence debuff.]
+
+#### Corrupted Ashbringer
+*Weapon (greatsword), legendary (requires attunement)*
+
+While you are attuned to this weapon, your Constitution score is reduced by 2. Additionally, you gain a +3 bonus to attack and damage rolls and you deal a critical hit on a roll of 19 or 20 when you attack with this magic weapon. 
+
+Whenever you score a critical hit, the sword deals an additional 2d6 points of necrotic damage and heals you for the amount of this damage dealt. When you bring a creature to 0 hit points with the sword, the creature's body is disintegrated.
+
+***Sentience.*** Corrupted Ashbringer is a sentient neutral evil weapon with an Intelligence of 11, a Wisdom of 16, and a Charisma of 19. It has hearing and darkvision out to a range of 120 feet.
+
+The weapon can speak, read, and understand Common, and can communicate with its wielder telepathically. Its voice is deep and echoing, accompanied by a second voice in the background. While you are attuned to it, Corrupted Ashbringer also understands every language you know.
+
+***Personality.*** Corrupted Ashbringer speaks slowly, with pauses between words. Its spirit is that of the former paladin Alexandros Mograine, who was killed by his sone by his own sword, corrupting it from the former weapon of the Light, Ashbringer. He was later risen as a death knight, which bound his soul to his former blade.
+
+The spirit sword hates his son Renault, the Scarlet Crusade, the Burning Legion, and the Scourge. It spends its time reminiscing on its former life, talking to itself and nurturing its hatred. This hatred drives it to wish the destruction of its above enemies by any means necessary, including taking steps that include the deaths of thousands of innocent lives.
+
+Despite this it holds a certain fondness for the paladins of the Silver Hand, of whom Alexandros was a former Highlord. If the wielder attempts to fight them, or if they do not regularly work to bring about the end of its enemies, a conflict occurs. However, part of its corruption came at the hands of the Scourge, so it grudgingly tolerates the Scourge due to the Lich King's influence.
+
+#### Corruption
+[Todo. Greatsword. Boosted damage and strength, reduced wisdom/healing? (spirit)]
+
+#### The Cruel Hand of Timmy
+[Todo. Skull-headed mace. Chance for debuff lowers all attributes by 1 for 1 minute.]
+
+#### Dawn's Edge
+[Todo. 1H Axe. Crit?]
+
+\pagebreakNum
+#### Demon Hunter Warblade
+*Weapon (warglaive), uncommon (requires attunement by a demon hunter)*
+
+While you are attuned to this warglaive, you can use your action to cast the *protection from evil and good* spell. You can only cast it on yourself and you must select the fiend option. Once this ability is used, it cannot be used again until the next dawn.
+
+*Source:* Magic and Mayhem
+
+#### Destiny
+[Todo. Greatsword, morale bonuses to str on hit.]
+
+#### Dragonstrike
+[Todo. Mace, very rare. Chance on hit to increase speed. Head of weapon in shape of a dragon roaring.]
+
+#### Dwarven Hand Cannon
+[Todo. Heavy hitter double blunderbuss firearm, chance to deal fire damage?]
+
+#### Ebon Hand
+[Todo. Mace/hammer, chance to deal necrotic.]
+
+#### Edge of Winter
+[Todo. Minor axe that deals occasional frost damage.]
+
+#### Ellemayne
+[Todo. King Varian's sword that splits into two pieces. This is one of the halves.]
+
+#### Enchanted Battlehammer
+[Todo. Maul. Parry.]
+
+#### Fezzik's Autocannon
+*Weapon (musket), very rare*
+
+This weapon resembles more of a small cannon rather than a musket. When you fire the weapon (using normal ammunition) the attack deals 4d6 piercing damage instead of the normal 1d12. Both you and the target if hit must make a DC 13 Strength check or be knocked prone.
+
+#### Flame Wrath
+[Todo. Polearm. Chance to envelop user in a fire shield and unleash a burst of fire on nearby creatures.]
+
+#### Frost Tiger Blade
+[Todo, any sword. Cold-forged instead of forged in fire. Chills victims.]
+
+#### Frostguard
+[Todo. 1H sword. Chance to slow creature.] This wickedly curved and unnaturally sharp bladed weapon has an odd, bluish tint when held up to the light. Its surface is oddly cold to the touch, and in warm or humid climates a thin white sheen of frost builds up on its surface.
+
+#### Gorehowl
+*Weapon (greataxe), very rare*
+
+Gorehowl is the legendary two-handed axe of the Hellscream family of orcs. The sharply curved axe head, with an intricate series of grooves in it, is massive, well worn, and permanently stained with old blood. Its wickedly curved blade has two notches in it, and many small holes in the head near the handle. When swung, the notches causes the axe to "sing" its own battle cry, just as Grom Hellscream once did, which gave the weapon its name.
+
+You have a +3 bonus to attack and damage rolls with this weapon.
+
+#### Greatsword of the Sin'dorei
+*Weapon (greatsword), very rare (requires attunement)*
+
+This item is the weapon of choice for the Blood Elf leader, Regent Lord Lor'themar Theron. While wielding it, you receive a +3 bonus on attack and damage rolls. It is also magically lightened, causing it to lack the heavy and two-handed property. It instead gains the versatile property and deals 1d10 slashing damage if wielded in one hand, or the normal 2d6 if wielded in two hands.
+
+#### Halberd of Smiting
+[Todo. Vorpal weapon.]
+
+#### Hammer of the Naaru
+*Weapon (maul), rare (requires attunement)*
+
+This massive crystalline warhammer is a favored weapon of the draenei paladins, the Vindicators. 
+
+When you hit a fiend or an undead with this magic weapon, that creature takes an extra 2d6 radiant damage. If the target has 25 hit points or fewer after taking this damage, it must succeed on a DC 15 Wisdom saving throw or be destroyed. On a successful save, the creature becomes frightened of you until the end of your next turn.
+
+While you hold this weapon, it sheds bright light in a 20-foot radius and dim light for an additional 20 feet.
+
+*Source:* Dungeon Master's Guide, *mace of disruption*
+
+#### Heartseeker
+[Todo. Dagger. Crit chance. Vorpal, but for hearts?]
+
+#### Ironwood Staff
+*Weapon (quarterstaff), common*
+
+When a *shillelagh* spell is cast on this staff, the spell lasts for 24 hours. It retains this benefit even if you let go of the staff. Only the one who cast the cantrip can benefit from this ability.
+
+\pagebreakNum
+#### Jang'thraze the Protector
+*Weapon (longsword), rare (requires attunement)*
+
+You have a +1 bonus on attack rolls and damage when wielding this magic weapon. If you are attuned to both Jang'thraze the Protector and Sang'thraze the Deflector, they take up only a single attunement slot. Additionally, you may combine them as an action to form Sul'thraze the Lasher.
+
+When you hit a creature while wielding this weapon, it must make a DC 13 Constitution saving throw or be cursed for 1 minute. While it is cursed, you have resistance to damage dealt by the creature's melee attacks.
+
+#### Jin'rohk, the Great Apocalypose
+[Todo. Quicker strikes?]
+
+#### Kelen's Dagger of Escape
+*Weapon (dagger), rare (requires attunement)*
+
+While attuned to this dagger, you can use the *misty step* spell on yourself at will.
+
+#### Lionheart Weapon
+[Todo. Sword, resist fear effects, chance to increase STR]
+
+#### Mantid Sky Reaver
+[Todo. Onehanded sword, benefits when attacking from air.]
+
+#### Manual Crowd Pummeler
+[Todo. Mace. Can activate as an action to make many attacks in a round, but deal little damage.]
+
+#### Moonsteel Weapon
+[Todo. Stronger under moonlight.]
+
+#### Nifflevar Bearded Axe
+[Todo. Handaxe/Battleaxe. ?? effects]
+
+#### Nightfall
+[Todo. Greataxe, chance to increase spell damage taken by target.]
+
+#### Obsidian-Edged Blade
+[Todo. Greatsword, very high crit range.]
+
+#### Phantom Blade
+[Todo. Reduces target's AC and prevents them from hiding or becoming invisible. Faerie fire?] During the last war, the Lich King outfitted some of his incorporeal undead warriors with special armor, making them difficult to deal with. In response, human craftsmen developed the phantom blade. These longswords are a translucent white color, and seem to disappear almost entirely in sunlight.
+
+#### Runeblade of Baron Rivendare
+[Todo. Greatsword. Movement speed bonus and slow hp regen.]
+
+#### Runed Soulblade
+*Weapon (greatsword), uncommon*
+
+This weapon is the base form of what will eventually become a powerful runeblade. It is a component in the reanimation of a death knight. Attacks made with this weapon have a +1 bonus on attack and damage rolls.
+
+#### Sageblade
+[Todo. Longsword, chance on hit to decrease magical resistances on target. Bonus to spell save DC?]
+
+#### Sang'thraze the Deflector
+*Weapon (longsword), rare (requires attunement)*
+
+You gain a +1 bonus to attack and damage rolls made with this weapon. If you are attuned to both Jang'thraze the Protector and Sang'thraze the Deflector, they only take up a single attunement slot. Additionally, you may combine them as an action to form Sul'thraze the Lasher.
+
+While you wield this weapon, you have a +1 bonus to Armor Class. 
+
+#### Scimitar of the Desert Winds
+[Todo. Scimitars, one for each of the four directional winds: North (Mistral), East (Gregale), South (Sirocco), and West (Libeccio). Note that they are slightly offset. North scimitar is associated with cold damage and the djinn Nazir, East simitar is associated with harsh winds and the djinn Rohash, South scimitar is associated with lightning storms and the djinn Siamat, and the West scimitar is associated with calm and healing winds and the djinn Anshal.]
+
+#### Serenity
+[Todo. Club, chance of dispel magic on hit.]
+
+#### Shadowfang
+*Weapon (any sword), rare (requires attunement)*
+
+The black blade of this sword is crafted from a mysterious arcane alloy. You gain a +1 bonus to attack and damage rolls made with this magic weapon. While the sword is on your person, you are immune to effects that turn undead.
+
+***Dark Blessing.*** While holding the sword, you can use an action to give yourself 1d4 + 4 temporary hit points. This property can't be used again until the next dusk.
+
+***Disheartening Strike.*** When you hit a creature with an attack using this weapon, you can fill the target with unsettling dread: the target has disadvantage on the next saving throw it makes before the end of your next turn. The creature ignores this effect if it's immune to the frightened condition. Once you use this property, you can't do so again until the next dusk.
+
+*Source:* Explorer's Guide to Wildemount, *acheron blade*
+
+#### Shalamayne
+[Todo. King Varian's weapon, a sword that splits in two. This is the main blade.]
+
+#### Shalla'tor
+[Todo. King Varian's weapon, a sword that splits in two. This is one of the twins.]
+
+#### Shaman Claws
+[Todo. New claw weapon. Given to shaman when they complete their training.]
+
+\pagebreakNum
+#### The Shatterer
+[Todo. Disarm/sunder chance.]
+
+#### Sonic Pulse Generator
+[Todo. Firearm/crossbow, deals thunder damage. Silent to others.]
+
+#### Spear of Xuen
+[Todo. Lance, benefits when fighting on the back of a flying mount.]
+
+#### Staff of the Hidden Master
+[Todo. Monk staff.]
+
+#### Starshatter
+*Weapon (any sword), very rare (requires attunement by a spellcaster)*
+
+You gain a +2 bonus to attack and damage rolls made with this magic weapon.
+
+This sword has a line of eight crystals laid out along the blade, glowing like a constellation. Each crystal corresponds to a charge; when the charge is expended, a crystal fades and becomes dull. You can expend a charge from this weapon as a bonus action to cast the *blinding smite* spell (DC 15).
+
+The sword regains 1d6 + 2 charges at first starlight. If the last charge is expended, roll a d20. On a 1, the sword permanently loses all charges but retains its bonus to attack and damage rolls.
+
+#### Stormhammer
+[Todo. Ranged attack equivalent to longbow, shock/thunder damage.]
+
+#### Stormherald
+[Todo. Maul, chance of stun.]
+
+#### Sul'thraze the Lasher
+*Weapon (greatsword), very rare (requires attunement)*
+
+You gain a +2 bonus to attack and damage rolls made with this magic weapon. You can separate Sul'thraze the Thrasher into the twin swords, Jang'thraze the Protector and Sang'thraze the Deflector as an action. 
+
+When you hit a creature with this weapon, the target must make a DC 15 Constitution saving throw. On a failure, they are cursed for 1 minute. While cursed, whenever they deal damage with a melee attack they must reroll the damage and take the lower total. Additionally, they take an additional 1d4 necrotic damage whenever they are dealt damage.
+
+#### Sulfuron Hammer
+[Todo. Lesser version of Sulfuras]
+
+#### Truesilver Champion
+[Todo. Greatsword, glows, chance of absorption shield.] *The bright blade sings a chorus of honor and triumph.*
+
+#### Warden's Moonglaive
+*Weapon (Kaldorei Moon Sword), rare (requires attunement)*
+
+As an action, you can stamp the name of a specific person on the handle of this weapon, marking the target as your quarry. You know the general direction of the person (as long as they are on the same plane) and can recognize the target regardless of disguise or magical concealment. You immediately know if the target dies while their name is inscribed on the blade's handle.
+
+*Source:* Magic and Mayhem
+
+#### Weapon of the Light
+*Weapon (any melee), uncommon*
+
+[TODO: Extra crusader smite damage]
+
+#### Weapon of Returning
+*Weapon (weapon with thrown property), uncommon (requires attunement)*
+
+An enchantment most often seen on kaldorei moonglaives. When you throw a weapon of returning, the weapon returns to your hand after it hits or misses its target. It does so after the attack roll resolves, allowing you to make as many attacks as you can normally make with the Attack action.
+
+#### Wicked Edge of the Planes
+[Todo. 1H axe. ???]
+
+#### Windforged Rapier
+[Todo. Scimitar of speed, but rapier.]
+
+#### Wolfslayer's Rifle
+*Weapon (double musket), very rare*
+
+This complex weapon has two barrels and a rotating cylinder that contains extra shots. It also comes equipped with a scope and a bayonet. You can fire this weapon up to 12 times before needing to reload. 
+
+Optionally, you can fire two shots at once provided you have at least two shots left, though firing in this way jostles your aim more than usual. When you use this option, you make two attack rolls against the same target, with a -2 penalty on both attack rolls.
+
+#### Zin'rokh, Destroyer of Worlds
+[Todo. Greatsword. Greater crit damage? Greater crit range?]
+
+\pagebreakNum
+## Wondrous Items
+#### Abyss Shard
+[Todo. Warlock item. Allows summoning of voidwalker w/o spell slots or soul shards.]
+
+#### Alchemist's Stone
+*Wondrous item, very rare (requires attunement)*
+
+While attuned to this glowing yellow gem, your Strength, Dexterity, Constitution, Intelligence, Wisdom, and Charisma are increased by 1. As normal, this cannot bring your stats above 20. Additionally, when you imbibe a potion that has dice rolled for numerical effects, such as the number of hit points restored in the case of a potion of healing, you can roll the dice twice and take either result.
+
+When attuned to this item and using alchemist's supplies to craft items, crafting the item takes half the normal amount of time.
+
+#### Amulet of Flowing Life
+[Todo.]
+
+#### Amulet of Hero's Rest
+[Todo.]
+
+#### Amulet of Living Wood
+
+#### Amulet of Protection from Turning
+*Wondrous item, rare (requires attunement)*
+
+While you wear this amulet of silver and turquoise, you have advantage on saving throws against effects that turn undead.
+
+If you fail a saving throw against such an effect, you can choose to succeed instead. You can do so three times, and expended uses recharge daily at dawn. Each time an effect that turns undead is used against you, the amulet glows with silvery blue light for a few seconds.
+
+*Source:* Tales from the Yawning Portal
+
+#### Amulet of Recall
+[Todo.]
+
+#### Amulet of Seven Curses
+[Todo.]
+
+#### Amulet of Spell-Shield
+[Todo.]
+
+#### Amulet of the Dawn
+
+#### Amulet of the Drunkard
+*Wondrous item, uncommon*
+
+This amulet smells of old, ale-stained wood. While wearing it, you can regain 4d4 + 4 hit points when you drink a pint of beer, ale, mead, or wine. Once the amulet has restored hit points, it can't do so again until the next dawn.
+
+*Source:* Explorer's Guide to Wildemount
+
+#### Amulet of the Moon
+[Todo.]
+
+#### Amulet of the Wind
+*Wondrous item, rare (requires attunement)*
+
+You can use this amulet as an action to call forth a friendly furbolg. It is the same furbolg every time, the actual creature having been trapped within the amulet. When you use the amulet, the furbolg appears at the end of your next turn in an open adjacent square and immediately attacks the wearer's nearest enemy. The wearer can also give other orders to the furbolg, which it will follow to the best of its ability.
+
+The furbolg returns to the amulet if it is slain or after 10 minutes have passed, whichever comes first. When it does, the amulet can not be used again until the next dawn. The next time the furbolg is summoned, all of its wounds are healed and conditions are removed. 
+
+The owner of the amulet can free the beast by destroying it as an action. If they do, the furbolg immediately bounds off towards its former home to rejoin its companions.
+
+#### Amulet of Truesight
+[Todo.]
+
+#### Ankh of Reincarnation
+*Wondrous item, rare*
+
+If you die while carrying this ankh, the ankh breaks and you are restored to life with one quarter your maximum hit points (round down). This has no effect if you could not be revived by the *revivify* spell.
+
+\pagebreakNum
+#### Arcane Cannon
+*Wondrous item, very rare*
+
+This Large cannon is imbued with magic. It requires no ammunition and doesn't need to be loaded. It takes one action to aim the cannon and one action to fire it. After the cannon has fired, it must recharge for 5 minutes before it can be fired again.
+
+The creature firing the cannon chooses the effect from the following options:
+
+***Acid Jet.*** The cannon discharges acid in a line 300 feet long and 5 feet wide. Each creature in that line must make a DC 15 Dexterity saving throw, taking 22 (4d10) acid damage on a failed save, or half as much damage on a successful one. In addition, a creature that fails its saving throw takes 11 (2d10) acid damage at the start of each of its turns; a creature can end this damage by using its action to wash off the acid with a pint or more of water.
+
+***Fire Jet.*** The cannon discharges fire in a line 300 feet long and 5 feet wide. Each creature in the area must make a DC 15 Dexterity saving throw, taking 33 (6d10) fire damage on a failed save, or half as much damage on a successful one. The fire ignites any flammable objects in the area that aren't being worn or carried.
+
+***Frost Shot.*** The cannon shoots a ball of frost to a point you can see within 1,200 feet of the cannon. The ball then expands to form a 30-foot-radius sphere centered on that point. Each creature in that area must make a DC 15 Constitution saving throw. On a failed save, a creature takes 22 (4d10) cold damage, and its speed is reduced by 10 feet for 1 minute. On a successful save, the creature takes half as much damage, and its speed isn't reduced. A creature whose speed is reduced by this effect can repeat the save at the end of each of its turns, ending the effect on itself on a success.
+
+***Lightning Shot.*** The cannon shoots a ball of lightning to a point you can see within 1,200 feet of the cannon. The lightning then expands to form a 20-foot-radius sphere centered on that point. Each creature in that area must make a DC 15 Dexterity saving throw, taking 33 (6d10) lightning damage on a failed save, or half as much damage on a successful one. Creatures wearing metal armor have disadvantage on the save.
+
+***Poison Spray.*** The cannon expels poison gas in a 60-foot cone. Each creature in that area must make a DC 15 Constitution saving throw. On a failed save, the creature takes 22 (4d10) poison damage and is poisoned for 1 minute. On a successful save, the creature takes half as much damage and isn't poisoned. A creature poisoned in this way can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.
+
+*Source:* Explorer's Guide to Wildemount
+
+#### Arcane Crystal Pendant
+[Todo. Arcane mage item. Increase number of arcane charges they can hold.]
+
+#### Arcanite Fishing Pole
+[Todo. Advantage on fishing checks.]
+
+#### Ashes of Al'ar
+[Todo. A jar of ashes, can be spread to summon a pheonix.]
+
+\pagebreakNum
+
+#### Bad Mojo Mask
+[Todo. Curse-related tiki mask.]
+
+#### Bag of Treats
+*Wondrous item, common*
+
+This belt pouch appears empty and has 10 charges. While holding the pouch, you can use an action to expend 1 of its charges, speak the name of a type of beast, and pull out a small biscuit flavored and scented to appeal to that creature. You have advantage on Charisma checks involving beasts with a CR of 1 or less when you use this biscuit. The pouch regains 1d6 + 4 expended charges at dawn.
+
+#### Banner(s) of X
+[Todo. Orc banners. Aura bonus, active use 1/day. Can summon the mascot of the tribe for 1 day.]
+
+#### Barrel of Brewing
+*Wondrous item, common*
+
+Although called a barrel of brewing, smaller versions in the form of casks and kegs exist. This barrel keeps liquid contained within chilled and still, allowing brewing of beers and ales even when traveling.
+
+#### Belt of the Archmage
+<img src='https://gamepedia.cursecdn.com/wowpedia/0/0b/Belt_of_the_Archmage.JPG?version=c46a98d42ec16964b478100e43464dc3' style='width:325px' />
+
+*Wondrous item, rare (requires attunement by a spellcaster)*
+
+While wearing this belt, you can touch it and issue the command word to regain expended spell slots. When you use the belt, roll 1d4 + 2. You can choose a number of expended spell slots whose combined spell levels is less than or equal to the number rolled. Once you use this ability, you cannot do so again until the next dawn.
+
+#### Big Voodoo Mask
+[Todo. Common item, can be used as spellcastinf focus?]
+
+#### Black Grasp of the Destroyer
+[Todo. Mail gauntlets, gives small amounts of mana and if possible drains equal amounts on a successful attack.]
+
+#### Black Qiraji Resonating Crystal
+*Wondrous item, legendary*
+
+[TODO]
+
+#### Blessed Prayer Beads
+[Todo. Priest item. ]
+
+#### Bone of Gnawing
+*Wondrous item, common*
+
+A popular item among worgen and dog owners, this raw thigh bone can be chewed indefinitely.
+
+#### Book of the Dead
+*Wondrous item, rare (requires attunement by a spellcaster)*
+
+While holding this book in one of your hands, you can cast the *toll the dead* cantrip. Charisma is your spellcasting modifier for this spell. 
+
+You can also use this book to cast the spell *animate dead*. Once the book has been used to cast the spell, it cannot be used again for 24 hours. Any undead raised by use of this book are under the control of whoever is attuned to it. If you lose attunement to this item, any undead raised by it will immediately attack you.
+
+#### Boots of the Bay
+[Todo. You know the way to Booty Bay.]
+
+#### Bracers of the Eclipse
+<img src='https://gamepedia.cursecdn.com/wowpedia/1/1e/Bracers_of_the_Eclipse_TCG.jpg?version=35a289ec47e2c2fd22c544c98be155bd' style='width:325px' />
+
+*Wondrous item, uncommon (requires attunement)*
+
+*For some, night is a new day.*
+
+While wearing these bracers, you can see normally in darkness, both magical and nonmagical, to a distance of 60 feet.
+
+#### Brooch of the Crypt Lord
+[Todo. Can speak to spiders and other arachnids. You are treated as an emissary of the crypt lords and they will not attack you. Can transform 1/LR and gain bonus armor and scimitar attacks.]
+
+*Source:* Magic and Mayhem
+
+\pagebreakNum
+
+#### Cape of the Black Baron
+*Wondrous item, rare (requires attunement)*
+
+Your Dexterity score is 19 while you wear this cloak. It has no effect on you if your Dexterity is already 19 or higher.
+
+#### Chalice of the Mountain Kings
+[Todo. Summons 4 dwarves to perform a dance.]
+
+#### Chromatic Cloak
+[Todo. Made from black and red dragonscales, provides resistance to their energy types.]
+
+#### Chromie's Spare Pocketwatch
+*Wondrous item, very rare (requires attunement)*
+
+This bronze pocketwatch keeps perfect time, even under the most unusual circumstances. It tends to store excess bits of time in itself, allowing a user to release it for their benefit. You can click a button on the side of the watch to gain the benefits of *haste* (no concentration required). You can use this for one minute, either all at once or in one round increments. Clicking the button to start the haste effect is a bonus action, and ending it does not cost an action. You are not incapacitated when the duration ends. The watch regains one round of *haste* for every 4 hours it is not used.
+
+#### Circlet of Arcane Might
+[Todo. Increase in spell save DCs]
+
+#### Circlet of Nobility
+[Todo. (+2) Strength, Wisdom, Charisma bonuses.]
+
+*Source:* Magic and Mayhem
+
+#### Cloak of the Gargoyle
+[Todo. Like cloak of the manta ray, but gargoyle.]
+
+*Source:* Magic and Mayhem, *gargoyle robe*
+
+#### Codex of Xerrath
+[Todo. Warlock item. Corrupts your fire spells, turning them green. Bypass fire resistance?]
+
+#### Collar of Shrinking
+*Wondrous item, common (requires attunement)*
+
+This collar can only be worn by a Large or larger creature that is bonded to humanoid. An example would be a beast with the Companion's Bond ability, or a creature summoned with the *find steed* spell or other similar effects. That creature attunes to the item.
+
+The creature can be shrunk down by the bonded humanoid as an action until they reach Medium size. While shrunk, their game statistics are the same save for the space they take up. If they make an attack, the effect breaks and they immediately restore to full size. Otherwise the effect lasts until the effect is canceled as another action. 
+
+#### Crimson Felt Hat
+<img src='https://gamepedia.cursecdn.com/wowpedia/c/cc/Crimson_Felt_Hat_TCG.jpg?version=51cae5faa2dddf4a9c28d5922479b045' style='width:325px' />
+
+*Wondrous item, uncommon (requires attunement)*
+
+*"Don't make me raise my wand!"*
+
+When you cast a cantrip while wearing this hat, you can add your spellcasting modifier to the damage that it deals on a hit. This does not stack with similar effects.
+
+\pagebreakNum
+#### Crown of Destruction
+<img src='https://gamepedia.cursecdn.com/wowpedia/a/a1/Crown_of_Destruction.JPG?version=212608fd19bd161a26f93b532573ecb5' style='width:325px' />
+
+*Wondrous item, legendary*
+
+This item appears to be nothing more than a large red gem. When you attune to it, it levitates to just above your head, forming a crown of flame. While wearing this crown, you have advantage on attack rolls against fire elementals and similar creatures, and they have disadvantage on attack rolls against you. In addition, you have resistance to fire damage. You can also speak and understand Kalimag.
+
+The crown has 5 charges. It regains 1d4 + 1 expended charges daily at dawn. Spells cast from the crown have a save DC of 17.
+
+You can expend 2 of the crown's charges to cast *dominate monster* on a fire elemental. If you help slay a fire elemental while attuned to the crown, you gain access to the following additional properties:
+
+- You are immune to fire damage.
+- You can cast the following spells from the crown, expending the necessary number of charges: *burning hands* (1 charge), *fireball* (2 charges), and *wall of fire* (3 charges).
+
+*Source:* Dungeon Master's Guide, *ring of elemental command (fire)*
+
+#### Crown of Kings
+[Todo. (+4) Strength, Wisdom, Charisma bonus. (+2) Dexterity, Constitution, Intelligence bonus.]
+
+#### Crown of the Dreadlord
+[Todo. Evil creatures only. Ring of wizardry, necromancer spells only. Finger of death 1/day, heal for damage dealt.]
+
+\pagebreakNum
+
+#### Dark Ranger's Hood
+[Todo.]
+
+#### Defias Mask
+*Wondrous item, common*
+
+Originally created as a tool to help the operatives of the Defias Brotherhood obscure their identities when carrying out their missions, this red cloth bandana is worn over the lower face. When used as part of a disguise, it allows you to add your proficiency modifier to attempts to obscure your identity but not to appear as another person, as if using a disguise kit with which you had proficiency.
+
+#### Deviate Fish
+*Wondrous item, uncommon*
+
+When you eat this blue-eyed, red and yellow fish, roll a d6. Consult the Deviate Fish effects table to determine what effect occurs.
+
+##### Deviate Fish Effects
+d6|Effect
+--|------
+1|A random ability score is increased by 2 for 1 hour, to a maximum of 22. Roll another d6 for which ability score: 1 = Strength, 2 = Dexterity, 3 = Constitution, 4 = Intelligence, 5 = Wisdom, and 6 = Charisma.
+2|You regain 4d4 + 4 hit points.
+3|You are affected by *confusion*, as the spell, for 1 minute. Instead of attacking on a 7 or 8 on the d10 roll, you act normally.
+4|You regain 2 hit points at the end of your turn and at the end of every turn for 1 minute.
+5|You are affected by the 'reduce' version of the *enlarge/reduce* spell for 1 minute (no concentration required).
+6|You are unconscious for 1 minute.
+
+#### Dragonbreath Chili
+*Wondrous item, uncommon*
+
+This bowl of deep red chili is always warm to the touch and bubbles ominously. When you eat this hellishly spicy chili, the suffering from the spices does not end once the chili leaves your tongue. It percolates in your stomach for the next hour, occasionally causing you to belch out bursts of flame. Once per minute, or whenever you are struck by an attack, roll a d6. If you roll a 1, you automatically belch forth a blast of flame, dealing fire damage in a 15-foot cone. A creature takes 2d6 damage on a failed Dexterity save, and half as much on a successful one. The damage increases to 3d6 at 6th level, 4d6 at 11th level, and 5d6 at 16th level. The DC for this saving throw equals 8 + your Constitution modifier + your Proficiency bonus.
+
+This effect can be ended early by either neutralizing the chili as if it were an ingested poison, or by completely submerging your head in water for one round.
+
+#### Dragonbreath Hand Cannon
+*Weapon (blunderbuss), very rare*
+
+This hefty blunderbuss is in the shape of a dragon's head. When fired, the jaws of the head open, and a blast of flame accompanies the bullet. Additionally, a flaming eye is held in between the horns of the weapon. Looking through this eye provides the benefit of a scope and of the *see invisibility* spell.
+
+When you fire this weapon, the attack deals an additional 2d6 fire damage. Additionally, you deal 2d6 fire damage to all creatures in a 5 foot wide by 15 foot long line along the path of your attack; a creature can make a DC 13 Dexterity save for half damage.
+
+#### Dread Mage Hat
+[Todo. Warlock item. Cantrips?]
+
+#### Drek'thar's Spellbook
+[Todo]
+
+*Source:* Magic and Mayhem
+
+#### Druid's Pouch
+[Todo. Can pull out herbs that can be used as healing/lesser restoration. Nature skill bonus, extra for druids.]
+
+*Source:* Magic and Mayhem
+
+\pagebreakNum
+
+#### Drums of Battle
+*Wondrous item, uncommon*
+
+These large kodo leather drums have 7 charges. They regain 1d6 + 1 charges at dawn. When the last charge is expended, roll a d20. On a 1, the leather splits in half and the item becomes nonmagical.
+
+You can bang against this drum and expend a charge to cast the *heroism* spell on a creature within 30 feet. For every extra charge you expend while using the drums, you can affect an extra creature.
+
+#### Drums of Panic
+*Wondrous item, uncommon*
+
+These large kodo leather drums have 7 charges. They regain 1d6 + 1 charges at dawn. When the last charge is expended, roll a d20. On a 1, the leather splits in half and the item becomes nonmagical.
+
+You can bang against this drum and expend a charge to use the *cause fear* spell (DC 13). You cast it as a 1st level spell; for every extra charge you expend while using the drums, you increase the spell level by 1.
+
+#### Drums of Restoration
+*Wondrous item, uncommon*
+
+These large kodo leather drums have 7 charges. They regain 1d6 + 1 charges at dawn. When the last charge is expended, roll a d20. On a 1, the leather splits in half and the item becomes nonmagical.
+
+You can bang against this drum and expend a charge to use the *healing word* spell as a 1st level spell. For every extra charge you expend while using the drums, you increase the spell level by 1.
+
+#### Drums of Speed
+*Wondrous item, uncommon*
+
+These large kodo leather drums have 7 charges. They regain 1d6 + 1 charges at dawn. When the last charge is expended, roll a d20. On a 1, the leather splits in half and the item becomes nonmagical.
+
+You can bang against this drum and expend a charge to use the *longstrider* spell on a creature you can see within 30 feet. For every extra charge you expend while using the drums, you affect an extra creature.
+
+#### Drums of War
+*Wondrous item, rare*
+
+These large kodo leather drums have 7 charges. They regain 1d6 + 1 charges at dawn. When the last charge is expended, roll a d20. On a 1, the leather splits in half and the item becomes nonmagical.
+
+You can bang against this drum and expend a charge to use the *crusader's mantle* spell.
+
+\pagebreakNum
+
+#### Edgemaster's Handguards
+[Todo. Proficiency in axes, daggers, swords. +1 to attack with those weapons if you are proficient.]
+
+#### Elven Chain Boots
+<img src='https://gamepedia.cursecdn.com/wowpedia/5/53/Elven_Chain_Boots_Ogre.jpg?version=2556a059b0d71c70f0e2d2be129d42bd' style='width:325px' />
+
+*Wondrous item, uncommon (requires attunement)*
+
+In order to properly wear these boots, you must have medium armor proficiency. If you do not, you suffer the penalties of wearing armor that you lack proficiency in. 
+
+You gain a +1 bonus to AC and saving throws while you wear these boots.
+
+#### Emerald Dreamcatcher
+*Wondrous item, rare (requires attunement)*
+
+This contraption of string and emeralds draws power from the Emerald Dream, granting its bearer increased luck. While attuned to the dreamcatcher, the bearer can reroll a single attack roll, ability check, or saving throw. It must take the new result. It can make this decision after rolling the die but before determining the result. Once the dreamcatcher has been used, it cannot be used again until the next dawn.
+
+#### Enchanted Gold Bloodrobe
+[Todo. Warlock robe.]
+
+#### Extinct Turtle Shell
+[Todo. Tough shield.]
+
+\pagebreakNum
+
+#### Figurine of Wondrous Power, Demonic
+[Todo. Summons doomguard. Attacks good summoner, obeys evil creatures, 50/50 for neutral. 1/week use, 1 hour duration. 24k price.]
+
+*Source:* Magic and Mayhem
+
+#### Figurine of Wondrous Power, Drake Egg
+[Todo. Summons red drake. 1/week use, 4 hour duration. Can summon red dragon instead, but this destroys egg. 27k price.]
+
+*Source:* Magic and Mayhem
+
+#### Figurine of Wondrous Power, Frost Shard
+[Todo. Summons frost revenant. Chance of berserk, interaction with inferno stone. 2/week use though no two days in a row, 1 hour duration. 20k price]
+
+*Source:* Magic and Mayhem
+
+#### Figurine of Wondrous Power, Inferno Stone
+[Todo. Summons fire revenant. Chance of berserk, interaction with frost shard. 2/week use though no two days in a row, 1 hour duration. 20k price]
+
+*Source:* Magic and Mayhem
+
+#### Figurine of Wondrous Power, Quillen Statuette
+[Todo. Summons quillen--a half dog, half cat creature.]
+
+#### Figurine of Wondrous Power, Stone Token
+[Todo. Summons stone golem. 1/week use, 4 hour duration. 24k price.]
+
+*Source:* Magic and Mayhem
+
+#### Fire Ruby
+[Todo. Fire mage item. Can use to increase damage of next fire spell, restore a random spell slot.]
+
+#### Frost Spike
+[Todo. Frost mage item. When you crit with the frostbolt spell, you regain the spell slot.]
+
+\pagebreakNum
+
+#### "Gigantique" Bag
+[Todo. Bag of holding plus, Incredibly fashionable.]
+
+#### Gloves of Spell Mastery
+[Todo. Can ignore a component of a spell.]
+
+#### Glyphs
+[Todo. Takes up an attunement slot, slightly changes how a mechanic works. You can have up to your proficiency modifier in glyphs, and they all take up the same attunement slot.]
+
+***Glyph of the Groundpounder.*** This glyph causes your ranged attacks to rapidly drop down when they pass over a prone creature. You have advantage on ranged attack rolls versus prone creatures, instead of disadvantage.
+
+#### Golden Fleece
+[Todo: Increased chance at gold when finding treasure.]
+
+#### Greathelm of the Scourge Champion
+*Wondrous item, very rare (requires attunement)*
+
+While you are attuned to this item, you have the Undead Fortitude ability. If you already possess this ability, you have advantage on your Constitution saves to use it.
+
+#### Grimoire
+[TODO: Allows the use of spells by any creature, but comes at a cost. Of hit points, ability damage, etc. Warlocks can use the spells as if they were on their spell list.]
+
+#### Grimoire of Souls
+[Todo: Manual, +10 permanent hp.]
+
+*Source:* Magic and Mayhem
+
+#### Gummlepack
+[Todo. Cross between handy haversack and robe of useful items.]
+
+\pagebreakNum
+
+#### Headdress of the First Shaman
+[Todo. Far sight class feature for shamans use 5 x your level for its percentile.. Spirit animal?]
+
+#### Healing Wards
+[Todo. Totem you can drop to have AoE health regen.]
+
+#### Health Stone
+[Todo. Recover 1 hp/hour when carried. Can break open to cast heal on a creature.]
+
+*Source:* Magic and Mayhem
+
+#### Hearthstone
+*Wondrous item, very rare*
+
+When you focus on this fist sized stone for 10 minutes, you can use it to cast the *word of recall* spell. In order to use the spell to teleport, you must first use the spell to set a designated location. The location must be one that you are currently in, and have spent at least 8 hours a day for the last 30 days within 50 feet of that location, and not been in danger while doing so. Most often this is a person's home, hence the name of the stone. 
+
+Once you use the stone, you cannot use it again for 7 days. A newly found stone is not attuned to a specific location.
+
+#### Helm of Fire
+[Todo. Can launch small burst of flame at target.]
+
+#### Hook of the Master Angler
+[Todo. Can turn into a fish.]
+
+#### Horn of the Ancients
+*Wondrous item, rare*
+
+You can use an action to blow this horn. In response, an ancient protector comes from the Emerald Dream to assist in battle. It appears within 60 feet of you; see the Manual of Monsters for the statistics. It returns to the Emerald Dream after 1 hour passes or when it is reduced to 0 hit points. Once the horn has been blown, it cannot be blown again for 7 days.
+
+If you blow the horn and are a druid, shaman, or night elf, the conjured ancient will obey your commands. If you are a death knight, demon hunter, forsaken, or warlock, it will attack you. Otherwise it acts on its own cognizance.
+
+#### Horn of the Clouds
+[Todo. 1/LR, obscuring mist.]
+
+#### Horn of the Tundra
+*Wondrous item, rare*
+
+You can use an action to blow this horn. In response, a stampede of spectral mammoths comes forth and attacks all creatures in a 15 foot wide by 40 foot long line originating from your square in a direction you choose. Each creature in the area is attacked by a mammoth's gore attack (+10 to hit, 25 (4d8 + 7) piercing damage) and must make a DC 18 Strength save or be knocked prone. If they are knocked prone, they are attacked by a mammoth's stomp attack (+10 to hit, 29 (4d10 + 7) bludgeoning damage).
+
+The mammoths cannot be attacked, and disappear after reaching the end of their line. Once you blow the horn, it cannot be blown again until the next dawn.
+
+#### Horn of Winter
+*Wondrous item, very rare*
+
+When you blow this horn, you can summon the cold of winter. The horn has a maximum of 13 charges and regains 2d6 + 1 charges at dawn. When you expend the last charge, roll a d20. On a 1, the horn cracks in half and is destroyed. 
+
+You can blow the horn and expend one charge as an action to affect a 300-foot radius sphere. The area's temperature increases by up to three stages, as noted in the *control weather* spell, up to arctic cold. If the weather is already arctic cold, it instead increases either the precipitation or wind stages, up to the normal maximum. The weather changes over the course of 1d4 x 10 minutes, and lasts for 1 hour before gradually fading.
+
+You can also blow the horn to increase the duration or the radius of the sphere and any current effects. Each charge expended to increase the duration adds an additional hour. Each charge expended to increase the radius extends the area by one step: 600 feet, 1200 feet, 2400 feet, 1 mile, 2 miles, 5 miles maximum.
+
+This sphere remains centered on the horn for the duration.
+
+#### Horned Viking Helmet
+[Todo. Charges a target, deal no damage and incapacitate them for 5 rounds. You are knocked prone and stunned for 1 round.]
+
+#### Hydrocane
+[Todo. Staff that provides waterbreathing.]
+
+#### Hypnotist's Watch
+[Todo. Pocket watch, can be used to hypnotize people.]
+
+\pagebreakNum
+
+#### Idols
+*Wondrous item, rarity varies (requires attunement by a druid)*
+
+[TODO: Alters the effects of a specific spell/ability.]
+
+#### Illidari Warpaint
+*Wondrous item, uncommon (requires attunement by a demon hunter)*
+
+When you attune to this item, you spread the paint in glowing green lines along your body. If you lose attunement, the glow fades and the paint becomes nonmagical.
+
+While you are attuned to this item, your Unarmored Defense is 12 + your Dexterity modifier + your Intelligence modifier.
+
+#### Inferno Stone
+[**WIP:** Waiting for Infernal stats. Summons an infernal like an elemental gem.]
+
+#### The Innkeeper's Daughter
+[Todo. Hearthstone, sentient item. Can spawn ghost who follows you.]
+
+\pagebreakNum
+
+#### Jeweled Onyx Panther
+[Todo. Construct panther mount.]
+
+
+\pagebreakNum
+
+#### Lei of Lilies
+[Todo. Amulet. Can make a lily root grow, which restores hp when eaten.]
+
+#### Ley Orb
+[Todo. Mage item. Can regain low-level spell slots.]
+
+#### Librams
+*Wondrous item, rarity varies (requires attunement by a paladin)*
+
+[TODO: Alters the effects of a specific spell/ability.]
+
+[Todo: Can be used to cast one healing spell at +1 spell level, up to the max spell level you could normally cast.]
+
+#### Libram of Light
+*Wondrous item, uncommon (requires attunement by a Path of the Holy paladin)*
+
+You can use this libram as your holy symbol. When you use your Flash of Light ability, you add your Charisma modifier to the amount of hit points restored.
+
+#### Lion Horn of Stormwind
+*Wondrous item, rare*
+
+When you blow this horn as an action, you and up to 4 creatures you can see within 60 feet gain the effects of *shield of faith*. This effect lasts for 10 minutes. Once you blow the horn, you cannot do so again until the next dawn.
+
+#### Living Leather
+*Armor (any light, or hide), rare*
+
+When you regain at least 4 hit points while wearing this armor, you regain an additional 1d4 hit points.
+
+\pagebreakNum
+
+#### Madman's Luggage
+[Todo. Massively oversized bag; can use as mansion.]
+
+#### Maghia's Misguided Quill
+[Todo. Incapable of writing the truth.]
+
+#### Magiskull Cuffs
+<img src='https://gamepedia.cursecdn.com/wowpedia/6/69/Magiskull_Cuffs_TCG.JPG?version=d2a98bfe95ea62d5f4261f08192f2704' style='width:325px' />
+
+*Wondrous item, uncommon*
+
+While wearing these bracers, you can use a bonus action to have any weapons that you wield count as magical for the next minute.
+
+#### Mana Stone
+[Todo. Regain 1 spell level/hour. If you wait 1 hour, you can restore a 1st level spell. If you wait 5, you can restore a 5th level spell, etc. You can break the stone to restore all expended spell slots.]
+
+*Source:* Magic and Mayhem
+
+#### Manual of Golems (Arcane)
+*Wondrous item, very rare*
+
+This tome contains information and incantations necessary to make an arcane golem. To decipher and use the manual, you must be a spellcaster with at least two 5th-level spell slots. A creature that can't use a manual of golems and attempts to read it takes 6d6 psychic damage.
+
+To create the golem, you must spend 45 days, working without interruption with the manual at hand and resting no more than 8 hours per day. You must also pay 60,000 gp to purchase supplies.
+
+Once you finish creating the golem, the book is consumed in eldritch flames. The golem becomes animate when the ashes of the manual are sprinkled on it. It is under your control, and it understands and obeys your spoken commands.
+
+#### Manual of Meditation: Zen Flight
+*Wondrous item, rare*
+
+This book includes zen koans that teach how to use your inner spirit to lift oneself from the bonds of gravity. In order to gain a benefit from this manual, you must have the Chi class feature. If you spend 48 hours over a period of 6 days or fewer studying the book's contents and practicing its guidelines, you gain a new ability called Zen Flight. The manual then loses its magic, but regains it in a decade.
+
+***Zen Flight.*** As long as you have at least 1 Chi point remaining, you can enter a state of meditation that grants you a fly speed of 60 feet. Entering this state is a bonus action, or a reaction when falling. As long as you maintain concentration as a bonus action on your turn, you continue to fly.
+
+#### Manual of Meditiation: Zen Step
+*Wondrous item, uncommon*
+
+This book includes zen koans that teach how to use your inner spirit to step so lightly that you barely touch the earth. In order to gain a benefit from this manual, you must have the Chi class feature. If you spend 48 hours over a period of 6 days or fewer studying the book's contents and practicing its guideline, you gain a new ability called Zen Step. The manual then loses its magic, but regains it in a year and a day.
+
+***Zen Step.*** As long as you have at least 1 Chi point remaining, you can stand on and move across any liquid surface as if it were solid ground.
+
+#### Mask of the Loa
+[Todo. See invisible and incorporeal creatures w/i 60 feet.]
+
+#### Mooncloth Robe
+[Todo. Purity bonuses.]
+
+#### Mugger's Belt
+<img src='https://gamepedia.cursecdn.com/wowpedia/7/7d/Mugger%27s_Belt_TCG.JPG?version=5b0b49b7c7cb688e46d2b691d54b1e76' style='width:325px' />
+
+*Wondrous item, uncommon*
+
+While wearing this belt, if you hit a creature with an attack, you can attempt to retrieve an object on their person as part of the same action.
+
+\pagebreakNum
+
+#### Nat Pagle's Hat
+[Todo. Hat contains lures.]
+
+\pagebreakNum
+
+#### The One Ring
+[Todo. Increase each stat by 1, including intitiative, armor class, attack rolls, etc. "Not quite as good as the two ring."]
+
+#### Onslaught Girdle
+<img src='https://gamepedia.cursecdn.com/wowpedia/1/17/Onslaught_Girdle.JPG?version=8f5d32671a9e97e2350819e9f123b21b' style='width:325px' />
+
+*Wondrous item, rare*
+
+While wearing this belt, you can choose to reduce your Armor Class by 5 until the beginning of your next turn. If you do, you gain a +10 bonus to all attack rolls made until the beginning of your next turn.
+
+#### Onyxia Scale Cloak
+*Wondrous item, very rare (attunement required)*
+
+Created from scales taken from a black dragon, this cloak provides resistance to fire damage and a +1 bonus to armor class. Additionally, the wearer has advantage on saves versus the abilities of members of the black dragonflight, as well as resistance to necrotic damage dealt by those creatures.
+
+#### Orb of Banishment
+*Wondrous item, XX (requires attunement by a warlock)*
+[Todo. Banish spell vs demons.]
+
+#### Orb of Dar'Orahil
+[Todo. Warlock item. Can be used as a permanent healthstone. Bonus to necrotic damage.]
+
+#### Orb of Kil'jaeden
+[Todo. Upgraded Orb of Fire.]
+
+#### Orb of Ner'zhul
+[Todo. Very powerful. Undead creation/control.]
+
+#### Orb of Noh'Orahil
+[Todo. Warlock item. Can be used as a permanent healthstone. Bonus to fire damage.]
+
+#### Orb of Soran'ruk
+[Todo. Warlock item. Can be used as a permanent healthstone, bonus to fire and necrotic damage.]
+
+#### Orb of the Darkmoon
+[Todo. Differing bonuses based on lunar phase; strongest at new moon.]
+
+#### Orb of Torment
+[Todo. Deal damage slowly against a helpless creature, heal result.]
+
+#### Orb of Voidsight
+[Todo. DH vision? Extra dmg vs demons?]
+
+\pagebreakNum
+#### Orbs of Infusion
+*Wondrous item, rare (requires attunement)*
+
+Orbs of infusion are fist-sized orbs that float a few inches above the ground when not attended. When you attune to an orb of infusion, you must designate a single weapon that you own for it to affect. After 10 minutes, the orb becomes attached to the weapon, orbiting around it, and cannot be removed unless you detach it as an action or the weapon is destroyed. Not even an *antimagic field* causes it to fall off. The orb does fall off if your attunement ends.
+
+Each orb causes your attacks with that weapon to deal an additional 1d4 damage. You can also swing the weapon in place of an attack to launch a bolt of energy at a target within 120 feet, using your normal melee attack modifiers. On a hit, it deals 3d4 damage.
+
+The type of damage dealt by the orb is determined by the type of orb. Additionally, each orb has a unique effect associated with it. The types of orbs are detailed below.
+
+***Orb of Arcana.*** A translucent opal sphere. It deals force damage. When a creature is damaged by this weapon or its ranged attack, they must make a DC 13 Strength saving throw or be knocked prone.
+
+***Orb of Corruption.*** A diamond crudely carved into the form of a skull. It deals psychic damage. When a creature is damaged by this weapon or its ranged attack, they must make a DC 13 Charisma save. On a failure, attacks against them have advantage until the beginning of your next turn.
+
+***Orb of Darkness.*** A sphere of polished obsidian. It deals necrotic damage. When you reduce a Small or Medium humanoid or beast creature to 0 hit points with damage from this item, the creature rises as a zombie under your control at the end of your next turn. It has 1 hit point and remains animated for 1 minute. You can only have one zombie under your control at a time. 
+
+***Orb of Fire.*** A sapphire sphere glowing with an inner flame. It deals fire damage. Whenever you hit a target with attacks from this item, each enemy creature adjacent to the target also takes 1d4 fire damage. They can make a DC 13 Dexterity save for half damage. Flammable objects in the area are ignited if they are not worn or carried.
+
+***Orb of Frost.*** A sphere of smooth, ice-cold topaz. It deals cold damage. When you deal damage with this item, the target must make a DC 13 Constitution save. On a failure, their movement speed is reduced by 10 feet for 1 minute. This does not stack with itself.
+
+***Orb of Light.*** A sphere of pure diamond softly glowing a soft yellow-white. It deals radiant damage. When you deal damage with this item, you gain 1d4 + 1 temporary hit points.
+
+***Orb of Lightning.*** An enormous pearl with sparks dancing along its surface. It deals lightning damage. When you deal damage with this item, roll a d20. On a 14 or higher, the target is subject to a *dispel magic* spell. This spell can only affect spells of 3rd level or lower.
+
+***Orb of Slow.*** A sphere of black wood, constantly dripping molasses. It deals acid damage. When you deal damage with this item, the target must make a DC 13 Wisdom save or be affected by the *slow* spell until the end of its next turn.
+
+***Orb of Thunder.*** A granite sphere, continually vibrating. It deals thunder damage. When you deal damage with this item, the target must make a DC 13 Constitution save or be deafened for 1 minute.
+
+***Orb of Venom.*** A jade sphere inscribed with a maze of grooves. It deals poison damage. When you deal damage with this item, the target must make a DC 13 Constitution save. On a failure, they are poisoned for 1 minute.
+
+\pagebreakNum
+
+#### Pads of the Dread Wolf
+<img src='https://gamepedia.cursecdn.com/wowpedia/3/36/Pads_of_the_Dread_Wolf_TCG.JPG?version=4f68d03b8962dfc0d79bddfaf5d8942f' style='width:325px' />
+
+*Wondrous item, rare (requires attunement)*
+
+While you wear these boots, you have advantage on attack rolls made against a creature if at least one of your allies is within 5 feet of the creature and the ally isn't incapacitated.
+
+#### Pendant of Energy
+[Todo. Ring of wizardry, but for mana points.]
+
+#### Pendant of the Scarab Storm
+[Todo. Can summon insect swarm. They attack randomly but cannot harm you. ]
+
+#### Plague Cauldron
+[TODO. When chained down and activate, spreads disease in AoE.]
+
+#### Puzzle Box of Yogg-Saron
+[Todo. Solving it requires a very high DC Intelligence check -- needs to be near max level to succeed. When you try, you have to make a Charisma save or have disadvantage on the check due to whispers from the box. When you beat the check, **something** happens.]
+
+\pagebreakNum
+
+#### Riding Crop
+[Todo. Increases mounted speed.]
+
+#### Ring of the Boy Emperor
+[Todo. Related effects to rulership or destiny.]
+
+#### Rituals of the New Moon
+*Wondrous item, rare*
+
+When you hold this tome in your hand, you can use it to cast the *polymorph* spell. The only form that the target can take is that of a wolf or dire wolf. Once you use the tome, it cannot be used again until the next dawn.
+
+#### Robe of Combustion
+[Todo. Bonus fire damage.]
+
+#### Robe of Power
+[Todo. The staff of the magi to the robe of the archmagi's staff of the magi.]
+
+#### Robe of the Archmage
+[Todo. Robe of the Archmagi, but non-alignment specific. Instead class-specific; mage]
+
+#### Robe of the Great Dark Beyond
+[Todo. Movement/breathing in space?]
+
+#### Robe of the Void
+[Todo. Robe of the Archmagi, warlock edition.]
+
+#### Robe of Volatile Power
+[Todo. Spell critical increased, but also against you.]
+
+#### Robe of Winter Night
+[Todo. Bonus frost, necrotic damage.]
+
+#### Robes of Insight
+[Todo. Can provide a spell slot 1/LR.]
+
+#### Robes of Servitude
+[Todo. Warlock item. Bonus damage with shadow and fire spells.]
+
+#### Ruby Slippers
+[Todo. Heathstone, but slippers.]
+
+\pagebreakNum
+
+#### Saronite Warplate
+*Armor (heavy or medium, but not hide), rare*
+
+Saronite warplate is light but not flexible. If the armor normally imposes disadvantage on Dexterity (Stealth) checks or has a Strength requirement, the saronite version doesn't. While wearing saronite armor, any critical hit against you becomes a normal hit. 
+ 
+If you are stuck by an effect that deals at least one die of radiant damage, part of that energy is deflected. Each creature within reach of you must make a DC 13 Dexterity save or take an amount of radiant damage equal to the number of dice in the original damaging effect. 
+
+*For example:* A character wearing saronite armor is struck by a paladin's _crusader's strike_, taking 2d8 radiant damage. Then every creature within 5 feet of the character must make a save or take 3 radiant damage. If a second character wearing saronite armor was standing next to the first and failed their Dexterity save, they would take the radiant damage but that damage would not cause another damage deflection, as the number of dice rolled was 0.
+
+***Cursed.*** A person who wears or carries saronite warplate is subject to the Curse of Yogg-Saron. See the sidebar under the Shadowmourne article in the Legendary Weapons of Azeroth section for details. Saronite warplate is weaker than the primordial saronite that makes up Shadowmourne, having a DC of 13 instead.
+
+#### Scepter of Azj'Aqir
+[Todo. Can summon ultramarine battle tank.]
+
+#### Shard of the Green Flame
+[Todo. Warlock item. Orb, deal bonus damage with fire spells.]
+
+#### Shimmerglaze Roast
+[Todo. A hunk of meat that can be roasted over a fire to become a hero's feast.]
+
+#### Sigils
+*Wondrous item, rarity varies (requires attunement by a death knight)*
+
+[TODO: Alters the effects of a specific spell/ability.]
+
+#### Skull of Impending Doom
+[Todo. Gain large movement speed boost but lose health every round.]
+
+#### Six Demon Bag
+[Todo. Random spell effect: most commonly fireball, frostbolt, or chain lightning. Rarely cyclone, polymorph (sheep) on enemy or on yourself, felhound summon.]
+
+#### Stronghold Gauntlets
+[Todo. Incresed grip strength; resist disarm,]
+
+\pagebreakNum
+
+#### Tome of Demons: Felsteed
+[Todo. Warlock tome. Allows you to summon a specific felsteed to use as mount.]
+
+#### Tome of Divinity
+[Todo. Paladin libram; effects unknown]
+
+#### Tome of Knowledge
+[Todo. When holding the tome, have advantage on knowledge checks.]
+
+#### Tome of Light
+[Todo. When holding tome, have increased faith points.]
+
+#### Tome of Retraining
+[Todo. Tome/Manual. Can exchange past level (not 1st) in a class with another.]
+
+#### Tome of Sacrifice
+[Todo. Warlock tome. Restores health; through killing creatures?]
+
+#### Totems
+*Wondrous item, rarity varies (requires attunement by a shaman)*
+
+[TODO: Alters the effects of a specific spell/ability.]
+
+#### Totem of Ancestral Guidance
+[Todo.]
+
+#### Totem of Calming Tides
+[Todo.]
+
+#### Totem of Dueling?
+[Todo.]
+
+#### Totem of Electrifying Wind
+[Todo.]
+
+#### Totem of Flowing Water
+[Todo.]
+
+#### Totem of Forest Growth
+[Todo.]
+
+#### Totem of Healing Rains
+[Todo.]
+
+#### Totem of Impact
+[Todo.]
+
+#### Totem of Infliction
+[Todo.]
+
+#### Totem of Life
+[Todo.]
+
+#### Totem of Lightning
+[Todo.]
+
+#### Totem of Living Water
+[Todo.]
+
+#### Totem of Might
+[Todo.]
+
+#### Totem of Misery
+[Todo.]
+
+#### Totem of Quaking Earth
+[Todo.]
+
+#### Totem of Rage
+[Todo.]
+
+#### Totem of Rebirth
+[Todo.]
+
+
+\pagebreakNum
+
+#### Umbrella of Chi-Ji
+[Todo. Hope and peace-based benefits.]
+
+\pagebreakNum
+
+#### Vambraces of the Sadist
+<img src='https://www.spiderwebart.com/enlarge.asp?image=106863.jpg' style='width:325px' />
+
+*Wondrous item, rare*
+
+While wearing these vambraces, when you make a weapon attack and roll a 20 on your attack roll, you deal an additional 2d6 damage of that weapon's damage type.
+
+#### Venomous Tome
+[Todo. Chance of exhaling poison if struck in melee while holding this tome.]
+
+#### Vestments of Faith
+[Todo. Robe of the archmagi, priest edition.]
+
+#### Vial of the Sands
+*Wondrous item, legendary (requires attunement)*
+
+This potion is seen by many to be the pinnacle of alchemy. This indestructible vial is filled with swirling golden sands. As an action, you can pour the sands out onto yourself, transforming into the form of a sandstone drake. Treat this as though you were a druid and this was one of your shapeshift forms. See the Sandstone Drake stat block before for the relevant stats.
+
+When you transform back into your normal form, the vial slowly fills back up with sand over the course of an hour. If you pour the sands on another creature or on anything else, they have no effect and the vial cannot be used again for an hour.
+
+___
+> ## Sandstone Drake
+> *Large size*
+> ___
+> - **Armor Class** 13 + Dexterity & Constitution modifier
+> - **Speed** 40 ft., fly 80 ft.
+> ___
+> ***Draconic Strength.*** If your Strength is less than 19, it increases to 19 while you are transformed.
+> 
+> ***Draconic Might.*** If your Constitution is less than 18, it increases to 18 while you are transformed.
+> 
+> ### Actions
+> ***Multiattack.*** You make three attacks: one with your bite and two with your claws.
+> 
+> ***Bite.*** Melee Weapon Attack: *(Str + Prof bonus)* to hit, reach 10ft., one target. Hit: (2d10 + Str) piercing damage plus 9 (2d8) fire damage.
+> 
+> ***Claw.*** Melee Weapon Attack: *(Str + Prof bonus)* to hit, reach 5 ft., one target. Hit: (2d8 + Str) slashing damage.
+>
+> ***Breath Weapon (Recharge 5-6).*** You exhale superheated sand in a 30-foot cone. Each creature in that area must make a Dexterity saving throw (DC = 8 + your Strength modifier + your proficiency bonus), taking 49 (14d6) fire damage on a failed save, or half as much damage on a successful one.
+
+#### Vrykul Drinking Horn
+[Todo. Morale bonuses, slight size boost.]
+
+\pagebreakNum
+
+#### Wisp Amulet
+[Todo. Transforms user into a wisp.]
+
+#### Wristguards of True Flight
+<img src='https://gamepedia.cursecdn.com/wowpedia/c/cb/Wristguards_of_True_Flight.JPG?version=0b8cc0d0481aaa3fc4bea55f37b66428' style='width:325px' />
+
+*Wondrous item, uncommon*
+
+While wearing these bracers, any melee weapon you wield gains the thrown (range 30/120) weapon property if it did not already possess it. When you throw a weapon, it returns to your hand at the end of your turn.
+
+\pagebreakNum
+## Item Sets
+
+### Warlock
+#### Implements of Unspoken Names
+##### Kris of Unspoken Names
+[Dagger]
+##### Ring of Unspoken Names
+##### Shroud of Unspoken Names
+
+\pagebreakNum
+<style> .phb#LWoA:after { display:none; } </style>
+# Legendary Weapons of Azeroth
+
+This section is dedicated to the most iconic and difficult to obtain legendary and near-legendary items in WoW. It will be its own section in the final document, showcasing the history and lore of the item as well as a proper image for each. For now, only the list of items and their properties will be posted.
+ 
+The items that make it to this particular list are those that have a Legacy or Feat of Strength achievement associated with them.
+
+
+Item|Achievement
+---|---
+[Atiesh, Greatstaff of the Guardian](https://wow.gamepedia.com/Atiesh,_Greatstaff_of_the_Guardian) | [Atish, Greatstaff of the Guardian](https://wow.gamepedia.com/Atiesh,_Greatstaff_of_the_Guardian_(achievement))
+[Benediction](https://wow.gamepedia.com/Benediction)/[Anathema](https://wow.gamepedia.com/Anathema) | [The Balance of Light and Shadow](https://wow.gamepedia.com/The_Balance_of_Light_and_Shadow)
+[Golad, Twilight of Aspects](https://wow.gamepedia.com/Golad,_Twilight_of_Aspects)/[Tiriosh, Nightmare of Ages](https://wow.gamepedia.com/Tiriosh,_Nightmare_of_Ages)  | [Fangs of the Father](https://wow.gamepedia.com/Fangs_of_the_Father_(achievement))
+[Rhok'delar, Longbow of the Ancient Keepers](https://wow.gamepedia.com/Rhok%27delar,_Longbow_of_the_Ancient_Keepers)/[Lok'delar, Greatstaff of the Ancient Keepers](https://wow.gamepedia.com/Lok%27delar,_Stave_of_the_Ancient_Keepers) | [The Ancient Keeper](https://wow.gamepedia.com/The_Ancient_Keeper)
+[Shadowmourne](https://wow.gamepedia.com/Shadowmourne) | [Shadowmourne](https://wow.gamepedia.com/Shadowmourne_(achievement))
+[Sulfuras, Hand of Ragnaros](https://wow.gamepedia.com/Sulfuras,_Hand_of_Ragnaros) | [Sulfuras, Hand of Ragnaros](https://wow.gamepedia.com/Sulfuras,_Hand_of_Ragnaros_(achievement))
+[Thori'dal, the Star's Fury](https://wow.gamepedia.com/Thori%27dal,_the_Stars%27_Fury) | [Thori'dal, the Star's Fury](https://wow.gamepedia.com/Thori%27dal,_the_Stars%27_Fury_(achievement))
+[Thunderfury, Blessed Blade of the Windseeker](https://wow.gamepedia.com/Thunderfury,_Blessed_Blade_of_the_Windseeker) | [Thunderfury, Blessed Blade of the Windseeker](https://wow.gamepedia.com/Thunderfury,_Blessed_Blade_of_the_Windseeker_(achievement))
+[The Twin Blades of Azzinoth](https://wow.gamepedia.com/The_Twin_Blades_of_Azzinoth) | [Warglaives of Azzinoth](https://wow.gamepedia.com/Warglaives_of_Azzinoth_(achievement))
+[Val'anyr, Hammer of Ancient Kings](https://wow.gamepedia.com/Val%27anyr,_Hammer_of_Ancient_Kings) | [Val'anyr, Hammer of Ancient Kings](https://wow.gamepedia.com/Val%27anyr,_Hammer_of_Ancient_Kings_(achievement))
+
+### Atiesh, Greatstaff of the Guaardian
+
+_Staff, legendary (requires attunement by a druid, mage, priest, or warlock)_
+
+This staff can be used as a spellcasting focus, and can be wielded as a magic quarterstaff that grants a +2 bonus to attack and damage rolls made with it. While holding it, you gain a +2 bonus to Armor Class and saving throws. 
+
+***Raven Friend.*** When attuned to the staff, ravens consider the bearer to be a member of their species and are considered charmed, though this effect breaks if the bearer attacks the raven. Ravens often think of the bearer as a curiosity, and the staff-holder will find that there are often ravens who follow them around. Other species related to ravens, such as dread ravens and the arakkoa, are too intelligent or powerful to be affected by this ability. 
+
+Additionally, The bearer can cast _speak with animals_ and _animal messenger_ as rituals, though they can only affect ravens.
+
+***Raven Form.*** As an action, you can shapeshift into a raven form, using the rules for a druid's shapeshift ability listed in the Warcraft Hero's Handbook. See below for raven form stats.
+
+> ### Raven Form
+> _Tiny beast_
+> ___
+>  - **Armor Class** 10 + Dexterity modifier
+>  - **Speed** 10 ft., fly 50 ft.
+> ___
+> - ***Darkvision.*** You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray.
+> - ***Flyby.*** You don't provoke opportunity attacks when you fly out of an enemy's reach.
+> - ***Keen Sight.*** You have advantage on Wisdom (Perception) checks that rely on sight.
+> - ***Mimicry.*** You can speak as normal and can mimic sounds you have heard, including voices. A creature that hears the sounds you make can tell they are imitations with a successful Wisdom (Insight) check opposed by your Charisma (Deception) check.
+> 
+> #### Actions
+> ***Beak.*** *Melee Weapon Attack:* *(Str/Dex + Prof bonus)* to hit, reach 5 ft., one target. *Hit:* 1 piercing damage.
+>
+
+***Portal.*** You can use the staff to open a portal, as if using the *teleportation circle* spell. You spend one minute using the staff to trace glowing lines on the ground, forming a 10-foot-diameter circle inscribed with sigils relating to a single permanent _teleportation circle_. The user of this staff must know the sigil sequence of the target circle, as normal. After the spell is complete, the glowing lines fade away, and the staff cannot be used to open another portal for 1d8 hours.
+
+The staff contains the knowledge of the sigil sequence related to the entranceway of Karazhan, the Tower of the Guardian of Tirisfal. It will impart this knowledge to one who is attuned to and holding the staff. The wielder of the staff cannot scribe or otherwise impart the knowledge of this sigil sequence to another, and if they lose attunement to the staff this knowledge is likewise lost from their memory. 
+
+***Enhanced Power.*** Atiesh bonds with its user, enhancing the abilities of the bearer. The form of this effect changes based on the class of the wielder, as noted below. 
+
+***Aura.*** When held, Atiesh also causes the bearer to spread an aura, affecting them and their allies within a 10-foot radius. The effects of this aura differ based on class, as mentioned below. If the bearer possesses at least 17 levels, the range of his aura extends to 30 feet.
+
+\pagebreakNum
+
+#### Druid
+
+***Nature's Power.*** When you cast a druid spell that restores hit points while wielding this staff, the spell restores an additional 2 hit points to each creature affected. Additionally, when you shapeshift into a druidic form, your natural attacks retain the +2 bonus to attack and damage rolls provided by the staff.
+
+***Nature's Aura.*** When someone starts their turn in your aura, they gain a single enhancement die. An enhancement die is a d4 that can be rolled and added to one ability check, attack roll, or saving throw it makes. The creature can wait until after it rolls the d20 before deciding to use the die, but must decide before using the DM says whether the roll succeeds or fails. A creature can only have one enhancement die at a time, can only benefit from the use of one once per 10 minutes, and loses their enhancement die 10 minutes after leaving your aura. 
+
+The die increases in size based on your level: a d6 at 5th level, a d8 at 9th level, a d10 at 13th level, and d12 at 17th level. 
+
+#### Mage
+
+***Arcane Power.*** When you cast a mage spell while wielding this staff, you gain a +2 bonus to the spell attack roll and to the saving throw DCs. Additionally, if the spell successfully deals damage, it deals +2 points of that damage type to each creature affected.
+
+***Arcane Aura.*** When someone under the effects of your aura roll a 1 on a damage die for the effects of a spell they cast, they can reroll the die and must use the new roll, even if it is another 1. They can do this for a number of dice per spell equal to your proficiency modifier. 
+
+#### Priest
+
+***Holy Power.*** When you cast a priest spell while wielding this staff, you gain a +2 bonus to the spell attack roll and to the saving throw DCs. Additionally, if the spell restores hit points, it restores an additional 2 hit points to each creature affected.
+
+***Holy Aura.*** When someone under the effects of your aura regains lost hit points, they regain an additional amount of hit points equal to your proficiency bonus. 
+
+#### Warlock
+
+***Fel Power.*** When you cast a warlock spell while wielding this staff, you gain a +2 bonus to the spell attack roll and to the saving throw DCs. Additionally, warlock spells that you cast crit on a roll of 19 or 20. If you crit against a target under the effect of your Curse of Agony, the critical hit deals an additional die of damage.
+
+***Fel Aura.*** When someone under the effect of your aura deals magical damage (non-bludgeoning, piecing, or slashing damage), they deal an additional number of points of that damage to each creature equal to your proficiency bonus. 
+
+\columnbreak
+
+### Benediction / Anathema
+
+_Staff, very rare (requires attunement by priest)_
+
+The staff can either take the form of the golden staff Benediction or the silver staff Anathema. Some of its properties vary based on which form it currently takes, while others are shared between forms.
+
+***Universal Abilities.*** The staff can be wielded as a magic quarterstaff that grants a +2 bonus to attack and damage rolls made with it. While holding it, you have resistance to necrotic damage and you gain a +2 bonus to Armor Class, saving throws, and spell attack rolls. 
+
+The staff can be used as a holy symbol. The gem in the staff shines with an inner light, which can be suppressed or resumed as an action. In its Benediction form, the light is as bright as a torch, providing bright light in a 20-foot radius and dim light for an additional 20 feet. In its Anathema form, the light is softer and more akin to moonlight, providing bright light in a 15-foot radius and dim light for an additional 15 feet.
+
+The staff can be transformed between its Benediction and Anathema forms as an action. Once this ability has been used, it cannot be used again for 1 hour.
+
+The staff has 20 charges, and regains 2d8 + 4 expended charges daily at dawn. If you expend the last charge, roll a d20. On a 1, the gem becomes a dull colorless crystal that no longer sheds light while the staff fades to a tarnished silver, and while the staff retains its +2 bonus to attack and damage rolls, it loses all other properties. On a 20, the staff regains 1d8 + 2 charges.
+
+The staff can either take the form of the golden staff Benediction or the silver staff Anathema. Some of its properties vary based on which form it currently takes, while others are shared between forms.
+
+
+<div style='margin-top:10px'></div>
+
+#### Benediction
+
+_Behind every shadow there is the light of hope._
+
+***Benediction.*** The golden Benediction form has the following abilities.
+- _Holy Light._ While holding Benediction, spells that you cast that deal radiant damage score a critical hit on a roll of a 19 or 20.
+- _Healing Light._ While holding Benediction, whenever you cast a spell that restores hit points to a creature, it restores an additional amount equal to your proficiency bonus.
+- _Spells._ While holding this staff, you can use an action to cast one of the following spells from it, using your spell save DC and spellcasting ability modifier: cure wounds (1 charge per spell level, up to 4th), lesser restoration (2 charges), or mass cure wounds (5 charges).
+
+\pagebreakNum
+
+#### Anathema
+
+_For every light, there is a shadow._
+
+***Anathema.*** The Anathema form has the following abilities.
+- _Shadow Energy._ While holding Anathema, you can expend 1 charge as a bonus action to restore 2 light points.
+- _Shadow Power._ While holding Anathema, whenever you deal necrotic damage to a creature, it deals an additional amount equal to your proficiency bonus.
+- _Spells_ While holding this staff, you can use an action to cast one of the following spells from it, using your spell save DC and spellcasting ability modifier: dark void† (1 charge per spell level, up to 4th), void strike† (2 charges), or negative energy flood†† (5 charges).
+
+† _Dark void_ and _void strike_ are depicted in the Warcraft Hero's Handbook.
+
+†† _Negative energy flood_ is depicted in Xanathar's Guide to Everything.
+
+### Dragonwrath, Tarecgosa's Rest
+
+_Staff, legendary (requires attunement by a spellcaster)_
+
+This staff can be wielded as a magic quarterstaff that grants a +2 bonus to attack and damage rolls made with it. While you hold it, you gain a +2 bonus to spell attack rolls and to spell save DCs.
+
+The staff has 50 charges for the following properties. It regains 4d6 + 2 expended charges daily at dawn. If you expend the last charge, roll a d20. On a 20, the staff regains 1d12 + 1 charges.
+
+***Spell Absorption.*** While holding the staff, you have advantage on saving throws against spells. In addition, you can use your reaction when another creature casts a spell that targets only you. If you do, the staff absorbs the magic of the spell, canceling its effect and gaining a number of charges equal to the absorbed spell's level. However, if doing so would bring the staff's total number of charges above 50, the ability fails and you are affected as normal.
+
+***Wrath of Tarecgosa.*** While holding the staff, you can expend some of the charges to duplicate spells. You can convert the charges held within the staff to cast spells you have prepared or know. You can create spell slots only of a level equal to or lower than your own spell slots, up to a maximum of 5th level. You use the stored levels in place of your slots, but otherwise cast the spell as normal. For example, you can use 3 levels stored in the rod as a 3rd-level spell slot.
+
+Alternatively, you can use the charges to duplicate a spell you have witnessed recently cast. The spell must have been cast within 60 feet of you, you must have witnessed the person casting it, it must have been cast within the last round, it must be of a spell level that you can cast, you must provide any expensive material components needed by the spell, and there must be enough charges in the staff to fuel the spell. The spell does not need to be one that is on your class list or a spell that you can normally cast, as long as it meets these other requirements.
+
+***Tarecgosa's Visage.*** While holding the staff, you can expend four charges to transform into an echo of the power of the blue dragon Tarecgosa. This uses the rules for a druid's shapeshift ability, as noted in the Warcraft Hero's Handbook, and the stats listed in the sidebar below. 
+
+If you are at least level 7, you can instead use the staff to polymorph into a blue drake, as if using the spell. The statistics for a blue drake are depicted in the Manual of Monsters.
+
+Using this ability requires that the one attuned and the spirit housed in the staff to not only not be in conflict, but for there to be a genuine connection between the two. Generally this only occurs when the bearer has accomplished some great deed in regards to magic, or when the interests and goals of the two are in alignment.
+
+***Sentience.*** *Dragonwrath* is a sentient lawful neutral weapon with an Intelligence of 16, a Wisdom of 12, and a Charisma of 19. It has hearing and darkvision out to 60 ft., and blindsight out to 10 ft.
+
+The staff can speak, read, and understand Common and Draconic, and can communicate with its bearer telepathically. Its voice is feminine and aristocratic. While you are attuned to it, *Dragonwrath* also understands every language you know.
+
+***Personality.*** Tarecgosa, the blue dragon whose spirit is housed inside *Dragonwrath*, speaks with a slight condescension towards mortal creatures. She does not do so maliciously; she merely believes that mortality prevents one from having perspective necessary to properly understand the nature of magic. When carried by an accomplished magic-user, Tarecgosa gets over her prejudice and becomes genuinely affectionate and appreciative.
+
+*Dragonwrath*'s purpose is that of the blue dragonflight: magic. Acquiring it, researching it, cataloging it. Magic must be regulated, managed, and controlled. But it must also be appreciated and valued and not hoarded. She is content to act mostly as on observer, unless she witnesses some interesting spell or a creature abusing magic in some way.
+
+If the bearer works against the cause of magic, such as selfishly hoarding knowledge and magic items for personal gain, a conflict will occur.
+
+> ### Blue Dragon Form
+> *Large dragon*
+> ___
+> - **Armor Class** 17 (natural armor)
+> - **Speed** 40 ft., fly 80 ft.
+> ___
+> ***Amphibious.*** You can breathe air and water.
+> 
+> #### Actions
+> ***Multiattack.*** You make two attacks: one with your bite and one with your claws. 
+> 
+> ***Bite.*** *Melee Weapon Attack:* *(Str + Prof bonus)* to hit, reach 10ft., one target. Hit: (2d10 + Str) piercing damage plus 7 (2d6) cold damage.
+>
+> ***Claw.*** *Melee Weapon Attack:* *(Str + Prof bonus)* to hit, reach 5 ft., one target. Hit: (2d6 + Str) slashing damage.
+
+\pagebreakNum
+
+### Fangs of the Father
+
+*Weapon (2 daggers), legendary (requires attunement by a rogue)*
+
+Fangs of the Father is a paired set of daggers. A rogue cannot attune to just one, he must attune to both **Golad, Twilight of Aspects** and **Tiriosh, Nightmare of Ages**, and uses only a single attunement slot for the both of them.
+
+Each is a dagger that provides a +2 bonus to attack and damage rolls and if either is on your person you can use your reaction to cast _feather fall_ on yourself. However, the full benefit of these daggers only comes into play if both are used as part of two-weapon fighting.
+
+***Twin Fangs.*** While engaging in two-weapon fighting while wielding *Golad* in one hand and *Tiriosh* in the other, you gain a +1 bonus to AC. You can also add your ability modifier to the damage of the second attack. You can make this second attack with advantage if you hit with the first dagger as part of the Attack action.
+
+In addition, if a target is hit by both daggers in the same round, it takes an additional 1d4 slashing damage from the second attack and cannot make an attack of opportunity against you for the rest of your turn.
+
+***Shadows of the Destroyer.*** Every time you successfully hit an opponent with either of the daggers, they gain a charge. A charge gained this way is shared between both daggers. The daggers can hold up to 30 charges; any charges in excess of this total are wasted. You can use your action to spend 3 charges to regain a point of energy.
+
+***Fury of the Destroyer.*** You can expend three charges (gained through _shadow of the Destroyer_) as part of your Attack action to make an extra attack with one of your daggers. You can only do this twice per turn: once with your main hand and once with your off hand.
+
+### Rhok'delar, Longbow of the Ancient Keepers
+
+*Weapon (longbow), legendary (requires attunement by a hunter)*
+
+**Rhok'delar** is a weapon with two forms. When it is unstrung, it can be used as a quarterstaff and is known as **Lok'delar** instead. In addition to its other form, it is also paired with an unnamed quiver made of leaves and dragonhide; where the bow goes, the quiver follows. The weapon is alive, and is known to occasionally glow a soft green or sprout blossoms and vines, though these do not interfere in the use of the weapon. 
+
+***Transform.*** As an action, you can unstring the bow and use it as a quarterstaff. In this form, it is known as Lok'delar, Stave of the Ancient Keepers. You can restring it as an action, returning it to the form of a longbow.
+
+***Weapon of the Ancients.*** The weapon provides a +3 bonus to attack and damage rolls, and provides advantage on attacks versus fiends made using this weapon. While carrying it, you have resistance to poison damage and advantage on saving throws versus being poisoned and the poisoned condition. When you score a critical hit with an attack from this weapon, you can roll an additional die equal to the weapon's damage and add it to the extra damage of the critical hit.
+
+***Ancient Sinew Wrapped Lamina.*** The quiver can hold more arrows than it seems like it normally could; it can contain up to 60 arrows in an extradimensional space. The quiver also has a compartment on its side that can easily hold Rhok'delar, whether strung or unstrung. It also extends a protective quality over the arrows it holds. Arrows stored in the quiver cannot be broken, unless they enter an antimagic field. This effect lasts for 1 round after leaving the quiver.
+
+### Shadowmourne
+
+*Weapon (greataxe), legendary (requires attunement by a death knight)*
+
+Shadowmourne provides a +3 bonus to attack and damage rolls, as well as the following abilities. A death knight treats Shadowmourne as his rune weapon for as long as he is attuned to it.
+
+***Saronite Weapon.*** Shadowmourne is made out of saronite, the crystallized blood of the Old God Yogg-Saron. As such, it has certain effects, as noted below. 
+- It casts a blue-green light as a candle. This effect cannot be suppressed.
+- It is resistant to all forms of damage, except for acid damage. It is immune to radiant damage.
+- When used as part of an attack that deals radiant damage, it reacts violently. The spell or ability automatically fails (with the action wasted), the person activating the ability takes an amount of radiant damage equal to the number of dice in the original effect, and they must make a DC 15 Dexterity save or be knocked prone.
+- It is particularly good at breaking objects. Whenever Shadowmourne hits an object, the hit is a critical hit.
+- Shadowmourne deals damage to the soul as well as the body. It ignores slashing damage resistance.
+ 
+***Curse of Yogg-Saron.*** The user of Shadowmourne is subject to the Curse of Yogg-Saron, as noted in the sidebar on the next page. 
+***Soul Fragments.*** Shadowmourne shaves off and devours pieces of souls, both those it cuts and those of the wielder if they are not careful. It stores these pieces inside itself as charges, which can be used to power its other abilities. Shadowmourne gains a charge whenever it is used to deal a critical hit or if a creature within 5 feet is reduced to 0 hit points. It can hold a maximum of 13 charges. Any charges in excess of this total are lost and attempting to use an ability when no charges remain causes the bearer to take 2d6 points of damage instead.
+
+***Power of Blood, Frost, and the Unholy.*** While wielding Shadowmourne, for every 4 charges currently stored in it, you gain a +1 bonus to spell attack rolls and to spell save DCs, to a maximum of +3.
+
+***Chaos Bane.*** By expending charges, you can unleash a flood of negative energy. All other creatures within 15 feet of you take 2d6 necrotic damage. For each charge beyond the first that you expend, the damage increases by 2d6 and the range increases by 5 feet. 
+
+You are bolstered by this effect, gaining advantage on all attack rolls, saving throws, and ability checks for a number of rounds equal to the number of charges expended.
+
+\pagebreakNum
+
+***Devour Soul.*** Whenever you use it to reduce a creature to 0 hit points, the sword slays the creature devours its soul, unless it is a construct or an undead. A creature whose soul has been devoured by Shadowmourne can be restored to life only by a *wish* spell.
+
+> ### Curse of Yogg-Saron
+> 
+> Items made of saronite whisper in the minds of those that carry them, slowly driving them insane. Unless an item is sealed in a lead-lined box or kept at a distance, those who spend at least 1 minute carrying, wearing, or wielding the item must make a DC 15 Charisma save at the end of their next long rest. Failure causes 1 point of Charisma damage, which lasts until removed by magic such as _greater restoration_. 
+>
+> If your Charisma is reduced to 0 as a result of this damage, you become permanently insane, as you seek out the Master who whispers in your mind. Once you reach this state, nothing less than a _wish_ can cure your mind.
+>
+> Undead and Death Knights have shown a remarkable resistance to this effect and can use the item normally without having to make Charisma saves, though the whispers remain.
+
+### Sulfuras, Hand of Ragnaros
+
+_Weapon (maul), legendary (requires attunement)_
+
+**Sulfuras** is a maul that is massive even for its type. It weighs 20 lbs and deals 2d8 points of bludgeoning damage when it hits. 
+
+***Hammer of the Firelord.*** The spiked head of this maul constantly glows red with a heat that cannot be suppressed. It sheds bright light in a 40-foot radius and dim light for an additional 40 feet. When you successfully hit a creature with this weapon, it takes an additional 2d6 points of fire damage. When a creature hits you with a melee attack, they take 5 points of fire damage.
+
+When attuned to and holding Sulfuras, you have fire resistance. Those who are not attuned to the weapon who attempt to touch it take 1 point of fire damage every round they do so. Any unattended flammable object that touches the head of the hammer is ignited.
+
+***Eye of Sulfuras.*** As an action, you can swing Sulfuras and launch an orb of fire, making a ranged attack against a creature you can see within 60 feet. The attack modifier is the same as if you were making a melee attack, and the attack deals 2d6 fire damage on a hit and potentially setting them aflame. The creature must make a DC 15 Dexterity save at the beginning of their next turn and at the beginning of each of their turns thereafter, taking 1d4 points of fire damage on a failure. This lasts for 1 minute, until they make a successful save, or until they take an action to extinguish the flames.
+
+### Thori'dal, the Star's Fury
+
+_Weapon (longbow), legendary (requires attunement)_
+
+Attacks made with this weapon gain a +2 bonus to attack and damage rolls.
+
+***Endless Ammunition.*** By pulling back the string of this bow when no ammunition is loaded, a magical arrow is produced, nocked and ready to fire. Once removed from the string, either by launching the arrow in an attack or by any other means, the arrow disappears at the end of the round.
+
+***Rapid Fire.*** Thori'dal's ability to generate ammunition allows more arrows to be fired in the same amount of time. On each of your turns, you can use a bonus action to make two attacks with this longbow. These extra attacks must only use the magical arrows provided by the *endless ammunition* ability. 
+
+***Defensive Weapon.*** Thori'dal has a broad metal hand cover worked into the weapon. This helps provide some level of defense, granting a +1 bonus to AC as if using a buckler. This ability does not require for the wielder to be proficient in shields, nor are they penalized if they lack this proficiency.
+
+### Thunderfury, Blessed Blade of the Windseeker
+
+*Weapon (longsword), legendary (requires attunement)*
+
+When attuned to this weapon, you have resistance to lightning and thunder damage. Attacks made with this weapon gain a +3 bonus to attack rolls.  When you hit a creature with this weapon, your attacks deal an additional 1d6 lightning damage. 
+
+Whenever your attack roll comes up as 16 or higher on the d20, two additional effects occur. First, a bolt of lightning leaps from the initial target and attacks the nearest enemy to the initial target within 30 feet. Use the same attack roll and modifier as the initial attack. If the attack is a hit, then the bolt continues to the nearest enemy target within 30 feet. It continues until the first miss or until up to 5 targets are hit by this bolt. No creature can be hit more than once by this effect.
+
+Upon being hit by this bolt, the first creature takes 1d4 lightning damage and gains vulnerability to lightning damage for 1 round. This damage increases for each successive strike, increasing to 1d6 for the second target, 1d8 for the third, 1d10 for the fourth, and 1d12 for the fifth. When this effect occurs, a loud crack of thunder can be heard up to 300 feet away.
+
+Additionally, the initial target is wreathed in a cyclone of imprisoning wind, hampering their attacks. They suffer a -2 penalty to attack and damage rolls.
+
+### Twin Blades of Azzinoth
+
+*Weapons (warglaives), legendary (requires attunement by a demon hunter)*
+
+When you attune to these weapons, you must attune to both at the same time. They only take up a single attunement slot. Attacks with these weapons have a +2 bonus to attack and damage rolls. When attacking a fiend, this bonus increases to +4.
+
+When you attack and roll a natural 20 on the attack roll, the attack deals an extra 2d6 slashing damage. This increases to 4d6 if the creature is a fiend. If a fiend has 25 hit points or less after taking this damage, it is destroyed. 
+
+While attuned to these weapons, you can call them to hand as a bonus action as long as they are on the same plane. You can call one or both as part of the same bonus action.
+
+<!--
+\pagebreakNum
+<style> .phb#HeirloomArtifacts:after { display:none; } </style>
+# Heirloom Artifacts
+___
+[TODO: Artifacts that level up with you. Have upgrade levels: common at lvl 1, uncommon at lvl 5, rare at lvl 9, very rare at lvl 13, legendary at lvl 17, artifact at lvl 20. Can only be used by mono-class characters of a specific subclass.]
+
+Alternate names for levels:
+- ***Dormant.*** The state that the item is when found by random people.
+- ***Awakened.*** The state that the item is in when attuned to by an appropriate class who is at least level 5. Uncommon level.
+- ***Invigorated.*** Rare level, level 9.
+- ***Empowered.*** Very rare level, level 13.
+- ***Unshackled.*** Legendary level, level 17.
+- ***Exalted.*** Artifact level, level 20 character.
+
+\pagebreakNum
+
+<div class="classTable wide" />
+
+Class|Subclass|Artifact
+-----|--------|--------
+Death Knight|Blood Presence|Maw of the Damned
+Death Knight|Frost Presence|Blades of the Fallen Prince
+Death Knight|Unholy Presence|Apocalypse
+Demon Hunter|Mark of Havoc|Twinblades of the Deceiver
+Demon Hunter|Mark of Vengeance|Aldrachi Warblades
+Demon Hunter|Mark of Wrath|Scythe of Souls
+Druid|Path of Balance|Scythe of Elune
+Druid|Path of Feral|Fangs of Ashamane
+Druid|Path of Guardian|Claws of Ursoc
+Druid|Path of Restoration|G'Hanir, the Mother Tree
+Hunter|Beast Mastery|Titanstrike
+Hunter|Marksmanship|Thas'dorah, Legacy of the Windrunners
+Hunter|Survival|Talonclaw
+Mage|Study of Arcane|Aluneth
+Mage|Study of Fire|Felo'melorn
+Mage|Study of Frost|Ebonchill
+Monk|Way of the Brewmaster|Fu Zan, the Wanderer's Companion
+Monk|Way of the Mistweaver|Sheilun, Staff of the Mists
+Monk|Way of the Windwalker|Fists of the Heavens
+Paladin|Oath of the Holy|The Silver Hand
+Paladin|Oath of Protection|Truthguard
+Paladin|Oath of Retribution|Ashbringer
+Priest|Discipline Priesthood|Light's Wrath
+Priest|Holy Priesthood|T'uure, Beacon of the Naaru
+Priest|Shadow Priesthood|Xal'atath, Blade of the Black Empire
+Rogue|Assassination|The Kingslayers
+Rogue|Outlaw|The Dreadblades
+Rogue|Subtlety|Fangs of the Devourer
+Shaman|Elemental|The Fist of Ra-den
+Shaman|Enhancement|Doomhammer
+Shaman|Restoration|Sharas'dal, Scepter of the Tides
+Warlock|Study of Affliction|Ulthalesh, the Deadwind Harvester
+Warlock|Study of Demonology|Skull of the Man'ari
+Warlock|Study of Destruction|Scepter of Sargeras
+Warrior|Arms|Strom'kar, the Warbreaker
+Warrior|Fury|Warswords of the Valarjar
+Warrior|Protection|Scale of the Earth-Warder
+</div>
+
+\pagebreakNum
+
+### Aldrachi Warblades
+*Warglaives, heirloom (requires attunement)*
+
+The Aldrachi Warblades are a paired set of warglaives. You cannot attune to just one--you must attune to both at the same time. When you do, you use only a single attunement slot for the both of them.
+
+This heirloom is associated with Demon Hunters who bear the Mark of Vengeance.
+
+The heirloom provides the following benefits in their dormant state:
+___
+- ***Aldrachi Design.*** Each warblade provides a +1 bonus to Armor Class.
+- ***Superior Warglaive.*** When you throw one of the warglaives, it returns to you even if you roll a natural 1.
+___
+While in an awakened state, the heirloom provides the following benefits:
+___
+- ***Honed Warblades.*** You have a +1 bonus to attack and damage rolls made with these weapons.
+- ***Soul Carver.*** You can spend 1 fel point to ignite the warblades, causing them to deal an additional 1d4 fire damage on hits for 1 minute. When you damage a creature while this effect is active, it generates a *soul fragment*. You can not have more *soul fragments* than your demon hunter level and you lose all unspent fragments after 1 hour.
+- ***Devour Souls.*** You can consume a *soul fragment* at the beginning of your turn. When you do, you gain a number of temporary hit points equal to your Intelligence modifier. If you use this ability while under the effects of metamorphosis, these temporary hit points stack with themselves up to a limit of your demon hunter level.
+___
+While in the invigorated state, the heirloom provides the following abilities:
+___
+- ***Honed Warblades.*** The bonus to attack and damage rolls increases to +2.
+- ***Defensive Spikes.*** You can spend 1 fel point as a reaction to gain resistance to bludgeoning, piercing, and slashing damage until the end of your next turn.
+- ***Siphon Power.*** You can consume a *soul fragment* to have advantage on your next attack roll.
+___
+While the heirloom is in the empowered state, it provides the following abilities:
+___
+- ***Honed Warblades.*** The bonus to attack and damage rolls increases to +3.
+- ***Aura of Pain.*** When you use Immolation Aura, each creature damaged by it is affected by your Torment ability. Torment applied this way does not end early if you affect another creature with Torment or with Aura of Pain.
+- ***Embrace the Pain.*** When you take damage from Immolation Aura, you can gain a bonus on your next successful damage roll equal to the amount of damage taken. 
+___
+While the heirloom is in an unshackled state, it provides the following abilities:
+___
+- ***Demonic Flames.*** Fire damage dealt by your demon hunter abilities or by these weapons ignores fire damage resistance and treats fire damage immunity as resistance instead.
+- ***Fiery Demise.*** When you are reduced to 0 hit points, you can unleash a blast of flame that deals fire damage equal to your demon hunter level to each creature in a 20-foot radius sphere centered on you.
+- ***Soulgorger.*** When you use the *devour souls* ability, you gain a number of temporary hit points equal to twice your Intelligence modifier instead.
+___
+When the heirloom reaches the exalted state, it provides the following abilities:
+___
+- ***Artifact.*** The weapon is considered an artifact and has 2 random minor beneficial properties and 2 random major beneficial properties.
+- ***Charred Warblades.*** When you deal fire damage with your *soul carver* ability, you heal a number of hit points equal to the amount dealt.
+- ***Painbringer.*** When you use metamorphosis, you gain resistance to all damage.
+
+### Aluneth
+Level 1+:
+
+Level 5+:
+
+Level 10+:
+
+Level 15+:
+
+Level 20+:
+
+### Apocalypse
+Level 1+:
+
+Level 5+:
+
+Level 10+:
+
+Level 15+:
+
+Level 20+:
+
+### Ashbringer
+Level 1+:
+
+Level 5+:
+
+Level 10+:
+
+Level 15+:
+
+Level 20+:
+
+### Blades of the Fallen Prince
+Level 1+:
+
+Level 5+:
+
+Level 10+:
+
+Level 15+:
+
+Level 20+:
+
+### Claws of Ursoc
+Level 1+:
+
+Level 5+:
+
+Level 10+:
+
+Level 15+:
+
+Level 20+:
+
+### Doomhammer
+Level 1+:
+
+Level 5+:
+
+Level 10+:
+
+Level 15+:
+
+Level 20+:
+
+### Ebonchill
+Level 1+:
+
+Level 5+:
+
+Level 10+:
+
+Level 15+:
+
+Level 20+:
+
+### Fangs of the Devourer
+Level 1+:
+
+Level 5+:
+
+Level 10+:
+
+Level 15+:
+
+Level 20+:
+
+### Felo'melorn
+Level 1+:
+
+Level 5+:
+
+Level 10+:
+
+Level 15+:
+
+Level 20+:
+
+### Fists of the Heavens
+Level 1+:
+
+Level 5+:
+
+Level 10+:
+
+Level 15+:
+
+Level 20+:
+
+### Fu Zan, the Wanderer's Companion
+Level 1+:
+
+Level 5+:
+
+Level 10+:
+
+Level 15+:
+
+Level 20+:
+
+### G'Hanir, the Mother Tree
+Level 1+:
+
+Level 5+:
+
+Level 10+:
+
+Level 15+:
+
+Level 20+:
+
+### Light's Wrath
+Level 1+:
+
+Level 5+:
+
+Level 10+:
+
+Level 15+:
+
+Level 20+:
+
+### Maw of the Damned
+Level 1+:
+
+Level 5+:
+
+Level 10+:
+
+Level 15+:
+
+Level 20+:
+
+### Scale of the Earth-Warder
+Level 1+:
+
+Level 5+:
+
+Level 10+:
+
+Level 15+:
+
+Level 20+:
+
+### Scepter of Sargeras
+Level 1+:
+
+Level 5+:
+
+Level 10+:
+
+Level 15+:
+
+Level 20+:
+
+### Scythe of Elune
+Level 1+:
+
+Level 5+:
+
+Level 10+:
+
+Level 15+:
+
+Level 20+:
+
+### Scythe of Souls
+Level 1+:
+
+Level 5+:
+
+Level 10+:
+
+Level 15+:
+
+Level 20+:
+
+### Sharas'dal, Scepter of the Tides
+Level 1+:
+
+Level 5+:
+
+Level 10+:
+
+Level 15+:
+
+Level 20+:
+
+### Sheilun. Staff of the Mists
+Level 1+:
+
+Level 5+:
+
+Level 10+:
+
+Level 15+:
+
+Level 20+:
+
+### Skull of the Man'ari
+Level 1+:
+
+Level 5+:
+
+Level 10+:
+
+Level 15+:
+
+Level 20+:
+
+### Strom'kar, the Warbreaker
+Level 1+:
+
+Level 5+:
+
+Level 10+:
+
+Level 15+:
+
+Level 20+:
+
+### Talonclaw
+Level 1+:
+
+Level 5+:
+
+Level 10+:
+
+Level 15+:
+
+Level 20+:
+
+### Thas'dorah, Legacy of the Windrunners
+Level 1+:
+
+Level 5+:
+
+Level 10+:
+
+Level 15+:
+
+Level 20+:
+
+### The Dreadblades
+Level 1+:
+
+Level 5+:
+
+Level 10+:
+
+Level 15+:
+
+Level 20+:
+
+### The Fists of Ra-den
+Level 1+:
+
+Level 5+:
+
+Level 10+:
+
+Level 15+:
+
+Level 20+:
+
+### The Kingslayers
+Level 1+:
+
+Level 5+:
+
+Level 10+:
+
+Level 15+:
+
+Level 20+:
+
+### The Silver Hand
+Level 1+:
+
+Level 5+:
+
+Level 10+:
+
+Level 15+:
+
+Level 20+:
+
+### Titanstrike
+Level 1+:
+
+Level 5+:
+
+Level 10+:
+
+Level 15+:
+
+Level 20+:
+
+### Truthguard
+Level 1+:
+
+Level 5+:
+
+Level 10+:
+
+Level 15+:
+
+Level 20+:
+
+### T'uure, Beacon of the Naaru
+Level 1+:
+
+Level 5+:
+
+Level 10+:
+
+Level 15+:
+
+Level 20+:
+
+### Twinblades of the Deceiver
+Level 1+:
+
+Level 5+:
+
+Level 10+:
+
+Level 15+:
+
+Level 20+:
+
+### Ulthalesh, the Deadwind Harvester
+Level 1+:
+
+Level 5+:
+
+Level 10+:
+
+Level 15+:
+
+Level 20+:
+
+### Warswords of the Valarjar
+Level 1+:
+
+Level 5+:
+
+Level 10+:
+
+Level 15+:
+
+Level 20+:
+
+### Xal'atath, Blade of the Black Empire
+Level 1+:
+
+Level 5+:
+
+Level 10+:
+
+Level 15+:
+
+Level 20+:
+
+\pagebreakNum
+<style> .phb#Artifacts:after { display:none; } </style>
+# Artifacts
+___
+
+### Aegis of Aggramar
+[TODO: Pillar of Creation. Designate a cone in the direction you are facing (no distance limit). Attack rolls from locations in this cone, as well as any area of effect effects originating in this cone cannot hit or damage you.]
+
+### Ata'mal Crystal
+[TODO. Draenei artifact. Broken into seven shards, representing the ROYGBIV spectrum: Heart of Fury, Fortune's Smile, Brilliant Star, Leafshadow, Eye of the Storm, Shield of the Naaru, Spirit's Song.]
+
+### Bloodhoof Runespear
+[TODO. Ancestral spear passed down the lines of tauren chieftains for twenty generations. Like a moonblade with 20 powers. You have to spend X amount of time learning the history of each chieftain before you can access the powers.]
+
+### Book of Medivh
+[TODO. Has every mage spell, some other classes such as warlock. Can be used as a reference for Intelligence based checks. Has a couple unique spells.]
+
+### Crown of the Triumverate
+[TODO. Broken into three pieces: Crest of Knowledge, Sigil of Awakening, and Eye of Prophecy. Crest of Knowledge holds the vast sum of knowledge from the Ancient Eredar. When all pieces are assembled back into the crown, the result is far greater powers than they are capable of individually.]
+
+### Demon Soul
+[TODO. Upgraded orb of dragonkind, affects all dragonflights.]
+
+### Divine Bell
+[TODO. Mogu artifact. Grants bless/bane in mile-wide radius.]
+
+### Exodar Lifestaff
+[Todo. The weapon of Velen, leader of the Exodar draenei. The head of the staff is actually the Eye of Prophecy, part of the Crown of the Trimumverate.]
+
+### Eye of Aman'thul
+[Not TODO. Pillar of Creation. Game breaking levels of power.]
+
+### Fearbreaker
+[TODO.]
+
+### Frostmourne
+[TODO.]
+
+### Hammer of Khaz'goroth
+[TODO.]
+
+### Helm of Domination
+[Todo? Attunement takes years.]
+
+### Horn of Cenarius
+[3.5 stats:]
+According to tales, the horn has the following powers, in addition to any others left undiscovered:
+- ***Body and Mind.*** The bearer gains a +2 bonus to all 6 primary attributes.
+- ***Call of the Spirits.*** 1/LR, can blow horn to summon might of night elves. CAn not be done to aid in destruction of nature or its environs, only to attack those who are abusing the land or its indiginous creatures. For 5 rounds after the horn is blown, immense silvery stars rain down on a site designated by the bearer. All creatures and structure within a 100-foot radius, except those friendly to the bearer or native to the land, suffer 20d6 points of divine damage (no save) per round. This damage does not affect the landscape, natural plants, indigenous creatures, the bearer of the horn or its allies.
+- ***Cloak of Night.*** When outdoors at night, the bearer is affected by fire/cold resistance 10 and spell resistance 21. If he has no levels in scout, this provides no benefit.
+- ***Lore of the Wild.*** Take 20 on Survival/Nature checks.
+- ***Speed of the Wind.*** Under the effects of haste.
+- ***Strength of Soul.*** +50 hp, regen 1 hp/10 min.
+A rumor hints that the horn's bearer will gradually be turned into a night elf if they bear the horn for too long.
+
+
+### Quel'Delar
+[Todo.]
+
+### Shadow Orb
+[Todo. Comes in fragments, assemble them for a greater artifact.] -->
