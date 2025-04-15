@@ -1,0 +1,535 @@
+<style>
+
+/* Resize page to international A4 */
+  .phb {
+    width: 210mm;
+    height: 296.8mm;
+  }
+  .phb:after { content: ""; }
+
+/* Temporary Fix for heading issues */
+    .phb p{ line-height: 15px; } 
+    .phb blockquote p{ line-height: 14px; } 
+    .phb h2{ line-height: 26px; } 
+    .phb h3{ line-height: 19px; } 
+    .phb h4{ line-height: 15px; padding-bottom: 3px; } 
+    .phb h5{ line-height: 17px; } 
+    th, td { line-height: 14px; }
+
+/* background image*/
+.phb {
+  background: white;
+}
+
+/* Text */
+.phb h1+p::first-letter {
+  float: none;
+  font-family: BookSanity;
+  font-size: 9.84pt;
+  color: #000;
+  line-height: 1.3em;
+  font-weight: normal;
+}
+
+.phb h4,
+.phb h3,
+.phb h2,
+.phb h1 {
+  font-family: BookSanity;
+  font-weight: normal;
+}
+
+.phb h1 {
+  font-size: 30pt;
+}
+
+.phb h2 {
+  font-size: 21, 84pt;
+}
+
+.phb h3 {
+  font-size: 18pt;
+  border-bottom: 1pt solid #000
+}
+
+.phb h4 {
+  font-size: 14, 88pt;
+}
+
+.phb h5 {
+  color: #000;
+}
+
+/* Tables */
+.phb table {
+  font-size: 9.84pt;
+}
+
+.phb table tbody tr:nth-child(odd) {
+  background-color: #f2f2f2;
+}
+
+/*change backing of rows*/
+/* Class Table */
+.phb .classTable {
+  border-image-source: none;
+  border: none;
+}
+
+.phb .classTable h5 {
+  font-family: Calibri;
+  font-weight: bold;
+}
+
+.phb .classTable table tbody tr:nth-child(odd) {
+  background-color: #FFF;
+}
+
+/* Description block */
+.phb .descriptive {
+  padding-left: 3px;
+  background-color: #e6e6e6;
+  border-image: none;
+  border: none;
+}
+
+.phb .descriptive p {
+  font-size: 9.84pt;
+}
+
+/* Note */
+.phb blockquote {
+  font-size:
+    9.84pt;
+  background-color: #e6e6e6;
+  border-width: 5px;
+  border-image-outset: 5px 0px;
+  box-shadow: 0px 1px 5px;
+}
+
+/* Stat Block */
+.phb hr+section blockquote {
+  background: white;
+  border: 3px solid #e6e6e6;
+  box-shadow: none;
+}
+
+.phb hr+section blockquote h3 {
+  font-family: Calibri;
+  border-bottom: 1px solid #000;
+}
+
+.phb hr+section blockquote hr+ul {
+  color: #000;
+}
+
+.phb hr+section blockquote table {
+  color: #000;
+}
+
+.phb hr+section blockquote hr {
+  background-image: url(https://gmbinder.com/images/MS0gM8Z.png)
+}
+
+/* footer */
+.phb:after {
+  display: none;
+}
+
+.phb .pageNumber {
+  color: #000;
+  font-size: 9.84pt;
+  bottom: 14mm;
+  right: 1.7cm
+}
+
+.phb .footnote {
+  color: #000;
+  font-size: 9.84pt;
+  bottom: 14mm;
+  left: 1.7cm;
+  text-align: left;
+  width: 600px;
+}
+
+.phb:nth-child(even) .pageNumber {
+  left: 18.19cm;
+}
+
+.phb:nth-child(even) .footnote {
+  left: 1.7cm;
+}
+
+.phb a {
+  color: black;
+}
+
+</style>
+
+<h1 style="font-size:28pt">Chapter 4: Personality and Background </h1>
+
+## Character Details
+### Name
+Sample names can be found for each race under that race's description. 
+### Sex
+### Height and Weight
+##### Random Height and Weight
+Race        | Base <br/> Height | Height <br/> Modifier | Base <br/> Weight | Weight<br/> Modifier
+------------|-------------------|-----------------------|------------------|------------
+Blood Elf   | 5'3"  | +2d8  | 100 lb.   | x (1d4) lb.
+Draenei     | 6'4"  | +2d10 | 200 lb.   | x (2d8) lb.
+Dwarf       | 4'0"  | +2d6  | 130 lb.   | x (2d6) lb.
+Forsaken    | †     | †     | †         | †
+Gnome       | 3'0"  | +2d4  | 35 lb.    | x 1 lb.
+Goblin      | 3'7"  | +2d4  | 40 lb.    | x 1 lb.
+Human       | 5'2"  | +2d8  | 120 lb.   | x (2d4) lb.
+Night Elf   | 6'1"  | +2d10 | 160 lb.   | x (2d6) lb.
+Nightborne  | 6'1"  | +2d10 | 140 lb.   | x (2d4) lb.
+Orc         | 5'9"  | +2d8  | 200 lb.   | x (2d6) lb.
+Pandaren    | 5'11" | +2d10 | 260 lb.   | x (2d12) lb.
+Tauren      | 8'5"  | +2d12 | 250 lb.   | x (2d10) lb.
+Troll       | 6'10" | +2d10 | 165 lb.   | x (2d8) lb.
+Void Elf    | 5'3"  | +2d8  | 100 lb.   | x (1d4) lb.
+Vulpera     | 3'6"  | +2d4  | 40 lb.    | x 1 lb.
+Worgen      | 6'5"  | +2d10 | 200 lb.   | x (2d6) lb.
+
+† Use Human or Blood Elf, depending on subrace
+
+<h3 style="font-size:17pt"> Other Physical Characteristics </h3>
+
+### Alignment
+A typical creature in the game world has an alignment, which broadly describes its moral and personal attitudes. Alignment is a combination of two factors: one identifies morality (good, evil, or neutral), and the other describes attitudes toward society and order (lawful, chaotic, or neutral). Thus, nine distinct alignments define the possible combinations.
+
+These brief summaries of the nine alignments describe the typical behavior of a creature with that alignment. Individuals might vary significantly from that typical behavior, and few people are perfectly and consistently faithful to the precepts of their 
+alignment.
+
+**Lawful good** (LG) creatures can be counted on to do the right thing as expected by society. Gold dragons, paladins, and most dwarves are lawful good.
+
+**Neutral good** (NG) folk do the best they can to help others according to their needs. Many celestials, some cloud giants, and most gnomes are neutral good.
+
+**Chaotic good** (CG) creatures act as their conscience directs, with little regard for what others expect. Copper dragons, many elves, and unicorns are chaotic good.
+
+**Lawful neutral** (LN) individuals act in accordance with law, tradition, or personal codes. Many monks and some wizards are lawful neutral.
+
+**Neutral** (N) is the alignment of those who prefer to steer clear of moral questions and don’t take sides, doing what seems best at the time. Lizardfolk, most druids, and many humans are neutral.
+
+**Chaotic neutral** (CN) creatures follow their whims, holding their personal freedom above all else. Many barbarians and rogues, and some bards, are chaotic neutral.
+
+**Lawful evil** (LE) creatures methodically take what they want, within the limits of a code of tradition, loyalty, or order. Devils, blue dragons, and hobgoblins are lawful evil.
+
+**Neutral evil** (NE) is the alignment of those who do whatever they can get away with, without compassion or qualms. Many drow, some cloud giants, and goblins are neutral evil.
+
+**Chaotic evil** (CE) creatures act with arbitrary violence, spurred by their greed, hatred, or bloodlust. Demons, red dragons, and orcs are chaotic evil.
+
+#### Alignment in the Multiverse
+For many thinking creatures, alignment is a moral choice. Humans, dwarves, elves, and other humanoid races can choose whether to follow the paths of good or evil, law or chaos. According to myth, the goodaligned gods who created these races gave them free will to choose their moral paths, knowing that good without free will is slavery.
+
+The evil deities who created other races, though, made those races to serve them. Those races have strong inborn tendencies that match the nature of their gods. Most orcs share the violent, savage nature of the orc gods, and are thus inclined toward evil. Even if an orc chooses a good alignment, it struggles against its innate tendencies for its entire life. (Even half-orcs feel the lingering pull of the orc god’s influence.)
+
+Alignment is an essential part of the nature of celestials and fiends. A devil does not choose to be lawful evil, and it doesn’t tend toward lawful evil, but rather it is lawful evil in its essence. If it somehow ceased to be lawful evil, it would cease to 
+be a devil.
+
+Most creatures that lack the capacity for rational thought do not have alignments—they are **unaligned**. Such a creature is incapable of making a moral or ethical choice and acts according to its bestial nature. Sharks are savage predators, for example, but they are not evil; they have no alignment.
+
+\pagebreakNum
+
+### Languages
+
+[Introductory text about languages. Rules about when you can learn non-standard languages.]
+
+##### Standard Languages
+
+Language    | Typical Speakers      | Script
+------------|-----------------------|--------
+Common      | Humans, the Alliance  | Common Alphabet
+Darnassian  | Night Elves           | Kaldorei Script
+Draenei     | Draenei               | Eredic Runes
+Dwarven     | Dwarves               | Dwarven Runes
+Gnomish     | Gnomes                | Dwarven Runes
+Goblin      | Goblins               | Goblin
+Gutterspeak | Forsaken, Criminals   | Common Alphabet
+Orcish      | Orcs, the Horde       | Orcish Pictograms
+Pandaren    | Pandaria Natives      | Mogu Logograms
+Shalassian  | Nightborne Elves      | Kaldorei Script
+Taur-ahe    | Tauren                | —
+Thalassian  | Blood Elves           | Kaldorei Script
+Vulpera     | Vulpera               | Caravan Scrawl     
+Zandali     | Trolls                | Zandali
+
+##### Exotic Languages
+
+Language    | Typical Speakers      | Script
+------------|-----------------------|--------
+Draconic    | Dragonkin             | Arcane*
+Eredun      | Demons                | Eredic Runes
+Furbolg     | Furbolg               | Furbolg Symbology
+Giant       | Northrend Giants      | Titanic Runes
+Hozen       | Hozen                 | Mogu Logograms**
+Kalimag     | Elementals            | —
+Kalu'ak     | Tuskarr               | —
+Low Common  | Low Races             | Common Alphabet
+Nazja       | Naga                  | Naga Script
+Nerglish    | Murlocs and Sea Races | Naga Script
+Nerubian    | Nerubians             | Spider Hieroglyphs
+Ogre        | Ogres                 | —***
+Ravenspeech | Arakkoa               | Apexis Script
+Tol'vir     | Tol'vir               | Tol'vir Hieroglyphs
+Vrykul      | Vrykul                | Titanic Runes
+
+##### Mythic Languages
+
+Language    | Typical Speakers      | Script
+------------|-----------------------|--------
+Apexis      | Apexis Civilization   | Apexis Script
+Shath'yar   | The Black Empire      | —
+Titan       | Titan-forged          | Titanic Runes
+
+\columnbreak
+
+#### Standard Languages
+
+[Descriptor of what qualifies as a Standard language.]
+
+***Common.*** Common is a language ubiquitous in cultures across Azeroth and beyond, characterised by a classical sound hard on consonants, and influenced heavily by words loaned from other cultures.
+
+***Darnassian.*** The dialect spoken by the Night Elves is distinct for being spoken rhythmically and emotionally, as though through song, and has a musical quality famed for lulling strangers to their lands into a daze. Translations into Common can be extremely literal; for example, "gyrocopter" may translate to "rotation chair."
+
+***Draenei.*** The Draenei speak a dialect of original Eredun divorced from its demonic origins,  but still characterised by sharp-sounding and quick turns of phrase that may seem aggressive to new listeners. It is a communal language, where many words are left dependant on social context. Due to its demonic origin it contains an exceptional number of threats.
+
+***Dwarven.*** One of the oldest unchanged languages on the planet, Dwarven is famous for being extremely guttural and hard on the throat, with many of its key consonants pronounceable only through growling or coughing. The distinct Dwarven accent is ubiquitous across clans, though any dwarf can tell whether a speaker is a Highlander or from the mountains. Dwarven opera is famed for its extreme length and enthusiasm.
+
+***Gnomish.*** Naturally, the language of the gnomes is densely packed with long and highly technical terminology, as well as highly academic tone and form, but it is surprisingly easy for foreigners to learn; the language is almost clockwork in its design, following its own rules of grammar and phonics without variation, making learning it a matter of time rather than effort. The complexities of gnomish communication come not in words, but in body language; through hand gestures, facial expressions, tone and position, gnomes are constantly communicating their thoughts silently, to the point that an effective way to shut a gnome up is to tie their hands together.
+
+***Goblin.*** Fittingly, the goblin language is spoken extremely quickly, with modular contractions and short words combining with one another to construct new words and phrases in moments, before rapidly being forgotten as speakers move on, Interruptions between speakers are common and expected. Its alphabet is a scrawl of messy symbols developed for commerce and engineering, and has many cultural intricacies that vary per goblin, making it difficult to learn.
+
+***Gutterspeak.*** A dialect developed by the seedy underbelly of human cultures, Gutterspeak is a complex and obfuscating system of rhymes, slang and made-up terms developed for the sole purpose of sounding like deranged nonsense to an outsider, such as law enforcement. The language seems a perfect fit for the raspy-voiced Forsaken, and even the more educated of their numbers have made an effort to learn in order to help develop a sense of cultural identity.
+
+\pagebreak
+
+***Orcish.*** Orcish is an extremely basic language, though it is far from simple. Though it consists mostly of guttural grunts and monosyllabilic words and names, orcish is expected to be spoken with intense and unmitigated emotion, combined with extreme body language bordering on violent, placing greater importance on emphasis than finesse. Orcish songs and poetry reflect this, being sung in groups to simple drum beats, often prior to, or in celebration of, battle. As a language of warriors, its written form is simple and largely formed of symbols taken from nature.
+
+***Pandaren.*** Originally the Mogu language, developed over millennia into a language fitting the Pandaren, their language can seem extremely complicated since spoken inflection, tone and context may change the meanings of words, and its extensive pictogram alphabet. It is spoken quickly and has hundreds of dialects and accents developed by Pandaria's many communities. Since it its used extensively by Lorewalkers, the language has developed an emotional and powerful storytelling style.
+
+***Shalassian.*** Said to be the closest remaining language to the original lost original elvish used aeons ago, Shaladssian developed in a bubble, and did not mingle with any outside languages for over ten thousand years. As such it is filled with redundancies and phrases so archaic that it is hard to understand for speakers of other elven languages. It is far more formal even than Thalassian, being developed and written largely by a community of extreme elitist scholars, and it is extremely easy to accidentally come across as rude or crass if the right turn of phrase is not used.
+
+***Taur-ahe.*** A language exclusively learned orally, the Taur-ahe language is in more constant shift and change than any other, and each tribe has their own version of it going back millennia. It is spoken slowly and softly, with a great deal of hand gestures, and characteristically has very few insults, but a great many terms of respect and endearment, and over two hundred words for parts of a kodo. As such speakers tend to come across as respectful and uncomplicated; many tauren speak as they find. Their storytellers and wisemen will make extensive use of metaphors and sounds taken from nature.
+
+***Thalassian.*** An elvish dialect originally spoken by the upper echelons of Highborne society, Thalassian has a dense and formal tone characterised by few contractions and a deep focus on form over function; many words may seem unnecessarily complex or academic, and speaking in simpler terms may come across as rude or condescending, even to common folk. Thalassian poetry is known to last for hours.
+
+***Vulpera.*** Developed as a trade language to be spoken between the many travelling Vupera caravans, the Vulpera language is an extremely individual, fast-spoken language reliant on tone of voice and context to make sense. When written it is done using a unique form of alphabet that has no centralised form, meaning it can be difficult to read eve for native speakers.
+
+***Zandali.*** The ancient language of the troll empire has been carefully preserved and maintained for aeons, and is relatively unchanged in that time. It is sharp and rough, and makes heavy uses of prefixes and suffixes to extend the meanings of words and names. Its speakers do little to hide their feelings, and throw as much of their emotion as possible into their speech. Few speakers could be called soft spoken, and the distinct troll accent is famous for seeming simultaneously friendly and threatening.
+
+\columnbreak
+#### Exotic Languages
+
+[Descriptor of what qualifies as an Exotic language.]
+
+***Draconic.*** The language of dragons is at the same time simple and complex; it has few words, and they are spoken largely in growls, roars, and academic terminology, but the intricacies of the dragon language are immense. Between Dragonflights, conventions and meanings may be totally different, and what appears polite to a Blue may be a deathly insult to a Black dragon. Naming is particularly complex, and the differences between flights can demonstrate just how careful one must be when assuming they know how to speak with dragons.
+
+***Eredun.*** Eredun is the famed and feared language of the Eredar homeworld, Argus, and has been adopted by all demons as a native language. Across the cosmos, this language has heralded the end of worlds. In harsh tones and sharp syllables the language boasts a vast array of threats and curses, as well as myriad terms of worship and fealty. It is telling that there are many different words for "Overlord," but only one for "mercy," which is used as an insult. It is said that mortals who speak it turn to darkness, or risk summoning demonspawn, and so the language has long been the subject of deep suspicion, along with its speakers.
+
+***Furbolg.*** Each tribe speaks a distinct dialect of Furbolg, making learning the language difficult. Further still, each tribe uses their own symbology system, comprising of tribal carvings in bark and stone, earth-coloured paints and, rarely, Darnassian runic symbols. When spoken it has a deep, gluttoral sound reminiscent of a bear's growls, and names tend to be descriptors of an individual's physical features.
+
+***Giant.*** The language spoken by the various clans of ice, storm and fire giants throughout Northrend, and similar in some ways to Dwarven and Gnomish, but for key differences; there is no future tense in the giants' language, and rather than look to the future for phrasing, giants will look to stories of the past and use precedent to set up conversation and argument. There are few surnames, and the simplicity of the language used can hide their potential for deep meaning.
+
+***Hozen.*** Hozen is a remarkably basic language by any measure, and appears to largely be a lengthy and exhaustive list of curse words. Speakers find the language extremely versatile, able to apply its many simple syllables in a broad variety of ways; this is because the language cares very little for accuracy or meaning, and runs instead on feeling. While one day a dooker may be a true friend and warrior, on another day it may be one of many, many words for faeces. Their use of language is also extremely literal; the hozen word for constipation is "spooky dooks," because one's "dooks" are too scared to come out.
+
+***Kalimag.*** The prehistoric language spoken by the elementals and those who work with them, Kalimag is hardly spoken at all. It is largely felt in the air and the mind, and written in rock formations, in river beds and clouds. When it is spoken, it evokes feelings of heat or weight, depth or height, depending on who speaks and where. It consists of extremely simple terms, bare statements such as "Reth," meaning "burn," and other uncomplicated concepts. The language has gone unchanged over millions of years, and is used by all elementals, from lowly embers to great Firelords.
+
+\pagebreak
+
+***Kalu'ak.*** A friendly-sounding language formed by a highly communal race, the Tuskarr language serves simple purposes and seeks not to overcomplicate an already complicated world. With over twenty words for 'sea,' the  language of the Tuskarr has a firm, tribal sound to it, developed to be understood over gale winds, under the water or across great distances.
+
+***Low Common.*** A dialect stolen from Common and degraded by its unintelligent speakers into a simplified, slang-heavy lexicon, Low Common is employed by tribes of gnolls, kobolds and their like when communicating with one another, or with higher races such as humans. The extreme simplicity of Low Common betrays a true language barrier - though it may be easy enough to get the gist of a speaker's meaning, converting one's thoughts into such terms actually takes real skill, as doing so means skirting the line between language and gibberish.
+
+***Nazja.*** Nazja, a derivative of the original lost elven language, it appears most similar to Thalassian, though the differences include significantly stronger emphasis on sibilance and the use of extremely archaic prefixed and suffixes, such as Naz- and -jar, as well as a strong emphasis on the form of the name of the Naga Queen, Azshara.
+
+***Nerglish.*** Nerglish may appear, to a passerby, to be incoherent mumbling nonsense gurgled out by an attacking murloc, but in fact the language has many subtleties that are lost when spoken above water. Not purely a spoken language, colour and body language matter a great deal to speakers, whose bodies may shift tone beneath the wave, or who may wear complex jewellery to accentuate a point.
+
+***Nerubian.*** The Nerubian race communicates through a combination of dense, supersensory buzzing, clicking, and an incredibly complicated system of multi-levelled phrasing, reliant on a strong awareness of history in order to understand the many references to past events. It is difficult for a non-Nerubian to speak it, and earnest attempts to do so are thought of as respectful, and can impress Nerubian scholars.
+
+***Ogre.*** A spoken language whose intricacies, and written form, have been lost to time, Ogre in its modern form consists mostly of brutish grunts, roars and swear words. Its few speakers of higher intellect may remember the old ways of using broader and varied applications of scholarly tone and deeply metaphorical phrasing to craft layered and multifaceted conversations, but this mostly falls on deaf ears.
+
+***Ravenspeech.*** The language of the modern Arakkoa is a language crafted from storytelling traditions going back generations, formed of formalised slang and the natural cries, mumbles and croaks of ravens. Common is a conversational, emotional tone featuring a lot of call-and-response, as well as callbacks to classic stories from Arakkoa culture. A religious language kept intact through scripture, the language is complex and nuanced, though when translated can seem lacking in grace.
+
+***Tol'vir.*** The ancient Tol'vir split from their Titan-forged origins aeons ago, forming their own language based on their extremely visual method of recording history through art. When spoken, it makes strong use of throaty, hard syllables, not unlike Dwarven, though with a stronger emphasis on sounds made through narrow tongue shapes
+
+***Vrykul.*** The old Northrend language of the Vrykul goes back to its Titanic origins, and is split into the dialects of the different clans of Vrykul across the sea. The distinct accent of the vrykul is spoken with emphasis on long vowels, while images taken from nature are common, with names such as Bjarn (bear), as well as the overwhelming frequency of war imagery, with no fewer than ten words for blood and many locations being named for famous figures of Vrykul history that died in battle.
+
+#### Mythic
+
+[Descriptor of what qualifies as a Mythic language.]
+
+***Apexis.*** The Apexis, a long extinct culture of high Arakkoa, were an extremely advanced species whose words and pronunciations are mostly lost to history. Only vague remnants of their written history can be found in buried ruins, and of them, little can be gleaned other than arcanological blueprints and formulae. There exist no known speakers, though the oldest of remaining Appexis creations have been kown to react favourably to attempts to speak the language.
+
+***Shath'yar.*** The unspeakable language of the Old Gods is forbidden in scholarly circles, and reviled even by those who do not recognise it. Spoken in obscure and seemingly unpronounceable gibberish, the language seeps into the minds of those who hear it and threaten to drive them insane. When written, it takes no recognisable form, and the words seem to shift and warp across the paper they are scribed upon. The language is believed to be impossible to learn, and is instead granted upon mortals as their minds break in servitude to the Old Gods.
+
+***Titan.*** The ancient and forgotten language of the Titans has a rhythmic, logical format, which features many words of equal size and syllable and a deceptively simple range of phonics. All of this makes speaking Titanic sound almost synthetic, and certainly matches its orderly creators.
+
+### Personal Characteristics
+#### Personality Traits
+#### Ideals
+#### Bonds
+#### Flaws
+
+\pagebreakNum
+
+## Inspiration
+Inspiration is a rule the game master can use to reward you for playing your character in a way that’s true to his or her personality traits, ideal, bond, and flaw. By using inspiration, you can draw on your personality trait of compassion for the downtrodden to give you an edge in negotiating with the Beggar Prince. Or inspiration can let you call on your bond to the defense of your home village to push past the effect of a spell that has been laid on you.
+
+### Gaining Inspiration
+Your GM can choose to give you inspiration for a variety of reasons. Typically, GMs award it when you play out your personality traits, give in to the drawbacks presented by a flaw or bond, and otherwise portray your character in a compelling way. Your GM will tell you how you can earn inspiration in the game. 
+
+You either have inspiration or you don’t—you can’t stockpile multiple “inspirations” for later use.
+
+### Using Inspiration
+If you have inspiration, you can expend it when you make an attack roll, saving throw, or ability check. Spending your inspiration gives you advantage on that roll.
+
+Additionally, if you have inspiration, you can reward another player for good roleplaying, clever thinking, or simply doing something exciting in the game. When another player character does something that really contributes to the story in a fun and interesting way, you can give up your inspiration to give that character inspiration.
+
+\pagebreakNum
+
+## Backgrounds
+Every story has a beginning. Your character’s background reveals where you came from, how you became an adventurer, and your place in the world. Your fighter might have been a courageous knight or a grizzled soldier. Your wizard could have been a sage or an artisan. Your rogue might have gotten by as a guild thief or commanded audiences as a jester.
+
+Choosing a background provides you with important story cues about your character’s identity. The most important question to ask about your background is what changed? Why did you stop doing whatever your background describes and start adventuring? Where did you get the money to purchase your starting gear, or, if you come from a wealthy background, why don’t you have more money? How did you learn the skills of your class? What sets you apart from ordinary people who share your background?
+
+The sample background presented here provides both concrete benefits (features, proficiencies, and languages) and roleplaying suggestions.
+
+#### Proficiencies
+Each background gives a character proficiency in two skills (described in “Using Ability Scores”).
+
+In addition, most backgrounds give a character proficiency with one or more tools (detailed in “Equipment”).
+
+If a character would gain the same proficiency from two different sources, he or she can choose a different proficiency of the same kind (skill or tool) instead.
+
+#### Languages
+Some backgrounds also allow characters to learn additional languages beyond those given by race. See “Languages.”
+
+#### Equipment
+Each background provides a package of starting equipment. If you use the optional rule to spend coin on gear, you do not receive the starting equipment from your background.
+
+#### Suggested Characteristics
+A background contains suggested personal characteristics based on your background. You can pick characteristics, roll dice to determine them randomly, or use the suggestions as inspiration for characteristics of your own creation.
+
+#### Customizing a Background
+You might want to tweak some of the features of a background so it better fits your character or the campaign setting. To customize a background, you can replace one feature with any other one, choose any two skills, and choose a total of two tool proficiencies or languages from the sample backgrounds. You can either use the equipment package from your background or spend coin on gear as described in the equipment section. (If you spend coin, you can’t also take the equipment package suggested for your class.) Finally, choose two personality traits, one ideal, one bond, and one flaw. If you can’t find a feature that matches your desired background, work with your GM to create one.
+
+\columnbreak
+
+Background          | ?
+--------------------|---
+Acolyte             |
+Artisan             |
+Alchemist           |
+Carnie              |
+Cook                |
+Criminal            |
+Cultist             |
+Doctor              |
+Double Agent        |
+Exile               |
+Faction Fostered    |
+Farmer              |
+Fisher              |
+Gatherer            |
+Gladiator           |
+Guardsman           |
+Hidden Villager     |
+Knight              |
+Lumberjack          |
+Miner               |
+Noble               |
+Peasant             |
+Pirate              |
+Ranger              |
+Recluse             |
+Refugee             |
+Sailor              |
+Scholar             |
+Soldier             |
+Spy                 |
+Tinkerer            |
+Tradesman           |
+Tribal Member       |
+Urchin              |
+War Child           |
+Wizard's Apprentice |
+
+\pagebreakNum
+
+### Acolyte
+Covers those who have served a faith for their whole life. Priests of organized religions, mostly, not witch doctors.
+### Artisan
+Covers non-specific profession specialist. Blacksmith, Carpenter, etc.
+### Alchemist
+An artisan who specializes in the weird aspects of alchemy. Royal Apothecary Society, etc.
+### Archaeologist
+Straightforward. Explorer's League, Reliquary.
+### Carnie
+"Ran off and joined the circus." Darkmoon Faire.
+### Cook
+An artisan of food. Subset includes brewers.
+### Criminal
+Basic.
+### Cultist
+Covers those who serve a small, not well received religion. Old Gods, Cult of the Damned, etc.
+### Double Agent
+Like in the book.
+### Exile
+Someone who was outcast from their community. Useful for non-traditional player race/class concepts, like a murloc player or a night elven warlock.
+### Faction Fostered
+Like in the book.
+### [Farmer](https://www.dndbeyond.com/backgrounds/5971-farmer)
+Simple folk.
+### Fisher
+Covers Fishing.
+### Gatherer
+Covers Fishing, Mining, Herbalism, Lumberjack, etc.
+### Gladiator
+Ring of Blood and so on.
+### Guardsman
+Investigative soldier.
+### Hidden Villager
+You came from a reclusive village. Think furbolgs, uncontacted tribes in the Amazon, etc.
+### Knight
+Less of the noble subset it is in 5e and more "of the Silver Hand."
+### Lumberjack
+You cut down wood.
+### Medic
+First Aid focused background.
+### Miner
+Mining focused background.
+### Noble
+Elves, humans, dwarves, etc.
+### Peasant
+Common folk with no special craft. Also includes Peons.
+### Pirate
+Arr.
+### Ranger
+General woodsman, serving for a government.
+### Recluse
+Hermit equivalent.
+### Refugee
+Goblins and worgen post Cataclysm, many draenei, etc.
+### Sailor
+What do you do with a drunken me?
+### Scholar
+Sage equivalent.
+### Soldier
+In the army.
+### Spy
+Basic.
+### Tinkerer
+Engineering focused background.
+### Tradesman
+Merchant background.
+### Tribal Member
+Like a hidden villager, but more primal. Trolls, mostly.
+### Urchin
+Standard.
+### War Child
+Urchin, but you've been fighting the whole time.
+### [Wizard's Apprentice](https://www.dndbeyond.com/backgrounds/1233-wizards-apprentice)
+Straightforward.
