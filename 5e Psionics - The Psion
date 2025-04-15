@@ -1,0 +1,807 @@
+<style>
+/* GLOBAL FORMATTING  */
+
+  /* Resize page to international A4 */
+  .phb {
+    width: 210mm;
+    height: 296.8mm;
+  }
+  .phb:after { content: ""; }
+
+/* Temporary Fix for heading issues */
+    .phb p{ line-height: 15px; } 
+    .phb blockquote p{ line-height: 14px; } 
+    .phb h2{ line-height: 26px; } 
+    .phb h3{ line-height: 19px; } 
+    .phb h4{ line-height: 15px; padding-bottom: 3px; } 
+    .phb h5{ line-height: 17px; } 
+    th, td { line-height: 14px; }
+
+/* TABLE OF CONTENTS  */
+
+  /* toc specifically wants black text. This resets the headers*/
+  .toc a {
+    color: inherit !important;
+  }
+  /* Allow dot leaders to fill remaining space but not overlap */
+  .toc li span:nth-child(2) {
+    width: auto;
+    overflow: hidden;
+    white-space: nowrap;
+    display: block;
+  }
+  .toc li span:nth-child(2):after {
+    font-family: BookSanity;
+    font-size: 0.317cm;
+    font-weight: normal;
+    color: black;
+    content:
+      " ........................................"
+      "........................................."
+      ".........................................";
+    }
+
+  /* Style TOC page numbers*/
+  .toc li span:first-child {
+    float: right;
+    font-family: BookSanity;
+    font-size: 0.317cm;
+    font-weight: normal;
+    color: black;
+    margin-left: 1px;
+  }
+
+  /* Adjust TOC H3 styles */
+  .toc li h3 span:nth-child(2):after {
+  	content: " ";
+  }
+  .toc li h3 {
+    margin-bottom: 4px !important;
+    margin-top: 10px !important;
+    line-height: initial !important;
+  }
+  .toc li h3 span:first-child {
+  	line-height: 1.8em !important;
+  }
+
+  /* Reduce TOC list indentation*/
+  .toc ul ul {
+  	margin-left: 10px !important;
+  }
+  .toc>ul>li {
+    margin-bottom: initial !important;
+  }
+
+
+/* TABLES AND BLOCKS */
+
+  /* Clear internal padding and add gap above for green note blocks*/
+  .phb blockquote {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .phb blockquote { margin-top: 1em;
+  }
+
+
+/* INK BLOT STYLES */
+
+  /* Root style for inkblots. Use alone, or together with
+  one of the inkb lotstyle classes below. Essentially:
+  <img url='{url}' class='inkblot inkblot-blue' />
+  */
+  .inkblot {
+    position: absolute;
+    mix-blend-mode: multiply;
+    opacity: 0.6;
+  }
+
+  .inkblot-blue {
+    filter: hue-rotate(190deg) saturate(120%)
+  }
+
+  .inkblot-green {
+    filter: hue-rotate(120deg)
+  }
+
+</style>
+
+<style>
+/* Background */
+  .phb{ background-image: url('https://gmbinder.com/images/KN1O92T.png') }
+  .phb{ background-size: cover }
+
+/* Notes */
+  .phb section blockquote {background-color: #f6e5d4}
+  .phb hr + section blockquote tr:nth-child(odd) td {background-color: transparent;}
+
+/* Tables */
+  table tr:nth-child(odd) td {background-color: #cccccc}
+
+/* Footer */
+  .phb .pageNumber {color: rgba(0, 0, 0, 0.5)}
+  .phb .footnote {color: rgba(0, 0, 0, 0.5)}
+  .phb:nth-child(odd):after{ 
+    content          : '';
+    position         : absolute;
+    bottom           : -7px;
+    left             : 10px;
+    z-index          : -1;
+    height           : 336px;
+    width            : 100%;
+    background-image : url('https://www.gmbinder.com/images/bNTz1nk.png');
+    background-size  : cover;
+}
+
+.phb:nth-child(even):after{ 
+    content          : '';
+    position         : absolute;
+    bottom           : -7px;
+    left             : -10px;
+    z-index          : -1;
+    height           : 336px;
+    width            : 100%;
+    background-image : url('https://www.gmbinder.com/images/6NCzAN0.png');
+    background-size  : cover;
+}
+
+  /* Footer with white text against dark backgrounds */
+  .phb .footnote.footnote-white,
+  .phb .footnote.footnote-white + .pageNumber,
+  .phb .footnote.footnote-white + section .pageNumber {
+    color: rgba(255,255,255,0.8);
+  }
+
+
+/* Page Number */
+.phb .pageNumber{
+    position   : absolute;
+    bottom     : 30px;
+    width      : 50px;
+    text-align : center;
+}
+.phb:nth-child(even) .pageNumber{
+    left      : 12px;
+}
+.phb:nth-child(odd) .pageNumber{
+    right      : 12px;
+}
+
+.phb .pageNumber.auto{
+    position   : absolute;
+    bottom     : 41px;
+    width      : 50px;
+    text-align : center;
+}
+.phb:nth-child(even) .pageNumber.auto{
+    left      : 12px;
+}
+.phb:nth-child(odd) .pageNumber.auto{
+    right      : 12px;
+}
+
+</style>
+
+## Psion
+
+### Sources
+- [Kibbles Tasty Psion](https://www.reddit.com/r/KibblesTasty/comments/qc8rpw/kibbles_psion_152_read_minds_and_break_them/)
+- [Psionic Character Options](https://www.gmbinder.com/share/-M5QW87r8dYPT-GrGoW3)
+- [The Renewed Psionic V4 by devikyn](https://www.reddit.com/r/UnearthedArcana/comments/k4m2yz/renewed_psionics_v41_a_culmination_of_converted/)
+- [Psion class by Laserllama](https://www.reddit.com/r/UnearthedArcana/comments/10a0m0o/laserllamas_psion_class_v210_update_unlock_the/)
+- [Psychic Class by DaveTheManiac](https://www.reddit.com/r/UnearthedArcana/comments/13569ww/the_psychic_a_psionic_class_using_psionic_energy/)
+- [The Erudite by RW_BlackBird](https://www.reddit.com/r/UnearthedArcana/comments/qo1qa6/the_erudite_an_intelligencebased_psionic/)
+- [r/UnearthedArcana Resources](https://www.reddit.com/r/UnearthedArcana/wiki/resources)
+- [Class Design Guide](https://drive.google.com/file/d/1dsQ30Kl6bdHvMBtlICglSFy5v2Yl1kqR/view)
+
+\pagebreak
+
+<div class='classTable wide'>
+
+##### The Psion
+Level   |Proficiency<br/>Bonus|Features          |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |Talents<br/>Known|Disciplines<br/>Known|Psionic<br/>Energy|Psi<br/>Limit
+--------|:-:|---------------------------------------------------|-|:-:|:-:|:--:|:-----:|
+| 1st | +2 | Psionics (d6), Subclass                            | | 2 | — |  2 | 1
+| 2nd | +2 | Autohypnosis, Psionic Focus                        | | 2 | — |  4 | 1
+| 3rd | +2 | Subclass feature                                   | | 2 | — |  8 | 2
+| 4th | +2 | Ability Score Improvement                          | | 2 | — |  8 | 2
+| 5th | +3 | Psionics (d8)                                      | | 3 | — | 10 | 3
+| 6th | +3 | Subclass feature                                   | | 3 | — | 11 | 3
+| 7th | +3 | Force of Will                                      | | 3 | — | 11 | 4
+| 8th | +3 | Ability Score Improvement                          | | 3 | — | 12 | 4
+| 9th | +4 | ??                                                 | | 3 | — | 12 | 5
+| 10th| +4 | Subclass feature                                   | | 3 | — | 14 | 5
+| 11th| +4 | Psionics (d10)                                     | | 4 | — | 15 | 6
+| 12th| +4 | Ability Score Improvement                          | | 4 | — | 15 | 6
+| 13th| +5 | ??                                                 | | 4 | — | 16 | 7
+| 14th| +5 | Subclass feature                                   | | 4 | — | 16 | 7
+| 15th| +5 | ??                                                 | | 4 | — | 17 | 8
+| 16th| +5 | Ability Score Improvement                          | | 4 | — | 17 | 8
+| 17th| +6 | Psionics (d12)                                     | | 5 | — | 19 | 9
+| 18th| +6 | Subclass feature                                   | | 5 | — | 19 | 9
+| 19th| +6 | Ability Score Improvement                          | | 5 | — | 20 | 9
+| 20th| +6 | Capstone                                           | | 5 | — | 20 | 9
+</div>
+
+\columnbreak
+
+### Class Features
+As a psion, you gain the following class features.
+
+#### Hit Points
+___
+- **Hit Dice:** 1d6 per psion level
+- **Hit Points at 1st Level:** 6 + your Constitution modifier
+- **Hit Points at Higher Levels:** 1d6 (or 4) + your Constitution modifier per psion after 1st
+
+#### Proficiencies
+___
+- **Armor:** None
+- **Weapons:** Simple weapons
+- **Tools:** None
+___
+- **Saving Throws:** Intelligence, Wisdom
+- **Skills:** Choose two skills from Arcana, History, Insight, Medicine, Nature, Perception, and Religion
+
+#### Equipment
+You start with the following equipment, in addition to the equipment granted by your background
+- *(a)* a quarterstaff or *(b)* a dagger
+- leather armor
+- *(a)* a scholar’s pack or *(b)* an explorer’s pack
+
+\pagebreakNum
+
+### Psionics
+*1st-level psion feature* <br/>
+<div style='margin-top:-4px;'></div>
+
+As a student of psionics, you can master and use psionic talents and disciplines. Psionics is a special form of magic use, distinct from spellcasting.
+
+#### Psionic Talents
+A psionic talent is a minor psionic ability you have mastered. You know two psionic talents of your choice. You learn additional talents of your choice at higher levels, as shown in the Talents Known column of the Psion table.
+
+#### Psionic Disciplines
+A psionic discipline is a rigid set of mental exercises that allows a psion to manifest psionic power. A psion masters only a few disciplines at a time, and choses them from the Psionic Discipline list.
+
+You know one psionic discipline of your choice. The Disciplines Known column of the Psion table shows the total number of disciplines you know at each level. Whenever you gain a level in this class, you can replace one discipline you know with a different one of your choice.
+
+#### Psionic Power
+You have an internal reservoir of energy that can be devoted to psionic disciplines you know. This energy is represented by Psionic Energy dice, each of which is a d6. The Psion table shows how many dice you have.
+
+Some of your discipline powers expend the Psionic Energy die they use, as specified in a power's description, and you can't use a power if it requires you to use a die when your dice are all expended. You regain all your expended Psionic Energy dice when you finish a long rest. In addition, as a bonus action, you can regain one expended Psionic Energy die, but you can't do so again until you finish a short or long rest.
+
+When you reach certain levels in this class, the size of your Psionic Energy dice increases: at 5th level (d8), 11th level (d10), and 17th level (d12).
+
+#### Psi Limit
+Though you have access to a potent amount of psionic energy, it takes training and practice to channel that energy. There is a limit on the number of psi points you can spend to activate a psionic discipline. The limit is based on your psion level, as shown in the Psi Limit column of the Psion table. For example, as a 3rd-level psion, you can spend no more than 3 psi point son a discipline each time you use it, no matter how many psi points you have.
+
+#### Psychic Focus??
+<!-- You can focus psionic energy on one of your psionic disciplines to draw ongoing benefits from it. As a bonus action, you can choose one of your psionic disciplines and gain its psychic focus benefit, which is detailed in that discipline’s description. The benefit lasts until you are incapacitated or until you use another bonus action to choose a different focus benefit. You can have only one psychic focus benefit at a time, and using the psychic focus of one discipline doesn’t limit your ability to use other disciplines. -->
+
+#### Psionic Ability
+Intelligence is your psionic ability for your psionic disciplines. You use your Intelligence modifier when setting the saving throw DC for a psionic discipline or when making an attack roll with one.
+
+<div style="text-align: center">
+
+**Discipline save DC** = 8 + your proficiency bonus + your Intelligence modifier
+
+**Discipline attack modifier** = your proficiency bonus + your Intelligence modifier
+
+</div>
+
+### Autohypnosis
+*2nd-level psion feature* <br/>
+<div style='margin-top:-4px;'></div>
+
+You have trained your mind to gain mastery over your body and the mind’s own deepest capabilities. You gain the following benefits:
+
+___
+- **Learn.** You can learn a new tool proficiency or language in half the time.
+- **Memorize.** 
+- **Recall.** 
+- **Willpower.** When reduced to 0 hit points, you can use a reaction to remain conscious. You must still make death saving throws as normal.
+
+Check: The DC and the effect of a successful check depend on the task you attempt.
+
+Task                    | DC
+------------------------|-----------
+Ignore caltrop wound    | 18
+Memorize                | 15
+Resist dying            | 20
+Resist fear             | Fear effect DC
+Tolerate poison         | Poison’s DC
+Willpower               | 20
+
+*Ignore Caltrop Wound:* If you are wounded by stepping on a caltrop, your speed is reduced to one-half normal. A successful Autohypnosis check removes this movement penalty. The wound doesn’t go away—it is just ignored through self-persuasion.
+
+*Memorize:* You can attempt to memorize a long string of numbers, a long passage of verse, or some other particularly difficult piece of information (but you can’t memorize magical writing or similarly exotic scripts). Each successful check allows you to memorize a single page of text (up to 800 words), numbers, diagrams, or sigils (even if you don’t recognize their meaning). If a document is longer than one page, you can make additional checks for each additional page. You always retain this information; however, you can recall it only with another successful Autohypnosis check.
+
+*Resist Dying:* You can attempt to subconsciously prevent yourself from dying. If you have negative hit points and are losing hit points (at 1 per round, 1 per hour), you can substitute a DC 15 Autohypnosis check for your d% roll to see if you become stable. If the check is successful, you stop losing hit points (you do not gain any hit points, however, as a result of the check). You can substitute this check for the d% roll in later rounds if you are initially unsuccessful.
+
+*Resist Fear:* In response to any fear effect, you make a saving throw normally. If you fail the saving throw, you can make an Autohypnosis check on your next round even while overcome by fear. If your autohypnosis check meets or beats the DC for the fear effect, you shrug off the fear. On a failed check, the fear affects you normally, and you gain no further attempts to shrug off that particular fear effect. 
+
+*Tolerate Poison:* You can choose to substitute an Autohypnosis check for a saving throw against any standard poison’s secondary damage or effect. This skill has no effect on the initial saving throw against poison. 
+
+*Willpower:* If reduced to 0 hit points (disabled), you can make an Autohypnosis check. If successful, you can take a normal action while at 0 hit points without taking 1 point of damage. You must make a check for each strenuous action you want to take. A failed Autohypnosis check in this circumstance carries no direct penalty—you can choose not to take the strenuous action and thus avoid the hit point loss. If you do so anyway, you drop to –1 hit points, as normal when disabled.
+
+Action: None. Making an Autohypnosis check doesn’t require an action; it is either a free action (when attempted reactively) or part of another action (when attempted actively).
+
+Try Again: Yes, for memorize and willpower uses, though a success doesn’t cancel the effects of a previous failure. No for the other uses.
+
+Synergy: If you have 5 or more ranks in Autohypnosis, you get a +2 bonus on Knowledge (psionics) checks.
+
+If you have 5 or more ranks in Concentration, you get a +2 bonus on Autohypnosis checks.
+
+### Ability Score Improvement
+*4th-level psion feature* <br/>
+<div style='margin-top:-4px;'></div>
+
+When you reach 4th level, and again at 8th, 12th,16th, and 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can’t increase an ability score above 20 using this feature.
+
+#### Psionic Versatility (Optional)
+Whenever you reach a level in this class that grants the Ability Score Improvement feature, you can replace one talent you learned from this class's Psionic feature with another cantrip from the psion talent list.
+
+### Force of Will
+*7th-level psion feature* <br/>
+<div style='margin-top:-4px;'></div>
+
+You can use the immense power of your mind to better fend off mental attacks. When you are subjected to an effect that allows you to make an Intelligence, Wisdom, or Charisma saving throw to take only half damage, you instead take no damage if you succeed on the saving throw, and only half damage if you fail.
+
+\pagebreak
+
+## Psion
+### Egoist
+### Erudite
+### Kineticist
+### Nomad
+### Seer
+#### Precognition
+#### Object Reading
+#### Greater Precognition
+### Shaper
+#### Astral Construct
+### Telepath
+#### Mindlink
+
+\pagebreak
+
+## Disciplines
+### Clairsentience
+### Crystal
+
+Burrowing Bonds. (4th, CPs)
+
+Crystal Shard. (1st)
+
+Crystallize. (6th)
+
+Crystalstorm. (2nd, CPs)
+
+Hail of Crystals. (5th)
+
+Swarm of Crystals. (2nd)
+
+### Metacreativity
+### Negation
+### Precognition
+### Psychokinesis
+### Psychometabolism
+### Psychoportation
+### Telekinesis
+### Telepathy
+Focus: Mindlink
+
+## Talents
+### Universal
+#### Levitate over ground
+#### Catfall
+
+#### Create Psicrystal
+Using a 1 hour long ritual, you cause a splinter fragment of your personality to manifest in the form of a crystalline construct. It appears in an unoccupied space of your choice within 10 feet and uses the Psicrystal stat block. You can only have one psicrystal at a time.
+
+___
+- **Combat.** The psicrystal is an ally to you and your companions, and it obeys you. In combat, it shares your initiative count, but it takes its turn immediately after yours. On its turn, the psicrystal takes the dodge action and moves to avoid danger, unless you use your bonus action to command it to attack instead.
+- **Repair.** While your psicrystal is within 10 feet, you can focus your mind for 1 minute, rolling a Psionic Energy die and adding your Intelligence modifier to the total (with a minimum bonus of +1). The psicrystal regains hit points equal to the total. If you or the psicrystal dies, it crumbles to powder.
+- **Remote Viewing.** As an action, you can see what your psicrystal sees and hear what it hears until the end of your next turn.
+- **Resonant Personality.** While the psicrystal is within 30 feet, whenever you make an ability check related to your psicrystal's personality, as shown on the Psicrystal Personality table, you can roll a Psionic Energy die and add it to the roll.
+- **Deepened Link (5th Level).** You can communicate telepathically with your psicrystal as	long as you two are on the same plane of existence. Additionally, while perceiving through your psicrystal’s senses, you can also speak through your psicrystal in your own voice.
+
+#### Inertial Armor
+While you are wearing no armor and not wielding a shield, your AC equals 10 + your Dexterity modifier + your Intelligence modifier.
+
+___
+> ## Psicrystal
+> *Tiny construct, alignment matches creator's*
+> ___
+> - **Armor Class** 10 + your Cha modifier (natural armor)
+> - **Hit Points**  5 + your psion level (the psicrystal has a number of Hit Dice [d4s] equal to your psion level)
+> - **Speed** 20 ft., climb 20 ft., fly 20 ft. (hover)
+> ___
+> |  STR  |  DEX  |  CON  |  INT  |  WIS  |  CHA  |
+> |:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+> | 1 (−5)|15 (+2)|10 (+0)|10 (+0)|10 (+0)|10 (+0)|
+> ___
+> - **Damage Resistances** psychic
+> - **Damage Immunities** poison 
+> - **Condition Immunities** blinded, charmed, deafened, frightened, paralyzed, petrified, poisoned, stunned
+> - **Senses** blindsight 30 ft.
+> - **Languages** telepathy 120 ft. (only between you and the psicrystal), understands the languages you speak
+> - **Challenge** — <span style="float:right"> **Proficiency Bonus** equals your bonus </span>
+>___
+> ***Psychic Bond.*** You can add your proficiency bonus to any ability check or saving throw that the psicrystal makes.
+>
+> ***Evasion.*** If the psicrystal is subjected to an effect that allows it to make a Dexterity saving throw to take only half damage, it instead takes no damage if it succeeds on the saving throw, and only half damage if it fails. It can't use this trait if it's incapacitated.
+> 
+> ***False Appearance.*** While the psicrystal remains motionless and isn’t flying, it is indistinguishable from a normal crystal.
+> 
+> ***Spider Climb.*** The psicrystal can climb difficult surfaces, including upside down on ceilings, without needing to make an ability check.
+> 
+> <h3 style="font-size:1vw">Actions (Requires Your Bonus Action)</h3>
+>
+> ***Psychic Strike.*** *Ranged Weapon Attack:* your spell attack modifier to hit, range 30 ft., one target you can see. *Hit:* 1d4 + PB psychic damage.  
+>
+> ### Reactions
+> ***Channel Psionics.*** The psicrystal delivers a spell you cast that has a range of touch. The psicrystal must be within 120 feet of you.
+
+<!-- DO NOT DELETE -->
+
+\pagebreak
+
+##### Psicrystal Personality
+d20 | Skill             | Personality
+----|-------------------|---------
+1   | Acrobatics        | Nimble
+2   | Animal Handling   | Trainer*
+3   | Arcana            | Esoteric*
+4   | Athletics         |
+5   | Deception         | Liar
+6   | History           |
+7   | Insight           | Sympathetic
+8   | Intimidation      | Bully
+9   | Investigation     | Meticulous
+10  | Medicine          | Therapeutic*
+11  | Nature            |
+12  | Perception        | Observant
+13  | Performance       | Accomplished*
+14  | Persuasion        | Friendly
+15  | Religion          |
+16  | Sleight of Hand   | Virtuoso*
+17  | Stealth           | Coward
+18  | Survival          | Wild*
+**19-20**|**Reroll**    |
+
+1   Artiste
+2   ~~Bully~~
+3   ~~Coward~~
+4   ~~Friendly~~
+5   Hero
+6   ~~Liar~~
+7   ~~Meticulous~~
+8   ~~Nimble~~
+9   ~~Observant~~
+10  Poised
+11  Resolved
+12  Sage
+13  Single-minded
+14  Sneaky
+15  ~~Sympathetic~~
+
+
+#### Energy Beam
+
+#### Manifestation
+Psionic prestidigitation
+
+\pagebreak
+
+___
+> ## Astral Construct
+> *Medium Construct, unaligned*
+> ___
+> - **Armor Class** 10 + the level of the spell (natural armor)
+> - **Hit Points** XX + XX for each spell level above 1st
+> - **Speed** 30 ft.
+>___
+> |  STR  |  DEX  |  CON  |  INT  |  WIS  |  CHA  |
+> |:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+> |15 (+2)|15 (+2)|10 (+0)|10 (+0)|11 (+0)|10 (+0)|
+>___
+>- **Damage Resistances** poison
+>- **Condition Immunities** charmed, exhaustion, frightened, incapacitated, paralyzed, petrified, poisoned
+>- **Senses** darkvision 60 ft., passive Perception 10
+>- **Languages** understands the languages you speak
+>- **Challenge** —
+>
+>___
+> ***Ethereal Passage.*** The construct can move through other creatures and objects as if they were difficult terrain. If it ends its turn inside an object, it is shunted to the nearest unoccupied space and takes 1d10 force damage for every 5 feet traveled.
+>
+> ***Ectopic Form.*** [You choose one of the traits below, more with higher spell level. Can change them with an action.]
+> - **Constrictor.** When the construct hits a target with its slam, the target is grappled (escape DC equal to your spellcasting save DC). Until this grapple ends, the construct can't use this attack on another target.
+> - **Dimension Slider.** 
+> - **Energy Infused.** Choose one damage type: acid, cold, fire, lightning, or thunder. The construct has resistance to that damage type and deals an additional 1d4 damage of that type on a hit.
+> - **Flier.** The construct gains physical wings and a fly speed of 40 ft.
+> - **Solidified.** 
+> - **Swimmer.** The construct becomes streamlined and sharklike, gaining a swim speed of 40 ft.
+>
+>### Actions
+>***Multiattack.*** The construct makes a number of attacks equal to half this spell's level (rounded down).  
+>
+>***Slam.*** *Melee Weapon Attack:* your spell attack modifier to hit, reach 5 ft., one target. *Hit:* 1d8 + 2 + summonSpellLevel bludgeoning damage.  
+>
+>### Reactions
+
+\columnbreak
+
+#### Astral Construct
+*Psionic power*
+___
+- **Casting Time:** 1 action
+- **Range:** 60 feet
+- **Components:** S
+- **Duration:** Concentration, up to 1 minute
+---
+You project an ethereal creation from your mind at a space you can see within range, taking the shape of a Medium or smaller creature, weapon, or other object. This creation is clearly ethereal in nature. When you create it, and on subsequent turns using your action to mentally control it, you can move it up to 30 feet in any direction and attack, so long as it doesn’t move beyond the range of the power. To attack with it, make a melee spell attack. On a hit, the target takes 1d8 force damage. If the Astral Construct moves out of range of the spell, it fades away into nothing, ending the spell.
+
+While the Astral Construct is active, you can spend psi points up to your per use limit to issue commands that affect and empower your construct. Commands require no action, but you can’t exceed your psi point limit in total commands issued, and each command can only be issued once per turn.
+
+**Grab (1 psi point):** Can only be used while your construct is Solidified. A target creature within 5 feet of your construct that is no more than one size larger than the construct must make a Strength saving throw or become restrained by the construct. At the end of each of the restrained creature’s turns it can repeat the saving throw. The condition ends if the construct becomes ethereal again, or becomes more than one size smaller than the target.
+
+**Grow (1 psi point):** Your construct increases by one size, and its number of damage dice increases by one. It returns to its normal size at the start of your next turn. It can only gain one additional die (for example, up to 2d8).
+
+**Relocate (1 psi point):** The construct disappears and reappears anywhere within 60 feet of you. 
+
+**Replicate (3 psi points):** You use Relocate, but the original doesn’t disappear. Until the end of your turn, you have another construct and control both with the same action (commands only affect one of your choice). Pick one construct to fade at the start of your next turn or use Sustain.
+
+**Solidify (1 psi point):** Your construct becomes solid, blocking its space until the start of your next turn. You can only use this command if it is in an unoccupied space. It has an armor class of 16 and hit points equal to your Intelligence modifier + your psion level. The construct becomes ethereal again if it drops to zero hit points.
+
+**Strike (2 psi points):** The construct makes an attack (even if it has already attacked).
+
+**Sustain (1+ psi points):** At the start of your turn, you can sustain the effect of a Solidify, Grow or Replicate command for an additional round. An effect that has been replicated can be sustained across all replicated constructs with a single use, but each effect can only be sustained once per turn (for example, you can never sustain more than one replicated construct). This costs 1 psi point for each effect sustained. Sustaining Solidify refreshes the construct’s hit points to its maximum.
+
+\pagebreak
+
+## Power Displays (EPH)
+When a power is manifested, a display may accompany the primary effect. This secondary effect may be auditory, material, mental, olfactory, or visual. No power’s display is significant enough to create consequences for the psionic creatures, allies, or opponents during combat. The secondary effect for a power occurs only if the power’s description indicates it.
+
+If multiple powers with similar displays are in effect simultaneously, the displays do not necessary become more intense. Instead, the overall display remains much the same, though with minute spikes in intensity. A Psicraft check (DC 10 + 1 per additional power in use) reveals the exact number of simultaneous powers in play.
+
+*Dispense with Displays:* Despite the fact that almost every power has a display, a psionic character can always choose to manifest the power without the flashy accompaniment. To manifest a power without any display (no matter how many displays it might have), a manifester must make a Concentration check (DC 15 + the level of the power). This check is part of the action of manifesting the power. If the check is unsuccessful, the power manifests normally with its display.
+
+Even if a manifester manifests a power without a display, he is still subject to attacks of opportunity in appropriate circumstances. His faraway gaze, the focus on something other than the material world, and the split-second of focus required to manifest a power distract the manifester’s attention sufficiently to warrant the attack. (Of course, another Concentration check can be made as normal to either manifest defensively or maintain the power if attacked.)
+
+*Customizing Displays:* The DM may substitute a standard display effect (see below) for another specific effect appropriate to his or her campaign. Alternatively, a player may wish to customize his displays. For instance, powers with a material display might produce “fairy dust” instead of an ectoplasmic sheen. Once a given display is customized, its effects do not vary for that campaign or character. 
+
+**Auditory:** A bass-pitched hum issues from the manifester’s vicinity or in the vicinity of the power’s subject (manifester’s choice), eerily akin to many deep-pitched voices. The sound grows in a second from hardly noticeable to as loud as a shout strident enough to be heard within 100 feet. At the manifester’s option, the instantaneous sound can be so soft that it can be heard only within 15 feet with a successful DC 10 Listen check. Some powers describe unique auditory displays.
+
+**Material:** The subject or the area is briefly slicked with a translucent, shimmering substance. The glistening substance evaporates after 1 round regardless of the power’s duration. Sophisticated psions recognize the material as ectoplasmic seepage from the Astral Plane; this substance is completely inert.
+
+**Mental:** A subtle chime rings once in the minds of creatures within 15 feet of either the manifester or the subject (at the manifester’s option). At the manifester’s option, the chime can ring continuously for the power’s duration. Some powers describe unique mental displays.
+
+**Olfactory:** An odd but familiar odor brings to mind a brief mental flash of a long-buried memory. The scent is difficult to pin down, and no two individuals ever describe it the same way (to one creature the odor may be similar to burning wood, while to her companion it smells like honeysuckle). The odor originates from the manifester and spreads to a distance of 20 feet, then fades in less than a second (or lasts for the duration, at the manifester’s option).
+
+**Visual:** The manifester’s eyes burn like points of silver fire while the power remains in effect. A rainbow-flash of light sweeps away from the manifester to a distance of 5 feet and then dissipates, unless a unique visual display is described. This is the case when the Display entry includes “see text,” which means that a visual effect is described somewhere in the text of the power. For instance, the Display entry for astral construct is “Visual; see text.” The text indicates that a construct is formed. The construct, as a visible object, is the visible display for the astral construct power.
+
+\pagebreak
+
+## Power displays (D20PFSRD)
+Virtually all psionic powers carry some sort of secondary display. This might be a flash of light, a particular scent, or a humming sound. Yet the standard rules only give options for a single display effect for each type of display – auditory, material, mental, olfactory, and visual. What if you want your character to have varying displays based upon a particular personality? The rules outline a way to change a single display for one character, but not a way to make these displays the truly mutable side-effects they should be.
+
+Presented below are a variety of new displays for manifested powers. Although they may change the look and feel of a power, they carry no mechanical changes. The powers are still identified in the same fashion, the powers still have the same primary effects, and no special rolls are needed to choose any of these effects. These are presented simply as a way to differentiate one manifester from another when using psionic power.
+
+The first section presented will give a variety of new displays for each of the five display types. This allows the easiest method of customizing displays by simply choosing a different display instead of the default effect.
+
+The second section presents options for combination effects, because maybe you don’t want the display effects of a power to be separate. This allows a manifester’s displays to have a single, multi-part display effect, rather than several separate effects that do not relate to each other.
+
+The third section offers new groups of displays. This section will offer, for example, a group of displays to use with just powers with the fear descriptor. Or new displays to use on powers of the creation subdiscipline. Fear powers and creation powers are quite different and this allows the display effects to reflect this distinction.
+
+The final section presents display themes. These themes might be for a single character, or a single set of powers, at your discretion. An example would be a psychic warrior from a village where totems are worshipped instead of gods. This psychic warrior’s powers might have displays that reflect his totem, rather than anything else.
+
+All of the options presented here are completely optional and can be used together or separately. You might decide that the theme option makes the most sense for your character, or perhaps the theme option along with the display groups options, allowing your kineticist’s energy powers to wreathe him in energy, while his other visual displays show a burst of sparkling mist. In addition, you might think of more options for displays – this is encouraged, as the lists presented below are far from exhaustive.
+
+Enjoy your manifestations! Your character should be truly unique and the options presented here are an effort to do just that.
+
+### New Displays
+Presented below are a variety of new displays for use with manifestations. Each type of display – auditory, material, mental, olfactory, and visual – has new display options. These options can be used individually or combined together; they simply offer some new options and a framework for creating your own. Choosing new displays does not require any particular feats, skill ranks, or class features; any manifester can choose Alternate displays – with the GM’s permission.
+
+\columnbreak
+#### Auditory Displays
+The following displays apply to powers that carry an auditory display type.
+- Those within 15 ft. hear the sound of stampeding animals rushing past the manifester.
+- A scale of musical notes plays, growing louder, the more powerful the power is or the longer the manifestation takes. The manifester sings while manifesting, the manifestation adding additional voices to his song or variations as if a chorus.
+- A chorus of disembodied voices sing. The song can be angelic, hellish or alien in nature, at the manifester’s discretion.
+- Snakes seem to hiss, first from all around and then focusing around the manifester.
+- The sounds of buzzing insect wings surround the manifester.
+- The sound of static grows in volume from behind the manifester and, just before the static becomes painful, it ceases.
+- The sound of skittering feet, like that of giant insects or rats, emanate from the manifester.
+- A frightening high-pitched scream or a low moaning erupts from the manifester.
+- The sound of a sword being drawn fills the air around the manifester.
+- Low, whispering voices fill the area, speaking in what sounds like a long-lost language, as if they were ghosts or apparitions from another age.
+
+#### Material Displays
+The following displays apply to powers that carry a material display type.
+- Miniscule crystals, almost like dust, coat the area and then disappear after 1 round.
+- A tarot card (or equivalent) manifests in the hand of the manifester, only to vanish a few seconds later.
+- A soft rain falls around the manifester for a round.
+- The manifester’s eyes or hands are coated with a black powder for 1 round as he manifests a power.
+- A strong wind blows from behind the manifester, rustling his hair and robes.
+- Hundreds of bees, mosquitoes, and other insects buzz around the manifester or stream towards the target of a power, before fading from view.
+- A group of ectoplasmic spiders manifest on the manifester’s body, fading into view and fading away again after one round.
+- Serpents crawl out from the manifester’s clothing and evaporate into smoke or fog.
+- Small leaves and roots sprout from the manifester’s hair or from his feet, burrowing into nearby soil, but soon rot and fall away.
+- The manifester grows crystals that appear to pierce his skin and fall away from him.
+- Each time the manifester manifests a power, a small astral creature appears on his shoulder, as if it was an imp or other otherworldly creature. Some take the form of devils; others look like fey, angels, or aberrations, at the manifester’s discretion.
+- Those near the manifester are covered in crawling insects. If the power is powerful enough, these manifest inside the mouth and ears of those too close. This effect ends after one second.
+
+\pagebreak
+
+#### Mental Displays
+The following displays apply to powers that carry a mental display type.
+- The feeling of not knowing exactly what is going on, as if left out of some inside information, surfaces in those near the manifester.
+- A rising chill manifests in those around the manifester.
+- A sudden rush of energy fills those around the manifester.
+- A sharp mental pain, as if having a migraine or headache, stings those around the manifester for a short moment.
+- Everyone close to the manifester feels mentally drained, as from a long day of hard work.
+- A sudden onrush of ideas and inspiration spreads in those around the manifester, only to fade after one round.
+- All those around the manifester feel motivated and full of energy for a split second, as if they were fulfilling their destinies.
+- A brief confusion penetrates the minds of those around the manifester, as if they had witnessed something they could not quite understand. It quickly passes, but leaves behind a disturbing feeling.
+- Everyone within 15 feet of the manifester feels hungry or thirsty, as if something had drawn out their sustenance.
+- A memory of a lost friend or love is drawn forth in those around the manifester.
+- A flash of loneliness washes over those around the manifester as they realize how alone they truly are in a harsh world.
+- Those who are within 10 feet of the manifester feel guilty, as if they had done something horrible, although they cannot remember what causes the feeling of guilt. The feeling fades after a few seconds.
+
+#### Olfactory Displays
+The following displays apply to powers that carry an olfactory display type.
+- The smell of iron, as if from blood, fills the area 15 feet around the manifester.
+- Those around the manifester notice a distinct smell of sulfur or burning flames.
+- The smell of dissolving tissue drifts from the manifester.
+- The smell of ozone, as from a lightning strike, billows out from the manifester.
+- A foul smell, akin to that of a swamp, pervades the area.
+- The smell of freshly bloomed flowers fills the area near the manifester.
+- The smell of barbecue or freshly baked bread with honey flows out from the manifester.
+- A sharp smell, like the tang of something poisonous, reaches those around the manifester.
+- The smell of pine and forests fill the area, but sharply changes into the smell of burning wood before disappearing.
+
+#### Visual Displays
+The following displays apply to powers that carry a visual display type.
+- The manifester’s body glows in a single color or in a spectrum of colors, at the manifester’s option.
+- The air sparkles in a multitude of colors around the manifester.
+- The manifester’s eyes shine in a disturbing color (sickly green, brightly white, etc.) or absorb light, making it appear darker around him.
+- The manifester’s hands or head seems to burst into ghostly, white flames that shimmer.
+- The manifester’s shadow animates, growing larger or perhaps altering in shape and form.
+- The manifester seems to fade from view for a split second, then reappearing as if nothing happened.
+- All sources of light seem to flare for a second, such as torches, or even the sun. This does not cause any negative effects for those with light sensitivity.
+- All sources of light flicker and fade for a split second before the manifestation is complete.
+- A symbol of some sort (religious symbol, philosophical or even magical) manifests over the manifester, shining brightly. This symbol becomes larger and shines more the higher the level of the power or the longer it takes to manifest.
+- Shining motes of multicolored light stream from the manifester in all directions, or towards the target or targets of the power, at the manifester’s option.
+- Energy seems to crackle off the manifester, either in the form of lightning bolts, dropping flames, icicles or even sickly green drops of ectoplasm. The effect has no substance and causes no harm.
+- A host of spectral figures surround the manifester for the duration of the manifestation.
+- Roots shoot up from the ground and around the manifester before disappearing.
+
+### Combination Displays
+For some powers, the various displays should be directly related, rather than two or more disjointed displays. Presented below are a variety of new displays for combinations of different display types.
+
+In addition, GMs are encouraged to allow players to change the displays of powers, as long as the overall feel of the displays fits the theme of the power. Because altered displays do not modify the actual power, or the ability to identify the power, changing the display should not carry any mechanical or balance concerns.
+
+#### 2-Part Combinations
+The displays below are for when a power has two displays. In addition, if a power has more than two displays, one of the options below and a different third option might be selected.
+
+##### Auditory and Material
+- The chittering of insects can be heard as hundreds of bugs cover the lower half of the manifester’s body. The insects disappear at the end of the round.
+- The sound of wind chimes can be heard as drops of rain fall to the ground around the manifester.
+- A howling wind, carrying the screams of the dying, swirls around those near the manifester.
+
+##### Auditory and Mental
+- Paranoia creeps into the minds of those near the manifester, as voices can be briefly heard from all around the area, as if those in the area are completely surrounded.
+- An exultant feeling of joy comes over the manifester’s allies for a brief instant as the sound of angels singing can be heard.
+
+\pagebreak
+
+##### Auditory and Olfactory
+- The smell of sulfur and the sound of crackling flames envelopes the area around the manifester.
+- The howl of the wind, with no actual breeze, can be heard by all near the manifester, as the odor of rainfall fills the area.
+- The sound of wind chimes can be heard as the scent of wild flowers fills the area.
+
+##### Auditory and Visual
+- Particles of light fall to the ground, giving off a musical note as each mote touches the ground.
+- A crackling sound can be heard as the manifester’s form fades from view and quickly reappears, as if nothing happened.
+- A host of spectral figures surround the manifester, crying out in pain and anger.
+
+##### Material and Mental
+- Frost covers the ground around the manifester and those nearby feel a rising chill, as if being watched.
+- For only a second, a gritty substance coats the ground and enemies near the manifester feel as if they are being buried alive.
+
+##### Material and Olfactory
+- A coppery smell permeates and a viscous red fluid that resembles blood coats the area around the manifester.
+- Soot coats the ground near the manifester, while the strong smell of sulfur can be detected by those within 15 feet of the manifester.
+- Rose petals appear scattered around the ground near the manifester, while the faint scent of roses can be smelled by those nearby.
+
+##### Material and Visual
+- Motes of multi-colored and sparkling snowflakes fall to the ground around the manifester before disappearing.
+- Sparkling crystals swirl around the manifester for the round and change color while they fly.
+
+##### Mental and Olfactory
+- The musty smell of an underground cavern and the feeling of being buried alive assaults those near the manifester for a split-second before dissipating.
+- Those within 15 feet of the manifester smell the scent of freshly baked bread and feel hunger pangs, as if they have not eaten in days.
+
+##### Mental and Visual
+- The image of a face, someone vaguely familiar to each individual within 15 feet of the manifester, appears in the air. Each individual would swear the face was someone they knew, yet not the same person as the others nearby saw.
+- The manifester’s shadow grows and animates, and those nearby feel as if the shadow might try to attack them, as illogical a thought as that might be.
+
+##### Olfactory and Visual
+- Harmless flames encompass the body of the manifester and those nearby smell charred flesh, although the manifester is unharmed.
+- Tiny bolts of lightning strike near the manifester, although they cause no damage, but do give off the smell of ozone.
+
+#### 3-Part Combinations
+Although there are only a handful of powers that have three displays, new options for these powers are presented below, as well as should players create new powers with three displays.
+
+##### Auditory, Material, and Mental
+- A howling wind, carrying the screams of the dying, swirls around those near the manifester, giving a strong feeling of unease.
+- The sound of children laughing is heard by those near the manifester, giving a feeling of childish joy, while tiny marbles appear on surfaces near the manifester, although they disappear before they can make movement difficult.
+
+##### Auditory, Material, and Olfactory
+- A howling wind, carrying the screams of the dying, swirls around those near the manifester, as the stench of death fills their nostrils.
+- The sound of wind chimes can be heard as the scent of wild flowers fills the area and flower petals cover the ground around the manifester.
+
+##### Auditory, Material, and Visual
+- A scale of musical notes play as multi-colored and sparkling snowflakes fall to the ground around the manifester before disappearing. The notes grow deeper as the snowflakes get closer to the ground.
+- Crystalline dust flies around the manifester’s head, giving off a cackling howl and bursts of light in all the colors of the rainbow.
+
+##### Auditory, Mental, and Olfactory
+- The stench of rotting flesh and the screams of the dying can be heard, causing all near the manifester a feeling of nervousness.
+- The smell of pine and the sound of rustling branches fills the area near the manifester, carrying with it the memory of being inside a vast, dark forest.
+
+##### Auditory, Mental, and Visual
+- A host of spectral figures, crying out in pain and anger, surround the manifester, unsettling those that can see and hear them.
+- The feeling of being watched comes over those near the manifester, whose eyes glow brilliant white, as a howl can be heard in the distance.
+
+##### Auditory, Olfactory, and Visual
+- Crackling flames wreath the form of the manifester, and the faint scent of sulfur fills the area nearby.
+- The manifester’s body fades from view with an audible pop, and the scent of ozone can be smelled by those within 30 feet of the manifester.
+
+##### Material, Mental, and Olfactory
+- The scent of roses fills the area, as petals cover the ground around the manifester, reminding those near the manifester of a calm spring day.
+- The stench of rotting flesh can be smelled by those near the manifester, giving a sense of dread. Tiny bone fragments litter the ground around the manifester’s feet.
+
+\pagebreak
+
+##### Material, Mental, and Visual
+- Hundreds of insects crawl over the feet of the manifester, whose face morphs into a grinning skull, giving those nearby an uneasy feeling.
+- Crystalline dust coats the area around the manifester, whose entire body seems to glint as if made of some type of gemstone. Those within 15 feet of the manifester recall the memory of receiving an expensive gift or winning a prize.
+
+##### Material, Olfactory, and Visual
+- The scent of roses fills the area, as petals fall to the ground around the manifester before fading from view.
+- Images of trees spring up around the manifester, carrying with them the scent of cedar, and acorns cover the ground at the manifester’s feet.
+
+##### Mental, Olfactory, and Visual
+- The manifester’s flesh peels away, revealing only his skeleton, as the stench of rotting flesh can be smelled by those near the manifester, giving a sense of dread..
+- The smell of freshly turned soil fills the area, giving those near the manifester the vague feeling of being underground, as the manifester’s feet seem to sink into the ground. A second glance at his feet reveals it was an optical illusion.
+
+#### 4-Part Combinations
+While few powers have four display types, new options are presented below for powers that players might research that do have such displays. In addition, lenient GMs may allow the use of four-part display combinations even if a power does not have four displays.
+
+##### Auditory, Material, Mental, and Olfactory
+- The stench of rotting flesh and the screams of the dying can be heard by those near the manifester, giving a sense of dread. Tiny bone fragments litter the ground around the manifester’s feet.
+- The sound of children laughing is heard and the scent of bread with honey is smelled by those near the manifester, giving a feeling of childish joy, while tiny marbles appear on surfaces near the manifester, although they disappear before they can make movement difficult.
+
+##### Auditory, Material, Mental, and Visual
+- The scent of roses and the sound of rustling leaves fills the area, as petals cover the ground around the manifester, reminding those near the manifester of a calm spring day.
+- A chittering sound can be heard by those within 30 feet of the manifester as hundreds of insects crawl over the feet and legs of the manifester, whose face morphs into a grinning skull, giving those nearby an uneasy feeling.
+
+##### Auditory, Material, Olfactory, and Visual
+- A scale of musical notes play as multi-colored and sparkling snowflakes fall to the ground around the manifester before disappearing. The notes grow deeper as the snowflakes get closer to the ground, giving those near the manifester the feeling of falling.
+- The clang of a bell, as if calling to a meal, can be heard as a warm breeze carries the scent of fresh muffins into the area around the manifester. Crumbs appear on the ground near the manifester, as if he had just consumed a muffin.
+
+##### Auditory, Mental, Olfactory, and Visual
+- A feeling of dread comes over all within sight of the manifester, as a dark cloud appears around the manifester, giving off the screams of the damned and the scent of rot and decay.
+- The smell of pine and the sound of rustling branches fills the area near the manifester, carrying with it the memory of being inside a vast, dark forest, as translucent green leaves swirl around the manifester’s body.
+
+##### Material, Mental, Olfactory, and Visual
+- The scent of roses fills the area, as petals swirl around the manifester before falling to the ground, reminding those near the manifester of a calm spring day.
+- A thin layer of dirt blankets the area around the manifester and the smell of freshly turned soil fills the area, giving those near the manifester the vague feeling of being underground, as the manifester’s feet seem to sink into the ground. A second glance at his feet reveals it was an optical illusions.
+
+#### 5-Part Combinations
+Although there are no known powers that have all five display types, two new displays are presented below for just such an instance. These displays should be reserved for truly signature powers, although that does not necessarily mean the highest level power possible. Perhaps such a display is possible by augmenting a power to a high amount.
+
+##### Auditory, Material, Mental, Olfactory, and Visual
+- A feeling of dread comes over all within sight of the manifester, as a vortex of dark matter appears, swirling around the manifester, giving off the screams of the damned and the scent of rot and decay.
+- The clang of a bell, as if calling to a meal, can be heard as a warm breeze carries the scent of fresh muffins into the area around the manifester, causing the mouths of those nearby to water. Crumbs appear on the ground near the manifester, as if he had just consumed a muffin.
