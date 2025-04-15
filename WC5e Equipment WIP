@@ -1,0 +1,813 @@
+<style>
+/* GLOBAL FORMATTING  */
+
+  /* Resize page to international A4 */
+  .phb {
+    width: 210mm;
+    height: 296.8mm;
+  }
+  .phb:after { content: ""; }
+
+
+/* TABLE OF CONTENTS  */
+
+  /* toc specifically wants black text. This resets the headers*/
+  .toc a {
+    color: inherit !important;
+  }
+  /* Allow dot leaders to fill remaining space but not overlap */
+  .toc li span:nth-child(2) {
+    width: auto;
+    overflow: hidden;
+    white-space: nowrap;
+    display: block;
+  }
+  .toc li span:nth-child(2):after {
+    font-family: BookSanity;
+    font-size: 0.317cm;
+    font-weight: normal;
+    color: black;
+    content:
+      " ........................................"
+      "........................................."
+      ".........................................";
+    }
+
+  /* Style TOC page numbers*/
+  .toc li span:first-child {
+    float: right;
+    font-family: BookSanity;
+    font-size: 0.317cm;
+    font-weight: normal;
+    color: black;
+    margin-left: 1px;
+  }
+
+  /* Adjust TOC H3 styles */
+  .toc li h3 span:nth-child(2):after {
+  	content: " ";
+  }
+  .toc li h3 {
+    margin-bottom: 4px !important;
+    margin-top: 10px !important;
+    line-height: initial !important;
+  }
+  .toc li h3 span:first-child {
+  	line-height: 1.8em !important;
+  }
+
+  /* Reduce TOC list indentation*/
+  .toc ul ul {
+  	margin-left: 10px !important;
+  }
+  .toc>ul>li {
+    margin-bottom: initial !important;
+  }
+
+
+/* TABLES AND BLOCKS */
+
+  /* Clear internal padding and add gap above for green note blocks*/
+  .phb blockquote {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .phb blockquote { margin-top: 1em;
+  }
+
+
+/* INK BLOT STYLES */
+
+  /* Root style for inkblots. Use alone, or together with
+  one of the inkb lotstyle classes below. Essentially:
+  <img url='{url}' class='inkblot inkblot-blue' />
+  */
+  .inkblot {
+    position: absolute;
+    mix-blend-mode: multiply;
+    opacity: 0.6;
+  }
+
+  .inkblot-blue {
+    filter: hue-rotate(190deg) saturate(120%)
+  }
+
+  .inkblot-green {
+    filter: hue-rotate(120deg)
+  }
+
+</style>
+
+<style>
+/* Background */
+  .phb{ background-image: url('https://gmbinder.com/images/KN1O92T.png') }
+  .phb{ background-size: cover }
+
+/* Notes */
+  .phb section blockquote {background-color: #f6e5d4}
+  .phb hr + section blockquote tr:nth-child(odd) td {background-color: transparent;}
+
+/* Tables */
+  table tr:nth-child(odd) td {background-color: #cccccc}
+
+/* Footer */
+  .phb .pageNumber {color: rgba(0, 0, 0, 0.5)}
+  .phb .footnote {color: rgba(0, 0, 0, 0.5)}
+  .phb:nth-child(odd):after{ 
+    content          : '';
+    position         : absolute;
+    bottom           : -7px;
+    left             : 10px;
+    z-index          : -1;
+    height           : 336px;
+    width            : 100%;
+    background-image : url('https://www.gmbinder.com/images/bNTz1nk.png');
+    background-size  : cover;
+}
+
+.phb:nth-child(even):after{ 
+    content          : '';
+    position         : absolute;
+    bottom           : -7px;
+    left             : -10px;
+    z-index          : -1;
+    height           : 336px;
+    width            : 100%;
+    background-image : url('https://www.gmbinder.com/images/6NCzAN0.png');
+    background-size  : cover;
+}
+
+/* Page Number */
+.phb .pageNumber{
+    position   : absolute;
+    bottom     : 30px;
+    width      : 50px;
+    text-align : center;
+}
+.phb:nth-child(even) .pageNumber{
+    left      : 12px;
+}
+.phb:nth-child(odd) .pageNumber{
+    right      : 12px;
+}
+
+.phb .pageNumber.auto{
+    position   : absolute;
+    bottom     : 41px;
+    width      : 50px;
+    text-align : center;
+}
+.phb:nth-child(even) .pageNumber.auto{
+    left      : 12px;
+}
+.phb:nth-child(odd) .pageNumber.auto{
+    right      : 12px;
+}
+
+/* INK BLOT STYLES */
+
+  /* Root style for inkblots. Use alone, or together with
+  one of the inkb lotstyle classes below. Essentially:
+  <img url='{url}' class='inkblot inkblot-blue' />
+  */
+  .inkblot {
+    position: absolute;
+    mix-blend-mode: multiply;
+    opacity: 0.6;
+  }
+
+  .inkblot-blue {
+    filter: hue-rotate(190deg) saturate(120%)
+  }
+
+  .inkblot-green {
+    filter: hue-rotate(120deg)
+  }
+
+</style>
+
+<div class='classTable wide'>
+
+##### Exotic Weapons
+
+Item		                                | Cost	| |Damage			|Weight	|Properties
+--------------------------------------------|------:|-|---------------|-------|-------------------------
+*Melee Weapons*                             |       | |               |       |
+<span style="margin-left:10px">Battle totem |50 gp	| |2d6 bludgeoning|35 lb. |Special, heavy, two-handed
+<span style="margin-left:10px">Moon sword   |65 gp	| |2d4 slashing	  |5 lb.  |Special, finesse
+<span style="margin-left:10px">Moonglaive	|25 gp	| |1d6 slashing	  |2 lb.  |Special, finesse, light, thrown (range 60/120)
+<span style="margin-left:10px">Twinblade	|100 gp	| |1d8 slashing	  |5 lb.  |Special, versatile (1d10)
+<span style="margin-left:10px">Warclaw		|20 gp	| |1d6 slashing	  |2 lb.  |Special, finesse, light
+<span style="margin-left:10px">Warglaive	|25 gp	| |1d8 slashing	  |3 lb.  |Thrown (range 20/60), versatile (1d10)
+*Ranged Weapons*                            |       | |               |       |
+|<span style="margin-left:10px">Pistol      |75 gp  | |1d8 piercing   | 2 lb. | Ammunition (range 30/120), booming, light 
+|<span style="margin-left:10px">Rifle       |75 gp  | |1d12 piercing  | 6 lb. | Ammunition (range 60/240), booming, heavy, two-handed
+
+</div>
+
+### Weapon Proficiency
+
+Your race, class, and feats can grant you proficiency with certain weapons or categories of weapons. The four categories are **simple**, **martial**, and **exotic**.
+
+Exotic weapons are less traditional and require specific training for each weapon. Each provides specific benefits over traditional martial weapons for those who take the time to learn how to use them.
+
+#### Exotic Weapons
+Exotic weapons are those that are more unusual than normal weapons, requiring specialized training in order to properly use. While they require a separate proficiency to use properly, in all other aspects they are considered martial weapons.
+
+***Battle totem.*** Battle totems are intricately carved tree trunks. They serve as items of cultural significance as a piece of art and history and a heavy bludgeoning weapon.
+
+***Moon sword.*** Moon swords are odd circular blades about 2-1/2 feet in diameter with a sharpened edge forming almost the complete circle. These crescent blades are iconic among night elven wardens and are a stable of an extremely skilled warrior.
+
+***Moonglaive.*** Moonglaive's are favored among night elven sentinels. The weapon consists of three equi­distant curved blades that extend from a central handle.
+
+***Pistol.*** [Description.]
+
+***Rifle.*** [Description.]
+
+***Twinblade.*** Twinblades are favored by the blood elven spellbreakers. They consist of two long blades extending from either end of a mid-length handle.
+
+***Warclaw.*** Warclaws are common among orcs, shamans, and certain monks. They consist of several foot-long blades extending from a grip held in the fist, which is covered by a protective gauntlet or glove.
+
+***Warglaive.*** Warglaive's are common among night elves and blood elves, and favored by demon hunters. The glaive is made up of two crescent blades that extend in opposite directions from a central hilt.
+
+#### Special Weapons
+
+Weapons with special rules are described here.
+
+***Battle Totem.*** This weapon counts as a spellcasting focus and can be used instead of any other focus needed. In addition, the battle totem serves as a portable ram.
+
+***Moon Sword.*** You can use this weapon to make and contest grapple check. Whenever you successful grapple a creature or win a contested check, you deal damage to the creature as if you'd hit it with a weapon attack.
+
+***Moonglaive.*** When you make a ranged attack with this weapon and miss, the weapon returns to your hand.
+
+***Twinblade.*** This weapon can be wielded normally, or it can be treated as two separate light weapons for the purposes of two-weapon fighting. When doing so, it deals 1d6 slashing damage with both the normal and off-hand attacks.
+
+***Warclaw.*** This weapon requires an action to don or doff. While donned, you can't be disarmed of it and your hand is considered empty for the purpose of holding objects or creating somatic components for spells. You can't wield a weapon or hold a shield in the same hand that has a warclaw donned.
+
+### Weapon Properties
+
+Many weapons have special properties related to their use, as shown in the Weapons table.
+
+***Booming.*** Firearms make loud noises, a flash of light and a faint smell of burnt explosives when used. A shot can be heard as far as 200 feet away from the shooter.
+
+### Gunsmith's Kit
+[Covered in the tools section.]
+
+\pagebreakNum
+
+<div class='classTable'>
+
+##### Explosives
+
+| Name                                          | Cost  | Weight    |
+|-----------------------------------------------|------:|----------:|
+|Bomb                                           | ## gp | ## lb.    |
+|Dynamite                                       | ## gp | ## lb.    |
+|Flamethrower                                   | ## gp | ## lb.    |
+|*Grenades*                                     |       |           |
+|<span style="margin-left:20px">Cryo            | ## gp | ## lb.    |
+|<span style="margin-left:20px">Electric        | ## gp | ## lb.    |
+|<span style="margin-left:20px">Flashbang       | ## gp | ## lb.    |
+|<span style="margin-left:20px">Fragmentation   | ## gp | ## lb.    |
+|<span style="margin-left:20px">Incendiary      | ## gp | ## lb.    |
+|<span style="margin-left:20px">Paint           | ## gp | ## lb.    |
+|<span style="margin-left:20px">Poison Gas      | ## gp | ## lb.    |
+|<span style="margin-left:20px">Smoke           | ## gp | ## lb.    |
+|<span style="margin-left:20px">Sonic           | ## gp | ## lb.    |
+|*Mines*                                        |       |           |
+|<span style="margin-left:20px">Pressure        |+## gp | ## lb.    |
+|<span style="margin-left:20px">Proximity       |+## gp | ## lb.    |
+|<span style="margin-left:20px">Tripwire        |+## gp | ## lb.    |
+|Mortar                                         | ## gp | ## lb.    |
+|Rocket Launcher                                | ## gp | ## lb.    | 
+|Sapper Charge                                  | 75 gp | 15 lb.    |
+
+</div>
+
+\columnbreak
+### Explosives
+Explosives can be used by any class, regardless of proficiency.
+
+#### Bombs
+As an action, a creature can light the fuse on the bomb and throw it at a point up to 60 feet away. Each creature within 5 feet of that point must make a DC 12 Dexterity save or take 2d6 fire damage and be incapacitated until the end of their next turn. A successful save results in half damage and no other effect.
+
+A bomb can be rigged with a longer fuse to explode after a set amount of time, usually 1 to 6 rounds. Roll initiative for the bomb. After the set number of rounds goes by, the bomb explodes on that initiative.
+
+#### Dynamite
+As an action, a creature can light a stick of dynamite and throw it at a point up to 60 feet away. Each creature within 5 feet of that point must make a DC 12 Dexterity saving throw or take 3d6 damage on a failed save, or half as much damage on a successful one. Damage dealt by dynamite is considered to be both bludgeoning and thunder for purposes of resistance and vulnerability.
+
+A character can bind sticks of dynamite together so they explode at the same time. Each additional stick increases the damage by 1d6 (to a maximum of 10d6) and the burst radius by 5 feet (to a maximum of 20 feet).
+
+Dynamite can be rigged with a longer fuse to explode after a set amount of time, usually 1 to 6 rounds. Roll initiative for the dynamite. After the set number of rounds goes by, the dynamite explodes on that initiative.
+
+#### Flamethrower
+A flamethrower, sometimes known as a goblin dragon gun, is a quasi-weapon consisting of a heavy backpack connected to a short rod by a hose. In order to use a flamethrower, the user must don the backpack as an action and hold the rod in one of their hands. Doffing the backpack is an action.
+
+A flamethrower uses flasks of alchemist's fire as fuel. It can hold up to 10 flasks in its backpack attachment and uses 1 flask every time it is used. Filling or refilling the flamethrower takes 1 minute. Whenever the wearer of the flamethrower takes fire damage, roll a d20. On a 1, the fuel reserve detonates, destroying the flamethrower and dealing 4d6 fire damage to each creature within 5 feet.
+
+As an action, you can cause the flamethrower to project fire in a 10-foot cone. Each creature in that area must make a DC 13 Dexterity saving throw, taking 4d6 fire damage on a failed save, or half as much damage on a successful one. 
+
+#### Flare Gun
+Normally used as a signaling device, a flare gun can be used as a pistol in a pinch, dealing 1d8 fire damage and igniting flammable objects. If fired in the air, it releases a brightly colored flame that can be seen for up to 25 miles, depending on surrounding terrain and weather. A flare gun automatically ignites flammable items when used as a weapon.
+
+\pagebreakNum
+#### Grenades
+A grenade is a small device that can be thrown as an action or in place of an attack when using the Attack action. You target a point within 60 feet. Each creature within 20 feet of that point suffer the effect of the grenade, as noted by the grenade's type:
+
+***Cryo.*** Creatures take 3d8 cold damage and are restrained for 1 minute. A DC 15 Dexterity results in half damage and no other effect. A creature can attempt to break free early by making a DC 15 Strength check as an action. They are also freed if they take at least 5 points of fire damage.
+
+***Electric.*** Creatures take 3d10 lightning damage or half on a successful DC 15 Dexterity save. Creatures made of metal or wearing armor made of it have disadvantage on their saving throw.
+
+***Flashbang.*** Creatures must make two DC 15 Dexterity saves. If they fail the first, they are blinded for 1 minute. If they fail the second, they are deafened for 1 minute. They can make a DC 15 Constitution saving throw at the beginning of each of their turns against each condition to end the effect early.
+
+***Fragmentation.*** Creatures in the area take 5d6 piercing damage or half damage on a successful DC 15 Dexterity save.
+
+***Glue.*** [Restrains the target.]
+
+***Incendiary.*** Creatures take 5d6 fire damage or half damage on a successful DC 15 Dexterity save. Unattended flammable objects in the area are set on fire.
+
+***Paint.*** Creatures in the area are covered in a luminescent paint. Invisible creatures are outlined and creatures hit by the paint leave a trail that gives advantage on checks made to track them. The paint fades away after 1 hour or when scrubbed off using soap and water.
+
+***Poison Gas.*** Creatures in the area must make a DC 15 Constitution save or take 5d4 poison damage and be poisoned for 1 minute. A successful save results in half damage and no other effect. They may repeat the save at the end of each of their turns to end the poisoned effect early.
+
+***Smoke.*** The grenade lets out a cloud of thick smoke that creates a heavily obscured area in a 5-foot radius. On the following round, this radius increases to 10 feet, and on the third round it increases to 15 feet. It disperses after 1 minute, though a moderate wind (11+ mph) disperses the smoke in 4 rounds and a strong wind (21+ mph) disperses it in 1 round. Smoke grenades are available in several colors, including white, red, yellow, green, and purple. As such, they can be used as signal devices.
+
+***Sonic.*** Creatures in the area take 4d6 thunder damage and are deafened for 1 round. A successful DC 15 Constitution save results in half damage and no other effect.
+
+#### Mines
+[Placed explosives. Uses the grenades for effects. Has proximity, pressure, or tripwire triggers.]
+
+#### Mortar
+[Deals damage, fired in an arc, ignoring cover not from above.]
+
+#### Rocket Boots
+[Rocket skates. Chance of explosion, increased speed, minimum movement per round.]
+
+#### Rocket Pack
+[Rocket-assisted jump, like the goblin's former ability.]
+
+#### Rocket Launcher
+This device can be fired at a point within range. Each creature within 10 feet of the point takes 5d6 fire damage, half on a successful Dexterity saving throw. The save DC is 15 if the point is within 80 feet or DC 10 if it is within 240 feet.
+
+#### Sapper Charge
+[Shaped explosions. Used for breaking down doors, walls, etc.]
+
+[A Blast charge is a 12 pound bag of gun powder with a timer used to detonate it. Its primary purpose is to break down doors,gates, ect. and as such does double damage to structures. When activated it detonates after 1 minute and deals d10+5 fire and d20+15 bludgeoning dam to everything in a d4 radius unles they make a DC20 Dexterity check. Using thieves tools, 5gp worth of supplys, and 20 minutes you can rig the device to explode instantly when set off by a trip wire. This wire must be connected to something else such as a door, stake, or a bookcase. This tripwire can be as long as 10ft. A DC13 Perception check gives away the location of the trip wire.]
+
+\pagebreakNum
+
+## Adventuring Gear
+
+### Old Gear
+Some old items have been reduced in price to reflect their status in Azeroth:
+- Complex glasswork has been reduced by 95% due to how commonplace they are.
+- Paper and parchment and related items are reduced in price by 40-50% to reflect the greater literacy in Azeroth.
+- Some complex worked metal has been reduced by 40-50% due to the industrious dwarves.
+
+<span style="margin-left:10px">
+<div class='classTable'>
+
+##### Changed Prices
+
+| Name                  | Old<br>Price  | New<br>Price  |
+|-----------------------|--------------:|--------------:|
+|Book                   |25 gp          |10 gp          |
+|Bottle, Glass          |2 gp           |1 sp           |
+|Chain                  |5 gp           |2 gp           |
+|Hourglass              |25 gp          |1 gp           |
+|Ink                    |10 gp          |4 gp           |
+|Magnifying Glass       |100 gp         |5 gp           |
+|Mirror, Steel          |5 gp           |2 sp           |
+|Paper (one sheet)      |2 sp           |1 sp           |
+|Parchment (one sheet)  |1 sp           |5 cp           |
+|Signet ring            |5 gp           |2 gp           |
+|Spellbook              |50 gp          |20 gp          |
+|Spyglass               |1,000 gp       |50 gp          |
+|Vial                   |1 gp           |5 cp           |
+
+</div>
+
+\pagebreakNum
+
+<div class='classTable'>
+
+##### New Adventuring Gear
+
+| Name                  | Cost  | Weight    |
+|-----------------------|------:|----------:|
+| *Ammunition*          |       |           |
+|<span style="margin-left:10px">Firearm bullets (20)|2 gp|2 lb.|
+|<span style="margin-left:10px">Pellet shells (10)|2 gp|3 lb.|
+| Army Knife            | 75 gp | 4 lb.     |
+| Bayonet               |  2 gp | 1 lb.     |
+| Beacon                | 50 gp | 2 lb.     |
+| Calculator            | 25 gp | —         |
+| *Druidic Focus*       |       |           |
+|<span style="margin-left:10px">Rush'kah mask|10 gp|1 lb.|
+| Firestarter           | 25 gp | —         |
+| Flashlight            | 50 gp | 2 lb.     |
+| Glider                | ## gp | ## lb.    |
+| Glowstick             |  5 cp | —         |
+| Gnomecorder           |2,000 gp | 10 lb.  |
+| Goggles               | 15 gp | 1 lb.     |
+| *Holy Symbols*        |       |           |
+|<span style="margin-left:10px">Libram|10 gp|5 lb.|
+| Parachute             | 30 gp | 15 lb.    |
+| Plague (vial)         | ## gp | —         |
+| Scope                 | 60 gp | 1 lb.     |
+| Smoke Pellet          |  # gp | —         |
+| Suturing Kit          | 25 gp | 3 lb.     |
+| Timepiece             | 25 gp | —         |
+
+</div>
+
+\columnbreak
+### New Adventuring Gear
+These items are in addition to those located in the PHB.
+
+***Army Knife.*** Popular among both goblins and gnomes, this compact device has many uses. Can be used as one of: Back scratcher, Block and tackle, crowbar, fishing rod, hammer, firestarter, magnifying glass, mirror, five-foot pole (alternate use of fishing rod), 25 feet silk rope and a grappling hook, saw, sewing needle, three kinds of signal whistles, shovel, a 1-person tent, whetstone, a whirly thing. Also cuts things as a small knife. Accessing any of these functions requires manipulating the device for 3 rounds.
+
+***Bayonet.*** This short blade can be attached to the end of a firearm or crossbow as an action, allowing the weapon to be used in a melee attack. A bayonet on a ranged weapon is treated as a spear in terms of proficiency and damage. When wielded alone, a bayonet is treated as a dagger.
+
+***Beacon.*** A beacon is a gnomish invention that appears to be a larger version of a lantern. It casts bright light in a 30-foot radius and dim light for an additional 30 feet. As an action, you turn the light on or off or you can lower the hood, reducing the light to dim light in a 5-foot radius.
+
+***Buzzbox.*** A buzzbox is a communication device the size of a large chest, functioning as a larger version of the gnomecorder. It can transmit and receive voice and code transmissions up to 100 miles away in relatively open areas, down to 10 miles in restricted areas.
+
+***Firestarter.*** The device produces a miniature flame, which you can use to light a candle, torch, or campfire. Using the device requires your action.
+
+***Flare.*** A flare can be lit as an action and burns for 1 hour, providing bright light in a 20-foot radius and dim light for an additional 20 feet. Flares burn particularly strong and cannot be extinguished by wind or cold. If used as a weapon, it deals 1d4-1 fire damage.
+
+***Flashlight.*** A flashlight is a gnomish invention, consisting of a heavy box that lets out bright light in a 60-foot cone and dim light for an additional 60 feet. Turning the flashlight on and off is an action.
+
+***Gas Mask.*** [Todo.]
+
+***Glider.*** [Reduces fall speed to 5 ft./round, gives movement speed. Entire movement speed must be used each turn. Can choose to dive by converting horizontal movement into downward vertical movement.]
+
+***Glowsitck.*** A glowstick can be activated as an action and glows for 8 hours, providing bright light in a 10-foot radius and dim light for an additional 10 feet. Once lit, it cannot be extinguished.
+
+***Gnomecorder.*** A gnomecorder is a messenger bag-sized communication device which can transmit and receive voice and code transmissions, with additional encryption functions using punchcards if intended for military use. It has a 5-mile range in a relatively open area, including most wilderness environments, but only a ½ mile range in urban areas or other places where walls, sheer cliffs, etc. can block signals.
+
+\pagebreakNum
+
+***Goggles.*** These durable spectacles come with multiple types of lenses. Some help you focus on fine details, others help you look into the distance, and others help you see in very bright light.
+
+***Goggles, Distance.*** [Adv on distant perception checks, disadv on others.]
+
+***Goggles, Fine Detail.*** [Adv on inspection checks, disadv on other perception checks.]
+
+***Goggles, Nightvision.*** [Gives darkvision, bright light blinds you.]
+
+***Goggles, Smoky.*** [Protects against bright light/blinding, disadvantage on other Perception checks.]
+
+***Parachute.*** A creature wearing this backpack-shaped piece of gear can deploy it as a reaction while falling. The creature's falling speed is reduced to 60 feet per round until it lands, taking no damage, and the creature becomes one size larger for purposes of space. Once it has been used, the parachute takes 10 minutes to repack.
+
+***Plague (vial).*** As an action, you can throw this flask up to 20 feet, shattering it on impact. Make a ranged attack against a creature or object, treating the plague vial as an improvised weapon. On a hit, the target takes 1d4 poison damage and must make a DC 11 Constitution save or become infected with the sewer plague disease.
+
+***Punchcard.*** [Used in technological items, base item price is 1 sp. They can be used as keys for doors, encryption protocols for communication, information storage, or pretty much any use desired. Price of the item changes based on a DM's needs.]
+
+***Scope.*** A scope can be attached to a two-handed firearm or crossbow as an action. If you use a bonus action to aim through the weapon, you gain advantage on your first attack roll this turn against a target at long range, provided you do not move before making the attack. The scope can also be used as a spyglass.
+
+***Smoke Pellet.*** [Can be used to create a small cloud of smoke that disappates after 1 round. Allows use of the Hide action.]
+
+***Suturing Kit.*** A suturing kit is a small collection of needles and threads of quasi-magical origin. A forsaken can use it to reattach severed body parts or repair damages to its body. They can also use the kit to attach body parts from other corpses to themselves, provided that the body part matches a missing part on their own body. Use of this kit usually requires a successful Wisdom (Medicine) check and takes anywhere from a couple minutes to a few hours, depending on the extent of the procedure.
+
+***Timepiece.*** A small pocketwatch or wristwatch.
+
+\pagebreakNum
+
+## Tools
+
+***Gunsmith's Kit.*** A gunsmith's tools enables a character to craft, modify and maintain firearms, as well as craft ammunition. If you are proficient with gunsmith's tools, you can create any firearm of your choice over the course of one workweek (5 days of 8 hours of work) spending gold equal to half the firearms cost in resources. Additionally, as part of a long rest, you can create batches of ammunition of 6 + double your proficiency bonus. Each batch requires 1 gp worth of material cost. You can choose to instead craft a batch of *pellet shells*, creating 3 + your proficiency bonus worth of shells out of 1 gp worth of materials.
+
+<span style="margin-left:10px">
+<div class='classTable'>
+
+##### New Tools
+
+| Name                  | Cost  | Weight    |
+|-----------------------|-------|-----------|
+| *Artisan's Tools*     |       |           |
+|<span style="margin-left:10px">Gunsmith's tools|25 gp |10 lb.|
+| *Gaming Set*          |       |           |
+|<span style="margin-left:10px">Hearthstone card set|5 gp|—|
+|<span style="margin-left:10px">Pandaren jihui game board|5 gp|2 lb.|
+|Vehicles (air)         |*      |*          |
+
+</div>
+
+\pagebreakNum
+##### Racial Mount Table
+Race                                        | Mount         
+--------------------------------------------|---------------
+Blood Elves                                 |Hawkstriders    
+Draenei                                     |Elekks               
+Dwarves, Dark Iron                          |Dark Iron Hounds
+Dwarves, Ironforge                          |Giant Goats     
+Dwarves, Wildhammer                         |Gryphons        
+Forsaken                                    |Skeletal Horses
+Gnomes                                      |Mechanostriders    
+Goblins                                     |Turbo Trikes
+Humans                                      |Horses          
+Night Elves                                 |Sabercats       
+Nightborne                                  |Sabercats
+Orcs                                        |Dire Wolves      
+Pandaren                                    |Dragon Turtles
+Tauren                                      |Kodos
+<span style="margin-left:10px">Highmountain |Giant Elks
+Trolls                                      |Raptors
+Void Elves                                  |Sabercats
+Vulpera                                     |Hyenas
+Worgen                                      |Horses
+
+\columnbreak
+##### Mounts and Other Animals
+Item                | Cost  | Speed | Carrying<br>Capacity
+--------------------|------:|:-----:|---------:
+Brown Bear          |### gp |40 ft. |570 lb.
+Camel               |50 gp  |50 ft. |480 lb.
+Clefthoof           |### gp |## ft. |### lb.
+Dark Iron Hound     |### gp |40 ft. |240 lb.
+Dire Wolf           |### gp |50 ft. |510 lb.
+Donkey or Mule      |8 gp   |40 ft. |420 lb.
+Dragon Turtle       |### gp |## ft. |### lb.
+Elekk               |### gp |## ft. |### lb.
+Elephant            |200 gp |40 ft. |1,320 lb.
+Giant Goat          |### gp |## ft. |### lb.
+Horse, draft        |50 gp  |40 ft. |540 lb.
+Horse, riding       |75 gp  |60 ft. |480 lb.
+Hyena               |### gp |## ft. |### lb.
+Kodo                |### gp |30 ft. |1,260 lb.
+Hawkstrider         |### gp |40 ft. |360 lb.
+Mastiff             |25 gp  |40 ft. |195 lb.
+Mechanostrider      |500 gp |40 ft. |180 lb.
+Pony                |30 gp  |40 ft. |225 lb.
+Raptor              |### gp |## ft. |### lb.
+Sabercat            |### gp |40 ft. |510 lb.
+Turbo Trike         |### gp |50 ft. |210 lb.
+Warhorse            |400 gp |60 ft. |540 lb.
+Warhorse Skeleton   |### gp |60 ft. |540 lb.
+Yak                 |15 gp  |## ft. |### lb.
+
+##### Flying Mounts
+Item            | Cost      | Ground<br>Speed   | Fly<br>Speed  | Carrying<br>Capacity
+----------------|-----------|-------------------|---------------|---------------------
+Cloud Serpent   |#### gp    |30 ft.             | 80 ft.        |240 lb.
+Dragonhawk      |### gp     |10 ft.             | 60 ft.        |360 lb.
+Giant Bat       |### gp     |10 ft.             | 60 ft.        |450 lb.
+Gryphon         |#### gp    |40 ft.             | 60 ft.        |540 lb.
+Gryocopter      |#### gp    |0 ft.              | 90 ft.        |420 lb.
+Hippogryph      |#### gp    |40 ft.             | 60 ft.        |510 lb.
+Wyvern          |#### gp    |30 ft.             | 60 ft.        |480 lb.
+
+##### Airborne Vehicles
+Item            | Cost      | Speed
+----------------|----------:|-----:
+Hot Air Balloon |1,000 gp   |N/A
+Zeppelin        |25,000 gp  |9 mph
+
+\pagebreakNum
+### Mounts
+
+***Brown Bear.***
+
+***Camel.***
+
+***Clefthoof.***
+
+***Dark Iron Hound.*** [Dark Iron Dwarf racial mount.]
+
+***Dire Wolf.*** [Orc racial mount, Frost wolf variant (cold resistance, snow camouflage)?]
+
+***Donkey.***
+
+***Dragon Turtle.*** [Pandaren racial mount.]
+
+***Elekk.*** [Draenei racial mount.]
+
+***Elephant.***
+
+***Giant Goat.*** [Ironforge dwarf racial mount.]
+
+***Horse, draft.***
+
+***Horse, riding.*** 
+
+***Hyena.*** [Vulpera racial mount.]
+
+***Kodo.*** The kodo is a large omnivorous herd animal native to the Barrens. The tauren hold these reptilian creatures in high esteem, and breed them as mounts. They are also used extensively as pack animals by both the goblins and the Horde as a whole.
+
+***Hawkstrider.*** The hawkstrider is a large flightless bird with vibrantly colored plumage. The blood elves of Silvermoon use these creatures as mounts.
+
+***Mastiff.*** [To be removed as a mount?]
+
+***Mechanostrider.*** [Gnome racial mount. Doesn't need feed, but uses fuel.]
+
+***Mule.***
+
+***Pony.*** 
+
+***Raptor.*** [Troll racial mount. Needs variant for use as a mount.]
+
+***Sabercat.*** [Night elf racial mount.]
+
+***Turbo Trike.*** [Goblin racial mount. While technically a vehicle, treated as a mount. Like mechanostrider, uses fuel.]
+
+***Warhorse.*** [Human racial mount.]
+
+***Warhorse Skeleton.*** [Forsaken racial mount.]
+
+***Yak.***
+
+### Flying Mounts
+
+***Cloud Serpent.*** [Young version.]
+
+***Dragonhawk.*** [Blood elf racial mount.]
+
+***Giant Bat.*** [Forsaken racial mount.]
+
+***Gryphon.*** [Human, wildhammer dwarf racial mount.]
+
+***Gyrocopter.*** [Too short range to be a proper vehicle?]
+
+***Hippogryph.*** [Night elf racial mount.]
+
+***Wyvern.***
+
+### Airborne Vehicles
+
+***Hot Air Balloon.*** [Using [this](https://www.dandwiki.com/wiki/Hot_Air_Balloon_(5e_Equipment)) as the model.]
+
+***Zeppelin.*** [Using [this](https://www.dandwiki.com/wiki/Airship,_Gasbag_and_Sail_(5e_Equipment)) as model.]
+
+\pagebreakNum
+
+## Services
+
+| Service           | Pay           |
+|-------------------|---------------|
+| Airship passage   | 2 sp per mile |
+| Intercity Portal  | 100 gp        |
+
+### City to City Prices
+[List of distances for purposes of passage price.]
+
+<div class='classTable wide'>
+
+Transport Destinations|Transport<br>Method|Cost|Travel Time
+--------------|-------------------|------|---
+Menethil Harbor, Wetlands to Theramore Isle, Dustwallow Marsh   |Warship, *The Lady Mehley* |## gp  |#d# + ## days
+Menethil Harbor, Wetlands to Valgarde, Howling Fjord            |Warship, *Northspear*          |## gp  |#d# + ## days
+Ratchet, Barrens to Booty Bay, Cape of Stranglethorn            |Galley, *The Maiden's Fancy*  |## gp  |#d# + ## days
+Stormwind City to Rut'theran Village, Darnassus                 |Warship, *The Bravery*         |## gp  |#d# + ## days
+Stormwind City to Ironforge City                                |Deeprun Tram                   |## gp  |## hours
+Stormwind City to Valiance Keep, Borean Tundra                  |Warship, *The Kraken*          |## gp  |#d# + ## days
+
+</div>
+
+\pagebreakNum
+
+##### Trinkets
+d100|Trinket
+--|-----
+01|A small stone etched with a rune. 
+02|
+03|
+04|
+05|
+06|
+07|
+08|A chamberpot made of solid gold. You doubt anyone will buy it.
+09|
+10|
+11|
+12|
+13|
+14|
+15|
+16|
+17|
+18|This ceramic funeral urn is chipped and cracked, its ashes long since lost. The word 'Thunderbolt' is visible in Dwarven printed on the underside.
+19|
+20|
+21|
+22|
+23|
+24|
+25|
+
+d100|Trinket
+--|-----
+26|
+27|
+28|
+29|
+30|
+31|
+32|
+33|
+34|
+35|
+36|
+37|
+38|
+39|
+40|This pewter drinking cup may have belonged to a minor noble or wealthy merchant. It's heavy enough to bash in someone's brains, and residue suggest it may have been used for just that.
+41|
+42|
+43|
+44|
+45|
+46|
+47|
+48|
+49|
+50|
+
+\pagebreakNum
+
+d100|Trinket
+--|-----
+51|A small whistle carved from oak.
+52|
+53|
+54|
+55|
+56|
+57|
+58|
+59|
+60|
+61|
+62|
+63|
+64|
+65|
+66|
+67|
+68|
+69|
+70|
+71|
+72|
+73|
+74|
+75|
+
+d100|Trinket
+--|-----
+76|
+77|
+78|
+79|
+80|
+81|
+82|
+83|
+84|
+85|
+86|
+87|
+88|
+89|
+90|
+91|
+92|
+93|
+94|
+95|
+96|
+97|
+98|
+99|
+100|
+
+\pagebreakNum
+
+##### Mounts and Other Animals
+Item                | Cost  | Speed | Carrying<br>Capacity
+--------------------|------:|:-----:|---------:
+Brown Bear          |### gp |40 ft. |570 lb.
+Camel               |50 gp  |50 ft. |480 lb.
+Clefthoof           |### gp |## ft. |### lb.
+Dark Iron Hound     |### gp |40 ft. |240 lb.
+Dire Wolf           |### gp |50 ft. |510 lb.
+Donkey or Mule      |8 gp   |40 ft. |420 lb.
+Dragon Turtle       |### gp |## ft. |### lb.
+Elekk               |### gp |## ft. |### lb.
+Elephant            |200 gp |40 ft. |1,320 lb.
+Giant Goat          |### gp |## ft. |### lb.
+Horse, draft        |50 gp  |40 ft. |540 lb.
+Horse, riding       |75 gp  |60 ft. |480 lb.
+Hyena               |### gp |## ft. |### lb.
+Kodo                |### gp |30 ft. |1,260 lb.
+Hawkstrider         |### gp |40 ft. |360 lb.
+Mastiff             |25 gp  |40 ft. |195 lb.
+Mechanostrider      |### gp |40 ft. |180 lb.
+Pony                |30 gp  |40 ft. |225 lb.
+Raptor              |### gp |## ft. |### lb.
+Sabercat            |### gp |40 ft. |510 lb.
+Warhorse            |400 gp |60 ft. |540 lb.
+Warhorse Skeleton   |### gp|60 ft. |540 lb.
+Yak                 |15 gp |## ft. |### lb.
+
