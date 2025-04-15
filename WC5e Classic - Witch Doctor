@@ -1,0 +1,918 @@
+<style>
+/* GLOBAL FORMATTING  */
+
+  /* Resize page to international A4 */
+  .phb {
+    width: 210mm;
+    height: 296.8mm;
+  }
+  .phb:after { content: ""; }
+
+/* Temporary Fix for heading issues */
+    .phb p{ line-height: 15px; } 
+    .phb blockquote p{ line-height: 14px; } 
+    .phb h2{ line-height: 26px; } 
+    .phb h3{ line-height: 19px; } 
+    .phb h4{ line-height: 15px; padding-bottom: 3px; } 
+    .phb h5{ line-height: 17px; } 
+    th, td { line-height: 14px; }
+
+/* TABLE OF CONTENTS  */
+
+  /* toc specifically wants black text. This resets the headers*/
+  .toc a {
+    color: inherit !important;
+  }
+  /* Allow dot leaders to fill remaining space but not overlap */
+  .toc li span:nth-child(2) {
+    width: auto;
+    overflow: hidden;
+    white-space: nowrap;
+    display: block;
+  }
+  .toc li span:nth-child(2):after {
+    font-family: BookSanity;
+    font-size: 0.317cm;
+    font-weight: normal;
+    color: black;
+    content:
+      " ........................................"
+      "........................................."
+      ".........................................";
+    }
+
+  /* Style TOC page numbers*/
+  .toc li span:first-child {
+    float: right;
+    font-family: BookSanity;
+    font-size: 0.317cm;
+    font-weight: normal;
+    color: black;
+    margin-left: 1px;
+  }
+
+  /* Adjust TOC H3 styles */
+  .toc li h3 span:nth-child(2):after {
+  	content: " ";
+  }
+  .toc li h3 {
+    margin-bottom: 4px !important;
+    margin-top: 10px !important;
+    line-height: initial !important;
+  }
+  .toc li h3 span:first-child {
+  	line-height: 1.8em !important;
+  }
+
+  /* Reduce TOC list indentation*/
+  .toc ul ul {
+  	margin-left: 10px !important;
+  }
+  .toc>ul>li {
+    margin-bottom: initial !important;
+  }
+
+
+/* TABLES AND BLOCKS */
+
+  /* Clear internal padding and add gap above for green note blocks*/
+  .phb blockquote {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .phb blockquote { margin-top: 1em;
+  }
+
+
+/* INK BLOT STYLES */
+
+  /* Root style for inkblots. Use alone, or together with
+  one of the ink blotstyle classes below. Essentially:
+  <img url='{url}' class='inkblot inkblot-blue' />
+  */
+  .inkblot {
+    position: absolute;
+    mix-blend-mode: multiply;
+    opacity: 0.6;
+  }
+
+  .inkblot-blue {
+    filter: hue-rotate(190deg) saturate(120%)
+  }
+
+  .inkblot-green {
+    filter: hue-rotate(120deg)
+  }
+
+</style>
+
+## Witch Doctor
+
+___
+
+*"Someone call for de doktor?"*
+<div style="text-align:Right"> 
+
+*— Troll Witch Doctor, Warcraft III*  </div>
+
+#### 
+
+\pagebreakNum
+
+<div class="classTable wide" />
+
+##### The Witch Doctor
+
+Level   |Proficiency<br/>Bonus|Features          |Cantrips <br/> Known |Spells <br/> Known | Spell <br/> Level | Mana | Invocations <br/> Known
+--------|:-:|---------------------------------------------------|:-:|:-:|:-:|:--:|:---:|:-:|
+1st     |+2 |Pact Magic, Subclass                               | 2 | 2 | 1st |  2 | -
+2nd     |+2 |Invocations, Magic Recharge                        | 2 | 3 | 1st |  4 | 3
+3rd     |+2 |—                                                  | 2 | 4 | 2nd |  6 | 3
+4th     |+2 |Ability Score Improvement                          | 3 | 5 | 2nd |  6 | 3
+5th     |+3 |—                                                  | 3 | 6 | 3rd | 10 | 5
+6th     |+3 |Subclass feature                                   | 3 | 7 | 3rd | 10 | 5
+7th     |+3 |—                                                  | 3 | 8 | 4th | 12 | 6
+8th     |+3 |Ability Score Improvement                          | 3 | 9 | 4th | 12 | 6
+9th     |+4 |—                                                  | 3 |10 | 5th | 14 | 7
+10th    |+4 |Subclass feature                                   | 4 |10 | 5th | 14 | 7
+11th    |+4 |—                                                  | 4 |11 | 5th | 21 | 8
+12th    |+4 |Ability Score Improvement                          | 4 |11 | 5th | 21 | 9
+13th    |+5 |—                                                  | 4 |12 | 5th | 21 | 10
+14th    |+5 |Subclass feature                                   | 4 |12 | 5th | 21 | 10
+15th    |+5 |—                                                  | 4 |13 | 5th | 21 | 12
+16th    |+5 |Ability Score Improvement                          | 4 |13 | 5th | 21 | 12
+17th    |+6 |—                                                  | 4 |14 | 5th | 21 | 13
+18th    |+6 |—                                                  | 4 |14 | 5th | 21 | 14
+19th    |+6 |Epic Boon                                          | 4 |15 | 5th | 21 | 14
+20th    |+6 |Capstone                                           | 4 |15 | 5th | 21 | 14
+
+</div>
+
+#### Optional Rule: Multiclassing
+If your group uses the optional rule on multiclassing in the *Player's Handbook*, here's what you need to know if you choose witch doctor as one of your classes.
+
+***Ability Score Minimum.*** As a multiclass character, you must have at least an Wisdom score of 13 to take a level in this class, or to take a level in another class if you are already a witch doctor.
+
+***Proficiencies Gained.*** If witch doctor isn't your initial class, you gain skill of your choice from the witch doctor skill proficiencies when you take your first level of witch doctor.
+
+***Pact Magic.*** You can cast spells known or prepared from the Spellcasting class feature using Pact Magic spell slots, and vice versa.
+
+#### Quick Build
+You can make a witch doctor quickly by following these suggestions. First, Wisdom should be your highest ability score, followed by Constitution. Second, choose the ??? background. 
+
+Third, choose the *???* and *???* cantrips, along with the 1st level spells *???* and *???*.
+
+\columnbreak
+
+## Class Features
+As a witch doctor, you have the following class features.
+
+#### Hit Points
+___
+- **Hit Dice:** 1d6 per witch doctor level
+- **Hit Points at 1st Level:** 6 + your Constitution modifier
+- **Hit Points at Higher Levels:** 1d6 (or 4) + your Constitution modifier per witch doctor after 1st
+
+#### Proficiencies
+___
+- **Armor:** None
+- **Weapons:** Blowgun, dagger, quarterstaff, sling
+- **Tools:** Herbalism kit
+___
+- **Saving Throws:** Wisdom, Charisma
+- **Skills:** Choose two skills from Animal Handling, Arcana, Deception, History, Insight, Intimidation, Perception, or Religion
+
+#### Equipment
+You start with the following equipment, in addition to the equipment granted by your background
+
+- *(a)* a quarterstaff or *(b)* any simple weapon
+- *(a)* a blowgun and 50 darts or *(b)* ???
+- *(a)* a component pouch or *(b)* a fetish
+- *(a)* a scholar's pack or *(b)* an explorer's pack
+
+\pagebreakNum
+
+### Pact Magic
+*1st-level witch doctor feature*
+<div style='margin-top:-4px'></div>
+
+Your arcane research and the magic bestowed on you by your patron have given you facility with spells.
+
+#### Cantrips
+You know two cantrips of your choice from the witch doctor spell list. You learn additional witch doctor cantrips of your choice at higher levels, as shown in the Cantrips Known column of the Witch Doctor table.
+
+#### Mana
+
+The Witch Doctor table shows how much mana you have to cast your witch doctor spells of 1st level and higher. The table also shows what the level spells you can cast. To cast one of your witch doctor spells of 1st level or higher, you must expend mana, as noted in the spell's description and the Mana Cost table found below. You regain all expended mana gained from this class when you finish a short or long rest.
+
+For example, if you know the 1st-level spell *charm person* and have a spell level of 2nd, you can use mana to cast it as either a 1st-level or 2nd-level spell.
+
+##### Mana Cost
+Spell Level | Mana Cost | Spell Level | Mana Cost
+:------:|:-:|:---:|:-:
+Cantrip | — | 5th | 7
+1st     | 2 | 6th | 9
+2nd     | 3 | 7th | 10
+3rd     | 5 | 8th | 11
+4th     | 6 | 9th | 13
+
+#### Spells Known of 1st Level and Higher
+At 1st level, you know two 1st-level spells of your choice from the witch doctor spell list.
+
+The Spells Known column of the witch doctor table shows when you learn more witch doctor spells of your choice of 1st level or higher. A spell you choose must be of a level no higher than what's shown in the table's Slot Level column for your level. When you reach 6th level, for example, you learn a new witch doctor spell, which can be 1st, 2nd, or 3rd level.
+
+Additionally, when you gain a level in this class, you can choose one of the witch doctor spells you know and replace it with another spell from the witch doctor spell list, which also must be of a level for which you have spell slots.
+
+#### Spellcasting Ability
+Wisdom is your spellcasting ability for your witch doctor spells, so you use your Wisdom whenever a spell refers to your spellcasting ability. In addition, you use your Wisdom modifier when setting the saving throw DC for a witch doctor spell you cast and when making an attack roll with one.
+
+<div style="text-align: center">
+
+**Spell save DC** = 8 + your proficiency bonus + <br/> your Wisdom modifier
+
+**Spell attack modifier** = your proficiency bonus + <br/> your Wisdom modifier
+</div>
+
+#### Spellcasting Focus
+You can use an voodoo fetish as a spellcasting focus for your witch doctor spells.
+
+### Subclass
+*1st-level witch doctor feature*
+<div style='margin-top:-4px'></div>
+
+You have struck a bargain with an otherworldly being of your choice. Your choice grants you features at 1st level and again at 6th, 10th, and 14th level.
+
+#### Subclass Spells
+Each Subclass has a list of Subclass Spells that you learn at the Warlock levels noted in your Subclass description. These spells count as Witch Doctor spells for you, but they do not count against your total number of Spells Known.
+
+#### Subclass Ideas
+Name | Description
+-----|----------
+Hexxer      | 
+Spirit Master?| Necromancy specialist
+Tiki Lord   | Create animated mask
+Zombies     | Zombies
+
+### Invocations
+*2nd-level witch doctor feature*
+<div style='margin-top:-4px'></div>
+
+You have unearthed Eldritch Invocations, pieces of forbidden knowledge that imbue you with an abiding magical ability or other lessons. You gain one invocation of your choice, such as Pact of the Tome. Invocations are described in the "Eldritch Invocation Options" section later in this class's description.
+
+**Prerequisites.** If an invocation has a prerequisite, you must meet it to learn that invocation. For example, if an invocation requires you to be a level 5+ Warlock, you can select the invocation once you reach Warlock level 5.
+
+**Replacing and Gaining Invocations.** Whenever you gain a Warlock level, you can replace one of your invocations with another one for which you qualify. You can't replace an invocation if it's a prerequisite for another invocation that you have.
+
+When you gain certain Warlock levels, you gain more invocations of your choice, as shown in the Invocations column of the Warlock Features table.
+
+You can't pick the same invocation more than once unless its description says otherwise.
+
+### Magic Recharge
+*2nd-level witch doctor feature*
+<div style='margin-top:-4px'></div>
+
+Once per long rest, you can perform an esoteric rite for 1 minute to regain use of some of your mana. You regain half of the mana provided by this class (round up). For example, if you are a 11th level witch doctor, you would regain 11 mana.
+
+### Ability Score Improvement
+*4th-level witch doctor feature*
+<div style='margin-top:-4px'></div>
+
+You gain the Ability Score Improvement feat or another feat of your choice for which you qualify. You gain this feature again at Witch Doctor levels 8, 12, and 16.
+
+### Epic Boon
+*19th-level witch doctor feature*
+<div style='margin-top:-4px'></div>
+
+You gain an Epic Boon feat or another feat of your choice for which you qualify. Boon of Fate is recommended.
+
+\pagebreak
+
+### Capstone
+*20th-level witch doctor feature*
+<div style='margin-top:-4px'></div>
+
+When you use your Magic Recharge feature, you regain all expended Pact Magic slots or Mana provided by this class.
+
+
+Possession
+At the 11th level, the Old God bestows upon you another gift—the gift of Possession. You can absorb the spirit of another long-dead Witch Doctor, gaining the permanent ability to channel that spirit to tap into its power. Choose a 6th-level spell from the Witch Doctor spell list as your Possession spell. You can call upon that spirit to Possess you for a short time, enabling you to cast that spell without expending a spell slot.
+
+At higher levels, you can absorb additional and more powerful spirits, allowing you to gain more Possession spells: one 7th-level spell at the 13th level, one 8th-level spell at the 15th level, and one 9th-level spell at the 17th level. Possession resets when you finish a short or long rest.
+
+Voodoo Guru
+At the 20th level, the Old God bestows upon you the title of “Voodoo Guru”, and creates a permanent and direct link between itself and the Witch Doctor. Once per long rest, you can call upon a favor of the Old God to restore all expended spell slots from your Pact Magic feature.
+
+
+## Witch Doctor Secrets
+#### Armor of Shadows
+Whenever you are not wearing armor or wielding a shield, your Armor Class is 13 + your Wisdom modifier.
+
+#### Aspect of the Moon
+You no longer need to sleep and cannot be forced to sleep by any means. To gain the benefits of a long rest, you can spend all 8 hours doing light activity, such as keeping watch.
+
+#### Beguiling Influence
+You have become infused with an otherworldly charm and presence. You gain proficiency in two of the following skills: Deception, Intimidation, or Persuasion.
+
+Whenever you make an ability check with the skills from this Invocation, you can add your Wisdom modifier to your roll in place of the normal ability score associated with the skill.
+
+#### Blood Scent
+
+#### Gaze of Two Minds
+You can use your action to touch a willing humanoid and perceive through its senses until the end of your next turn. As long as the creature is on the same plane of existence as you, you can use your action on subsequent turns to maintain this connection, extending the duration until the end of your next turn. While perceiving through the other creature’s senses, you benefit from any special senses possessed by that creature, and you are blinded and deafened to your own surroundings.
+
+#### Gift of Gral
+You manifest aquatic features. You can breathe underwater, and you gain a swimming speed equal to your walking speed.
+
+At 5th level, you learn the water breathing spell, and you can cast it once per long rest without expending a spell slot.
+
+#### Homunculus Servant
+You can craft a loyal servant over the course of 10 minutes, using 100 gp worth of materials (such as bundles of herbs, fine clay, or a carved stone figurine) as well as 1 pint of your blood. You determine its appearance, but this has no effect on its abilities. It is friendly to you, and it obeys your orders. It uses the Homunculus Servant stat block on this page, which uses your proficiency bonus (PB) in several places.
+
+You can only have one homunculus servant at a time; if you create another, the previous one turns to ash. If your homunculus servant dies, you can spend 2 mana and 1 minute repairing it, restoring it to life with its maximum hit points. If you die, it turns to ash after 1 minute.
+
+In combat, your Homunculus acts during your turn. It can move and use its reaction on its own, but it only takes the Dodge action on its turn unless you use your bonus action to order it to take an action in its stat block, or another action. If you are incapacitated, your Homunculus can act on its own and will defend its master to the best of its abilities.
+
+___
+> ## Homunculus Servant
+> *Tiny construct, Neutral*
+> ___
+> - **Armor Class** 11 + PB (natural armor)
+> - **Hit Points** 1 + two times your witch doctor level
+> - **Speed** 20 ft., fly 30 ft.
+> ___
+> |  STR  |  DEX  |  CON  |  INT  |  WIS  |  CHA  |
+> |:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+> | 4 (-3)|15 (+2)|12 (+1)|10 (+0)|10 (+0)| 7 (-2)|
+> ___
+> - **Senses** darkvision 60 ft., passive Perception 10 +PB
+> - **Languages** understands the languages you speak
+> ___
+> ***Channel Magic.*** When your homunculus is within 120 feet of you, you can cast an witch doctor spell with a range of touch through your homunculus' touch.
+> 
+> ***Evasion.*** If the homunculus makes a Dexterity saving throw to take only half damage, it instead takes no damage on a success, and half damage on a failure.
+>
+> ***Hit Dice.*** The homunculus has a total number of d4 Hit Dice equal to your witch doctor level. It gains all the normal benefits of both short and long rests.
+> 
+> ***Might of the Master.*** You add your PB to any ability check or saving throw your Homunculus makes.
+>
+> ### Actions
+> ***Spirit Slash.*** *Ranged or Melee Spell Attack:* your Wisdom modifier + PB to hit, range 30 ft., one target you can see. *Hit:* 2d4 + PB necrotic damage.
+
+#### Iron Will
+You have Advantage on Constitution saving throws that you make to maintain Concentration.
+
+#### Loa's Embrace
+Whenever you regain hit points, you can treat any die rolled as its maximum value.
+
+\pagebreakNum
+
+#### Magic Sight
+As an action you can awaken your senses to see the presence of magic within 30 feet of you. For 10 minutes, you can see a faint aura around any visible creature or object in that radius that bears magic, instantly learning its school of magic, if any. This sight is blocked by 1 foot of stone, 1 inch of metal, a thin sheet of lead, or 3 feet of wood or dirt. You must concentrate on this sense as if you were concentrating on a spell.
+
+#### Mask of Many Faces
+Strange and sinister magics have made your form fluid. As an action, you can change your physical appearance and voice to match that of a creature that you have seen before, so long as the new appearance has the same arrangement of limbs. You determine the specifics, including your race, coloration, sex, height, weight, and hair length, but you cannot change sizes. Transforming does not affect your clothing or game statistics.
+
+Misty Visions
+As an action, you shape otherworldly shadow into an illusory image of an object, creature, or a visible phenomenon that is no larger than a 15-foot cube in a spot you can see within 60 feet of. This image is purely visual; it cannot be accompanied by sound, smell, or other effects. It lasts for 10 minutes.
+
+As an action, you can cause this illusory image to move to another spot within 60 feet. When you do so, you can choose for it to move in a way that appears natural for the image.
+
+A creature that succeeds on an Intelligence (Investigation) check against your Spell save DC sees through the illusion.
+
+Conjuring a second illusion dispels any previous illusions.
+
+Sylvan Speech
+You learn to speak Sylvan, and while speaking in Sylvan you can comprehend and verbally communicate with beasts. The knowledge and awareness of many beasts is limited by their intelligence, but at minimum, they can give you information about nearby locations and monsters, including whatever they can perceive or have perceived in the past day.
+
+At 7th level, you can speak in Sylvan to communicate with plants as if you were under the effects of speak with plants.
+
+#### Potion Master
+When crafting common or uncommon magical potions, it takes one quarter of the time and costs half as much in material components. 
+
+This applies to higher rarity potions as you increase in witch doctor level: rare potions at 5th level, epic potions at 11th level, and legendary potions at 17th level.
+
+#### Ultravision
+You can see normally in Dim Light and Darkness—both magical and nonmagical—within 120 feet of yourself.
+
+#### Cloak of Decay
+*Prerequisites: 3rd level*
+<div style='margin-top:-4px'></div>
+
+As a bonus action, you conjure (or dispel) a swarm of ghostly flies that surround you in a 5-foot radius. Creatures of your choice that start their turn in this area take piercing damage equal to your Wisdom modifier (minimum of 0).
+
+The flies grant you advantage on Charisma (Intimidation) checks, but disadvantage on all other Charisma checks.
+
+#### Voodoo Vigor
+*Prerequisite: 3rd level*
+<div style='margin-top:-4px'></div>
+
+You can cast *false life* on yourself without spending mana. You cast this at a level equal to your proficiency bonus. When you cast the spell with this feature, you don't roll the die for the Temporary Hit Points; you automatically get the highest number on the die.
+
+#### One with Shadows
+*Prerequisite: 5th level*
+<div style='margin-top:-4px'></div>
+
+While you're in an area of Dim Light or Darkness, you can cast *invisibility* on yourself without spending mana.
+
+#### Powerful Mojo
+*Prerequisite: 5th level*
+<div style='margin-top:-4px'></div>
+
+Your vitality increases dramatically, granting you the following:
+- The Hit Dice provided by this class increase by one size (d6 becomes d8, d8 becomes d10, etc.)
+- Your hit point maximum increases by 1 plus 1 per witch doctor level. For example, a 5th-level witch doctor would thus gain 6 additional hit points.
+
+You can select this secret up to three times.
+
+#### Spirit Blade
+*Prerequisite: 5th level*
+
+As a bonus action, you can conjure a spirit in the form of a weapon in your empty hand. Each time you do, it takes the form of a melee weapon of your choice with these special benefits:
+- You can use your Wisdom modifier, in place of your Strength or Dexterity, for attack and damage rolls with this weapon.
+- You are proficient with this weapon if you weren't already.
+- You can cause the weapon to deal Necrotic, Psychic, or Radiant damage in place of its normal damage type.
+- You can use it as a spellcasting focus for your witch doctor spells.
+
+The Spirit Blade disappears if it is more than 5 feet from you for 1 minute, if you conjure another Spirit Blade, if you dismiss your Spirit Blade (no action required), or if you die.
+
+You can bond a magic melee weapon as an Spirit Blade by performing a 1-hour ritual. You can use a bonus action to shunt it to an extradimensional space, or conjure it. Bonding a second weapon ends the bond for any previous weapons.
+
+#### The Dead Walk
+*Prerequisite: 5th level*
+
+You can cast *animate dead* once without expending mana. You cast this at a level equal to your proficiency bonus. Once you do so, you can't cast it in this way again until you finish a long rest.
+
+#### Thirsting Blade
+*Prerequisites: Level 5+ Warlock, Spirit Blade*
+<div style='margin-top:-4px'></div>
+
+You gain the Extra Attack feature for your Spirit Blade only. With that feature, you can attack twice with the weapon instead of once when you take the Attack action on your turn.
+
+\pagebreakNum
+
+Additionally, if you use your action to cast a Witch Doctor spell, you can make one Spirit Blade attack as a bonus action.
+
+#### Ascendant Step
+*Prerequisite: 7th level*
+<div style='margin-top:-4px'></div>
+
+As a bonus action, you can grant yourself a temporary flying speed equal to your walking speed, which lasts until the end of your current turn, but you cannot hover. If you end your turn and are not secure then you fall to the ground.
+
+#### Whispers of the Grave
+*Prerequisite: 7th level*
+<div style='margin-top:-4px'></div>
+
+You learn the *speak with dead* spell and can cast it at will without expending mana.
+
+#### Witch Sight
+*Prerequisite: 9th level*
+
+Your eyes glow with an unnatural pale green light. You have Truesight out to a radius of 10 feet while you are conscious.
+
+At 15th level the radius of your Truesight becomes 30 feet.
+
+#### Lifedrinker
+*Prerequisites: 11th level, Spirit Blade*
+<div style='margin-top:-4px'></div>
+
+Once per turn when you hit a creature with your spirit blade, you can deal an extra 1d6 Necrotic, Psychic, or Radiant damage (your choice) to the creature, and you can expend one of your Hit Point Dice to roll it and regain a number of Hit Points equal to the roll plus your Constitution modifier (minimum of 1 Hit Point).
+
+#### Minor Possession
+*Prerequisites: 11th level*
+<div style='margin-top:-4px'></div>
+
+You can absorb the spirit of another long-dead Witch Doctor, gaining the permanent ability to channel that spirit to tap into its power. Choose a 6th-level spell from the Witch Doctor spell list as your Possession spell. You can call upon that spirit to Possess you for a short time, enabling you to cast that spell without spending mana. Once you use this spell, you must complete a long rest before you can cast do so again.
+
+#### Devouring Blade
+*Prerequisites: 12th level, Thirsting Blade*
+<div style='margin-top:-4px'></div>
+
+The Extra Attack of your Thirsting Blade secret confers two extra attacks rather than one.
+
+#### Greater Possesion
+*Prerequisites: 13th level*
+<div style='margin-top:-4px'></div>
+
+You can absorb the spirit of another long-dead Witch Doctor, gaining the permanent ability to channel that spirit to tap into its power. Choose a 7th-level spell from the Witch Doctor spell list as your Possession spell. You can call upon that spirit to Possess you for a short time, enabling you to cast that spell without spending mana. Once you use this spell, you must complete a long rest before you can do so again.
+
+#### Mystic Possession
+*Prerequisites: 15th level*
+<div style='margin-top:-4px'></div>
+
+You can absorb the spirit of another long-dead Witch Doctor, gaining the permanent ability to channel that spirit to tap into its power. Choose a 8th-level spell from the Witch Doctor spell list as your Possession spell. You can call upon that spirit to Possess you for a short time, enabling you to cast that spell without spending mana. Once you use this spell, you must complete a long rest before you can do so again.
+
+#### Ancient Possession
+*Prerequisites: 17th level*
+<div style='margin-top:-4px'></div>
+
+You can absorb the spirit of another long-dead Witch Doctor, gaining the permanent ability to channel that spirit to tap into its power. Choose a 9th-level spell from the Witch Doctor spell list as your Possession spell. You can call upon that spirit to Possess you for a short time, enabling you to cast that spell without spending mana. Once you use this spell, you must complete a long rest before you can do so again.
+
+#### Witch's Brew
+
+
+
+\pagebreakNum
+
+#### Alchemy
+Gives alchemy supply proficiency
+
+You gain proficiency in 
+
+#### Agonizing Blast
+*Prerequisites: Level 2+ Witch Doctor, a Witch Doctor Cantrip That Deals Damage*
+<div style='margin-top:-4px'></div>
+
+Choose one of your known Witch Doctor cantrips that deals damage. You can add your Wisdom modifier to that spell's damage rolls.
+
+***Repeatable.*** You can gain this invocation more than once. Each time you do so, choose a different eligible cantrip.
+
+#### Eldritch Smite
+*Prerequisites: Level 5+ Warlock, Pact of the Blade*
+<div style='margin-top:-4px'></div>
+
+Once per turn when you hit a creature with your pact weapon, you can expend a Pact Magic spell slot to deal an extra 1d8 Force damage to the target, plus another 1d8 per level of the spell slot, and you can give the target the Prone condition if it is Huge or smaller.
+
+\pagebreakNum
+
+#### Eldritch Spear
+*Prerequisites: Level 2+ Warlock, a Warlock Cantrip That Deals Damage*
+<div style='margin-top:-4px'></div>
+
+Choose one of your known Warlock cantrips that deals damage and has a range of 10+ feet. When you cast that spell, its range increases by a number of feet equal to 30 times your Warlock level.
+
+***Repeatable.*** You can gain this invocation more than once. Each time you do so, choose a different eligible cantrip.
+
+#### Gaze of Two Minds
+*Prerequisite: Level 5+ Warlock*
+<div style='margin-top:-4px'></div>
+
+You can use a Bonus Action to touch a willing creature and perceive through its senses until the end of your next turn. As long as the creature is on the same plane of existence as you, you can take a Bonus Action on subsequent turns to maintain this connection, extending the duration until the end of your next turn. The connection ends if you don't maintain it in this way.
+
+While perceiving through the other creature's senses, you benefit from any special senses possessed by that creature, and you can cast spells as if you were in your space or the other creature's space if the two of you are within 60 feet of each other.
+
+#### Gift of the Depths
+*Prerequisite: Level 5+ Warlock*
+<div style='margin-top:-4px'></div>
+
+You can breathe underwater, and you gain a Swim Speed equal to your Speed.
+
+You can also cast Water Breathing once without expending a spell slot. You regain the ability to cast it in this way again when you finish a Long Rest.
+
+#### Gift of the Protectors
+*Prerequisites: Level 9+ Warlock, Pact of the Tome*
+<div style='margin-top:-4px'></div>
+
+A new page appears in your Book of Shadows when you conjure it. With your permission, a creature can take an action to write its name on that page, which can contain a number of names equal to your Charisma modifier (minimum of one name).
+
+When any creature whose name is on the page is reduced to 0 Hit Points but not killed outright, the creature magically drops to 1 Hit Point instead. Once this magic is triggered, no creature can benefit from it until you finish a Long Rest.
+
+As a Magic action, you can erase a name on the page by touching it.
+
+\columnbreak
+
+#### Investment of the Chain Master
+*Prerequisites: Level 5+ Warlock, Pact of the Chain*
+<div style='margin-top:-4px'></div>
+
+When you cast Find Familiar, you infuse the summoned familiar with a measure of your eldritch power, granting the creature the following benefits.
+___
+- **Aerial or Aquatic.** The familiar gains either a Fly Speed or a Swim Speed (your choice) of 40 feet.
+- **Quick Attack.** As a Bonus Action, you can command the familiar to take the Attack action.
+- **Necrotic or Radiant Damage.** Whenever the familiar deals Bludgeoning, Piercing, or Slashing damage, you can make it deal Necrotic or Radiant damage instead.
+- **Your Save DC.** If the familiar forces a creature to make a saving throw, it uses your spell save DC.
+- **Resistance.** When the familiar takes damage, you can take a Reaction to grant it Resistance against that damage.
+
+#### Lessons of the First Ones
+*Prerequisite: Level 2+ Warlock*
+<div style='margin-top:-4px'></div>
+
+You have received knowledge from an elder entity of the multiverse, allowing you to gain one Origin feat of your choice.
+
+***Repeatable.*** You can gain this invocation more than once. Each time you do so, choose a different Origin feat.
+
+
+#### Mask of Many Faces
+*Prerequisite: Level 2+ Warlock*
+<div style='margin-top:-4px'></div>
+
+You can cast Disguise Self without expending a spell slot.
+
+#### Master of Myriad Forms
+*Prerequisite: Level 5+ Warlock*
+<div style='margin-top:-4px'></div>
+
+You can cast Alter Self without expending a spell slot.
+
+#### Misty Visions
+*Prerequisite: Level 2+ Warlock*
+<div style='margin-top:-4px'></div>
+
+You can cast Silent Image without expending a spell slot.
+
+#### Otherworldly Leap
+*Prerequisite: Level 2+ Warlock*
+<div style='margin-top:-4px'></div>
+
+You can cast Jump on yourself without expending a spell slot.
+
+\pagebreakNum
+
+#### Pact of the Blade
+As a Bonus Action, you can conjure a pact weapon in your hand—a Simple or Martial Melee weapon of your choice with which you bond—or create a bond with a magic weapon you touch; you can't bond with a magic weapon if someone else is attuned to it or another Warlock is bonded with it. Until the bond ends, you have proficiency with the weapon, and you can use it as a Spellcasting Focus.
+
+Whenever you attack with the bonded weapon, you can use your Charisma modifier for the attack and damage rolls instead of using Strength or Dexterity; and you can cause the weapon to deal Necrotic, Psychic, or Radiant damage or its normal damage type.
+
+Your bond with the weapon ends if you use this feature's Bonus Action again, if the weapon is more than 5 feet away from you for 1 minute or more, or if you die. A conjured weapon disappears when the bond ends.
+
+#### Pact of the Chain
+You learn the Find Familiar spell and can cast it as a Magic action without expending a spell slot.
+
+When you cast the spell, you choose one of the normal forms for your familiar or one of the following special forms: Imp, Pseudodragon, Quasit, Skeleton, Slaad Tadpole, Sphinx of Wonder, Sprite, or Venomous Snake (see appendix B for the familiar's stat block).
+
+Additionally, when you take the Attack action, you can forgo one of your own attacks to allow your familiar to make one attack of its own with its Reaction.
+
+#### Pact of the Tome
+Stitching together strands of shadow, you conjure forth a book in your hand at the end of a Short or Long Rest. This Book of Shadows (you determine its appearance) contains eldritch magic that only you can access, granting you the benefits below. The book disappears if you conjure another book with this feature or if you die.
+
+***Cantrips and Rituals.*** When the book appears, choose three cantrips, and choose two level 1 spells that have the Ritual tag. The spells can be from any class's spell list, and they must be spells you don't already have prepared. While the book is on your person, you have the chosen spells prepared, and they function as Warlock spells for you.
+
+***Spellcasting Focus.*** You can use the book as a Spellcasting Focus.
+
+#### Repelling Blast
+*Prerequisites: Level 2+ Warlock, a Warlock Cantrip That Deals Damage via an Attack Roll*
+<div style='margin-top:-4px'></div>
+
+Choose one of your known Warlock cantrips that requires an attack roll. When you hit a Large or smaller creature with that cantrip, you can push the creature up to 10 feet straight away from you.
+
+Repeatable. You can gain this invocation more than once. Each time you do so, choose a different eligible cantrip.
+
+#### Visions of Distant Realms
+*Prerequisite: Level 9+ Warlock*
+<div style='margin-top:-4px'></div>
+
+You can cast Arcane Eye without expending a spell slot.
+
+\pagebreakNum
+
+#### ???
+Binding small spirits into items for temporary enchantments
+
+#### ???
+Cannibalism
+
+#### ???
+Create short-lived potions of healing
+
+#### ???
+Induce berserk rage
+
+#### Poison Dart
+Poison poison, knockout poison. Blowgun bonuses
+
+\pagebreakNum
+
+<div class="classTable wide" />
+
+##### Loa
+Name        | Title | Worshipers |Status
+------------|-------|------------|---------
+Agamaggan   | The Great Boar, the Razorboar | Shadowtooth clan <br/> Quilboar | Deceased
+Akali	    | The grand rhino of Zul'Drak, Rhino god | Drakkari <br/> Zandalari | Deceased
+Akil'darah	| Eagle spirit of the Hinterlands      | Revantusk <br/> Vilebranch        | Active
+Akil'zon	| Eagle god, Amani Eagle Spirit | Amani <br/> Zandalari           | Active
+Akunda	    | The loa of storms and new beginnings  | Zandalari <br/> Darkspear <br/> Sethrak | Active
+Bethekk	    | Loa of Panthers	                | Gurubashi <br/> Zandalari | Active
+Bwonsamdi	| Loa of Death, Great Spirit, loa of graves, <br/> keeper of souls,  lord of death, loa of kings | Darkspear <br/> Zandalari <br/> Farraki | Active
+Dambala	    | Loa of Treachery	| Darkspear | Deceased
+Elortha no Shadra |	The Venom Queen, Loa of Spiders, <br/> the Silk Dancer, Mother of Venom, <br/> God of Spiders, Death's Love, <br/> Mistress of Spies | Darkspear <br/> Vilebranch <br/> Witherbark <br/> Gurubashi <br/> Farraki <br/> Zandalari	| Active
+Eraka no Kimbul	| God of Tigers, Loa of Tigers, <br/> Lord of Beasts, King of Cats, <br/> The Prey's Doom, Doom of no Predator | Farraki <br/> Zandalari <br/> Tortollans <br/> Sethrak | Active
+G'huun	        | The Blood God	| Blood trolls <br/> Zandalari | Deceased
+Gonk	    |The Great Hunter, Lord of the Pack, Loa of the Hunt, <br/> Master of shapes, Packstrider, Lord of the hunt, Loa of Shapes | Darkspear <br/> Zandalari | Active
+Gral	   | Loa of the sea	| Zandalari <br/> Tuskarr | Active
+Grimath		|   | Zandalari	| Active
+Halazzi	    | Lynx god, Amani Lynx Spirit | Amani <br/> Zandalari | Active
+Hakkar	    | The Soulflayer, The Blood God, The Faceless One, The Loa of Blood, <br/> Patron and doom of the Gurubashi Empire  | Gurubashi <br/> Skullsplitter <br/> Bloodscalp <br/> Atal'ai <br/> Hakkari <br/> Vilebranch <br/> Witherbark <br/> Sandfury <br/> Zandalari <br/> Blood trolls | Active
+Har'koa	    | Spotted one, Snow leopard goddess, Cat goddess    | Drakkari <br/> Zandalari | Active
+Hethiss	    | Snake God | Gurubashi <br/> Zandalari	| Active
+Hir'eek	    | Loa of Night, Lord of the Midnight Sky, Loa of bats, the Bat Loa | Blood trolls <br/> Darkspear <br/> Gurubashi <br/> Zandalari <br/> Amani | Active
+
+</div>
+
+\pagebreakNum
+
+<div class="classTable wide" />
+
+##### Loa, Continued
+
+Name        | Title | Worshipers |Status
+------------|-------|------------|---------
+Jani	    | Patron of Scavengers, the Lord of Thieves, the God of Garbage, <br/> Master of Minions, the Keeper of Secrets | Zandalari <br/> Darkspear | Active
+Jan'alai | Amani Dragonhawk Spirit | Amani <br/> Zandalari | Active
+Kevo ya Siti | Loa of Cunning |  Darkspear | Active
+Kith'ix | | Zan'do's followers | Deceased
+Krag'wa	| The Huge, The Terrible, De great toad, De great guardian, Huge one | Zandalari <br/> Darkspear | Active
+Lakali	| Loa of knowledge | Unknown | Cocooned
+Lukou	| Loa of Regeneration, Loa of Pain	| Darkspear |	Active
+Mam'toth | God of the mammoths, Mighty mammoth of Zul'Drak | Drakkari <br/> Zandalari |	Cocooned
+Nalorakk | Bear God, Amani Bear Spirit | Amani <br/> Zandalari |	Active
+Pa'ku	| Lord of Winds, Queen of the skies, Matron of the sea, Windmother, <br/> Master of Winds, Mother of the seas, Master of the skies | Zandalari	| Active
+Quetz'lun| Loa of cunning | Drakkari <br/> Zandalari | Active
+Q'onzu	|Loa of Change	| Wildkin | Active
+Rezan	| Loa of Kings, King of Kings, God of the Hunt | Zandalari | Deceased
+Rhunok	| Bear of the North	| Drakkari <br/> Zandalari | Active
+Samedi	| Loa of the Grave	| Darkspear	| Active
+Sethraliss| | Zandalari <br/> Sethrak	| Active
+Shango	| Loa of Storms	 | Darkspear	| Active
+Shirvallah	| Loa of Tigers	| Darkspear <br/> Gurubashi <br/> Zandalari | Active
+Sseratus | God of Snakes, Serpent god | Drakkari <br/> Zandalari | Active
+Tharon'ja | | Drakkari <br/> Zandalari | Cocooned
+Torcali	| The Moving Mountain, <br/> The Wandering Bulwark | Zandalari	| Active
+Torga	| Loa of the turtles | Zandalari <br/> Tortollans | Alive
+Ueetay no Mueh'zala | God of Death, Father of Sleep, Son of Time, the Night's Friend | Farraki <br/> Darkspear traitors <br/> Spriggan <br/> Boggart | Active
+Xibala	| | Troll spectre |	Deceased
+Zanza | The Restless, Loa of Zandalar | Zandalari <br/> Amani <br/> Smolderthorn	| Active
+
+</div>
+
+\pagebreakNum
+
+<div style='column-count:2'>
+
+### Witch Doctor Spells
+##### Cantrips (0 Level)
+Acid Splash
+<br/> Chill Touch
+<br/> Create Bonfire
+<br/> Dancing Lights
+<br/> Eldritch Blast
+<br/> Elementalism (2024)
+<br/> Friends
+<br/> Frostbite
+<br/> Guidance
+<br/> Infestation
+<br/> Poison Spray
+<br/> Primal Savagery
+<br/> Produce Flame
+<br/> Resistance
+<br/> Thaumaturgy
+<br/> Toll the Dead
+<br/> True Strike
+<br/> Vicious Mockery
+<br/> Witchcraft (NEW)
+
+##### 1st-Level
+Absorb Elements
+<br/> Alarm
+<br/> Animal Friendship
+##### 2nd-Level
+Berserk Rage
+##### 3rd-Level
+Bestow Curse
+<br/> Remove Curse
+##### 4th-Level
+##### 5th-Level
+Baleful Polymorph
+##### 6th-Level
+##### 7th-Level
+##### 8th-Level
+##### 9th-Level
+
+</div>
+
+\pagebreakNum
+
+### Spell Descriptions
+
+#### Baleful Polymorph (Hex)
+*5th-level Transmutation*
+___
+- **Casting time:** 1 action
+- **Range:** 30 feet
+- **Components:** V, S
+- **Duration:** Permanent
+---
+You attempt to transform a creature that you can see within range into a Beast. The target must succeed on a Wisdom saving throw or shape-shift into Beast form for the duration. If the new form would prove fatal to the creature (for example, if you polymorphed a landbound target into a fish, or an airborne target into a toad), the subject has advantage on the save.
+
+The new form can be any Beast you choose that has a Challenge Rating of 0, such as a frog or sheep. The target's game statistics are replaced by the stat block of the chosen Beast, but the target retains its alignment, personality, creature type, Hit Points, and Hit Point Dice. The target is limited in the actions it can perform by the anatomy of its new form, and it can't speak or cast spells. The target's gear falls to the ground at its feet, even if they could be worn or carried by the new form.
+
+The target is allowed an additional saving throw when it is reduced to 0 hit points or after 24 hours, ending the spell on a success. After the target fails three of these saves, the spell becomes permanent and the target's game statistics are fully replaced by the chosen form.
+
+***At Higher Levels.*** When you cast this spell using a spell slot of 6th level or higher, the target gets one less additional saving throw before the spell becomes permanent. 
+
+For example, if you cast this spell at 6th level, the target would be permanently polymorphed after failing two additional saves, and if you cast it at 8th level or higher, the target will be permanently transformed if it fails its initial save.
+
+#### Berserk Rage
+*2nd-level enchantment*
+___
+- **Casting Time:** 1 action
+- **Range:** 120 ft.
+- **Components:** V, S
+- **Duration:** Concentration, up to 1 minute
+---
+You attempt to drive a willing creature you can see into a rage for the duration. While in a rage, the target gains the following:
+- They have advantage on Concentration and Strength checks and on Strength saving throws.
+- They have advantage on melee and thrown weapon attack rolls.
+- When they make a melee or weapon attack using Strength, they deal an additional 1d4 damage.
+- They have resistance to bludgeoning, piercing, and slashing damage.
+- Attack rolls against the creature have advantage.
+- They cannot cast spells or concentrate on them.
+
+However, the target must make a Wisdom saving throw or become berserk (as the condition) for the duration. Once a creature has become berserk, ending your concentration does not end the spell's effects on them.
+
+***At Higher Levels.*** When you cast this spell using a spell slot of 3rd level or higher, you can affect one additional creature per spell slot above 2nd level.
+
+\pagebreakNum
+
+# Appendix A: Conditions
+
+### Berserk
+A berserk creature is driven mad with blind rage, most commonly due to the effects of a drug, a curse, or a creature associated with madness. Many things may cause a creature to become berserk, but it is always specified by the feature.
+#### Effects
+A creature's mind is completely maddened after going berserk, making them gain the following while under the condition:
+- The berserk creature must use its action each round to attack the creature nearest to it. If it can make extra attacks as part of the Attack action, it uses those extra attacks, moving to attack the next nearest creature after it fells its current target. If it has multiple possible targets, it attacks one at random.
+- If it can use its reaction and/or bonus action to deal damage directly to a creature, it must do so.
+- When a non-hostile creature moves out of a berserk creature's reach, it provokes an opportunity attack.
+- It has disadvantage on Wisdom ability checks and saving throws and automatically fails Intelligence ability checks and saving throws.
+- It can't cast or concentrate on spells.
+- It is immune to the charmed and frightened conditions.
+#### Removal
+- The condition ends if the berserk creature starts its turn with no creatures within 60 feet of it that it can see or hear.
+- A *calm emotions* spell, or any other feature that suppresses or removes the charmed condition, likewise affects a berserk creature.
+#### Resistances and Vulnerabilities
+- Creatures that have advantage against the charmed condition or have resistance to psychic damage have advantage against the berserk condition.
+- Creatures that are immune to psychic damage or the charmed condition are also immune to the berserk condition.
+
+\columnbreak
+
+### Bloodlusted
+A creature affected with bloodlust has worked itself into a frenzied state, most likely due to partaking too deep into an inner sadistic nature, the effects of a drug or curse, or high levels of stress. All that matters is that they wish to destroy a single target, and won't stop until they do.
+#### Cause
+There are many things that may lead a creature to becoming bloodlusted. This condition is generally caused by a feature that messes with the creature's mind, although always specified in said feature. However, differing from the berserk condition a player may choose to enter the bloodlust condition at will for roleplaying purposes. A creature cannot be bloodlusted towards more than one creature at once.
+#### Effects
+A creature's mind is completely maddened after going berserk, making them gain the following while under the condition:
+- A bloodlusted creature must use its whole turn each round to harm the creature that it currently is bloodlusted towards. Even if it would not be beneficial to harm the creature such as by provoking an opportunity attack from a creature, the bloodlusted creature would do it.
+- A bloodlusted creature has disadvantage on Wisdom and Charisma ability checks and saving throws.
+- A bloodlusted creature automatically fails Intelligence ability checks and saving throws, and can't cast or concentrate on spells.
+- A bloodlusted creature is immune to the charmed and frightened conditions, and they will instantly lose these conditions in case they receive the bloodlusted condition.
+#### Removal
+- The condition ends if the creature which caused the condition is killed.
+- The conditions ends if the bloodlusted creature starts its turn with the creature it is bloodlusted towards out of its sight or hearing range.
+- The condition ends if the calm emotions spell is cast or any other feature which suppresses or removes the charmed condition can also cure the bloodlusted condition in addition to its usual effects.
+#### Resistances and Vulnerabilities
+- Creatures that have advantage against the charmed condition or have resistance to psychic damage have advantage against the bloodlusted condition.
+- Creatures that are immune to psychic damage or the charmed condition are also immune to the bloodlusted condition.
+
+\pagebreakNum
+
+### Polymorphed
+#### Cause
+#### Effects
+#### Removal
+#### Resistances and Vulnerabilities
+
+\pagebreakNum
+
+# Appendix D: Creature Statistics
+
+___
+>## Frog
+>*Diminutive Beast (Reptilian), unaligned*
+>___
+>- **Armor Class** 11
+>- **Hit Points** 1
+>- **Speed** 20 ft., climb 20 ft., swim 20 ft.
+>- **Initiative** +1 (11)
+>___
+>|STR|DEX|CON|INT|WIS|CHA|
+>|:---:|:---:|:---:|:---:|:---:|:---:|
+>|1 (-5)|13 (+1)|8 (-1)|1 (-5)|8 (-1)|3 (-4)|
+>___
+>- **Skills** Perception +1, Stealth +3
+>- **Senses** Darkvision 30 ft., passive Perception 11
+>- **Languages** —
+>- **Challenge** 0 (XP 10; PB +2)
+>___
+>***Amphibious.*** The frog can breathe air and water.  
+>
+>***Standing Leap.*** The frog's Long Jump is up to 10 feet and its High Jump is up to 5 feet with or without a running start. 
+
+
+___
+>## Sheep^STK^
+>*Small Beast, unaligned*
+>___
+>- **Armor Class** 10
+>- **Hit Points** 3 (1d6)
+>- **Speed** 30 ft.
+>- **Initiative** +0 (10)
+>___
+>|STR|DEX|CON|INT|WIS|CHA|
+>|:---:|:---:|:---:|:---:|:---:|:---:|
+>|12 (+1)|10 (+0)|11 (+0)|2 (-4)|10 (+0)|5 (-3)|
+>___
+>- **Senses** passive Perception 10
+>- **Languages** —
+>- **Challenge** 0 (XP 10; PB +2)
+>- **Proficiency Bonus** +2
+>___
+>***Sure-Footed.*** The sheep has advantage on Strength and Dexterity saving throws made against effects that would knock it prone.  
