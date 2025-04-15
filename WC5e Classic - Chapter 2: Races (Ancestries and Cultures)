@@ -1,0 +1,560 @@
+<style>
+/* GLOBAL FORMATTING  */
+
+  /* Resize page to international A4 */
+  .phb {
+    width: 210mm;
+    height: 296.8mm;
+  }
+  .phb:after { content: ""; }
+
+
+/* TABLE OF CONTENTS  */
+
+  /* toc specifically wants black text. This resets the headers*/
+  .toc a {
+    color: inherit !important;
+  }
+  /* Allow dot leaders to fill remaining space but not overlap */
+  .toc li span:nth-child(2) {
+    width: auto;
+    overflow: hidden;
+    white-space: nowrap;
+    display: block;
+  }
+  .toc li span:nth-child(2):after {
+    font-family: BookSanity;
+    font-size: 0.317cm;
+    font-weight: normal;
+    color: black;
+    content:
+      " ........................................"
+      "........................................."
+      ".........................................";
+    }
+
+  /* Style TOC page numbers*/
+  .toc li span:first-child {
+    float: right;
+    font-family: BookSanity;
+    font-size: 0.317cm;
+    font-weight: normal;
+    color: black;
+    margin-left: 1px;
+  }
+
+  /* Adjust TOC H3 styles */
+  .toc li h3 span:nth-child(2):after {
+  	content: " ";
+  }
+  .toc li h3 {
+    margin-bottom: 4px !important;
+    margin-top: 10px !important;
+    line-height: initial !important;
+  }
+  .toc li h3 span:first-child {
+  	line-height: 1.8em !important;
+  }
+
+  /* Reduce TOC list indentation*/
+  .toc ul ul {
+  	margin-left: 10px !important;
+  }
+  .toc>ul>li {
+    margin-bottom: initial !important;
+  }
+
+
+/* TABLES AND BLOCKS */
+
+  /* Clear internal padding and add gap above for green note blocks*/
+  .phb blockquote {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .phb blockquote { margin-top: 1em;
+  }
+
+
+/* INK BLOT STYLES */
+
+  /* Root style for inkblots. Use alone, or together with
+  one of the inkb lotstyle classes below. Essentially:
+  <img url='{url}' class='inkblot inkblot-blue' />
+  */
+  .inkblot {
+    position: absolute;
+    mix-blend-mode: multiply;
+    opacity: 0.6;
+  }
+
+  .inkblot-blue {
+    filter: hue-rotate(190deg) saturate(120%)
+  }
+
+  .inkblot-green {
+    filter: hue-rotate(120deg)
+  }
+
+/* PAGE STYLE */
+
+   /* Background */
+     .phb{ background-image: url('https://gmbinder.com/images/KN1O92T.png') }
+     .phb{ background-size: cover }
+
+   /* Notes */
+     .phb section blockquote {background-color: #f6e5d4}
+     .phb hr + section blockquote tr:nth-child(odd) td {background-color: transparent;}
+
+   /* Tables */
+     table tr:nth-child(odd) td {background-color: #cccccc}
+
+   /* Footer */
+     .phb .pageNumber {color: rgba(0, 0, 0, 0.5)}
+     .phb .footnote {color: rgba(0, 0, 0, 0.5)}
+     .phb:nth-child(odd):after{ 
+       content          : '';
+       position         : absolute;
+       bottom           : -7px;
+       left             : 10px;
+       z-index          : -1;
+       height           : 336px;
+       width            : 100%;
+       background-image : url('https://www.gmbinder.com/images/bNTz1nk.png');
+       background-size  : cover;
+   }
+
+   .phb:nth-child(even):after{ 
+       content          : '';
+       position         : absolute;
+       bottom           : -7px;
+       left             : -10px;
+       z-index          : -1;
+       height           : 336px;
+       width            : 100%;
+       background-image : url('https://www.gmbinder.com/images/6NCzAN0.png');
+       background-size  : cover;
+   }
+
+   /* Page Number */
+   .phb .pageNumber{
+       position   : absolute;
+       bottom     : 30px;
+       width      : 50px;
+       text-align : center;
+   }
+   .phb:nth-child(even) .pageNumber{
+       left      : 12px;
+   }
+   .phb:nth-child(odd) .pageNumber{
+       right      : 12px;
+   }
+
+   .phb .pageNumber.auto{
+       position   : absolute;
+       bottom     : 41px;
+       width      : 50px;
+       text-align : center;
+   }
+   .phb:nth-child(even) .pageNumber.auto{
+       left      : 12px;
+   }
+   .phb:nth-child(odd) .pageNumber.auto{
+       right      : 12px;
+   }
+
+/* FRONT PAGE STYLES */
+
+  .cover-header-container {
+    display: block;
+    position: absolute;
+    width: 100%;
+    top: 80px;
+    left: 0;
+    right: 0;
+    clear: both;
+  }
+
+  .cover-header-logo {
+    display: block;
+    width: 700px;
+    margin: auto;
+  }
+
+  .cover-header-divider {
+    display: block;
+    width: 580px;
+    margin: -12px auto -6px;
+  }
+
+  .cover-header-title {
+    display: block;
+    width: 700px;
+    margin: auto;
+    color: white;
+    font-family: NodestoCaps,nodesto,sans-serif;
+    font-weight: normal;
+    font-size: 72px;
+    line-height: 72px;
+    text-align: center;
+    text-shadow: 2px 2px 4px #000, -2px 2px 4px #000, 2px -2px 4px #000, -2px -2px 4px #000;
+  }
+
+  .cover-footer-container {
+    display: block;
+    position: absolute;
+    width: 100%;
+    bottom: 28px;
+    left: 0;
+    right: 0;
+    clear: both;
+  }
+
+  .cover-footer-subtitle,
+  .cover-footer-version {
+    display: block;
+    width: 500px;
+    margin: auto;
+    color: white;
+    font-family: NodestoCaps,nodesto,sans-serif;
+    font-weight: normal;
+    text-align: center;
+    text-shadow: 1px 1px 2px #000, -1px 1px 2px #000, 0px 0px 2px #000;
+  }
+  .cover-footer-subtitle {
+    font-size: 28px;
+    line-height: 28px;
+  }
+  .cover-footer-version {
+    margin-top: 16px;
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+</style>
+# Character Origins
+This chapter describes the three components of an adventurer's origin: ancestry, culture, and background. Together, these elements suggest your character's early experience and family origin before taking up the adventuring life and learning the capabilities of a class (described in chapter ###).
+
+## Origin Components
+Each part of your character's origin reflects facets of your character, their life, and the circumstances that started them on the path to adventure.
+
+Each component reflects a part of your character's life: the race or species that they were born as, the culture that shaped them into the person they grew up to be, and the position they held within that society that taught them the skills they needed to succeed.
+
+As no two people are the same, neither are any two origins. You can choose freely from each list of Ancestry, Culture, and Background. Examples include a "traditional" origin such as Arthas Menethil, a Human from the human kingdom of Lordaeron, where he is known as a Noble prince. Or alternatively, an unusual origin such Thrall, an Orc raised among the Lordaeron culture as a Gladiator.
+
+### Choosing your Ancestry
+When you choose your character's ancestry, you determine whether your character is a human or a member of a fantastical species, such as an elf, orc, or gnome.
+
+An ancestry determines many of the physiological aspects of your character. For example, orcs are naturally muscle-bound creatures, elves and draenei have an inherent talent for magic, and tauren are immense cow-like creatures with wide horns. These attributes provide certain benefits shared with all others of their species. 
+
+#### Parts of an Ancestry
+An ancestry includes the following parts.
+
+***Age.*** Members of most species live for about 80 years, with exceptions noted in the text about the species in this chapter. Regardless of life span, members of all species reach physical maturity at about the same age. Your character can be any age that isn't beyond their species' normal life span.
+
+***Creature Type.*** A character's ancestry determines the character's creature type, which is described in the Rules Glossary. Most species in this chapter are Humanoid.
+
+***Size.*** Your character’s ancestry determines the character's size. Individuals within an ancestry cover a wide range of heights, and some species include such diversity of size that you can choose whether your character is Small or Medium.
+
+***Speed.*** Your character’s ancestry determines the character’s Speed.
+
+***Special Traits.*** Each ancestry gives a character special traits - unique characteristics based on the ancestry's physiology or magical nature. When you choose an ancestry, your character gets all the special traits listed for it. Some traits involve making a choice from a handful of options.
+
+### Choosing your Culture
+A character’s culture is often determined by regional or social norms. Things like the languages you speak, the knowledge you value, or the habits you’ve developed are often part of your cultural upbringing. A character with Dalaran culture might put a lot of value in studying history or magic and would take pride in their ability to speak many languages. Your culture gives your character Cultural Traits, which are typically learned skills and talents.
+
+#### Parts of a Culture
+A culture includes some special traits, determined by the upbringing that primarily shaped your character. When you choose a culture, your character gets all the special traits listed for it. Some traits involve making a choice from a handful of options.
+
+### Subancestries and Subcultures
+Some Heritages have subancestries, such as Trolls or Elves, who have been known to have members with significantly different physiology. Heritages can also have Subcultures, areas where these groups of people have differing or specific beliefs or values from their larger culture.
+
+### Character Backgrounds
+Your character's background is a collection of characteristics that represent the place and occupation that were most formative before your character embarked on a life of adventure.
+
+Each background includes a brief narrative of what your character’s past might have been like. Alter the details of this narrative however you like.
+
+#### Parts of a Background
+A background includes the following parts.
+
+***Ability Scores.*** A background lists three of your character’s ability scores. Increase one by 2 and another one by 1, or increase all three by 1. None of these increases can raise a score above 20.
+
+***Feat.*** A background gives your character a specified Origin feat (described in chapter 5).
+
+***Skill Proficiencies.*** A background gives your character proficiency in two specified skills.
+
+***Tool Proficiency.*** Each background gives a character proficiency with one tool—either a specific tool or one chosen from the Artisan’s Tools category.
+
+***Equipment.*** Each background offers a choice between a package of equipment and 50 GP.
+
+\pagebreakNum
+
+## Dwarf
+### Ancestral Traits
+Your dwarf character has an assortment of inborn abilities, part and parcel of dwarven biology.
+
+***Age.*** Dwarves mature at the same rate as humans, but they’re considered young until they reach the age of 50. On average, they live about 350 years.
+
+***Size.*** Dwarves stand between 4 and 5 feet tall and average about 150 pounds. Your size is Medium.
+
+***Speed.*** Your base walking speed is 25 feet.
+
+***Low-Light Vision.*** Accustomed to life underground, you have superior vision in dim conditions. You can see in dim light within 120 feet of you as if it were bright light.
+
+***Dwarven Resilience.*** Dwarves are known for their hearty constitution, equally at home on frigid mountaintops as in sweltering forges or jungles. 
+- Whenever you make a Constitution ability check or saving throw, you may roll a d4 and add it to the total **[1]**. 
+- Your hit point maximum increases by 1, and it increases by 1 every time you gain a level, due in large part to the long history of difficult labor required to survive underground for generations.
+- Your speed isn’t reduced by wearing heavy armor.
+
+Expert Tools. You have proficiency with one set of tools of your choice. If you choose a set of artisan’s tools, when you make an ability check involving those artisan’s tools, you can roll a d4 and add the number rolled to the ability check.
+Stone Sense. Whenever you make an Intelligence (History) check related to stonework, you are considered proficient and can add double your proficiency bonus to the check, instead of your normal proficiency bonus.
+Suspicious of Magic. You have advantage on saving throws against illusions and against being charmed or paralyzed.
+
+### Cutural Traits
+There are three main subcultures, called clans, among the dwarves: the Bronzebeards, Dark Irons, and Wildhammers, each of which has a smattering of lesser families following them. Named after th founding clans, they
+
+***Dwarven Bravery.*** Practically every dwarf has a tendency towards being either brave or stubborn, oftentimes both. You have advantage on saving throws against being charmed or frightened.
+
+#### Bronzebeard
+If there's one thing these dwarves love, it's drinking. And fighting. Two things.
+
+***Alignment.*** Bronzebeard society is steeped in tradition, with a strong connection to their clan. They tend towards being lawful.
+
+***Dwarven Combat Training.*** Bronzebeards have a strong martial tradition, which helped their rise to prominence during the War of the Three Hammers. You have proficiency in light and medium armor, as well as the battleaxe, rifle, and warhammer.
+
+***Tool Proficiency.*** You gain proficiency with the artisan’s tools of your choice: smith’s tools, brewer’s supplies, mechanic’s tools, or mason’s tools.
+
+***Languages:*** 
+
+***Appearance:***
+
+***Male Names:***
+
+***Female Names:***
+
+***Clan Names:*** Bronzebeard, Stormpike, Stonefist
+
+#### Dark Iron
+***Alignment.*** 
+
+Tunnel Sense. Deep dwarven communities often occupy complex networks of tunnels and rocky passages. Those who live in these communities long enough come to have a special facility with finding their way around underground. When moving in natural passages underground, you cannot become lost except through magical means. What’s more, you have developed an innate sense for whether you are descending, ascending, or traveling in a straight line when moving through such tunnels.
+
+***Appearance:***
+
+***Male Names:***
+
+***Female Names:***
+
+***Clan Names:*** Dark Iron, Shadowforge
+
+#### Frostborne
+***Alignment.*** 
+
+***Appearance:***
+
+***Male Names:***
+
+***Female Names:***
+
+***Clan Names:***
+
+#### Wildhammer
+
+***Mountain Climber.*** Climb speed. You can use your reaction when you fall to reduce any falling damage you take by an amount equal to five times your proficiency bonus. You are naturally acclimated to high altitudes, though not to those above 20,000 feet.
+
+Survivalist. You have proficiency in the Survival skill.
+
+Throwing. You are skilled at throwing objects. You are considered proficient with any weapon or object you throw. If the thrown object isn’t a weapon, it deals 1d4 damage if it can fit in your hand, 1d6 if it can be thrown with 1 hand, or 1d8 damage if thrown with two hands. Range is 30/60 feet unless 2 handed, in which case the range is 10/30.
+
+***Appearance:***
+***Male Names:***
+***Female Names:***
+***Clan Names:*** Doyle, Dunwald, Firebeard, MacDuff, Moore, Mullan, Thundermar, Wildhammer
+
+
+Fade to Black. Your inner flame burns constantly, casting bright light in a 10-foot radius and dim light for an additional 10 feet. When you die, this inner fire fades to darkness.
+Fight Fire with Fire. A creature that touches you or hits you with a melee attack while within 5 feet of it takes 1d4 fire damage.
+Fire Body (Minor Feature). A salamander’s body flickers with flame. You have resistance to fire damage, and you can make your body hot enough to ignite an unattended flammable object you touch.
+Destructive Fire Magic (Magic). You know the fire bolt cantrip. When you reach 3rd level, you can cast the burning hands spell once with this trait and regain the ability to do so when you finish a long rest. When you reach 5th level, you can cast the scorching ray spell as a 2nd-level spell once with this trait and regain the ability to do so when you finish a long rest. You don’t require material components for these spells. Charisma is your spellcasting ability for these spells.
+Fire Immunity (Requires Resistance to Fire Damage). You are immune to fire damage.
+Heated Weapons (Transformation). You gain proficiency with a weapon of your choice. As an action, you can cause a weapon or spellcasting implement you hold to become imbued with fiery energy. For 1 minute the item is considered magical. Once on each of your turns, you can deal extra fire damage to one target when you deal damage to it with an attack or spell. The extra fire damage equals your level. Once you use this trait, you can’t use it again until you finish a long rest.
+Hot Body. You can lash out with fire when attacked. As a reaction when you are touched or hit by a melee attack from an attacker within 5 feet of you, you can force them to make a Dexterity saving throw. The DC for this saving throw equals 8 + your Constitution modifier + your proficiency bonus. A creature takes 1d4 fire damage on a failed save.
+Born in Fire. You are adapted to the most extreme heat environments. You ignore any of the drawbacks caused by a hot environment.
+Destructive Fire Magic (Magic). You know the fire bolt cantrip. When you reach 3rd level, you can cast the burning hands spell once with this trait and regain the ability to do so when you finish a long rest. When you reach 5th level, you can cast the scorching ray spell as a 2nd-level spell once with this trait and regain the ability to do so when you finish a long rest. You don’t require material components for these spells. Charisma is your spellcasting ability for these spells.
+Fiery Empowerment. When you damage a creature with an attack or a spell, you can cause the attack or spell to deal extra fire damage to the creature. The extra damage equals your level. Once you use this trait, you can’t use it again until you finish a short or long rest.
+Fire Nova. As an action, you can unleash a burst of fire in a 5-foot radius around you. Each creature in the area must make a Dexterity saving throw. The DC for this saving throw equals 8 + your Constitution modifier + your proficiency bonus. A creature takes 2d6 fire damage on a failed save, or half as much damage on a successful one. The damage increases to 3d6 at 6th level, 4d6 at 11th level, and 5d6 at 16th level. After you use this ability, you can’t use it again until you complete a short or long rest.
+Life Fire. When you take fire damage (or would take fire damage if you weren’t immune), you gain temporary hit points equal to your Constitution modifier after the damage is dealt. In addition, you gain advantage on your next attack roll, saving throw, or ability check within the next minute.
+Manipulative Fire Magic (Magic). You know the produce flame cantrip. When you reach 3rd level, you can cast the burning hands spell as a 2nd level spell once with this trait and regain the ability to do so when you finish a long rest. When you reach 5th level, you can cast the heat metal spell once with this trait and regain the ability to do so when you finish a long rest. You don’t require material components for these spells. Charisma is your spellcasting ability for these spells.
+One with Fire (Requires Resistance to Fire Damage). You are immune to fire damage.
+Enchanted Resistance. You have learned the secrets of a magical enchantment. During a short rest, you can carve temporary runes into a piece of jewelry. A creature that wears the jewelry gains resistance to one of the following damage types, chosen when you create the enchantment: acid, cold, fire, force, lightning, necrotic, poison, psychic, or radiant. You can only have one enchantment active at a time. If you create a new enchantment, the old one disappears.
+Magical Crafter. You have proficiency in one set of artisan’s tools of your choice. When you make a Wisdom (Arcana) check or ability check involving your tools, you can roll a d4 and add the number rolled to the ability check.
+
+Artisan Brewers. Sturdy halfling culture marks the passing of holidays and seasons with special brews of ale, stout, and spirits. From a young age, people raised in sturdy halfling culture sample these artisanal brews. You have advantage on saving throws against poison.
+
+Cowering Survivalist. You can take the Dodge action as a reaction to a melee attack from a creature you can see, but you have disadvantage on your own melee attacks until the end of your next turn when you do so.
+Ash and Flame. The ancestors of ash dwarves lived within volcanically active caves, deep underground. There breathable air was scarce and often toxic. You have resistance to fire damage and can breathe normally in thick smoke and clouds of ash. Furthermore, you have resistance to poison damage from gasses or toxin clouds of all kinds.
+Safe in Shadow. You have advantage on Stealth checks. You lose this ability in areas of bright light.
+Slave’s Lot. You were born and raised as a slave, and you have the same rights as a slave. These rights differ from territory to territory, but because of your race you will always be considered a slave.
+Mark of Freedom. If you have won your freedom—a rare occurrence—then you gain this racial trait. You have been marked with a brand, scars, or a tattoo that denotes your freedom. Marks of Freedom are seldom given and rare, and forging one is considered an insult towards other ash dwarves. Non ash dwarves may still treat you as a slave initially, though some territories might have systems in place to protect bearers of the Mark of Freedom.
+
+- Cold Acclimation Aura. Characters within 30 feet of you do not feel the effects of cold environments. Characters within this range can ignore any of the drawbacks cause by a cold environment.
+- Cold Breath. You can use your action to exhale cold in a 15-foot cone. Each creature in the area must make a Dexterity saving throw. The DC for this saving throw equals 8 + your Constitution modifier + your proficiency bonus. A creature takes 2d6 cold damage on a failed save, or half as much damage on a successful one. The damage increases to 3d6 at 6th level, 4d6 at 11th level, and 5d6 at 16th level. After you use your cold breath, you can’t use it again until you complete a short or long rest.
+- Flash Freeze. Your cold touch can freeze a creature in place. When you hit a creature with a melee attack, you can imbue it with cold. The creature must make a Constitution saving throw. The DC for this saving throw is 8 + your Constitution modifier + your proficiency bonus. On a failed save, the target’s speed is reduced to 0 until the end of their next turn. If the saving throw fails by 5+, they are instead restrained until the end of their next turn. Once you use this feature, you can’t use it again until you finish a short or long rest.
+- Ice Block. As a reaction when you take damage, you can freeze yourself in a block of ice for up to 1 minute. While frozen in this way you are petrified, and gain an amount of temporary hit points equal to five times your level. You are aware of your surroundings while in this state, and can choose to unfreeze yourself at the start of any of your turns within the next minute. Your temporary hit points disappear when you unfreeze. After one minute, you automatically unfreeze. Once you use this ability, you can’t use it again until you finish a short or long rest.
+- Ice Magic (Magic). You know the frostbite cantrip. When you reach 3rd level, you can cast the armor of agathys spell once with this trait and regain the ability to do so when you finish a long rest. When you reach 5th level, you can cast the heat metal spell once with this trait, but dealing cold damage instead of fire damage, and regain the ability to do so when you finish a long rest. You don’t require material components for these spells. Constitution is your spellcasting ability for these spells.
+- Ice Shaper (Magic). You know the shape water cantrip. When you reach 3rd level, you can cast the entangle spell once with this trait, but with ice and snow instead of grasping vines, and regain the ability to do so when you finish a long rest. When you reach 5th level, you can cast the earthen grasp spell once with this trait, creating a hand with ice and snow, and regain the ability to do so when you finish a long rest. You don’t require material components for these spells. Constitution is your spellcasting ability for these spells.
+- Icy Empowerment (Transformation). As an action, you can channel cold energy through your body, letting your heart of ice temporarily overpower your life energy. This lasts for 1 minute, or until you end it as a bonus action. During it, at the end of each of your turns, you and each creature within 10 feet of you take cold damage equal to half your level (rounded up). In addition, once on each of your turns, you can deal extra cold damage to one target when you deal damage to it with an attack or a spell. The extra cold damage equals your level. Once you use this trait, you can’t use it again until you finish a short or long rest.
+- Icy Nature. You know the ray of frost or frostbite cantrip. Constitution is your spellcasting ability for it.
+- Leave Snow Trace. You leave no tracks in icy or snowy terrain. You have advantage on Dexterity (Stealth) checks to hide in this terrain.
+- Snow Camouflage. You have advantage on Dexterity (Stealth) checks when in a snowy environment.
+- Snowballs. You can conjure snowballs from your body to throw. Your snowballs are considered a ranged weapon with a range of 30/90 feet, and you are considered proficient with them. You can use your Strength or Dexterity score for determining the attack roll, and your snowballs deal 1d4 bludgeoning damage plus your Strength or Dexterity modifier. Because of your skill with throwing snowballs, you are considered proficient with any thrown weapons.
+- Snowy Acclimation. You are adapted to extremely cold environments. You ignore any of the drawbacks caused by a cold environment and any movement penalties or difficult terrain from snow and ice.
+
+
+Major Features
+Choose two of the following major features. You can exchange one major feature for two additional minor features. You can only choose one feature with the (Magic) tag.
+
+Air Magic (Magic). You know the gust cantrip. When you reach 3rd level, you can cast the feather fall spell once with this trait and regain the ability to do so when you finish a long rest. When you reach 5th level, you can cast the levitate spell once with this trait and regain the ability to do so when you finish a long rest. You don’t require material components for these spells. Charisma is your spellcasting ability for these spells.
+Air Shield. As an action, you can create a whirlwind around a creature you can see within 60 feet, including yourself. The air shield lasts for 1 minute, requiring you to concentrate on it as if concentrating on a spell. While the air shield is active, ranged attack rolls against the target have disadvantage. Once you use this feature, you can’t use it again until you finish a short or long rest.
+Floating Movement. You can float on air when you move. You have a fly speed equal to your base walking speed, but you can’t be more than 5 feet off the ground or a floor. During your turn as a free action, you can choose to channel air energy into yourself to grant yourself a flying speed equal to your base walking speed with no height restriction for 1 minute. Once you do so, you can’t use unrestricted flight again until you finish a long rest.
+Storm Magic (Magic). You know the shocking grasp cantrip. When you reach 3rd level, you can cast the thunderwave spell once with this trait and regain the ability to do so when you finish a long rest. When you reach 5th level, you can cast the shatter spell once with this trait and regain the ability to do so when you finish a long rest. You don’t require material components for these spells. Charisma is your spellcasting ability for these spells.
+Zap. As an action, you can conjure a lightning bolt. The lightning bolt fills a line 5 feet wide and 30 feet long. All creatures in the area must make a Dexterity saving throw. The DC for this saving throw equals 8 + your Constitution modifier + your proficiency bonus. A creature takes 2d6 lightning damage on a failed save, or half as much damage on a successful one. The damage increases to 3d6 at 6th level, 4d6 at 11th level, and 5d6 at 16th level. After you use this feature, you can’t use it again until you finish a short or long rest.
+
+
+<div class="descriptive" style="position:absolute; bottom:30px; width:85%">
+
+**[1] Stacking bonus-die buffs can easily break skill checks. The following house rule is strongly recommended: Only one bonus-die effect (the largest) can be applied to any given d20 roll.**
+
+</div>
+
+\pagebreak
+
+## Dwarf
+*And here are the why and the how, to again become 
+<br>one with the mountain. For behold, we are the earthen, 
+<br>of the land, and its soul is ours, its pain is ours, its heartbeat is ours. We sing its song and weep for its 
+<br>beauty. For who would not wish to return home? 
+<br>That is the why, O children of the earth.*
+<div style="text-align:Left"> 
+
+*— Earthen tablet, as read by King Magni* &nbsp;</div>
+<div style='margin-top:-5px'></div>
+
+Their kingdom rich in ancient grandeur, halls carved into the roots of mountains, the echoing of picks and hammers in deep mines and roaring forges, a commitment to clan and tradition, these common threads unite all dwarves. Within the mountains of Khaz Modan, they continue their ancient ways, extending the depth of their halls, and con-structing marvels of architecture,
+
+### A Reclaimed Legacy
+The undiscovered fragments of their past 
+<br>have led the dwarves on an unprecedented 
+<br>exodus of exploration to seek out their 
+<br>origins. Seeking out their origins, the 
+<br>dwarves have dispatched prospectors 
+<br>across all of Lordaeron in order to seek out 
+<br>signs of the Titans, the supposed creators of the 
+<br>dwarves. The dwarves have embraced the idea that it is their purpose to search the world for more signs of proof of their heritage. Dwarven outposts exist in the most desolate of places on Azeroth. 
+
+Here, the dwarves spend their time seeking out the secrets of ancient times, or simply use their outposts as staging grounds for expeditions to clear out their enemies so that they may continue their quest.
+
+### Short and Stout
+Bold and hardy, dwarves are known as skilled warriors, miners, and workers of stone and metal. Though they stand well under 5 feet tall, dwarves are so broad and compact that they can weigh as much as a human standing nearly two feet taller. Their courage and endurance are also easily a match for any of the larger folk.
+
+Dwarves skin ranges from deep brown to a paler hue tinged with red, but the most common shades are light brown or deep tan, like certain tones of earth. With their dark iron kin having notably darker skin of gray to coal-black. Their hair, worn long but in simple styles, is usually black, gray, or brown, though wildhammer dwarves often have red hair. Male dwarves value their beards highly and groom them carefully.
+
+\columnbreak
+
+<div style='margin-top:800px;'></div>
+
+### Innovative
+Dwarves are a proud, stern and determined people with streaks of kindness hidden under the gruff exteriors of their sturdy frames. Their love for battle, invention and exploration impels them ever forward to discover and unearth the mysteries of their heritage, educating them further about those who first created the dwarven race.
+
+Still, they keep to the forges and workshops, ever inno-vating and creating new and more effective ways of warfare. Steam powered technology and firearms originate from dwarven inventiveness and creativity. The stout race is renowned for its skills at battle and also as cunning engineers and crafters. 
+
+<div class='footnote'>PART 1 | RACES</div>
+<img src='https://www.gmbinder.com/images/v7DFZZS.jpg' style='position:absolute; top:-40px; right:-350px; width:1150px' />
+<img src='https://www.gmbinder.com/images/4eD5Yy6.png' style='position:absolute; top:0px; right:0px; width:900px; transform:scalex(-1)' />
+<img src='https://www.gmbinder.com/images/l2uyR4M.png' style='position:absolute; top:335px; right:-55px; width:550px; transform:scalex(-1); z-index:20' />
+
+\pagebreakNum
+
+### Affiliation
+Dwarves are members of the Alliance and staunch allies of its human founders, having fought side-by-side with their armies in more than one war. Although the night elves may share the same allegiances, most dwarves looks at "pointy eared humans" with suspicion and trepidation, preferring to keep them at an arm's distance.
+
+***Ironforge Dwarves.*** These dwarves have been part of the Alliance since its founding in Lordaeron and continue to be a steadfast ally to its cause. 
+
+***Wildhammer Dwarves.*** These dwarves never pledged their allegiance to the Alliance and have instead put their trust in their ironforge kin. They remain an isolated clan of dwarves that choose their own battles, but are often found among ironforge soldiers.
+
+***Dark Iron Dwarves.*** These dwarves fought against the Alliance for many years as they served the deceased Fire&shy;lord Ragnaros. His death split the united clan and forced them to find new allies, many proclaimed Moira their new queen and have since joined the Alliance. However, there are still many who distrust the cunning dark iron dwarves and their pledged allegiance to the Alliance is newfound.
+
+### Names
+Every proper dwarven name has been used and reused down through the generations. A dwarf's name belongs to the clan, not the individual. A dwarf may earn a name and place it above that of its clan, although such occurrences are rare as many dwarves takes pride in their clan.
+<div style='margin-top:-18px;'></div>
+
+<br>**Male Names:** Barab, Aradun, Thorin, Magni, Garrim, <br>&nbsp;&nbsp;&nbsp; Wendel, Thurimar, Irmirn, Bhaduk, Gengur
+<br>**Female Names:** Chise, Helge, Ferya, Furga, Krona, Imli, <br>&nbsp;&nbsp;&nbsp; Gwamde, Illia, Somdunn, Thanmu, Eniss, Nanla
+<br>**Clan Names:** Thunderforge, Bronzebeard, Thornsteel, <br>&nbsp;&nbsp;&nbsp; Hammergrim, Chunderstout, Broadmail, Madpride
+
+### Dwarf Traits
+Your dwarf character has the following racial traits.
+
+***Ability Score Increase.*** Your Constitution score <br> increases by 2.
+
+***Age.*** Dwarves mature at the same rate as humans, but they're considered young until they reach the age of 40. On average, they live about 320 years.
+
+***Alignment.*** Most dwarves are lawful, believing firmly in the benefits of a well-ordered society. They tend toward good as well, with a strong sense of fair play and a belief that all deserve to share in the benefits of a just order.
+
+***Size.*** Dwarves stand between 4 and 5 feet tall and average about 150 pounds. Your size is Medium. To set your height and weight randomly, start with rolling the size modifier:
+<div style="margin-top: -18px; font-family: ScalySans, sans-serif">
+
+<br>&nbsp;&nbsp;&nbsp; ***Size Modifier:*** 2d4
+<br>&nbsp;&nbsp;&nbsp; ***Height:*** 3 feet + 8 inches + your size modifier in inches
+<br>&nbsp;&nbsp;&nbsp; ***Weight in Pounds:*** 120 + (2d6 x your size modifier)
+</div>
+
+<div style='margin-top:-3px;'></div>
+
+&nbsp;&nbsp;&nbsp; ***Speed.*** Your base walking speed is 25 feet. Your speed is not reduced by wearing heavy armor.
+
+***Darkvision.*** Accustomed to life underground, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray.
+
+\columnbreak
+
+&nbsp;&nbsp;&nbsp; ***Dwarven Combat Training.*** You have proficiency with the battleaxe, handaxe, warhammer, pistol and rifle.
+
+***Stonecunning.*** Whenever you make an Intelligence (History) check related to the origin of stonework, you are considered proficient in the History skill and add double your proficiency bonus to the check, instead of your normal proficiency bonus.
+
+***Languages.*** You can speak, read, and write Common and Dwarven. Dwarven is full of hard consonants and guttural sounds, and those characteristics spill over into whatever other language a dwarf might speak.
+
+***Subrace.*** Ancient divides among dwarves have resulted in three main subraces: ironforge dwarves, wildhammer dwarves, dark iron dwarves. Choose one of these subraces.
+
+#### Ironforge Dwarf
+As an ironforge dwarf, you are strong and hardy, capable of enduring the cold of Dun Morogh and blows of battle. Iron&shy;forge dwarves are known for their military expertise and rarely back down from a fight, or a brawl.
+
+***Ability Score Increase.*** Your Strength score <br> increases by 1.
+
+***Dwarven Toughness.*** Your hit point maximum increases by 1, and it increases by 1 every time you gain a level.
+
+***Stoneform.*** You can use your reaction when you are hit by a melee attack you can see to give yourself resistance towards bludge&shy;oning, piercing, and slashing damage until the end of the next turn. You can't use this feature again until you finish a long rest.
+
+#### Wildhammer Dwarf
+As a wildhammer dwarf, you have a free spirit and will to live life as you please. Wildhammer dwarves are untamed in comparison to the rest of their kin, often feeling more at home in the air than on the ground.
+
+***Ability Score Increase.*** Your Wisdom score <br> increases by 1.
+
+***Aerie Dwelling.*** You're acclimated to high altitude, in&shy;cluding elevations above 20,000 feet. You're also naturally adapted to cold climates, as described in chapter 5 of the *Dungeon Master's Guide.*
+
+***Brave Beyond Reason.*** You have advantage on saving throws against being frightened.
+
+***Natural Handler.*** You gain proficiency with the Animal Handling skill, and have advantage on Wisdom (animal handling) checks made towards gryphons.
+
+#### Dark Iron Dwarf
+As a dark iron dwarf, you have a fiery temper and a fierce determination. Dark iron dwarves worshiped the firelord Ragnaros and gained an affinity for fire and flames. 
+
+***Ability Score Increase.*** Your Intelligence score <br> increases by 1.
+
+***Fireblood.*** You can cast the *lesser restoration* spell on yourself once with this trait, and you regain the ability to cast it this way when you finish a long rest.
+
+***Forged in Flames.*** You have resistance to fire damage.
+
+***Superior Darkvision.*** Your darkvision has a <br> radius of 120 feet.
+
+<div class='footnote'>PART 1 | RACES</div>
+
