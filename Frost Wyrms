@@ -1,0 +1,544 @@
+<style>
+/* GLOBAL FORMATTING  */
+
+  /* Resize page to international A4 */
+  .phb {
+    width: 210mm;
+    height: 296.8mm;
+  }
+  .phb:after { content: ""; }
+
+
+/* TABLE OF CONTENTS  */
+
+  /* toc specifically wants black text. This resets the headers*/
+  .toc a {
+    color: inherit !important;
+  }
+  /* Allow dot leaders to fill remaining space but not overlap */
+  .toc li span:nth-child(2) {
+    width: auto;
+    overflow: hidden;
+    white-space: nowrap;
+    display: block;
+  }
+  .toc li span:nth-child(2):after {
+    font-family: BookSanity;
+    font-size: 0.317cm;
+    font-weight: normal;
+    color: black;
+    content:
+      " ........................................"
+      "........................................."
+      ".........................................";
+    }
+
+  /* Style TOC page numbers*/
+  .toc li span:first-child {
+    float: right;
+    font-family: BookSanity;
+    font-size: 0.317cm;
+    font-weight: normal;
+    color: black;
+    margin-left: 1px;
+  }
+
+  /* Adjust TOC H3 styles */
+  .toc li h3 span:nth-child(2):after {
+  	content: " ";
+  }
+  .toc li h3 {
+    margin-bottom: 4px !important;
+    margin-top: 10px !important;
+    line-height: initial !important;
+  }
+  .toc li h3 span:first-child {
+  	line-height: 1.8em !important;
+  }
+
+  /* Reduce TOC list indentation*/
+  .toc ul ul {
+  	margin-left: 10px !important;
+  }
+  .toc>ul>li {
+    margin-bottom: initial !important;
+  }
+
+
+/* TABLES AND BLOCKS */
+
+  /* Adjust tables */
+  table tr:nth-child(odd) td { background-color: #FFF0f5; }
+  .phb hr+section blockquote tr:nth-child(odd) td { background-color: transparent; }
+
+  /* Clear internal padding and add gap above for green note blocks*/
+  .phb blockquote {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .phb blockquote { margin-top: 1em; }
+
+  /* Clear internal padding in creature statblocks */
+  .phb hr+section blockquote {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  .phb blockquote {
+    box-shadow: 1px 4px 14px rgba(0,0,0,0.42);
+  }
+
+  /* For creature statblocks within range (start and end must be specified),
+     don't show a background. Used for the appendix creatures */
+  .phb:nth-of-type(n+107):nth-of-type(-n+130) hr+section blockquote {
+      background: none;
+      border: none;
+      box-shadow: none;
+  }
+
+
+/* FOOTER */
+
+  /* Footnotes */
+  .phb .pageNumber {
+    color: #7e735c;
+    z-index: 1000;
+  }
+  .phb .footnote { color: #7e735c; }
+
+  /* On odd child pages, have the Monster Manual page tear and lettering */
+  .phb:nth-child(odd):after {
+    content: '';
+    height: 125px;
+    background-image: url(https://gmbinder.com/images/lLWeevR.png), url('https://gmbinder.com/images/YWardeu.png');
+    background-size: 120px 120px, 816px 55px;
+    background-repeat: no-repeat, no-repeat;
+    background-position: bottom right, bottom;
+  }
+
+  /* Hacked reverse of the Monster Manual page tear for alternating pages */
+  .phb:nth-child(even):after {
+    content: '';
+    height: 125px;
+    background-image: url(https://gmbinder.com/images/lLWeevR.png), url('https://gmbinder.com/images/YWardeu.png');
+    background-size: 120px 120px, 816px 55px;
+    background-repeat: no-repeat, no-repeat;
+    background-position: bottom right, bottom;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+  }
+
+  /* The letter in the Monster Manual page tear */
+  .pageLetter {
+    position: absolute;
+    right: 25px;
+    bottom: 87.5px;
+    color: #673e1c;
+    z-index: 1000;
+    font-size: 135%;
+  }
+
+  /* Reversed for alternating pages */
+  .phb:nth-child(even) .pageLetter {
+      left: 25px;
+  }
+
+
+/* MONSTER MANUAL LETTER SECTION HEADER */
+
+  /* Adds the surrounding framing for the big, bold monster letter headings */
+  .letterheader {
+    position: absolute;
+    top: 30px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: url(https://gmbinder.com/images/YH3aESG.png);
+    background-size: cover;
+    width: 775px;
+    height: 133px;
+  }
+
+  /* Base component for the actual letter in the heading */
+  .mmletter {
+      position: absolute;
+      top: 20px;
+      left: 0;
+      right: 0;
+      margin-left: auto;
+      margin-right: auto;
+      background-size: cover;
+      width: 163.2px;
+      height: 163.2px;
+  }
+
+  /* Use one in combination with .mmletter to show that letter */
+  .mml-a { background-image: url(https://gmbinder.com/images/fVVv93s.png); }
+  .mml-b { background-image: url(https://gmbinder.com/images/21X6N0B.png); }
+  .mml-c { background-image: url(https://gmbinder.com/images/MvnpOWF.png); }
+  .mml-d { background-image: url(https://gmbinder.com/images/AFbLU4P.png); }
+  .mml-e { background-image: url(https://gmbinder.com/images/28NVNf9.png); }
+  .mml-f { background-image: url(https://gmbinder.com/images/Oyrhmqy.png); }
+  .mml-g { background-image: url(https://gmbinder.com/images/fRyiQn4.png); }
+  .mml-h { background-image: url(https://gmbinder.com/images/N8NamlT.png); }
+  .mml-i { background-image: url(https://gmbinder.com/images/xWI93aa.png); }
+  .mml-j { background-image: url(https://gmbinder.com/images/GgIzsun.png); }
+  .mml-k { background-image: url(https://gmbinder.com/images/OcObsWl.png); }
+  .mml-l { background-image: url(https://gmbinder.com/images/B7AUyR6.png); }
+  .mml-m { background-image: url(https://gmbinder.com/images/q4wXoxt.png); }
+  .mml-n { background-image: url(https://gmbinder.com/images/OJtC4w9.png); }
+  .mml-o { background-image: url(https://gmbinder.com/images/adeRr5d.png); }
+  .mml-p { background-image: url(https://gmbinder.com/images/EEhcrSR.png); }
+  .mml-q { background-image: url(https://gmbinder.com/images/O1AhfzL.png); }
+  .mml-r { background-image: url(https://gmbinder.com/images/w66eIuZ.png); }
+  .mml-s { background-image: url(https://gmbinder.com/images/YEoe0PP.png); }
+  .mml-t { background-image: url(https://gmbinder.com/images/7Bk9D35.png); }
+  .mml-u { background-image: url(https://gmbinder.com/images/uVJZYUg.png); }
+  .mml-v { background-image: url(https://gmbinder.com/images/gKjngey.png); }
+  .mml-w { background-image: url(https://gmbinder.com/images/14WWpsC.png); }
+  .mml-x { background-image: url(https://gmbinder.com/images/ojIYjh0.png); }
+  .mml-y { background-image: url(https://gmbinder.com/images/Gi1ePwY.png); }
+  .mml-z { background-image: url(https://gmbinder.com/images/0ZTFNVs.png); }
+
+
+/* INK BLOT STYLES */
+
+  /* Root style for inkblots. Use alone, or together with
+  one of the inkb lotstyle classes below. Essentially:
+  <img url='{url}' class='inkblot inkblot-blue' />
+  */
+  .inkblot {
+    position: absolute;
+    mix-blend-mode: multiply;
+    opacity: 0.6;
+  }
+
+  .inkblot-blue {
+    filter: hue-rotate(190deg) saturate(120%)
+  }
+
+  .inkblot-green {
+    filter: hue-rotate(120deg)
+  }
+
+</style>
+
+## Frost Wyrms
+
+Creatures killed by a frostbrood dragon's cold become a frozen statue until they thaw.
+
+Ice made by frost wyrms is magical and will not melt without magical assistance.
+
+___
+> ## Frostbrood Whelp <!-- https://wc5e-cr-calculator.frogvall.com/?0;15;31;4;13;36;8;11;8;11;8;0;0;0;0;0;0;;;;1;4;;;;;;;;;;1;;;;;;;;10;;;;;;;;;;; -->
+> *Small undead, lawful evil*
+> ___
+> - **Armor Class** 15 (natural armor)
+> - **Hit Points** 31 (7d6 + 7)
+> - **Speed** 30 ft., fly 60 ft.
+> ___
+> |  STR  |  DEX  |  CON  |  INT  |  WIS  |  CHA  |
+> |:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+> |14 (+2)|11 (+0)|13 (+1)|14 (+2)|11 (+0)|14 (+2)|
+>___
+> - **Saving Throws** Dex +2, Con +3, Int +4, Cha +4
+> - **Skills** Arcana +6, Perception +2
+> - **Damage Resistances** necrotic
+> - **Damage Immunities** cold, force, poison
+> - **Condition Immunities** charmed, exhaustion, frightened, paralyzed, poisoned
+> - **Senses** blindsight 10 ft., darkvision 60 ft., passive Perception 12
+> - **Languages** Common, Draconic
+> - **Challenge** 3 (700 XP) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **Proficiency Bonus** +2
+> ___
+> ***Frost Aura.*** A creature who ends their turn within 5 feet of the whelp or strikes it with a melee attack takes 4 (1d8) cold damage.
+>
+> ***Ice Walk.*** The whelp can move across and climb icy surfaces without needing to make an ability check. Additionally, difficult terrain composed of ice or snow doesn't cost it extra moment.
+>
+> ### Actions
+> ***Bite.*** *Melee Weapon Attack:* +4 to hit, reach 5 ft., one target. *Hit:* 7 (1d10 + 2) piercing damage plus 4 (1d8) cold damage.
+>
+> ***Frost Breath (Recharge 5-6).*** The whelp exhales an icy blast in a 15-foot cone. Each creature in that area must make a DC 13 Dexterity saving throw, taking 18 (4d8) cold damage on a failed save, or half as much damage on a successful one. A creature who fails their saving throw has their movement speed halved and can't take reactions for 1 minute. 
+
+\columnbreak
+___
+> ## Frostbrood Drake <!-- https://wc5e-cr-calculator.frogvall.com/?1;16;127;8;16;62;36;35;36;35;18;0;0;0;0;0;0;;;;1;4;;;;;;;;;;1;;;;;;;;10;;;;;;1;3;3;3;9;Flurry;Blizzard -->
+> *Large dragon, lawful evil*
+> ___
+> - **Armor Class** 16 (natural armor)
+> - **Hit Points** 127 (15d10 + 45)
+> - **Speed** 40 ft., fly 80 ft.
+> ___
+> |  STR  |  DEX  |  CON  |  INT  |  WIS  |  CHA  |
+> |:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+> |18 (+4)|11 (+0)|17 (+3)|18 (+4)|13 (+1)|16 (+3)|
+> ___
+> - **Saving Throws** Dex +4, Con +7, Int +8, Cha +7
+> - **Skills** Arcana +11, Perception +5
+> - **Damage Resistances** necrotic
+> - **Damage Immunities** cold, force, poison
+> - **Condition Immunities** charmed, exhaustion, frightened, paralyzed, poisoned
+> - **Senses** blindsight 10 ft., darkvision 60 ft., passive Perception 15
+> - **Languages** Common, Draconic
+> - **Challenge** 9 (5,000 XP) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **Proficiency Bonus** +4
+> ___
+> ***Frost Aura.*** A creature who ends their turn within 10 feet of the drake or strikes it with a melee attack takes 9 (2d8) cold damage.
+>
+> ***Ice Walk.*** The drake can move across and climb icy surfaces without needing to make an ability check. Additionally, difficult terrain composed of ice or snow doesn't cost it extra moment.
+>
+> ***Innate Spellcasting.*** The drake's innate spellcasting ability is Intelligence (spell save DC 16, +8 to hit with spell attacks). It can innately cast the following spells, requiring no material components:
+> 
+> At will: ✦ *diabolism*, ✦ *flurry*, *shape water* ^XGE^
+> <br/> 3/day each: ✦ *blizzard*, *dispel magic*, *fog cloud*, <br/>     *ray of enfeeblement*, *sleet storm*
+>
+> ### Actions
+> ***Multiattack.*** The drake makes two attacks: one with its bite and one with its claws.
+>
+> ***Bite.*** *Melee Weapon Attack:* +8 to hit, reach 10 ft., one target. *Hit:* 15 (2d10 + 4) piercing damage plus 9 (2d8) cold damage.
+>
+> ***Claw.*** *Melee Weapon Attack:* +8 to hit, reach 5 ft., one target. *Hit:* 11 (2d6 + 4) slashing damage.
+>
+> ***Frost Breath (Recharge 5-6).*** The drake exhales an icy blast in a 30-foot cone. Each creature in that area must make a DC 16 Dexterity saving throw, taking 31 (7d8) cold damage on a failed save, or half as much damage on a successful one. A creature who fails their saving throw has their movement speed halved and can't take reactions for 1 minute. If they fail their save by 5 or more, they are also entombed in ice.
+> <br/> &nbsp;&nbsp;&nbsp; While entombed, they have total cover and are restrained and incapacitated. At the beginning of their turn, they take 9 (2d8) cold damage and can attempt a DC 16 Strength check, breaking free from the ice on a success. The ice can be attacked and destroyed (AC 10; hp equal to cold damage taken by the breath weapon; vulnerability to fire damage; immunity to cold, poison, and psychic damage).
+
+<div class="pageLetter">D</div>
+<div class='footnote'>DRAGONS | Blue Dragonflight</div>
+
+\pagebreakNum
+
+___
+___
+> ## Frostbrood Dragon <!-- https://wc5e-cr-calculator.frogvall.com/?3;17;172;12;19;72;78;43;78;43;52;0;0;0;0;0;0;;;;1;4;;;;;;;1;;1;3;;;;;;;;15;;;;;;1;3;3;3;16;Flurry;Blizzard -->
+> *Huge dragon, lawful evil*
+> ___
+> - **Armor Class** 17 (natural armor)
+> - **Hit Points** 172 (15d12 + 75)
+> - **Speed** 40 ft., fly 80 ft.
+>___
+> |  STR  |  DEX  |  CON  |  INT  |  WIS  |  CHA  |
+> |:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+> |22 (+6)|11 (+0)|21 (+5)|22 (+6)|15 (+2)|18 (+4)|
+>___
+> - **Saving Throws** Dex +6, Con +11, Int +12, Cha +10
+> - **Skills** Arcana +17, Perception +8
+> - **Damage Resistances** necrotic
+> - **Damage Immunities** cold, force, poison
+> - **Condition Immunities** charmed, exhaustion, frightened, paralyzed, poisoned
+> - **Senses** blindsight 10 ft., darkvision 60 ft., passive Perception 18
+> - **Languages** Common, Draconic
+> - **Challenge** 17 (18,000 XP) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **Proficiency Bonus** +6
+> ___
+> ***Frost Aura.*** A creature who ends their turn within 15 feet of the dragon or strikes it with a melee attack takes 13 (3d8) cold damage.
+>
+> ***Ice Walk.*** The dragon can move across and climb icy surfaces without needing to make an ability check. Additionally, difficult terrain composed of ice or snow doesn't cost it extra moment.
+>
+> ***Innate Spellcasting.*** The dragon's innate spellcasting ability is Intelligence (spell save DC 20, +12 to hit with spell attacks). It can innately cast the following spells, requiring no material components:
+> 
+> At will: ✦ *diabolism*, ✦ *flurry*, *shape water* ^XGE^, <br/>     *sleet storm*
+> <br/> 3/day each: ✦ *blizzard*, *dispel magic*, *fog cloud*, <br/>     *ray of enfeeblement*
+> <br/> 1/day each: *shadow of moil* ^XGE^, *wall of ice*
+> 
+> ***Legendary Resistance (3/Day).*** If the dragon fails a saving throw, it can choose to succeed instead.
+>
+> ### Actions
+> ***Multiattack.*** The dragon can use its Frightful Presence. It then makes two attacks: one with its bite and one with its claws.
+>
+> ***Bite.*** *Melee Weapon Attack:* +12 to hit, reach 10 ft., one target. *Hit:* 17 (2d10 + 6) piercing damage plus 13 (3d8) cold damage.
+>
+> ***Claw.*** *Melee Weapon Attack:* +12 to hit, reach 5 ft., one target. *Hit:* 13 (2d6 + 6) slashing damage.
+>
+> ***Tail Sweep.*** *Melee Weapon Attack:* +12 to hit, reach <br/> 15 ft., all targets in reach. *Hit:* 15 (2d8 + 6) bludgeoning damage.
+>
+> ***Frightful Presence.*** Each creature of the dragon's choice that is within 120 feet of the dragon and aware of it must succeed on a DC 18 Wisdom saving throw or become frightened for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. If a creature's saving throw is successful or the effect ends for it, the creature is immune to the dragon's Frightful Presence for the next 24 hours.
+>
+> ***Frost Breath (Recharge 5-6).*** The dragon exhales an icy blast in a 60-foot cone. Each creature in that area must make a DC 18 Dexterity saving throw, taking 36 (8d8) cold damage on a failed save, or half as much damage on a successful one. A creature who fails their saving throw has their movement speed halved and can't take reactions for 1 minute. If they fail their save by 5 or more, they are also entombed in ice.
+> <br/> &nbsp;&nbsp;&nbsp; While entombed, they have total cover and are restrained and incapacitated. At the beginning of their turn, they take 13 (3d8) cold damage and can attempt a DC 18 Strength check, breaking free from the ice on a success. The ice can be attacked and destroyed (AC 10; hp equal to cold damage taken by the breath weapon; vulnerability to fire damage; immunity to cold, poison, and psychic damage).
+>
+> ### Legendary Actions
+> The dragon can take 3 legendary actions, choosing from the options below. Only one legendary action option can be used at a time and only at the end of another creature's turn. The dragon regains spent legendary actions at the start of its turn.
+>
+> **Icy Grip.** Each creature within 40 feet of the dragon 
+<br/>    must make a DC 20 Strength saving throw or be 
+<br/>    pulled to the closest unoccupied space next to the 
+<br/>    dragon.
+> <br/> **Sleet Storm.** The dragon casts *sleet storm*.
+> <br/> **Ice Tomb (Costs 2 Actions).** A creature the dragon can 
+<br/>    see within 60 feet must make a DC 20 Dexterity 
+<br/>    saving throw or become entombed in ice, as if they 
+<br/>    were affected by Frost Breath (30 hit points). On a 
+<br/>    successful save, they instead have their speed halved 
+<br/>    and cannot take reactions until the dragon's next 
+<br/>    turn.
+> <br/> **Wing Attack (Costs 2 Actions).** The dragon beats its 
+<br/>    wings. Each creature within 10 feet of the dragon 
+<br/>    must succeed on a DC 20 Dexterity saving throw or 
+<br/>    take 13 (2d6 + 6) bludgeoning damage and be 
+<br/>    knocked prone. The dragon can then fly up to half its 
+<br/>    flying speed.
+
+<div class="pageLetter">D</div>
+<div class='footnote'>DRAGONS | Blue Dragonflight</div>
+
+\pagebreakNum
+
+___
+___
+> ## Frostbrood Wyrm <!-- https://wc5e-cr-calculator.frogvall.com/?3;18;350;15;22;108;102;70;102;52;66;0;0;0;0;0;0;;;;1;4;;;;;;;1;;1;3;;;;;;;;15;;;;;;1;8;3;3;16;Flurry;Blizzard;Ice%20Nova -->
+> *Gargantuan dragon, lawful neutral*
+> ___
+> - **Armor Class** 18 (natural armor)
+> - **Hit Points** 350 (20d20 + 140)
+> - **Speed** 40 ft., fly 80 ft.
+> ___
+> |  STR  |  DEX  |  CON  |  INT  |  WIS  |  CHA  |
+> |:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+> |26 (+8)|11 (+0)|25 (+7)|26 (+8)|17 (+3)|20 (+5)|
+> ___
+> - **Saving Throws** Dex +7, Con +14, Int +15, Cha +12
+> - **Skills** Arcana +22, Perception +10
+> - **Damage Resistances** necrotic
+> - **Damage Immunities** cold, force, poison
+> - **Condition Immunities** charmed, exhaustion, frightened, paralyzed, poisoned
+> - **Senses** blindsight 10 ft., darkvision 60 ft., passive Perception 20
+> - **Languages** Common, Draconic
+> - **Challenge** 23 (50,000 XP) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **Proficiency Bonus** +7
+> ___
+> ***Frost Aura.*** A creature who ends their turn within 20 feet of the wyrm or strikes it with a melee attack takes 18 (4d8) cold damage.
+>
+> ***Ice Walk.*** The wyrm can move across and climb icy surfaces without needing to make an ability check. Additionally, difficult terrain composed of ice or snow doesn't cost it extra moment.
+>
+> ***Innate Spellcasting.*** The wyrm's innate spellcasting ability is Intelligence (spell save DC 23, +15 to hit with spell attacks). It can innately cast the following spells, requiring no material components:
+> 
+> At will: ✦ *diabolism*, ✦ *flurry*, *shape water* ^XGE^, <br/>     *sleet storm*
+> <br/> 3/day each: ✦ *blizzard*, *dispel magic*, *fog cloud*, <br/>     *ray of enfeeblement*, *wall of ice*
+> <br/> 1/day each: *antimagic field*, *shadow of moil* ^XGE^, <br/>     ✦ *ice nova*
+> 
+> ***Legendary Resistance (3/Day).*** If the wyrm fails a saving throw, it can choose to succeed instead.
+>
+> ### Actions
+> ***Multiattack.*** The wyrm can use its Frightful Presence. It then makes two attacks: one with its bite and one with its claws.
+>
+> ***Bite.*** *Melee Weapon Attack:* +15 to hit, reach 15 ft., one target. *Hit:* 19 (2d10 + 8) piercing damage plus 18 (4d8) cold damage.
+>
+> ***Claw.*** *Melee Weapon Attack:* +15 to hit, reach 10 ft., one target. *Hit:* 15 (2d6 + 8) slashing damage.
+>
+> ***Tail Sweep.*** *Melee Weapon Attack:* +15 to hit, reach <br/> 20 ft., all targets in reach. *Hit:* 17 (2d8 + 8) bludgeoning damage.
+>
+> ***Frightful Presence.*** Each creature of the wyrm's choice that is within 120 feet of the wyrm and aware of it must succeed on a DC 20 Wisdom saving throw or become frightened for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. If a creature's saving throw is successful or the effect ends for it, the creature is immune to the wyrm's Frightful Presence for the next 24 hours.
+>
+> ***Frost Breath (Recharge 5-6).*** The wyrm exhales an icy blast in a 90-foot cone. Each creature in that area must make a DC 22 Dexterity saving throw, taking 52 (12d8) cold damage on a failed save, or half as much damage on a successful one. A creature who fails their saving throw has their movement speed halved and can't take reactions for 1 minute. If they fail their save by 5 or more, they are also entombed in ice.
+> <br/> &nbsp;&nbsp;&nbsp; While entombed, they have total cover and are restrained and incapacitated. At the beginning of their turn, they take 18 (4d8) cold damage and can attempt a DC 22 Strength check, breaking free from the ice on a success. The ice can be attacked and destroyed (AC 10; hp equal to cold damage taken by the breath weapon; vulnerability to fire damage; immunity to cold, poison, and psychic damage).
+>
+> ### Legendary Actions
+> The wyrm can take 3 legendary actions, choosing from the options below. Only one legendary action option can be used at a time and only at the end of another creature's turn. The wyrm regains spent legendary actions at the start of its turn.
+>
+> **Icy Grip.** Each creature within 60 feet of the wyrm 
+<br/>    must make a DC 23 Strength saving throw or be 
+<br/>    pulled to the closest unoccupied space next to the 
+<br/>    dragon.
+> <br/> **Sleet Storm.** The wyrm casts *sleet storm*.
+> <br/> **Ice Tomb (Costs 2 Actions).** A creature the wyrm can 
+<br/>    see within 60 feet must make a DC 23 Dexterity 
+<br/>    saving throw or become entombed in ice, as if they 
+<br/>    were affected by Frost Breath (50 hit points). On a 
+<br/>    successful save, they instead have their speed halved 
+<br/>    and cannot take reactions until the dragon's next 
+<br/>    turn.
+> <br/> **Wing Attack (Costs 2 Actions).** The wyrm beats its 
+<br/>    wings. Each creature within 15 feet of the wyrm 
+<br/>    must succeed on a DC 23 Dexterity saving throw or 
+<br/>    take 15 (2d6 + 8) bludgeoning damage and be 
+<br/>    knocked prone. The wyrm can then fly up to half its 
+<br/>    flying speed.
+> <br/> **Breath Weapon (Costs 3 Actions).** The wyrm uses its 
+<br/>    breath weapon, if it is available.
+
+\pagebreakNum
+
+___
+> ## Val'kyr, Lesser
+> *Large undead, neutral*
+> ___
+> - **Armor Class** 18 (natural armor)
+> - **Hit Points** ### (##d10 + ##)
+> - **Speed** 30 ft., fly 90 ft.
+> ___
+> |  STR  |  DEX  |  CON  |  INT  |  WIS  |  CHA  |
+> |:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+> |18 (+4)|17 (+3)|20 (+5)|14 (+2)|20 (+5)|23 (+6)|
+> ___
+> - **Saving Throws** Str +9, Con +10, Wis +10, Cha +11
+> - **Skills** Insight +10, Intimidation +11, Perception +10, Persuasion +11
+> - **Damage Resistances** necrotic, radiant; bludgeoning, piercing, and slashing from nonmagical attacks
+> - **Damage Immunities** poison
+> - **Condition Immunities** charmed, exhaustion, frightened, poisoned
+> - **Senses** truesight 120 ft., passive Perception 20
+> - **Languages** All, telepathy 120 ft.
+> - **Challenge** 14 (11,500 XP) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **Proficiency Bonus** +5
+> ___
+> ***Innate Spellcasting.*** The val'kyr's spell casting ability is Charisma (spell save DC 19, +11 to hit with spell attacks). It can innately cast the following spells, requiring no material components:
+>
+> At Will: *spare the dying*
+> <br/> 3/day each: *animate dead*, *heal*, *revivify*
+> 
+> ***Deathwatch.*** The val'kyr knows the current and maximum hit point total of all creatures it can see within 120 feet.
+>
+> ***???.*** [Ability to walk into the shadowlands.]
+>
+> ***Touch of the Val'kyr.*** 
+>
+> ***Weapon Master.*** The val'kyr is proficient with all weapons and adds its proficiency bonus to damage with weapon attacks.
+>
+> ### Actions
+> ***Multiattack.***
+>
+> ***Spear.***
+>
+> ***Smite.***
+
+\columnbreak
+___
+> ## Val'kyr, Greater
+> *Large undead, neutral*
+> ___
+> - **Armor Class** 18 (natural armor)
+> - **Hit Points** ### (##d10 + ##)
+> - **Speed** 30 ft., fly 90 ft.
+> ___
+> |  STR  |  DEX  |  CON  |  INT  |  WIS  |  CHA  |
+> |:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+> |18 (+4)|17 (+3)|20 (+5)|14 (+2)|20 (+5)|23 (+6)|
+> ___
+> - **Saving Throws** Str +11, Con +12, Wis +12, Cha +13
+> - **Skills** Insight +11, Intimidation +13, Perception +11, Persuasion +13
+> - **Damage Resistances** necrotic, radiant; bludgeoning, piercing, and slashing from nonmagical attacks
+> - **Damage Immunities** poison
+> - **Condition Immunities** charmed, exhaustion, frightened, poisoned
+> - **Senses** truesight 120 ft., passive Perception 20
+> - **Languages** All, telepathy 120 ft.
+> - **Challenge** 21 (33,000 XP) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **Proficiency Bonus** +7
+> ___
+> ***Innate Spellcasting.*** The val'kyr's spell casting ability is Charisma (spell save DC 21, +13 to hit with spell attacks). It can innately cast the following spells, requiring no material components:
+>
+> At Will: *plane shift* (self only), *spare the dying*
+> <br/> 3/day each: *revivify*
+> 
+> ***Deathwatch.*** The val'kyr knows the current and maximum hit point total of all creatures it can see within 120 feet.
+>
+> ***???.*** [Ability to walk into the shadowlands.]
+>
+> ***Touch of the Val'kyr.*** 
+>
+> ***Weapon Master.*** The val'kyr is proficient with all weapons and adds its proficiency bonus to damage with weapon attacks.
+>
+> ### Actions
+> ***Multiattack.***
+>
+> ***Spear.***
+>
+> ***Smite.***
+
+
+- can corral spirits and travel to shadowlands
+- can create undead
+- https://www.dandwiki.com/wiki/Valkyrie_(5e_Creature)
