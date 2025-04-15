@@ -1,0 +1,1041 @@
+<style>
+/* GLOBAL FORMATTING  */
+
+  /* Resize page to international A4 */
+  .phb {
+    width: 210mm;
+    height: 296.8mm;
+  }
+  .phb:after { content: ""; }
+
+/* Temporary Fix for heading issues */
+    .phb p{ line-height: 15px; } 
+    .phb blockquote p{ line-height: 14px; } 
+    .phb h2{ line-height: 26px; } 
+    .phb h3{ line-height: 19px; } 
+    .phb h4{ line-height: 15px; padding-bottom: 3px; } 
+    .phb h5{ line-height: 17px; } 
+    th, td { line-height: 14px; }
+
+/* TABLE OF CONTENTS  */
+
+  /* toc specifically wants black text. This resets the headers*/
+  .toc a {
+    color: inherit !important;
+  }
+  /* Allow dot leaders to fill remaining space but not overlap */
+  .toc li span:nth-child(2) {
+    width: auto;
+    overflow: hidden;
+    white-space: nowrap;
+    display: block;
+  }
+  .toc li span:nth-child(2):after {
+    font-family: BookSanity;
+    font-size: 0.317cm;
+    font-weight: normal;
+    color: black;
+    content:
+      " ........................................"
+      "........................................."
+      ".........................................";
+    }
+
+  /* Style TOC page numbers*/
+  .toc li span:first-child {
+    float: right;
+    font-family: BookSanity;
+    font-size: 0.317cm;
+    font-weight: normal;
+    color: black;
+    margin-left: 1px;
+  }
+
+  /* Adjust TOC H3 styles */
+  .toc li h3 span:nth-child(2):after {
+  	content: " ";
+  }
+  .toc li h3 {
+    margin-bottom: 4px !important;
+    margin-top: 10px !important;
+    line-height: initial !important;
+  }
+  .toc li h3 span:first-child {
+  	line-height: 1.8em !important;
+  }
+
+  /* Reduce TOC list indentation*/
+  .toc ul ul {
+  	margin-left: 10px !important;
+  }
+  .toc>ul>li {
+    margin-bottom: initial !important;
+  }
+
+
+/* TABLES AND BLOCKS */
+
+  /* Clear internal padding and add gap above for green note blocks*/
+  .phb blockquote {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .phb blockquote { margin-top: 1em;
+  }
+
+
+/* INK BLOT STYLES */
+
+  /* Root style for inkblots. Use alone, or together with
+  one of the inkb lotstyle classes below. Essentially:
+  <img url='{url}' class='inkblot inkblot-blue' />
+  */
+  .inkblot {
+    position: absolute;
+    mix-blend-mode: multiply;
+    opacity: 0.6;
+  }
+
+  .inkblot-blue {
+    filter: hue-rotate(190deg) saturate(120%)
+  }
+
+  .inkblot-green {
+    filter: hue-rotate(120deg)
+  }
+
+</style>
+
+<style>
+/* Background */
+  .phb{ background-image: url('https://gmbinder.com/images/KN1O92T.png') }
+  .phb{ background-size: cover }
+
+/* Notes */
+  .phb section blockquote {background-color: #f6e5d4}
+  .phb hr + section blockquote tr:nth-child(odd) td {background-color: transparent;}
+
+/* Tables */
+  table tr:nth-child(odd) td {background-color: #cccccc}
+
+/* Footer */
+  .phb .pageNumber {color: rgba(0, 0, 0, 0.5)}
+  .phb .footnote {color: rgba(0, 0, 0, 0.5)}
+  .phb:nth-child(odd):after{ 
+    content          : '';
+    position         : absolute;
+    bottom           : -7px;
+    left             : 10px;
+    z-index          : -1;
+    height           : 336px;
+    width            : 100%;
+    background-image : url('https://www.gmbinder.com/images/bNTz1nk.png');
+    background-size  : cover;
+}
+
+.phb:nth-child(even):after{ 
+    content          : '';
+    position         : absolute;
+    bottom           : -7px;
+    left             : -10px;
+    z-index          : -1;
+    height           : 336px;
+    width            : 100%;
+    background-image : url('https://www.gmbinder.com/images/6NCzAN0.png');
+    background-size  : cover;
+}
+
+  /* Footer with white text against dark backgrounds */
+  .phb .footnote.footnote-white,
+  .phb .footnote.footnote-white + .pageNumber,
+  .phb .footnote.footnote-white + section .pageNumber {
+    color: rgba(255,255,255,0.8);
+  }
+
+
+/* Page Number */
+.phb .pageNumber{
+    position   : absolute;
+    bottom     : 30px;
+    width      : 50px;
+    text-align : center;
+}
+.phb:nth-child(even) .pageNumber{
+    left      : 12px;
+}
+.phb:nth-child(odd) .pageNumber{
+    right      : 12px;
+}
+
+.phb .pageNumber.auto{
+    position   : absolute;
+    bottom     : 41px;
+    width      : 50px;
+    text-align : center;
+}
+.phb:nth-child(even) .pageNumber.auto{
+    left      : 12px;
+}
+.phb:nth-child(odd) .pageNumber.auto{
+    right      : 12px;
+}
+
+</style>
+
+<div style='margin-top:500px'></div>
+
+## Warlock
+
+### Section One
+
+### Section Two
+
+### Section Three
+
+### Section Four
+
+### 3.5 Text
+Born of a supernatural bloodline, a warlock seeks to master the perilous magic that suffuses his soul. Unlike sorcerers or wizards, who approach arcane magic through the medium of spells, a warlock invokes powerful magic through nothing more than an effort of will. By harnessing his innate magical gift through fearsome determination and force of will, a warlock can perform feats of supernatural stealth, beguile the weak-minded, or scour his foes with blasts of eldritch power.
+
+Many warlocks are champions of dark and chaotic powers. Long ago, they (or in some cases, their ancestors) forged grim pacts with dangerous extraplanar powers, trading portions of their souls in exchange for supernatural power. While many warlocks have turned away from evil, seeking to undo the wrongs of their former colleagues, they are still chained by the old pacts through which they acquired their powers. The demand to further the designs of their dark patrons, or to resist them, drives most warlocks to seek the opportunities for power, wealth, and great deeds (for good or ill) offered by adventuring.
+
+Warlocks harbor great reserves of mystical energy. The font of dark magic burning in their souls makes them resistant to many forms of attack and arms them with dangerous power. Warlocks do not wield spells, but they do learn to harness their power to perform a small number of specific attacks and tricks called invocations. Warlocks make up for their lack of versatility by being tougher and more resilient than sorcerers or wizards.
+
+Warlocks are often chaotic or evil (and more than a few are both). The powers they serve can be cruel, capricious, and wild, unbound by conventional views of right and wrong. However, even warlocks who derive their powers from the most sinister of patrons have been known to turn the black powers at their command against evil. A good-aligned warlock is a grim and fearsome enemy of evil. All too familiar with the darkness lurking in his heart, he gazes unflinchingly on the evil in others and battles the foulest of foes without fear.
+
+Warlocks know firsthand the power of supernatural beings, so they do not scorn religion. Evil warlocks sometimes seek the favor of cruel and bloodthirsty deities, while good warlocks often turn to the worship of noble and true deities for the strength to win the battle raging in their tortured souls.
+
+Warlocks are born, not made. Some are the descendants of people who trafficked with demons and devils long ago. Some seek out the dark powers as youths, driven by ambition or the desire for power, but a few blameless individuals are simply marked out by the supernatural forces as conduits and tools. The exact nature of a warlock's origin is up to the player to decide; just as a sorcerer is not beholden to the magic-wielding ancestor that bequeathed his bloodline with arcane power, a warlock is not bound to follow the source that gifted him with magic.
+
+Warlocks are not half-fiends or tieflings by default (although many creatures of those kinds become some of the most powerful and terrifying representatives of the class). The mark that the supernatural powers leave on their servants is often a mark in the soul, not the flesh. In fact, many warlocks are created by nonevil powers - wild or fey forces that can be every bit as dangerous as demons or devils. Whatever their origin, warlocks are widely feared and misunderstood. Most are wanderers who rarely stay in one place for long.
+
+Ambitious and often unprincipled, humans are the most likely to seek out the dangerous shortcuts to power that lead to life as warlocks. Half-orcs are common as warlocks as well, since they often find that the powers that create warlocks do not discriminate against individuals of mixed heritage. Warlocks of other races are rare at best.
+
+The warlock views sorcerers and wizards as bitter rivals. He values the strength and cleverness of resourceful fighters and rogues but rarely gets along with clerics or paladins. Of course, most warlocks understand that it's a bad idea to antagonize their comrades (especially those who hold the key to healing magic), and so they work out an uneasy truce with characters who otherwise might ostracize them.
+
+A warlock serves much the same role in an adventuring party as a sorcerer or wizard would. He is much more limited in his abilities compared to the spell selection of spellcasters, and he must rely on his eldritch blast in place of the spell power of an arcane caster. Like a bard, he often fits best in a party that already has another spellcaster or two, since his unique abilities provide him with little magic to use for his companions' benefit.
+
+<img src='https://srd.dndtools.org/srd/resource/images/classes/85424.jpg' style='position:absolute; top:0px; left:0px' />
+<img src='https://www.gmbinder.com/images/vn90cy3.png' style='position:absolute; bottom:0px; right:0px; width:850px; transform:scaleX(-1);' />
+
+\pagebreakNum
+
+<div class='classTable wide'>
+
+##### The Warlock
+|Level| Proficiency<br/>Bonus | Features | Invocations<br/>Known |
+|:---:|:--:|:-----------------------------------------------------------|:---:|:--:|:-:|:-:|:-:|
+| 1st | +2 | Otherwordly Patron, Eldritch Blast, Warlock's Curse, Pact Boon |  —  |
+| 2nd | +2 | Eldritch Invocations, Magic Insight                        | 2  |
+| 3rd | +2 | Otherworldly Patron feature                                | 2  |
+| 4th | +2 | Ability Score Improvement                                  | 3  |
+| 5th | +3 | Improved Pact Boon                                         | 3  |
+| 6th | +3 | Otherworldly Patron feature                                | 3  |
+| 7th | +3 | —                                                          | 4  |
+| 8th | +3 | Ability Score Improvement                                  | 4  |
+| 9th | +4 | —                                                          | 5  |
+| 10th| +4 | Otherworldly Patron feature                                | 5  |
+| 11th| +4 | Contact Patron                                             | 6  |
+| 12th| +4 | Ability Score Improvement                                  | 6  |
+| 13th| +5 | —                                                          | 7  |
+| 14th| +5 | Otherworldly Patron feature                                | 7  |
+| 15th| +5 | —                                                          | 8  |
+| 16th| +5 | Ability Score Improvement                                  | 8  |
+| 17th| +6 | —                                                          | 9  |
+| 18th| +6 | Unstoppable Might                                          | 9  |
+| 19th| +6 | Ability Score Improvement                                  | 10 |
+| 20th| +6 | Patron's Might                                             | 10 |
+</div>
+
+#### Quick Build
+Charisma, then Constitution. Criminal background. Infernal pact, Pact of the Blade, XXX and XXX cantrips.
+
+#### Optional Rule: Multiclassing
+If your group uses the optional rule on multiclassing in the *Player's Handbook*, here's what you need to know if you choose warlock as one of your classes.
+
+***Ability Score Minimum.*** As a multiclass character, you must have at least an Charisma score of 13 to take a level in this class, or to take a level in another class if you are already a warlock.
+
+***Proficiencies Gained.*** If warlock isn't your initial class, you gain skill of your choice from the warlock skill proficiencies when you take your first level of warlock.
+
+
+\columnbreak
+
+## Class Features
+As a warlock, you gain the following class features.
+
+#### Hit Points
+___
+- **Hit Dice:** 1d8 per warlock level
+- **Hit Points at 1st Level:** 8 + your Constitution modifier
+- **Hit Points at Higher Levels:** 1d8 (or 5) + your Constitution modifier per warlock level after 1st
+
+<div style='margin-top:-2px;'></div>
+
+#### Proficiencies
+___
+- **Armor:** Light armor
+- **Weapons:** Simple weapons
+- **Tools:** None
+___
+- **Saving Throws:** Constitution, Charisma
+- **Skills:** Choose two from Arcana, Deception, History, Insight, Intimidation, Investigation, Nature, Persuasion, and Religion
+
+<div style='margin-top:-2px;'></div>
+
+#### Equipment
+You start with the following equipment, in addition to the equipment granted by your background:
+
+- *(a)* a light crossbow and 20 bolts or *(b)* any simple weapon
+- *(a)* a component pouch or *(b)* an arcane focus
+- *(a)* a scholar's pack or *(b)* a dungeoneer's pack
+- Leather armor, any simple weapon, and two daggers
+
+\pagebreakNum
+
+### Eldritch Blast
+As an action, you can fire a beam of crackling energy as a ranged spell attack against a creature you can see within 120 feet. The target takes 1d10 plus your Charisma modifier damage. The damage type is determined by your choice of Patron.
+
+As you increase in level, you gain the ability to fire multiple beams with the same action: Two beams at 5th level, three beams at 11th level, and four beams at 17th level. You can direct the beams at the same target or at different ones. Make a separate attack roll for each beam.
+
+### Warlock's Curse
+As a bonus action, you place a curse on a creature you can see within 90 feet. This curse lasts until you use it again, or a long rest. Once per turn whenever you hit it with an attack, you deal an extra 1d6 damage. Damage type matches that of your eldritch blast.
+
+Increase to 2d6 at 11th, to 3d6 at 17th?
+
+
+\pagebreakNum
+
+<div class='classTable wide'>
+
+##### The Warlock
+|Level| Proficiency<br/>Bonus | Features | Eldritch<br/>Blast<br/>Damage | Invocations<br/>Known | Cantrips<br/> Known | Spell<br/> Slots | Slot<br/>Level
+|:---:|:--:|:-----------------------------------------------------------|:---:|:--:|:-:|:-:|:-:|
+| 1st | +2 | Otherworldly Patron, Occult Magic                          | 1d8 | —  | 2 | 1 |1st|
+| 2nd | +2 | Eldritch Invocations                                       | 1d8 | 1  | 2 | 2 |1st|
+| 3rd | +2 | Otherworldly Patron feature                                | 1d8 | 2  | 2 | 2 |2nd|
+| 4th | +2 | Ability Score Improvement                                  | 1d8 | 3  | 3 | 2 |2nd|
+| 5th | +3 | Improved Pact Boon                                         | 2d8 | 3  | 3 | 3 |3rd|
+| 6th | +3 | Otherworldly Patron feature                                | 2d8 | 3  | 3 | 3 |3rd|
+| 7th | +3 | —                                                          | 2d8 | 4  | 3 | 3 |4th|
+| 8th | +3 | Ability Score Improvement                                  | 2d8 | 4  | 3 | 3 |4th|
+| 9th | +4 | —                                                          | 2d8 | 5  | 3 | 3 |5th|
+| 10th| +4 | Otherworldly Patron feature                                | 2d8 | 5  | 3 | 3 |5th|
+| 11th| +4 | Contact Patron                                             | 3d8 | 6  | 4 | 4 |5th|
+| 12th| +4 | Ability Score Improvement                                  | 3d8 | 6  | 4 | 4 |5th|
+| 13th| +5 | —                                                          | 3d8 | 7  | 4 | 4 |5th|
+| 14th| +5 | Otherworldly Patron feature                                | 3d8 | 7  | 4 | 4 |5th|
+| 15th| +5 | —                                                          | 3d8 | 8  | 4 | 4 |5th|
+| 16th| +5 | Ability Score Improvement                                  | 3d8 | 8  | 4 | 4 |5th|
+| 17th| +6 | —                                                          | 4d8 | 9  | 4 | 5 |5th|
+| 18th| +6 | Unstoppable Might                                          | 4d8 | 9  | 4 | 5 |5th|
+| 19th| +6 | Ability Score Improvement                                  | 4d8 | 10 | 4 | 5 |5th|
+| 20th| +6 | Patron's Might                                             | 4d8 | 10 | 4 | 5 |5th|
+</div>
+
+#### Quick Build
+Charisma, then Constitution. Criminal background. Infernal pact, Pact of the Blade, XXX and XXX cantrips.
+
+#### Optional Rule: Multiclassing
+If your group uses the optional rule on multiclassing in the *Player's Handbook*, here's what you need to know if you choose warlock as one of your classes.
+
+***Ability Score Minimum.*** As a multiclass character, you must have at least an Charisma score of 13 to take a level in this class, or to take a level in another class if you are already a warlock.
+
+***Proficiencies Gained.*** If warlock isn't your initial class, you gain skill of your choice from the warlock skill proficiencies when you take your first level of warlock.
+
+
+\columnbreak
+
+## Class Features
+As a warlock, you gain the following class features.
+
+#### Hit Points
+___
+- **Hit Dice:** 1d8 per warlock level
+- **Hit Points at 1st Level:** 8 + your Constitution modifier
+- **Hit Points at Higher Levels:** 1d8 (or 5) + your Constitution modifier per warlock level after 1st
+
+<div style='margin-top:-2px;'></div>
+
+#### Proficiencies
+___
+- **Armor:** Light armor
+- **Weapons:** Simple weapons
+- **Tools:** None
+___
+- **Saving Throws:** Constitution, Charisma
+- **Skills:** Choose two from Arcana, Deception, History, Insight, Intimidation, Investigation, Nature, Persuasion, and Religion
+
+<div style='margin-top:-2px;'></div>
+
+#### Equipment
+You start with the following equipment, in addition to the equipment granted by your background:
+
+- *(a)* a light crossbow and 20 bolts or *(b)* any simple weapon
+- *(a)* a component pouch or *(b)* an arcane focus
+- *(a)* a scholar's pack or *(b)* a dungeoneer's pack
+- Leather armor, any simple weapon, and two daggers
+
+\pagebreakNum
+### Otherworldly Patron
+*1st-level warlock feature* <br/>
+<div style='margin-top:-4px;'></div>
+
+At 1st level, you have struck a bargain with an otherworldly being of your choice. Your choice grants you features at 1st level and again at 3rd, 6th, 10th, and 14th level.
+
+Each patron also affects certain class features, such as determining the damage type of your *eldritch blast*, altering the type and appearance of your familiar if you choose the Pact of the Chain, or granting additional prepared spells if you choose the Pact of the Tome.
+
+### Occult Magic
+*1st-level warlock feature* <br/>
+<div style='margin-top:-4px;'></div>
+
+**[Flavor text. Receive a certain amount of magic from your patron.]**
+
+#### Eldritch Blast
+The first ability a warlock learns is the eldritch blast. A warlock attacks his foes with eldritch power, using baleful magical energy to deal damage and sometimes impart other debilitating effects.
+
+As an action, you can create a blast of crackling energy against a creature you can see within 120 ft. of you. Make a ranged spell attack against the target. On a hit, the target takes damage equal to 1d8 + your Charisma ability modifier. This damage increases as you level, as shown on the Eldritch Blast Damage column of the Warlock table.
+
+Your eldritch blast's damage type is determined by your chosen Otherworldly Pact. If your Pact offers more than one damage type, you choose one type to use when you use your Eldritch Blast.
+
+#### Cantrips
+You know two cantrips of your choice from the warlock spell list. You learn additional warlock cantrips of your choice at higher levels, as shown in the Cantrips Known column of the Warlock table.
+
+***Spellcasting Ability.*** Charisma is your spellcasting ability for your warlock spells, so you use your Charisma whenever a spell refers to your spellcasting ability. In addition, you use your Charisma modifier when setting the saving throw DC for a warlock spell you cast and when making an attack roll with one.
+
+<div style="text-align: center">
+
+**Spell save DC** = 8 + your proficiency bonus + <br/> your Charisma modifier
+
+**Spell attack modifier** = your proficiency bonus + <br/> your Charisma modifier
+</div>
+
+***Spellcasting Focus.*** You can use an arcane focus as a spellcasting focus for your warlock spells.
+
+\columnbreak
+
+#### Magic Insight
+As a bonus action, you can open your awareness to detect unnatural entities and magics. Until the end of your next turn, you gain the following benefits within a range of 60 feet:
+- You can sense the presence of magic, seeing a faint aura around any visible creature or object in the area that bears magic, and you learn its school of magic, if any.
+- You know the location of any creature within that range that is cursed, has a pact, or has warlock levels. You do not learn the identity of any such creature through this feature.
+- You detect the presence of any place or object that has been consecrated or desecrated, as with the *hallow* spell.
+
+Your magic insight can penetrate most barriers, but it is blocked by 1 foot of stone, 1 inch of common metal, a thin sheet of lead, or 3 feet of wood or dirt.
+
+#### Pact Boon
+
+##### Pact of the Blade
+As an action, you conjure a magic simple or martial melee weapon of your choice in your outstretched hand, or you create a bond with a magic weapon you touch. The weapon you conjure or touch must lack the heavy property, and you cannot bond with a magic item that is attuned to someone else.
+
+<br/><div style='margin-top:-16px;'></div>
+The weapon grants you the following benefits: <br/><div style='margin-top:-10px;'></div>
+- **Eldritch Warrior.** When you attack with the weapon, you can use your Charisma modifier for the attack and damage rolls, instead of using Strength or Dexterity.
+- **Proficiency.** You have proficiency with the weapon.
+- **Returning Weapon.** If the weapon has the thrown property, the weapon returns to your hand immediately after hitting or missing a target.
+- **Extradimensional Space.** If your weapon is a bonded magic item that is not sentient or an artifact, then you can use your action to shunt it into an extra&shy;dimensional space. You can summon it back to hand as an action.
+- **Disappearance of the Weapon.** The weapon disappears if it is more than 5 feet away from you for <br/> 1 minute or more, return&shy;ing to your extradimensional space if it is a bonded weapon. The bonded weapon appears at your feet if you die.
+
+##### Pact of the Chain
+Using a 1 hour long ritual, you summon an unearthly entity to serve you. It manifests in an unoccupied space of your choice within 10 feet and uses the Pact Familiar stat block. If you perform this ritual again, any existing familiar trans&shy;forms into a new shape but retains its memories; you don’t get a second Pact Familiar.
+
+Your familiar's creature type and appearance is deter&shy;mined by your choice of patron. You can alter fine details of the creature's appearance each time you summon it.
+
+**Combat.** The familiar is an ally to you and your companions, and it obeys you. In combat, it shares your initiative count, but it takes its turn immediately after yours. On its turn, the familiar takes the dodge action and moves to avoid danger, unless you use your bonus action to command it to attack instead.
+
+\pagebreakNum
+
+___
+> ## Pact Familiar
+> *Tiny Creature, Any Alignment*
+> ___
+> - **Armor Class** 10 + your Cha modifier (natural armor)
+> - **Hit Points** 5 + your warlock level (the familiar has a number of Hit Dice [d4s] equal to your warlock level)
+> - **Speed** 40 ft., fly 40 ft. (hover)
+> ___
+> |  STR  |  DEX  |  CON  |  INT  |  WIS  |  CHA  |
+> |:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+> | 3 (–4)|14 (+2)|12 (+1)|10 (+0)|14 (+2)| 8 (–1)|
+> ___
+> - **Condition Immunities** charmed, exhaustion
+> - **Senses** darkvision 120 ft., passive Perception 12 + PB
+> - **Languages** telepathy 120 ft. (only between you and the familiar), understands the languages you speak
+> - **Challenge** — <span style="float:right"> **Proficiency Bonus** equals your bonus </span>
+>___
+> ***Channel Magic.*** When your familiar is within 120 feet of you, it can deliver any spell you can cast that has a range of touch.
+>
+> **Eldritch Bond.** You can add your proficiency bonus to any ability check or saving throw that the familiar makes.
+>
+> ***Evasion.*** If the familiar is subjected to an effect that allows it to make a Dexterity saving throw to take only half damage, it instead takes no damage if it succeeds on the saving throw, and only half damage if it fails. It can't use this trait if it's incapacitated.  
+>
+> <h3 style="font-size:1vw">Actions (Requires Your Bonus Action)</h3>
+> 
+> ***Eldritch Strike.*** *Ranged or Melee Spell Attack:* your spell attack modifier to hit, range 30 ft., one target. *Hit:* 2 + half your Warlock level (round up) damage. Damage type is the same as your eldritch blast.
+>
+> ***Invisibility.*** The familiar is invisible until the end of its next turn.
+___
+
+**Disappearance of the Familiar.** The familiar disappears if it drops to 0 hit points, if you dismiss it as a bonus action, or if you die. When it disappears, it leaves behind anything it was wearing or carrying. If you cast this spell again, you decide whether you summon the familiar that disappeared or a different one.
+
+**Remote Viewing.** As an action, you can see what your familiar sees and hear what it hears until the end of your next turn.
+
+\columnbreak
+
+##### Pact of the Tome
+Your patron gives you a grimoire called a Book of Shadows, which you can use as an arcane focus. While the book is on your person, you can cast a number of spells through the use of pact magic.
+
+If you lose your Book of Shadows, you can perform a 1-hour ceremony to receive a replacement from your patron. This ceremony can be performed during a short or long rest, and it destroys the previous book. The book turns to ash when you die.
+
+**Cantrips.** You learn an additional two cantrips from the warlock spell list. They don't count against your number of cantrips known. 
+
+**Spell Slots.** The Warlock table shows how many spell slots you have to cast your warlock spells of 1st through 5th level. The table also shows what the level of those slots is; all of your spell slots are the same level. To cast one of your warlock spells of 1st level or higher, you must expend a spell slot. You regain all expended spell slots when you finish a short or long rest.
+
+You prepare the list of warlock spells that are available for you to cast, choosing from the warlock spell list. When you do so, choose a number of warlock spells equal to your Charisma modifier + your warlock level, rounded down (minimum of one spell). The spells must be of a level for which you have spell slots.
+
+For example, when you are 5th level, you have two 3rd-level spell slots. To cast the 1st-level spell *witch bolt*, you must spend one of those slots, and you cast it as a 3rd-level spell.
+
+You can change your list of prepared spells when you finish a long rest. Preparing a new list of warlock spells requires time spent reading your book and communing with your patron: at least 1 minute per spell level for each spell on your list.
+
+**Patron Spells.** Each patron has a list of associated spells. You gain access to these spells at the levels specified in the patron description. Once you gain access to an patron spell, you always have it prepared. Patron spells don't count against the number of spells you can prepare each day.
+
+If you gain an patron spell that doesn't appear on the warlock spell list, the spell is nonetheless a warlock spell for you.
+
+**Ritual Casting.** You can cast a warlock spell as a ritual if that spell has the ritual tag. You don't need to have the spell prepared.
+
+**Multiclassing.** If you also have the Spellcasting class feature, you can use the spell slots you gain from your Pact of the Tome feature to cast spells you know or have prepared from classes with the Spellcasting class feature, and you can use the spell slots you gain from the Spellcasting class feature to cast warlock spells you know.
+
+### Eldritch Invocations
+*2nd-level warlock feature* <br/>
+<div style='margin-top:-4px;'></div>
+
+In your study of occult lore, you have unearthed Eldritch Invocations, fragments of forbidden knowledge that imbue you with an abiding magical ability.
+
+At 2nd level, you gain two eldritch invocations of your choice. When you gain certain warlock levels, you gain additional invocations of your choice, as shown in the Invocations Known column of the Warlock table. A level prerequisite refers to your level in this class.
+
+\pagebreakNum
+
+Additionally, when you gain a level in this class, you can choose one of the invocations you know and replace it with another invocation that you could learn at that level.
+
+### Warlock's Curse
+*2nd-level warlock feature* <br/>
+<div style='margin-top:-4px;'></div>
+
+You can place a curse on a creature that you can see within range as a bonus action. For one hour, once per turn you deal an extra 1d6 damage to the target whenever you hit it with an attack. The damage matches that of your *eldritch blast*. 
+
+Additionally, choose one ability when you cast the spell. The target has disadvantage on ability checks made with the chosen ability.
+
+You can only have one cursed target at a time; using this ability on a second creature will end the previous curse. A *remove curse* can end the effect early, in which case the creature is immune to your Warlock's Curse for 24 hours.
+
+### Ability Score Improvement
+*4th-level warlock feature* <br/>
+<div style='margin-top:-4px;'></div>
+
+When you reach 4th level, and again at 8th, 12th, 16th, and 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.
+
+#### Optional Versatility
+Whenever you reach a level in this class that grants the Ability Score Improvement feature, you can do one of the following, representing a change of focus in your occult studies:
+- Replace one cantrip you learned from this class with another cantrip from the warlock spell list.
+- Replace the option you chose for the Pact Boon feature with one of that feature's other options.
+
+If this change makes you ineligible for any of your Eldritch Invocations, you must also replace them now, choosing invocations for which you qualify.
+
+### Improved Pact Boon
+*5th-level warlock feature* <br/>
+<div style='margin-top:-4px;'></div>
+
+***Pact of the Blade.*** You gain the Extra Attack feature for the conjured or magic weapon only. With that feature, you can attack twice with the weapon, instead of once, when you take the Attack action on your turn.
+
+***Pact of the Chain.*** You can communicate telepathically with your familiar as long as you two are on the same plane of existence. Additionally, while perceiving through your familiar’s senses, you can also speak through your familiar in your own voice.
+
+***Pact of the Tome.*** When your tome is on your person, you can add your Charisma modifier to the damage rolls of any cantrip you cast that doesn’t already have that modifier added to its damage roll.
+
+\columnbreak
+
+### Contact Patron
+*11th-level warlock feature* <br/>
+<div style='margin-top:-4px;'></div>
+
+In the past, you have usually contacted your patron through intermediaries. Now you can communicate directly; you always have the	*contact other plane* spell prepared. With this feature, you can cast the spell without expending a spell slot to contact your patron, and you automatically succeed on the spell’s saving throw. 
+
+Once you cast the spell with this feature, you can’t do so again until you finish a long rest.
+
+### Unstoppable Might
+*18th-level warlock feature* <br/>
+<div style='margin-top:-4px;'></div>
+
+The damage of your eldritch blast cannot be reduced in any way, and when you miss with eldritch blast (whether via an attack roll or saving throw), you still deal half damage to your target.
+
+### Patron's Might
+*20th-level warlock feature* <br/>
+<div style='margin-top:-4px;'></div>
+
+Your patron’s favor is evident, and your power has begun to grow past the pact you first swore, power which can easily shatter the world. You can cast the spell *wish* once without using a spell slot. Once you do so, you cannot do so again for seven days.
+
+If you lose the ability to cast *wish*, you instead lose the ability to create effects that are not spells.
+
+\pagebreakNum
+# Invocations
+#### All-Seeing Eyes (Done)
+You can read all writing. Additionally, whenever you make a you have advantage on Wisdom (Perception) and Intelligence (Investigation) checks based on vision.
+
+#### Agonizing Blast
+When you cast eldritch blast, and you roll damage, you can treat any 1 on a damage die as a 2.
+
+#### Armor of Agathys
+???
+
+#### Armor of Shadows
+Your Armor Class can't be less than 16, regardless of what kind of armor you are wearing. When you are in dim light or darkness, your minimum AC increases to 17.
+
+#### Ascendant Step
+*Prerequisite: 5th level* <br/>
+<div style='margin-top:-4px;'></div>
+
+You can cast *feather fall* and *levitate* (self only) at will, without expending a spell slot or material components.
+
+#### Aspect of the Moon (Done)
+You no longer need to sleep and can't be forced to sleep by any means. To gain the benefits of a long rest, you can spend all 8 hours doing light activity, such as reading or keeping watch.
+
+#### Baleful Utterance
+[Unused. Shatter no longer is feasible for an at-will spell.]
+
+#### Beguiling Influence (Done)
+You gain proficiency in the Deception and Persuasion skills. If you are already proficient in either skill, you add double your proficiency bonus to checks you make with it.
+
+#### Breath of the Night
+You can cast *fog cloud* as a 1st level spell at will, without expending a spell slot. 
+
+The spell's level increases by one when you reach 5th level (2nd level spell), 9th level (3rd level spell), 13th level (4th level spell), and 17th level (5th level spell).
+
+#### Call of the Beast (Done)
+You can cast *animal friendship* and *speak with animals* at will, without expending a spell slot.
+
+#### Caress of Lilith
+*Prerequisite: 17th level*
+
+~~The damage of your eldritch blast cannot be reduced in any way, and when you miss with eldritch blast, you still deal half damage to your target.~~ [Use for 18th level class feature?]
+
+#### Cloak of Flies
+As a bonus action, you can surround yourself with a magical aura that looks like buzzing flies. The aura extends 5 feet from you in every direction, but not through total cover. It lasts until you're incapacitated or you dismiss it as a bonus action.
+
+The aura grants you advantage on Charisma (Intimidation) checks but disadvantage on all other Charisma checks. Any other creature that starts its turn in the aura takes poison damage equal to your Charisma modifier (minimum of 0 damage).
+
+Once you use this invocation, you can't use it again until you finish a short or long rest.
+
+#### Charming Gaze
+As an action, you attempt to charm a humanoid you can see within 60 feet. It must make a Wisdom saving throw, and does so with advantage if you or your companions are fighting it. If it fails the saving throw, it is charmed by you for 1 hour or until you or your companions do anything harmful to it. The charmed creature regards you as a friendly acquaintance.
+
+You can never have more than one target charmed at a time with this ability. If a second creature is charmed, you lose your hold on the first creature. When you lose your hold, the creature does not automatically know it was charmed by you.
+
+Starting at 13th level, you can charm any creature with this ability.
+
+#### **[RENAME: Damage Reduction]**
+[Can reduce damage taken by PB -or- Cha mod. ~~As reaction?~~ Once per turn.]
+
+#### Dark Discorporation
+
+#### **[RENAME: Darkness]**
+*Prerequisite:* 5th level <br/>
+<div style='margin-top:-4px;'></div>
+
+You can cast *darkness* at will, without expending a spell slot.
+
+#### Deceive Item (Done)
+*Prerequisite: 15th level* <br/>
+<div style='margin-top:-4px;'></div>
+
+You ignore all class, race, spell and level requirements on attuning to or using a magic item.
+
+#### Devil's Sight (Done)
+You can see normally in darkness, both magical and nonmagical, to a distance of 120 feet.
+
+#### Eldritch ???
+*Prerequisite: 5th level* <br/>
+<div style='margin-top:-4px;'></div>
+
+[Lets you split the blast into multiple beams. You can change the damage type for each beam.]
+
+#### Eldritch Chain
+*Prerequisite: 5th level* <br/>
+<div style='margin-top:-4px;'></div>
+
+When you hit a target with your eldritch blast, you can cause it to jump to a secondary target within 30 feet. Make another attack roll; on a hit, the target takes one less die of damage. For example, if you deal 3d8 damage to your first target, the next target takes 2d8 damage. 
+
+You may repeat this process until you run out of eldritch damage dice or you miss. Each new target must be within 30 feet of the previous target and you can't target the same creature more than once.
+
+You cannot combine this invocation with those that allow your eldritch blast to affect an area or hit multiple targets. 
+
+\pagebreak
+
+#### Eldritch Mind (Done)
+You have advantage on Constitution saving throws that you make to maintain your concentration on a spell.
+
+#### Eldritch Spear (Done)
+When you cast eldritch blast, its range is 300 feet. 
+
+Additionally, when you use Eldritch Chain, the maximum distance between each target is doubled.
+
+#### Flamewreath
+*Prerequisite: 13th level* <br/>
+<div style='margin-top:-4px;'></div>
+
+[You can cast *fire shield* at will. The damage matches that of your eldritch blast, and the resistance is BLANK.]
+
+#### Fell Flight
+*Prerequisite: 9th level* <br/>
+<div style='margin-top:-4px;'></div>
+
+You gain a fly speed equal to your movement speed.
+
+#### Fiendish Vigor
+As an action, you can grant yourself a number of temporary hit points equal to your Charisma modifier (with a minimum of 1).
+
+#### Gaze of Two Minds (Done)
+You can use your action to touch a willing humanoid and perceive through its senses until the end of your next turn. As long as the creature is on the same plane of existence as you, you can use your action on subsequent turns to maintain this connection, extending the duration until the end of your next turn. While perceiving through the other creature's senses, you benefit from any special senses possessed by that creature, and you are blinded and deafened to your own surroundings.
+
+#### Ghostly Gaze (Done)
+*Prerequisite: 7th level* <br/>
+<div style='margin-top:-4px;'></div>
+
+As an action, you gain the ability to see through solid objects to a range of 30 feet. Within that range, you have darkvision if you don't already have it. This special sight lasts for 1 minute or until your concentration ends (as if you were concentrating on a spell). During that time, you perceive objects as ghostly, transparent images.
+
+Whenever you use this invocation again before taking a short or long rest, you must succeed on a DC 15 Constitution saving throw or gain one level of exhaustion.
+
+#### Gift of the Depths
+*Prerequisite: 5th level* <br/>
+<div style='margin-top:-4px;'></div>
+
+- You can breathe underwater, you gain a swimming speed equal to your walking speed, and you have advantage on Strength (Athletics) checks you make to swim. 
+- You can communicate simple ideas to any beast that has a swimming speed. It can understand your words, though you have no special ability to understand it in return.
+- You can cast *water breathing* at will without expending a spell slot.
+
+#### Hellish Rebuke
+*Prerequisite: Xth level* <br/>
+<div style='margin-top:-4px;'></div>
+
+[You can cast *hellish rebuke* at will. The damage matches that of your eldritch blast.]
+
+#### Hideous Blow
+*Prerequisite: 5th level* <br/>
+<div style='margin-top:-4px;'></div>
+
+When you hit a creature with a melee attack, you can use your bonus action to  
+
+Once per turn when you hit a creature with your pact weapon, you can expend a warlock spell slot to deal an extra 1d8 force damage to the target, plus another 1d8 per level of the spell slot, and you can knock the target prone if it is Huge or smaller.
+
+#### Hunger of Hadar
+???
+
+#### Leaps and Bounds
+Your movement speed increases by 10 feet, your jump distance is tripled, and you have advantage on Dexterity (Acrobatics) checks.
+
+#### Magical Secrets
+*Prerequisite: Pact of the Tome, 9th level* <br/>
+<div style='margin-top:-4px;'></div>
+
+You have plundered magical knowledge from a wide spectrum of disciplines. Choose two spells from any classes, including this one. A spell you choose must be of a level you can cast, as shown on the Pact Boons table, or a cantrip. The chosen spells count as warlock spells for you. They do not count against your spells or cantrips known.
+
+You may choose this invocation multiple times, selecting new spells whenever you do.
+
+#### Mask of Many Faces (Done)
+You can cast *disguise self* at will, without expending a spell slot. The spell lasts until you use your action to cast it again or you die.
+
+#### Master of Myriad Forms
+*Prerequisite: 9th level* <br/>
+<div style='margin-top:-4px;'></div>
+
+You can cast *alter self* at will without using a spell slot, with the following changes:
+- This spell doesn't require concentration.
+- The duration becomes until dispelled. The spell also ends automatically if you die.
+- You can use this spell to shapeshift into a beast you have seen of CR 1/2 or lower, as if using the *polymorph* spell, save that you also retain your hit points, mental ability scores, and skill and saving throw proficiencies as well as gaining those of the creature. You retain the benefit of any features other than spellcasting from your class, race, or other source and can use them if the new form is physically capable of doing so. Your beast form's attacks are magic and you have a +1 bonus to the attack and damage rolls you make using them.
+
+#### Maw of the Night Serpent
+*Prerequisite: 17th level* <br/>
+<div style='margin-top:-4px;'></div>
+
+Whenever you cast eldritch blast, one creature you hit must make a Constitution saving throw against your spell save DC at the start of each of their turns. If the target fails three saving throws, it dies. If it instead succeeds three times, it is immune to this effect for 7 days. These successes and failures are not consecutive.
+
+\pagebreak
+
+#### Misty Visions (done)
+You can cast *silent image* at will, without expending a spell slot.
+
+#### One with Shadows (Done)
+*Prerequisite: 5th level* <br/>
+<div style='margin-top:-4px;'></div>
+
+When you are in an area of dim light or darkness, you can use your action to become invisible until you take an action, a reaction, or move into an area of bright light.
+
+#### Otherwordly Whispers (Done)
+You hear whispers in your ears, revealing secrets of the multiverse. As an action, choose one skill in which you lack proficiency. You have proficiency in the chosen skill until you use this ability again.
+
+#### Secrets of Conflict
+*Prerequisite: Pact of the Blade* <br/>
+<div style='margin-top:-4px;'></div>
+
+You have a superior understanding of combat. You learn one Fighting Style of your choice from the fighter class.
+
+#### See the Unseen
+*Prerequisite: 5th level* <br/>
+<div style='margin-top:-4px;'></div>
+
+You can cast *see invisibility* at will without using a spell slot. You also gain darkvision with a range of 60 feet. If you already have darkvision, you increase its range by 60 feet.
+
+#### Shadow of Moil
+???
+
+#### Soulreaving Aura
+
+#### Spiderwalk
+
+#### Tomb of Levistus
+*Prerequisite: 5th level* <br/>
+<div style='margin-top:-4px;'></div>
+
+As a reaction when you take damage, you can entomb yourself in ice, which melts away at the end of your next turn. You gain 10 temporary hit points per warlock level, which take as much of the triggering damage as possible. Immediately after you take the damage, you gain vulnerability to fire damage, your speed is reduced to 0, and you are incapacitated. These effects, including any remaining temporary hit points, all end when the ice melts.
+
+You can use this invocation a number of times equal to your proficiency bonus, and all expended uses are restored when you finish a long rest.
+
+#### Undying Servitude
+*Prerequisite: 9th-level* <br/>
+<div style='margin-top:-4px;'></div>
+
+You can cast *animate dead* at will without using a spell slot. [Cap of PB skeletons/zombies created and/or under your control at once.]
+
+#### Wall of Perilous Flame
+*Prerequisite: 13th level* <br/>
+<div style='margin-top:-4px;'></div>
+
+You know the *wall of fire* spell and can cast it at will, without expending a spell slot.
+
+#### Web
+
+#### ???
+You know the *command* spell and can cast it as a 1st level spell at will, without expending a spell slot. If a creature's saving throw is successful, the creature is immune to the this ability for 1 minute.
+
+The spell's level increases by one when you reach 5th level (2nd level spell), 9th level (3rd level spell), 13th level (4th level spell), and 17th level (5th level spell).
+
+#### ???
+You know the *banishment* spell and can cast it at will, without expending a spell slot.
+
+#### [Celestial Spells]
+*Prerequisite: Pact of the Tome, Celestial patron* <br/>
+<div style='margin-top:-4px;'></div>
+
+[You add the following spells to your spells known at the given levels.]
+
+##### Celestial Spells
+Warlock Level | Spells
+--------------|------------
+3rd | *cure wounds*, *guiding bolt*
+5th | *flaming sphere*, *lesser restoration*
+9th | *daylight*, *revivify*
+13th| *guardian of faith*, *wall of fire*
+17th| *flame strike*, *greater restoration*
+
+#### [Celestial Weapon]
+*Prerequisite: Pact of the Blade, Celestial patron* <br/>
+<div style='margin-top:-4px;'></div>
+
+[Turn your weapon into a celestial-styled one.]
+
+#### ???
+*Prerequisite: 9th level, Celestial patron* <br/>
+<div style='margin-top:-4px;'></div>
+
+[You can add damage to a nearby ally's weapon attack, like the 8th level cleric feature but for someone else. Maybe not celestial specific?]
+
+[At 8th level, you gain the ability to infuse your weapon strikes with divine energy. Once on each of your turns when you hit a creature with a weapon attack, you can cause the attack to deal an extra 1d8 damage of the same type dealt by the weapon to the target. When you reach 14th level, the extra damage increases to 2d8.]
+
+\pagebreakNum
+
+#### Beguiling Influence
+You can cast *charm person* at will, without expending a spell slot. When you reach 7th level, you can also cast *charm monster* at will. 
+
+You can never have more than a number of targets equal to your proficiency bonus charmed at a time with this ability. If you exceed this limit, you lose your hold on the first creature you charmed.
+
+#### Deepest Slumber
+You can cast *sleep* at will, without expending a spell slot. Once a creature has been affected by your spell, it is immune to another casting for 1 hour. **REWORD.**
+
+#### Serpent's Tongue
+You sprout a serpent's tongue (gaining the scent ability) and have advantage against poison
+
+### Lesser (5th)
+
+#### One with Shadows
+When you are in an area of dim light or darkness, you can use your action to become invisible until you move or take an action or a reaction.
+
+### Greater (11th)
+### Dire (17th)
+### Unknown Level and section
+Venomous Blood
+
+\pagebreakNum
+## Pacts
+### Aetherborn
+### Archfey
+### Beholder
+### Celestial
+#### Healing Light
+At 1st level, you gain the ability to channel celestial energy to heal wounds. You have a pool of d6s that you spend to fuel this healing. The number of dice in the pool equals 1 + your warlock level.
+
+As a bonus action, you can heal one creature you can see within 60 feet of you, spending dice from the pool. The maximum number of dice you can spend at once equals your Charisma modifier (minimum of one die). Roll the dice you spend, add them together, and restore a number of hit points equal to the total.
+
+Your pool regains all expended dice when you finish a long rest.
+
+#### Radiant Soul
+Starting at 6th level, your link to the Celestial allows you to serve as a conduit for radiant energy. You have resistance to radiant damage, and when you cast a spell that deals radiant or fire damage, you add your Charisma modifier to one radiant or fire damage roll of that spell against one of its targets.
+
+#### Celestial Resistance
+Starting at 10th level, you gain temporary hit points whenever you finish a short or long rest. These temporary hit points equal your warlock level + your Charisma modifier. Additionally, choose up to five creatures you can see at the end of the rest. Those creatures each gain temporary hit points equal to half your warlock level + your Charisma modifier.
+
+#### Searing Vengeance
+Starting at 14th level, the radiant energy you channel allows you to resist death. When you have to make a death saving throw at the start of your turn, you can instead spring back to your feet with a burst of radiant energy. You regain hit points equal to half your hit point maximum, and then you stand up if you so choose. Each creature of your choice that is within 30 feet of you takes radiant damage equal to 2d8 + your Charisma modifier, and is blinded until the end of the current turn.
+
+Once you use this feature, you can’t use it again until you finish a long rest.
+
+### Dragon
+### Elemental
+### Fathomless
+### Genie
+### Great Old One
+### Hexblade
+### Infernal
+***Fiendish Quirks***
+You potentially consigned your soul for power. Your pact may alter you, manifesting as a quirk.
+
+d6| Quirk
+--|-------
+1 |
+2 |
+3 |
+4 |
+5 |
+6 |
+
+#### Fiendish Magic
+*1st-level Infernal Pact feature* <br/>
+<div style='margin-top:-4px;'></div>
+
+You know the [***CANTRIP***] cantrip, your eldritch blast and accursed hex deals fire or cold damage, and your familiar is a fiend.
+
+#### Dark One's Blessing
+*3rd-level Infernal Pact feature* <br/>
+<div style='margin-top:-4px;'></div>
+
+Whenever you kill a hostile creature, you gain temporary hit points equal to your warlock level + your spellcasting ability modifier (minimum of 1).
+
+#### 
+*1st-level Infernal Pact feature* <br/>
+<div style='margin-top:-4px;'></div>
+
+6th-level dark pact feature
+You can call on your patron to alter fate in your favor. When you make an ability check or a saving throw, you can use this feature to add a d10 to your roll. You can do so after seeing the initial roll but before any of the roll's effects occur.
+
+Once you use this feature, you cannot use it again until you finish a short or long rest. If you reduce a hostile creature to 0 hit points, instead of gaining the benefits of Dark One's Blessing, you can regain a use of this ability.
+
+#### ???
+*1st-level Infernal Pact feature* <br/>
+<div style='margin-top:-4px;'></div>
+
+Choose one damage type when you finish a short or long rest. You gain resistance to that damage type until you choose a different one with this feature. Damage from silvered or blessed weapons ignore this resistance.
+
+#### ???
+*1st-level Infernal Pact feature* <br/>
+<div style='margin-top:-4px;'></div>
+
+When you hit a creature with an attack, you can use this feature to instantly transport the target through the lower planes. The creature disappears and hurtles through a nightmarish landscape. 
+
+At the end of your next turn, the target returns to the space it previously occupied, or the nearest unoccupied space. If the target is not a fiend, it takes 10d10 psychic damage as it reels from its horrific experience. 
+
+Once you use this feature, you cannot use it again until you finish a long rest.
+
+### Mechanus
+Recommended Alignment: Any Lawful
+Bonus cantrip: 
+### Undead
+### Undying/Immortal
+Recommended Alignment: Any Nongood
+Bonus cantrip: spare the dying
+
+\pagebreakNum
+## New Spells
+#### Baleful Utterance
+[Source](https://www.gmbinder.com/share/-LFkvF33vjUeacc5lK3Z)
+
+#### Ghostfire
+<img src='https://www.gmbinder.com/images/WGSC3Av.jpg' style='position:absolute; top:0px; right:0px; width:400px' />
+
+#### Muspelflame
+## New Items
+### Warlock's Scepter
+### Chasubel of Fell Power
+
+### Pact Blade (4e)
+Level 3+
+
+Warlocks favor this wickedly sharp blade.
+
+Weapon: Light Blade (usually daggers and sickles)
+
+Standard +X to attack/damage rolls, +Xd6 damage on crit
+
+Property: This blade functions as a warlock implement, adding its enhancement bonus to attack rolls and damage rolls for warlock powers that use implements. 
+
+Property: When a creature you have cursed with your Warlock’s Curse makes a melee attack against you, deal damage to the creature equal to the pact blade’s enhancement bonus.
+
+Special: You do not gain your weapon proficiency bonus to the attack roll when using a pact blade as an implement.
+
+### Rod of Corruption (4e)
+Level 3+
+
+*This rod magnifies and multiplies your Warlock’s Curse.*
+
+Standard +X to attack/damage rolls, +Xd6 damage on crit
+
+Property: Whenever your pact boon is triggered, instead of taking its normal benefit you can transfer your Warlock’s Curse to each enemy within 5 squares of the original target.
+
+### Rod of Dark Reward (4e)
+Level 2+
+
+*This rod channels your Warlock’s Curse while adding to your defenses.*
+
+Standard +X to attack/damage rolls, +Xd6 damage on crit
+
+Property: Whenever you place a Warlock’s Curse on an enemy, you gain a +1 power bonus to AC until the start of your next turn.
+
+### Rod of Death’s Grasp (4e)
+Level 23+
+
+*A rod that ripples with necrotic energy.*
+
+Standard +X to attack/damage rolls, on crit: 10+ ongoing necrotic damage (save ends), and you gain 10+ temp hp
+
+Power (Daily ✦ Necrotic): Free Action. Use this power when you place your Warlock’s Curse on a target. The target takes ongoing 10 necrotic damage (save ends). Each time this damage is dealt, you gain 10 temporary hit points.
+
+### Rod of Harvest (4e)
+Level 14+
+
+This rod stores the power of your pact boon so that you can unleash it when you want to.
+
+Standard +X to attack/damage rolls, +Xd6 damage on crit
+
+Property: When your pact boon is triggered, you can store its effect within your rod instead of using it immediately. Your rod can hold only one pact boon effect at a time.
+
+Power (Encounter): Minor Action. Use the pact boon effect stored within your rod.
+
+### Rod of Reaving (4e)
+Level 5+
+
+This rod enhances the damage dealt to those suffering your Warlock’s Curse.
+
+Standard +X to attack/damage rolls, +Xd8 damage on crit
+
+Property: When you place your Warlock’s Curse on a target, the creature takes damage equal to the rod’s enhancement bonus.
+
+### Rod of the Pyre
+Level 10+
+
+This rod crackles with arcane fire.
+
+Standard +X to attack/damage rolls, +Xd6 fire damage on crit
+
+Power (Daily): Free Action. When you place your Warlock’s Curse on a target, the creature gains vulnerability 2 fire until the end of your next turn.
