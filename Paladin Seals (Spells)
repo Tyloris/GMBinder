@@ -1,0 +1,167 @@
+<div class='table wide' />
+
+Seal name	            | Seal description	    | Judgement description	    
+------------------------|-----------------------|---------------------------
+[Seal of Blood <Horde>] / <br/> [Seal of the Martyr (Alliance)](https://warcraft.wiki.gg/wiki/Seal_of_the_Martyr)   | All melee attacks cause additional Holy damage, but the Paladin takes damage proportional to the damage dealt.  | Unleashing this Seal's energy will judge the target, causing a large amount of Holy damage to both the target and the Paladin.
+[Seal of Command]	    | Fills you with Holy Light, causing melee attacks to deal 10% additional Holy damage.
+[Seal of Command]      | All melee attacks deal additional Holy damage to up to 3 targets in front of the Paladin. | Unleashing this Seal's energy will judge an enemy, instantly causing Holy damage.
+[Seal of Corruption <Horde>] / <br/> [Seal of Vengeance <Alliance>] | Fills the Paladin with holy power, causing attacks to apply [Blood Corruption <Horde>] / [Holy Vengeance <Alliance>], which deals additional Holy damage over 15 sec. [Blood Corruption <Horde>] / [Holy Vengeance <Alliance>] can stack up to 5 times. Once stacked to 5 each weapon swing from the Paladin will deal additional Holy damage. | Unleashing this Seal's energy will judge an enemy, instantly causing Holy damage to an enemy, increased for each application of [Blood Corruption <Horde>] / [Holy Vengeance <Alliance>] on the target.
+[Seal of the Crusader]  | Fills the Paladin with the spirit of the crusader, granting additional attack power and increasing attack speed, though each melee attack will deal less damage. | Unleashing this Seal's energy will judge the target, increasing Holy damage taken.
+[Seal of Fury]          | Fills the Paladin with divine fury, allowing melee attacks to cause additional threat. | Unleashing this Seal's energy will judge the target, causing Holy damage spells cast on that enemy to generate additional threat.
+[Seal of Insight]	    | Fills you with Holy Light, increasing your casting speed by 10%, improving healing spells by 5% and giving melee attacks a chance to heal you for X.    |
+[Seal of Justice]	    | Fills you with Holy Light, causing melee attacks to deal 16% additional Holy damage and reduce the target's movement speed by 50% for 8 sec.
+[Seal of Light]	    | Fills the Paladin with divine light, giving each melee attack a chance to heal the Paladin.   | Unleashing this Seal's energy will cause Holy damage to an enemy.
+[Seal of Righteousness]	| Fills you with Holy Light, causing melee attacks to deal 6% weapon damage to all targets within 8 yards. | 
+[Seal of Truth]	        | Fills you with Holy Light, causing melee attacks to deal 12% additional Holy damage and apply Censure to the target, which deals additional Holy damage over 15 sec. Censure can stack up to 5 times. |
+[Seal of Wisdom]	    | Fills the Paladin with divine wisdom, giving each melee attack a chance to restore mana.	    | Unleashing this Seal's energy will cause Holy damage to an enemy.
+
+</div>
+
+#### Seal of X
+*1st-level SCHOOL*
+___
+- **Casting Time:** 1 bonus action
+- **Range:** Self
+- **Components:** V
+- **Duration:** Concentration, up to 1 minute
+---
+[Effect while under the spell.]
+
+[You can use an action to end the spell and cause X effect. Mildly more powerful than other spells of its level due to requiring two actions to activate.]
+
+***At Higher Levels.***
+
+\pagebreakNum
+
+#### Seal of Command
+*1st-level evocation*
+___
+- **Casting Time:** 1 bonus action
+- **Range:** Self
+- **Components:** V, S
+- **Duration:** Concentration, up to 1 minute
+---
+[Your prayer empowers you with divine radiance.] Until the spell ends, your weapon attacks deal an extra 1d4 radiant damage on a hit.
+
+You can use an action to end this spell, causing a creature you can see within 30 feet to take 3d4 radiant damage.
+
+#### Seal of Light
+*1st-level SCHOOL*
+___
+- **Casting Time:** 1 bonus action
+- **Range:** Self
+- **Components:** V
+- **Duration:** Concentration, up to 1 minute
+---
+[Effect while under the spell.]
+
+[You can use an action to end the spell and cause X effect. Mildly more powerful than other spells of its level due to requiring two actions to activate.]
+
+***At Higher Levels.***
+
+#### Seal of the Martyr
+*2nd-level evocation*
+___
+- **Casting Time:** 1 bonus action
+- **Range:** Self
+- **Components:** V, S
+- **Duration:** Concentration, up to 1 minute
+---
+Until the spell ends, you can choose to deal an extra 2d8 radiant damage when you hit a creature with a weapon attack. Whenever you do, you lose 1d8 hit points.
+
+You can use an action to end this spell, causing a creature you can see within 30 feet to take 6d8 radiant damage and you to lose 3d8 hit points.
+
+\pagebreakNum
+
+#### Aura of Accuracy
+
+#### Aura of Command
+
+#### Aura of Concentration
+
+#### Aura of Courage
+You and friendly creatures within 10 feet of you can't be frightened while you are conscious.
+
+At 18th level, the range of this aura increases to 30 feet.
+
+#### Aura of the Crusader
+
+#### Aura of Devotion
+*Prerequisite:* 6th level
+
+Whenever you or a friendly creature within 10 feet of you must make a saving throw, the creature gains a bonus to the saving throw equal to your Charisma modifier (with a minimum bonus of +1). You must be conscious to grant this bonus.
+
+At 18th level, the range of this aura increases to 30 feet.
+
+Source: Paladin, PHB
+
+#### Aura of Discipline
+
+#### Aura of Resistance
+
+#### Aura of Retribution
+
+#### Aura of Vengeance
+
+#### Aura of Warding
+Beginning at 7th level, ancient magic lies so heavily upon you that it forms an eldritch ward. You and friendly creatures within 10 feet of you have resistance to damage from spells.
+
+At 18th level, the range of this aura increases to 30 feet.
+
+Source: Paladin (Oath of the Ancients), PHB
+
+#### Aura of Conquest
+Starting at 7th level, you constantly emanate a menacing aura while you're not incapacitated. The aura extends 10 feet from you in every direction, but not through total cover.
+
+If a creature is frightened of you, its speed is reduced to 0 while in the aura, and that creature takes psychic damage equal to half your paladin level if it starts its turn there.
+
+At 18th level, the range of this aura increases to 30 feet.
+
+Source: Paladin (Oath of Conquest), XGE
+
+#### Divine Allegiance
+Starting at 7th level, when a creature within 5 feet of you takes damage, you can use your reaction to magically substitute your own health for that of the target creature, causing that creature not to take the damage. Instead, you take the damage. This damage to you can't be reduced or prevented in any way.
+
+Source: Paladin (Oath of the Crown), SCAG
+
+#### Aura of Devotion
+Starting at 7th level, you and friendly creatures within 10 feet of you can't be charmed while you are conscious.
+
+At 18th level, the range of this aura increases to 30 feet.
+
+Source: Paladin (Oath of Devotion), PHB
+
+#### Aura of Alacrity
+At 7th level, you emanate an aura that fills you and your companions with supernatural speed, allowing you to race across a battlefield in formation. Your walking speed increases by 10 feet. In addition, if you aren't incapacitated, the walking speed of any ally who starts their turn within 5 feet of you increases by 10 feet until the end of that turn.
+
+When you reach 18th level in this class, the range of the aura increases to 10 feet.
+
+Source: Paladin (Oath of Glory), TCE
+
+#### Aura of the Guardian
+Starting at 7th level, you can shield your allies from harm at the cost of your own health. When a creature within 10 feet of you takes damage, you can use your reaction to magically take that damage, instead of that creature taking it. This feature doesn't transfer any other effects that might accompany the damage, and this damage can't be reduced in any way.
+
+At 18th level, the range of this aura increases to 30 feet.
+
+Source: Paladin (Oath of Redemption), XGE
+
+#### Aura of the Sentinel
+At 7th level, you emit an aura of alertness while you aren't incapacitated. When you and any creatures of your choice within 10 feet of you roll initiative, you all gain a bonus to initiative equal to your proficiency bonus.
+
+At 18th level, the range of this aura increases to 30 feet.
+
+Source: Paladin (Oath of the Watchers), TCE
+
+#### Aura of Hate
+Starting at 7th level you, as well any fiends and undead within 10 feet of you, gain a bonus to melee weapon damage rolls equal to your Charisma modifier (minimum of +1). A creature can benefit from this feature from only one paladin at a time.
+
+At 18th level, the range of this aura increases to 30 feet.
+
+Source: Paladin (Oathbreaker), DMG
+
+#### Aura of the Dungeon Master
+Starting at 7th level, you and all allies within 10 feet of you have advantage on Wisdom (Insight) or Intelligence (History) checks on enemies.
+
+At 18th level, you and all allies within 10 feet of you also gain advantage on Wisdom (Perception) checks to locate enemies.
+
+[Source.](https://www.dndbeyond.com/subclasses/640530-oath-of-brennan-lee-mulligan)
