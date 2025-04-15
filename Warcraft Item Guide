@@ -1,0 +1,1012 @@
+# Welcome  to your next campaign binder!
+
+## Overview on Creating
+
+GMBinder uses markdown for its primary content. To learn about Markdown and its supporting syntax, [check this out](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
+
+In addition, GM Binder allows for HTML content within your document. However, "User Beware" warnings apply. Especially now in this early stage. Using HTML for things like images and links is pretty safe. However, structured HTML like divs, tables, etc, may have undesired consequences.
+
+## GMBinder Specific
+### Page Breaks
+* Using `\pagebreak` will result in a page break. Or press `Ctrl+;` or `Cnd+;` to insert this.
+* Using `\pagebreakNUm` will result in a page break with page number. Or press `Ctrl+'` or `Cnd+'` to insert this.
+
+### Links
+* Internal Links - Press Ctrl+Space to get a list of all of your document's headers. Press tab on one to insert the link into your document. ie: [Welcome to your next campaign binder!](#welcome-to-your-next-campaign-binder)
+* External Links - Using the standard markdown link syntax with an external URL will result in a link that opens a new tab. ie: [Staff of Darkening](https://www.dndbeyond.com/magic-items/29957-staff-of-anti-thunder-and-darkening)
+* If you would like the actual URL to show in your external link, a simple solution is to simply wrap it with < and >. ie: <https://www.gmbinder.com>
+
+### Table of Contents
+In the menu above, you'll see a Table of Contents for your document.
+
+### Images
+There are a couple ways you can place images. If you would like something positioned like you see on this page, you will need to provide the appropriate styles to do so. For example: 
+
+`<img src='https://www.gmbinder.com/assets/img/books.jpg' style='position:absolute;bottom:45px;right:30px;width:380px; mix-blend-mode:multiply;' />`
+
+If you would like to place an image in-line within your content, simply providing an image tag with an external URL will be sufficient. Do be aware that your images should be sized appropriately for the content.
+
+\columnbreak
+
+### Wrapping to Column Two
+Sometimes you want your content in column 1 to be cut short and continue on to column 2. The simplest way to accomplish this is to use:
+
+`\columnbreak`
+___
+You can also press `Ctrl+.` or `Cnd+.` to insert this.
+
+### Footnotes
+This is an example of using html and built in styles to get a desired output.
+
+`<div class='footnote'>Part 1 | Introduction</div>`
+
+<img src='https://www.gmbinder.com/assets/img/books.jpg' style='position:absolute;bottom:45px;right:30px;width:350px; mix-blend-mode:multiply;' />
+<div class='footnote'>Part 1 | Tutorial</div>
+
+## Basic Editor Shortcuts
+
+### Find and Replace
+* `Ctrl+F` or `Cmd+F` - Find
+* `Alt+Ctrl+F` or `Alt+Cmd+F` - Find & Replace
+
+### Editing
+* `Ctrl+Z` or `Cmd+Z` - Undo
+* `Ctrl+Shift+Z` or `Cmd+Shift+Z` - Redo
+* `Ctrl+D` or `Cmd+D` - Remove current line
+* `Ctrl+U` - Uppercase current selection
+* `Ctrl+Shift+U` - Lowercase current selection
+
+### Content Folding
+* `F2` - Fold / Unfold a block of content
+* `Ctrl+Cmd+Alt+0` Fold everything
+* `Shift+Cmd+Alt+0` UnFold everything
+
+### And Much More...
+* `Ctrl+Alt+H` or `Cmd+Alt+H` Shows all Editor Shortcuts
+
+
+\pagebreakNum
+
+# Introduction
+
+This document is intended to act as a tool for DMs and players using the Warcraft variant of D&D 5th edition outlayed in the Warcraft Hero's Handbook. As the world of Azeroth is a very different place than depicted in the standard D&D campaign, the Warcraft Hero's Handbook outlined a different series of races and classes to be used in place of those depicted in the Player's Handbook. Some were more or less direct ports of existing classes with a new subclass--the base abilities of a Monk were little different whether listed in the Player's Handbook or the Warcraft Hero's Handbook. Yet the full set of rules was spelled out the same.
+
+When it came to equipment however, only new pieces were listed, despite the difference in technology level. Azeroth is far more industrialized than the typically feudal society depicted in a standard D&D campaign. With the clockwork of the gnomes, the alchemy of the goblins, the metallurgy of the dwarves, as well as the enchantments of the elves, Azeroth has a different set of equipment and magical items. 
+
+Thus, this document. It is intended to act as a single reference source for equipment and magic items. Following the example of the Warcraft Hero's Handbook, a full ruleset will be spelled out. Passages will be taken from the Player's Handbook, the Dungeon Master's Guide, and the Warcraft Hero's Handbook, often word-for-word, in order to prevent the need to flip back and forth between multiple books. As this is a work-in-progress, to facilitate ease of feedback, sections that are new will be bolded in order to indicate that they are new content.
+
+\pagebreakNum
+
+
+# Chapter One: Equipment
+
+<div class='footnote'>Part 2 | Your Introduction</div>
+
+The marketplace of a large city teems with buyers and sellers of many sorts: dwarf smiths and elf woodcarvers, troll charms, goblin relics, and gnome jewelers, not to mention humans of every shape, size, and color drawn from a spectrum of nations and cultures. In the largest cities, almost anything imaginable is offered for sale, from exotic spices and luxurious clothing to wicker baskets, practical swords, and beautiful elven bows.
+
+For an adventurer, the availability of armor, weapons, backpacks, rope, and similar goods is of paramount importance, since proper equipment can mean the difference between life and death in a dungeon or the untamed wilds. This chapter details the mundane and exotic merchandise that adventurers commonly find useful in the face of the threats that Azeroth presents.
+
+
+## Starting Equipment
+When you create your character, you receive equipment based on a combination of your class and your chosen background. Alternatively, you can start with a number of gold pieces based on your class and spend them on items from the lists in this chapter. See the Starting Wealth by Class table to determine how much gold you have to spend.
+
+You decide how your character came by this starting equipment. It might have been an inheritance, or goods that the character purchased during his or her upbringing. You might have been equipped with a weapon. armor, and a backpack as part of military service. You might even have stolen your gear. A weapon could be a family heirloom, passed down from generation to generation until your character finally took up the mantle and followed in an ancestor's adventurous footsteps.
+
+##### Starting Wealth by Class
+| | Class  | Funds | | | | | | |
+|:-|:-----|------------:|:-|:-|:-|:-|:-|:-|
+|| Druid  | 2d4 x 10 gp |||||||
+|| Hunter | 5d4 x 10 gp |||||||
+|| Mage   | 4d4 x 10 gp |||||||
+|| Monk   | 5d4 gp      |||||||
+|| Paladin| 5d4 x 10 gp |||||||
+|| Priest | 4d4 x 10 gp |||||||
+|| Rogue  | 4d4 x 10 gp |||||||
+|| Shaman | 5d4 x 10 gp |||||||
+|| Warlock| 4d4 x 10 gp |||||||
+|| Warrior| 5d4 x 10 gp |||||||
+
+\columnbreak
+
+## Wealth
+Wealth varies drastically on Azeroth according to region. Coins, gems, trade goods, art object, animals, and property can reflect your character's financial well-being. Members of the peasantry trade in good, bartering for what they need to scrape what gold necessary to pay of their taxes.
+
+Members of the nobility trade either in legal rights, such as the rights to a mine, a port, or farmland, or in gold bars, measuring gold by the pound rather than by the coin. 
+
+Only merchants, adventurers, and those offering professional services for hire commonly deal in coins.
+
+### Coinage
+Common coins come in several different denominations based on the relative worth of the metal from which they are made. The three most common coins are the gold piece (gp), the silver piece (sp), and the copper piece (cp).
+
+With one gold piece, a character can buy a belt pouch, 50 feet of good rope, or a goat. A skilled (but not exceptional) artisan can earn one gold piece a day. The gold piece is the standard unit of measure for wealth, even if the coin itself is not commonly used. When merchants discuss deals that involve goods or services worth hundreds or thousands of gold pieces, the transactions don't usually involve the exchange of individual coins. Rather, the gold piece is a standard measure of value, and the actual exchange is in gold bars, letters of credit, or valuable goods.
+
+One gold piece is worth ten silver pieces, the most prevalent coin among commoners. One silver piece is worth ten copper pieces, which are common among laborers and beggars.
+
+In addition, unusual coins made of other precious metals sometimes appear in treasure hoards. The electrum piece (ep) and the platinum piece (pp) originate from fallen empires and lost kingdoms, and they sometimes arouse suspicion and skepticism when used in transactions. An electrum piece is worth five silver pieces, and a platinum piece is worth ten gold pieces. 
+
+A standard coin weighs about a third of an ounce, so fifty coins weigh a pound.
+
+##### Standard Exchange Rates
+|  Coin          | cp   | sp   | ep   | gp    | pp  |
+|:--------------------|-----:|-----:|-----:|------:|---------:|
+|  Copper (cp)   | 1    | 1/10 | 1/50 | 1/100 | 1/1000   |
+|  Silver (sp)   | 10   | 1    | 1/5  | 1/10  | 1/100    |
+|  Electrum (ep) | 50   | 5    | 1    | 1/2   | 1/20     |
+|  Gold (gp)     | 100  | 10   | 2    | 1     | 1/10     |
+|  Platinum (pp) | 1000 | 100  | 20   | 10    | 1        |
+
+\pagebreakNum
+
+
+> ##### **_NEW!_** Variant: Silver Standard
+> While a standard D&D campaign's economy is based around gold coins, with each step up or down in coin value being in multiples of ten, this does notaccurately reflect the economy as represented in the World of Warcraft. While high-level adventurers commonly deal in amounts of hundreds to thousands of gold coins, those who are just starting their journeys typically do so for rewards in the amounts of a dozen copper coins. To better represent the world of Azeroth, instead of gold being used as the standard measure of value, silver is used in its place.
+>
+> Under this rule, gold coin is worth one hundred silver pieces and one silver coin is worth one hundred coppers. Platinum and electrum coins are not used in this system, as Azeroth does not use them for coinage.
+>
+> Converting the prices listed is rather straightforward. As silver is used as the new standard, any cost entry in the equipment tables that lists prices in gp is now the same number in sp. For example, a longsword has a market price of 15 gp under the 'gold standard' rules. Under the silver standard variant, it now costs 15 sp. Prices listed in terms of sp are divided by 10 to obtain the new price--a javelin formerly cost 5 silver, but now costs 0.5 silver (or 50 copper). Items listed in terms of copper pieces are unaffected by this new system--a dart costs 5 copper whether using the gold or silver standard.
+> 
+> An exception to this rule is when dealing with silver or gold as trade goods. As the old system had 1 pound of these metals be worth 50 coins of the same material, the new system retains this relationship. 
+> #
+> 
+> ##### Variant Standard Exchange Rates
+> |  Coin          | cp    | sp   | gp
+> |:--------------------|------:|-----:|-----:|
+> |  Copper (cp)   | 1     | 1/100| 1/10,000
+> |  Silver (sp)   | 100   | 1    | 1/100
+> |  Gold (gp)     | 10,000  | 100   | 1
+
+\columnbreak
+### Selling Treasure
+Opportunities abound to find treasure, equipment, weapons, armor, and more in the battlefields of Azeroth. Normally, you can sell your treasures and trinkets when you return to a town or other settlement, provided that you can find buyers and merchants interested in your loot.
+
+**_Arms, Armor, and Other Equipment._** As a general rule, undamaged weapons, armor, and other equipment fetch half their cost when sold in a market. Weapons and armor used by monsters are rarely in good enough condition to sell.
+
+**_Magic Items._** Selling magic items is problematic. Finding someone to buy a potion of a scroll isn't too hard, but other items are out of the realm of most but the wealthiest nobles. Likewise, apart from a few common magic items, you won't normally come across magic items or spells to purchase. The value of magic is far beyond simple gold and should always be treated as such.
+
+**_Gems, Jewelry, and Art Objects._** These items retain their full value in the marketplace, and you can either trade them in for coin or use them as currency for other transactions. For exceptionally valuable treasures, the DM might require you to find a buyer in a large town or larger community first.
+
+**_Trade Goods._** On the borderlands, many people conduct transactions through barter. Like gems and art objects, trade goods--bars of iron, bags of salt, livestock, and so on--retain their full value in the market and can be used for currency.
+
+\pagebreakNum
+
+## Armor and Shields
+Azeroth is a complex world made of may different cultures, with sometimes wildly different technology levels. For this reason, adventurers have access to a variety of armor types, ranging from leather armor to chain mail to costly plate armor, with severl other kinds of armor in between. The Armor table collects the most commonly available types of armor found in the game and separates them into three categories: light armor, medium armor, and heavy armor. Many fighters supplement their armor with a shield.
+
+The Armor table shows the cost, weight, and other properties of the most common types of armor worn in the setting of Azeroth.
+
+**_Armor Proficiency._** Anyone can put on a suit of armor or strap a shield to an arm. Only those proficient in the armor's uses know how to wear it effectively, however. Your class gives you proficiency with certain types of armor. If you wear armor that you lack proficiency with, you have disadvantage on any ability check, saving throw, or attack roll that involves Strength or Dexterity, and you can't cast spells.
+
+**_Armor Class (AC)._** Armor protects its wearer from attacks. The armor (and shield) you wear determines your base Armor Class.
+
+**_Heavy Armor._** Heavier armor interferes with the wearer's ability to move quickly, stealthily, and freely. If the Armor table shows "Str 13" or "Str 15" in the Strength column for an armor type, the armor reduces the wearer's speed by 10 feet unless the wearer has a Strength score equal to or higher than the listed score.
+
+**_Stealth._** If the Armor table shows "Disadvantage" in the Stealth column, the wearer has disadvantage on Dexterity (Stealth) checks.
+
+> ##### Variant: Equipment Sizes/Shapes
+>
+> In most campaigns, you can use or wear any equipment that you find on your adventures, within the bounds of common sense. For example, a burly orc won't fit in a goblin's leather armor, and a gnome would be swallowed up in a tauren's robe.
+>
+> The DM can impose more realism. For example, a suit of plate armor made for one human might not fit another one without significant alterations, and a guard's uniform might be visibly ill-fitting when an adventurer tries to wear it as a disguise. Additionally, a set of boots for an orc would not fit the hooves of a tauren or the paws of a pandaren.
+>
+> Using this variant, when adventurers find armor, clothing, and similar items that are made to be worn, they might need to visit an armorsmith, tailor, leatherworker, or similar expert to make the item wearable. The cost for such works varies from 10 to 40 percent of the market price of the item. The DM can either roll 1d4 x 10 or determine the increase in cost based on the extent of the alterations needed.
+
+\columnbreak
+
+### Shields
+
+A shield is made from wood or metal and is carried in one hand. Wearing a shield increases your Armor Class by a certain amount. You can only benefit from one shield at a time.
+
+Anyone can strap a shield to their arm. Only those proficient in the shield's use know how to wield it effectively, however. If you wield a shield that you lack proficiency with, you have disadvantage on any ability check, saving throw, or attack roll that involves Strength or Dexterity, and you can't cast spells.
+
+**_Buckler._** A buckler is strapped to your forearm, allowing you to hold an item in its hand. If you use the shielded hand as part of an action or bonus action, you loose its increase to your Armor Class until the start of your next turn.
+
+**_Shield._** A simple slab of metal or wood, grasped in one hand. The standard kind of shield used by fighters.
+
+**_Tower Shield._** A very large and heavy piece of metal or wood, a tower shield can be a useful tool to those who know how to properly utilize it. You use your Strength modifier, instead of your Dexterity for determining your Armor Class while you have this shield donned.
+
+
+### Light Armor
+
+Made from supple and thin materials, light armor favors agile adventurers since it offers some protection without sacrificing mobility. If you wear light armor, you add your Dexterity modifier to the base number from your armor type to determine your Armor Class.
+
+**_Padded._** Padded armor consists of quilted layers of cloth and batting.
+
+**_Leather._** The breastplate and shoulder protectors of this armor are made of leather that has been stiffened by being boiled in oil. The rest of the armor is made of softer and more flexible materials.
+
+**_Studded Leather._** Made from tough but flexible leather, studded leather is reinforced with close-in rivets or spikes.
+
+### Medium Armor
+
+Medium armor offers more protection than light armor, but it also impairs movement more. If you wear medium armor, you add your Dexterity modifier, to a maximum of +2, to the base number from your armor type to determine your Armor Class.
+
+**_Hide._** This crude armor consists of thick furs and pelts. It is commonly worn by barbarian tribes, those who prefer a connection to the wild, and other folk who lack access to the tools and materials needed to create better armor.
+
+**_Chain Shirt._** Made of interlocking metal rings, a chain shirt is worn between layers of clothing or leather. The armor offers modest protection to the wearer's upper body and allows the sound of the rings rubbing against one another to be muffled by outer layers.
+
+**_Scale Mail._** This armor consists of a coat and leggings (and perhaps a separate skirt) of leather covered with overlapping pieces of metal, much like the scales of a fish. The suit includes gauntlets.
+
+**_Breastplate._** This armor consists of a fitted metal chest piece worn with supple leather. Although it leaves the legs and arms relatively unprotected, this armor provides good protection for the wearer's vital organs while leaving the wearer relatively unencumbered.
+
+**_Half Plate._** Half plate consists of shaped metal plates that cover most of the wearer's body. It does not include leg protection beyond simple greaves that are attached with leather straps.
+
+\pagebreakNum
+
+### Heavy Armor
+Of all the armor categories, heavy armor offers the best protection. These suits of armor cover the entire body and are designed to stop a wide range of attacks. Only proficient fighters can manage their weight and bulk. 
+
+Heavy armor doesn't let you add your Dexterity modifier to your Armor Class, but it also doesn't penalize you if your Dexterity modifier is negative.
+
+**_Ring Mail._** This armor is leather armor with heavy rings sewn into it. The rings help reinforce the armor against blows from swords and axes. Ring mail is inferior to chain mail, and it's usually worn only by those who can't afford better armor.
+
+**_Chain Mail._** Made of interlocking metal rings, chain mail includes a layer of quilted fabric worn underneath the mail to prevent chafing and to cushion the impact of blows. The suit includes gauntlets.
+
+**_Splint._** This armor is made of narrow vertical strips of metal riveted to a backing of leather that is worn over cloth padding. Flexible chain mail protects the joints.
+
+**_Plate._** Plate consists of shaped, interlocking metal plates to cover the entire body. A suit of plate includes gauntlets, heavy leather boots, a visored helmet, and thick layers of padding underneath the armor. Buckles and straps distribute the weight over the body.
+
+### Getting Into and Out of Armor
+
+The time it takes to don or doff a type of armor or a shield is shown in the Donning and Doffing Armor table.
+
+**_Don._** This is the time it takes to put on the item. You benefit from its AC only if you take the full time to don it.
+
+**_Doff._** This is the time it takes to take off the item. If you have help removing the armor, reduce the time by half.
+
+##### Donning and Doffing Armor
+
+| Category     | Don        | Doff      |
+| ------------ | ---------- | --------- |
+| Light Armor  |  1 minute  | 1 minute  | 
+| Medium Armor |  5 minutes | 1 minute  |
+| Heavy Armor  | 10 minutes | 5 minutes |
+| Shield       |  1 action  | 1 action  |
+
+<div style='margin-top:50px;'></div>
+
+<div class='classTable wide'>
+
+##### Armor and Shields
+|  Armor          |     Cost |   |   | Armor Class (AC)          | Strength | Stealth      | Weight |
+|:----------------|---------:|---|---|:--------------------------|:---------|:-------------|-------:|
+| *Light Armor*   |          |   |   |                           |          |              |        |
+| Padded          |     5 gp |   |   | 11 + Dex Modifier         | ---      | Disadvantage |  8 lb. |
+| Leather         |    10 gp |   |   | 11 + Dex Modifier         | ---      | ---          | 10 lb. |
+| Studded leather |    45 gp |   |   | 12 + Dex Modifier         | ---      | ---          | 13 lb. |
+| *Medium Armor*  |          |   |   |                           |          |              |        |
+| Hide            |    10 gp |   |   | 12 + Dex Modifier (max 2) | ---      | ---          | 12 lb. |
+| Chain shirt     |    50 gp |   |   | 12 + Dex Modifier (max 2) | ---      | ---          | 20 lb. |
+| Scale mail      |    50 gp |   |   | 12 + Dex Modifier (max 2) | ---      | Disadvantage | 45 lb. |
+| Breastplate     |   400 gp |   |   | 12 + Dex Modifier (max 2) | ---      | ---          | 20 lb. |
+| Half plate      |   750 gp |   |   | 12 + Dex Modifier (max 2) | ---      | Disadvantage | 45 lb. |
+| *Heavy Armor*   |          |   |   |                           |          |              |        |
+| Ring mail       |    30 gp |   |   | 14                        | ---      | Disadvantage | 40 lb. |
+| Chain mail      |    75 gp |   |   | 16                        | Str 13   | Disadvantage | 55 lb. |
+| Splint          |   200 gp |   |   | 17                        | Str 15   | Disadvantage | 60 lb. |
+| Plate           | 1,500 gp |   |   | 18                        | Str 15   | Disadvantage | 65 lb. |
+| *Shields*       |          |   |   |                           |          |              |        |
+| Buckler         |     5 gp |   |   | +1, Special               | ---      | ---          |  2 lb. |
+| Shield          |    10 gp |   |   | +2                        | ---      | ---          |  6 lb. |
+| Tower shield    |    25 gp |   |   | +2, Special               | Str 15   | Disadvantage | 24 lb. |
+
+</div>
+
+\pagebreakNum
+
+## Weapons
+Your class grants proficiency in certain weapons, reflecting both the class's focus and the tools you are most likely to use. Whether you favor a longsword or a longbow, your weapon and your ability to wield it effectively can mean the difference between life and death while adventuring.
+
+The Weapons table shows the most common weapons used in Azeroth, their price and weight, the damage they deal when they hit, and any special properties they possess. Every weapon is classified as either melee or ranged. A **melee weapon** is used to attack a target within 5 feet of you, whereas a **ranged weapon** is used to attack a target from a distance. 
+
+### Weapon Proficiency
+
+Your race, class, and feats can grant you proficiency with certain weapons or categories of weapons. The four categories are **simple**, **martial**, **racial**, and **firearms**. 
+
+Most people can use simple weapons with proficiency. These weapons include clubs, maces, and other weapons often found in the hands of commoners. 
+
+Martial weapons, including swords, axes, and polearms, require more specialized training to use efficiently. Most fighters use martial weapons because these weapons put their fighting style and training to best use.
+
+Racial weapons are those crafted and used by one race exclusively, such as night elves with their circular moon swords and glaives, taurens with their heavy blunt totems, capable of crushing most men, and the blood elves with their double ended warblades.
+
+Firearms are special, complex ranged weapons that require specialized training to operate
+
+Proficiency with a weapon allows you to add your proficiency bonus to the attack roll for any attack you make with that weapon. If you make an attack roll using a weapon with which you lack proficiency, you do not add your proficiency bonus to the attack roll. Additionally, if the weapon is a firearm, you increase the firearm's misfire score by 1.
+
+### Weapon Properties
+
+Many weapons have special properties related to their use, as shown in the Weapons table.
+
+**_Ammunition._** You can use a weapon that has the ammunition property to make a ranged attack only if you have ammunition to fire from the weapon. Each time you attack with the weapon, you expend one piece of ammunition. Drawing the ammunition from a quiver, case, or other container is part of the attack (you need a free hand to load a one-handed weapon). At the end of the battle, you can recover half your expended ammunition by taking a minute to search the battlefield.
+
+If you use a weapon that has the ammunition property to make a melee attack, you treat the weapon as an improvised (see "Improvised Weapons" later in the section). A sling must be loaded to deal any damage when used in this way.
+
+***Booming.*** 
+
+**_Finesse._** When making an attack with a finesse weapon, you use your choice of your Strength or Dexterity modifier for the attack and damage rolls. You must use the same modifier for both rolls.
+
+**_Heavy._** Small creatures have disadvantage on attack rolls with heavy weapons. A heavy weapon's size and bulk make it too large for a Small creature to use effectively.
+
+**_Light._** A light weapon is small and easy to handle, making it ideal for use when fighting with two weapons. See the rules for two-weapon fighting in chapter 9 of the Player's Handbook.
+
+**_Loading._** Because of the time required to load this weapon, you can fire only one piece of ammunition from it when you use an action, bonus action, or reaction to fire it, regardless of the number of attacks you can normally make.
+
+**_Range._** A weapon that can be used to make a ranged attack has a range in parentheses after the ammunition of thrown property. The range lists two numbers. The first is the weapon's normal range in feet, and the second indicates the weapon's long range. When attacking a target beyond normal range, you have disadvantage on the attack roll. You can't attack a target beyond the weapon's long range. 
+
+**_Reach._** This weapon adds 5 feet to your reach when you attack with it, as well as determining your reach for opportunity attacks (see chapter 9 of the Player's Handbook).
+
+**_Special._** A weapon with the special property has unusual rules governing its use, explained in the weapon's description (see "Special Weapons" later in this section).
+
+**_Thrown._** If a weapon has the thrown property, you can throw the weapon to make a ranged attack. If the weapon is a melee weapon, you use the same ability modifier for that attack roll and damage roll that you would use for a melee attack with the weapon. For example, if you throw a handaxe, you use your Strength, but if you throw a dagger, you can either use your Strength or your Dexterity, since the dagger has the finesse property. 
+
+**_Two-Handed._** This weapon requires two hands when you attack with it.
+
+**_Versatile._** This weapon can be used with one or two hands. A damage value in parentheses appears with the property--the damage when the weapon is used with two hands to make a melee attack.
+
+\pagebreakNum
+
+#### Firearms
+
+For tinkers the invention of the crossbow was not enough. They strived to further improve the ability to shoot from a distance without the aid of magic. With the invention of black powder, the dwarves of Ironforge were quick to act in experimenting with its uses, crafting the first firearms from which the weapon has evolved around. There are two categories of firearms: **flintlock** and **caplock**.
+
+**_Flintlock_**. A common trigger, requiring black powder to be poured into the barrel following a bullet in order to be fired. Flintlock weapons are unable to be shot in heavy rain, or while submerged in water.
+
+**_Caplock_**. A rare trigger, requiring special bullets with a black powder compartment built into them to be operated. Caplock weapons can be shot even in heavy rain, or whilst submerged in water.
+
+#### Improvised Weapons
+
+Sometimes characters don't have their weapons and have to attack with whatever is at hand. An improvised weapon includes any object you can wield in one or two hands, such as broken glass, a table leg, a frying pan, a wagon wheel, or a dead murloc.
+
+Often, an improvised weapon is similar to an actual weapon and can be treated as such. For example, a table leg is akin to a club. At the DM's option, a character proficient with a weapon can use a similar object as if it were that weapon and use his or her proficiency bonus.
+
+An object that bears no resemblance to a weapon deals 1d4 damage (the DM assigns a damage type appropriate to the object). If a character uses a ranged weapon to make a melee attack, or throws a melee weapon that does not have the thrown property, it also deals 1d4 damage. An improvised thrown weapon has a normal range of 20 feet and a long range of 60 feet.
+
+#### Silvered Weapons
+
+Some monsters that have immunity or resistance to nonmagical weapons are susceptible to silver weapons, so cautious adventurers invest extra coin to plate their weapons with silver. You can silver a single weapon or ten pieces of ammunition for 100 gp. This cost represents not only the price of the silver, but the time and expertise needed to add silver to the weapon without making it less effective.
+
+#### Special Weapons
+
+Weapons with special rules are described here.
+
+**_Lance._** You have disadvantage when you use a lance to attack a target within 5 feet of you. Also, a lance requires two hands to wield when you aren't mounted.
+
+**_Net._** A Large or smaller creature hit by a net is restrained until it is freed. A net has no effect on creatures that are formless, or creatures that are Huge or larger. A creature can use its action to make a DC 10 Strength check, freeing itself or another creature within its reach on a success. Dealing 5 slashing damage to the net (AC 10) also frees the creature without harming it, ending the effect and destroying the net.
+
+When you use an action, bonus action, or reaction to attack with a net, you can make only one attack regardless of th number of attacks you can normally make.
+
+**_Sin'dorei Warblade._** Immediately after attacking an enemy with this blade, you may make an additional attack with its second blade using your bonus action.
+
+<div style='margin-bottom:50px;'></div>
+
+<div class='classTable wide'>
+
+##### Simple Weapons
+| Name                  | Cost | Damage          | Weight | Properties |
+| ---                   | ---- | ---             | ---    | --- | 
+| _Simple Melee Weapons_|      |                 |        |
+| Club                  | 1 sp | 1d4 bludgeoning |  2 lb. | Light
+| Dagger                | 2 gp | 1d4 piercing    |  1 lb. | Finesse, light, thrown (range 20/60)
+| Greatclub             | 2 sp | 1d8 bludgeoning | 10 lb. | Two-handed 
+| Handaxe               | 5 gp | 1d6 slashing    |  2 lb. | Light, thrown (range 20/60)
+| Javelin               | 5 sp | 1d6 piercing | 2 lb. | Thrown (range 30/120)
+| Light hammer          | 2 gp | 1d4 bludgeoning | 2 lb. | Light, thrown (range 20/60)
+| Mace                  | 5 gp | 1d6 bludgeoning | 4 lb. | --
+| Quarterstaff          | 2 sp | 1d6 bludgeoning | 4 lb. | Versatile (1d8)
+| Sickle                | 1 gp | 1d4 slashing | 2 lb. | Light
+| Spear                 | 1 gp | 1d6 piercing | 3 lb. | Thrown (range 20/60), versatile (1d8)
+|_Simple Ranged Weapons_|      |  |  | 
+| Crossbow, Light       | 25 gp| 1d8 piercing | 5 lb. | Ammunition (range 80/320), loading, two-handed
+| Dart                  | 5 cp | 1d4 piercing | 1/4 lb. | Finess, thrown (range 20/60)
+| Shortbow              | 25 gp| 1d6 piercing | 2 lb. | Ammunition (range 80/320), two-handed
+| Sling                 | 1 sp | 1d4 bludgeoning | -- | Ammunition (range 30/120)
+
+</div>
+
+\pagebreakNum
+
+<div class='classTable wide'>
+
+##### Martial Weapons
+| Name | Cost | Damage | Weight | Properties |
+| --- | ---| --- | --- | --- | --- | 
+|_Martial Melee Weapons_ | | | | |
+|Battleaxe | 10 gp | 1d6 slashing | 4 lb. | Versatile (1d10)
+|Flail | 10 gp | 1d8 bludgeoning | 2 lb. | --
+|Glaive | 20 gp | 1d10 slashing | 6 lb. | Heavy, reach, two-handed
+|Greataxe | 30 gp | 1d12 slashing | 7 lb. | Heavy, two-handed
+|Greatsword | 50 gp | 2d6 slashing | 6 lb. | Heavy, two-handed 
+|Halberd | 20 gp | 1d10 slashing | 6 lb. | Heavy, reach, two-handed
+|Lance | 10 gp | 1d12 piercing | 6 lb. | Reach, special
+|Longsword | 15 gp | 1d8 slashing | 3 lb. | Versatile (1d10)
+|Maul | 10 gp | 2d6 bludgeoning | 10 lb. | Heavy, two-handed
+|Morningstar | 15 gp | 1d8 piercing | 4 lb. | --
+|Pike | 5 gp | 1d10 piercing | 18 lb. | Heavy, reach, two-handed 
+|Rapier | 25 gp | 1d8 piercing | 2 lb. | Finesse
+|Scimitar | 25 gp | 1d6 slashing | 3 lb. | Finesse, light
+|Shortsword | 10 gp | 1d6 piercing | 2 lb. | Finesse, light
+|Trident | 5 gp | 1d6 piercing | 4 lb. |Thrown (range 20/60), versatile (1d8)
+|War pick | 5 gp | 1d8 piercing | 2 lb. | --
+|Warhammer | 15 gp | 1d8 bludgeoning | 2 lb. | Versatile (1d10) 
+|Whip | 2 gp | 1d4 slashing | 3 lb. | Finesse, reach
+|_Martial Ranged Weapons_ | | | | 
+|Blowgun| 10 gp | 1 piercing | 1 lb. | Ammunition (range 25/100), loading
+|Crossbow, hand | 75 gp | 1d6 piercing | 3 lb. | Ammunition (range 30/120), light, loading
+|Crossbow, heavy | 50 gp | 1d10 piercing | 18 lb. | Ammunition (range 100/400), heavy, loading, two-handed
+|Longbow | 50 gp | 1d8 piercing | 2 lb. | Ammunition (range 150/600), heavy, two-handed
+|Net | 1 gp | -- | 3 lb. | Special, thrown (range 5/15)
+
+</div>
+
+<div class='classTable wide'>
+
+##### Racial Weapons
+|  Name | Cost |    | Damage | Weight |    | Properties        |
+|:--------------------------------------|---:|:-|:---------------|---:|:-:|:-------------------------------------|
+|  *Melee Weapons*                 |      ||                |       ||                                      |
+|    Kaldorei Moon sword | 15 gp|| 1d8 slashing   |  4 lb.|| Versatile (2d6)                      |
+|    Kaldorei Moonglaive | 20 gp|| 1d6 slashing   |  3 lb.|| Finesse, light, thrown (range 20/60) |
+|    Sin'dorei Warblade  | 25 gp|| 1d8 slashing   |  5 lb.|| Special                              |
+|    Totem, tauren       | 20 gp|| 2d8 bludgeoning| 45 lb.|| Heavy, two-handed                    |
+|    Warglaive           | 30 gp|| 1d8 slashing   |  3 lb.|| Light                                |
+</div>
+
+\pagebreakNum
+
+<div style='margin-top:0px;'></div>
+<div class='classTable wide'>
+
+##### Firearms
+|  Name | Cost | Damage | Weight |    | Properties                                    |
+|:-------------------------------|:-|:-------------|----:|:-|:-----------------------------------------------------------------------|
+|  *Flintlock Firearms*     |       |               |       ||                                                                   |
+|    Blunderbuss  | 300 gp|  2d8 piercing | 10 lb.|| Ammunition (range 15/60), reload 1, misfire 2                     |
+|    Musket       | 300 gp | 1d12 piercing | 10 lb.|| Ammunition (range 120/480), two-handed, <br> reload 1, misfire 2  |
+|    Pistol       | 150 gp | 1d10 piercing |  3 lb.|| Ammunition (range 60/240), reload 2, misfire 1                    |
+|  *Caplock Firearms*       |        |               |       ||                                                                   |
+|    Pepperbox    | 350 gp |  2d4 piercing |  5 lb.|| Ammunition (range 80/320), reload 4, misfire 2                    |
+|    Revolver     | 525 gp | 1d10 piercing |  6 lb.|| Ammunition (range 120/480), reload 6, misfire 1                   |
+|    Rifle        | 600 gp |  2d6 piercing | 10 lb.|| Ammunition (range 300/600), two-handed, <br> reload 8, misfire 2  |
+|    Scattergun   | 400 gp | 2d10 piercing | 12 lb.|| Ammunition (range 30/90), reload 1, misfire 3                     |
+</div>
+
+
+
+\pagebreakNum
+
+[Stored data]
+
+# Warcraft Item Guide (WIP)
+
+___
+
+This document is intended to act as a list of items to be used in the Warcraft 5e setting. As someone more familiar with the 3.5 edition of Dungeons and Dragons, feedback on the items created would be appreciated, to help ensure that they are balanced and ready to use in any campaigns. 
+
+Eventually this guide will be a fully fleshed out document with many items, relics, and artifacts that are tied to the Warcraft setting and lore. But as it is a work in progress, there are some items that will be listed as mere placeholders to be updated in the future.
+
+\pagebreakNum
+
+# Equipment
+
+___
+
+This section will feature simple equipment, such as the kinds listed in the Player's Handbook. Sometimes it will be new items and sometimes it will be existing items that have an altered description or stats to better fit the setting.
+
+For example, in Dungeons and Dragons the presumed setting is that of a medieval society with little to no technological advancements. Hence, an item like a spyglass is priced at 1,000 gold pieces to indicate that it is a hard-to-contruct rarity. Yet in Azeroth, the technological prowess of the gnomes and the metallurgic skills of the dwarves has resulted in a great many telescopes, whether in massive spy telescopes, naval spyglasses, or scopes mounted onto firearms. Thus, it is likely that a spyglass would go for much cheaper in a Warcraft-based setting.
+
+## Idea List
+
+### Adventuring Gear
+
+The following items belong to the Adventuring Gear section of the PHB.
+
+***Arcane Focus.*** Additional types: Cystallized Mana, Fel Crystal.
+
+***Army Knife.*** [Gnomish](https://wow.gamepedia.com/Gnomish_Army_Knife)/[Goblin](https://wow.gamepedia.com/Goblin_army_knife) varieties. Can be used as one of: Back scratcher, Block and tackle, crowbar, fishing rod, hammer, firestarter, magnifying glass, mirror, five-foot pole (alternate use of fishing rod), 25 feet silk rope and a grappling hook, saw, sewing needle, three kinds of signal whistles, shovel, a 1-person tent, whetstone, a whirly thing. Also cuts things as a small knife. 4 lbs, 70 gp. Other varieties exist, including other options like thieve's tools or jumper cables.
+
+***Beacon.*** See *flashlight*.
+
+***Book.*** Price reduced to 10 gp, representing the increased literacy of Azeroth.
+
+***[Buzzbox](https://wow.gamepedia.com/Buzzbox).*** Large, heavy and unwieldy methods of communication. About the size of a chest, weigs 75 lbs and costs 1,000 gp. Requires a [punch card](https://wow.gamepedia.com/Punch_card) relevant to another specific buzzbox to communicate with it. Activating or using the device requires an DC 10 Intelligence check and it needs maintenance once a day (an Intelligence/tinker's tools check). If the maintenance is not performed or if the check fails, the machine jams and needs a DC 12 tinker's tool check to repair. Range of communication is 8 miles across an open plain, about 4 miles in a 'normal' setting like a light forest, and drops down to 1-2 miles in a dense forest or city. Inclement weather can likewise cut down on the range between devices. Some gnomes have managed to chain several buzzboxes together to provide communication over long distances.
+
+***Calculator.*** Permanent version of the gnome tinker invention, supplements/replaces the abacus. Priced at 25 gp -- basically if a gnome took the time to make the item through the crafting rules, plus a little bit more.
+
+***Component Pouch.*** *Variant rule:* Renamed *reagent pouch*, as spells in WoW Classic use "reagents" instead of "components."
+
+***Druidic focus.*** *New type/Variant name:* **Idol**, representing the druid-only relic type from WoW Classic.
+
+***Firestarter.*** Permanent version of the gnome tinker invention, supplements/replaces the tinderbox. Priced at 25 gp -- basically if a gnome took the time to make the item through the crafting rules, plus a little bit more.
+
+***Flashlight.*** Flashlights and spotlights are regular enough sights among gnome inventions that their inclusion is not out of place. Flashlights act as bullseye lanterns and "beacons" acted as hooded lanterns. Either costs 50 gp--the same price as making a light with the continual flame spell.
+
+***Goggles.*** Provides the benefit of a magnifying glass. 10 gp.
+
+***Holy Symbol.*** Two new types: **Totem** and **Libram**, representing the shaman and paladin-only relics from WoW Classic. Even if totem already exists in the druidic focus section...
+
+***Hourglass.*** Price reduced to 2.5 gp.
+
+***Ink.*** Price reduced to 1 gp.
+
+***[Light Scope](https://wow.gamepedia.com/Light_Scope).*** Basically a laser pointer. 10 gp.
+
+***Magnifying Glass.*** Price reduced to 10 gp.
+
+***Mirror, Steel.*** Price reduced to 5 sp.
+
+***Spellbook.*** Price reduced to 20 gp.
+
+***Spyglass.*** Price reduced to 100 gp.
+
+***[Steamsaw](https://wow.gamepedia.com/Steamsaw).*** Unknown stats.
+
+***Timepiece.*** Permanent version of gnome tinker invention, supplements/replaces the hourglass. 25 gp.
+
+> ##### New Equipment Packs
+
+### Tools
+
+The following items belong to the Tools section of the PHB.
+
+***Engineer's tools.*** Artisan's tools. Can also be considered tinker's tools.
+
+***Vehicles (land).*** Chopper, hot rod, trike.
+
+***Vehicles (air).*** Vehicles such as flying machines, hot air balloons, zeppelins, and airships.
+
+***Vehicles (water).*** New vehicles such as submarines.
+
+\pagebreakNum
+
+### Mounts and Vehicles
+
+The following items belong to the Mounts and Vehicles section of the PHB.
+
+
+#### Mounts.
+Mount | Cost | Speed | Carrying Capacity
+---|:---:|:---:|:---:
+Deathcharger | N/A | 60 ft., Fly 90 ft. | 540 lb.
+Elekk | 200 gp | 40 ft. | 1,320 lb.
+Felsteed | N/A | 60 ft., Fly 90 ft. | 540 lb.
+Hawkstrider | 150 gp | 70 ft. | 225 lb.
+Kodo | 200 gp | 40 ft. | 630 lb.
+Mechanostrider | 150 gp | 70 ft. | 225 lb.
+Nightsaber | 325 gp | 40 ft. | 510 lb.
+Ram | 75 gp | 40 ft. | 510 lb.
+Raptor | 500 gp | 60 ft. | 570 lb.
+Riding Turtle | 200 gp | 40 ft., Swim 20 ft. | 1,020 lb.
+Skeletal Warhorse | 500 gp | 60 ft. | 540 lb.
+Worg | 325 gp | 50 ft. | 510 lb.
+
+***Deathcharger.*** Undead horse summoned by death knights through a special ability, or through Find Greater Steed. As it is intended to act as an equivalent to the other flying mounts provided by that spell, some of the stats from a Nightmare were used.
+
+***Elekk.*** Draenei racial mount. Elephant. 
+
+***Felsteed.*** Special demon horse used by warlocks. Basically a nightmare, removing the ability to planar travel to drop it down to a CR 2.
+
+***Hawkstrider.*** Blood elf racial mount. Ostrich, with a beak attack.
+
+***Kodo.*** Tauren racial mount. Rhinoceros.
+
+***Riding turtle.*** Technically a Dragon Turtle, but named a riding turtle to avoid confusion with the 5e creature. Prices pulled from [here](http://worldbuilderblog.me/2015/02/24/release-the-mounts/), stats as well with a couple changes: increased land speed but decreased swim speed, added the mule's ability to carry heavy burdens, and borrowed some ideas from the Giant Snapping Turtle in Tome of Annihalation.
+
+***Raptor.*** Troll racial mount. Allosaurus, for the size. Really wanted to add in pack tactics due to its background, but would be too OP for a CR 2.
+
+***Nightsaber.*** Uses tiger stats. Night elf racial mount.
+
+***Ram.*** Stats of a giant goat. Used by the dwarves of Ironforge. Prices pulled from [here](http://worldbuilderblog.me/2015/02/24/release-the-mounts/).
+
+***Mechanostrider.*** While technically a vehicle, it acts as a mount. While it doesn't require food, it does require fuel and repairs at the same cost. Used by gnomes. Used the Ostrich stats from [here](http://worldbuilderblog.me/2015/02/24/release-the-mounts/) and converted into a construct. Some bonus to long-term movement speed was needed to compensate for removal of the Medium Mount ability. Cannot wear barding?
+
+***Skeletal Horse.*** Forsaken racial mount. Stats are normal, but alignment is changed to unaligned.
+
+***Worg.*** Orc racial mount. Copy-pasted dire wolf.
+
+#### Tack, Harness, and Drawn Vehicles
+
+Item | Cost | Weight
+---|---|---
+Feed, Carnivore (per day) | 5 cp | 5 lb.
+Fuel (per gallon) | 2 cp | 8 lb.
+Sidecar | 15 gp | 50 lb.
+
+***Feed, Carnivore.*** Consisting of various kinds of raw meat that have been jerked, smoked, or salted for preservation, a day’s worth of carnivore feed is adequate food for any Small or Medium meat-eating animal. Large creatures need 2 days worth of feed per day.
+
+***Fuel.*** Fuel necessary for the operation of mechanical vehicles and creatures. One gallon of fuel is enough to power a Small or Medium device for 1 hour of use. Large vehicles require 2 gallons per 8 hours, Huge vehicles require 4 gallons, and so on.
+
+***Sidecar.*** Can be added to a chopper or trike, allowing another passenger or cargo to be carried. However, this slows the vehicle's speed by 10 feet.
+
+\pagebreakNum
+
+
+#### Mechanical Vehicles (Land)
+
+Item | Cost | Speed | Size | Carrying Capacity
+---|---|---|---|:---:
+Chopper | 3,000 gp | 70 ft. | Large | 395 lbs.
+Hot Rod | 10,000 gp | 60 ft. | Huge | 21,70 lbs.
+Trike | 250 gp | 50 ft. | Medium | 290 lbs.
+
+Mechanical vehicles are self-driven vehicles. Essentially they are both cart and camel rolled into one. They require fuel to function, require semi-regular maintenance, and each can only be operated by someone who possesses both a proficiency in vehicles and the unique key needed to start them up.
+
+Unlike normal vehicles, a mechanical vehicle can be pushed to a "gallop" like a mount at the cost of twice the normal fuel consumption. This can be done for short periods of time, up to an hour, before the engine overheats and needs maintenance (a DC 12 Intelligence or tinker's tool check).
+
+[Notes on carrying capacity: Measured in "horsepower" (the number of effective horses pulling them times the carrying capacity of a horse) then subtract the weight of the vehicle. Chopper has 2 horsepower, hot rod has 8 horsepower, trike has 1. Chopper's weight is based on the average chopper weight, likewise for hot rod, and a trike is treated as a dirt bike.]
+
+***Chopper.*** Aka [Mechano-Hod](https://wow.gamepedia.com/Mechano-Hog) or [Mekgineer's Chopper](https://wow.gamepedia.com/Mekgineer%27s_Chopper). Medium size, 685 lb. Can carry 1 passenger--the driver. Can fit anywhere a horse could, and can carry saddlebags.
+
+***Hot Rod.*** ([Hot Rod](https://wow.gamepedia.com/Hot_rod)) Goblin "stylish" self-driven land vehicle. Weighs 2150 lbs., can carry the driver and up to three passengers. Comes either covered or as a "convertible." 
+
+***Trike.*** Goblin racial 'mount.' Weighs 250 lb., can only carry one passenger. Can fit anywhere a mule could, and can carry saddlebags.
+
+
+#### Mechanical Vehicles (Air)
+
+Item | Cost | Speed
+---|---|---
+Gyrocopter | 10,000 gp | 90 ft./round
+Zeppelin | 30,000 gp | 3 mph
+
+Mechanical air vehicles follow most of the same rules as mechanical land vehicles. 
+
+***Gyrocopter.*** [Link](https://wow.gamepedia.com/Gyrocopter). Primarily a gnomish invention, a gyrocopter is a Large-sized personal air transport. Having to constantly spin its propellors to keep itself aloft causes the gyrocopter to require far more fuel to keep themselves from succumbing to the forces of gravity. It burns through a gallon of fuel every ten minutes instead of every hour. It can only carry 300 pounds worth of passengers and gear.
+
+***Zeppelin.*** [Link](https://wow.gamepedia.com/Zeppelin). Created by the goblins, zeppelins use a lighter-than-air design combined with a propellor engine to provide a smooth, long distance ride through the air much like a ship through water. They can carry far less than a waterborne ship of equivalent size though, due to buoyancy requirements.
+
+\pagebreakNum
+
+## Trade Goods
+
+
+## Expenses
+
+### Food, Drink, and Lodging
+
+[List of popular drink manufacturer's]
+
+### Services
+
+[List of passage prices for intercity zeppelins and boats, as well as gyphon transport]
+
+## Trinkets
+
+[List of 100 trinkets, such as a piece of a banner from the Third War, a tooth from a worgen, etc.]
+
+\pagebreakNum
+
+# Engineering Items
+
+## Gnome Technology
+
+Examples of Gnome Technology:
+
+***[Gnomecorder](https://wow.gamepedia.com/Gnomecorder).*** _Rare or uncommon_ Vast improvements over the bulky buzzboxes. Small, about the size of a brick. You can set the gnomecorder to specific channels, allowing communication to anyone else on that channel within range--friend or foe. A gnomecorder's range is about 50 miles in optimal conditions, but like the buzzbox can have the signal degraded by obstruction and weather.
+
+***[Gyroparasol](https://wow.gamepedia.com/Gyroparasol).***
+
+## Goblin Technology
+
+Examples of Goblin Technology:
+
+***[Army Boots](https://wow.gamepedia.com/Goblin_army_boots).*** 
+
+***[Army Knife](https://wow.gamepedia.com/Goblin_army_knife).*** 
+
+***[Blade Barrel](https://wow.gamepedia.com/Blade_barrel).***
+
+
+\pagebreakNum
+
+# Appendix A: Creatures
+___
+
+___
+> ## Deathcharger
+> *Large undead, unaligned*
+> ___
+> - **Armor Class** 13 (natural armor)
+> - **Hit Points** 59 (7d10+21)
+> - **Speed** 60 ft., fly 90 ft.
+> ___
+> |STR|DEX|CON|INT|WIS|CHA|
+> |:---:|:---:|:---:|:---:|:---:|:---:|
+> |18 (+4)|15 (+2)|16 (+3)|10 (+0)|13 (+1)|15 (+2)|
+> ___
+> - **Damage Immunities** Cold, Poison
+> - **Condition Immunities** Exhaustion, Poisoned
+> - **Senses** Darkvision 60 Ft., passive Perception 11
+> - **Languages** Can't speak but understands Common and the language of the one who summoned it.
+> - **Challenge** 2 (450 XP)
+> ___
+> ***Confer Cold Resistance.*** The nightmare can grant resistance to cold damage to anyone riding it.
+>
+> ***Path of Ice.***  The deathcharger's hooves let out an icy chill, freezing over the ground it walks upon. It can move across any liquid surface - such as water, acid, mud, snow, quicksand, or lava - as if it were harmless solid ground (crossing molten lava still causes damage from the heat).
+>
+> ***Trampling Charge.*** If the horse moves at least 20 feet straight toward a creature right before hitting it with a hooves attack, the target must succeed on a DC 14 Strength saving throw or be knocked prone. If the target is prone, the horse can take a bonus action to make another attack with its hooves against the target.
+> 
+> ### Actions
+> ***Gore.*** *Melee Weapon Attack:* +6 to hit, reach 5 ft., one target. *Hit:* 9 (2d4 + 4) piecing damage.
+> 
+> ***Hooves.*** *Melee Weapon Attack:* +6 to hit, reach 5 ft., one target. *Hit:* 13 (2d8 + 4) bludgeoning damage plus 7 (2d6) cold damage.
+___
+
+___
+> ## Elekk
+> *Huge beast, unaligned*
+> ___
+> - **Armor Class** 12 (Natural Armor)
+> - **Hit Points**  76 (8d12+24)
+> - **Speed** 40 ft.
+> ___ 
+> |STR|DEX|CON|INT|WIS|CHA|
+> |:---:|:---:|:---:|:---:|:---:|:---:|
+> |22 (+6)|9 (-1)|17 (+3)|3 (-4)|11 (+0)|6 (-2)|
+> ___
+> - **Senses** passive Perception 10
+> - **Languages** —
+> - **Challenge**  4 (1,100 XP)
+> ___
+> ***Trampling Charge.*** If the elekk moves at least 20 ft. straight toward a creature and then hits it with a gore attack on the same turn, that target must succeed on a DC 12 Strength saving throw or be knocked prone. If the target is prone, the elekk can make one stomp attack against it as a bonus action.
+> 
+> ### Actions
+> ***Gore.*** *Melee Weapon Attack:* +8 to hit, reach 5 ft., one target. *Hit:* (3d8 + 6) piercing damage.
+> 
+> ***Stomp.*** *Melee Weapon Attack:* +8 to hit, reach 5 ft., one prone creature. Hit: (3d10 + 6) bludgeoning damage.
+___
+
+___
+> ## Felsteed
+> *Large fiend, neutral evil*
+> ___
+> - **Armor Class** 13 (Natural Armor)
+> - **Hit Points** 68 (8d10+24)
+> - **Speed** 60 ft., fly 90 ft.
+> ___
+> |STR|DEX|CON|INT|WIS|CHA|
+> |:---:|:---:|:---:|:---:|:---:|:---:|
+> |18 (+4)|15 (+2)|16 (+3)|10 (+0)|13 (+1)|15 (+2)|
+> ___
+> - **Damage Immunities** Fire
+> - **Senses** passive Perception 11
+> - **Languages** Understands Abyssal, Common, And Infernal But Can't Speak
+> - **Challenge** 2 (450 XP)
+> ___
+> ***Confer Fire Resistance.*** The felsteed can grant resistance to fire damage to anyone riding it.
+>
+> ***Illumination.*** The felsteed sheds bright light in a 10-foot radius and dim light for an additional 10 feet.
+> 
+> ### Actions
+> ***Hooves.*** *Melee Weapon Attack:* +6 to hit, reach 5 ft., one target. *Hit:* 13 (2d8 + 4) bludgeoning damage plus 7 (2d6) fire damage.
+___
+
+\pagebreakNum
+___
+
+___
+> ## Hawkstrider
+> *Medium beast, unaligned*
+> ___
+> - **Armor Class** 15 (natural armor)
+> - **Hit Points** 19 (3d10 + 3)
+> - **Speed** 70 ft.
+> ___
+> |STR|DEX|CON|INT|WIS|CHA|
+> |:---:|:---:|:---:|:---:|:---:|:---:|
+> |15 (+2)|18 (+4)|12 (+1)|2 (-4)|10 (+0)|6 (-2)|
+> ___
+> - **Senses** passive perception 10
+> - **Languages** Can't speak but understands Common and Gnomish.
+> - **Challenge** 1/2 (100 XP)
+> ___
+> ***Medium Mount.*** Hawkstriders can carry a rider of Medium size or smaller.
+> 
+> ***Trampling Charge.*** If the hawkstrider moves at least 20 feet straight toward a creature and then hits it with a talons attack on the same turn, that target must succeed on a DC 12 Strength saving throw or be knocked prone. If the target is prone, the hawkstrider can make another attack with its talons against it as a bonus action.
+> 
+> ### Actions
+> ***Talons.*** *Melee Weapon Attack:* +6 to hit, reach 5 ft., one target. *Hit:* 11 (2d6 + 4) piercing damage.
+___
+
+___
+> ## Kodo
+> *Large beast, unaligned*
+> ___
+> - **Armor Class** 11 (Natural Armor)
+> - **Hit Points** 45 (6d10+12)
+> - **Speed** 40 ft.
+> ___
+> |STR|DEX|CON|INT|WIS|CHA|
+> |:---:|:---:|:---:|:---:|:---:|:---:|
+> |21 (+5)|8 (-1)|15 (+2)|2 (-4)|12 (+1)|6 (-2)|
+> ___
+> - **Senses** passive Perception 11
+> - **Languages** 
+> - **Challenge** 2 (450 XP)
+> ___
+> ***Charge.*** If the kodo moves at least 20 ft. straight toward a target and then hits it with a gore attack on the same turn, the target takes an extra 9 (2d8) bludgeoning damage. If the target is a creature, it must succeed on a DC 15 Strength saving throw or be knocked prone.
+> 
+> ### Actions
+> ***Gore.*** *Melee Weapon Attack:* +7 to hit, reach 5 ft., one target. *Hit:* (2d8 + 5) bludgeoning damage.
+___
+
+___
+> ## Mechanostrider
+> *Medium construct, unaligned*
+> ___
+> - **Armor Class** 15 (natural armor)
+> - **Hit Points** 19 (3d10 + 3)
+> - **Speed** 70 ft.
+> ___
+> |STR|DEX|CON|INT|WIS|CHA|
+> |:---:|:---:|:---:|:---:|:---:|:---:|
+> |15 (+2)|18 (+4)|12 (+1)|2 (-4)|10 (+0)|6 (-2)|
+> ___
+> - **Senses** passive perception 10
+> - **Languages** Can't speak but understands Common and Gnomish.
+> - **Challenge** 1/2 (100 XP)
+> ___
+> ***Mechanical Creature.*** The mechanical nature of the mechanostride allows it to be pushed for longer periods of time than a normal mount. When ridden at a gallop, a mechanostrider can be for four hours instead of one before overheating and needing to be switched out. It can also travel for 16 hours without suffering from a forced march, instead of the normal 8.
+> 
+> ***Trampling Charge.*** If the mechanostrider moves at least 20 feet straight toward a creature and then hits it with a talons attack on the same turn, that target must succeed on a DC 12 Strength saving throw or be knocked prone. If the target is prone, the mechanostrider can make another attack with its talons against it as a bonus action.
+> 
+> ### Actions
+> ***Talons.*** *Melee Weapon Attack:* +6 to hit, reach 5 ft., one target. *Hit:* 11 (2d6 + 4) piercing damage.
+___
+
+
+\pagebreakNum
+___
+
+___ 
+> ## Nightsaber
+> _Large beast, unaligned_
+> ___
+> - **Armor Class** 12
+> - **Hit Points** 37 (5d10+10)
+> - **Speed** 40 ft.
+> ___
+> |STR|DEX|CON|INT|WIS|CHA|
+> |:---:|:---:|:---:|:---:|:---:|:---:|
+> |17 (+3)|15 (+2)|14 (+2)|3 (-4)|12 (+1)|8 (-1)|
+> ___
+> - **Skills** Perception +3, Stealth +6
+> - **Senses** Darkvision 60 Ft., passive Perception 13
+> - **Challenge** 1 (200 XP)
+> ___
+> ***Keen Smell.*** The nightsaber has advantage on Wisdom (Perception) checks that rely on smell.
+> 
+> ***Pounce.*** If the nightsaber moves at least 20 ft. straight toward a creature and then hits it with a claw attack on the same turn, that target must succeed on a DC 13 Strength saving throw or be knocked prone. If the target is prone, the nightsaber can make one bite attack against it as a bonus action.
+> 
+> ### Actions
+> ***Bite.*** *Melee Weapon Attack:* +5 to hit, reach 5 ft., one target. *Hit:* (1d10 + 3) piercing damage.
+> 
+> ***Claw.*** *Melee Weapon Attack:* +5 to hit, reach 5 ft., one target. *Hit:* (1d8 + 3) slashing damage.
+___
+
+___
+> ## Ram
+> _Large beast, unaligned_
+> ___
+> - **Armor Class** 11 (Natural Armor)
+> - **Hit Points** 19 (3d10+3)
+> - **Speed** 40 ft.
+> ___
+> |STR|DEX|CON|INT|WIS|CHA|
+> |:---:|:---:|:---:|:---:|:---:|:---:|
+> |17 (+3)|11 (+0)|12 (+1)|3 (-4)|12 (+1)|6 (-2)|
+> ___
+> - **Senses** passive Perception 11
+> - **Languages** —
+> - **Challenge** 1/2 (100 XP)
+> ___
+> ***Charge.*** If the goat moves at least 20 ft. straight toward a target and then hits it with a ram attack on the same turn, the target takes an extra 5 (2d4) bludgeoning damage. If the target is a creature, it must succeed on a DC 13 Strength saving throw or be knocked prone.
+>
+> ***Sure-Footed.*** The goat has advantage on Strength and Dexterity saving throws made against effects that would knock it prone.
+> ### Actions
+> ***Ram.*** *Melee Weapon Attack:* +5 to hit, reach 5 ft., one target. *Hit:* (2d4 + 3) bludgeoning damage.
+___
+
+___
+> ## Raptor
+> _Large beast, unaligned_
+> ___
+> - **Armor Class** 13 (natural armor)
+> - **Hit points** 51 (6d10 + 18)
+> - **Speed** 60 ft.
+> ___
+> |STR|DEX|CON|INT|WIS|CHA|
+> |:---:|:---:|:---:|:---:|:---:|:---:|
+> |19(+4)|13(+1)|17(+3)|2(-4)|12(+1)|5(-3)|
+> ___
+> - **Skills** Perception +5
+> - **Senses** passive Perception 15
+> - **Languages** —
+> - **Challenge** 2 (450 XP)
+> ___
+> **Pounce** If the raptor moves at least 30 feet straight toward a creature and then hits it with a claw attack on the same turn, that target must succeed on a DC 13 Strength saving throw or be knocked prone. If the target is prone, the raptor can make one bite attack against it as a bonus action.
+> 
+> ### Actions
+> 
+> ***Bite.*** *Melee Weapon Attack:* +6 to hit, reach 5 ft., one target. *Hit:* 15 (2d10 + 4) piercing damage.
+> 
+> ***Claw.*** *Melee Weapon Attack:* +6 to hit, reach 5 ft., one target. *Hit:* 8 (1d8 + 4) slashing damage.
+___
+
+
+\pagebreakNum
+
+___
+
+___
+> ## Riding Turtle
+> _Large beast, unaligned_
+> ___
+> - **Armor Class** 14 (natural armor), 11 while prone
+> - **Hit Points** 13 (2d10 + 2)
+> - **Speed** 40 ft., swim 20 ft.
+> ___
+> |STR|DEX|CON|INT|WIS|CHA|
+> |:---:|:---:|:---:|:---:|:---:|:---:|
+> |17 (+3)|8 (-1)|13 (+1)|2 (-4)|10 (+0)|5 (-3)|
+> ___
+> - **Senses** Passive Perception 10
+> - **Languages** —
+> - **Challenge** 1/2 (100 XP)
+> ___
+> ***Beast of Burden.*** The riding turtle is considered to be Huge animal for the purpose of determining its carrying capacity.
+>
+> ***Hold Breath.*** The riding turtle can hold its breath for 15 minutes.
+>
+> ***Stable.*** Whenever an effect knocks the turtle prone, it can make a DC 10 Constitution saving throw to avoid being knocked prone. A prone turtle is upside down. To stand up, it must succeed on a DC 10 Dexterity check on its turn and then use all its movement for that turn.
+>
+> ### Actions
+>
+> ***Bite.*** *Melee Weapon Attack:* +5 to hit, reach 5 ft., one target. *Hit:* 7 (1d8 + 3) piercing damage.
+___
+
+___
+> ## Skeletal Warhorse
+> _Large undead, unaligned_
+> ___
+> - **Armor Class** 13 (Barding Scraps)
+> - **Hit Points** 22 (3d10+6)
+> - **Speed** 60 ft.
+> ___
+> |STR|DEX|CON|INT|WIS|CHA|
+> |:---:|:---:|:---:|:---:|:---:|:---:|
+> |18 (+4)|12 (+1)|15 (+2)|2 (-4)|8 (-1)|5 (-3)|
+> ___
+> - **Vulnerabilities** Bludgeoning
+> - **Damage Immunities** Poison
+> - **Condition Immunities** Exhaustion, Poisoned
+> - **Senses** Darkvision 60 Ft., passive Perception 9
+> - **Challenge** 1/2 (100 XP)
+> ___
+> ***Trampling Charge.*** If the horse moves at least 20 feet straight toward a creature right before hitting it with a hooves attack, the target must succeed on a DC 14 Strength saving throw or be knocked prone. If the target is prone, the horse can take a bonus action to make another attack with its hooves against the target.
+> ### Actions
+> ***Hooves.*** *Melee Weapon Attack:* +6 to hit, reach 5 ft., one target. *Hit:* (2d6 + 4) bludgeoning damage.
+___
+
+___
+> ## Worg
+> _Large beast, unaligned_
+> ___
+> - **Armor Class** 14 (natural armor)
+> - **Hit Points** 37 (5d10 + 10)
+> - **Speed** 50 ft.
+> ___
+> |STR|DEX|CON|INT|WIS|CHA|
+> |:---:|:---:|:---:|:---:|:---:|:---:|
+> |17 (+3)|15 (+2)|15 (+2)|3 (-4)|12 (+1)|7 (-2)|
+> ___
+> - **Skills** Perception +3, Stealth +4
+> - **Senses** Passive Perception 13
+> - **Languages** —
+> - **Challenge** 1 (200 XP)
+> ___
+> ***Keen Hearing and Smell.*** The worg has advantage on Wisdom (Perception) checks that rely on hearing or smell.
+>
+> ***Pack Tactics.*** The worg has advantage on attack rolls against a creature if at least one of the worg's allies is within 5 feet of the creature and isn't incapacitated.
+>
+> ### Actions
+>
+> ***Bite.*** *Melee Weapon Attack:* +5 to hit, reach 5 ft., one target. *Hit:* 10 (2d6 + 3) piercing damage. If the target is a creature, it must succeed on a DC 13 Strength saving throw or be knocked prone.
+___
