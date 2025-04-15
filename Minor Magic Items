@@ -1,0 +1,637 @@
+<style>
+/* GLOBAL FORMATTING  */
+
+  /* Resize page to international A4 */
+  .phb {
+    width: 210mm;
+    height: 296.8mm;
+  }
+  .phb:after { content: ""; }
+
+
+/* TABLE OF CONTENTS  */
+
+  /* toc specifically wants black text. This resets the headers*/
+  .toc a {
+    color: inherit !important;
+  }
+  /* Allow dot leaders to fill remaining space but not overlap */
+  .toc li span:nth-child(2) {
+    width: auto;
+    overflow: hidden;
+    white-space: nowrap;
+    display: block;
+  }
+  .toc li span:nth-child(2):after {
+    font-family: BookSanity;
+    font-size: 0.317cm;
+    font-weight: normal;
+    color: black;
+    content:
+      " ........................................"
+      "........................................."
+      ".........................................";
+    }
+
+  /* Style TOC page numbers*/
+  .toc li span:first-child {
+    float: right;
+    font-family: BookSanity;
+    font-size: 0.317cm;
+    font-weight: normal;
+    color: black;
+    margin-left: 1px;
+  }
+
+  /* Adjust TOC H3 styles */
+  .toc li h3 span:nth-child(2):after {
+  	content: " ";
+  }
+  .toc li h3 {
+    margin-bottom: 4px !important;
+    margin-top: 10px !important;
+    line-height: initial !important;
+  }
+  .toc li h3 span:first-child {
+  	line-height: 1.8em !important;
+  }
+
+  /* Reduce TOC list indentation*/
+  .toc ul ul {
+  	margin-left: 10px !important;
+  }
+  .toc>ul>li {
+    margin-bottom: initial !important;
+  }
+
+
+/* TABLES AND BLOCKS */
+
+  /* Clear internal padding and add gap above for green note blocks*/
+  .phb blockquote {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .phb blockquote { margin-top: 1em;
+  }
+
+
+/* INK BLOT STYLES */
+
+  /* Root style for inkblots. Use alone, or together with
+  one of the inkb lotstyle classes below. Essentially:
+  <img url='{url}' class='inkblot inkblot-blue' />
+  */
+  .inkblot {
+    position: absolute;
+    mix-blend-mode: multiply;
+    opacity: 0.6;
+  }
+
+  .inkblot-blue {
+    filter: hue-rotate(190deg) saturate(120%)
+  }
+
+  .inkblot-green {
+    filter: hue-rotate(120deg)
+  }
+
+</style>
+
+<style>
+/* Background */
+  .phb{ background-image: url('https://gmbinder.com/images/KN1O92T.png') }
+  .phb{ background-size: cover }
+
+/* Notes */
+  .phb section blockquote {background-color: #f6e5d4}
+  .phb hr + section blockquote tr:nth-child(odd) td {background-color: transparent;}
+
+/* Tables */
+  table tr:nth-child(odd) td {background-color: #cccccc}
+
+/* Footer */
+  .phb .pageNumber {color: rgba(0, 0, 0, 0.5)}
+  .phb .footnote {color: rgba(0, 0, 0, 0.5)}
+  .phb:nth-child(odd):after{ 
+    content          : '';
+    position         : absolute;
+    bottom           : -7px;
+    left             : 10px;
+    z-index          : -1;
+    height           : 336px;
+    width            : 100%;
+    background-image : url('https://www.gmbinder.com/images/bNTz1nk.png');
+    background-size  : cover;
+}
+
+.phb:nth-child(even):after{ 
+    content          : '';
+    position         : absolute;
+    bottom           : -7px;
+    left             : -10px;
+    z-index          : -1;
+    height           : 336px;
+    width            : 100%;
+    background-image : url('https://www.gmbinder.com/images/6NCzAN0.png');
+    background-size  : cover;
+}
+
+/* Page Number */
+.phb .pageNumber{
+    position   : absolute;
+    bottom     : 30px;
+    width      : 50px;
+    text-align : center;
+}
+.phb:nth-child(even) .pageNumber{
+    left      : 12px;
+}
+.phb:nth-child(odd) .pageNumber{
+    right      : 12px;
+}
+
+.phb .pageNumber.auto{
+    position   : absolute;
+    bottom     : 41px;
+    width      : 50px;
+    text-align : center;
+}
+.phb:nth-child(even) .pageNumber.auto{
+    left      : 12px;
+}
+.phb:nth-child(odd) .pageNumber.auto{
+    right      : 12px;
+}
+
+/* INK BLOT STYLES */
+
+  /* Root style for inkblots. Use alone, or together with
+  one of the inkb lotstyle classes below. Essentially:
+  <img url='{url}' class='inkblot inkblot-blue' />
+  */
+  .inkblot {
+    position: absolute;
+    mix-blend-mode: multiply;
+    opacity: 0.6;
+  }
+
+  .inkblot-blue {
+    filter: hue-rotate(190deg) saturate(120%)
+  }
+
+  .inkblot-green {
+    filter: hue-rotate(120deg)
+  }
+
+</style>
+
+##### Magic Items by Rarity
+Item      | Rarity
+------------|-------
+Acorn of the Grove Keeper                   | Common
+Arcanist's Wand                             | Common
+Bag of Treats                               | Common
+Barrel of Brewing                           | Common
+Bone of Knawing                             | Common
+Dorf's Trunk of Birds                       | Common
+Fel Crystal                                 | Common
+Hearthstone Board                           | Common
+Libram of the Faithful                      | Common
+Returning Weapon                            | Common
+Totem of the Elements                       | Common
+Goblin Jumper Cables                        | Uncommon
+Wand of Frostfire Bolt                      | Uncommon
+Arcanite Weapon                             | Rare
+Book of the Dead                            | Rare
+Figurine of Wondrous Power, Jade Dragon     | Rare
+Figurine of Wondrous Power, Jeweled Panther | Rare
+Horn of the Ancients                        | Rare
+Illidari Warglavie                          | Rare
+Staff of the Moon                           | Rare
+Stormhammer                                 | Rare
+Wand of Blizzard                            | Rare
+Wayfarer's Knapsack                         | Rare
+Alchemist's Stone                           | Very Rare
+Horn of Winter                              | Very Rare
+Manual of Golems (Arcane)                   | Very Rare
+Staff of Arcana                             | Very Rare
+
+\columnbreak
+
+#### Acorn of the Grove Keeper
+*Wondrous item, common (requires attunement by a druid)*
+
+This small acorn could have become a dryad at one point, but never grew. While you are holding it, you gain the following benefits:
+- You can use the acorn as a spellcasting focus for your druid spells.
+- You can try to cast a cantrip that you don't know. The cantrip must be on the druid spell list, and you must make a DC 10 Intelligence (Arcana) check. If the check succeeds, you cast the spell. If the check fails, so does the spell, and the action used to cast the spell is wasted. In either case, you can't use this property again until you finish a long rest.
+
+#### Alchemist's Stone
+*Wondrous item, very rare (requires attunement)*
+
+While attuned to this glowing yellow gem, your ability scores are each increased by 1. As normal, this cannot bring your stats above 20. Additionally, when you imbibe a potion that has dice rolled for numerical effects, such as the number of hit points restored in the case of a *potion of healing*, you can roll the dice twice and take either result.
+
+When attuned to this item and using alchemist's supplies to craft items, crafting the item takes half the normal amount of time.
+
+#### Arcanist's Wand
+*Wondrous item, common (requires attunement by a mage)*
+
+This slim wand is used by apprentice mages to help learn their craft. While you are holding it, you gain the following benefits:
+- You can use your wand as a spellcasting focus for your mage spells.
+- You can try to cast a cantrip that you don't know. The cantrip must be on the mage spell list, and you must make a DC 10 Intelligence (Arcana) check. If the check succeeds, you cast the spell. If the check fails, so does the spell, and the action used to cast the spell is wasted. In either case, you can't use this property again until you finish a long rest.
+
+#### Arcanite Weapon
+*Weapon (any melee weapon or ammunition), rare*
+
+Arcanite is a magical metal, appearing dull gray even when highly polished. When a weapon made of or coated with arcanite is used in an attack, it is a critical hit on a roll of 19 or 20.
+
+#### Bag of Treats
+*Wondrous item, common*
+
+This belt pouch appears empty and has 10 charges. While holding the pouch, you can use an action to expend 1 of its charges, speak the name of a type of beast, and pull out a small biscuit flavored and scented to appeal to that creature. The pouch regains 1d6 + 4 expended charges at dawn.
+
+#### Barrel of Brewing
+*Wondrous item, common*
+
+Although called a barrel of brewing, smaller versions in the form of casks and kegs exist. This barrel keeps liquid contained within chilled and still, allowing brewing of beers and ales even when traveling.
+
+\pagebreakNum
+#### Book of the Dead
+*Wondrous item, rare (requires attunement)*
+
+While attuned to this item, you know how to raise the dead. If you are a spellcaster, you know the *animate dead* spell and always have it prepared. 
+
+The book has 7 charges. While holding it, you can expend 1 charge by spending one minute reading from the book to cast the *animate dead* spell. The book regains 1d6 + 1 charges daily at dusk. 
+
+***Cursed.*** The book is cursed and becoming attuned to it extends the curse to you. As long as you are cursed, you are unwilling to part with the book, keeping it on your person at all times. When you cast *animate dead*, you can only raise skeletons. If you break the curse or lose attunement to the item, any skeletons under your control no longer follow your orders and will spend all actions attempting to attack you.
+
+#### Bone of Gnawing
+*Wondrous item, common*
+
+A popular item among worgen and dog owners, this raw thigh bone can be chewed indefinitely.
+
+#### Dorf's Trunk of Birds
+*Wondrous item, common*
+
+This small chest has 3 charges. While within 5 feet of the chest, you can use an action to expend a command word that summons 1d4 songbirds (use raven statistics). The summoned creatures magically burst free from the chest and flit around the area for 1 minute. The creatures are neither friendly nor hostile and aren't under your control. They behave as ordinary creatures of their kind and disappear after 1 hour or when they drop to 0 hit points. The chest regains all expended charges daily at dawn.
+
+#### Fel Crystal
+*Wondrous item, common (requires attunement by a warlock)*
+
+This chunk of crystallized fel energy is either a large green crystal or a smaller one worked into a piece of jewelry or wand. While you are wearing or holding it, you gain the following benefits:
+- You can use your crystal as a spellcasting focus for your warlock spells.
+- You can try to cast a cantrip that you don't know. The cantrip must be on the warlock spell list, and you must make a DC 10 Intelligence (Arcana) check. If the check succeeds, you cast the spell. If the check fails, so does the spell, and the action used to cast the spell is wasted. In either case, you can't use this property again until you finish a long rest.
+
+#### Figurine of Wondrous Power
+*Wondrous item, rarity varies by figurine*
+
+A *figurine of wondrous power* is a statuette of a beast small enough to fit in a pocket. If you use an action to speak the command word and throw the figurine to a point on the ground within 60 feet of you, the figurine becomes a living creature. If the space where the creature would appear is occupied by other creatures or objects, or if there isn't enough space for the creature, the figurine doesn't become a creature.
+
+The creature is friendly to you and your companions. It understands your languages and obeys your spoken commands. If you issue no commands, the creature defends itself but takes no other actions.
+
+The creature exists for a duration specific to each figurine. At the end of the duration, the creature reverts to its figurine form. It reverts to a figurine early if it drops to 0 hit points or if you use an action to speak the command word again while touching it. When the creature becomes a figurine again, its property can't be used again until a certain amount of time has passed, as specified in the figurine's description.
+
+***Jade Dragon (Rare).*** This jade serpent statue can transform into a young cloud serpent for 2 hours and can be ridden as a mount. Once it has been used, it cannot be used again until 4 days have passed.
+
+***Jeweled Panther (Rare).*** This panther figurine is embedded with gems and can transform into a sabercat for up to 16 hours and can be ridden as a mount. Once it has been used, it cannot be used again until 2 days have passed.
+
+#### Goblin Jumper Cables
+*Wondrous item, uncommon*
+
+You can attach the cables of this battery to a creature that has died in the last minute as an action, sending a massive burst of electricity into their corpse. Its body jerks off the ground and spasms, causing the smell of burning hair to waft up. In addition to being fun to watch, this display sometimes revives the character.
+
+When you use the device, the creature is restored to life with 0 hit points and begins making death saves again. Once a set of goblin jumper cables has been used, it needs to recharge over the next 24 hours.
+
+#### Illidari Warglaive
+*Weapon (warglaive), rare*
+
+You gain a +1 bonus to attack and damage rolls made with this magic weapon. The bonus increases to +3 when you use the warglaive to attack a demon.
+
+When you roll a 20 on an attack roll made with this weapon, the target takes an extra 7 slashing damage, or an extra 14 slashing damage if it's a demon. If a demon has 25 hit points or fewer after taking this damage, it is destroyed.
+
+#### Libram of the Faithful
+*Wondrous item, common (requires attunement by a priest)*
+
+This small book contains the basic teachings of your faith. While you are holding it, you gain the following benefits:
+- You can use your book as a spellcasting focus for your priest spells.
+- You can try to cast a cantrip that you don't know. The cantrip must be on the priest spell list, and you must make a DC 10 Intelligence (Arcana) check. If the check succeeds, you cast the spell. If the check fails, so does the spell, and the action used to cast the spell is wasted. In either case, you can't use this property again until you finish a long rest.
+
+\pagebreak
+#### Manual of Golems (Arcane)
+*Wondrous item, very rare*
+
+This tome contains information and incantations necessary to make an arcane golem. To decipher and use the manual, you must be a spellcaster with at least two 5th-level spell slots. A creature that can't use a manual of golems and attempts to read it takes 6d6 psychic damage.
+
+To create an arcane golem, you must spend 45 days, working without interruption with the manual at hand and resting no more than 8 hours per day. You must also pay 75,000 gp to purchase supplies. Once you finish creating the golem, the book is consumed in eldritch flames. The golem becomes animate when the ashes of the manual are sprinkled on it. It is under your control, and it understands and obeys your spoken commands.
+
+#### Returning Weapon
+*Weapon (thrown weapon), common*
+
+When you throw this weapon, it returns to hand after the attack resolves.
+
+#### Staff of Arcana
+*Staff, very rare (requires attunement by a mage or warlock)*
+
+You have resistance to force damage while you hold this staff.
+
+The staff has 10 charges. While holding it, you can use an action to expend 1 or more charges to cast one of the following spells from it, using your spell save DC: ✦ *arcane explosion* (3 charges), *magic missile* (1 charge), *mage armor* (1 charge), *misty step* (2 charges), or *wall of force* (5 charges).
+
+The staff regains 1d6 + 4 expended charges daily at dawn. If you expend the last charge, roll a d20. On a 1, the staff lets out the sound of a bleating sheep and then disappears like a soap bubble.
+
+#### Staff of the Moon
+*Staff, rare (requires attunement by a druid or priest)*
+
+In darkness, the crescent head of this staff sheds moonlight, creating bright light in a 15-foot radius and dim light for an additional 15 feet. You can suppress or resume this effect as a bonus action.
+
+In addition, while holding the staff you can see normally in darkness to a range of 120 feet. 
+
+The staff has 10 charges. While holding it, you can use an action to expend 1 or more charges to cast one of the following spells from it, using your spell save DC: ✦ *eclipse* (6 charges), *moonbeam* (2 charges), ✦ *starfall* (6 charges),  ✦ *starfire* (1 charge),  or ✦ *starsurge* (3 charges).
+
+The staff regains 1d6 + 4 expended charges daily at dusk. If you expend the last charge, roll a d20. On a 1, the staff disappears in a shimmer of starlike sparkles.
+
+#### Stormhammer
+*Weapon (warhammer), rare (requires attunement)*
+
+This hammer is carved with a lightning bolt pattern. You can throw it as if it had the thrown property with a normal range of 100 feet and a long range of 300 feet, and it returns to your hand after the attack resolves.
+
+Additionally, You can use a bonus action to speak this magic weapon's command word, causing lightning to crackle around the hammer's head. While the weapon is alit, it lets out a thunderclap when it hits a target, causing them to take an additional 1d6 lightning damage and 1d6 thunder damage. The sound is audible for 300 feet. The lightning lasts until you use a bonus action to speak the command word again or until you drop the weapon.
+
+#### Totem of the Elements
+*Rod, common (requires attunement by a shaman)*
+
+This small rod is made of weather-worn stone and is warm to the touch. While you are holding it, you gain the following benefits:
+- You can use your rod as a spellcasting focus for your shaman spells.
+- You can try to cast a cantrip that you don't know. The cantrip must be on the shaman spell list, and you must make a DC 10 Intelligence (Arcana) check. If the check succeeds, you cast the spell. If the check fails, so does the spell, and the action used to cast the spell is wasted. In either case, you can't use this property again until you finish a long rest.
+
+\pagebreak
+#### Wand of Blizzard
+*Wand, rare (requires attunement by a spellcaster)*
+
+This wand has 7 charges. While holding it, you can use an action to expend 1 or more of its charges to cast the *blizzard* spell (save DC 15) from it. For 1 charge, you cast the 3rd-level version of the spell. You can increase the spell slot level by one for each additional charge you expend.
+
+The wand regains 1d6 + 1 expended charges daily at dawn. If you expend the wand's last charge, roll a d20. On a 1, the wand crumbles into ashes and is destroyed.
+
+#### Wand of Frostfire Bolt
+*Wand, uncommon*
+
+This wand has 7 charges. While holding it, you can use an action to expend 1 or more of its charges to cast the *frostfire bolt* spell (+5 spell attack bonus) from it. For 1 charge, you cast the 1st-level version of the spell. You can increase the spell slot level by one for each additional charge you expend.
+
+The wand regains 1d6 + 1 expended charges daily at dawn. If you expend the wand's last charge, roll a d20. On a 1, the wand crumbles into ashes and is destroyed.
+
+#### Wayfarer's Knapsack
+*Wondrous item, rare*
+
+This oversized backpack magically shrinks items placed inside it, reducing their size and weight. You are treated as two sizes larger for purposes of determining carrying capacity, provided the items can fit through the opening of a backpack's central pouch.
+
+If you spend 1 minute rummaging through the pack, you can sometimes find small items and trinkets. Whether they are leftover from previous owners or they spontaneously appeared is unknown. Each time you rummage, roll a d20 and consult the table below. After you rummage three times, you cannot do so again until the next dawn.
+
+d20 |&nbsp;| Item                      |d20|&nbsp;| Item
+--:|-|--------------------------|--:|-|--------------------
+1   ||1 gold coin                |11  ||Holy water (flask)         |
+2   ||Acid (vial)                |12  ||Hourglass                  |
+3   ||Alchemist's fire (flask)   |13  ||Silver mirror              |
+4   ||Ball bearings (bag of 999) |14  ||A dead mouse               |
+5   ||A steamy romance novel     |15  ||Oil (flask)                |
+6   ||A bottle of perfume        |16  ||Potion of healing          |
+7   ||An expired coupon          |17  ||Pouch of 3d6 cp            |
+8   ||Compass                    |18  ||Rations (1 day)            |
+9   ||Pocketknife, silver        |19  ||Spyglass                   |
+10  ||Flask of alcohol (half-full)|20 ||Tinderbox                  |
+
+
+\pagebreakNum
+
+## Incomplete Items
+
+Goggles of X
+Health Stone
+Hearthstone
+Mana Stone
+Mask of the Loa
+[Runeblade]
+Scroll of Greater Ability, Charisma
+Scroll of Greater Ability, Constitution
+Scroll of Greater Ability, Dexterity
+Scroll of Greater Ability, Intelligence
+Scroll of Greater Ability, Strength
+Scroll of Greater Ability, Wisdom
+Spiritwalker's Totem
+Staff of Curses
+Staff of Dragons
+Staff of Elemental Balance
+Staff of the Earth
+Staff of the Flames
+Staff of the Waves
+
+
+#### Black Arrow
+#### Crown of Destruction
+*Wondrous item, legendary (requires attunement)*
+
+#### Dark Simulacrum
+[Manual, can transform you into a death knight]
+
+#### Demon's Blood Elixir
+
+#### [Dragon Items]
+Items associated with each of the primary dragonflights, granting abilities related to that flight.
+
+#### Drums of X
+
+Battle
+    Bloodlust and Heroism
+
+Speed
+    + double movement speed while drumming
+    Haste
+
+[Akin to Instruments of the Bards?]
+    BC
+Drums of Battle
+Drums of Panic
+Drums of Restoration
+Drums of Speed
+Drums of War
+    WotLK
+Drums of Forgotten Kings
+Drums of the Wilds
+    MoP
+Drums of Rage
+    WoD
+Drums of Fury
+    Legion
+Drum of Primal Might
+Drums of the Mountain
+    BfA
+Drums of the Maelstrom
+
+#### Goggles of X
+
+#### [???]
+*Wondrous item, uncommon (+1), rare (+2), very rare (+3) (requires attunement by a mage)*
+
+While you are holding this leather-bound book, you can use it as a spellcasting focus for your mage spells, and you gain a bonus to spell attack rolls and to the saving throw DCs of your mage spells. The bonus is determined by the book's rarity.
+
+In addition, when you roll any Hit Dice to recover hit points while you are carrying the book, you can regain 5 sorcery points. This property can't be used again until the next dawn. 
+
+[Too similar to bloodwell vial?]
+
+#### [???]
+[Equivalent to Astral Shard?]
+
+#### Hammer of the Naaru
+*Weapon (maul), artifact (requires attunement by a priest or paladin)*
+
+***Magic Weapon.*** The *Hammer of the Naaru* is a magic weapon that grants a +3 bonus to attack and damage rolls made with it. It also functions as a *defender*, *holy avenger*, and a *mace of disruption*.
+
+***Blessing of the Naaru.*** The hammer has additional properties based on your alignment:
+- **Lawful Good.** The hammer has 2 major and 1 minor randomly determined beneficial properties.
+- **Neutral or Chaotic Good.** The hammer has 1 randomly determined major beneficial property.
+- **Lawful Neutral.** The hammer has 1 randomly determined minor beneficial property.
+- **Neutral or Chaotic Neutral.** The hammer has 1 randomly determined minor detrimental property.
+- **Any Evil.** The hammer has 2 randomly determined major detrimental properties.
+
+See "Artifacts" in chapter 7 of the Dungeon Master's Guide for details on randomly determined properties.
+
+***Spells.*** *banishing smite*, *blinding smite*, *light of the protector*
+
+https://www.dandwiki.com/wiki/Hammer_of_the_Lightbringer_(5e_Equipment)
+https://heroesofthestorm.fandom.com/wiki/Yrel
+
+#### Headmaster's Charge
+*Staff, RARITY (requires attunement)*
+
+All creatures within 60 feet of the staff have advantage on Intelligence ability checks. 
+
+Harsh Lesson: Can be used for a maze effect.
+
+animate dead spell
+
+#### Health Stone
+
+This fist-sized clear stone is filled with a red liquid. When you finish a short rest, you add your proficiency bonus to each hit die spent to regain hit points.
+
+an additional number of hit points per hit die expended equal to your proficiency bonus.  While carrying it, you add your proficiency bonus to 
+
+[Regain additional hp during a rest. Can be broken for a heal spell]
+
+#### Hearthstone
+#### Hearthstone Board
+*Wondrous item, common*
+
+[Creates illusions of cards being played.]
+
+#### Horn of the Ancients
+*Wondrous item, rare*
+
+[You can use an action to blow this horn. In response, an ancient protector comes from the Emerald Dream to assist in battle. It appears within 60 feet of you; see the Manual of Monsters for the statistics. It returns to the Emerald Dream after 1 hour passes or when it is reduced to 0 hit points. Once the horn has been blown, it cannot be blown again for 7 days.
+
+If you blow the horn and are a druid, shaman, or night elf, the conjured ancient will obey your commands. If you are a death knight, demon hunter, forsaken, or warlock, it will attack you. Otherwise it acts on its own cognizance.]
+
+\pagebreakNum
+#### Horn of Winter
+*Wondrous item, very rare*
+
+The horn has 3 charges. You can blow the horn and expend one charge as an action to summon the cold of winter. 
+
+The first time you blow the horn, the weather in a 300-foot radius changes, causing the temperature to drop to 32 degrees and a light cloud cover forms, shedding a light snow. The second time you blow the horn, the radius of the effect increases to 1/2 mile, the temperature drops to 0 degrees, the cloud cover thickens, the snow becomes heavy and a moderate wind forms. The third time you blow the horn, the radius of the effect increases to 5 miles, the temperature drops to -40 degrees, and the weather becomes a blizzard with strong winds, causing poor visibility from the falling snow.
+
+These effects take 1d4 x 10 minutes to take effect and last for up to 8 hours.
+
+You can blow the horn and expend one charge as an action to affect a 300-foot radius sphere. The area's temperature increases by up to three stages, as noted in the *control weather* spell, up to arctic cold. If the weather is already arctic cold, it instead increases either the precipitation or wind stages, up to the normal maximum. The weather changes over the course of 1d4 x 10 minutes, and lasts for 1 hour before gradually fading.
+
+You can also blow the horn to increase the duration or the radius of the sphere and any current effects. Each charge expended to increase the duration adds an additional hour. Each charge expended to increase the radius extends the area by one step: 600 feet, 1200 feet, 2400 feet, 1 mile, 2 miles, 5 miles maximum.
+
+This sphere remains centered on the horn for the duration.
+
+#### Mana Stone
+[Regain small number of expended spell slots on a SR. Can be broken for a larger number of regained slots.]
+
+#### Mask of the Loa
+[Rukmar mask]
+
+#### Runed Soulblade
+*Weapon (any sword), legendary (requires attunement)*
+
+You gain a +3 bonus to attack and damage rolls made with this magic weapon. It has the following additional properties.
+
+The sword has 3 charges. As time passes, its maximum number of charges increases, as noted in the Cursed section.
+
+[Devour Soul; can't be restored to life unless the ]
+
+***Cursed.*** At the end of each long rest, you must make a DC 15 Charisma saving throw. On a failed saving throw, the sword's maximum number of charges increases by 1. When the sword's maximum number of charges increases to 13, your soul is consumed by the blade, turning your creature type to undead. Your alignment moves one step closer to evil (good to neutral or neutral to evil). This effect is permanent and cannot be undone, even by resurrection magic. The sword's maximum number of charges does not increase beyond 13. Constructs and undead are unaffected by this curse.
+
+\columnbreak
+
+[Equivalent to a holy avenger, but for death knights. Comes with a curse that gradually transforms the user into an undead, has greater abilities for death knights.]
+
+Hidden in the dungeon of White Plume Mountain, Blackrazor shines like a piece of night sky filled with stars. Its black scabbard is decorated with pieces of cut obsidian.
+
+You gain a +3 bonus to attack and damage rolls made with this magic weapon. It has the following additional properties.
+
+Devour Soul. Whenever you use it to reduce a creature to 0 hit points, the sword slays the creature devours its soul, unless it is a construct or an undead. A creature whose soul has been devoured by Blackrazor can be restored to life only by a wish spell.
+When it devours a soul, Blackrazor grants you temporary hit points equal to the slain creature's hit point maximum. These hit points fade after 24 hours. As long as these temporary hit points last and you keep Blackrazor in hand, you have advantage on attack rolls, saving throws, and ability checks.
+
+If you hit an undead with this weapon, you take 1d10 necrotic damage and the target regains 1d10 hit points. If this necrotic damage reduces you to 0 hit points, Blackrazor devours your soul.
+
+Soul Hunter. While you hold the weapon. you are aware of the presence of Tiny or larger creatures within 60 feet of you that aren't constructs or undead. You also can't be charmed or frightened.
+Blackrazor can cast the haste spell on you once per day. It decides when to cast the spell and maintains concentration on it so that you don't have to.
+
+
+You gain a +3 bonus to attack and damage rolls made with this magic weapon. When you hit a fiend or an undead with it, that creature takes an extra 2d10 radiant damage.
+
+While you hold the drawn sword, it creates an aura in a 10-foot radius around you. You and all creatures friendly to you in the aura have advantage on saving throws against spells and other magical effects. If you have 17 or more levels in the paladin class, the radius of the aura increases to 30 feet.
+
+#### Scroll of Greater Ability
+[Increases ability score to 19 for 24 hours. Rarity depends on score.]
+#### Soul Bag
++1/+2/+3 rod of the pact keeper
+
+Secondary ability has to do with soul shards.
+
+#### Spiritwalker's Totem
+#### Staff of Dragons
+[Related to the dragonflights.]
+
+#### Staff of Elemental Balance
+[A "balanced" elemental staff.]
+
+#### Staff of Curses
+[A warlock staff.]
+
+#### Staff of the Earth
+
+✦ *earthen spike* (3 charges), *erupting earth* (3 charges), ✦ *lava burst* (2 charges), *investiture of stone* ^XGE^ (6 charges), *wall of sand* ^XGE^ (3 charges), *wall of stone* (5 charges)
+
+\pagebreakNum
+#### Staff of the Flames
+*flame strike* (5 charges), *investiture of flame* ^XGE^ (6 charges), *wall of fire* (4 charges)
+
+#### Staff of the Waves
+*control water* (4 charges), *investiture of ice* ^XGE^ (6 charges), *sleet storm* (3 charges), *tidal wave* ^XGE^ (3 charges), *wall of ice* (6 charges), *wall of water* ^XGE^ (3 charges), *water breathing* (3 charges), *water walk* (3 charges)
+
+Swim speed, cold damage
+
+#### Staff of the Winds
+*Staff, very rare (requires attunement by a shaman)*
+
+While attuned to the staff, when you fall, you descend 60 feet per round and take no damage from falling. 
+
+The staff has 20 charges for the following properties. The staff regains 2d8 + 4 expended charges daily at dawn. If you expend the last charge, roll a d20. On a 1, the staff retains the Inured to the Elements property but loses all others.
+
+***Inured to the Elements.*** While holding the staff, when you fall, you descend 60 feet per round and take no damage from falling. Additionally, you are acclimatized to high altitudes and are unaffected by strong winds.
+
+***Flight.*** You can expend 1 charge from the staff while holding it to grant yourself a fly speed equal to your movement speed for 1 hour.
+
+***Spells.*** While holding this staff, you can use an action to expend 1 or more of its charges to cast one of the following spells from it, using your spell save DC and spell attack bonus: *call lightning* (3 charges), *conjure elemental* (air elemental, 5 charges), *control winds* ^XGE^ (5 charges), *dust devil* ^XGE^ (2 charges), *feather fall* (1 charge), *fly* (3 charges), *gust of wind* (2 charges), *investiture of wind* ^XGE^ (6 charges), *skywrite* ^XGE^ (2 charges), *storms sphere* ^XGE^ (4 charges), *thunderwave* (1 charge), *warding wind* (3 charges), *wind walk* (6 charges), or *wind wall* (3 charges). 
+
+#### Sulfuron Hammer
+*Weapon (any hammer), very rare*
+
+You can use a bonus action to speak this magic hammer's command word, causing thin and wispy flames to emerge from the hammer and wreathe your body, shedding bright light in a 10-foot radius and dim light for an additional 10 feet. 
+
+While the hammer is aflame, you have resistance to cold damage and whenever a creature within 5 feet of you hits you with a melee attack, the flames erupt, causing the attacker to take 2d8 fire damage. The flames last until you use a bonus action to speak the command word again or until you drop the hammer.
+
+#### Tattoo, Illidari
+
+#### Troll's Blood Elixir
