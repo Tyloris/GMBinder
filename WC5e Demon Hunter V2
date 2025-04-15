@@ -1,0 +1,1033 @@
+<style>
+/* GLOBAL FORMATTING  */
+
+  /* Resize page to international A4 */
+  .phb {
+    width: 210mm;
+    height: 296.8mm;
+  }
+  .phb:after { content: ""; }
+
+
+/* Temporary Fix for heading issues */
+    .phb p{ line-height: 15px; } 
+    .phb blockquote p{ line-height: 14px; } 
+    .phb h2{ line-height: 26px; } 
+    .phb h3{ line-height: 19px; } 
+    .phb h4{ line-height: 15px; padding-bottom: 3px; } 
+    .phb h5{ line-height: 17px; } 
+    th, td { line-height: 14px; }
+
+/* TABLE OF CONTENTS  */
+
+  /* toc specifically wants black text. This resets the headers*/
+  .toc a {
+    color: inherit !important;
+  }
+  /* Allow dot leaders to fill remaining space but not overlap */
+  .toc li span:nth-child(2) {
+    width: auto;
+    overflow: hidden;
+    white-space: nowrap;
+    display: block;
+  }
+  .toc li span:nth-child(2):after {
+    font-family: BookSanity;
+    font-size: 0.317cm;
+    font-weight: normal;
+    color: black;
+    content:
+      " ........................................"
+      "........................................."
+      ".........................................";
+    }
+
+  /* Style TOC page numbers*/
+  .toc li span:first-child {
+    float: right;
+    font-family: BookSanity;
+    font-size: 0.317cm;
+    font-weight: normal;
+    color: black;
+    margin-left: 1px;
+  }
+
+  /* Adjust TOC H3 styles */
+  .toc li h3 span:nth-child(2):after {
+  	content: " ";
+  }
+  .toc li h3 {
+    margin-bottom: 4px !important;
+    margin-top: 10px !important;
+    line-height: initial !important;
+  }
+  .toc li h3 span:first-child {
+  	line-height: 1.8em !important;
+  }
+
+  /* Reduce TOC list indentation*/
+  .toc ul ul {
+  	margin-left: 10px !important;
+  }
+  .toc>ul>li {
+    margin-bottom: initial !important;
+  }
+
+
+/* TABLES AND BLOCKS */
+
+  /* Clear internal padding and add gap above for green note blocks*/
+  .phb blockquote {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .phb blockquote { margin-top: 1em;
+  }
+
+
+/* INK BLOT STYLES */
+
+  /* Root style for inkblots. Use alone, or together with
+  one of the inkb lotstyle classes below. Essentially:
+  <img url='{url}' class='inkblot inkblot-blue' />
+  */
+  .inkblot {
+    position: absolute;
+    mix-blend-mode: multiply;
+    opacity: 0.6;
+  }
+
+  .inkblot-blue {
+    filter: hue-rotate(190deg) saturate(120%)
+  }
+
+  .inkblot-green {
+    filter: hue-rotate(120deg)
+  }
+
+</style>
+
+<style>
+/* Background */
+  .phb{ background-image: url('https://gmbinder.com/images/KN1O92T.png') }
+  .phb{ background-size: cover }
+
+/* Notes */
+  .phb section blockquote {background-color: #f6e5d4}
+  .phb hr + section blockquote tr:nth-child(odd) td {background-color: transparent;}
+
+/* Tables */
+  table tr:nth-child(odd) td {background-color: #cccccc}
+
+/* Footer */
+  .phb .pageNumber {color: rgba(0, 0, 0, 0.5)}
+  .phb .footnote {color: rgba(0, 0, 0, 0.5)}
+  .phb:nth-child(odd):after{ 
+    content          : '';
+    position         : absolute;
+    bottom           : -7px;
+    left             : 10px;
+    z-index          : -1;
+    height           : 336px;
+    width            : 100%;
+    background-image : url('https://www.gmbinder.com/images/bNTz1nk.png');
+    background-size  : cover;
+}
+
+.phb:nth-child(even):after{ 
+    content          : '';
+    position         : absolute;
+    bottom           : -7px;
+    left             : -10px;
+    z-index          : -1;
+    height           : 336px;
+    width            : 100%;
+    background-image : url('https://www.gmbinder.com/images/6NCzAN0.png');
+    background-size  : cover;
+}
+
+/* Page Number */
+.phb .pageNumber{
+    position   : absolute;
+    bottom     : 30px;
+    width      : 50px;
+    text-align : center;
+}
+.phb:nth-child(even) .pageNumber{
+    left      : 12px;
+}
+.phb:nth-child(odd) .pageNumber{
+    right      : 12px;
+}
+
+.phb .pageNumber.auto{
+    position   : absolute;
+    bottom     : 41px;
+    width      : 50px;
+    text-align : center;
+}
+.phb:nth-child(even) .pageNumber.auto{
+    left      : 12px;
+}
+.phb:nth-child(odd) .pageNumber.auto{
+    right      : 12px;
+}
+
+/* INK BLOT STYLES */
+
+  /* Root style for inkblots. Use alone, or together with
+  one of the inkb lotstyle classes below. Essentially:
+  <img url='{url}' class='inkblot inkblot-blue' />
+  */
+  .inkblot {
+    position: absolute;
+    mix-blend-mode: multiply;
+    opacity: 0.6;
+  }
+
+  .inkblot-blue {
+    filter: hue-rotate(190deg) saturate(120%)
+  }
+
+  .inkblot-green {
+    filter: hue-rotate(120deg)
+  }
+
+</style>
+
+<!-- <div style='margin-top:327px'></div> -->
+<div style='margin-top:327px'></div>
+
+## Demon Hunter
+*The enemy came into our world, desiring to extinguish all life. They slaughtered our loved ones, razed our homes..  our cities. You could not stop them. So you came to me, nothing but rage and determination left, I taught you that what once tormented you could give you power.*
+
+*Now you know, no sacrifice is too great if it brings an end to the Burning Legion.*
+<div style="text-align:Right"> 
+
+<div style='margin-top:-4px;'></div>
+
+*— Illidan Stormrage*</div>
+
+<div style='margin-top:0px;'></div>
+
+[To be rewritten.]
+
+<div class='footnote'>PART 1 | CLASSES</div>
+<img src='https://www.gmbinder.com/images/8KgGgYA.jpg' style='position:absolute; top:0px; right:0px; width:800px' />
+<img src='https://www.gmbinder.com/images/L60ii4e.png' style='position:absolute; top:-20px; right:0px; width:900px; transform:scaley(-1)' />
+<img src='https://www.gmbinder.com/images/UYHVPmU.png' style='position:absolute; top:-50px; right:-50px; width:600px; transform:scalex(-1)' />
+
+\pagebreakNum
+
+<div class='classTable wide'>
+
+##### The Demon Hunter
+|Level|Proficiency<br/>Bonus|Fel<br/>Points|Chaos<br/>Blades|Invocations<br/>Known|Features|
+|:---:|:-:|:-:|:---:|:-:|:----------------------
+|  1st| +2|  1|  1d4| — | Unarmored Defense, Illidari Initiation, <br/> Chaos Blades, Spectral Sight
+|  2nd| +2|  1|  1d4| 2 | Invocations, Fighting Style
+|  3rd| +2|  2|  1d4| 2 | Demonic Mark
+|  4th| +2|  2|  1d4| 2 | Ability Score Improvement
+|  5th| +3|  3|  1d6| 3 | Extra Attack
+|  6th| +3|  3|  1d6| 3 | Demonic Mark feature
+|  7th| +3|  4|  1d6| 3 | Evasion
+|  8th| +3|  4|  1d6| 3 | Ability Score Improvement
+|  9th| +4|  5|  1d6| 4 | Spectral Sight improvement
+| 10th| +4|  5|  1d6| 4 | Demonic Mark feature
+| 11th| +4|  6|  1d8| 4 | Metamorphosis
+| 12th| +4|  6|  1d8| 4 | Ability Score Improvement
+| 13th| +5|  7|  1d8| 5 | Empowered Wards
+| 14th| +5|  7|  1d8| 5 | Revealing Gaze
+| 15th| +5|  8|  1d8| 5 | Demonic Mark feature
+| 16th| +5|  8|  1d8| 5 | Ability Score Improvement
+| 17th| +6|  9| 1d10| 6 | Immortal Soul
+| 18th| +6|  9| 1d10| 6 | Demonic Mark feature
+| 19th| +6| 10| 1d10| 6 | Ability Score Improvement
+| 20th| +6| 10| 1d10| 6 | Prepared
+</div>
+
+#### Quick Build
+You can make a demon hunter quickly by following these suggestions. First, put your highest ability score in Strength or Dexterity, depending on whether you want to focus on melee weapons or finesse weapons, with your next-highest score should be Charisma. Second, choose the Criminal or Outlander background.
+
+#### Optional Rule: Multiclassing
+If your group uses the optional rule on multiclassing in the *Player's Handbook*, here's what you need to know if you choose demon hunter as one of your classes.
+
+***Ability Score Minimum.*** As a multiclass character, you must have at least a Dexterity and Charisma score of 13 to take a level in this class, or to take a level in another class if you are already a demon hunter.
+
+***Proficiencies Gained.*** If demon hunter isn't your initial class, here are the proficiencies you gain when you take your first level as a demon hunter: light armor, simple weapons, and martial weapons.
+
+***Multiclassing with Warlock.*** If your demon hunter bears the Mark of Havoc and also has warlock levels, add one-third of your demon hunter levels (rounded down) to your warlock level and consult the warlock class table for total spell slots, cantrips known, and spell slot level.
+
+\columnbreak
+
+## Class Features
+As a demon hunter, you gain the following class features.
+
+#### Hit Points
+___
+- **Hit Dice:** 1d8 per demon hunter level
+- **Hit Points at 1st Level:** 8 + your Constitution modifier
+- **Hit Points at Higher Levels:** 1d8 (or 5) + your Constitution modifier per demon hunter level after 1st
+
+#### Proficiencies
+___
+- **Armor:** Light armor
+- **Weapons:** Simple weapons, martial weapons
+- **Tools:** None
+___
+- **Saving Throws:** Dexterity, Charisma
+- **Skills:** Choose two from Acrobatics, Arcana, Insight, Inti&shy;midation, Investigation, Perception, Stealth, and Survival
+
+#### Equipment
+You start with the following equipment, in addition to the equipment granted by your background:
+- **(a)** two warglaives or **(b)** any martial melee weapon
+- **(a)** four darts or **(b)** any simple weapon
+- an explorer's pack and a memento of someone or something that was taken from you
+
+<div class='footnote'>PART 1 | CLASSES</div>
+
+\pagebreakNum
+
+### Unarmored Defense
+*1st-level demon hunter feature*
+
+<div style='margin-top:-4px;'></div>
+
+While you are wearing no armor and not wielding a shield, your AC equals 10 + your Dexterity modifier + your Charisma modifier.
+
+### Illidari Initiation
+*1st-level demon hunter feature*
+
+<div style='margin-top:-4px;'></div>
+
+You have gone through the harrowing process of initiation into the Illidari, having slain a demon, consumed its flesh, and bound its soul to your own. 
+
+As part of the process, your eyes are removed and your skin is inscribed with glowing arcane tattoos to help keep the demonic power inside you in check, though your body is mutated, giving you one or more mutations from the Demonic Mutations table. 
+
+Additionally, you gain the following traits: 
+- You have advantage on Wisdom (Survival) checks to track fiends and demons, as well as on Intelligence checks to recall information about such creatures.
+- You can speak, read, and write Eredun. 
+- You appear as both humanoid and fiend (demon) to any effect that detects fiends or demons, but are not affected by those that adversely affect those creature types, like *magic circle* or *dispel evil and good*.
+- You cannot be possessed by a fiend or demon.
+
+#### Fel
+You can tap into a deep wellspring of chaotic energy within yourself. This wellspring is represented by fel points, which allow you to create a variety of magical effects.
+
+You have 1 fel point, and you gain more as you reach higher levels, as shown in the Fel Points column of the Demon Hunter table. You can never have more fel points than shown on the table for your level. Your fel point total returns to full when you finish a short or long rest.
+
+The number of fel points you have can reach negative numbers, representing you pushing beyond the limits of safety in exchange for power. When you use a fel point ability that pushes your fel point total below 0, roll a d4 and add your current fel point total to the roll. 
+
+If the result is 0 or below, you take an amount of necrotic damage equal to your demon hunter level. This damage can’t be reduced in any way.
+
+Some class features require your target to make a saving throw to resist the feature's effects. The saving throw DC is calculated as follows:
+
+<div style="text-align: Center">
+
+**Fel save DC** = 8 + your proficiency bonus + <br> your Charisma modifier
+
+</div>
+
+\columnbreak
+
+##### Demonic Mutations
+d12|Mutation
+---|-------
+1 |Your skin has turned an unnatural shade, such as red, green, dark purple, or pitch black.
+2 |Your blood glows green, showing through your skin.
+3 |Your skin has grown thick colored scales.
+4 |You have grown horns, either short and stubby or long, curled, and jagged.
+5 |Your voice echoes slightly, as if several people are speaking at once.
+6 |Your nails turn hard and black, becoming like claws.
+7 |Your canine teeth grow long and jagged, turning into fangs or tusks.
+8 |You grow a long spaded tail. It is non-prehensile.
+9 |Your feet turn into cloven hooves.
+10|Your skin sprouts small spikes or spines.
+11|Your eye sockets burn with a green flame that can be seen even when obscured by cloth or leather.
+12|You have some other, nonfunctional mutation, as approved by the GM.
+
+### Chaos Blades
+*1st-level demon hunter feature*
+
+<div style='margin-top:-4px;'></div>
+
+You can use fel points to infuse your weapons with the raw power of chaos. As a bonus action, you can spend 1 fel point to imbue one weapon you're holding, enhancing it until you finish a short or long rest. 
+
+While the weapon is imbued, attacks you make with it are magical and deal an additional 1d4 chaos damage. See the Chaos Damage sidebar for more details.
+
+The amount of extra damage dealt increases as you level: 1d6 at 5th level, 1d8 at 11th level, and 1d10 at 17th level. Other creatures can’t gain the benefit of your chaos blades.
+
+> #### Chaos Damage
+> A number of demon hunter features refer to chaos damage. Chaos damage is a mix of raw chaotic energies that can result in several potential damage types. 
+>
+> Whenever you deal chaos damage, roll a number of d8s equal to the number of chaos damage dice and select one, consulting the Chaos Damage table to determine the damage type. 
+>
+> For example, if an effect deals 2d6 chaos damage and you roll two d8s resulting in 1 and 6, then you deal 2d6 points of either acid or poison damage.
+>
+> ##### Chaos Damage
+> d8 | Damage Type    |d8 | Damage Type
+> ---|----------------|---|------------
+> 1  | Acid           | 5 | Lightning
+> 2  | Cold           | 6 | Poison
+> 3  | Fire           | 7 | Psychic
+> 4  | Force          | 8 | Thunder
+
+<img src='https://www.gmbinder.com/images/MhnBMAQ.png' style='position:absolute; bottom:-60px; left:45px; width:350px' />
+
+<div class='footnote'>PART 1 | CLASSES</div>
+
+\pagebreakNum
+
+### Spectral Sight
+*1st-level demon hunter feature*
+
+<div style='margin-top:-4px;'></div>
+
+You have ritually blinded your eyes, you eye sockets infused with magic, giving you a new sight that pierces through darkness and magic. You gain the following benefits:
+- You are immune to the blinded condition.
+- You can see normally in normal and magic darkness within 60 feet.
+- You can cast *detect magic* at will by spending 1 fel point.
+- You have advantage on checks and saves to see through illusions. You automatically succeed when they are cast on or by demons.
+- You perceive the true form of a demonic shapechanger or a demon that is transformed by magic.
+
+When you reach 9th level, you can focus your vision to pierce through matter as well as magic. You can spend 2 fel points to see into and through solid matter within 30 feet. To you, solid objects within range appear transparent and don't prevent light from passing through them.
+
+This x-ray vision can penetrate 1 foot of stone, 1 inch of common metal, or up to 3 feet of wood or dirt. Thicker substances block the vision, as does a thin sheet of lead.
+
+### Invocations
+*2nd-level demon hunter feature*
+
+<div style='margin-top:-4px;'></div>
+
+You can draw upon dark secrets and the power of souls through magical abilities known as invocations. 
+
+You gain two invocations of your choice. When you gain certain demon hunter levels, you gain additional invocations of your choice, as shown in the Invocations Known column of the Demon Hunter table. A level prerequisite refers to your level in this class.
+
+Additionally, when you gain a level in this class, you can choose one of the invocations you know and replace it with another invocation that you could learn at that level.
+
+### Fighting Style
+*2nd-level demon hunter feature*
+
+<div style='margin-top:-4px;'></div>
+
+You adopt a particular style of fighting as your specialty. Choose one of the following options. You can't take a Fighting Style option more than once, even if you later get to choose again.
+
+#### Dueling
+When you are wielding a melee weapon in one hand and no other weapons, you gain a +2 bonus to damage rolls with that weapon.
+
+#### Great Weapon Fighting
+When you roll a 1 or 2 on a damage die for an attack you make with a melee weapon that you are wielding with two hands, you can reroll the die and must use the new roll, even if the new roll is a 1 or a 2. The weapon must have the two-handed or versatile property for you to use this benefit.
+
+#### Profane Warrior
+You learn two cantrips of your choice from the warlock spell list. They count as death knight spells for you, and Charisma is your spellcasting ability for them. Whenever you gain a level in this class, you can replace one of these cantrips with another cantrip from the warlock spell list.
+
+\columnbreak
+
+#### Two-Weapon Fighting
+When you engage in two-weapon fighting, you can add your ability modifier to the damage of the second attack.
+
+> #### Optional Class Features
+> See Tasha's Cauldron of Everything, Pg. 41 for additional Fighting Styles. The Blind Fighting, Superior Technique, and Unarmed Fighting styles are appropriate choices for this class.
+
+### Demonic Mark
+*3rd-level demon hunter feature*
+
+<div style='margin-top:-4px;'></div>
+
+You choose a mark that shapes the nature of your demonically infused body. Choose the Mark of Havoc, the Mark of Vengeance, or the Mark of Wrath, all detailed at the end of the class description. 
+
+Your choice grants you features at 3rd level and again at 6th, 10th, 15th, and 18th level.
+
+### Ability Score Improvement
+*4th-level demon hunter feature*
+
+<div style='margin-top:-4px;'></div>
+
+When you reach 4th level, and again at 8th, 12th, 16th, and 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.
+
+### Extra Attack
+*5th-level demon hunter feature*
+
+<div style='margin-top:-4px;'></div>
+
+You can attack twice, instead of once, whenever you take the Attack action on your turn.
+
+### Evasion
+*7th-level demon hunter feature*
+
+<div style='margin-top:-4px;'></div>
+
+Your keen instincts lets you dodge out of the way of certain area effects, such as a red dragon's fiery breath or an *ice storm* spell. When you are subjected to an an effect that allows you to make a Dexterity saving throw to take only half damage, you instead take no damage if you succeed on the save, and only half damage if you fail.
+
+### Metamorphosis
+*11th-level demon hunter feature*
+
+<div style='margin-top:-4px;'></div>
+
+You can let the demon bound within you take control. On your turn, you can as a bonus action let your bound demon morph your body with demonic features for 1 minute. While in Metamorphosis, you gain the following benefits.
+- Your creature type becomes fiend.
+- You gain a number of temporary hit points equal to your demon hunter level plus your Charisma modifier. These temporary hit points only last while you are in this form.
+- Your weapon attacks are infused by Chaos Blades if they weren't already. This enhancement only lasts until the end of your metamorphosis.
+- Whenever you would roll a die of Chaos Damage, you roll an additional one.
+
+Once you use this feature, you can't do so again until you finish a short or long rest, unless you spend 3 fel points to use it again.
+
+<div class='footnote'>PART 1 | CLASSES</div>
+
+\pagebreakNum
+
+### Empowered Wards
+*13th-level demon hunter feature*
+
+<div style='margin-top:-4px;'></div>
+
+Your arcane tattoos help protect you from harm. Whenever you make an Strength, Dexterity, or Constitution saving throw, you may add your Charisma modifier to the check (minimum of +1). 
+
+Additionally, whenever you are forced to make a saving throw by a fiend or demon, you make it with advantage. 
+
+### Revealing Gaze
+*14th-level demon hunter feature*
+
+<div style='margin-top:-4px;'></div>
+
+You can concentrate fel into your charred eyes to reveal the truth of the world around you. You have blindsight to a range of 30 feet and you can spend 3 fel points to gain the benefits of the *true seeing* spell for 1 minute.
+
+### Immortal Soul
+*17th-level demon hunter feature*
+
+<div style='margin-top:-4px;'></div>
+
+Your body and soul are both corrupted and protected by fel energy, granting you the following traits:
+- You are considered both a humanoid and fiend (demon). You can be affected by anything that would affect either of those creature types. 
+- You do not suffer from the frailty of age, can't be aged magically, and will not die of old age. You no longer need food or water.
+- You cannot be charmed or frightened.
+- You have advantage on saves versus any effect that exclusively affects fiends or demons.
+
+### Prepared
+*20th-level demon hunter feature*
+
+<div style='margin-top:-4px;'></div>
+
+Your supernatural senses allow you to act at a moments notice. You can take two turns during the first round of any combat. You take your first turn on initiative count 30 and your second turn at your rolled initiative.
+
+Furthermore, you can transform into and out of Metamorphosis at will as a bonus action. You only gain temporary hit points the first time you transform after a short or long rest, unless you spend 2 fel points.
+
+<div class='footnote'>PART 1 | CLASSES</div>
+
+\pagebreakNum
+
+## Demonic Marks
+***[Introductory paragraph for subclasses. <br/> Should take up three lines. <br/> Like this. <br/> Maybe four.]***
+
+### Mark of Havoc
+***[Introductory paragraph for the Mark of Havoc subclass. <br/> Should take up three lines. <br/> Maybe four.]***
+
+#### Fast Movement
+*3rd-level Mark of Havoc feature*
+
+<div style='margin-top:-4px;'></div>
+
+While you are wearing light or no armor and not wielding a shield, your movement speed increases by 10 feet. 
+
+This bonus increases to 15 feet at 6th level, 20 feet at 10th level, 25 feet at 15th level, and 30 feet at 18th level.
+
+#### Fel Rush
+*3rd-level Mark of Havoc feature*
+
+<div style='margin-top:-4px;'></div>
+
+You can use the Dash as a bonus action on your turn. **[Charge/steel wind strike/zephyr strike effect.]**
+
+#### Vengeful Retreat
+*6th-level Mark of Havoc feature*
+
+<div style='margin-top:-4px;'></div>
+
+When you take the Disengage action, you can make one melee attack as a bonus action.
+
+#### ???
+*10th-level Mark of Havoc feature*
+
+<div style='margin-top:-4px;'></div>
+
+#### ???
+*15th-level Mark of Havoc feature*
+
+<div style='margin-top:-4px;'></div>
+
+#### Blade Dance
+*18th-level Mark of Havoc feature*
+
+<div style='margin-top:-4px;'></div>
+
+[Steel Wind Strike.] 
+
+You are able to move at extreme speed, seemingly teleporting to strike those around you. As an action, choose either a single target or any number of targets you can see within 30 feet. 
+
+If you choose a single creature, you can make five melee weapon attacks against the creature.
+
+You flourish the weapon used in the casting and then vanish to strike like the wind. Choose up to five creatures you can see within range (30 feet). Make a melee spell attack against each target. On a hit, a target takes 6d10 force damage.
+
+You can then teleport to an unoccupied space you can see within 5 feet of one of the targets you hit or missed.
+
+#### Blurred Movement
+*??th-level Mark of Havoc feature*
+
+<div style='margin-top:-4px;'></div>
+
+[Increased AC/Disengage when moving.]
+
+\columnbreak
+
+### Mark of Vengeance
+***[Introductory paragraph for the Mark of Vengeance subclass. <br/> Should take up three lines. <br/> Maybe four.]***
+
+#### Fueled By Pain
+*3rd-level Mark of Vengeance feature*
+
+<div style='margin-top:-4px;'></div>
+
+Your attacks are empowered by the wounds inflicted upon you. As your hit point total decreases, you gain an increas&shy;ing bonus to weapon damage rolls, as shown on the Pain Damage table. Temporary hit points do not count towards your hit point total for this ability.
+
+##### Pain Damage Table
+Bonus<br/>Damage | Current Hit Point Total
+----|---
++0  | Hit point maximum
++1  | Less than hit point maximum
++2  | Less than half hit point maximum
++3  | 1 hit point
+
+#### ???
+*??th-level Mark of Vengeance feature*
+
+<div style='margin-top:-4px;'></div>
+
+[Allows you to deal extra damage with Chaos Blades in exchange for only dealing fire damage.]
+
+#### ???
+*6th-level Mark of Vengeance feature*
+
+<div style='margin-top:-4px;'></div>
+
+#### ???
+*10th-level Mark of Vengeance feature*
+
+<div style='margin-top:-4px;'></div>
+
+When you take damage from a creature that is within 5 feet of you, you can use your reaction to make a melee weapon attack against that creature.
+
+#### Last Resort
+*17th-level Mark of Vengeance feature*
+
+<div style='margin-top:-4px;'></div>
+
+[When reduced to 0 hp, you are resurrected and gain bonuses for a time. Can only happen 1/day.]
+
+<div class='footnote'>PART 1 | CLASSES</div>
+
+\pagebreakNum
+
+### Mark of Wrath
+***[Introductory paragraph for the Mark of Wrath subclass. <br/> Should take up three lines. <br/> Maybe four.]***
+
+#### Fel Sorcery
+*3rd-level Mark of Wrath feature*
+
+<div style='margin-top:-4px;'></div>
+
+You can augment your combat techniques with the ability to cast spells. See chapter 10 of the Player's Handbook for the general rules of spellcasting and chapter 6 for the warlock spell list.
+
+***Cantrips.*** You learn two cantrips of your choice from the warlock spell list. You learn an additional warlock cantrip of your choice at 10th level.
+
+***Spell Slots.*** The The Mark of Wrath Spellcasting table shows how many spell slots you have. The table also shows what the level of those slots is; all of your spell slots are the same level. To cast one of your warlock spells of 1st level or higher, you must expend a spell slot. You regain all expended spell slots when you finish a short or long rest.
+
+For example, when you are 8th level, you have two 2nd-level spell slots. To cast the 1st-level spell *Witch Bolt*, you must spend one of those slots, and you cast it as a 2nd-level spell.
+
+***Spells Known of 1st Level and Higher.*** At 3rd level, you know two 1st-level spells of your choice from the warlock spell list.
+
+The Spells Known column of the Mark of Wrath Spellcasting table shows when you learn more warlock spells of your choice of 1st level and higher. A spell you choose must be of a level no higher than what’s shown in the table’s Slot Level column for your level. When you reach 11th level, for example, you learn a new warlock spell, which can be 1st, 2nd, or 3rd level.
+
+Additionally, when you gain a level in this class and mark, you can choose one of the warlock spells you know and replace it with another spell from the warlock spell list, which also must be of a level for which you have spell slots.
+
+***Spellcasting Ability.*** Charisma is your spellcasting ability for your warlock spells, so you use your Charisma whenever a spell refers to your spellcasting ability. In addition, you use your Charisma modifier when setting the saving throw DC for a warlock spell you cast and when making an attack roll with one.
+
+<div style="text-align: center">
+
+**Spell save** DC = 8 + your proficiency bonus + your Charisma modifier
+
+**Spell attack modifier** = your proficiency bonus + your Charisma modifier
+</div>
+
+&nbsp;&nbsp;&nbsp; ***Spellcasting Focus.*** You can use an arcane focus as a spellcasting focus for your warlock spells.
+
+#### Felblade
+*3rd-level Mark of Wrath feature*
+
+<div style='margin-top:-4px;'></div>
+
+While you have an active Chaos Blades, you can use your weapon as a spellcasting focus for your warlock spells, and when you attack with that weapon, you can use your Charisma modifier, instead of Strength or Dexterity, for the attack and damage rolls.
+
+#### Unrestrained Fury
+*6th-level Mark of Wrath feature*
+
+<div style='margin-top:-4px;'></div>
+
+When you use your action to cast a cantrip, you can immediately make one weapon attack as a bonus action.
+
+\columnbreak
+
+<div class='classTable'>
+
+##### Mark of Wrath Spellcasting
+Demon Hunter<br>Level|Cantrips<br/>Known|Spells<br>Known|Spell<br>Slots|Slot<br>Level
+:--------------------|:----------------:|:-------------:|:------------:|:-----------:
+3rd |2  |2  |1  |1st
+4th |2  |2  |1  |1st
+5th |2  |3  |1  |1st
+6th |2  |3  |2  |1st
+7th |2  |4  |2  |2nd
+8th |2  |4  |2  |2nd
+9th |2  |5  |2  |2nd
+10th|3  |5  |2  |2nd
+11th|3  |6  |2  |2nd
+12th|3  |6  |2  |2nd
+13th|3  |7  |2  |3rd
+14th|3  |7  |2  |3rd
+15th|3  |8  |2  |3rd
+16th|3  |8  |2  |3rd
+17th|3  |9  |2  |3rd
+18th|3  |9  |2  |3rd
+19th|3  |10 |2  |4th
+20th|3  |11 |2  |4th
+
+</div>
+
+#### Profane Sigils
+*6th-level Mark of Wrath feature*
+
+<div style='margin-top:-4px;'></div>
+
+You can brand creatures with debilitating sigils. As a bonus action, choose one creature you can see within 30 feet of you. The target is branded for 1 minute with a sigil of your choice from the list below. 
+
+The brand ends early if the target dies, you die, or you are incapacitated. Once you brand a target, you can’t do so again until you finish a short or long rest.
+
+##### Sigil of Binding
+A creature affected by this sigil cannot take the Dash or Disengage action. If the creature attempts to teleport or leave their current plane via ability, spell, or portal, they take chaos damage equal to your demon hunter level and must make a Wisdom saving throw. On a failure, the teleport or plane shift fails.
+
+##### Sigil of Chains
+
+<div class='footnote'>PART 1 | CLASSES</div>
+
+\pagebreakNum
+
+##### Sigil of Flame
+
+##### Sigil of Misery
+
+##### Sigil of Silence
+
+##### Sigil of Weakness
+You gain a bonus to damage rolls against the cursed target. The bonus equals your proficiency bonus. Any attack roll you make against the cursed target is a critical hit on a roll of 19 or 20 on the d20.
+
+#### Chaos Brand
+*10th-level Mark of Wrath feature*
+
+<div style='margin-top:-4px;'></div>
+
+Your Profane Sigils feature digs dark arcane scars into your target, leaving them vulnerable to your magic. A creature branded by you has disadvantage on saving throws against your warlock spells.
+
+#### Unleashed Power
+*15th-level Mark of Wrath feature*
+
+<div style='margin-top:-4px;'></div>
+
+As a bonus action, you can regain an expended spell slot by invoking a number of fel points equal to the spell's level. You cannot use this feature to restore a spell slot with a higher slot level than you can cast through Fel Sorcery, and each time you use this feature after the first, you must spend an additional fel point.
+
+#### Relentless Rage
+*18th-level Mark of Wrath feature*
+
+<div style='margin-top:-4px;'></div>
+
+When you use your action to cast a spell, you can make one weapon attack as a bonus action.
+
+<div class='footnote'>PART 1 | CLASSES</div>
+
+\pagebreakNum
+
+## Fel Secrets
+
+### Analyze Blood
+**[Based on [this spell.](https://www.dndbeyond.com/spells/11498-analyze-blood) Potentially also the Blood Hunter's Grim Psychometry ability.]**
+
+### Brand of the Hunt
+**[Can mark a target with a brand that lets you know where they are and allows you to teleport short distances to them.]**
+
+### Consume Magic
+*Prerequisite: 9th level*
+
+While you have an active Chaos Blades, when you hit a creature, object, or magical effect with that weapon, you can spend 2 fel points to cast *dispel magic* as a bonus action against the target. If you successfully dispel a spell, you gain a number of temporary hit points equal to your proficiency bonus plus the spell's level.
+
+### Immolation Aura
+You can spend 1 fel point to engulf yourself in flames for 1 minute, shedding bright light in a 30-foot radius and dim light in an additional 30 feet. 
+
+For the duration, a creature that ends its turn within 5 feet of you, touches you, or hits you with a melee attack while within 5 feet of you takes fire damage equal to half your demon hunter level.
+
+### Immortal Soul
+*Prerequisite: 15th level*
+
+If you are killed, your soul is drawn into the Twisting Nether, where your body will eventually reform in a random location within 1d10 days. When it does, your original body decays rapidly to dust. You can still be returned to life through spells like *raise dead* before this occurs.
+
+When you are returned to life this way, you have a −4 penalty to all attack rolls, saving throws, and ability checks. Every time you finish a long rest, the penalty is reduced by 1 until it disappears. If you are killed again while you have this penalty, you die permanently. 
+
+**[Based on a lich phylactery. How would a character with this get back to the party?]**
+
+### Infernal Strike
+**[Based on an infernal's meteoric impact.]**
+
+### Master of Chains
+**[Benefits when wielding whip, spiked chain, similar weapons. Can cause the weapon to expand and bind/trip opponents. Think Ivy from Soul Calibur.]**
+
+### Master of the Glaive
+**[Benefits when wielding warglaives. Returning property, potential rebound off of targets, etc.]**
+
+\columnbreak
+
+### Mutation: X
+**[A category of functional mutations, in comparison to the cosmetic mutations from Illidari Initiation. Each provides a specific benefit, along with an enhanced benefit while in Metamorphosis.]**
+
+*(Grouped for sake of ease for now, will be separate invocations in the final version.)*
+
+#### Mutation: Blood
+**[Glowing blood effect. Acid blood? Improved hp?]**
+
+#### Mutation: Claws
+**[Can grow claws.]**
+
+#### Mutation: Eyes
+**[Can shoot lasers from your eyes. You transform into the metamorphosis form to use this ability in WoW anyway.]**
+
+#### Mutation: Fangs
+**[Grow fangs and bite attack. Lizardfolk style healing bite?]**
+
+#### Mutation: Hooves
+**[Increased speed? Stability?]**
+
+#### Mutation: Horns
+**[More sturdy horns than those in demonic mutations, allowing for gore effects.]**
+
+#### Mutation: Scales
+**[Provides bonus AC and fire resistance.]**
+
+#### Mutation: Skin
+**[Chameleon effect.]**
+
+#### Mutation: Spikes
+**[Causes damage to attackers.]**
+
+#### Mutation: Tail
+**[Tail becomes prehensile.]**
+
+#### Mutation: Voice
+**[Compelling voice. Shout attack when transformed?]**
+
+#### Mutation: Wings
+You gain the ability to manifest a pair of bat-like wings from your back. You can do so as a bonus action, or as a reaction made when falling, and they last until you dismiss them as a bonus action.
+
+While your wings are manifested, your jump distance is doubled. You can also use the wings to glide, reducing your falling speed to 60 feet per round (taking no damage when landing) and allowing you to move horizontally up to 120 feet per round when doing so.
+
+You can't manifest your wings while wearing armor unless the armor is made to accommodate them, and clothing not made to accommodate your wings might be destroyed when you manifest them.
+
+While you are in Metamorphosis, you have a fly speed equal to twice your movement speed.
+
+### Netherwalk
+**[Can Dash, Disengage, and Dodge? Can't attack or be attacked, double speed, 1 round.]**
+
+<div class='footnote'>PART 1 | CLASSES</div>
+
+\pagebreakNum
+
+### Shattered Souls 
+When you reduce a hostile creature to 0 hit points, you gain temporary hit points equal to your Charisma modifier + your demon hunter level (minimum of 1). 
+
+If the creature was a fiend or demon, you instead gain an amount equal to your Charisma modifier + twice your demon hunter level (minimum of 2).
+
+### ???
+*Prerequisite: Shattered Souls*
+
+When you have temporary hit points gained from Shattered Souls, you have **[X benefit. Alternative: you regain 1 fel point when you do so.]**
+
+### Torment
+**[Deal psychic damage, force them to attack you.]**
+
+**[Alternative/Additional option: can torture creatures for information.]**
+
+<div class='footnote'>PART 1 | CLASSES</div>
+
+\pagebreakNum
+
+# Update 3.0-preview-2
+
+<br />
+
+These are the changes made to the class since the last update released for the class (3.0.0).
+
+### General
+- Finished the Quick Build section.
+- Warglaives have been moved to the equipment document. They are now martial weapons instead of their own category.
+- Instead of Intelligence being their secondary ability score, demon hunters now use Charisma. All Intelligence-based abilities have been adjusted.
+- Illidari Initiation has been reworked. The ambush and warglaive-focused abilities have been removed, instead adding demonic detection and anti-possession effects, as well as cosmetic mutations. Fel points have been placed inside this ability, using the blood hunter's Hunter's Bane as a premise.
+- Fel Points have been reworked, with the demon hunter having half as many but being able to risk self-damage by pushing beyond this limit. The Demon's Bite, Empower Wards, and Momentum abilities have been removed.
+- Chaos Blades have been added, based on the blood hunter's Crimson Rite and the chaos bolt spell. 
+- Spectral Sight has been reworded and several abilities have been added on: the ability to cast *detect magic*, bonuses on seeing through visual illusions, anti-demon perception powers, and an x-ray vision ability at 9th level.
+- Invocations have been added.
+- Metamorphosis has been reworked and moved to 11th level.
+- Fighting Styles have been added at 2nd level.
+- Subclass abilities are now at levels 3/6/10/15/18 instead of 3/6/10/17.
+- Instinctive Hunter, A Hunter Above All Else, Demon Wings, Illidari Finesse, Cleansed By Flames, and Abyssal Resilience have been removed.
+- An alternate version of Empowered Wards has been added at 13th level.
+- Revealing Gaze now also gives a passive blindsight.
+- Timeless Body has been moved to 17th level and expanded into Immortal Soul.
+- Prepared allows for a choice between two secondary benefits.
+
+### To Be Determined
+- Should Immortal Soul have alternate benefits?
+- All of the Mark of Havoc and Mark of Vengeance subclass features.
+- The level 15 ability for the Mark of Wrath subclass.
+- The details of most of the invocations.
+
+\columnbreak
+
+<br />
+
+## Credits
+
+**Provide feedback for this document:** We'd really love your opinion on this material. You can do so by: 
+- Joining the conversation on [Discord](https://discord.com/invite/dKMJmmD). <br /> (Or just messaging an active Contributor there.)
+- Sharing your thoughts with us on [Reddit](https://www.reddit.com/r/wc5e/).
+- Writing to us via this [Google Form](https://forms.gle/FSbyK7nBbquPNVf36).
+
+<br />**Current core team:** Ace Azzermeen, Auvreannia, Geamros, Lorestalker Nemzal, MythMaker, Nagash, OmNomDom33887, Tangerine, Tyloris
+<br />
+
+<br />**Inactive & former team members:** 123jrf, ApolloLumina, Artipo, Christinekn, ClockWorkTank, Elenus, Jih, Prometheus, Reiga, Silverblade, Tseims, Wyken
+<br />
+
+<br />**Big thanks to:** Everyone at our community Discord. Link to join our communities are on the book's back page!
+<br />
+
+<br />**Projects we like and want to give thanks to:**
+- [The WoW 5E Project](https://www.thepiazza.org.uk/bb/viewtopic.php?t=13979) by Arrius Nideal
+- [This Warcraft project](https://drive.google.com/drive/folders/1f07sWuQJ_MBJxKbToalevudGQ8hjnma7) by Silverblade#9212
+- [These WoW Dungeon modules](https://www.gmbinder.com/profile/wyken) by Wyken
+- All of the awesome homebrew that has been shared within the community, it's super cool to see it all! You can see a lot of it on our Discord, and in this [Theme of the Month](https://drive.google.com/drive/folders/1_inQbI4jjd6WF3ghzhr_9RYBFygAkVK1) collection.
+
+<br />**Page 1 Art:** 
+
+\pagebreakNum
+
+<style>
+
+/* BACK PAGE STYLES */
+
+  /* Remove footer from back page, replace pX with last page number */
+  .phb#p13:after { display:none; }
+
+  .phb .back-cover-content {
+    padding-left: 4px;
+    padding-right: 16px;
+  }
+  .phb .back-cover-right {
+      padding-left: 40px;
+  }
+  .phb .back-cover-image {
+    height: 1136px;
+    left: -20px;
+    top: -10px;
+    width: 475px;
+    background-size: 475px 1136px;
+  }
+  .phb .back-cover-diamond {
+    display: block;
+    position: initial;
+    left: initial;
+    top: initial;
+    margin: auto;
+    margin-bottom: 35px;
+    box-sizing: border-box;
+    background-repeat: no-repeat;
+  }
+ .phb .back-cover-logo-container {
+    position: absolute;
+    bottom: 30px;
+    left: 64px;
+    width: 314px;
+ }
+ .phb .back-cover-logo,
+ .phb .back-cover-logo-link {
+     position: initial;
+     margin: auto;
+     margin-bottom: 8px;
+     left: initial;
+     bottom: initial;
+     right: initial;
+     background-repeat: no-repeat;
+ }
+ 
+ </style>
+ 
+ <img src='https://www.gmbinder.com/images/4UrFsXk.jpg' style="position:absolute; right:-194px; bottom:0px; height:1160px;" />
+ 
+ <div class='back-cover-image'></div>
+ 
+ <div style='margin-top:20px;'></div>
+ 
+ <div class='back-cover-header'>
+ 
+ Warcraft
+ 
+ 5th Edition
+ 
+ </div>
+ 
+<div class='back-cover-text'>
+ 
+  *Part of the WC5E Heroes Handbook v3*
+ 
+  This document is a part-piece of an upcoming update (as of writing this) to our *Warcraft 5th Edition Heroes Handbook*; a massive tome of player classes, races, and backgrounds to put a Warcraft spin on core Dungeons & Dragons material.
+
+  We're a cozy little gang of people having fun writing this material in our spare time, and are always looking for people to join us, chat with us, and tell us what they think. If you'd like to do just that, this is where you can find us:
+  
+  [Our project on Github](https://github.com/WC5E/Warcraft-5e-Conversion/) <br />
+  [Our community on Reddit](https://www.reddit.com/r/wc5e/) <br />
+  [Our community on Discord](https://discord.com/invite/dKMJmmD)
+  
+</div>
+ 
+<div class='back-cover-diamond' style='top: 679px;'></div>
+ 
+<div style='margin-top:35px;'></div>
+ 
+<div class='back-cover-close'>
+
+  Big love from the team. ❤
+
+   
+</div>
+
+<div class='back-cover-logo-container'>
+ 
+  <div class='back-cover-logo'></div>
+ 
+  <div class='back-cover-logo-link'>
+ 
+  [WWW.GMBINDER.COM](https://www.gmbinder.com)
+ 
+  </div>
+
+</div>
+ 
+ \columnbreak
+ 
+
+<div class='back-cover-right'>
+
+</div>
