@@ -1,0 +1,577 @@
+<style>
+
+/* Temporary Fix for heading issues */
+    .phb p{ line-height: 15px; } 
+    .phb blockquote p{ line-height: 14px; } 
+    .phb h2{ line-height: 26px; } 
+    .phb h3{ line-height: 19px; } 
+    .phb h4{ line-height: 15px; padding-bottom: 3px; } 
+    .phb h5{ line-height: 17px; } 
+    th, td { line-height: 14px; }
+
+</style>
+
+## Aarakocra
+***Ability Score Increase.*** Your Dexterity score increases by 2. Your Wisdom score increases by 1.
+
+***Age.*** Aarakocra reach maturity by age 3. Compared to humans, aarakocra don't usually live longer than 30 years.
+
+***Alignment.*** Most aarakocra are good and rarely choose sides when it comes to law and chaos. Tribal leaders and warriors might be lawful, while explorers and adventurers might tend toward chaotic.
+
+***Creature Type.*** You are a Humanoid.
+
+***Size.*** Aarakocra are about 5 feet tall. They have thin, lightweight bodies that weigh between 80 and 100 pounds. Your size is Medium.
+
+***Speed.*** Your base walking speed is 25 feet. 
+
+***Flight.*** Because of your wings, you have a flying speed equal to twice your walking speed. You can't use this flying speed if you're wearing medium or heavy armor.
+
+***Talons.*** You have talons that you can use to make unarmed strikes. When you hit with them, the strike deals 1d4 + your Strength modifier slashing damage, instead of the bludgeoning damage normal for an unarmed strike.
+
+***Weak Build.*** You count as one size smaller when determining your carrying capacity and the weight you can push, drag, or lift.
+
+***Wind Caller.*** You know the *gust* cantrip. Wisdom is your spellcasting ability for it.
+
+***Languages.*** You can speak, read, and write Common, Aarakocra, and Auran.
+
+## Aasimar
+***Ability Score Increase.*** Your Charisma score increases by 2. (FALLEN = STR, PROTECTOR = WIS, SCOURGE = CON)
+
+***Age.*** Aasimar mature at the same rate as humans, but they can live up to 160 years.
+
+***Alignment.*** ???
+
+***Creature Type.*** You are a Humanoid.
+
+***Size.*** Aasimar have the same range of height and weight as humans. Your size is Medium.
+
+***Speed.*** Your base walking speed is 30 feet. 
+
+***Celestial Resistance.*** You have resistance to necrotic damage and radiant damage.
+
+***Darkvision.*** Blessed with a radiant soul, your vision can easily cut through darkness. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray.
+
+***Healing Hands.*** As an action, you can touch a creature and roll a number of d4s equal to your proficiency bonus. The creature regains a number of hit points equal to the total rolled. Once you use this trait, you can't use it again until you finish a long rest.
+
+***Light Bearer.*** You know the *light* cantrip. Charisma is your spellcasting ability for it.
+
+***Celestial Revelation.*** When you reach 3rd level, choose one of the revelation options below. Thereafter, you can use a bonus action to unleash the celestial energy within yourself, gaining the benefits of that revelation. Your transformation lasts for 1 minute or until you end it as a bonus action. Once you transform using your revelation below, you can't use it again until you finish a long rest.
+___
+- **Necrotic Shroud.** Your eyes briefly become pools of darkness, and ghostly, flightless wings sprout from your back temporarily. Creatures other than your allies within 10 feet of you that can see you must succeed on a Charisma saving throw (DC 8 + your proficiency bonus + your Charisma modifier) or become frightened of you until the end of your next turn. Until the transformation ends, once on each of your turns, you can deal extra necrotic damage to one target when you deal damage to it with an attack or a spell. The extra damage equals your proficiency bonus.
+- **Radiant Consumption.** Searing light temporarily radiates from your eyes and mouth. For the duration, you shed bright light in a 10-foot radius and dim light for an additional 10 feet, and at the end of each of your turns, each creature within 10 feet of you takes radiant damage equal to your proficiency bonus. Until the transformation ends, once on each of your turns, you can deal extra radiant damage to one target when you deal damage to it with an attack or a spell. The extra damage equals your proficiency bonus.
+- **Radiant Soul.** Two luminous, spectral wings sprout from your back temporarily. Until the transformation ends, you have a flying speed equal to your walking speed, and once on each of your turns, you can deal extra radiant damage to one target when you deal damage to it with an attack or a spell. The extra damage equals your proficiency bonus.
+
+***Languages.*** You can speak, read, and write Common and Celestial.
+
+***Subrace.*** There are seven commonly found subraces of aasimar, tied to each of the seven heavens.
+
+#### Blessed by Barachiel
+
+***Ability Score Increase.*** 
+
+
+
+***Waters of the Silver Sea.*** You can cast *create or destroy water* (create water only) a number of times equal to your proficiency bonus and regain all expended uses when you finish a long rest. When you cast this spell, you can use it to summon the waters of the great sea surrounding the lowest level of Mount Celestia, causing the water to instead be holy water, and you regain the ability to do so when you finish a long rest. If summoned as rain, fiends and undead in the area can make a Dexterity saving throw, taking half damage on a success. Charisma is your spellcasting ability for this spell. The waters lose their holy properties after one hour.
+
+Realm: Lunia, 1st heaven
+
+Can create water, holy water
+Aquatic themed
+Eternal night, darkvision increase?
+
+#### XX of Domiel
+
+Realm: Mercuria, 2nd heaven
+
+#### XX of Erathaol
+
+Realm: Venya, 3rd heaven
+
+#### XX of Pistis Sophia
+
+Realm: Solania, 4th heaven
+
+#### XX of Raziel
+
+Realm: Mertion, 5th heaven
+
+\pagebreak
+
+#### XX of Sealtiel
+
+Realm: Jovar, 6th heaven
+
+#### XX of Zaphkiel
+
+Realm: Chronias, 7th heaven
+
+#### Subraces: Seven Heavens, Elysium, 
+#### Aasimar, Angel, Agathion
+
+## Autognome
+***Ability Score Increase.*** Your Intelligence score increases by 2, and one other ability score of your choice increases by 1.
+
+***Age.*** The maximum autognome lifespan remains a mystery; so far, they have shown no signs of deterioration due to age. You are immune to magical aging effects.
+
+***Alignment.*** ???
+
+***Creature Type.*** You are a Construct.
+
+***Size.*** Autognomes are usually about the same size as rock gnomes but weigh about 60 pounds. Your size is Small.
+
+***Speed.*** Your base walking speed is 25 feet. 
+
+***Armored Casing.*** You are encased in thin metal or some other durable material. While you aren't wearing armor, your base Armor Class is 13 + your Dexterity modifier.
+
+***Built for Success.*** You can add a d4 to one attack roll, ability check, or saving throw you make, and you can do so after seeing the d20 roll but before the effects of the roll are resolved. You can use this trait a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest.
+
+***Healing Machine.*** If the *mending* spell is cast on you, you can spend a Hit Die, roll it, and regain a number of hit points equal to the roll plus your Constitution modifier (minimum of 1 hit point).
+
+In addition, your creator designed you to benefit from several spells that preserve life but that normally don't affect Constructs: *cure wounds*, *healing word*, *mass cure wounds*, *mass healing word*, and *spare the dying*.
+
+***Mechanical Nature.*** You have resistance to poison damage and immunity to disease, and you have advantage on saving throws against being paralyzed or poisoned. You don't need to eat, drink, or breathe.
+
+***Sentry's Rest.*** When you take a long rest, you spend at least 6 hours in an inactive, motionless state, instead of sleeping. In this state, you appear inert, but you remain conscious.
+
+***Specialized Design.*** You gain two tool proficiencies of your choice, selected from the Player's Handbook.
+
+***Languages.*** You can speak, read, and write Common and Gnomish. The Gnomish language, which uses the Dwarvish script, is renowned for its technical treatises and its catalogs of knowledge about the natural world.
+
+## Bugbear
+## Centaur
+## Changeling
+## Dhampir
+
+\pagebreakNum
+
+## Dragonborn
+
+***Ability Score Increase.*** Your Strength score increases by 2, and one score determined by your draconic ancestry increases by 1.
+
+***Age.*** Young dragonborn grow quickly. They walk hours after hatching, attain the size and development of a 10-year-old human child by the age of 3, and reach adulthood by 15. They live to be around 80.
+
+***Alignment.*** ???
+
+***Creature Type.*** You are a Humanoid.
+
+***Size.*** Dragonborn are taller and heavier than humans, standing well over 6 feet tall and averaging almost 250 pounds. Your size is Medium.
+
+***Speed.*** Your base walking speed is 30 feet.
+
+***Bite.*** Your fanged maw is a natural weapon, which you can use to make unarmed strikes. If you hit with it, you deal piercing damage equal to 1d6 + your Strength modifier, instead of the bludgeoning damage normal for an unarmed strike.
+
+***Darkvision.*** Due to your draconic ancestry, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray.
+
+***Draconic Ancestry.*** You have draconic ancestry. Choose one type of dragon from the Draconic Ancestry table. Your breath weapon and damage resistance are determined by the dragon type, as shown in the table.
+
+##### Draconic Ancestry
+Dragon  | Damage <br/> Type | Breath <br/> Weapon | Ability Score <br/> Increase
+--------|---------------|-------------------------------|-------
+Black   | Acid	        | 5 by 30 ft. line (Dex. save)  | Dexterity
+Blue	| Lightning	    | 5 by 30 ft. line (Dex. save)  | Charisma
+Brass	| Fire	        | 5 by 30 ft. line (Dex. save)  | Charisma
+Bronze	| Lightning	    | 5 by 30 ft. line (Dex. save)  | Wisdom
+Copper	| Acid	        | 5 by 30 ft. line (Dex. save)  | Intelligence
+Gold	| Fire	        | 15 ft. cone (Dex. save)       | Wisdom
+Green	| Poison	    | 15 ft. cone (Con. save)       | Intelligence
+Red	    | Fire	        | 15 ft. cone (Dex. save)       | Constitution
+Silver	| Cold	        | 15 ft. cone (Con. save)       | Constitution
+White	| Cold	        | 15 ft. cone (Con. save)       | Constitution
+
+
+***Breath Weapon.*** When you take the Attack action on your turn, you can replace one of your attacks with an exhalation of magical energy. Your draconic ancestry determines the size, shape, and damage of the exhalation. 
+
+Each creature in that area must make a Dexterity saving throw (DC = 8 + your Constitution modifier + your proficiency bonus). On a failed save, the creature takes 1d10 damage of the type associated with your draconic ancestry. On a successful save, it takes half as much damage. This damage increases by 1d10 when you reach 5th level (2d10), 11th level (3d10), and 17th level (4d10).
+
+You can use your Breath Weapon a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest.
+
+***Damage Resistance.*** You have resistance to the damage type associated with your draconic ancestry.
+
+***Natural Armor.*** You have tough, scaly skin. When you aren't wearing armor, your AC is 13 + your Dexterity modifier. You can use your natural armor to determine your AC if the armor you wear would leave you with a lower AC. A shield's benefits apply as normal while you use your natural armor.
+
+***Languages.*** You can speak, read, and write Common and Draconic. Draconic is thought to be one of the oldest languages and is often used in the study of magic. The language sounds harsh to most other creatures and includes numerous hard consonants and sibilants.
+
+> #### Variant: Gem Dragonborn
+> Some dragonborn trace their ancestry to the gem dragons, dragons who primarily reside outside the Prime Material Plane and do not take part in the good vs evil conflict between metallic and chromatic dragons. These dragonborn's scales are not as thick and their teeth not as sharp as that of their cousins, but they make up for it with strange breath weapons and latent psionic abilities.
+>
+> If your Dungeon Master allows you to use this race, your Bite damage decreases to 1d4 and your Natural Armor is reduced to 12 + your Dexterity modifier, but you gain the Psionic Mind trait below and choose from the Gem Draconic Ancestry table.
+>
+> ***Psionic Mind.*** You can send telepathic messages to any creature you can see within 30 feet of you. You don't need to share a language with the creature for it to understand these messages, but it must be able to understand at least one language to comprehend them.
+>
+> ##### Gem Draconic Ancestry
+> Dragon  | Damage Type   | Breath Weapon
+> --------|---------------|-----------------------------
+> Amethyst| Force         | 15 ft. cone (Str. save)
+> Crystal | Radiant       | 15 ft. cone (Con. save)
+> Emerald | Psychic       | 15 ft. cone (Int. save)
+> Sapphire| Thunder       | 15 ft. cone (Con. save)
+> Topaz   | Necrotic      | 15 ft. cone (Con. save)
+
+## Dwarf, Arctic
+## Dwarf, Gray (Duergar)
+## Dwarf, Hill
+## Dwarf, Mountain
+## Dwarf, Stonecutter (Urdunnir)
+## Dwarf, Wild
+
+\pagebreak
+
+## Elf, Astral
+## Elf, Winged (Avariel)
+## Elf, Dark (Drow)
+## Elf, Eladrin
+## Elf, High
+## Elf, Sea
+## Elf, Shadow (Shadar-Kai)
+## Elf, Wood
+## Fairy
+## Firbolg
+## Genasi, Air
+## Genasi, Earth
+## Genasi, Fire
+## Genasi, Water
+## Giff
+## Githyanki
+## Githzerai
+## Gnome, Deep (Svirfneblin)
+## Gnome, Forest
+## Gnome, Rock
+## Goblin
+## Goliath
+## Hadozee
+## Half-Dwarf
+## Half-Elf
+## Half-Orc
+## Halfling, Ghostwise
+## Halfling, Lightfoot
+## Halfling, Stout
+## Harengon
+## Hexblood
+## Hobgoblin
+## Human
+## Kalashtar
+## Kender
+## Kenku
+## Kobold
+## Lizardfolk, Desert
+## Lizardfolk, Forest
+## Lizardfolk, Plains
+## Lizardfolk, Swamp
+## Minotaur
+## Orc
+## Plasmoid
+## Reborn
+## Shifter, Beasthide
+## Shifter, Longtooth
+## Shifter, Swiftstride
+## Shifter, Wildhunt
+## Tabaxi
+## Thri-kreen
+
+\pagebreakNum
+
+## Tiefling
+### Tiefling Traits
+Tiefling share certain racial traits as a result of their infernal descent.
+
+***Ability Score Increase.*** Your Charisma score increases by 2.
+
+***Age.*** Tieflings mature at the same rate as humans but live a few years longer.
+
+***Alignment.*** Tieflings might not have an innate tendency toward evil, but many of them end up there. Evil or not, an independent nature inclines many tieflings toward a chaotic alignment.
+
+***Size.*** Tieflings are about the same size and build as humans. Your size is Medium.
+
+***Speed.*** Your base walking speed is 30 feet.
+
+***Darkvision.*** Thanks to your infernal heritage, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can’t discern color in darkness, only shades of gray.
+
+***Hellish Resistance.*** You have resistance to fire damage.
+
+***Languages.*** You can speak, read, and write Common and Infernal.
+
+***Subraces.*** There are nine subraces to be found among tieflings, corresponding to each of the rulers of the Nine Hells. Choose one of these subraces.
+
+#### Bloodline of Asmodeus
+The tieflings connected to Nessus command the power of fire and darkness, guided by a keener than normal intellect, as befits those linked to Asmodeus himself.
+
+***Ability Score Increase.*** Your Intelligence score increases by 1.
+
+***Infernal Legacy: Nessus*** You know the *thaumaturgy* cantrip. Once you reach 3rd level, you can cast the *hellish rebuke* spell once as a 2nd-level spell. Once you reach 5th level, you can also cast the *darkness* spell once. You must finish a long rest to cast these spells again with this trait. Charisma is your spellcasting ability for these spells.
+
+#### Bloodline of Baalzebul
+The crumbling realm of Maladomini is ruled by Baalzebul, who excels at corrupting those whose minor sins can be transformed into acts of damnation. Tieflings linked to this archdevil can corrupt others both physically and psychically.
+
+***Ability Score Increase.*** Your Intelligence score increases by 1.
+
+***Infernal Legacy: Maladomini.*** You know the *thaumaturgy* cantrip. Once you reach 3rd level, you can cast the *ray of sickness* spell once as a 2nd-level spell. Once you reach 5th level, you can also cast the *crown of madness* spell once. You must finish a long rest to cast these spells again with this trait. Charisma is your spellcasting ability for these spells.
+
+\columnbreak
+
+#### Bloodline of Dispater
+The great city of Dis occupies most of Hell's second layer. It is a place where secrets are uncovered and shared with the highest bidder, making tieflings tied to Dispater excellent spies and infiltrators.
+
+***Ability Score Increase.*** Your Dexterity score increases by 1.
+
+***Infernal Legacy: Dis.*** You know the *thaumaturgy* cantrip. Once you reach 3rd level, you can cast the *disguise self* spell once as a 2nd-level spell. Once you reach 5th level, you can also cast the *detect thoughts* spell once. You must finish a long rest to cast these spells again with this trait. Charisma is your spellcasting ability for these spells.
+
+#### Bloodline of Fierna
+A master manipulator, Fierna grants tieftings tied to her forceful personalities.
+
+***Ability Score Increase.*** Your Wisdom score increases by 1.
+
+***Infernal Legacy: Phlegethos.*** You know the *friends* cantrip. Once you reach 3rd level, you can cast the *charm person* spell once as a 2nd-level spell. Once you reach 5th level, you can also cast the *suggestion* spell once. You must finish a long rest to cast these spells again with this trait. Charisma is your spellcasting ability for these spells.
+
+#### Bloodline of Glasya
+Glasya, Hell's criminal mastermind, grants her tiefiings magic that is useful for committing heists.
+
+***Ability Score Increase.*** Your Dexterity score increases by 1.
+
+***Infernal Legacy: Malbolge.*** You know the *minor illusion* cantrip. Once you reach 3rd level, you can cast the *disguise self* spell once as a 2nd-level spell. Once you reach 5th level, you can also cast the *invisibility* spell once as a 2nd-level spell. You must finish a long rest to cast these spells again with this trait. Charisma is your spellcasting ability for these spells.
+
+#### Bloodline of Levistus
+Frozen Stygia is ruled by Levistus, an archdevil known for offering bargains to those who face an inescapable doom.
+
+***Ability Score Increase.*** Your Constitution score increases by 1.
+
+***Infernal Legacy: Stygia.*** You know the *ray of frost* cantrip. Once you reach 3rd level, you can cast the *armor of agathys* spell once as a 2nd-level spell. Once you reach 5th level, you can also cast the *darkness* spell once. You must finish a long rest to cast these spells again with this trait. Charisma is your spellcasting ability for these spells.
+
+#### Bloodline of Mammon
+The great miser Mammon loves coins above all else. Tieflings tied to him excel at gathering and safeguarding wealth.
+
+***Ability Score Increase.*** Your Intelligence score increases by 1.
+
+***Infernal Legacy: Minauros.*** You know the *mage hand* cantrip. Once you reach 3rd level, you can cast the *tenser's floating disk* spell once as a 2nd-level spell. Once you reach 5th level, you can also cast the *arcane lock* spell once. You must finish a long rest to cast these spells again with this trait. Charisma is your spellcasting ability for these spells.
+
+\pagebreakNum
+
+#### Bloodline of Mephistopheles
+In the frozen realm of Cania, Mephistopheles offers arcane power to those who entreat with him. Tieflings linked to him master some arcane magic.
+
+***Ability Score Increase.*** Your Intelligence score increases by 1.
+
+***Infernal Legacy: Cania.*** You know the *mage hand* cantrip. Once you reach 3rd level, you can cast the *burning hands* spell once as a 2nd-level spell. Once you reach 5th level, you can also cast the *flame blade* spell once as a 3rd-level spell. You must finish a long rest to cast these spells again with this trait. Charisma is your spellcasting ability for these spells.
+
+#### Bloodline of Zariel
+Tieflings with a blood tie to Zariel are stronger than the typical tiefling and receive magical abilities that aid them in battle.
+
+***Ability Score Increase.*** Your Strength score increases by 1.
+
+***Infernal Legacy: Avernus.*** You know the *thaumaturgy* cantrip. Once you reach 3rd level, you can cast the *searing smite* spell once as a 2nd-level spell. Once you reach 5th level, you can also cast the *branding smite* spell once as a 3rd-level spell. You must finish a long rest to cast these spells again with this trait. Charisma is your spellcasting ability for these spells.
+
+
+## Tortle
+## Triton
+## Warforged
+## Yuan-Ti
+
+\pagebreakNum
+
+
+
+
+### Dwarf Traits
+Your dwarf character has an assortment of inborn abilities, part and parcel of dwarven nature.
+
+***Ability Score Increase.*** Your Constitution score increases by 2.
+
+***Age.*** Dwarves mature at the same rate as humans, but they’re considered young until they reach the age of 50. On average, they live about 350 years.
+
+***Creature Type.*** You are a Humanoid. You are also considered an dwarf for any prerequisite or effect that requires you to be an dwarf.
+
+***Size.*** Dwarves stand between 4 and 5 feet tall and average about 150 pounds. Your size is Medium.
+
+***Speed.*** Your base walking speed is 25 feet. Your speed is not reduced by wearing heavy armor.
+
+***Darkvision.*** Accustomed to life underground, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can’t discern color in darkness, only shades of gray.
+
+***Dwarven Resilience.*** You have advantage on saving throws you make to avoid or end the poisoned condition on yourself. You also have resistance to poison damage (explained in chapter 9, “Combat”).
+
+***Dwarven Combat Training.*** You have proficiency with the battleaxe, handaxe, light hammer, and warhammer.
+
+***Tool Proficiency.*** You gain proficiency with the artisan’s tools of your choice: smith’s tools, brewer’s supplies, or mason’s tools.
+
+***Stonecunning.*** Whenever you make an Intelligence (History) check related to the origin of stonework, you are considered proficient in the History skill and add double your proficiency bonus to the check, instead of your normal proficiency bonus
+
+***Languages.*** You can speak, read, and write Common and Dwarvish. Dwarvish is full of hard consonants and guttural sounds, and those characteristics spill over into whatever other language a dwarf might speak.
+
+***Subrace.*** Two main subraces of dwarves populate the worlds of D&D: hill dwarves and mountain dwarves. More rarely found are the arctic dwarves, gray dwarves (more commonly called duergar), stonecutter dwarves, and wild dwarves. Choose one of these subraces.
+
+#### Hill Dwarf
+As a hill dwarf, you have keen senses, deep intuition, and remarkable resilience. The gold dwarves of Faerûn in their mighty southern kingdom are hill dwarves, as are the exiled Neidar and the debased Klar of Krynn in the Dragonlance setting.
+
+***Ability Score Increase.*** Your Wisdom score increases by 1.
+
+***Dwarven Toughness.*** Your hit point maximum increases by 1, and it increases by 1 every time you gain a level.
+
+#### Mountain Dwarf
+As a mountain dwarf, you’re strong and hardy, accustomed to a difficult life in rugged terrain. You’re probably on the tall side (for a dwarf), and tend toward lighter coloration. The shield dwarves of northern Faerûn, as well as the ruling Hylar clan and the noble Daewar clan of Dragonlance, are mountain dwarves.
+
+***Ability Score Increase.*** Your Strength score increases by 2.
+
+***Dwarven Armor Training.*** You have proficiency with light and medium armor.
+
+\pagebreakNum
+
+#### Arctic Dwarf (Inugaakalikurit)
+
+***Ability Score Increase.*** Your Strength score increases by 2.
+
+***Size.*** Your size is Small.
+
+***Arctic Resistance.*** You have resistance to cold damage.
+
+***Arctic Combat Training.*** You have proficiency with the battleaxe, handaxe, shortbow, and spear. This replaces Dwarven Combat Training trait.
+
+***Tool Proficiency.*** You gain proficiency in one gaming set or musical instrument of your choice, or in land vehicles. This replaces the normal Tool Proficiency trait. 
+
+***Icecunning.*** Whenever you make a Wisdom (Perception) or Wisdom (Survival) check to notice details about ice or snow, you are considered proficient in those skills and add double your proficiency bonus to the check, instead of your normal proficiency bonus. This replaces the Stonecunning trait.
+
+***Snow Treader.*** You can move across icy or snowy difficult terrain without expending extra movement, and you have advantage on saving throws to avoid hazards caused by frozen ground, such as falling prone. <!-- Source: https://www.reddit.com/gallery/kg7lb3 -->
+
+- Lose stonecunning
+- Lose tool proficiency
+- Lose combat training
+- Lose darkvision? Polar months?
+- Gain cold resistance
+
+#### Gray Dwarf (Duergar)
+The gray dwarves, or duergar, live deep in the Underdark. After delving deeper than any other dwarves, they were enslaved by mind flayers for eons. Although they eventually won their freedom, these grim, ashen-skinned dwarves now take slaves of their own and are as tyrannical as their former masters. 
+
+Centuries of living in the deepest places of the Underdark, saturated with strange magical energy, along with the horrific experiments performed on them by the mind flayers left early duergar with psionic powers, which have been passed down to their descendants.
+
+Physically similar to other dwarves in some ways, duergar are wiry and lean, with black eyes and bald heads, with the males growing long, unkempt, gray beards.
+
+Duergar value toil above all else. Showing emotions other than grim determination or wrath is frowned on in their culture, but they can sometimes seem joyful when at work. They have the typical dwarven appreciation for order, tradition, and impeccable craftsmanship, but their goods are purely utilitarian, disdaining aesthetic or artistic value.
+
+Few duergar become adventurers, fewer still on the surface world, because they are a hidebound and suspicious race. Those who leave their subterranean cities are usually exiles. Check with your Dungeon Master to see if you can play a gray dwarf character.
+
+***Ability Score Increase.*** Your Strength score increases by 1.
+
+***Superior Darkvision.*** Your darkvision has a range of 120 feet.
+
+***Sunlight Sensitivity.*** You have disadvantage on attack rolls and Wisdom (Perception) checks that rely on sight when you, the target of your attack, or whatever you are trying to perceive is in direct sunlight.
+
+***Duergar Magic.*** When you reach 3rd level, you can cast the *enlarge/reduce* spell on yourself once with this trait, using only the spell's enlarge option. When you reach 5th level, you can cast the *invisibility* spell on yourself once with this trait. You don't need material components for either spell, and you can't cast them while you're in direct sunlight, although sunlight has no effect on them once cast. You regain the ability to cast these spells with this trait when you finish a long rest. Intelligence is your spellcasting ability for these spells.
+
+***Psionic Fortitude.*** You also have advantage on saving throws against illusions and to avoid or end the charmed or stunned condition on yourself.
+
+#### Stonecutter Dwarf (Urdunnir)
+
+***Ability Score Increase.*** Your Wisdom score increases by 1.
+
+***Stone Walk.*** You have a burrow speed equal to your walking speed. You can only use this to pass through earth, but you can pass through solid stone.
+
+***Shape Metal and Stone.*** You can use your hands to to manipulate metal and stone like clay. Any 
+
+
+You know the *mold earth* cantrip. Can mold metal and stone like clay.
+
+- Lose combat training
+- Burrow speed, can pass through solid rock and dirt
+- Have to eat gems instead of food. 10 gp worth per week
+
+#### Wild Dwarf
+
+***Ability Score Increase.*** Your XXX score increases by 1.
+
+***Size.*** Your size is Small.
+
+***Speed.*** Your base walking speed is 20 feet.
+
+***Disease Resilience.*** You have advantage on saving throws you make to avoid or end diseases on yourself.
+
+- Proficient with poisoner kit
+- Resistant to disease
+- handaxe and blowgun
+- acclimatized to hot climate (jungles)
+- Small, not medium
+- Speed decreases to 20 ft
+- Can make knockout poison
+- Mud armor
+
+<div class='footnote'>PART 1 | RACES</div>
+<img src='https://www.dndbeyond.com/attachments/0/618/dwarf1.png' style='position:absolute; bottom:-100px; right:23px; width:300px; transform:rotate(-53deg) ' />
+
+\pagebreakNum
+
+##### Random Height and Weight
+Race <div style='margin-right:130px;'></div> |&nbsp;| Base <br/> Height |&nbsp;| Height <br/> Modifier |&nbsp;| Base<br/>Weight         |&nbsp;| Weight <br/> Modifier |
+------------------------|-|:------|-|:------|-|:--------|-|:------------|
+Arctic dwarf, male      | | 2' 8" | | +2d4  | | 50 lb.  | | × (1d4) lb. |
+Arctic dwarf, female    | | 2' 4" | | +2d4  | | 40 lb.  | | × (1d4) lb. |
+Gray dwarf, male        | | 3' 9" | | +2d4  | | 110 lb. | | × (2d4) lb. |
+Gray dwarf, female      | | 3' 7" | | +2d4  | | 80 lb.  | | × (2d4) lb. |
+Mountain dwarf, male    | | 4' 2" | | +2d4  | | 145 lb. | | × (2d6) lb. |
+Mountain dwarf, female  | | 4' 0" | | +2d4  | | 110 lb. | | × (2d4) lb. |
+Hill dwarf, male	    | | 3' 9" | | +2d4  | | 130 lb. | | × (2d6) lb. |
+Hill dwarf, female	    | | 3' 7" | | +2d4	| | 100 lb.	| | × (2d6) lb. |
+Urdunnir, male          | | 4' 2" | | +2d4  | | 180 lb. | | × (2d8) lb. |
+Urdunnir, female        | | 4' 0" | | +2d4  | | 150 lb. | | × (2d8) lb. |
+Wild dwarf, male        | | 2' 8" | | +2d4  | | 50 lb.  | | × (1d4) lb. |
+Wild dwarf, female      | | 2' 6" | | +2d4  | | 40 lb.  | | × (1d4) lb. |
+
+
+\pagebreakNum
+
+## Racial Feats
+
+### Black Dragon
+*Prerequisite: Dragonborn or Draconic Bloodline Sorcerer, with black draconic ancestry*
+
+- ***Foul Tolerance.*** You can drink contaminated water without suffering ill effects and you have advantage on Constitution saving throws from ingesting poisoned food or drink.
+- ***Swarm of Locusts.*** You know the *infestation* cantrip. Charisma is your spellcasting ability for it.
+- ***Water Dweller.*** You have a swimming speed equal to your walking speed and you can breathe both water and air.
+
+### Blue Dragon
+- ***Desert Delver.*** If you have a free hand, you can use your action to dig up to 10 feet through loose earth, excavating it and depositing it up to 10 feet away.
+- ***Enduring Combatant.*** You have advantage on Constitution checks and saving throws against exhaustion.
+- ***Lightning Rod.*** You know the *lightning lure* cantrip. Charisma is your spellcasting ability for it.
+
+### Brass Dragon
+- ***Conversationalist.*** You can speak, read and write two additional languages of your choice.
+- ***Grounded.*** While on the ground, you have advantage on saving throws against effects that would push you, pull you, or knock you prone.
+- ***Solemn Slumber.*** When you reach 3rd level, you can cast *sleep* once with this trait. You regain the ability to cast it when you finish a long rest. Charisma is your spellcasting ability for it.
+
+### Bronze Dragon
+- ***Booming Repulse.*** When you reach 3rd level, you can cast *thunderwave* once with this trait as a 2nd-level spell. You regain the ability to cast it when you finish a long rest. Charisma is your spellcasting ability for it.
+- ***Dealmaker.*** You have advantage on ability checks made when negotiating payment for a service or the terms of a contract.
+- ***Webbed Feet.*** You have a swimming speed of 30 feet.
+
+### Copper Dragon
+- ***Crafty.*** You have proficiency in the Deception skill.
+- ***Dragon Speech.*** When you reach 3rd level, you can use your action to choose one Tiny beast you can see within 30 feet of you, magically granting it the ability to speak and understand Draconic. This effect lasts for 10 minutes. The knowledge and awareness of the beast is limited by its intelligence, but at a minimum, it can give you information about nearby locations and monsters, including whatever it can perceive or has perceived within the past day. Once you use this trait, you can't use it again until you finish a long rest.
+- ***Rock Climber.*** You have a climbing speed equal to your walking speed and you can move up, down, and across vertical surfaces made of rock or stone.
+
+### Gold Dragon
+- ***Devourer of Wealth.*** You can consume coins and gems as food. You receive enough nourishment to sustain yourself for a day from 1 gp worth of coins or gems.
+- ***Foretold Fortune.*** When you finish a long rest, roll a d20 and record the number rolled. Once before the end of your next long rest, when you roll that number on a d20, you can instead choose to treat that roll as a 20. If the number you recorded was a 20, you can instead treat one d20 roll of your choice as a 20.
+- ***Strength Sap.*** When you reach 3rd level, you can cast *ray of enfeeblement* once with this trait. You regain the ability to cast it when you finish a long rest. Charisma is your spellcasting ability for it.
+
+### Green Dragon
+- ***Chains of the Forest.*** You know the *thorn whip* cantrip. Charisma is your spellcasting ability for it.
+- ***Cunning.*** You have proficiency in one of the following skills of your choice: Deception, Insight, or Persuasion.
+- ***Poison Resilience.*** You have advantage on saving throws you make to avoid or end the poisoned condition on yourself.
+
+### Red Dragon
+- ***Fire Sculptor.*** You know the *control flames* cantrip. Charisma is your spellcasting ability for it.
+- ***Furious Flames.*** The damage die of your breath weapon increases from d10 to d12.
+- ***Treasure Adept.*** You have advantage on Intelligence checks made to discern the monetary value of objects, as well as Wisdom (Insight) checks made to determine if someone is trying to scam or swindle you.
+
+### Silver Dragon
+- ***Favorable Disposition.*** Whenever you're interacting with nonhostile dragons or humanoids, you can add half your proficiency bonus to any Charisma check you make that doesn't already include your proficiency bonus.
+- ***Paralytic Resilience.*** You have advantage on saving throws you make to avoid or end the paralyzed or stunned conditions on yourself.
+- ***Winds of Grace.*** When you reach 3rd level, you can cast *feather fall* once with this trait. You regain the ability to cast it when you finish a long rest. Charisma is your spellcasting ability for it.
+
+### White Dragon
+- ***Freezing Fog.*** You know the *frostbite* cantrip. Charisma is your spellcasting ability for it.
+- ***Ice Walk.*** You can move across and climb icy surfaces without needing to make an ability check, and difficult terrain made of ice and snow doesn't cost you extra movement.
+- ***Keen Recollection.*** You have advantage on Intelligence checks made to recall information about creatures and objects you have encountered, as well as places you have visited.
+
+\pagebreakNum
+
+# Changelog
+## Aarakocra
+- Combined the entries from *Elemental Evil Player's Companion* and *Mordenkainen Presents: Monsters of the Multiverse*.
+- Added Weak Build trait.
+- Replaced *gust of wind* from Wind Caller with the *gust* cantrip.
