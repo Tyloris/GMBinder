@@ -1,0 +1,661 @@
+<style>
+
+.phb .classTable{
+    margin-top:25px;
+    margin-bottom:40px;
+    border-collapse:separate;
+    background-color:white;
+    border:initial;
+    border-style:solid;
+    border-image-outset:25px 17px;
+    border-image-repeat:round;
+    border-image-slice:150 200 150 200;
+    border-image-source:url('/assets/img/table-wrap.png');
+    border-image-width:47px
+}
+.phb .classTable h5{
+    margin-bottom:10px
+}
+
+</style>
+
+## Dragonborn
+*HER FATHER STOOD ON THE FIRST OF THE THREE stairs that led down from the portal, unmoving. The scales of his face had grown paler around the edges, but Clanless Mehen still looked as if he could wrestle down a dire bear himself. His familiar well-worn armor was gone, replaced by violet-tinted scale armor with bright silvery tracings. There was a blazon on his arm as well, the mark of some foreign house. The sword at his back was the same, though, the one he had carried since even before he had found the twins left in swaddling at the gates of Arush Vayem.*
+
+*For all her life, Farideh had known that reading her father’s face was a skill she’d been fortunate to learn. A human who couldn’t spot the shift of her eyes or Havilar’s would certainly see only the indifference of a dragon in Clanless Mehen’s face. But the shift of scales, the arch of a ridge, the set of his eyes, the gape of his teeth — her father’s face spoke volumes.*
+
+*But every scale of it, this time, seemed completely still — the indifference of a dragon, even to Farideh.*
+
+<div style="text-align:Right"> 
+
+— Erin M. Evans, *The Adversary* </div>
+
+Born of dragons, as their name proclaims, the dragonborn walk proudly through a world that greets them with fearful incomprehension. Shaped by draconic gods or the dragons themselves, dragonborn originally hatched from dragon eggs as a unique race, combining the best attributes of dragons and humanoids. Some dragonborn are faithful servants to true dragons, others form the ranks of soldiers in great wars, and still others find themselves adrift, with no clear calling in life.
+
+### Proud Dragon Kin
+Dragonborn look very much like dragons standing erect in humanoid form, though they lack wings or a tail. The first dragonborn had scales of vibrant hues matching the colors of their dragon kin, but generations of interbreeding have created a more uniform appearance. Their small, fine scales are usually brass or bronze in color, sometimes ranging to scarlet, rust, gold, or copper-green. They are tall and strongly built, often standing close to 6½ feet tall and weighing 300 pounds or more. Their hands and feet are strong, talonlike claws with three fingers and a thumb on each hand.
+
+The blood of a particular type of dragon runs very strong through some dragonborn clans. These dragonborn often boast scales that more closely match those of their dragon ancestor — bright red, green, blue, or white, lustrous black, or gleaming metallic gold, silver, brass, copper, or bronze.
+
+### Self-Sufficient Clans
+To any dragonborn, the clan is more important than life itself. Dragonborn owe their devotion and respect to their clan above all else, even the gods. Each dragonborn’s conduct reflects on the honor of his or her clan, and bringing dishonor to the clan can result in expulsion and exile. Each dragonborn knows his or her station and duties within the clan, and honor demands maintaining the bounds of that position.
+
+A continual drive for self-improvement reflects the self-sufficiency of the race as a whole. Dragonborn value skill and excellence in all endeavors. They hate to fail, and they push themselves to extreme efforts before they give up on something. A dragonborn holds mastery of a particular skill as a lifetime goal. Members of other races who share the same commitment find it easy to earn the respect of a dragonborn.
+
+Though all dragonborn strive to be self-sufficient, they recognize that help is sometimes needed in difficult situations. But the best source for such help is the clan, and when a clan needs help, it turns to another dragonborn clan before seeking aid from other races — or even from the gods.
+
+> ##### Draconians
+> In the Dragonlance setting, the followers of the evil goddess Takhisis learned a dark ritual that let them corrupt the eggs of metallic dragons, producing evil dragonborn called draconians. Five types of draconians, corresponding to the five types of metallic dragons, fought for Takhisis in the War of the Lance: auraks (gold), baaz (brass), bozak (bronze), kapak (copper), and sivak (silver). In place of their draconic breath weapons, they have unique magical abilities.
+
+### Dragonborn Names
+Dragonborn have personal names given at birth, but they put their clan names first as a mark of honor. A childhood name or nickname is often used among clutchmates as a descriptive term or a term of endearment. The name might recall an event or center on a habit.
+
+___
+- **Male Names:** Arjhan, Balasar, Bharash, Donaar, Ghesh, Heskan, Kriv, Medrash, Mehen, Nadarr, Pandjed, Patrin, Rhogar, Shamash, Shedinn, Tarhun, Torinn
+- **Female Names:** Akra, Biri, Daar, Farideh, Harann, Havilar, Jheri, Kava, Korinn, Mishann, Nala, Perra, Raiann, Sora, Surina, Thava, Uadjit
+- **Childhood Names:** Climber, Earbender, Leaper, Pious, Shieldbiter, Zealous
+- **Clan Names:** Clethtinthiallor, Daardendrian, Delmirev, Drachedandion, Fenkenkabradon, Kepeshkmolik, Kerrhylon, Kimbatuul, Linxakasendalor, Myastan, Nemmonis, Norixius, Ophinshtalajiir, Prexijandilin, Shestendeliath, Turnuroth, Verthisathurgiesh, Yarjerit
+
+\pagebreakNum
+
+### Dragonborn Traits
+Your draconic heritage manifests in a variety of traits you share with other dragonborn.
+
+***Ability Score Increase.^†^*** Your Constitution and Charisma scores both increase by 2.
+
+***Age.*** Young dragonborn grow quickly. They walk hours after hatching, attain the size and development of a 10-year-old human child by the age of 3, and reach adulthood by 15. They live to be around 80.
+
+***Alignment.*** Dragonborn tend to extremes, making a conscious choice for one side or the other in the cosmic war between good and evil (represented by Bahamut and Tiamat, respectively). Most dragonborn are good, but those who side with Tiamat can be terrible villains.
+
+***Creature Type.*** You are a Humanoid. You also have a subtype based on your draconic ancestry, as shown on the Draconic Ancestry table.
+
+***Size.*** Dragonborn are taller and heavier than humans, standing well over 6 feet tall and averaging almost 250 pounds. Your size is Medium.
+
+***Speed.*** Your base walking speed is 30 feet.
+
+***Darkvision.*** Due to your draconic nature, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can’t discern color in darkness, only shades of gray.
+
+***Natural Armor.*** You have tough, scaly skin. When you aren't wearing armor, your base AC is 13 + Dexterity modifier. You can use your natural armor to determine your AC if the armor you wear would leave you with a lower AC. A shield's benefits apply as normal while you use your natural armor.
+
+***Natural Weapons.*** You have retractable claws and a fanged maw that you can use to make unarmed strikes. Extending or retracting the claws requires no action.  If you hit with them, you deal slashing damage with your claws or piercing damage with your bite equal to 1d4 + your Strength modifier, instead of the normal bludgeoning damage for an unarmed strike.
+
+***Draconic Ancestry.*** You have draconic ancestry. Choose one type of dragon from the Draconic Ancestry table. Your breath weapon and damage resistance are determined by the dragon type, as shown in the table.
+
+***Breath Weapon.*** When you take the Attack action on your turn, you can replace one of your attacks with an exhalation of magical energy. Your draconic ancestry determines the size and shape, as well as the damage and saving throw types of the exhalation.
+
+Each creature in that area must make a saving throw (DC = 8 + your Constitution modifier + your proficiency bonus). On a failed save, the creature takes 1d10 damage of the type associated with your Draconic Ancestry. On a successful save, it takes half as much damage. This damage increases by 1d10 when you reach 5th level (2d10), 11th level (3d10), and 17th level (4d10).
+
+You can use your Breath Weapon a number of times equal to your proficiency bonus and regain all expended uses when you finish a long rest.
+
+\columnbreak
+
+***Damage Resistance.*** You have resistance to the damage type associated with your draconic ancestry.
+
+***Languages.*** You can speak, read, and write Common and Draconic. Draconic is thought to be one of the oldest languages and is often used in the study of magic. The language sounds harsh to most other creatures and includes numerous hard consonants and sibilants.
+
+##### Draconic Ancestry
+Dragon  |   | Subtype   |   | Damage <br/> Type |   | Shape | Save <div style="position: absolute; top:176px; right:20px; width:160px; height:25px"> —Breath Weapon—</div>
+--------|---|-----------|---|-----------|---|---------------------|----
+Amethyst|   | Gem       |   | Force     |   | 15 ft. cone       | Str
+Black   |   | Chromatic |   | Acid      |   | 5 by 30 ft. line  | Dex
+Blue    |   | Chromatic |   | Lightning |   | 5 by 30 ft. line  | Dex
+Brass   |   | Metallic  |   | Fire      |   | 5 by 30 ft. line  | Dex
+Bronze  |   | Metallic  |   | Lightning |   | 5 by 30 ft. line  | Dex
+Copper  |   | Metallic  |   | Acid      |   | 5 by 30 ft. line  | Dex
+Crystal |   | Gem       |   | Radiant   |   | 15 ft. cone       | Con
+Deep    |   | Esoteric  |   | Psychic   |   | 15 ft. cone       | Wis
+Emerald |   | Gem       |   | Psychic   |   | 15 ft. cone       | Int
+Faerie  |   | Esoteric  |   | Psychic   |   | 15 ft. cone       | Wis
+Gold    |   | Metallic  |   | Fire      |   | 15 ft. cone       | Dex
+Green   |   | Chromatic |   | Poison    |   | 15 ft. cone       | Con
+Red     |   | Chromatic |   | Fire      |   | 15 ft. cone       | Dex
+Moonstone|  | Esoteric  |   | Radiant   |   | 5 by 30 ft. line  | Dex
+Sapphire|   | Gem       |   | Thunder   |   | 15 ft. cone       | Con
+Shadow  |   | Esoteric  |   | Necrotic  |   | 15 ft. cone       | Con
+Silver  |   | Metallic  |   | Cold      |   | 15 ft. cone       | Con
+Topaz   |   | Gem       |   | Necrotic  |   | 15 ft. cone       | Con
+Turtle  |   | Esoteric  |   | Fire      |   | 15 ft. cone       | Dex
+White   |   | Chromatic |   | Cold      |   | 15 ft. cone       | Con
+
+<style>
+
+.phb .footnote{
+    position:absolute;
+    right:80px;
+    bottom:37px;
+    width:700px;
+    font-size:.8em;
+    color:#000000;
+    text-align:right
+}
+
+</style>
+
+<div class='footnote'> † While the Strength increase is useful, it is hardly unique among the races. Constitution and Charisma are typically a true dragon's second-highest ability scores and increasing both increases the save DC of a dragonborn's breath weapon, Intimidation checks, and their sorcerer spells (if any). </div>
+
+\pagebreakNum
+
+
+### Dragonborn Variants
+#### Deep Dragonborn
+#### Faerie Dragonborn
+Small size
+#### Moonstone Dragonborn
+https://www.dandwiki.com/wiki/Moonstone_Dragonborn_(5e_Race_Variant)
+#### Pseudodragonborn
+Small size
+Chameleon skin
+#### Shadow Dragonborn
+
+***Superior Darkvision.*** The range of your darkvision increases to 120 feet.
+
+#### Turtle Dragonborn
+***Swim Speed.*** You have a swimming speed equal to your movement.
+
+***Amphibious.*** You can breathe air and water.
+
+***Natural Armor.*** Due to your shell and the shape of your body, you are ill-suited to wearing armor. Your shell provides ample protection, however; it gives you a base AC of 17 (your Dexterity modifier doesn't affect this number). You gain no benefit from wearing armor, but if you are using a shield, you can apply the shield's bonus as normal.
+
+***Natural Armor.*** Your shell provides you a base AC of 17 (your Dexterity modifier doesn't affect this number). You can't wear light, medium, or heavy armor, but if you are using a shield, you can apply the shield's bonus as normal.
+
+***Shell Defense.*** You can withdraw into your shell as an action. Until you emerge, you gain a +4 bonus to AC, and you have advantage on Strength and Constitution saving throws. While in your shell, you are prone, your speed is 0 and can't increase, you have disadvantage on Dexterity saving throws, you can't take reactions, and the only action you can take is a bonus action to emerge from your shell.
+
+***Shell Defense.*** You can withdraw into your shell as an action. Until you emerge, you gain a +4 bonus to your AC, and you have advantage on Strength and Constitution saving throws. While in your shell, you are prone, your speed is 0 and can't increase, you have disadvantage on Dexterity saving throws, you can't take reactions, and the only action you can take is a bonus action to emerge from your shell.
+
+***Steam Breath.***
+
+\pagebreakNum
+
+## Subclasses
+### [Barbarian: Path of the Dragon](https://static1.squarespace.com/static/5e7eab9fcc76e2321541f8b3/t/62d7a72722e1d33f81358cd3/1658300200431/Barbarian+-+Path+of+the+Dragon+-+1.2+-+Compressed.pdf)
+
+Barbarians tap into primal powers, and a Barbarian of this path taps into one of the most ancient and primeval of them all: the power of dragons.
+
+Some say this path was born during the Dracorage by mortals tapping into the primal rage as it washed across the world, others say that only those with latent dragon blood coursing through them can walk this path. What all can agree on is the result is a being to be feared.
+
+As with most Barbarian, ones following this path tend toward Chaos, as they contain potent destructive power that paces at the edges of the cage, just waiting to be unleashed. Some, particularly those rare individuals that channel metallic colors, may be exceptions to this tendency.
+
+#### Path of the Dragon
+Barbarian Level | Feature
+----|---
+3rd | Draconic Wrath
+6th | Unleashed Savagery
+10th| Dragonhide
+14th| Tyrant of the Skies
+
+#### Draconic Totem
+*3rd-level Path of the Dragon feature*
+<div style='margin-top:-4px;'></div>
+
+***FLAVOR TEXT.*** Choose one type of dragon from the list below. The damage type associated with each dragon is used by features you gain later.
+
+##### Draconic Totem
+Dragon Color | Damage Type
+:------:|:---:
+Black   | Acid
+Blue    | Lightning
+Green   | Poison
+Red     | Fire
+White   | Cold
+
+You gain the following benefits:
+___
+- **Dragonfear.** Whenever you would make a Charisma (Intimidation) check, you can make a Strength (Intimidation) check instead.
+- **Dragon Scales.** You grow dragon-like scales on your skin. When you aren't wearing armor, your AC equals 13 + your Constitution modifier.
+- **Tongue of the Dragon.** You learn to speak, read, and write Draconic.
+
+Whenever you enter a rage, you can manifest the deadly natural arms and armor of your draconic totem. It is your choice whether these are spectral appendages or if your body and equipment physically transform. Until your rage ends, you gain the following abilities:
+- You can make unarmed attacks using claws, fangs, or a tail. When you hit with these, you deal 1d6 + your Strength modifier bludgeoning, piercing, or slashing damage (your choice). Immediately after you take the Attack action with an unarmed strike on your turn, you can make another unarmed strike as a bonus action.
+- You are infused with elemental energy. You gain damage resistance to the elemental damage type of your dragon totem, and you can choose for your unarmed strikes to deal that damage type.
+
+MAYBE: Can use Constitution in place of Charisma for Intimidation checks?
+MAYBE: You learn Draconic?
+
+#### Dragonrage
+*3rd-level Path of the Dragon feature*
+<div style='margin-top:-4px;'></div>
+
+Starting when you choose this path at 3rd level, when you enter your rage, you can transform, revealing the bestial power within you. Until the rage ends, you manifest a natural weapon. It counts as a simple melee weapon for you, and you add your Strength modifier to the attack and damage rolls when you attack with it, as normal.
+
+You choose the weapon’s form each time you rage:
+
+Bite. Your mouth transforms into a bestial muzzle or great mandibles (your choice). It deals 1d8 piercing damage on a hit. Once on each of your turns when you damage a creature with this bite, you regain a number of hit points equal to your proficiency bonus, provided you have less than half your hit points when you hit.
+
+Claws. Each of your hands transforms into a claw, which you can use as a weapon if it’s empty. It deals 1d6 slashing damage on a hit. Once on each of your turns when you attack with a claw using the Attack action, you can make one additional claw attack as part of the same action.
+
+Tail. You grow a lashing, spiny tail, which deals 1d8 piercing damage on a hit and has the reach property. If a creature you can see within 10 feet of you hits you with an attack roll, you can use your reaction to swipe your tail and roll a d8, applying a bonus to your AC equal to the number rolled, potentially causing the attack to miss you.
+
+
+#### Unleashed Savagery
+*6th-level Path of the Dragon feature*
+<div style='margin-top:-4px;'></div>
+
+When you take the Attack action on your turn, you can replace one of your attacks with an exhalation of magical energy in a 30-foot line that is 5 feet wide. Each creature in that area must make a Dexterity saving throw (DC = 8 + your Constitution modifier + your proficiency bonus). On a failed save, the creature takes 1d10 damage of the type associated with your Chromatic Ancestry. On a successful save, it takes half as much damage. This damage increases by 1d10 when you reach 5th level (2d10), 11th level (3d10), and 17th level (4d10). You can use your Breath Weapon a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest.
+
+
+Once during a rage, you can replace one of as an attack as part of the Attack action, you can unleash your Rage into pure energy, exhaling a blast of elemental power. Creatures within 15 foot cone must make a Dexterity saving throw. The DC of this saving throw is 8 + your proficiency modifier + your strength modifier. A creature takes 6d6 damage of the Elemental Type of your Dragon Color on a failed save.
+
+The damage and range of this breath weapon increases at 10th level (to 8d6 in a 30 foot cone), and 14th level (to 10d6 in a 60 foot cone). Starting at 18th level, you can use this breath weapon twice per rage, but only per turn. 
+
+\pagebreak
+
+#### Primal Weapons
+Additionally at 6th level, the natural weapons you gain while raging now count as magical for the purpose of overcoming resistance and immunity to nonmagical attacks and damage. 
+
+#### Dragonhide
+Starting at 10th level, the marks of your Draconic path no longer entirely fade when you are not raging, and heavy scales grant you resistance to bludgeoning, piercing, and slashing damage from nonmagical sources even when you are not raging. Additionally, you gain resistance to your Dragon Color's Elemental Type when not raging. 
+
+#### Tyrant of the Skies
+By 14th level, when you enter a rage, you can massive dragon wings sprout from your back. If you are not wearing heavy armor, you gain a flying speed equal to your movement speed. If you choose to manifest natural weapons and wings when you enter a rage, you can choose entirely take on a draconic form while raging, becoming Large sized. When you take on a full draconic form, you choose whether your equipment falls to the ground in your space, merges into your new form, or is worn by it.
+
+
+#### ???
+*3rd-level Draconic Bloodline feature*
+<div style='margin-top:-4px;'></div>
+
+- Your Unarmored Defense increases to 13 + Con Mod.
+- You gain natural weapons (claw, bite, etc.). You can deal 1d6 + Str damage with any of them, dealing your choice of bludgeoning, piercing, or slashing damage.
+- You can (something something) BA to make an extra unarmed attack when in rage.
+
+#### ???
+*6th-level Draconic Bloodline feature*
+<div style='margin-top:-4px;'></div>
+
+#### ???
+*10th-level Draconic Bloodline feature*
+<div style='margin-top:-4px;'></div>
+
+#### ???
+*14th-level Draconic Bloodline feature*
+<div style='margin-top:-4px;'></div>
+
+### Sorcerer: Draconic Bloodline (Alt)
+Your innate magic comes from draconic magic that was mingled with your blood or that of your ancestors. Most often, sorcerers with this origin trace their descent back to a mighty sorcerer of ancient times who made a bargain with a dragon or who might even have claimed a dragon parent. Some of these bloodlines are well established in the world, but most are obscure. Any given sorcerer could be the first of a new bloodline, as a result of a pact or some other exceptional circumstance.
+
+#### Dragon Ancestor
+*1st-level Draconic Bloodline feature*
+<div style='margin-top:-4px;'></div>
+
+You choose one type of dragon from the Draconic Ancestry table as your ancestor. Your choice of ancestor determines certain features that you will gain later.
+
+##### Draconic Ancestry
+Dragon      | Subtype   | Damage Type
+------------|-----------|-------------
+Amethyst    | Gem       | Force
+Black       | Chromatic | Acid
+Blue	    | Chromatic | Lightning
+Brass	    | Metallic  | Fire
+Bronze	    | Metallic  | Lightning
+Copper	    | Metallic  | Acid
+Crystal     | Gem       | Radiant
+Deep        | Esoteric  | Psychic
+Emerald     | Gem       | Psychic
+Faerie      | Esoteric  | Psychic
+Gold	    | Metallic  | Fire
+Green	    | Chromatic | Poison
+Moonstone   | Esoteric  | Radiant
+Red	        | Chromatic | Fire
+Sapphire    | Gem       | Thunder
+Shadow      | Esoteric  | Necrotic
+Silver	    | Metallic  | Cold
+Topaz       | Gem       | Necrotic
+Turtle      | Esoteric  | Fire
+White	    | Chromatic | Cold
+
+You can speak, read, and write Draconic. Additionally, whenever you make a Charisma check when interacting with dragons, your proficiency bonus is doubled if it applies to the check.
+
+#### Synergy: Draconic Armor
+
+
+#### Draconic Resilience
+*1st-level Draconic Bloodline feature*
+<div style='margin-top:-4px;'></div>
+
+As magic flows through your body, it causes physical traits of your dragon ancestors to emerge. At 1st level, your hit point maximum increases by 1 and increases by 1 again whenever you gain a level in this class.
+
+Additionally, parts of your skin are covered by a thin sheen of dragon-like scales. When you aren't wearing armor, your AC equals 13 + your Dexterity modifier.
+
+#### Draconic Spells
+https://www.reddit.com/gallery/12frv9t
+https://www.reddit.com/r/UnearthedArcana/comments/vbadla/draconic_bloodline_sorcerer_revised_disappointed/
+
+You learn additional spells when you reach certain levels in this class, as shown on the Draconic Spells table. One spell is shared among all Draconic Bloodline sorcerers, while the other is determined by your Draconic Ancestry, as shown on the Ancestry Spells table. Each spell counts as a sorcerer spell for you, but it doesn’t count against the number of sorcerer spells you know. These spells can’t be replaced when you gain a level in this class.
+
+\pagebreakNum
+
+##### Draconic Spells
+
+<style>
+
+.phb .DraconicSpellTable{
+    position:absolute;
+    right:20px;
+    top:70px;
+    width:770px;
+    font-size:11px;
+    color:#000000;
+    text-align:left
+}
+
+</style>
+
+<div class='DraconicSpellTable'>
+
+<div style='margin-right:0px;'></div>  ||  Cantrip  || 1st      || 2nd    ||  3rd    || 4th    || 5th
+----------------------------------------|-|---------|-|---------|-|--------|-|-------|-|-------|-|------
+Chromatic || —          || *absorb elements^XGE^*  || *dragon's breath^XGE^*|| *fear*            || *elemental bane ^XGE^*    || *dominate person* 
+&nbsp;&nbsp; Black      || *infestation ^XGE^*  || *caustic brew ^TCE^*      || *darkness*                || *gaseous form*    || *vitriolic sphere ^XGE^*  || *insect plague* 
+&nbsp;&nbsp; Blue       || *shocking grasp*     || *silent image*            || *dust devil ^XGE^*        || *lightning bolt*  || *storm sphere ^XGE^*      || *passwall* 
+&nbsp;&nbsp; Green      || *poison spray*       || *ray of sickness*         || *suggestion*              || *plant growth*    || *grasping vine*           || *cloudkill*   
+&nbsp;&nbsp; Red        || *control flames^XGE^*|| *bane*                   || *heat metal*              || *fireball*        || *wall of fire*            || *immolation ^XGE^* 
+&nbsp;&nbsp; White      || *frostbite ^XGE^*    || *armor of agathys*        || *snowball swarm ^XGE^*    || *sleet storm*     || *ice storm*               || *cone of cold*
+Metallic                || —                    || *cure wounds*             || *lesser restoration*      || *revivify*        || *death ward*              || *greater restoration*
+&nbsp;&nbsp; Brass      || *gust ^XGE^*         || *sleep*                   || *gust of wind*            || *wall of sand ^XGE^* || *charm monster*        || *scrying*         
+&nbsp;&nbsp; Bronze     || *shape water ^XGE^*  ||  *speak with animals*     || *beast sense*             || *tidal wave ^XGE^*|| *control water*           || *steel wind strike ^XGE^*
+&nbsp;&nbsp; Copper     || *vicious mockery*    || *hideous laughter*        || *invisibility*            || *major image*     || *polymorph*               || *seeming* 
+&nbsp;&nbsp; Gold       || *sacred flame*       || *bless*                   || *zone of truth*           || *slow*            || *resilient sphere*        || *flame strike*    
+&nbsp;&nbsp; Silver     || *frostbite ^XGE^*    || *fog cloud*               || *hold person*             || *beacon of hope*  || *ice storm*               || *cone of cold*
+Gem                     || —                    || *disguise self*           || *detect thoughts*         || *sending*         || *phantasmal killer*       || *telepathic bond* 
+&nbsp;&nbsp; Amethyst   || *prestidigitation*   || *pro. from evil and good* || *locate object*           || *dispel magic*    || *resilient sphere*        || *legend lore*     
+&nbsp;&nbsp; Crystal    || *guidance*           || *guiding bolt*            || *moonbeam*                || *hypnotic pattern*|| *divination*              || *dawn ^XGE^*      
+&nbsp;&nbsp; Emerald    || *minor illusion*     || *dissonant whispers*      || *invisibility*            || *major image*     || *confusion*               || *mislead*     
+&nbsp;&nbsp; Sapphire   || *thunderclap ^XGE^*  || *thunderwave*             || *shatter*                 || *meld into stone* || *stone shape*             || *telekinesis*     
+&nbsp;&nbsp; Topaz      || *toll the dead ^XGE^*|| *hex*                     || *ray of enfeeblement*     || *vampiric touch*  || *blight*                  || *antilife shell*
+Esoteric                || —                    || *command*                 || *dragon's breath ^XGE^*   || *fear*            || *stoneskin*               || *dominate person*
+&nbsp;&nbsp; Deep       || *dancing lights*     || *cause fear ^XGE^*        || *darkness*                || *gaseous form*    || *sickening radiance ^XGE^*|| *cloudkill*
+&nbsp;&nbsp; Faerie     || *minor illusion*     || *color spray*             || *mirror image*            || *hypnotic pattern*|| *confusion*               || *mislead* 
+&nbsp;&nbsp; Moonstone  || *friends*            || *faerie fire*             || *moonbeam*                || *catnap ^XGE^*    || *hallucinatory terrain*   || *dream ^XGE^* 
+&nbsp;&nbsp; Shadow     || *chill touch*        || *arms of hadar*           || *darkness*                || *hunger of hadar* || *shadow of moil ^XGE^*    || *danse macabre ^XGE^*
+&nbsp;&nbsp; Turtle     || *shape water ^XGE^*  || *create or destroy water* || *misty step*              || *tidal wave ^XGE^*|| *control water*           || *maelstrom ^XGE^*
+
+</div>
+
+<div style='margin-top:1600px;'></div>
+
+<div class="descriptive wide">
+
+### Alternate Spells
+This document only uses the **Player's Handbook**, **Xanathar's Guide to Everything**, and **Tasha's Cauldron of Everything** as sourcebooks, as they are considered as "core" books by the author: those that can be expected for every GM and player to have access to.
+
+In the case you might have access to additional books or wish to use spells other than those listed above, see Alternative Draconic Spells in the Appendix for spells that can be used as replacements.
+
+</div>
+
+<!--
+
+\pagebreakNum
+
+##### Draconic Spells
+<br/><br/>
+
+<div class='table wide'>
+
+Spell <br/> Level | Chromatic   | Black             | Blue              | Green         | Red               | White
+----|:-------------------------:|:-----------------:|:-----------------:|:-------------:|:-----------------:|:--------------:
+Cantrip| —                      | *infestation ^XGE^*     | *shocking grasp*  | *poison spray*| *control flames ^XGE^*  | *frostbite ^XGE^*
+1st | *absorb elements ^XGE^*   |*caustic brew ^TCE^*| *silent image*   |*ray of sickness*| *bane*          | *armor of agathys*
+2nd | *dragon's breath ^XGE^*   | *darkness*        | *dust devil ^XGE^*| *suggestion*  | *heat metal*  |*snowball swarm ^XGE^*
+3rd | *fear*                    | *gaseous form*    | *lightning bolt*  | *plant growth*| *fireball*        | *sleet storm*
+4th | *elemental bane ^XGE^*    | *vitriolic sphere ^XGE^*|*storm sphere ^XGE^*|*grasping vine*|*wall of fire*| *ice storm*
+5th | *dominate person*         | *insect plague*   | *passwall*        | *cloudkill*   | *immolation ^XGE^*| *cone of cold*
+
+Spell <br/> Level | Metallic    | Brass             | Bronze            | Copper        | Gold              | Silver
+----|:-------------------------:|:-----------------:|:-----------------:|:-------------:|:-----------------:|:--------------:
+Cantrip| —                      | *gust ^XGE^*      | *shape water ^XGE^*| *vicious mockery*| *sacred flame* | *frostbite ^XGE^*
+1st | *cure wounds*             | *sleep*           |*speak with animals*|*hideous laughter*| *bless*       | *fog cloud*
+2nd | *lesser restoration*      | *gust of wind*    | *beast sense*     | *invisibility*| *zone of truth*   | *hold person*
+3rd | *revivify*                | *wall of sand ^XGE^*| *tidal wave ^XGE^*|*major image*| *slow*            | *beacon of hope*
+4th | *death ward*              | *charm monster*   | *control water*   | *polymorph*   | *resilient sphere*| *ice storm*
+5th | *greater restoration*     | *scrying*         |*steel wind strike ^XGE^*|*seeming*| *flame strike*    | *cone of cold*
+
+Spell <br/> Level | Gem         | Amethyst          | Crystal           | Emerald       | Sapphire          | Topaz
+----|:-------------------------:|:-----------------:|:-----------------:|:-------------:|:-----------------:|:--------------:
+Cantrip| —                      | *prestidigitation*| *guidance*        | *minor illusion*|*thunderclap ^XGE^*| *toll the dead ^XGE^*
+1st | *disguise self*           | *pro. from evil and good*|*guiding bolt*|*dissonant whispers*|*thunderwave*|*hex*
+2nd | *detect thoughts*         | *locate object*   | *moonbeam*        | *invisibility*| *shatter*     | *ray of enfeeblement*
+3rd | *sending*                 | *dispel magic*    | *hypnotic pattern*| *major image* | *meld into stone* | *vampiric touch*
+4th | *phantasmal killer*       | *resilient sphere*| *divination*      | *confusion*   | *stone shape*     | *blight*
+5th | *telepathic bond*         | *legend lore*     | *dawn ^XGE^*      | *mislead*     | *telekinesis*     | *antilife shell*
+
+Spell <br/> Level | Esoteric    | Deep              | Faerie            | Moonstone     | Shadow            | Turtle
+----|:-------------------------:|:-----------------:|:-----------------:|:-------------:|:-----------------:|:--------------:
+Cantrip| —                      | *dancing lights*  | *minor illusion*  | *friends*     | *chill touch*     | *shape water ^XGE^*
+1st | *command*                 | *cause fear ^XGE^*| *color spray* | *faerie fire* | *arms of hadar*   | *create or destroy water*
+2nd | *dragon's breath ^XGE^*   | *darkness*        | *mirror image*    | *moonbeam*    | *darkness*        | *misty step*
+3rd | *fear*                    | *gaseous form*    | *hypnotic pattern*| *catnap ^XGE^*| *hunger of hadar* | *tidal wave ^XGE^*
+4th | *stoneskin*   |*sickening radiance ^XGE^*| *confusion*    |*hallucinatory terrain*|*shadow of moil ^XGE^*| *control water*
+5th | *dominate person*         | *cloudkill*       | *mislead*         | *dream ^XGE^* | *danse macabre ^XGE^*| *maelstrom ^XGE^*
+
+</span>
+
+<div class='table wide'>
+
+<div style='margin-top:-50px;'></div>
+
+___
+> ### Alternate Spells
+> This document only uses the **Player's Handbook**, **Xanathar's Guide to Everything**, and **Tasha's Cauldron of Everything** as sourcebooks, as they are considered as "core" books by the author: those that can be expected for every GM and player to have access to.
+>
+> In the case you might have access to additional books or wish to use spells other than those listed above, see Alternative Draconic Spells in the Appendix for spells that can be used as replacements.
+
+</div>
+
+-->
+
+\pagebreakNum
+
+## Feats
+### Breath Shaper
+*Prerequisite:* Dragonborn
+<div style='margin-top:-4px;'></div>
+
+You are a master of using your breath weapon, able to shape it into various forms. You learn the following abilities:
+___
+- **Enlarge Breath.** You can choose to double the area of your breath weapon, increasing it to a 30 foot cone or 60 foot long, 5 foot wide line.
+- **Hurl Breath.** When using your breath weapon, instead of dealing damage in a line or cone, you can instead launch a ball of energy at a point you can see within 60 feet, causing it to explode into a 10-foot radius sphere.
+- **Infuse Breath.** As a bonus action, you can expend a use of your Breath Weapon to infuse the energy into your melee weapons. The next time within 1 minute that you hit a creature with a melee weapon attack, they take an extra amount of damage as though hit with your breath weapon.
+- **Intensify Breath.** When you make a breath weapon attack, you can choose to focus it into a narrow but intense beam; the range turns into 15-foot long, 5-foot wide line and each creature in the area takes an additional amount of damage per d10 die equal to your proficiency bonus. 
+- For example, a 5th level red dragonborn's intensified breath would deal 2d10 + 6 points of fire damage.
+- **Spit Breath.** Instead of a full exhalation, you can spit a mote of energy. Once per turn, you can replace one of your attacks with a ranged spell attack against a target you can see within 120 feet, using Constitution as your spellcasting ability. On a hit, the target takes damage as if hit by your Breath Weapon. You can use this ability even if you have no uses of Breath Weapon remaining.
+
+### Dragon Sorcery
+*Prerequisite:* Dragonborn
+<div style='margin-top:-4px;'></div>
+
+You can draw upon the inherent sorcerous power in your blood to cast spells just like your draconic ancestors. You gain the following benefits:
+- Increase your Strength, Constitution, or Charisma score by 1, to a maximum of 20.
+- You can use your Charisma in place of your Constitution to determine the saving throw of your Breath Weapon.
+- Choose one type of dragon from the Draconic Ancestry table in the Draconic Bloodline (Alt) sorcerer subclass. You learn its
+
+### Secondary Heritage
+*Prerequisite:* Dragonborn
+<div style='margin-top:-4px;'></div>
+
+Different "colors" of dragonborn have interbred so thoroughly over the generations that very few are descended from a single dragon type. On rare occasions, a dragonborn can manifest the properties of two types of dragons, gaining the following benefits:
+- Increase your Strength, Constitution, or Charisma score by 1, to a maximum of 20.
+- Choose another dragon type from the Draconic Ancestry table. You gain that dragon's subtype, as well as the breath weapon option and damage resistance determined by that ancestry. When you use your breath weapon, you choose which of your two breath weapon types to use. You count as both dragon types for the purposes of qualifying for feats and other game effects.
+- **Admixture Breath.** Instead of choosing one breath weapon or the other, you can choose to mix them together into a single blase. When you do, instead of using a d10 for your breath weapon's damage die, you deal 1d4 of one damage type and 1d4 of the second damage type. You choose which breath weapon's shape and saving throw are used for this breath weapon. You deal an additional 1d4 of each damage type when you reach 5th level (2d4/2d4), 11th level (3d4/3d4), and 17th level (4d4/4d4). <br/> &nbsp;&nbsp;&nbsp;  For example, a 4th level copper dragonborn who chose a blue dragon as his secondary ancestry would deal 1d4 points of acid damage and 1d4 points of lightning damage to creatures in a 5 by 30 foot line.
+
+\pagebreakNum
+
+## Incomplete Feats
+
+### Dragon Heart
+- Increase the damage die of your breath weapon
+- Regain more hit points during a SR
+- Advantage vs fear effects
+
+### Dragonfoe
+- Bonuses when attacking dragons
+
+### ???
+Prerequisite: Cleric or paladin
+- Your breath attack does not harm allies, instead granting temp hp
+
+### Dragon Rage
+Prerequisite: Barbarian
+- ???
+
+### Dragon Senses
+- Short range blindsight
+- Perception proficiency?
+
+### Draconic Majesty
+- ???
+
+### ???
+- Regen PB uses on a SR, not a LR
+- Gain one use when you roll initiative
+
+### ???
+- Elemental effects to breath weapon
+
+### ???
+Prerequisite: Turtle dragonborn
+- Gain steam breath
+
+### ???
+- When you take damage of the same type as your resistance, you regain a use of your breath weapon
+- You regain a use of your breath weapon when you roll initiative, if you have none remaining
+
+### Dragonfear
+
+### Alternative Draconic Spells
+
+<div class='table wide'>
+
+Type        | Cantrips      | 1st Level | 2nd Level | 3rd Level | 4th Level | 5th Level |
+------------|---------------|-----------|-----------|-----------|-----------|-----------|
+Chromatic   | | | | | | *summon draconic spirit ^FTD^*
+Metallic    | | | | | | *summon draconic spirit ^FTD^*
+Gem         | | | | | *raulothim's psychic lance ^FTD^* |  *summon draconic spirit ^FTD^*
+Esoteric    | | | | | | *summon draconic spirit ^FTD^*
+Amethyst    | | *magnify gravity ^EGW^* | *immovable object ^EGW^* | *pulse wave ^EGW^* | *gravity sinkhole ^EGW^*
+Black       | *acid splash* |
+Blue        |
+Brass       | *control flames ^XGE^* <br/> *create bonfire ^XGE^* <br/> *fire bolt* <br/> *green-flame blade ^TCE^* <br/> *gust barrier ^HWCS^* | | | *arshadalon's stride ^FTD^* | | *control winds ^XGE^* |
+Bronze      |
+Copper      | *acid splash* <br/> *friends* | | *nathair's mischief ^FTD^* |
+Crystal     | | | | | | *wall of light ^XGE^*
+Deep        | *chill touch* |
+Emerald     |
+Faerie      | *druidcraft*  | | *nathair's mischief ^FTD^* |
+Gold        | *control flames ^XGE^* <br/> *create bonfire ^XGE^* <br/> *fire bolt* <br/> *green-flame blade ^TCE^* | | |  *arshadalon's stride ^FTD^*
+Green       | *friends*     |
+Moonstone   | *dancing lights*  |
+Red         | *control flames ^XGE^* <br/> *create bonfire ^XGE^* <br/> *fire bolt* <br/> *green-flame blade ^TCE^* | | |  *arshadalon's stride ^FTD^*
+Sapphire    | *booming blade ^TCE^* |
+Shadow      |
+Silver      | | | *frost fingers ^IDRotF^* <br/> *rime's binding ice ^FTD^* |
+Topaz       | *chill touch* |
+Turtle      |
+White       | | | *frost fingers ^IDRotF^* <br/> *rime's binding ice ^FTD^* |
+
+</div>
+
+\pagebreak
+
+# Credits
+
+https://www.reddit.com/r/UnearthedArcana/comments/hfkwe1/variant_dragonborn_chromatic_add_some_flavor_and/
+
+#### Moonstone Dragonborn
+https://www.dandwiki.com/wiki/Moonstone_Dragonborn_(5e_Race_Variant)
+
+## Feats
+### Hoard Away From Hoard
+https://www.reddit.com/r/UnearthedArcana/comments/szu68a/dragonborn_feat_the_richer_you_are_the_stronger/
+
+##### Detect Balance
+
+RP  | Trait
+----|----
+8   | **ASI:** Constitution +2
+8   | **ASI:** Charisma +2
+0   | **Creature Type:** Humanoid
+0   | **Size:** Medium
+0   | **Speed:** 30 ft
+4   | Darkvision 60 ft
+2   | Natural Armor (13 + Dex)
+1   | Unarmed Strike (1d4)
+0   | Unarmed Strike deals non-bludgeoning damage
+1   | Unarmed Strike does not require free hand
+2   | Damage Resistance (rare)
+9   | Breath Weapon
+0   | Common & 1 Language
+-   | ---
+**35**| **Total**
+
+ear
+
+### Dragon Flight
+
+\pagebreakNum
+
+### Alternative Draconic Spells
+
+<div class='table wide'>
+
+Type        | Cantrips      | 1st Level | 2nd Level | 3rd Level | 4th Level | 5th Level |
+------------|---------------|-----------|-----------|-----------|-----------|-----------|
+Chromatic   | | | | | | *summon draconic spirit ^FTD^*
+Metallic    | | | | | | *summon draconic spirit ^FTD^*
+Gem         | | | | | *raulothim's psychic lance ^FTD^* |  *summon draconic spirit ^FTD^*
+Esoteric    | | | | | | *summon draconic spirit ^FTD^*
+Amethyst    | | *magnify gravity ^EGW^* | *immovable object ^EGW^* | *pulse wave ^EGW^* | *gravity sinkhole ^EGW^*
+Black       | *acid splash* |
+Blue        |
+Brass       | *control flames ^XGE^* <br/> *create bonfire ^XGE^* <br/> *fire bolt* <br/> *green-flame blade ^TCE^* <br/> *gust barrier ^HWCS^* | | | *arshadalon's stride ^FTD^* | | *control winds ^XGE^* |
+Bronze      |
+Copper      | *acid splash* <br/> *friends* | | *nathair's mischief ^FTD^* |
+Crystal     | | | | | | *wall of light ^XGE^*
+Deep        | *chill touch* |
+Emerald     |
+Faerie      | *druidcraft*  | | *nathair's mischief ^FTD^* |
+Gold        | *control flames ^XGE^* <br/> *create bonfire ^XGE^* <br/> *fire bolt* <br/> *green-flame blade ^TCE^* | | |  *arshadalon's stride ^FTD^*
+Green       | *friends*     |
+Moonstone   | *dancing lights*  |
+Red         | *control flames ^XGE^* <br/> *create bonfire ^XGE^* <br/> *fire bolt* <br/> *green-flame blade ^TCE^* | | |  *arshadalon's stride ^FTD^*
+Sapphire    | *booming blade ^TCE^* |
+Shadow      |
+Silver      | | | *frost fingers ^IDRotF^* <br/> *rime's binding ice ^FTD^* |
+Topaz       | *chill touch* |
+Turtle      |
+White       | | | *frost fingers ^IDRotF^* <br/> *rime's binding ice ^FTD^* |
+
+</div>
+
+\pagebreak
+
+# Credits
+https://dnd4.fandom.com/wiki/Dragonborn
+https://dnd4.fandom.com/wiki/Dragon_breath
+https://dnd4.fandom.com/wiki/Dragonfear
+
+#### Moonstone Dragonborn
+https://www.dandwiki.com/wiki/Moonstone_Dragonborn_(5e_Race_Variant)
+
+## Feats
+### Hoard Away From Hoard
+https://www.reddit.com/r/UnearthedArcana/comments/szu68a/dragonborn_feat_the_richer_you_are_the_stronger/
+
+##### Detect Balance
+
+RP  | Trait
+----|----
+8   | **ASI:** Constitution +2
+8   | **ASI:** Charisma +2
+0   | **Creature Type:** Humanoid
+0   | **Size:** Medium
+0   | **Speed:** 30 ft
+4   | Darkvision 60 ft
+2   | Natural Armor (13 + Dex)
+1   | Unarmed Strike (1d4)
+0   | Unarmed Strike deals non-bludgeoning damage
+1   | Unarmed Strike does not require free hand
+2   | Damage Resistance (rare)
+9   | Breath Weapon
+0   | Common & 1 Language
+-   | ---
+**35**| **Total**
+
