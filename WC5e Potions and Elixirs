@@ -1,0 +1,385 @@
+### Items By Rarity
+Item                                | Rarity
+------------------------------------|----------
+Noggenfogger Elixir                 | Common
+Potion of Climbing                  | Common
+Potion of Healing                   | Common
+Potion of Mana                      | Common
+Potion of Swimming                  | Common
+Potion of Greater Healing           | Uncommon
+Potion of Greater Mana              | Uncommon
+Potion of Water Breathing           | Uncommon
+Potion of Limited Invulnerability   | Rare
+Potion of Superior Healing          | Rare
+Potion of Superior Mana             | Rare
+Potion of Supreme Healing           | Very Rare
+Potion of Supreme Mana              | Very Rare
+Antimagic Potion                    | Legendary
+Potion of Invulnerability           | Legendary
+
+\pagebreak
+
+## Other
+#### Bottled Light
+(This setting's version of holy water. Can be used as a reagent.)
+(ALTERNATE: Equivalent to Potion of Mana/Rage/Focus/etc. for paladins and holy priests)
+
+#### Bottled Void
+(This setting's version of unholy water. Can be used as a reagent.)
+(ALTERNATE: Equivalent to Potion of Mana/Rage/Focus/etc. for shadow priests)
+
+#### Moonwell Water
+(Something something druids, night elves.)
+
+#### Philosopher's Stone
+*RARITY (requires attunement)*
+
+(Grants additional bonuses if you have alchemy proficiency. Allows for transmutation of materials. Increases potion effects.)
+
+\pagebreak
+## Oils
+#### Frost Oil
+(Freezes rapidly. Variety of uses (RP ones), including adding cold damage to weapons)
+
+#### Mana Oil
+(Spell focus equivalent to Wizard Oil?)
+
+#### Oil of Immolation
+(May not match up to in-game, where it is drunk and causes AoE fire damage to enemies)
+
+#### Shadow Oil
+(Applied to a weapon, causing it to deal necrotic damage. Other uses?)
+
+#### Wizard Oil
+*Potion, rarity varies*
+
+[This clear, gelatinous oil sparkles with tiny, ultrathin silver shards. The oil can coat one slashing or piercing weapon or up to 5 pieces of slashing or piercing ammunition. Applying the oil takes 1 minute. For 1 hour, the coated item is magical and has a +3 bonus to attack and damage rolls.]
+
+##### Wizard Oil
+Oil...                  | Rarity    | Bonus
+------------------------|-----------|--------
+Wizard Oil              | uncommon  | +1
+Brilliant Wizard Oil    | rare      | +2
+Supreme Wizard Oil      | very rare | +3
+
+\pagebreak
+## Potions
+#### Antimagic Potion
+*Potion, legendary*
+
+When you drink this potion, you become the focus of the *antimagic field* spell for 10 minutes (no concentration required). Upon close inspection, small flecks of gold can be seen swirling in the clear liquid of this potion. When unstopped, it begins to bubble and seethe like a cauldron set to boiling.
+
+#### Bottle of Plague
+(Potion of poison, but for diseases.)
+
+#### Gift of Arthas
+This bright blue potion shimmers, gleaming and glittering in sunlight. Anyone tasting it has his spirits briefly lifted, as if a wave of happiness flowed through them.
+
+The gift of Arthas provides resistance 10 against any damage caused by a spell or effect from the necromancy school, such as a death coil. Furthermore, anyone striking the user in melee combat must make a DC 14 Will save or take a –4 penalty to Strength (to a minimum of 1) for 1d6+1 rounds. The effects of this elixir last for 10 minutes.
+
+#### Kuzko's Poison
+Turns you into a llama, permanently.
+Or a potion of polymorph.
+
+#### Noth's Special Brew
+
+#### Potion of Climbing
+*Potion, common*
+
+When you drink this potion, you gain a climbing speed equal to your walking speed for 1 hour. During this time, you have advantage on Strength (Athletics) checks you make to climb. The potion is separated into brown, silver, and gray layers resembling bands of stone. Shaking the bottle fails to mix the colors.
+
+#### Potion of Dreamless Sleep
+This substance appears much like a gas while held within its vial. The swirling blue vapor flows like a liquid when poured, however, allowing it to be easily contained. If sniffed or tasted, the subject becomes mildly drowsy for a few moments, but suffers no other ill effects.
+
+When consumed, the imbiber falls into a deep, dreamless sleep for 10 minutes. During this time he cannot be revived by any means. At the conclusion of the effect’s duration, he arises, feeling refreshed. The sleep heals him of 3d8+5 points of damage, cures 1d4 points of ability score damage (if any), and allows him to recover up to 5 levels of spell slots.
+
+#### Potion of Energy
+(Gives energy points. Unknown effect if used by non-energy user.)
+
+#### Potion of Focus
+(Gives focus points. Unknown effect if used by non-focus user.)
+
+#### Potion of Healing
+*Potion, rarity varies*
+
+You regain a number of hit points when you drink this potion. The number of hit points depends on the potion's rarity, as shown in the Potions of Healing table. Whatever its potency, the potion's red liquid glimmers when agitated.
+
+##### Potions of Healing
+Potion of...    | Rarity    | HP Regained
+----------------|-----------|----------
+Healing         | Common    | 2d4 + 2
+Greater Healing | Uncommon  | 4d4 + 4
+Superior Healing| Rare      | 8d4 + 8
+Supreme Healing | Very Rare | 10d4 + 20
+
+#### Potion of Invisibility
+*Potion, very rare*
+
+This potion's container looks empty but feels as though it holds liquid. When you drink it, you become invisible for 1 hour. Anything you wear or carry is invisible with you. The effect ends early if you attack or cast a spell.
+
+#### Potion of Invulnerability
+*Potion, legendary*
+
+For 1 minute after you drink this potion, you have immunity to all damage. The potion's syrupy liquid looks like liquefied iron.
+
+#### Potion of Limited Invulnerability
+*Potion, rare*
+
+For 1 minute after you drink this potion, you have resistance to all damage. The potion's syrupy liquid looks like liquefied bronze.
+
+#### Potion of Lion's Strength
+(Single person bless effect. Name comes from the usage by a Stormwind infantry unit to turn the tide of a battle.)
+
+#### Potion of Mana
+*Potion, rarity varies*
+
+You regain a number of expended spell slots when you drink this potion. The number of spell slots can have a combined level that is equal to or lesser than a number determined by the potion's rarity, as shown in the Potions of Mana table, and none of the slots can be 6th level or higher.
+
+You have learned to regain some of your magical energy by studying your spellbook. Once per day when you finish a short rest, you can choose expended spell slots to recover. The spell slots can have a combined level that is equal to or less than half your wizard level (rounded up), and none of the slots can be 6th level or higher.
+
+Drinking a potion of mana puts strain on your soul. If you drink a second such potion before you finish a short or long rest, you must make a Constitution saving throw or take damage as shown on the Potions of Mana table. Whatever its potency, the potion's blue liquid sheds soft light.
+
+[Source](https://www.reddit.com/r/UnearthedArcana/comments/5wm4t1/mana_potions/)
+
+##### Potions of Mana
+Potion of...    | Rarity    | Spell Levels  | Save DC   | Damage
+----------------|-----------|---------------|-----------|--------------
+Mana            | Common    | 1             | 10        | 1d6 Force
+Greater Mana    | Uncommon  | 1d2 + 1       | 13        | 2d6 Force
+Superior Mana   | Rare      | 2d2 + 2       | 16        | 4d6 Force
+Supreme Mana    | Very Rare | 3d2 + 3       | 19        | 6d6 Force
+
+#### Potion of Purification
+(See elixir of health from DMG.)
+
+#### Potion of Rage
+(Gives rage points. Causes reckless attacking if used by non-rage user)
+
+#### Potion of Speed
+(Haste effect, see DMG version)
+
+#### Potion of Swiftness
+(+10 movement speed for 1 hour)
+
+#### Potion of Swimming
+*Potion, common*
+
+When you drink this potion, you gain a swimming speed equal to your walking speed for 1 hour. During this time, you have advantage on Strength (Athletics) checks you make to swim. The potion is sea-green, with its surface continually moving in small crested waves.
+
+#### Potion of Water Breathing
+*Potion, uncommon*
+
+You can breathe underwater for 1 hour after drinking this potion. Its cloudy green fluid smells of the sea and has a jellyfish-like bubble floating in it.
+
+#### Snake Oil Potion
+(A charlatan can convince a person that this potion has a given effect. Suggestion?)
+
+[Source](https://www.dandwiki.com/wiki/Placebo_Enhancer_(5e_Equipment))
+
+Potion, common
+
+This watery potion tastes sweet and comes in a variety of appealing colors. A spell or other effect that can sense the presence of magic, such as detect magic, reveals an extremely faint aura of transmutation, though that's most likely just leftover from the potion bottle.
+
+When a Placebo Enhancer potion is sold, the seller may choose any of the following effects to occur to the drinker once the potion is drunk:
+
+Gain 1 temporary HP for the next minute
+Take +1 to their next ability check or saving throw using Strength within the next minute
+Take +1 to their next ability check or saving throw using Dexterity within the next minute
+Take +1 to their next ability check or saving throw using Constitution within the next minute
+Feel vaguely luckier for the next minute
+The seller must then make a Charisma (Deception) check versus the drinker's Wisdom (Insight) check or Intelligence (Investigation) check. If the seller succeeds, they tell of how potent the potion is, and how its magic is without a doubt very strong. If the drinker succeeds, then they know that the seller isn't being truthful, and is immune to the effects of that potion.
+
+If this potion is drunk experimentally (and the drinker has no inkling of what might happen) then nothing happens.
+
+Creating a batch of 1d6+4 Placebo Enhancers requires 5 gold pieces worth of materials (water, dye, sugar, etc.) and 1 minute mixing it in a container that has held a potion previously. Anyone who sees the making of a Placebo Enhancer is immune to the effects of that batch.
+
+
+
+\pagebreak
+## Elixirs
+#### Elixir of Clarity
+*Potion, RARITY*
+
+
+
+
+
+When imbibed before resting, there are two effects. First, the drinker receives 1 additional 1st-level spell slot and 1 additional 2nd-level spell slot when she prepares spells.
+
+
+
+
+The next time you prepare spells within 24 hours of drinking this elixir, the number of spells you can prepare increases by 7 until you next finish a long rest. If you have multiple classes that allow you to prepare spells, you can distribute this increase among them as you choose.
+   
+Additionally, while your number of prepared spells is increased this way, you can change your prepared spells at any time by meditating for 1 minute for each spell you replace.
+
+
+Upon drinking this elixir, choose 7 spells; they are known and prepared for you for the next 24 hours. You must be able to know or prepare a spell through one or more of your classes to be able to choose it. For the duration, you can spend 1 minute to replace 1 of those 7 spells as many times as you want, but must still respect any restrictions.
+
+
+Upon drinking this elixir, you gain the ability to prepare an additional seven spells for the next 24 hours. If you have multiple sources of prepared spells, these spells can be from any combination of spell lists. While under the effects of this elixir, you can change your prepared spells at any time, spending at least 1 minute for each spell. This potion appears milky in nature, but when unstoppered, it rapidly turns perfectly clear.
+
+
+
+
+
+#### Elixir of Defense
+(Increases AC to a given value, like barkskin, varied rarity)
+
+#### Elixir of Expertise
+*Potion, RARITY*
+
+When you drink this elixir, you gain proficiency in all tools and skills for 1 hour. **DESCRIPTION.**
+
+#### Elixir of Fel Power
+(Increased power, but with drawback)
+
+#### Elixir of Fortitude
+These potions are purple in color. They look much like colored water until exposed to air, at which point they become opaque. The liquid is sweet and sugary.
+
+(Increases max hp, varied rarity)
+
+#### Elixir of Giant Growth
+(The DMG Potion of Growth)
+
+#### Elixir of Magic Resistance
+(Gives resistance to all spell damage, Rare)
+
+#### Elixir of Mastery
+(Raises all stats to 19 for 1 hour. Legendary?)
+
+When you drink this potion, if any of your ability scores are below 19, they increase to 19 for 1 hour.
+
+#### Elixir of Resistance
+(Potions of resistance from DMG)
+
+#### Elixir of Strength
+(May need a rename. Same as Potions of Giant Strength from DMG.)
+
+#### Elixir of Troll's Blood
+(Regenerates hp; only works when you are below half health)
+
+#### Flask of Chromatic Wonder
+
+#### Flask of Supreme Power
+
+#### Flask of the Titans
+
+#### Noggenfogger Elixir
+COMMON
+
+This dark green substance resembles an oil at first glance. It is so thick and viscous that some feel imbibing it is more like eating an oyster — the stuff must be swallowed whole.
+
+The renowned goblin alchemist Marin Noggenfogger was the first to create this bizarre concoction. The elixir requires a variety of strange ingredients, including the moisture found within the exceptionally rare thistleshrub dew collectors found only in the Tanaris Desert. The means to create Noggenfogger elixir is a secret known only to a few goblin alchemists, who guard the secret jealously.
+
+Noggenfogger elixir is typically sold in bottles of 5 doses, although this varies depending on the vendor. The price below is for a single dose.
+
+When consumed, Noggenfogger elixir has a random effect that lasts for 10 minutes. Roll 1d10 and consult the chart below:
+
+##### Noggenfogger Elixir Effects
+Die Roll | Effect
+---------|----------
+1–5 |  **Breathless:** The imbiber takes on a skeletal appearance and does not need to breathe for the duration of the effect. Thus, for example, he can move around underwater without fear of drowning, and can ignore any gas attacks or magic that attacks through the lungs.
+6–8 | **Smaller:** The imbiber shrinks to 50% of normal size, as if a *reduce person* spell was used upon him. However, this effect stacks with *reduce person* and similar magic, allowing the consumer to potentially shrink by two size categories if combined with such powers. Additional applications of this Noggenfogger elixir effect do not stack.
+9–10 | **Lighter:** The imbiber receives the effect of a slow fall spell for the duration of the effect. Additionally, his weight and that of all his gear is reduced by one-quarter, providing a +5 circumstance bonus on Jump checks.
+
+\pagebreakNum
+
+Auril's Kiss (5e Equipment)
+uCn0v2d.jpg
+[Source](https://www.dandwiki.com/wiki/Auril%27s_Kiss_(5e_Equipment))
+Potion, common
+
+This flask is filled with a white liquid that turns into a quickly growing block of ice. As an action, you can throw this flask up to 20 feet, shattering it on impact. Make a ranged attack against a creature or object, treating the flask as an improvised weapon. On a hit, the target takes 2d6 cold damage and becomes restrained by growing ice if the creature is Large or smaller. A creature can end this condition by using its action to make a DC 13 Strength check to break the ice. Any fire damage dealt to the ice ends the restrained condition immediately.
+
+
+Berserk Potion (5e Equipment)
+Potion, uncommon
+[Source](https://www.dandwiki.com/wiki/Berserk_Potion_(5e_Equipment))
+
+The berserk potion is a dark red potion that when consumed, causes the drinker to enter a state of rage, enlarging their muscles and adding a slight red hue to the blood in their veins. While enraged, you can move up to 10 feet extra and you deal an extra 1d4 damage of the appropriate type when making melee weapon attacks. However, the berserk potion causes you to have disadvantage to Perception checks while enraged. Most berserk potions are carried in small glass vials in 1 dose quantities, because if multiple doses of berserk potion are consumed in 1 hour, the consumer takes 3d10 + 3 poison damage, due to the overflow of toxin in their system. You can either find or craft this potion. To craft this potion, you need a vial of distilled water mixed with a drop of orc blood, 2 crushed wyrmtongue petals, and a couple of lavender spriggs to counteract the poison from the wyrmtongue.
+
+
+Berserker's Toxin (5e Equipment)
+Potion, uncommon
+[Source](https://www.dandwiki.com/wiki/Berserker%27s_Toxin_(5e_Equipment))
+
+This small vial is filled with a blood-red liquid that gleams sinisterly. While under the effects of this potion you are sent into a rage, causing your melee weapon attacks to deal an extra 1d8 damage and attacking any hostile creatures you can see, but you do not know how much damage you have taken nor do you take it during combat. The effects of this potion last for 1 minute and then the damage you have taken is tallied up and takes effect, if the user drops below 0 hit points you are knocked unconscious, if the amount of damage beyond 0 hit points is equal to or exceeds your hit point maximum you must make three death saving throws and succeed at least one of them to be knocked unconscious rather than die instantly.
+
+
+Elixir of Lesser Insanity
+Potion, rare
+[Source](https://www.dandwiki.com/wiki/Elixir_of_Lesser_Insanity_(5e_Equipment))
+
+Ingesting this silvery liquid is poisonous for the mind.
+When a character drinks this potion, they must make a DC 15 Wisdom save. On a failure, they suffer a short-term madness for the next hour.
+
+
+Felix Felicis (5e Equipment)
+[Source](https://www.dandwiki.com/wiki/Felix_Felicis_(5e_Equipment))
+From Harry Potter and the Half Blood Prince
+Potion, Very Rare
+
+Felix Felicis, also called "Liquid Luck", is a magical potion that makes the drinker lucky for an hour, during which everything they attempt adds +2 on all attack rolls, saving throws and ability checks.
+
+After the effects of a Felix Felicis wear off, roll 1d6, on a 1 you are considered to be poisoned until a greater restoration spell or better is cast on you to remove the effect. If you have taken Felix Felicis before, change the number rolled to not get poisoned to the amount of times you have taken Felix Felicis.
+
+After your 6th time drinking Felix Felicis, roll 1d4 whenever you finish a long rest. If you rolled a 1 or 2, you are considered to be poisoned until a greater restoration spell or better is cast on you to remove the effect or until you take another long rest.
+
+It turns an ordinary day into an extraordinary one. It is meant to be used sparingly, however, as it causes giddiness, recklessness, and dangerous overconfidence if taken in excess. Felix is highly toxic in large quantities and is also a banned substance in all organized competitions, along with all other methods of cheating. It is very difficult to make, disastrous if made wrong, and requires six months to stew before it is ready to be consumed.
+
+
+
+Flask of the Titans (5e Equipment)
+Potion, rare
+[Source](https://www.dandwiki.com/wiki/Flask_of_the_Titans_(5e_Equipment))
+
+Brewed by an artisan alchemist using copious amounts of Gromsblood, Stonescale Oil and a single elusive Black Lotus.
+
+Drinking the contents of this flask increases your maximum hit points by 15 for 1 day.
+
+
+
+Potion of Anti-Sleep (5e Equipment)
+Potion, Common
+[Source](https://www.dandwiki.com/wiki/Potion_of_Anti-Sleep_(5e_Equipment))
+
+When you drink this potion, for the next 24 hours magic can't put you to sleep, and you can't naturally fall asleep. Furthermore, when you take a long rest while this potion is active, you can work during the rest and still gain the benefits of it. This translucent brown liquid hums slightly with activity, and the surface never seems to settle.
+
+
+
+Potion of Chaos (5e Equipment)
+Potion, rare
+[Source](https://www.dandwiki.com/wiki/Potion_of_Chaos_(5e_Equipment))
+
+This potion's liquid changes colours and patterns constantly. When you drink this potion, an effect occurs. The GM can choose an effect from the following table, determine it randomly, or create an effect.
+
+d20	Contents
+1	You are reduced to 0 hit points.
+2	You are sent to a randomly chosen plane of existence.
+3	You take 1d4 fire damage and harmless embers spew out of your mouth for 1d10 minutes.
+4	You gain the benefits of a water breathing spell.
+5	You become 20 percent heavier for 1d12 hours.
+6	You become 20 percent lighter for 1d12 hours.
+7	1d20 frogs appear in your stomach, which attempt to leave the body through the throat. You must make a DC 15 Constitution saving throw take 1 bludgeoning damage for every frog on a failed save. On a successful save, you count as having eaten all you need for 1 day.
+8	You must succeed on a DC 15 Constitution saving throw or be transformed into a rat, as if you had failed a saving throw against the polymorph spell.
+9	You regain 2d10 hit points.
+10	You gain the benefits of the goodberry spell.
+11	You are blinded until the end of your next turn.
+12	You cast chromatic orb, using Charisma as your spellcasting ability.
+13	You grow 1d4 + 1 inches taller for 2d6 days.
+14	You become 1d4 + 1 inches shorter for 1d4 minutes.
+15	You become invisible for 1 minute, or until you attack or cast a spell.
+16	All your hair falls out. It grows back in 3d4 hours.
+17	Your hair doubles in length for 1d12 days. If you have no hair, you grow a 2-foot long ponytail.
+18	You gain the benefits of a death ward spell for 1 minute.
+19	You cast the enhance ability spell on yourself. To determine the ability score, roll a d6 and assign an ability score to each die face.
+20	You begin to levitate, as if you had cast the levitate spell on yourself.
+
+
+Potion of Rage (5e Equipment)
+Potion, very rare
+[Source](https://www.dandwiki.com/wiki/Potion_of_Rage_(5e_Equipment))
+
+This potion can be drunk as a bonus action, and upon drinking it, makes you go into a Rage, like a barbarian would. This does a few things. You have advantage on Strength checks and Strength saving throws. When you make a melee weapon attack using Strength, you gain a +2 bonus to the damage roll. You have resistance to bludgeoning, piercing, and slashing damage. If you are able to cast spells, you can't cast them or concentrate on them while raging. Your rage lasts for 1 minute. It ends early if you are knocked unconscious or if your turn ends and you haven't attacked a hostile creature since your last turn or taken damage since then. You can also end your rage on your turn as a bonus action.
+
