@@ -1,0 +1,598 @@
+##### Damage Type by Class
+Damage Type | Class
+------------|------
+Acid        |Druid
+Bludgeoning |
+"Chaos"     |Warlock
+Cold        |Mage, Shaman
+Fire        |Mage, Shaman, Warlock
+Force       |Druid (Lunar), Mage
+Lightning   |Shaman
+Necrotic    |Priest, Warlock
+Piercing    |
+Poison      |Druid
+Psychic     |Priest (Void)
+Radiant     |Druid (Solar), Priest
+Slashing    |
+Thunder     |Shaman
+
+##### Damage/Class
+Class   | Damage Type
+--------|------------
+Druid   | Acid, Force (Lunar), Poison, Radiant (Solar)
+Mage    | Cold, Fire, Force
+Priest  | Necrotic, Psychic (Void), Radiant
+Shaman  | Cold, Fire, Lightning, Thunder
+Warlock |"Chaos", Fire, Necrotic
+
+##### Chaos Damage Type 2
+2d8 | Damage Type
+----|--------
+2   | *Reroll*
+3   | Bludgeoning
+4   | Radiant
+5   | Force
+6   | Lightning
+7   | Poison
+8   | Acid
+9   | Fire
+10  | Necrotic
+11  | Cold
+12  | Thunder
+13  | Psychic
+14  | Piercing
+15  | Slashing
+16  | *Reroll*
+
+##### Chaos Damage
+d8  | Damage Type
+----|----
+1   | Acid
+2   | Cold
+3   | Fire
+4   | Force
+5   | Lightning
+6   | Poison
+7   | Psychic
+8   | Thunder
+
+**Add descriptors? Would allow for things like paladins using the Blessed Warrior FS to only be able to select cantrips w/o the Void tag**
+
+\pagebreak
+#### Druid Spells
+##### Cantrips
+[Acid damage cantrip]
+<br> Druidcraft
+<br> [Lunar damage cantrip]
+<br> [Plant growth utility cantrip? Akin to shillelagh? Trip effect?]
+<br> [Poison damage cantrip]
+<br> [Prevent death/dying cantrip]
+<br> [Sun damage cantrip]
+<br> [Thorn whip]
+<br> [Wisp-based light spell. Dancing lights?]
+
+##### 1st-Level
+[Entangling Roots]
+<br> [HoT effect for out of battle healing, akin to fast healing/regeneration]
+<br> [Ironbark; barkskin]
+
+##### 2nd-Level
+[Summon Wisps; can't summon 5 wisps until 5th level, or at least they can't use a ritual until that level.]
+
+\pagebreak
+#### Mage Spells
+##### Cantrips
+[Arcane damage cantrip, ranged]
+<br> [Arcane damage cantrip, AoE]
+<br> [Cold damage cantrip]
+<br> [Cryokinesis cantrip]
+<br> [Damage prevention cantrip]
+<br> [Fire damage cantrip]
+<br> [Illusion cantrip]
+<br> [Light cantrip; basic and straightforward]
+<br> [Mending style cantrip, reversing time/entropy]
+<br> [Pyrokinesis cantrip]
+<br> [Telekinesis cantrip]
+<br> [Utility cantrip]
+
+##### 1st-Level
+[Arcane damage spell]
+<br> [Conjure Food/Water]
+<br> [Conjure Familiar (Summons a specific creature with in-list statblock, arcane/fire/water elementaling)]
+<br> [Create Mana Gem; creates a mana crystal. Higher levels can be used to regain spell slots?]
+<br> [Frost armor; armor of agathys]
+
+##### 5th-Level
+[Conjure Servant (Summons an arcane elemental, increasing duration based on spell level, eventually permanent)]
+
+\pagebreak
+#### Priest Spells
+##### Cantrips
+[Despair-inspiring cantrip]
+<br> [Light-based utility cantrip]
+<br> [Light-based radiant damage cantrip]
+<br> [Light creation cantrip; halo?]
+<br> [Hope-inspiring cantrip]
+<br> [Neutral utility cantrip?]
+<br> [Prevent death/dying cantrip]
+<br> [Void-based utility cantrip]
+<br> [Void-based necrotic damage cantrip]
+<br> [Void-based psychic damage cantrip]
+
+##### 1st-Level
+[Armor of Faith; mage armor]
+<br> [Bottle Energies; holy/unholy water creation, creating bottled void and light.]
+<br> [Cause fear effect; void]
+<br> [Courage effect; light]
+
+\pagebreak
+#### Shaman Spells
+##### Cantrips
+[Cold damage cantrip; frostbite?]
+<br> [Earth manipulation cantrip]
+<br> [Fire manipulation cantrip]
+<br> [Fire ranged damage cantrip]
+<br> [Light-creating cantrip; fire/produce flame?]
+<br> [Lightning ranged damage cantrip]
+<br> [Magic Stone ranged attack cantrip]
+<br> [Prevent death/dying cantrip]
+<br> Shamanism
+<br> [Thunder damage cantrip]
+<br> [Water manipulation cantrip]
+<br> [Water whip cantrip]
+<br> [Wind manipulation cantrip]
+
+##### 5th-Level
+[Conjure Elemental]
+
+\pagebreak
+#### Warlock
+##### Cantrips
+[Chaos damage cantrip]
+<br> [Demonic utility cantrip]
+<br> [Fel fire damage cantrip]
+<br> [Light-producing cantrip; flames?]
+<br> Shadow bolt
+
+##### 1st-Level
+[Chaos bolt spell, chaos damage]
+<br> [Create fel crystal]
+<br> [Demon skin; protective spell]
+
+##### 3rd-Level
+[Chaos ball spell, chaos damage]
+
+##### 5th-Level
+[Waves of Chaos spell, chaos damage]
+
+\pagebreak
+### Damage Cantrips
+#### Arcane Blast
+- Force damage on target, save spell
+
+#### Arcane Bolts
+- Eldritch blast, mage
+
+#### Earthen ???
+- Magic stone but scales, shaman
+
+#### Elemental Shock
+- Multi-damage type cantrip, shaman
+
+#### Fire Blast
+- Fire bolt, shaman/mage
+
+#### Flurry
+- Cold damage, save, drops down on target like sacred flame
+
+#### Frostbolt
+- Cold damage, attack roll
+
+#### Incinerate
+- Fire damage, falls down on target, warlock
+
+#### Lightning Blast
+- Lightning bolt, ranged shocking grasp, shaman
+
+#### Lunar Bolt
+- Druid, deals arcane/force damage
+
+#### Poison Sting
+- Druid, poison damage
+
+#### Shadow Bolt
+- Necrotic damage, warlock, multi hit?
+
+#### Solar Wrath
+- Druid, deals radiant damage
+
+#### Thorn Whip
+- Druid
+
+#### Thunderclap
+- Thunder damage cantrip, shaman
+
+#### Touch of Chaos
+*Evocation cantrip*
+___
+- **Casting Time:** 1 action
+- **Range:** 60 feet
+- **Components:** V, S
+- **Duration:** Instantaneous
+---
+You channel the raw power of the Twisting Nether in a flash of chaotic energy onto a creature you can see within range. The target must succeed on a Dexterity saving throw. On a failure, the target takes 1d8 damage. Roll another 1d8 to determine the damage type, based on the Chaos Damage table.
+
+The spell's damage and the dice rolled for the Chaos Damage table increases by 1d8 when you reach 5th level (2d8), 11th level (3d8), and 17th level (4d8). Choose only one roll to determine the spell's damage type.
+
+#### Water Whip
+- Water whip, deals slashing damage, shaman
+
+\pagebreak
+### Light Cantrips
+#### Fel Flame
+*Conjuration cantrip*
+___
+- **Casting Time:** 1 action
+- **Range:** Self
+- **Components:** V, S
+- **Duration:** 10 minutes
+---
+A flickering green flame appears in your hand. The flame remains there for the duration and harms neither you nor your equipment. The flame sheds bright light in a 10-foot radius and dim light for an additional 10 feet. The spell ends if you dismiss it as an action or if you cast it again.
+
+You can also attack with the flame, although doing so ends the spell. When you cast this spell, or as an action on a later turn, you can hurl the flame at a creature within 30 feet of you. Make a ranged spell attack. On a hit, the target takes 1d8 fire damage.
+
+This spell's damage increases by 1d8, and the ranges of illumination increases by 10 feet each, when you reach 5th level (2d8, 20 feet), 11th level (3d8, 30 feet), and 17th level (4d8, 40 feet).
+
+#### "Halo" [Name TBD.]
+*Abjuration cantrip*
+___
+- **Casting Time:** 1 action
+- **Range:** Touch
+- **Components:** S
+- **Duration:** 10 minutes
+---
+You touch a creature, creating a minor manifestation of light to appear, such as a faint ring of light behind their head or a glowing symbol on their brow. The effect sheds bright light in a 10-foot radius and dim light for an additional 10 feet for the duration.
+
+While the light remains, the target can roll a d4 and add the number rolled to one saving throw of its choice. It can roll the die before or after making the saving throw. The spell then ends.
+
+If you cast this spell on a different creature, the previous effect ends. The number of creatures that can benefit from this spell at once increases by one, and the ranges of illumination increase by 10 feet each, when you reach 5th level (two, 20 feet), 11th level (three, 30 feet), and 17th level (four, 40 feet).
+
+#### Magelight
+*Evocation cantrip*
+___
+- **Casting Time:** 1 action
+- **Range:** Touch
+- **Components:** V
+- **Duration:** 1 hour
+---
+You touch one object that is no larger than 10 feet in any dimension and imbue it with an enchantment of light, causing it to shed bright light in a 20-foot radius and dim light for an additional 20 feet for the duration. The light can be colored as you like, and the radius of light can be reduced to 5 feet. Completely covering the object with something opaque blocks the light. The spell ends if you cast it again or dismiss it as an action.
+
+If you target an object held or worn by a hostile creature, that creature must succeed on a Dexterity saving throw to avoid the spell.
+
+#### Mote of Flame
+*Conjuration cantrip*
+___
+- **Casting Time:** 1 bonus action
+- **Range:** 60 feet
+- **Components:** V, S
+- **Duration:** Concentration, up to 10 minutes
+---
+You summon a minor fire elemental in the form of a Tiny ball of flame at a point within range. The mote sheds bright light in a 20-foot radius and dim light for an additional 20 feet for the duration. 
+
+As a bonus action on your turn, you can move the mote up to 30 feet to a new spot within range. As part of the same bonus action, you can direct the mote to touch a creature in its space. It makes an attack roll using your spell attack modifier, dealing 1d4 fire damage on a hit. The mote disappears if it exceeds the spell's range.
+
+The damage dealt by the mote increases by 1d4 when you reach 5th level (2d4), 11th level (3d4), and 17th level (4d4).
+
+#### Minor Wisps
+*Evocation cantrip*
+___
+- **Casting Time:** 1 action
+- **Range:** 120 feet
+- **Components:** V, S
+- **Duration:** Up to 1 minute
+---
+You call upon the spirits of nature, causing up to four small glowing wisps to appear within range for the duration. These small orbs of light shed dim light in a 10-foot radius. Overlapping areas of dim light become bright light.
+
+As a bonus action on your turn, you can move the wisps up to 60 feet to a new spot within range. A wisp disappears if it exceeds the spell's range.
+
+\pagebreak
+### Utility Cantrips, Class
+#### Diabolism
+*Necromancy cantrip*
+___
+- **Casting Time:** 1 action
+- **Range:** Up to 30 feet
+- **Components:** S
+- **Duration:** Up to 1 hour
+---
+This spell channels a small amount of dark energy. You create one of the following magical effects:
+- Choose a point within 30 feet. In a 5-foot radius of that point, bright light becomes dim light, and dim light becomes darkness for 1 hour. Any light sources within the area have the light they produce suppressed for the duration.
+- An object up to 1 cubic foot in size or an area up to 1 square foot that you touch lightly, instantaneously decays. Wood rots, glass cracks, flowers wilt. Casting the spell and then continuing to touch the target advances the decay; after 1 minute, the target is destroyed. This spell cannot affect creatures, magical objects, or sturdy materials like metal and stone.
+- You can reanimate a Tiny 0 CR beast you touch for 1 hour. It is undead and obeys all of your commands to the best of its abilities, though it cannot attack. You cannot use this effect again until the reanimated creature dies, or the effect ends.
+- You instantaneously light a candle, torch, or small campfire within 30 feet. The fire glows your choice of a smoldering red, bright green, or shadowy purple until extinguished. 
+- Your fingertip glows green or purple for up to 1 minute. While it glows, you can use your finger to draw glowing lines of the same color on a solid surface that last for 1 hour.
+
+If you cast this spell multiple times, you can have up to three of its non-instantaneous effects active at a time, and you can dismiss such an effect as an action.
+
+#### Druidcraft
+*Transmutation cantrip*
+___
+- **Casting Time:** 1 action
+- **Range:** 30 feet
+- **Components:** V, S
+- **Duration:** Instantaneous
+---
+You connect to the forces of nature, creating one of the following effects within range:
+- You create a tiny, harmless sensory effect that predicts what the weather will be at your location for the next 24 hours. This effect persists for 1 round.
+- You instantaneously make plants to bloom and open. This can be a single plant or all within a 5-foot cube.
+- You instantaneously create a cosmetic effect on yourself like growing vines emerging from your sleeves, leaves or feathers in your hair, slug slime on your skin, or insects crawling from your nostrils.
+- You make an area fall dead silent, erupt in a cacophony of animal sounds, or have one particular animal call sound loud and clear in the distance. The effect lasts for 1 round and must fit in a 5-foot cube.
+- You create an instantaneous, harmless sensory effect, such as falling leaves, a puff of wind, or the faint odor of skunk. The effect must fit in a 5-foot cube.
+- You instantaneously light or snuff out a candle, a torch, or a small campfire.
+
+#### Prestidigitation
+*Transmutation cantrip*
+___
+- **Casting Time:** 1 action
+- **Range:** 10 feet
+- **Components:** V, S
+- **Duration:** Up to 1 hour
+---
+This spell is a minor magical trick that novice mages use for practice. You create one of the following magical effects within range:
+- You create an instantaneous, harmless sensory effect, such as a shower of sparks, a puff of wind, faint musical notes, or an odd odor.
+- You instantaneously light or snuff out a candle, a torch, or a small campfire.
+- You instantaneously clean or soil an object no larger than 1 cubic foot.
+- You chill, warm, or flavor up to 1 cubic foot of nonliving material for 1 hour.
+- You make a color, a small mark, or a symbol appear no larger than 1 square foot on an object or a surface for 1 hour.
+- You create a nonmagical trinket or an illusory image that can fit in your hand and that lasts until the end of your next turn.
+
+If you cast this spell multiple times, you can have up to three of its non-instantaneous effects active at a time, and you can dismiss such an effect as an action.
+
+#### Shamanism
+*Transmutation cantrip*
+___
+- **Casting Time:** 1 action
+- **Range:** 30 feet
+- **Components:** V, S
+- **Duration:** Up to 1 hour
+---
+You invoke a minor portion of the elements. You create one of the following magical effects within range:
+- You create a tiny, harmless sensory effect that predicts what the weather will be at your location for the next 24 hours. This effect persists for 1 round.
+- You create a minor elemental effect. Examples include a small breeze; causing flames to flicker, dim or brighten, or change color; harmless tremors; or causing water to heat or cool. This effect lasts for up to 1 minute.
+- You instantaneously light or snuff out a candle, a torch, or a small campfire.
+- You partially shield a single creature from weather effects for 1 hour. This can heat or cool the air around them by 10 degrees, increase or decrease humidity around them, cause rain or snow to be repelled by an invisible dome, keep them dry, or similar effects.
+- You magnetize part of your body, allowing it to attract or repel metal objects for 1 minute. The objects can't weigh more than 5 pounds in total or be more than 5 feet away from you. You can choose to affect only specific objects that you can see.
+- You bind together bits of earth and elemental energy to craft a small, makeshift totem druidic focus. The focus crumbles to dust after 1 hour or when it is more than 5 feet away from you.
+
+If you cast this spell multiple times, you can have up to five of its non-instantaneous effects active at a time, and you can dismiss such an effect as an action.
+
+#### Thaumaturgy
+*Evocation cantrip*
+___
+- **Casting Time:** 1 action
+- **Range:** 30 feet
+- **Components:** V
+- **Duration:** Up to 1 minute
+---
+You channel the power of the Light or the Void, creating one of the following magical effects within range:
+- ???
+
+If you cast this spell multiple times, you can have up to three of its 1-minute effects active at a time, and you can dismiss such an effect as an action.
+
+\pagebreak
+### Utility Cantrips, General
+#### Manipulate Air
+*Transmutation cantrip*
+___
+- **Casting Time:** 1 action
+- **Range:** 30 feet
+- **Components:** V, S
+- **Duration:** Instantaneous
+---
+You seize the air and compel it to create one of the following effects at a point you can see within range:
+
+- One Medium or smaller creature that you choose must succeed on a Strength saving throw or be pushed up to 5 feet away from you.
+- You create a small blast of air capable of moving one object that is neither held nor carried and that weighs no more than 5 pounds. The object is pushed up to 10 feet away from you. It isn't pushed with enough force to cause damage.
+- You create a harmless sensory effect using air, such as causing leaves to rustle, wind to slam shutters closed, or your clothing to ripple in a breeze.
+
+#### Manipulate Earth
+*Transmutation cantrip*
+___
+- **Casting Time:** 1 action
+- **Range:** 30 feet
+- **Components:** S
+- **Duration:** Instantaneous or 1 hour (see below)
+---
+You choose a portion of dirt or stone that you can see within range and that fits within a 5-foot cube. You manipulate it in one of the following ways:
+
+- If you target an area of loose earth, you can instantaneously excavate it, move it along the ground, and deposit it up to 5 feet away. This movement doesn't involve enough force to cause damage.
+- You cause shapes, colors, or both to appear on the dirt or stone, spelling out words, creating images, or shaping patterns. The changes last for 1 hour.
+- If the dirt or stone you target is on the ground, you cause it to become difficult terrain. Alternatively, you can cause the ground to become normal terrain if it is already difficult terrain. This change lasts for 1 hour.
+
+If you cast this spell multiple times, you can have no more than two of its non-instantaneous effects active at a time, and you can dismiss such an effect as an action.
+
+#### Manipulate Fire
+*Transmutation cantrip*
+___
+- **Casting Time:** 1 action
+- **Range:** 60 feet
+- **Components:** S
+- **Duration:** Instantaneous or 1 hour (see below)
+---
+You choose nonmagical flame that you can see within range and that fits within a 5-foot cube. You affect it in one of the following ways:
+
+- You instantaneously expand the flame 5 feet in one direction, provided that wood or other fuel is present in the new location.
+- You instantaneously extinguish the flames within the cube.
+- You double or halve the area of bright light and dim light cast by the flame, change its color, or both. The change lasts for 1 hour.
+- You cause simple shapes—such as the vague form of a creature, an inanimate object, or a location—to appear within the flames and animate as you like. The shapes last for 1 hour.
+
+If you cast this spell multiple times, you can have up to three non-instantaneous effects created by it active at a time, and you can dismiss such an effect as an action.
+
+#### Manipulate Water
+*Transmutation cantrip*
+___
+- **Casting Time:** 1 action
+- **Range:** 30 feet
+- **Components:** S
+- **Duration:** Instantaneous or 1 hour (see below)
+---
+You choose an area of water that you can see within range and that fits within a 5-foot cube. You manipulate it in one of the following ways:
+
+- You instantaneously move or otherwise change the flow of the water as you direct, up to 5 feet in any direction. This movement doesn't have enough force to cause damage.
+- You cause the water to form into simple shapes and animate at your direction. This change lasts for 1 hour.
+- You change the water's color or opacity. The water must be changed in the same way throughout. This change lasts for 1 hour.
+- You freeze the water, provided that there are no creatures in it. The water unfreezes in 1 hour.
+
+If you cast this spell multiple times, you can have no more than two of its non-instantaneous effects active at a time, and you can dismiss such an effect as an action.
+
+#### Reverse Damage
+*Transmutation cantrip*
+___
+- **Casting Time:** 1 minute
+- **Range:** Touch
+- **Components:** V, S
+- **Duration:** Instantaneous
+---
+This spell reverses time, repairing a single break or tear in an object you touch, such as broken chain link, two halves of a broken key, a torn cloak, or a leaking wineskin. As long as the break or tear is no larger than 1 foot in any dimension, you mend it, leaving no trace of the former damage.
+
+This spell can physically repair a magic item or construct, but the spell can't restore magic to such an object.
+
+\pagebreak
+#### Druidcraft
+- Predict weather
+- Bloom flower
+- Light/snuff fires
+
+#### [Mage Utility Cantrip]
+- Clean/soil area
+- Flavor food
+- Adjust temperature
+
+#### [Priest Neutral Cantrip]
+
+\pagebreak
+\pagebreak
+#### Arcane Blast
+*Evocation cantrip*
+___
+- **Casting Time:** 1 action
+- **Range:** 60 feet
+- **Components:** V, S
+- **Duration:** Instantaneous
+___
+You extend your hand and make a burst of arcane energy erupt from a target within range. If the target is a creature it must succeed on a Dexterity saving throw or take 2d4 force damage. A creature forced to make a Constitution saving throw to maintain concentration because of this spell, makes the saving throw with disadvantage.
+
+This spell’s damage increases by 2d4 when you reach 5th level (4d4), 11th level (6d4), 17th level (8d4).
+
+#### Arcane Explosion
+*2nd-level evocation*
+___
+- **Casting Time:** 
+
+
+#### Arcane Intellect
+[Adv on Int checks/skill checks in general? Half proficiency in non-proficient skills?]
+
+#### Blink
+*1st-level conjuration*
+___
+- **Casting Time:** 1 bonus action
+- **Range:** Self
+- **Components:** V
+- **Duration:** Instantaneous
+___
+You briefly blink out of existence, teleporting up to 15 feet to an unoccupied space that you can see.
+
+***At Higher Levels.*** When you cast this spell using a spell slot of 2nd level or higher, the range that you can teleport doubles for each slot level above 1st.
+
+#### Conjure Familiar
+*?th-level conjuration*
+
+[Creates water, fire, or arcane lesser elemental.]
+
+#### Conjure Mana Gem
+*?th-level conjuration*
+
+[Akin to simulacrum. Can be used to restore lesser slot levels.]
+
+#### Conjure Refreshment
+*1st-level conjuration*
+___
+- **Casting Time:** 1 action
+- **Range:** Self
+- **Components:** V, S
+- **Duration:** Instantaneous
+___
+[CHANGE. HAS PROBLEMS WITH SPELL MASTERY.]
+
+You create up to ten sugary sweets to appear in your hands, formed from pure mana. A creature can use its action to eat one sweet. Eating a sweet restores 1 hit point, and the sweet provides enough nourishment to sustain a creature for one day.
+
+The sweets disappear if they have not been consumed within 24 hours of the casting of this spell.
+
+#### Conjure Refreshment Table
+*3rd-level conjuration (ritual)*
+___
+- **Casting Time:** 1 action
+- **Range:** 30 feet
+- **Components:** V, S
+- **Duration:** Instantaneous
+___
+You create a small table of force topped with sweets and nonalcoholic beverages in an unoccupied space within range. The table provides enough food and drink to sustain up to fifteen humanoids for 24 hours.     [HEALING EFFECT]   The table, along with any unconsumed food and drink, disappears after 1 hour.
+
+#### Conjure Servant
+*?th-level conjuration*
+
+[Arcane elemental.]
+
+#### Counterspell
+
+#### Fire Blast
+*Evocation cantrip*
+___
+- **Casting Time:** 1 action
+- **Range:** 120 feet
+- **Components:** V, S
+- **Duration:** Instantaneous
+___
+You hurl a small ball of fire at a creature or object within range. Make a ranged spell attack against the target. On a hit, the target takes 1d10 fire damage. A flammable object hit by this spell ignites if it isn't being worn or carried.
+
+This spell's damage increases by 1d10 when you reach 5th level (2d10), 11th level (3d10), and 17th level (4d10).
+
+#### Frost Nova
+*1st-level evocation*
+___
+- **Casting Time:** 1 action
+- **Range:** Self (15-foot radius)
+- **Components:** V
+- **Duration:** Instantaneous
+___
+You unleash a blast of icy energy, rooting those nearby in place. Each creature within a 15 feet radius of you must make a Dexterity saving throw. On a failure, a creature takes 2d8 cold damage and their speed is reduced to 0 feet until the end of your next turn. On a successful save, the creature takes half as much damage and their speed is reduced by half until the end of your next turn.
+
+***At Higher Levels.*** When you cast this spell using a spell slot of 2nd level or higher, the damage increases by 1d8 for each slot level above 1st.
+
+#### Frostbolt
+*Evocation cantrip*
+___
+- **Casting Time:** 1 action
+- **Range:** 120 feet
+- **Components:** V, S
+- **Duration:** Instantaneous
+___
+You throw a small orb of frost at a creature or object within range. Make a ranged spell attack against the target. On a hit, it takes 1d8 cold damage, and its speed is reduced by 10 feet until the start of your next turn.
+
+The spell's damage increases by 1d8 when you reach 5th level (2d8), 11th level (3d8), and 17th level (4d8).
+
+#### Minor Cryomancy
+
+#### Minor Pyromancy
+
+#### Polymorph
+*?th-level transmutation*
+
+[Transforms creature into low-hp form. When reduced to 0 hp, revert to normal form.]
+
+#### Slow Fall
+[Feather fall.]
+
+#### Teleport
+[Requires target data. You have to learn the runic sequence of the target city or whatever, and be keyed into it.]
