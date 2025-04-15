@@ -1,0 +1,319 @@
+<style>
+/* GLOBAL FORMATTING  */
+
+  /* Resize page to international A4 */
+  .phb {
+    width: 210mm;
+    height: 296.8mm;
+  }
+  .phb:after { content: ""; }
+
+
+/* TABLE OF CONTENTS  */
+
+  /* toc specifically wants black text. This resets the headers*/
+  .toc a {
+    color: inherit !important;
+  }
+  /* Allow dot leaders to fill remaining space but not overlap */
+  .toc li span:nth-child(2) {
+    width: auto;
+    overflow: hidden;
+    white-space: nowrap;
+    display: block;
+  }
+  .toc li span:nth-child(2):after {
+    font-family: BookSanity;
+    font-size: 0.317cm;
+    font-weight: normal;
+    color: black;
+    content:
+      " ........................................"
+      "........................................."
+      ".........................................";
+    }
+
+  /* Style TOC page numbers*/
+  .toc li span:first-child {
+    float: right;
+    font-family: BookSanity;
+    font-size: 0.317cm;
+    font-weight: normal;
+    color: black;
+    margin-left: 1px;
+  }
+
+  /* Adjust TOC H3 styles */
+  .toc li h3 span:nth-child(2):after {
+  	content: " ";
+  }
+  .toc li h3 {
+    margin-bottom: 4px !important;
+    margin-top: 10px !important;
+    line-height: initial !important;
+  }
+  .toc li h3 span:first-child {
+  	line-height: 1.8em !important;
+  }
+
+  /* Reduce TOC list indentation*/
+  .toc ul ul {
+  	margin-left: 10px !important;
+  }
+  .toc>ul>li {
+    margin-bottom: initial !important;
+  }
+
+
+/* TABLES AND BLOCKS */
+
+  /* Clear internal padding and add gap above for green note blocks*/
+  .phb blockquote {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .phb blockquote { margin-top: 1em;
+  }
+
+
+/* INK BLOT STYLES */
+
+  /* Root style for inkblots. Use alone, or together with
+  one of the ink blotstyle classes below. Essentially:
+  <img url='{url}' class='inkblot inkblot-blue' />
+  */
+  .inkblot {
+    position: absolute;
+    mix-blend-mode: multiply;
+    opacity: 0.6;
+  }
+
+  .inkblot-blue {
+    filter: hue-rotate(190deg) saturate(120%)
+  }
+
+  .inkblot-green {
+    filter: hue-rotate(120deg)
+  }
+
+</style>
+
+<style>
+/* Background */
+  .phb{ background-image: url('https://gmbinder.com/images/KN1O92T.png') }
+  .phb{ background-size: cover }
+
+/* Notes */
+  .phb section blockquote {background-color: #f6e5d4}
+  .phb hr + section blockquote tr:nth-child(odd) td {background-color: transparent;}
+
+/* Tables */
+  table tr:nth-child(odd) td {background-color: #cccccc}
+
+/* Footer */
+  .phb .pageNumber {color: rgba(0, 0, 0, 0.5)}
+  .phb .footnote {color: rgba(0, 0, 0, 0.5)}
+  
+  /* Bottom metalwork art */
+  .phb:nth-child(odd):after{ 
+    content          : '';
+    position         : absolute;
+    bottom           : -7px;
+    left             : 10px;
+    z-index          : -1;
+    height           : 336px;
+    width            : 100%;
+    background-image : url('https://www.gmbinder.com/images/bNTz1nk.png');
+    background-size  : cover;
+  }
+  /* Bottom metalwork art */
+  .phb:nth-child(even):after{ 
+    content          : '';
+    position         : absolute;
+    bottom           : -7px;
+    left             : -10px;
+    z-index          : -1;
+    height           : 336px;
+    width            : 100%;
+    background-image : url('https://www.gmbinder.com/images/6NCzAN0.png');
+    background-size  : cover;
+  }
+
+  /* Footer with white text against dark backgrounds */
+  .phb .footnote.footnote-white,
+  .phb .footnote.footnote-white + .pageNumber,
+  .phb .footnote.footnote-white + section .pageNumber {
+    color: rgba(255,255,255,0.8);
+  }
+
+/* Page Number */
+.phb .pageNumber{
+    position   : absolute;
+    bottom     : 30px;
+    width      : 50px;
+    text-align : center;
+}
+.phb:nth-child(even) .pageNumber{
+    left      : 12px;
+}
+.phb:nth-child(odd) .pageNumber{
+    right      : 12px;
+}
+
+.phb .pageNumber.auto{
+    position   : absolute;
+    bottom     : 41px;
+    width      : 50px;
+    text-align : center;
+}
+.phb:nth-child(even) .pageNumber.auto{
+    left      : 12px;
+}
+.phb:nth-child(odd) .pageNumber.auto{
+    right      : 12px;
+}
+
+/* Use black tones for statblock backgrounds */
+.phb blockquote {
+  box-shadow: 1px 4px 14px rgba(0,0,0,0.42);
+}
+
+</style>
+
+### Languages
+
+[Introductory text about languages. Rules about when you can learn non-standard languages.]
+
+##### Standard Languages
+
+Language    | Typical Speakers      | Script
+------------|-----------------------|--------
+Common      | Humans, the Alliance  | Common Alphabet
+Darnassian  | Night Elves           | Kaldorei Script
+Draenei     | Draenei               | Eredic Runes
+Dwarven     | Dwarves               | Dwarven Runes
+Gnomish     | Gnomes                | Dwarven Runes
+Goblin      | Goblins               | Goblin
+Gutterspeak | Forsaken, Criminals   | Common Alphabet
+Orcish      | Orcs, the Horde       | Orcish Pictograms
+Pandaren    | Pandaria Natives      | Mogu Logograms
+Shalassian  | Nightborne Elves      | Kaldorei Script
+Taur-ahe    | Tauren                | —
+Thalassian  | Blood Elves           | Kaldorei Script
+Vulpera     | Vulpera               | Caravan Scrawl     
+Zandali     | Trolls                | Zandali
+
+##### Exotic Languages
+
+Language    | Typical Speakers      | Script
+------------|-----------------------|--------
+Draconic    | Dragonkin             | Arcane*
+Eredun      | Demons                | Eredic Runes
+Furbolg     | Furbolg               | Furbolg Symbology
+Giant       | Northrend Giants      | Titanic Runes
+Hozen       | Hozen                 | Mogu Logograms**
+Kalimag     | Elementals            | —
+Kalu'ak     | Tuskarr               | —
+Low Common  | Low Races             | Common Alphabet
+Nazja       | Naga                  | Naga Script
+Nerglish    | Murlocs and Sea Races | Naga Script
+Nerubian    | Nerubians             | Spider Hieroglyphs
+Ogre        | Ogres                 | —***
+Ravenspeech | Arakkoa               | Apexis Script
+Tol'vir     | Tol'vir               | Tol'vir Hieroglyphs
+Vrykul      | Vrykul                | Titanic Runes
+
+##### Mythic Languages
+
+Language    | Typical Speakers      | Script
+------------|-----------------------|--------
+Apexis      | Apexis Civilization   | Apexis Script
+Shath'yar   | The Black Empire      | —
+Titan       | Titan-forged          | Titanic Runes
+
+\columnbreak
+
+#### Standard Languages
+
+[Descriptor of what qualifies as a Standard language.]
+
+***Common.*** Common is a language ubiquitous in cultures across Azeroth and beyond, characterised by a classical sound hard on consonants, and influenced heavily by words loaned from other cultures.
+
+***Darnassian.*** The dialect spoken by the Night Elves is distinct for being spoken rhythmically and emotionally, as though through song, and has a musical quality famed for lulling strangers to their lands into a daze. Translations into Common can be extremely literal; for example, "gyrocopter" may translate to "rotation chair."
+
+***Draenei.*** The Draenei speak a dialect of original Eredun divorced from its demonic origins,  but still characterised by sharp-sounding and quick turns of phrase that may seem aggressive to new listeners. It is a communal language, where many words are left dependant on social context. Due to its demonic origin it contains an exceptional number of threats.
+
+***Dwarven.*** One of the oldest unchanged languages on the planet, Dwarven is famous for being extremely guttural and hard on the throat, with many of its key consonants pronounceable only through growling or coughing. The distinct Dwarven accent is ubiquitous across clans, though any dwarf can tell whether a speaker is a Highlander or from the mountains. Dwarven opera is famed for its extreme length and enthusiasm.
+
+***Gnomish.*** Naturally, the language of the gnomes is densely packed with long and highly technical terminology, as well as highly academic tone and form, but it is surprisingly easy for foreigners to learn; the language is almost clockwork in its design, following its own rules of grammar and phonics without variation, making learning it a matter of time rather than effort. The complexities of gnomish communication come not in words, but in body language; through hand gestures, facial expressions, tone and position, gnomes are constantly communicating their thoughts silently, to the point that an effective way to shut a gnome up is to tie their hands together.
+
+***Goblin.*** Fittingly, the goblin language is spoken extremely quickly, with modular contractions and short words combining with one another to construct new words and phrases in moments, before rapidly being forgotten as speakers move on, Interruptions between speakers are common and expected. Its alphabet is a scrawl of messy symbols developed for commerce and engineering, and has many cultural intricacies that vary per goblin, making it difficult to learn.
+
+***Gutterspeak.*** A dialect developed by the seedy underbelly of human cultures, Gutterspeak is a complex and obfuscating system of rhymes, slang and made-up terms developed for the sole purpose of sounding like deranged nonsense to an outsider, such as law enforcement. The language seems a perfect fit for the raspy-voiced Forsaken, and even the more educated of their numbers have made an effort to learn in order to help develop a sense of cultural identity.
+
+\pagebreak
+
+***Orcish.*** Orcish is an extremely basic language, though it is far from simple. Though it consists mostly of guttural grunts and monosyllabilic words and names, orcish is expected to be spoken with intense and unmitigated emotion, combined with extreme body language bordering on violent, placing greater importance on emphasis than finesse. Orcish songs and poetry reflect this, being sung in groups to simple drum beats, often prior to, or in celebration of, battle. As a language of warriors, its written form is simple and largely formed of symbols taken from nature.
+
+***Pandaren.*** Originally the Mogu language, developed over millennia into a language fitting the Pandaren, their language can seem extremely complicated since spoken inflection, tone and context may change the meanings of words, and its extensive pictogram alphabet. It is spoken quickly and has hundreds of dialects and accents developed by Pandaria's many communities. Since it its used extensively by Lorewalkers, the language has developed an emotional and powerful storytelling style.
+
+***Shalassian.*** Said to be the closest remaining language to the original lost original elvish used aeons ago, Shaladssian developed in a bubble, and did not mingle with any outside languages for over ten thousand years. As such it is filled with redundancies and phrases so archaic that it is hard to understand for speakers of other elven languages. It is far more formal even than Thalassian, being developed and written largely by a community of extreme elitist scholars, and it is extremely easy to accidentally come across as rude or crass if the right turn of phrase is not used.
+
+***Taur-ahe.*** A language exclusively learned orally, the Taur-ahe language is in more constant shift and change than any other, and each tribe has their own version of it going back millennia. It is spoken slowly and softly, with a great deal of hand gestures, and characteristically has very few insults, but a great many terms of respect and endearment, and over two hundred words for parts of a kodo. As such speakers tend to come across as respectful and uncomplicated; many tauren speak as they find. Their storytellers and wisemen will make extensive use of metaphors and sounds taken from nature.
+
+***Thalassian.*** An elvish dialect originally spoken by the upper echelons of Highborne society, Thalassian has a dense and formal tone characterised by few contractions and a deep focus on form over function; many words may seem unnecessarily complex or academic, and speaking in simpler terms may come across as rude or condescending, even to common folk. Thalassian poetry is known to last for hours.
+
+***Vulpera.*** Developed as a trade language to be spoken between the many travelling Vupera caravans, the Vulpera language is an extremely individual, fast-spoken language reliant on tone of voice and context to make sense. When written it is done using a unique form of alphabet that has no centralised form, meaning it can be difficult to read eve for native speakers.
+
+***Zandali.*** The ancient language of the troll empire has been carefully preserved and maintained for aeons, and is relatively unchanged in that time. It is sharp and rough, and makes heavy uses of prefixes and suffixes to extend the meanings of words and names. Its speakers do little to hide their feelings, and throw as much of their emotion as possible into their speech. Few speakers could be called soft spoken, and the distinct troll accent is famous for seeming simultaneously friendly and threatening.
+
+\columnbreak
+#### Exotic Languages
+
+[Descriptor of what qualifies as an Exotic language.]
+
+***Draconic.*** The language of dragons is at the same time simple and complex; it has few words, and they are spoken largely in growls, roars, and academic terminology, but the intricacies of the dragon language are immense. Between Dragonflights, conventions and meanings may be totally different, and what appears polite to a Blue may be a deathly insult to a Black dragon. Naming is particularly complex, and the differences between flights can demonstrate just how careful one must be when assuming they know how to speak with dragons.
+
+***Eredun.*** Eredun is the famed and feared language of the Eredar homeworld, Argus, and has been adopted by all demons as a native language. Across the cosmos, this language has heralded the end of worlds. In harsh tones and sharp syllables the language boasts a vast array of threats and curses, as well as myriad terms of worship and fealty. It is telling that there are many different words for "Overlord," but only one for "mercy," which is used as an insult. It is said that mortals who speak it turn to darkness, or risk summoning demonspawn, and so the language has long been the subject of deep suspicion, along with its speakers.
+
+***Furbolg.*** Each tribe speaks a distinct dialect of Furbolg, making learning the language difficult. Further still, each tribe uses their own symbology system, comprising of tribal carvings in bark and stone, earth-coloured paints and, rarely, Darnassian runic symbols. When spoken it has a deep, gluttoral sound reminiscent of a bear's growls, and names tend to be descriptors of an individual's physical features.
+
+***Giant.*** The language spoken by the various clans of ice, storm and fire giants throughout Northrend, and similar in some ways to Dwarven and Gnomish, but for key differences; there is no future tense in the giants' language, and rather than look to the future for phrasing, giants will look to stories of the past and use precedent to set up conversation and argument. There are few surnames, and the simplicity of the language used can hide their potential for deep meaning.
+
+***Hozen.*** Hozen is a remarkably basic language by any measure, and appears to largely be a lengthy and exhaustive list of curse words. Speakers find the language extremely versatile, able to apply its many simple syllables in a broad variety of ways; this is because the language cares very little for accuracy or meaning, and runs instead on feeling. While one day a dooker may be a true friend and warrior, on another day it may be one of many, many words for faeces. Their use of language is also extremely literal; the hozen word for constipation is "spooky dooks," because one's "dooks" are too scared to come out.
+
+***Kalimag.*** The prehistoric language spoken by the elementals and those who work with them, Kalimag is hardly spoken at all. It is largely felt in the air and the mind, and written in rock formations, in river beds and clouds. When it is spoken, it evokes feelings of heat or weight, depth or height, depending on who speaks and where. It consists of extremely simple terms, bare statements such as "Reth," meaning "burn," and other uncomplicated concepts. The language has gone unchanged over millions of years, and is used by all elementals, from lowly embers to great Firelords.
+
+\pagebreak
+
+***Kalu'ak.*** A friendly-sounding language formed by a highly communal race, the Tuskarr language serves simple purposes and seeks not to overcomplicate an already complicated world. With over twenty words for 'sea,' the  language of the Tuskarr has a firm, tribal sound to it, developed to be understood over gale winds, under the water or across great distances.
+
+***Low Common.*** A dialect stolen from Common and degraded by its unintelligent speakers into a simplified, slang-heavy lexicon, Low Common is employed by tribes of gnolls, kobolds and their like when communicating with one another, or with higher races such as humans. The extreme simplicity of Low Common betrays a true language barrier - though it may be easy enough to get the gist of a speaker's meaning, converting one's thoughts into such terms actually takes real skill, as doing so means skirting the line between language and gibberish.
+
+***Nazja.*** Nazja, a derivative of the original lost elven language, it appears most similar to Thalassian, though the differences include significantly stronger emphasis on sibilance and the use of extremely archaic prefixed and suffixes, such as Naz- and -jar, as well as a strong emphasis on the form of the name of the Naga Queen, Azshara.
+
+***Nerglish.*** Nerglish may appear, to a passerby, to be incoherent mumbling nonsense gurgled out by an attacking murloc, but in fact the language has many subtleties that are lost when spoken above water. Not purely a spoken language, colour and body language matter a great deal to speakers, whose bodies may shift tone beneath the wave, or who may wear complex jewellery to accentuate a point.
+
+***Nerubian.*** The Nerubian race communicates through a combination of dense, supersensory buzzing, clicking, and an incredibly complicated system of multi-levelled phrasing, reliant on a strong awareness of history in order to understand the many references to past events. It is difficult for a non-Nerubian to speak it, and earnest attempts to do so are thought of as respectful, and can impress Nerubian scholars.
+
+***Ogre.*** A spoken language whose intricacies, and written form, have been lost to time, Ogre in its modern form consists mostly of brutish grunts, roars and swear words. Its few speakers of higher intellect may remember the old ways of using broader and varied applications of scholarly tone and deeply metaphorical phrasing to craft layered and multifaceted conversations, but this mostly falls on deaf ears.
+
+***Ravenspeech.*** The language of the modern Arakkoa is a language crafted from storytelling traditions going back generations, formed of formalised slang and the natural cries, mumbles and croaks of ravens. Common is a conversational, emotional tone featuring a lot of call-and-response, as well as callbacks to classic stories from Arakkoa culture. A religious language kept intact through scripture, the language is complex and nuanced, though when translated can seem lacking in grace.
+
+***Tol'vir.*** The ancient Tol'vir split from their Titan-forged origins aeons ago, forming their own language based on their extremely visual method of recording history through art. When spoken, it makes strong use of throaty, hard syllables, not unlike Dwarven, though with a stronger emphasis on sounds made through narrow tongue shapes
+
+***Vrykul.*** The old Northrend language of the Vrykul goes back to its Titanic origins, and is split into the dialects of the different clans of Vrykul across the sea. The distinct accent of the vrykul is spoken with emphasis on long vowels, while images taken from nature are common, with names such as Bjarn (bear), as well as the overwhelming frequency of war imagery, with no fewer than ten words for blood and many locations being named for famous figures of Vrykul history that died in battle.
+
+#### Mythic
+
+[Descriptor of what qualifies as a Mythic language.]
+
+***Apexis.*** The Apexis, a long extinct culture of high Arakkoa, were an extremely advanced species whose words and pronunciations are mostly lost to history. Only vague remnants of their written history can be found in buried ruins, and of them, little can be gleaned other than arcanological blueprints and formulae. There exist no known speakers, though the oldest of remaining Appexis creations have been kown to react favourably to attempts to speak the language.
+
+***Shath'yar.*** The unspeakable language of the Old Gods is forbidden in scholarly circles, and reviled even by those who do not recognise it. Spoken in obscure and seemingly unpronounceable gibberish, the language seeps into the minds of those who hear it and threaten to drive them insane. When written, it takes no recognisable form, and the words seem to shift and warp across the paper they are scribed upon. The language is believed to be impossible to learn, and is instead granted upon mortals as their minds break in servitude to the Old Gods.
+
+***Titan.*** The ancient and forgotten language of the Titans has a rhythmic, logical format, which features many words of equal size and syllable and a deceptively simple range of phonics. All of this makes speaking Titanic sound almost synthetic, and certainly matches its orderly creators.
+
+\pagebreak
+
+Common - Composed of four 
