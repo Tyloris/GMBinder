@@ -1,0 +1,173 @@
+# New Races
+___
+
+This is just a short and sweet document for new races and subraces intended for the WC5E project, mostly done on request for others. I might come back and tidy up the document with more info later.
+
+## Gnome Race
+
+This is the main gnome race and includes two new subraces, the leper gnome and the mechagnome.
+
+***Ability Score Increase.*** Your Intelligence score increases by 2.
+
+***Age.*** Gnomes mature at the same rate humans do, and most are expected to settle down into an adult life by around age 40. They can live 350 to almost 500 years.
+
+***Alignment.*** Gnomes are good-hearted, and even the tricksters amongst them are more playful than vicious. Those of evil alignment are often the result of madness. An innovative idea that consumed them.
+
+***Size.*** Gnomes are between 3 and 4 feet and generally compactly built. Your size is Small.
+
+***Speed.*** Your base walking speed is 25 feet.
+
+***Darkvision.*** You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray.
+
+***Gnome Cunning.*** You have advantage on all Intelligence, Wisdom, and Charisma saving throws against magic.
+
+***Languages:*** You can speak, read, and write Common and Gnomish.
+
+***Subraces.*** Choose one of these subraces.
+
+### Gnomeregan Gnome
+These are the most commonly seen gnomes, and are considered the standard.
+
+***Ability Score Increase.*** Your Charisma score increases by 1.
+
+***Artificer's Lore.*** Whenever you make an Intelligence (History) check related to magic items, alchemical objects, or technological devices, you can add twice your proficiency bonus, instead of any proficiency bonus you normally apply.
+
+***Escape Artist.*** You can move through the space of any creature that is of a size larger than yours.
+
+***Gnomish Engineering.*** You have proficiency with artisan's tools (tinker's tools). Using those tools, you can spend 1 hour and 10 gp worth of materials to construct a Tiny clockwork device (AC 5, 1 hp). The device ceases to function after 24 hours (unless you spend 1 hour repairing it to keep the device functioning), or when you use your action to dismantle it; at that time, you can reclaim the materials used to create it. You can have up to three such devices active at a time.
+
+When you create a device, choose one of the following:
+- *Clockwork Toy.* This toy is a clockwork animal, monster, or person, such as a frog, mouse, bird, dragon, or soldier. When placed on the ground, the toy moves 5 feet across the ground on each of your turns in a random direction. It makes noises as appropriate to the creature it represents.
+- *Fire Starter.* The device produces a miniature flame, which you can use to light a candle, torch, or campfire. Using the device requires your action.
+- *Music Box.* When opened. this music box plays a single song at a moderate volume. The box stops playing when it reaches the song's end or when it is closed.
+
+### Leper Gnome 
+Exposure to extreme amounts of radiation has caused mental degradation in these gnomes, turning their skin green. Some few manage to retain some of their sanity, granting them the following abilities.
+
+***Ability Score Increase.*** Your Constitution score increases by 1.
+
+***Leprous Spew.*** You can spew a bolt of leprous liquid from your body as an action. Treat this as the *poison spray* cantrip. Constitution is your spellcasting ability for this spell.
+
+***Miasma.*** When you die, toxic fumes spread in a 10-foot radius out from your body. The fumes spread around corners and its area is lightly obscured. It lasts for 1 minute or until a strong wind disperses it. Creatures that start their turn in that area must succeed on a Constitution saving throw (DC is 8 + your Constitution modifier + your proficiency bonus) or gain the radiation sickness. Read the Radiation Sickness sidebar for more information.
+
+***Radiation Resistance.*** You have resistance to poison damage and are considered acclimatized to radiation-soaked environments. You also have advantage on saves versus disease.
+
+> ##### Radiation Disease
+> When an uninfected creature comes into contact with a source of radiation — such as contaminated water, being bitten by an infected creature, or for every hour spent in a high-radiation area — the creature must succeed on a DC 11 a Constitution saving throw or contract the radiation disease. 
+> 
+> It takes 1d4 days for the disease to manifest. As it does, the creature's skin takes on a sickly green tint and abscesses start to spread across its surface. At the end of that period, the creature gains advantage on saving throws against poison and resistance against poison damage. However, the creature also has disadvantage on all Strength and Dexterity ability checks, as well as weapon attack rolls.
+> 
+> Once a creature has carried the radiation disease for more than two weeks, its skin turns completely green. It no longer suffers from disadvantage on ability checks or weapon attacks, but it gains an indefinite madness as described in the Dungeon Master's Guide (p. 260).
+> 
+> The radiation symptoms can be cured by a spell, such as lesser restoration. Once the disease has manifested, a more potent spell such as greater restoration or heal is required.
+
+\pagebreakNum
+
+### Mechagon Gnome
+Some gnomes have tapped into their former mechagnome ancestry, implementing machinery into their body in a balance of gnome and mechagnome. Their knowledge has become more specialized than that of a typical gnome, granting them the following abilities.
+
+***Ability Score Increase.*** Your Strength or Dexterity score increases by 1. You can choose which score is increased, and can exchange it over the course of a long rest.
+
+***Cyborg.*** You have two creature types: humanoid and construct. You can be affected by a game effect if it works on either of your creature types.
+
+***Integrated Gadget.*** You have learned to use some of your integrated machinery to create a gadget. You can choose one of the following and can change it over a long rest:
+- *Emergency Failsafe.* You can use an action to restore a number of hit points equal to your level. You can still use this ability while you are unconscious. Once you use this ability, you cannot do so again until you finish a long rest.
+- *H.O.L.O.* You can use the *mirror image* spell as an action. You must be at least 3rd level before you can select this ability. Once you use this ability, you cannot do so again until you finish a long rest.
+- *Mecha-Punch.* Your unarmed strikes deal 1d6 damage.
+ 
+***Natural Armor.*** When not wearing armor, your Armor Class is 13 + your Dexterity modifier.
+
+***Skeleton Pinky.*** You have a bonus tool proficiency of your choice. This can be any type, save for a vehicle type. This tool is integrated into your body, and you double your proficiency bonus for any ability checks you make with it. You must have your hands free to use this integrated tool.
+
+## Murloc Race
+These murlocs are those who are more intelligent and adventurous than their fellow kin, and have learned some of the trappings of 'civilized' society, such as the Common tongue and writing.
+
+### Murloc Race Traits
+**Ability Score Increase.** Your Dexterity score increases by 2.
+
+**Age.** Murlocs reach maturity at only 1 year of age, growing from tadpoles into full-fledged fish people. They can live to be around 70 years old.
+
+**Alignment.** Murlocs tend towards evil alignments. They are typically self-interested and very territorial.
+
+**Size.** Murlocs are on average about 4 feet tall. They are considered Small creatures.
+
+**Speed.** You have a movement speed of 25 feet and a swim speed of 25 feet.
+
+**Darkvision.** You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray.
+
+***Monstrosity.*** You are considered a monstrosity instead of a humanoid. This means that certain spells such as charm person do not affect you.
+
+**Amphibious.** You can breathe water and air.
+
+**Bite.** Your fanged maw is a natural weapon, which you can use to make unarmed strikes. If you hit with it, you deal piercing damage equal to 1d4 + your Strength modifier, instead of the bludgeoning damage normal for an unarmed strike.
+
+**Cunning Artisan.** As part of a short rest, you can harvest bone and hide from a slain beast, construct, dragon, monstrosity, or plant creature of size Small or larger to create one of the following items: a shield, a club, a javelin, or 1d4 darts or blowgun needles. To use this trait, you need a blade, such as a dagger, or appropriate artisan's tools, such as leatherworker's tools.
+
+**Natural Armor.** When not wearing armor, your Armor Class is 11 + your Dexterity modifier.
+
+**Pack Tactics.** You have advantage on an attack roll against a creature if at least one of your allies is within 5 feet of that creature and the ally isn't incapacitated.
+
+**Slippery.** You have advantage on ability checks and saving throws made to escape grapple.
+
+**Survivor.** You have proficiency in your choice of one of the following skills: Athletics, Nature, Perception, or Survival.
+
+**Languages.** You can speak, read, and write Common. You can also speak Nerglish. Nerglish is the language of murlocs and some other aquatic species like makura. To non-speakers, Nerglish sounds little more than gurgling and is impossibly difficult for others to decipher. It has no written language, or at least none that the murlocs use.
+
+\pagebreakNum
+
+## Race Balance
+
+### Gnome
+PP|DC|Feature
+--|--|-------
+**16**|**4**|**Gnome**
+8|2|ASI +2
+0|0|Small size
+-2|-0.5|25' movement
+3|0.75|Darkvision
+7|1.75|Gnome Cunning
+0|0|Common + 1 language
+ | | 
+**25**|**6.25**|Gnomeregan Gnome
+4|1|ASI +1
+2|0.5|Artificer's Lore
+2|0.5|Escape Artist
+1|0.25|Gnomish Engineering
+ | |
+**26**|**6.5**|**Leper Gnome**
+4|1|ASI +1
+4|1|Poison resistance
+1|0.25|Acclimatized to radiation-soaked environments
+1|0.25|Advantage versus disease
+2|0.5|Cantrip
+0|0|Miasma
+ | |
+**26/25**|**6.5/6.25**|**Mechagon Gnome**
+4|1|ASI +1
+1|0.25|Tool proficiency
+3|0.75|Natural Armor
+-1|-0.25|Dual Type
++X|+X|Integrated Gadget
+*3*|*0.75*|2nd-level spell 1/LR (3rd lvl)
+*2*|*0.5*|Healing hands
+*2*|*0.5*|Unarmed Strike (1d6)
+
+\columnbreak
+
+### Murloc
+PP|DC|Feature
+--|--|-------
+**26**|**6.5**|**Murloc**
+8|2|ASI +2
+0|0|Small size
+-2|-0.5|25' movement
+2|0.5|25' swim speed
+3|0.75|Darkvision
+2|0.5|Amphibious
+1|0.25|Natural weapon (1d4)
+1|0.25|Cunning Artisan
+0|0|Natural armor
+8|2|Pack tactics
+1|0.25|Slippery (Advantage on rare roll)
+2|0.5|Skill Proficiency
+0|0|Common + 1 language
