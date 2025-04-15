@@ -1,0 +1,98 @@
+<style>
+  .phb#p4:after { display:none; }
+  .phb#p5:after { display:none; }
+
+/* Background */
+  .phb{ background-image: url('https://gmbinder.com/images/KN1O92T.png') }
+  .phb{ background-size: cover }
+
+/* Notes */
+  .phb section blockquote {background-color: #f6e5d4}
+  .phb hr + section blockquote tr:nth-child(odd) td {background-color: transparent;}
+
+/* Tables */
+  table tr:nth-child(odd) td {background-color: #cccccc}
+
+/* Footer */
+  .phb .pageNumber {color: rgba(0, 0, 0, 0.5)}
+  .phb .footnote {color: rgba(0, 0, 0, 0.5)}
+  .phb:nth-child(odd):after{ 
+    content          : '';
+    position         : absolute;
+    bottom           : -3px;
+    left             : 10px;
+    z-index          : -1;
+    height           : 336px;
+    width            : 100%;
+    background-image : url('https://gmbinder.com/images/p7wvb4z.png');
+    background-size  : cover;
+}
+
+.phb:nth-child(even):after{ 
+    content          : '';
+    position         : absolute;
+    bottom           : -3px;
+    left             : -10px;
+    z-index          : -1;
+    height           : 336px;
+    width            : 100%;
+    background-image : url('https://gmbinder.com/images/p7wvb4z.png');
+    background-size  : cover;
+}
+
+/* Page Number */
+.phb .pageNumber{
+    position   : absolute;
+    bottom     : 30px;
+    width      : 50px;
+    text-align : center;
+}
+.phb:nth-child(even) .pageNumber{
+    left      : 12px;
+}
+.phb:nth-child(odd) .pageNumber{
+    right      : 12px;
+}
+
+.phb .pageNumber.auto{
+    position   : absolute;
+    bottom     : 41px;
+    width      : 50px;
+    text-align : center;
+}
+.phb:nth-child(even) .pageNumber.auto{
+    left      : 12px;
+}
+.phb:nth-child(odd) .pageNumber.auto{
+    right      : 12px;
+}
+
+</style>
+<style>
+  .phb {width: 500px;height: auto;}
+  .phb:after {display:none;}
+  .centered {width: 90%;margin: auto;display: block;}
+  .phb img {height: 200px;margin: auto; margin-bottom:30px;display: block;}
+
+</style>
+
+#### Jang'thraze the Protector
+*Weapon (longsword), rare (requires attunement)*
+
+You have a +1 bonus on attack rolls and damage when wielding this magic weapon. If you are attuned to both Jang'thraze the Protector and Sang'thraze the Deflector, they take up only a single attunement slot. Additionally, you may combine them as an action to form Sul'thraze the Lasher.
+
+When you hit a creature while wielding this weapon, it must make a DC 13 Constitution saving throw or be cursed for 1 minute. While it is cursed, you have resistance to damage dealt by the creature's melee attacks. The creature may repeat its save at the beginning of each of its turns, ending the effect on a success.
+
+#### Sang'thraze the Deflector
+*Weapon (longsword), rare (requires attunement)*
+
+You gain a +1 bonus to attack and damage rolls made with this weapon. If you are attuned to both Jang'thraze the Protector and Sang'thraze the Deflector, they only take up a single attunement slot. Additionally, you may combine them as an action to form Sul'thraze the Lasher.
+
+While you wield this weapon, you have a +1 bonus to Armor Class. 
+
+#### Sul'thraze the Lasher
+*Weapon (greatsword), very rare (requires attunement)*
+
+You gain a +2 bonus to attack and damage rolls made with this magic weapon. You can separate Sul'thraze the Thrasher into the twin swords, Jang'thraze the Protector and Sang'thraze the Deflector as an action. 
+
+When you hit a creature with this weapon, the target must make a DC 15 Constitution saving throw. On a failure, they are cursed for 1 minute. While cursed, whenever they deal damage with a melee attack they must reroll the damage and take the lower total. Additionally, they take an additional 1d4 necrotic damage whenever they are dealt damage. The creature may repeat its save at the beginning of each of its turns, ending the effect on a success.
