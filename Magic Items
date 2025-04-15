@@ -1,0 +1,724 @@
+## Table of Contents
+### Random Magic Items
+Name                    | Rarity
+------------------------|--------
+Bag of Treats           | Common
+Butterfly Flute         | Common
+Compass of Homesickness | Common
+Ghostly Spirits         | Common
+Ring of Perfume         | Common
+Soldier's Trinket       | Common
+Wand of Bubbles         | Common
+Wand of Lights          | Common
+Arcane Lockbox (DC 12)  | Uncommon
+Arcanist's Circlet      | Uncommon
+Potion of Disguise      | Uncommon
+Spirit Lantern          | Uncommon
+Staff of the Acolyte    | Uncommon
+Staff of the Apprentice | Uncommon
+Staff of the Novice     | Uncommon
+Tipsy Bonk-Bonk         | Uncommon
+Wild Dude               | Uncommon
+Witch's Ring            | Uncommon
+Arcane Lockbox (DC 14)  | Rare
+Captain's Tricorn       | Rare
+Keg of Holding          | Rare
+Lucky Blade             | Rare
+Stellarnight Dreamoire  | Rare
+Rombstone Shield        | Rare
+Viper Whip              | Rare
+Arcane Lockbox (DC 16)  | Very Rare
+Decanter of Youth       | Very Rare
+Druid's Bag             | Very Rare
+Midnight Cauldron       | Very Rare
+Orb of Plagues          | Very Rare
+Scimitar of the Sirocco | Very Rare
+Arcane Lockbox (DC 18)  | Legendary
+Doomslayer              | Legendary
+Infernal Contract       | Legendary
+Occam's Razor           | Legendary
+
+\columnbreak
+
+[Some more stuff.](https://editor.gmbinder.com/documents/edit/-M2qIUSQvnbiTQaPmGEp)
+
+\pagebreak
+
+### Magic Items A-Z
+
+#### Arcane Lockbox
+*Wondrous item, rarity varies*
+<div style='margin-top:-4px;'></div>
+
+*Devised by skilled tinkerers, there a few things more deviously complex than an arcane lockbox.* 
+<div style='margin-top:-4px;'></div>
+
+This 4-inch wide puzzle box displays complex runes which change each dawn. The box cannot be destroyed except through a *disintegrate* or *wish* spell.
+
+After three uninterrupted hours of concentration, roll three consecutive Intelligence checks, the DC of which depends on the rarity of the puzzlebox.
+
+Rarity      | DC
+------------|----
+Uncommon    | 12
+Rare        | 14
+Very Rare   | 16
+Legendary   | 18
+
+If one of the three checks fail, the box "locks" and the puzzle cannot be attempted until it resets at the next dawn. A *knock* spell can reduce the number of checks to two, but no less than two. The last person to successfully open a puzzle box can access it with a touch of their hand. They also receive a mental *alarm* whenever a puzzle attempts fails (provided they are on the same plane).
+
+Each box can contain a single item, no bigger than a 5-foot cube, which appears once the box collapses open. The item within is protected from *scrying*, *detect magic*, and similar effects.
+
+#### Arcanist's Circlet
+*Wondrous item, uncommon (requires attunement)*
+<div style='margin-top:-4px;'></div>
+
+*Affixed with a black opal, this antique circlet was commonly worn by the Elven sorcerers of old. Much of their strange magic still lingers within.*
+<div style='margin-top:-4px;'></div>
+
+While wearing the circlet, you know the *magic missile* spell and always have it prepared.
+
+***Mote Magic.*** The circlet has three small motes of arcane energy orbiting your head. As a bonus action, you can fire one of the motes at a target you can see within 120 feet. Make an attack roll with proficiency using your Intelligence, Wisdom, or Charisma modifier (your choice). 
+
+On a hit, the mote deals force damage equal to half your level, rounded down (to a minimum of 1 damage). Once the motes are used up, they replenish after 1 minute.
+
+#### Archivist's Spectacles
+*Wondrous item, rare (requires attunement)*
+<div style='margin-top:-4px;'></div>
+
+*Ornate frames surround these large crystal lenses, both etched with delicate hair-line symbols across the surface. These spectacles are especially prized by apprentice wizards, cramming for their upcoming exam.*
+<div style='margin-top:-4px;'></div>
+
+While wearing these spectacles, you have advantage on Arcana and History checks, can read three times faster than normal, and are under the effects of *comprehend languages* (written languages only).
+
+#### Bag of Treats [WIP]
+*Wondrous item, common*
+<div style='margin-top:-4px;'></div>
+
+*Flavor Text.*
+<div style='margin-top:-4px;'></div>
+
+This belt pouch appears empty and has 10 charges. While holding the pouch, you can use an action to expend 1 of its charges, speak the name of a type of beast, and pull out a small biscuit flavored and scented to appeal to that creature. The pouch regains 1d6 + 4 expended charges at dawn.
+
+#### Banner of the Last Stand
+*Weapon (spear), legendary (requires attunement)*
+
+*When the first heroes stood up against the oppressors of the weak, they wove this banner so that future generations would remember the importance of selflessness and true bravery.*
+
+You have a +3 bonus to attack and damage rolls made with this magic weapon.
+
+As an action, you can thrust the spear into the ground, and with a with a battle cry, cause the magnificent banner to unfurl.
+
+All those who hear you may immediately spend a reaction to respond to your call and gain a point of inspiration, or a d12 inspiration die to use on an attack, ability check, or saving throw. The banner depicts the heroic deeds of each who respond to the call.
+
+***Aura of Heroes.*** In addition, all those who've responded to the initial battle cry have +1 on attack rolls and advantage on saving throws against the frightened condition whilst within 30 feet of the banner.
+
+The banner cannot be removed, altered or destroyed by anyone or anything short of a wish spell. After one hour of use, its effect ends and cannot be used again until 100 years have passed. 
+
+#### Book of the Dead [WIP]
+*Wondrous item, rare (requires attunement)*
+<div style='margin-top:-4px;'></div>
+
+*Flavor Text.*
+<div style='margin-top:-4px;'></div>
+
+***Spells.*** While holding the book, you can use an action to expend some of its charges to cast one of the following spells from it, using your spell save DC and spellcasting ability: *animate dead* (3 charges), *circle of death* (6 charges), *create undead* (6 charges), *danse macabre* ^XGE^ (5 charges), *death ward* (4 charges), *false life* (1 charge per spell level, up to 5th), *feign death* (3 charges), *finger of death* (7 charges), *gentle repose* (2 charges), *life transference* ^XGE^ (3 charges), *negative energy flood* ^XGE^ (5 charges), *raise dead* (5 charges), *revivify* (3 charges), *soul cage* (6 charges), *speak with dead* (3 charges), *summon undead* ^TCE^ (3 charges), *vampiric touch* (3 charges).
+
+You can use an action to cast one of the following spells from the book without using any charges: *spare the dying* and *toll the dead*. While attuned this book, you also add the above spells to your class's spell list, as well as spells and cantrips known.
+
+\pagebreak
+
+#### Bountiful Sapling
+*Wondrous item, common*
+<div style='margin-top:-4px;'></div>
+
+*The wood from this staff is tropical in origin and appears far from dead. Vines and leaves still cling to it and it gives off a fresh sweet smell.*
+<div style='margin-top:-4px;'></div>
+
+Planting the bottom of this staff in fresh soil for 8 hours causes it to grow one fruit of your choice. This fruit provides enough nourishment for the day and heals 1d4 hit points. An hour after it is picked, the fruit rots and loses its potency.
+
+#### Butterfly Flute [WIP]
+*Wondrous item, common*
+<div style='margin-top:-4px;'></div>
+
+*A toy for young musicians and budding bards, this painted wooden flute was once a popular go-to trick for entertainers across the land.*
+<div style='margin-top:-4px;'></div>
+
+Playing this flute summons a cloud of illusory butterflies. As an action, you can make a DC 10
+
+#### Captain's Tricorn
+*Wondrous item, rare (requires attunement)*
+<div style='margin-top:-4px;'></div>
+
+*When stealing ships, It used to be tradition amongst pirates to claim the unlucky captain’s hat. The bigger the hat, the better! However, this led to a very unpleasant epidemic of sea-fairing head-lice.*
+<div style='margin-top:-4px;'></div>
+
+The hat holds 8 charges and regains 2 charges each dawn. If worn aboard a sea vessel, it gains 1d6 + 2 charges instead.
+
+***Captain's Orders.*** You can expend one charge as an action to cast *command*, or issue a *mass suggestion* to multiple creatures for 3 hours, spending two charges per target (spell save DC 14).
+
+#### Compass of Homesickness
+*Wondrous item, common*
+<div style='margin-top:-4px;'></div>
+
+*Commonly used by sailors and soldiers, this small device lets them carry a little bit of home with them, and to always know which way to walk to get there.*
+<div style='margin-top:-4px;'></div>
+
+This compass has a small compartment under the dial, which can be filled with earth, sand, dirt, or small pebbles. The compass dial features two needles. The small needle always points towards the magnetic north. However, the large needle always points towards the location the material in the compartment was taken from.
+
+If the compartment is empty, filled with any other type of material, or material taken from another plane of existence, the needle spins around aimlessly.
+
+\pagebreak
+
+#### Decanter of False Youth
+*Wondrous item, very rare*
+<div style='margin-top:-4px;'></div>
+
+*Created by a vampire sorceress, this alabaster jug depicts beautiful nymphs on its side. However, water poured into it turns to blood and the nymphs transform into grisly skeletons. Some say the gift it grants has too high a price.*
+<div style='margin-top:-4px;'></div>
+
+This jug can hold up to five pints. Water poured into it turns to blood. Drinking 1 pint from the decanter grants 1d4 + 4 temporary hit points to the drinker, lasting for one hour. While you have these temporary hit points, you appear visibly younger and more beautiful. The jug can create up to ten pints of blood a day.
+
+***Cursed.*** All who drink from the jug become vulnerable to radiant damage and gain resistance to healing until the curse is lifted.
+
+#### Doomslayer [WIP]
+*Weapon (greatsword), legendary (requires attunement)*
+<div style='margin-top:-4px;'></div>
+
+When found, this weapon appears to be a hilt of dark metal. 
+
+***Among the Dark.*** While grasping the hilt, you can use a bonus action to cause a blade of blazingly hot, seemingly solid light to spring into existence, or make the blade disappear. While the blade exists, the following applies:
+- The blade sheds bright light in a 20 foot radius and dim light for an additional 20 feet.
+- You have a +3 bonus to attack and damage rolls made with this weapon.
+- The weapon deals radiant damage instead of slashing damage.
+- The weapon deals an additional 2d6 fire damage on a hit, plus 2d6 radiant damage if the target is a fiend.
+
+***The Chosen.*** This weapon imbues its wielder with incredible strength and fortitude. While attuned to this weapon, your Strength score is increased by 2, to a maximum of 22. 
+
+Additionally, your maximum hit point total is increased to the amount it would be if you had rolled the highest number on each Hit Die. For example, the hit point maximum of a 12th-level barbarian with a Constitution bonus of +3 would become 180.
+
+***Raze Hell.*** While attuned to this weapon, you know Abyssal and Infernal, and you have advantage on all attack rolls made against fiends and on ability checks made to track or recall information about them.
+
+***[Blade Break]*** On a critical hit against a fiend, you can attempt to embed the blade into the target. Roll a d20
+
+***Sentience.*** Doomslayer is a sentient neutral weapon with an Intelligence of 11, a Wisdom of 14, and a Charisma of 19. It has hearing and darkvision out to a range of 120 feet. The weapon communicates by transmitting emotion to the creature carrying or wielding it.
+
+***Personality.*** Doomslayer's sole purpose is to end the lives of fiends and destroy their works. It remains silent
+
+***Cursed.*** While attuned to this weapon, you gain an undying hatred against all fiends. If you ever willingly help or make a deal with a fiend, unless doing so would lead to the destruction of more fiends or protect innocents from their wrath, you immediately lose attunement
+
+#### Druid's Bag [WIP]
+*Wondrous item, very rare*
+<div style='margin-top:-4px;'></div>
+
+A used bag of holding modified by a druid.
+
+Inside the bag are two pocket dimensions, one a garden with many plants used for components and potions. 
+
+The other is a library filled with books and other type of materials such as gems, bone dust, alcohol, clay, iron, phosphorus and other non plant based items (most of these materials are in bottles with handy labels). 
+
+A creature can survive and breathe in these two pocket dimensions and can enter or exit through the bag.
+
+#### Elixir of Dominant Person [WIP]
+*Potion, very rare*
+<div style='margin-top:-4px;'></div>
+
+*Flavor text.*
+<div style='margin-top:-4px;'></div>
+
+When you drink this potion, for 1 hour you can cast *command* (save DC 15) at will. During that hour, your personality becomes self-assured and authoritative and you gain advantage on Wisdom saving throws. This potion's bitter black liquid has an intoxicating aroma. Strangely, it never quite touches the bottom of the glass.
+
+#### Five (Round? Second?) Energy
+*Potion, RARITY*
+<div style='margin-top:-4px;'></div>
+
+*ALL MY SENSES ARE AS ONE! THE WEAVE OF REALITY UNRAVELS BEFORE ME!*
+<div style='margin-top:-4px;'></div>
+
+You gain an additional action each turn for the duration, but become absolutely manic at the same time. At the end of the potion, you have a heart attack and gain exhaustion.
+
+\pagebreak
+
+#### Ghostly Spirits
+*Potion, common*
+<div style='margin-top:-4px;'></div>
+
+*Stoppered with the bone of an undead being, This spirit is typically drunk at funerals or times of remembrance. Though the sight of past loved ones brings comfort, there are plenty who lose themselves, clinging to past.*
+<div style='margin-top:-4px;'></div>
+
+This bottle of pale-blue liquor holds enough for 16 shots. A faint, swirling mist can be seen hovering above the liquid. When found, a bottle has 2d8 shots remaining.
+
+***A Toast to the Dead.*** You may raise your glass and speak the name of someone who has died. Upon drinking, a silent, ghostly illusion of the named individual appears before you for 10 minutes. The detail and clarity of this illusion is determined by how well you knew this person in life. Strangers appear as a blurry wisp of spectral vapor.
+
+#### Glass Sword
+*Weapon (shortsword), rare (requires attunement)*
+<div style='margin-top:-4px;'></div>
+
+*Found clutched in the mummified hands of entombed warriors of the Scorpion Desert, these swords seem to resonate with nearby magical forces. How they were made and what purpose they had is unknown. Some theories suggest they were used to ward of an ancient evil that nearly brought the desert tribes to ruin…*
+<div style='margin-top:-4px;'></div>
+
+You have a +3 bonus to attack and damage rolls made with this weapon.
+
+While holding this sword, you can use an action to cast *dispel magic* with an ability score bonus of +5. The sword regains the ability to do so at dawn.
+
+***Fragile.*** When you roll a natural 1 on an attack roll with this sword, it shatters, dealing 3d8 piercing damage to the target.
+
+#### Infernal Contract
+*Wondrous item, legendary*
+<div style='margin-top:-4px;'></div>
+
+*You are unsure what material this scroll is made from, Some thin, pale leather perhaps? It is warm to the touch and smells of burnt bones. The small print offers to solve your desperations, but for a high cost...*
+<div style='margin-top:-4px;'></div>
+
+These contracts are used by mid-to-high level devils to broker deals with desirable individuals, though occasionally they can be found by suspiciously lucky individuals. The terms of the deal are clearly laid out, awaiting only a signature in blood. 
+
+Once signed, this contract is forever binding: only a *wish* spell can erase either the benefits or curse of the contract. Eliminating the benefits does not erase the curse, and vice versa; lost benefits cannot be replaced by a new contract, and attempting to duck the terms of the contract by removing the curse gains you the emnity of the Hells, who will take an interest in making a gruesome example out of your soul.
+
+You can only have one contract at a time. There are six types of contract:
+
+1. **Contract of Blood.** You return to the prime of your youth. You also increase your ability scores by up to five points, distributed as you wish. As normal, you can't increase an ability score above 20.
+2. **Contract of Knowledge.** You gain the ability to cast *contact other plane* as a ritual, which has a DC 10 saving throw. You also gain advantage on all ability checks using one of the following skills of your choice: Arcana, History, Medicine, Nature, or Religion.
+3. **Contract of Patronage.** You gain 50,000 XP, or enough experience to raise your level by one (to a maximum of 20), whichever amount is higher. All levels gained from this experience are applied to becoming a warlock with the Fiend patron. If you are a warlock with another patron, it changes to Fiend. Optionally, you can also trade in any levels you have in for levels in warlock at a one-to-one ratio. 
+4. **Contract of Power.** You gain an additional spell slot for each of your spell levels. Alternatively, you may choose three spells from any class that is 3rd level or lower and gain them as once-per-day spell-like abilities.
+5. **Contract of Riches.** Within the next few days, you will somehow gain 50,000 gp worth of wealth or one non-legendary, non-artifact item.
+6. **Contract of Service.** You gain the ability to cast *find familiar* as a ritual, summoning an imp instead of the normal options. You can also cast *summon greater demon*, summoning a devil instead of a demon, without requiring a material component or expending a spell slot and regain the ability to do so when you finish a long rest. The devil follows your commands without question.
+
+***Curse: Damned.*** The signee has disadvantage on all death saving throws. Upon death, their soul teleports to the contract giver's native plane and is imprisoned within a magic crystal. The signee cannot be resurrected until their soul is freed.
+
+#### Keg of Holding [WIP]
+*Wondrous item, rare*
+<div style='margin-top:-4px;'></div>
+
+*Flavor text.*
+<div style='margin-top:-4px;'></div>
+
+This item appears to be a small barrel, with multiple spouts sticking out at random points along the sides. It weighs considerably less than its appearance would suggest, weighing only 25 pounds regardless of its contents. The keg can hold up to 500 gallons of liquid; for each different liquid poured the top of the keg a new spout appears.
+
+Liquids in the *keg of holding* spoil twice as slow as they would in a regular barrel; liquids also retain the temperature in which they were when poured into the keg until they spoil. If the plug at the top of the keg is opened and turned upside down all liquids will mix and pour out. 
+
+The *keg of holding* is an extradimensional space and follows all rules that would affect a *bag of holding*.
+
+> A keg is most commonly a half-barrel. In 5e terms, it has a capacity of 20 gallons or 2 cubic feet, a cost of 1 gp, and weighs 10 pounds when empty.)
+
+\pagebreak
+
+#### Lucky Blade
+*Weapon (any), rare (requires attunement)*
+<div style='margin-top:-4px;'></div>
+
+*Everyone thinks they have a lucky item. A lucky copper piece, lucky dagger, lucky hat. But luck is much more fickle than that. Especially magical luck. See, luck is tangible and it truly exists in certain places.*
+<div style='margin-top:-4px;'></div>
+
+This weapon has golden four-leaf clovers embossed on its hilt. There is a strange weighting in the weapon's hilt that will occasionally cause a mediocre hit strike true, almost as if the weapon has a mind of its own.
+
+***Lucky Seven.*** This weapon scores a critical hit on a roll of 7 or 20.
+
+#### Midnight Cauldron [WIP]
+*Wondrous item, very rare*
+<div style='margin-top:-4px;'></div>
+
+*There are many cauldrons used by witches and wise women, but few are as wicked or as powerful as the Midnight Cauldron. The symbols inscribed glow in the darkness of night, it's cold iron belly hungry for sacrifice.*
+<div style='margin-top:-4px;'></div>
+
+This cauldron can only be used at night. When filled with boiling water, the heart of a humanoid who has died within the last day can be sacrificed to grant one charge to the cauldron. If the heart was from a humanoid child, it instead gains three charges. The cauldron can only hold up to 10 charges; once dawn breaks, the cauldron loses all charges.
+
+***Boil and Trouble.*** Over the course of one hour, you can expend charges and use the cauldron to brew a potion, creating one of the following based on the number of charges expended:
+- *[potion of disguise](#potion-of-disguise)* (1 charge)
+- *alter self* (2 charges)
+- *enhance ability* (2 charges)
+- *elixir of health* (2 charges)
+- *potion of superior healing* (3 charges)
+- *polymorph* (4 charges)
+
+The potions of 
+
+***Hag's Eye.*** During a full moon, you can use the cauldron to cast *scrying* without expending a spell slot. Once per lunar cycle, you can expend 10 charges to cast *bestow curse* as a 9th level spell on the target of your scrying. Both effects have spell save DC 17.
+
+#### Ms. Bobbin's Umbrella Blade [WIP]
+*Weapon (rapier), uncommon*
+<div style='margin-top:-4px;'></div>
+
+*The infamous witch known as Ms. Bobbins would disguise herself as a nanny to wealthy nobles, snatching up their children in her carpet bag. When confronted, she would beguile her adversaries with strange songs before running them through with this hidden blade.*
+<div style='margin-top:-4px;'></div>
+
+You have a +1 bonus to attack and damage rolls made with this weapon. When holding it, you can cast *feather fall* or *levitate* on yourself only, once per day.
+
+#### Mudwalkers
+*Wondrous item, uncommon*
+<div style='margin-top:-4px;'></div>
+
+*These battered old boots seem pretty ordinary until you spot the runes stitched on the inside. The soles are perpetually caked in mud no matter how you clean them. Every homeowner's nightmare.*
+<div style='margin-top:-4px;'></div>
+
+You ignore difficult terrain created by marshes or mud when wearing these boots.
+
+***Mud Slide.*** You can spend a bonus action to slide 20 feet in a single direction, leaving a trail of thick, slippery mud. The area through which you pass is affected as though through *grease*. The effect remains for 1 minute. The boots can do so three times and regain all expended uses at dawn.
+
+#### Occam's Razor
+*Weapon (longsword, dagger), legendary (requires attunement)*
+<div style='margin-top:-4px;'></div>
+
+*This weapon has seen better days. Are you sure it will hold up in battle? Seemingly being held together by sheer determination, large fractures have split this blade into numerous shards.*
+<div style='margin-top:-4px;'></div>
+
+You have a +2 bonus to attack and damage rolls made with this weapon.
+
+***Shatter.*** As an action, you can speak the command word and slam the weapon down, causing it to break into pieces. Ten Tiny pieces of the blade are animated, as through *animate objects* (deals slashing damage, no concentration required). If the blade pieces are ever more than 120 feet away from you or reduced to 0 hit points, they crumble to dust.
+
+When the blade is shattered, you are left with a hilt with enough shards to act as a +2 dagger in your hand. You can end the shatter effect as a bonus action, at which time all remaining pieces return to the dagger. If at least 3 pieces return, the dagger becomes a shortsword, and if at least 6 pieces return, it becomes a longsword again.
+
+The weapon can use this ability once and regains the ability to do so at dawn, at which point any destroyed pieces reform.
+
+#### Orb of Plagues
+*Wondrous item, very rare (requires attunement)*
+<div style='margin-top:-4px;'></div>
+
+*Painful rashes and boils appear on your skin when you touch this glass orb. You notice sickly green fumes leak out of a small crack on it's surface.*
+<div style='margin-top:-4px;'></div>
+
+The orb has 10 charges and regains 1d6 + 3 charges per day. If there are no charges, roll a d20. On a 1, it shatters (see below).
+
+***Spells.*** While holding the orb, you can cast *detect poison and disease* as a ritual. You can expend one or more charges to cast the following spells: *ray of sickness* (1 charge), *ray of enfeeblement* (2 charges), *stinking cloud* (3 charges), *blight* (4 charges), *contagion* (5 charges).
+
+***Plague Cloud.*** As an action, you can smash the orb onto the ground, destroying it and releasing a plague cloud in a 35 foot radius sphere. All creatures within this area are affected by one random disease from the *contagion* spell, against a spell save DC equal to 10 + the remaining number of charges.
+
+\pagebreak
+
+#### Potion of Disguise [WIP]
+*Potion, uncommon*
+<div style='margin-top:-4px;'></div>
+
+When you drink this potion, your appearance changes into a random member of your own race, as though through *alter self*. If you mix into the potion a piece of another humanoid, such as a lock of hair, you instead take on their appearance.
+
+The potion lasts for 1d4 hours, after which the effects gradually fade over 10 minutes; the GM rolls the duration in secret. If you mixed in a piece of a humanoid from another race, roll a d20 when the potion expires; on a 1, some part of the transformation permanently remains, such as colored skin or pointed ears. If you mixed in a part of a non-humanoid, the potion fails and you permanently gain part of that creature's physical appearance. These effects can only be removed with *greater restoration* or similar effects.
+
+This potion looks and tastes like thick mud, bubbling slowly. Upon mixing parts of another creature in, the potion changes to a unique color, flavor, and consistency based on the target creature.
+
+#### Potion of Liquid Luck
+*Potion, very rare*
+<div style='margin-top:-4px;'></div>
+
+*A banned substance in all organized competitions, along with other methods of cheating.*
+<div style='margin-top:-4px;'></div>
+
+This potion is the color of molten gold and large drops leap like goldfish from its surface, never spilling. When you drink this potion, you are incredibly lucky for the next 24 hours, gaining advantage on all attack rolls, saving throws, and ability checks. 
+
+For the next seven days, whenever you make an attack roll, saving throw, or ability check, first roll a d6. On a 1, you have disadvantage on that roll. This duration doubles for each previous *potion of liquid luck* you have consumed. If you drink another *potion of liquid luck* during that time, it instead affects you like a *potion of poison*, except that the poison's initial damage is 5d6, its save DC is 15, and the poisoned condition can only be removed by a *greater restoration* effect.
+
+#### Potion of Rage [WIP]
+
+#### Potion of Snake Oil [WIP]
+*Potion, common*
+
+(A charlatan can convince a person that this potion has a given effect. Suggestion?)
+
+#### Potion of Swimming [WIP]
+*Potion, common*
+
+When you drink this potion, you gain a swimming speed equal to your walking speed for 1 hour. During this time, you have advantage on Strength (Athletics) checks you make to swim. The potion is sea-green, with its surface continually moving in small crested waves.
+
+#### Rift Breaker [WIP]
+*Weapon (spear), rare (requires attunement)*
+<div style='margin-top:-4px;'></div>
+
+*This tip of this spear, looking primitive at a glance, is crafted from an unknown crystal. Its ability to strike targets blindsided is immeasurably useful.*
+<div style='margin-top:-4px;'></div>
+
+You gain a +1 bonus to attack and damage rolls made with this magic weapon.
+
+*dimension door*
+
+***Rift Strike.*** (4/day) As an action, you can momentarily pierce the veil between dimensions, creating two connecting rifts in the air just big enough for the spear to pass through. You may make a melee attack against a creature you can see within 60 feet from any direction. You may also throw the spear in this way, changing the trajectory of the spear to whatever direction the connecting rift faces.
+
+***Escape Rift.*** As an action, you can drive the butt of the spear into the ground, destroying the spear and instantly creating a 10 foot diameter *teleportation circle*. Lasting 1 round, all who enter the circle are teleported to an unknown location determined by the GM.
+
+#### Ring of Perfume
+*Ring, common*
+<div style='margin-top:-4px;'></div>
+
+*Once popular amongst members of high society, these rings famously fell into disuse after many jealous pranks ensued.*
+<div style='margin-top:-4px;'></div>
+
+This ring has 10 charges. You can use an action to cause expend a charge, causing it to emit any kind of scent or smell the wearer wishes in a 5-foot radius, centered on the ring. The effect lasts for 1 hour, or until you use a charge to change the scent.
+
+\pagebreak
+
+#### Scimitar of the Sirocco
+*Weapon (scimitar), very rare (requires attunement)*
+<div style='margin-top:-4px;'></div>
+
+*Rust and wear covers the blade of this Khopesh sword. As you swing it, it moves effortlessly through the air, leaving behind a thin trail of sand...Suddenly, your mouth grows inexplicably dry.*
+<div style='margin-top:-4px;'></div>
+
+You gain a +2 bonus to attack and damage rolls made with this magic weapon. In addition, you can make one attack with it as a bonus action on each of your turns.
+
+This sword scores a critical hit on a roll of 19 or 20. On a critical hit, the sword drains moisture from the target, inflicting 2 levels of exhaustion and removing 2 levels of exhaustion from the wielder.
+
+***Cursed.*** All water and drink that passes your lips turns to sand. Every day, you suffer 1 level of exhaustion which cannot be recovered through normal rest.
+
+#### Soldier's Trinket [WIP]
+*Wondrous item, common*
+<div style='margin-top:-4px;'></div>
+
+*Flavor text.*
+<div style='margin-top:-4px;'></div>
+
+While carrying this trinket, when you fail (but not critically fail) a death saving throw, you can turn it into a success. Once you use this ability, the trinket becomes inactive for seven days and you cannot benefit from another until the end of your next long rest.
+
+#### Spirit Lantern
+*Wondrous item, uncommon*
+<div style='margin-top:-4px;'></div>
+
+*Containing the dying breath of a unknown entity, this lantern is often used by Funerary priests to identify the fallen bodies on the battlefield.*
+<div style='margin-top:-4px;'></div>
+
+This lantern emits a cold, dim blue light in a 20 foot radius. If you shine this light on deceased remains for 1 minute, you can cause ghostly illusions of the dead creatures to manifest.
+
+These illusions hover above the remains and act out the last five minutes of the creature's life. This effect is silent and shows the dead as they appeared in life, depicting any items they carried. It does not, however, reveal any others who may have been present at the time of the creature's death.
+
+#### Staff of the Acolyte [WIP]
+*Staff, uncommon (requires attunement by a cleric)*
+<div style='margin-top:-4px;'></div>
+
+The staff has 4 charges. While holding it, you can expend a charge as an action to cast *bless* or *cure wounds*, using your spellcasting modifier. You can also use an action to cast *spare the dying* or *thaumaturgy*. 
+
+The staff regains 1d4 charges at dawn. If you expend the last charge, roll a d20. On a 1, the staff crumbles to dust and is destroyed.
+
+#### Staff of the Apprentice
+*Staff, uncommon (requires attunement by a sorcerer, warlock, or wizard)*
+<div style='margin-top:-4px;'></div>
+
+*Young wizards often craft their own staves as a symbol of their completed studies. These staves are limited in power and vary in appearance: from the subtle to the outlandishly garish.*
+<div style='margin-top:-4px;'></div>
+
+There are eight varieties of this staff, containing two 1st-level spells from one of the eight schools of magic. The GM chooses the type or determines it randomly from the options below.
+
+d8  | School        | Spells
+----|---------------|-----------
+1   | Abjuration    | *protection from evil and good*, *shield*
+2   | Conjuration   | *fog cloud*, *grease*
+3   | Divination    | *comprehend languages*, *detect magic*
+4   | Enchantment   | *charm person*, *sleep*
+5   | Evocation     | *burning hands*, *magic missile*
+6   | Illusion      | *color spray*, *silent image*
+7   | Necromancy    | *cause fear* ^XGE^, *ray of sickness*
+8   | Transmutation | *feather fall*, *jump*
+
+The staff has 5 charges. While holding it, you can use an action to expend 1 of its charges to cast one of the spells contained within it, using your spell save DC. The staff regains 1d4 + 1 expended charges daily at dawn.
+
+Once a week, you can replace one spell within the staff with another 1st spell you know from the same school.
+
+#### Staff of Curses [WIP]
+[A warlock staff.]
+
+#### Staff of the Earth [WIP]
+
+✦ *earthen spike* (3 charges), *erupting earth* (3 charges), ✦ *lava burst* (2 charges), *investiture of stone* ^XGE^ (6 charges), *wall of sand* ^XGE^ (3 charges), *wall of stone* (5 charges)
+
+#### Staff of the Flames [WIP]
+*flame strike* (5 charges), *investiture of flame* ^XGE^ (6 charges), *wall of fire* (4 charges)
+
+
+#### Staff of the Novice [WIP]
+*Staff, uncommon (requires attunement by a sorcerer or wizard)*
+<div style='margin-top:-4px;'></div>
+
+This staff has 4 charges. While holding it, you can expend a charge as an action to cast *magic missile*, or as a reaction to cast *shield*. You can also use an action to cast *light* (targeting the gem in the staff's head) or *prestidigitation*.
+
+The staff regains 1d4 charges at dawn. If you expend the last charge, roll a d20. On a 1, the staff crumbles to dust and is destroyed.
+
+#### Staff of the Waves [WIP]
+*control water* (4 charges), *investiture of ice* ^XGE^ (6 charges), *sleet storm* (3 charges), *tidal wave* ^XGE^ (3 charges), *wall of ice* (6 charges), *wall of water* ^XGE^ (3 charges), *water breathing* (3 charges), *water walk* (3 charges)
+
+Swim speed, cold damage
+
+\pagebreak
+
+#### Staff of the Winds [WIP]
+*Staff, very rare (requires attunement by a shaman)*
+
+While attuned to the staff, when you fall, you descend 60 feet per round and take no damage from falling. 
+
+The staff has 20 charges for the following properties. The staff regains 2d8 + 4 expended charges daily at dawn. If you expend the last charge, roll a d20. On a 1, the staff retains the Inured to the Elements property but loses all others.
+
+***Inured to the Elements.*** While holding the staff, when you fall, you descend 60 feet per round and take no damage from falling. Additionally, you are acclimatized to high altitudes and are unaffected by strong winds.
+
+***Flight.*** You can expend 1 charge from the staff while holding it to grant yourself a fly speed equal to your movement speed for 1 hour.
+
+***Spells.*** While holding this staff, you can use an action to expend 1 or more of its charges to cast one of the following spells from it, using your spell save DC and spell attack bonus: *call lightning* (3 charges), *conjure elemental* (air elemental, 5 charges), *control winds* ^XGE^ (5 charges), *dust devil* ^XGE^ (2 charges), *feather fall* (1 charge), *fly* (3 charges), *gust of wind* (2 charges), *investiture of wind* ^XGE^ (6 charges), *skywrite* ^XGE^ (2 charges), *storms sphere* ^XGE^ (4 charges), *thunderwave* (1 charge), *warding wind* (3 charges), *wind walk* (6 charges), or *wind wall* (3 charges). 
+
+#### Staff of the Woodsman [WIP]
+*Staff, uncommon (requires attunement by a druid)*
+<div style='margin-top:-4px;'></div>
+
+The staff has 4 charges and is under a continual *shillelagh* spell. While holding it, you can expend a charge as an action to cast *entangle* or *goodberry*, using your spell save DC. The goodberries sprout from the head of the staff. You can also use an action to cast *druidcraft*. 
+
+The staff regains 1d4 charges at dawn. If you expend the last charge, roll a d20. On a 1, the staff crumbles to dust and is destroyed.
+
+#### Stellarnight Dreamoire [WIP]
+*Wondrous item, rare (requires attunement by a wizard)*
+<div style='margin-top:-4px;'></div>
+
+This book is covered in a very comfortable cushion and pillow. You can use this book as a spellcasting focus for your wizard spells. When found, it contains the spells *alarm*, *sleep*, *phantasmal force*, *catnap*, *leomund's tiny hut*, *mordenkainen's private sanctum*, and *dream*.
+
+When you take a long rest using this grimoire as a pillow, you dream of the future. When you finish the long rest, roll a d20 and record the number rolled. You can replace any attack roll, saving throw, or ability check made by you or a creature that you can see with this foretelling roll. The fortunetelling roll can only be used once. When you finish a long rest, you lose it if you did not use it.
+
+#### The Minmaxe
+*Weapon (any axe), legendary (requires attunement)*
+<div style='margin-top:-4px;'></div>
+
+*"Sure, he's not the best conversationalist. And I do admit the constant drooling does get annoying. But I swear, I once saw him pick up a dragon and throw it at another dragon."*
+<div style='margin-top:-4px;'></div>
+
+You have a +3 bonus to attack and damage rolls made with this magic weapon.
+
+Each time you complete a long rest, you can decrease an ability score and its maximum by up to two points. If you do, you may increase a different ability score and its maximum by two points. Your ability scores and their maximums revert to their original value if you unattune from this weapon.
+
+#### Tipsy Bonk-Bonk [WIP]
+*Weapon (warhammer), uncommon*
+<div style='margin-top:-4px;'></div>
+
+You have a +1 bonus to attack and damage rolls made with this magic weapon.
+
+The warhammer has 6 charges and regains 1d6 charges at dawn. You can spend any number of charges to produce a delicious fresh beer from it, 1 charge being equivalent to 1 liter.
+
+Also, when you hit a creature, you can expend 2 charges to force the creature to make a DC 14 Constitution saving throw. On a failed save, it is drunk for 1 minute, and illusory birds appear around its head. While drunk, it is considered poisoned and must roll a d6 every time it moves more than 5 feet. On a 5, it must use all its movement to move in a random direction. On a 6, it falls prone before moving.
+
+#### Tombstone Shield [WIP]
+*Shield, rare (requires attunement)*
+<div style='margin-top:-4px;'></div>
+
+When a humanoid creature dies within 15 feet of you while carrying this shield, you can use your reaction to absorb its spirit. The name of the creature is carved on the shield, for a maximum of 10 names. When found, the shield has 1d10 names carved on it.
+
+When you take damage when using the shield, you can use your reaction to call forth any number of spirits from the shield and reduce the damage by 1d10 + 1 per spirit. Alternatively, you can cast *speak with dead* on one of the names, without needing the body or expending a spell slot. After using either of these effects, the name disappears from the shield and the spirit is gone.
+
+***Cursed.*** If you die and there are less than 10 names inscribed on the shield, your spirit becomes trapped in it. Your name appears on the shield and you can't be resurrected in any way unless the shield is cleansed by a *greater restoration* spell.
+
+#### Viper Whip
+*Weapon (whip), rare (requires attunement)*
+<div style='margin-top:-4px;'></div>
+
+*This snake-headed whip seems to curl and twist on its own accord. Occasionally it even sheds its own skin...*
+<div style='margin-top:-4px;'></div>
+
+You gain a +1 bonus to attack and damage rolls made using the weapon. On a hit, the weapon deals an extra 1d6 poison damage.
+
+On a successful hit, you can cause the viper head of this whip to bite a target creature. For the next 12 hours, you are able to determine which direction the creature is within 1000 meters, and whether they are dead or alive.
+
+\pagebreak
+
+#### Wand of Bubbles
+*Wand, common*
+<div style='margin-top:-4px;'></div>
+
+*There has been a few cases where this simple toy has been mistaken for a wand of fireballs...much to the user’s chagrin.*
+<div style='margin-top:-4px;'></div>
+
+As an action, you can cause harmless bubbles to stream from the end of this wand.
+
+#### Wand of Lights
+*Wand, common*
+<div style='margin-top:-4px;'></div>
+
+*This wand is a common tool found in wizard towers, used to read books late in the night, light up dark corners of a library, indicate certain runes on lecture boards...and keep cat familiars entertained.*
+<div style='margin-top:-4px;'></div>
+
+As an action, you can use the wand to create one of the following effects:
+- The tip of the wand lights up, shedding bright light in a 30-foot radius and dim light for an additional 30 feet.
+- The wand casts bright light in a 60-foot cone and dim light for an additional 60 feet.
+- A needle-thin line of light is cast from the tip of the wand, creating a small dot of light up to 1 mile away.
+
+#### Wand of Spider Summoning
+*Wand, uncommon (requires attunement)*
+<div style='margin-top:-4px;'></div>
+
+*The mandibles on this unnerving wand twitch and chitter. The hairs on your arm stand on end as you grasp it.*
+<div style='margin-top:-4px;'></div>
+
+This wand has 8 charges. As an action, you can expend one or more charges to summon one of the following for 1 minute: a giant spider (3 charges), a spider swarm (2 charges), or a spider (1 charge). Each spider obeys your verbal commands, and in combat, they act on your turn each round. The GM has the statistics for these creatures and resolves their actions and movement.
+
+The wand regains 1d6 + 2 expended charges each day at dusk. If you expend the wand's last charge, roll a d20. On a 1, the wand turns into a spider and scuttles away.
+
+#### Weapon of Searing Strikes [WIP]
+*Weapon (any), rarity varies (requires attunement)*
+<div style='margin-top:-4px;'></div>
+
+A weapon that can be used like a wand, to cast a smite spell.
+
+#### Wild Dude
+*Potion, uncommon*
+<div style='margin-top:-4px;'></div>
+
+*For most people, this chaotic drink has a different flavour each time it is sipped. Bizarrely, sorcerers can only taste pineapple.*
+<div style='margin-top:-4px;'></div>
+
+This small bottle of liquor appears to be a multicolored tropical drink, continually shifting in appearance. When you drink it as an action, immediately roll on the Wild Magic Surge table (located on page 104 in the Player's Handbook).
+
+#### Winter's Howl
+*Weapon (greataxe), very rare (requires attunement)*
+<div style='margin-top:-4px;'></div>
+
+*Said to contain the spirits of three winter wolves, this axe’s cry sends a chill through your enemies...literally!*
+<div style='margin-top:-4px;'></div>
+
+You have a +2 bonus to attack and damage rolls made with this weapon, which deals an additional 1d4 cold damage on a hit.
+
+***Howl of Winter.*** As an action, you can cause the axe to emit a chilling howl (which can be heard up to 300 feet away), freezing the air around you.
+
+All other creatures within a 15-foot radius suffer 1d6 cold damage and must succeed on a DC 16 Strength saving throw. On a failed save, they become paralyzed, entombed in a pillar of ice for 1 minute. At the end of each of its turns, a frozen target can attempt another Strength save, ending the effect on a success.
+
+Attacking the frozen creature ends the paralysis effect and deals an additional 1d6 cold damage.
+
+#### Witch's Ring
+*Ring, uncommon (requires attunement)*
+<div style='margin-top:-4px;'></div>
+
+*Found in many forms, these rings always have a particular creature featured in its design. Many witches and nefarious warlocks have escaped capture with this ring’s help.*
+<div style='margin-top:-4px;'></div>
+
+This ring allows you to take on the form of a particular beast as an action, or back as a bonus action. You can transform for up to 2 hours, all at once or for shorter periods of time, each transformation using a minimum of 1 minute from the duration. Treat this as though you transformed through the *polymorph* spell, except you retain your hit points between forms.
+
+When you first attune to the ring, roll a d8 on the table below to determine which form you take. The GM has the creature's statistics, which can be found in Appendix A of the Monster Manual. The ring regains any expended duration at dusk; at that time, roll a d8 to determine which new form the ring provides. If you are a warlock or druid, you can choose which form you transform into whenever you use the ring.
+
+| d8 | Creature  | d8 | Creature  |
+|----|-----------|----|-----------|
+|  1 | Cat       |  5 | Rat       |
+|  2 | Frog      |  6 | Raven     |
+|  3 | Bat       |  7 | Spider    |
+|  4 | Owl       |  8 | Goat      |
+
+#### Ying & Yang Rapiers [WIP]
+
+\pagebreak
+
+### Sources
+- [Arcane Lockbox](https://twitter.com/Mrjamesgifford/status/1201846108282077184)
+- [Arcanist's Circlet](https://www.instagram.com/p/B5UebmThmkZ/)
+- [Archivist's Spectacles](https://twitter.com/Mrjamesgifford/status/1044488157281091584)
+- [Banner of the Last Stand](https://twitter.com/Mrjamesgifford/status/1499025339640684547)
+- [Bountiful Sapling](https://twitter.com/Mrjamesgifford/status/1047377158585417729)
+- [Butterfly Flute](https://twitter.com/Mrjamesgifford/status/1514229280447901702)
+- [Captain's Tricorn](https://twitter.com/Mrjamesgifford/status/1500803456960978945)
+- [Compass of Homesickness](https://www.pinterest.es/pin/523473156702804250/)
+- [Decanter of Youth](https://twitter.com/Mrjamesgifford/status/1048842628199059456)
+- [Doomslayer](https://www.reddit.com/r/DnD/comments/fljwg5/homebrewartdoomslayer/)
+- [Druid's Bag](https://www.pinterest.com/pin/688910074244212850/)
+- [Ghostly Spirits](https://twitter.com/Mrjamesgifford/status/1527187261044948994)
+- [Infernal Contract](https://twitter.com/Mrjamesgifford/status/1051618417168535557)
+- [Keg of Holding](https://cmacmac.tumblr.com/post/175462096721)
+- [Lucky Blade](https://www.reddit.com/r/UnearthedArcana/comments/e5mjq9/lucky_seven_weapon_any/)
+- [Midnight Cauldron](https://twitter.com/Mrjamesgifford/status/1057573213474078721)
+- [Mudwalkers](https://twitter.com/Mrjamesgifford/status/1048480181030211584)
+- [Occam's Razor](https://www.artstation.com/artwork/03lQ0Y)
+- [Orb of Plagues](https://twitter.com/Mrjamesgifford/status/1045578293406240768)
+- [Rift Breaker](https://twitter.com/Mrjamesgifford/status/1142095220810625024)
+- [Scimitar of the Sirocco](https://twitter.com/Mrjamesgifford/status/1046313459649073152)
+- [Spirit Lantern](https://twitter.com/Mrjamesgifford/status/1201477803612524544)
+- [Staff of the Apprentice]((https://twitter.com/mrjamesgifford/status/1053201292485689344?lang=zh-Hant))
+- [Stellarnight Dreamoire](https://mosqa.tumblr.com/post/637014797135822848/just-a-lil-recap-of-my-favorite-creations-during/amp)
+- [Tipsy Bonk-Bonk](https://mosqa.tumblr.com/post/634869182107959296/inktober-dd-magic-items-edition-part-7-every)
+- [Tombstone Shield](https://mosqa.tumblr.com/post/637014797135822848/just-a-lil-recap-of-my-favorite-creations-during/amp)
+- [Viper Whip](https://twitter.com/Mrjamesgifford/status/1057209174130651136)
+- [Wand of Spider Summoning](https://twitter.com/Mrjamesgifford/status/1044885271471419392)
+- [Wild Dude](https://twitter.com/Mrjamesgifford/status/1646517296121397248)
+- [Winter's Howl](https://twitter.com/Mrjamesgifford/status/1204450151563218944)
+- [Witch's Ring](https://twitter.com/Mrjamesgifford/status/1200053651357786112)
