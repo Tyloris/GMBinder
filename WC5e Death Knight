@@ -1,0 +1,878 @@
+<style>
+/* GLOBAL FORMATTING  */
+
+  /* Resize page to international A4 */
+  .phb {
+    width: 210mm;
+    height: 296.8mm;
+  }
+  .phb:after { content: ""; }
+
+/* Temporary Fix for heading issues */
+    .phb p{ line-height: 15px; } 
+    .phb blockquote p{ line-height: 14px; } 
+    .phb h2{ line-height: 26px; } 
+    .phb h3{ line-height: 19px; } 
+    .phb h4{ line-height: 15px; padding-bottom: 3px; } 
+    .phb h5{ line-height: 17px; } 
+    th, td { line-height: 14px; }
+
+
+/* TABLE OF CONTENTS  */
+
+  /* toc specifically wants black text. This resets the headers*/
+  .toc a {
+    color: inherit !important;
+  }
+  /* Allow dot leaders to fill remaining space but not overlap */
+  .toc li span:nth-child(2) {
+    width: auto;
+    overflow: hidden;
+    white-space: nowrap;
+    display: block;
+  }
+  .toc li span:nth-child(2):after {
+    font-family: BookSanity;
+    font-size: 0.317cm;
+    font-weight: normal;
+    color: black;
+    content:
+      " ........................................"
+      "........................................."
+      ".........................................";
+    }
+
+  /* Style TOC page numbers*/
+  .toc li span:first-child {
+    float: right;
+    font-family: BookSanity;
+    font-size: 0.317cm;
+    font-weight: normal;
+    color: black;
+    margin-left: 1px;
+  }
+
+  /* Adjust TOC H3 styles */
+  .toc li h3 span:nth-child(2):after {
+  	content: " ";
+  }
+  .toc li h3 {
+    margin-bottom: 4px !important;
+    margin-top: 10px !important;
+    line-height: initial !important;
+  }
+  .toc li h3 span:first-child {
+  	line-height: 1.8em !important;
+  }
+
+  /* Reduce TOC list indentation*/
+  .toc ul ul {
+  	margin-left: 10px !important;
+  }
+  .toc>ul>li {
+    margin-bottom: initial !important;
+  }
+
+
+/* TABLES AND BLOCKS */
+
+  /* Clear internal padding and add gap above for green note blocks*/
+  .phb blockquote {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .phb blockquote { margin-top: 1em;
+  }
+
+
+/* INK BLOT STYLES */
+
+  /* Root style for inkblots. Use alone, or together with
+  one of the inkb lotstyle classes below. Essentially:
+  <img url='{url}' class='inkblot inkblot-blue' />
+  */
+  .inkblot {
+    position: absolute;
+    mix-blend-mode: multiply;
+    opacity: 0.6;
+  }
+
+  .inkblot-blue {
+    filter: hue-rotate(190deg) saturate(120%)
+  }
+
+  .inkblot-green {
+    filter: hue-rotate(120deg)
+  }
+
+</style>
+
+<style>
+/* Background */
+  .phb{ background-image: url('https://gmbinder.com/images/KN1O92T.png') }
+  .phb{ background-size: cover }
+
+/* Notes */
+  .phb section blockquote {background-color: #f6e5d4}
+  .phb hr + section blockquote tr:nth-child(odd) td {background-color: transparent;}
+
+/* Tables */
+  table tr:nth-child(odd) td {background-color: #cccccc}
+
+/* Footer */
+  .phb .pageNumber {color: rgba(0, 0, 0, 0.5)}
+  .phb .footnote {color: rgba(0, 0, 0, 0.5)}
+  .phb:nth-child(odd):after{ 
+    content          : '';
+    position         : absolute;
+    bottom           : -7px;
+    left             : 10px;
+    z-index          : -1;
+    height           : 336px;
+    width            : 100%;
+    background-image : url('https://www.gmbinder.com/images/bNTz1nk.png');
+    background-size  : cover;
+}
+
+.phb:nth-child(even):after{ 
+    content          : '';
+    position         : absolute;
+    bottom           : -7px;
+    left             : -10px;
+    z-index          : -1;
+    height           : 336px;
+    width            : 100%;
+    background-image : url('https://www.gmbinder.com/images/6NCzAN0.png');
+    background-size  : cover;
+}
+
+/* Page Number */
+.phb .pageNumber{
+    position   : absolute;
+    bottom     : 30px;
+    width      : 50px;
+    text-align : center;
+}
+.phb:nth-child(even) .pageNumber{
+    left      : 12px;
+}
+.phb:nth-child(odd) .pageNumber{
+    right      : 12px;
+}
+
+.phb .pageNumber.auto{
+    position   : absolute;
+    bottom     : 41px;
+    width      : 50px;
+    text-align : center;
+}
+.phb:nth-child(even) .pageNumber.auto{
+    left      : 12px;
+}
+.phb:nth-child(odd) .pageNumber.auto{
+    right      : 12px;
+}
+
+/* INK BLOT STYLES */
+
+  /* Root style for inkblots. Use alone, or together with
+  one of the inkb lotstyle classes below. Essentially:
+  <img url='{url}' class='inkblot inkblot-blue' />
+  */
+  .inkblot {
+    position: absolute;
+    mix-blend-mode: multiply;
+    opacity: 0.6;
+  }
+
+  .inkblot-blue {
+    filter: hue-rotate(190deg) saturate(120%)
+  }
+
+  .inkblot-green {
+    filter: hue-rotate(120deg)
+  }
+
+</style>
+
+## Death Knight
+*A hero... that's what you once were. You stood against the shadow, and purchased another dawn for this world at the cost of your life. But the evil you fought is not so easily banished, the victory you claimed not so easily held. The specter of death looms over this world again, it has found new champions to bring about its final reign. Knights of darkness, this is the hour of your dark rebirth . . .*
+
+<div style="text-align:Right"> 
+
+*— A knight of the Ebon Blade* &nbsp;</div>
+
+<br/>
+
+A human clad in heavy armor, wielding a greatsword with both hands, as he clutches it close, runes flash along its edge, leaving a stream of black smoke behind his swings.
+
+An orc surrounded by kobolds, forces his axe into the ground as the earth around him withers and dies, fright&shy;ening the kobolds as they run for their life.
+
+Biting cold rushes through the battle, as a lone blood elf walks forward, her armor clad in a layer of frost, she walks with firm steps, freezing the earth beneath her feet.
+
+No matter their past calling, death knights serve the powers of death, wielding weapons infused with runes <br/> of power. They are ruthless and practical warriors resurr-ected by the powerful val'kyrs and granted the powers of the revered death knights of the Ebon Hold. Although these warriors seem dead at a glance, they are very much alive.
+
+### Outcast for Life
+Although these death knights are not undead as the genera-tions before them, they carry much of the essence of the knights that came before them, and from a distance have the look of a dead person, their blank white stares peering at the world around them. Even though they are alive and not emotionless, it means little to most they meet who shun them because of what they have become. Death knights are bringers of death and destroy, a fact not easily forgotten.
+
+This has lead most death knights down a solitary path, many keep to the outskirts of towns and cities, or hide their appearance well before entering.
+
+### Grim Revival
+Being resurrected as a death knight is not a simple task, only complicated further by the scar it leaves on the newly resurrected, gaining the powers of the death knights weak-ens the soul for a tremendous time, a price that has to be paid. But not only does it drain the death knight, some scars are visible for all to see, their resurrection has
+<br> filled their body with necrotic energy that will 
+<br> forever linger within them, a trait always shown 
+<br> through their eyes, which will forever sit as two 
+<br> white lights in their sockets.
+
+### Steadfast Warriors
+Death knights are exceptional warriors, and in many ways similar to paladins, being keen with various weapons and able to fight in any armor, aiding their combat with the use of magic. They wield their empowered runic weapons and shadow magic which enables them to overpower most foes that would dare to stand against them, making them fearful fighters able to stand in any situation.
+
+\columnbreak
+
+<div style='margin-top:670px;'></div>
+
+### Creating a Death Knight
+As you make your death knight character, spend some time thinking about how this path was granted to you. The vast majority of death knights were raised under the control of the Lich King and later broke their bonds of enslavement. Consider how this change has affected your character and their view of the world, do they show distance or interest in what happens around them? Think about what relations your character may have to their family, do they still exist? would they accept them as they are now, or would they shun and banish them for what they have become? Perhaps you were once a figure of importance, a leader to others or a soldier in an army.
+
+Think about how this destiny came to be, how you died and what stories it may tell. Think about the effects having been raised into undeath may have done to you, what trans&shy;formation in personality might've occurred. What interests may have been lost from your previous life. Becoming a death knight is a reincarnation, one where you are trapped in your own body, with a new view of the world around you.
+
+> ##### Variant Rule: On a Pale Horse
+> Dungeon Masters might consider making the creatures summoned by a death knight with *find steed* and *find greater steed* undead, rather than one of the creature types listed in those spells.
+
+<div class='footnote'>PART 1 | CLASSES</div>
+<img src='https://www.gmbinder.com/images/V3AJiIc.jpg' style='position:absolute; top:0px; right:-600px; width:1300px' />
+<img src='https://www.gmbinder.com/images/Npi5n8k.png' style='position:absolute; top:0px; right:-50px; width:870px; transform:scalex(-1)' />
+<img src='https://www.gmbinder.com/images/4RyvlFl.png' style='position:absolute; top:0px; right:-170px; width:650px' />
+
+\pagebreakNum
+
+
+<div class='classTable wide'>
+
+##### The Death Knight
+
+|Level|Proficiency<br>Bonus|Features|Cantrips<br/>Known|Spells<br>Known| |1st| |2nd| |3rd| |4th| |5th <div style="position: absolute; top:100px; right:42px; width:200px; height:25px">—Spell Slots per Spell Level—</div>|
+|:---:|:--:|:-------------------------|:-:|:-:|-|:-:|-|:-:|-|:-:|-|:-:|-|:-:|
+| 1st | +2 | Dark Rebirth, Runeblade, Runic Magic      |2| 2||1||—||—||—||—|
+| 2nd | +2 | Fighting Style, Runes of Power            |2| 2||1||—||—||—||—|
+| 3rd | +2 | Knighthood                                |2| 3||1||—||—||—||—|
+| 4th | +2 | Ability Score Improvement                 |2| 3||1||—||—||—||—|
+| 5th | +3 | Extra Attack                              |2| 4||1||1||—||—||—|
+| 6th | +3 | Improved Runeblade, Runeforging           |2| 4||1||1||—||—||—|
+| 7th | +3 | Knighthood feature                        |2| 5||1||1||—||—||—|
+| 8th | +3 | Ability Score Improvement, Lichborne      |2| 5||1||1||—||—||—|
+| 9th | +4 | Death's Advance                           |2| 6||1||1||1||—||—|
+| 10th| +4 | Knighthood feature                        |3| 6||1||1||1||—||—|
+| 11th| +4 | Empowered Runeblade                       |3| 7||1||1||1||—||—|
+| 12th| +4 | Ability Score Improvement                 |3| 7||1||1||1||—||—|
+| 13th| +5 | Will of the Necropolis                    |3| 8||1||1||1||1||—|
+| 14th| +5 | Knighthood feature                        |4| 8||1||1||1||1||—|
+| 15th| +5 | UNKNOWN-15                                |4| 9||1||1||1||1||—|
+| 16th| +5 | Ability Score Improvement                 |4| 9||1||1||1||1||—|
+| 17th| +6 | Hungering Runeblade                       |4|10||1||1||1||1||1|
+| 18th| +6 | Knighthood feature                        |4|10||1||1||1||1||1|
+| 19th| +6 | Ability Score Improvement                 |4|11||1||1||1||1||1|
+| 20th| +6 | Deathlord                                 |4|11||1||1||1||1||1|
+</div>
+
+
+#### Quick Build
+You can make a death knight quickly by following these suggestions. First, make Strength your highest ability score, followed by Charisma. Second, choose the **BACKGROUND**
+
+#### Optional Rule: Multiclassing
+If your group uses the optional rule on multiclassing in the *Player's Handbook*, here's what you need to know if you choose death knight as one of your classes.
+
+***Ability Score Minimum.*** As a multiclass character, you must have at least a Strength and Charisma score of 13 to take a level in this class, or to take a level in another class if you are already a death knight.
+
+***Proficiencies Gained.*** If death knight isn't your initial class, here are the proficiencies you gain when you take your first level as a death knight: light armor, medium armor, simple weapons, martial weapons.
+
+***Spell Slots.*** Add half your levels (rounded up) in the death knight class to the appropriate levels from other class to determine your available spell slots.
+
+\columnbreak
+## Class Features
+As a death knight, you gain the following class features.
+
+#### Hit Points
+___
+- **Hit Dice:** 1d10 per death knight level
+- **Hit Points at 1st Level:** 10 + your Constitution modifier
+- **Hit Points at Higher Levels:** 1d10 (or 6) + your Constitution modifier per death knight level
+
+#### Proficiencies
+___
+- **Armor:** All armors
+- **Weapons:** Simple weapons, martial weapons
+- **Tools:** None
+___
+- **Saving Throws:** Constitution, Charisma
+- **Skills:** Choose two from Athletics, Deception, Intimidation, Investigation, Perception, and Stealth
+
+#### Equipment
+You start with the following equipment, in addition to the equipment granted by your background:
+- *(a)* a martial weapon or *(b)* two shortswords
+- *(a)* five javelins or *(b)* any simple weapon
+- *(a)* scale mail or *(b)* chain mail
+- *(a)* a dungeoneer's pack or *(b)* an explorer's pack
+- A trinket from your past life
+
+\pagebreakNum
+
+### Dark Rebirth
+*1st-level death knight feature*
+
+<div style='margin-top:-4px;'></div>
+
+Becoming a death knight results in straddling the line between the living and the dead, existing in both worlds and neither.
+
+Every death knight shares a number of physical traits: their eyes glow with a pale blue light that leaks icy mist, their body feels cool to the touch, and their voice gains a deep echo. Mentally, their emotions and memories from before they became a death knight are typically dulled. They also gain an eternal hunger for causing suffering and death, an addiction that if not sated regularly will inevitably result in insanity.
+
+As a death knight, you gain the following traits:
+- You have two creature types: humanoid and undead. You can be affected by a game effect if it works on either of your creature types.
+- You have advantage on death saving throws.
+- You don’t need to eat, drink, or breathe.
+- You don’t need to sleep, and magic can’t put you to sleep. You can finish a long rest in 4 hours if you spend those hours in an inactive, motionless state, during which you retain consciousness.
+- You no longer age and will not die from old age.
+- At your option, you can also pick from or roll on the Death Knight Quirks table to create a quirk for your character.
+
+##### Death Knight Quirks
+d6|Quirks
+--|--------
+1| Your body temperature becomes arctic, causing your breath to fog and the air around you to gain a deep chill.
+2| Your presence feels unnatural, causing others to feel uneasy near you and animals such as dogs to become hostile.
+3| You gain a taste for food typically consumed by lower undead, such as humanoid flesh, vermin, and insects.
+4| Your memory of your previous life is especially dulled. Alternatively, it is almost entirely intact.
+5| You become obsessed with one particular food, drink, or hobby that you liked in life but can no longer enjoy.
+6| You are a little too comfortable with death and violence and have no problems with desecrating corpses and graveyards.
+
+\columnbreak
+### Rune Weapon
+*1st-level death knight feature*
+
+<div style='margin-top:-4px;'></div>
+
+You know how to inscribe magical runes onto a weapon, transforming it into the source of your power. 
+
+You perform the ritual to do so over the course of 1 hour, which can be done during a short rest. You can only have a single weapon bound to you. Bonding with a new weapon immediately breaks the bond with any previous rune weapon.
+
+You can't be disarmed of your rune weapon unless you are incapacitated. If it is on the same plane of existence as you, you can summon your rune weapon as a bonus action on your turn, causing it to teleport instantly to your hand.
+
+### Runic Magic
+*1st-level death knight feature*
+
+<div style='margin-top:-4px;'></div>
+
+You have learned to draw on the power of your rune weapon to unleash powerful spells.
+
+#### Cantrips
+You know two cantrips of your choice from the death knight spell list. You learn additional death knight cantrips of your choice at higher levels, as shown in the Cantrips Known column of the Death Knight table.
+
+#### Spell Slots
+The Death Knight table shows how many spell slots you have to cast your spells of 1st level and higher. To cast one of these spells, you must expend a slot of the spell's level or higher. You regain all expended spell slots when you finish a short or long rest.
+
+For example, if you know the 1st-level spell *death grip* and have a 1st-level and a 2nd-level spell slot available, you can cast *death grip* using either slot.
+
+#### Spells Known of 1st Level and Higher
+You know two 1st-level spells of your choice from the death knight spell list.
+
+The Spells Known column of the Death Knight table shows when you learn more death knight spells of your choice. Each of these spells must be of a level for which you have spell slots. For instance, when you reach 5th level in this class, you can learn one new spell of 1st or 2nd level.
+
+Additionally, when you gain a level in this class, you can choose one of the death knight spells you know and replace it with another spell from the death knight spell list, which also must be of a level for which you have spell slots.
+
+#### Spellcasting Ability
+Charisma is your spellcasting ability for your death knight spells, so you use your Charisma whenever a spell refers to your spellcasting ability. In addition, you use your Charisma modifier when setting the saving throw DC for a death knight spell you cast and when making an attack roll with one.
+
+<div style="text-align: Center">
+
+**Spell save DC** = 8 + your proficiency bonus + <br> your Charisma modifier
+
+**Spell attack modifier** = your proficiency bonus + <br> your Charisma modifier
+</div>
+
+#### Spellcasting Focus
+You can use your rune weapon as a spellcasting focus for your death knight spells.
+
+<img src='https://www.gmbinder.com/images/0Juz7SO.png' style='position:absolute; top:800px; left:45px; width:350px; z-index:1' />
+
+\pagebreakNum
+
+### Fighting Style
+*2nd-level death knight feature*
+
+<div style='margin-top:-4px;'></div>
+
+You adopt a particular style of fighting as your specialty. Choose one of the following options. You can't take a Fighting Style option more than once, even if you later get to choose again.
+
+#### Defense
+While you are wearing armor, you gain a +1 bonus to AC.
+
+#### Dueling
+When you are wielding a melee weapon in one hand and no other weapons, you gain a +2 bonus to damage rolls with that weapon.
+
+#### Great Weapon Fighting
+When you roll a 1 or 2 on a damage die for an attack you make with a melee weapon that you are wielding with two hands, you can reroll the die and must use the new roll, even if the new roll is a 1 or a 2. The weapon must have the two-handed or versatile property for you to gain this benefit.
+
+#### Profane Warrior
+You learn an additional two cantrips of your choice from the death knight spell list.
+
+#### Two-Weapon Fighting
+When you engage in two-weapon fighting, you can add your ability modifier to the damage of the second attack.
+
+> #### Optional Class Features
+> See Tasha's Cauldron of Everything, Pg. 41 for additional Fighting Styles. The Interception, Superior Technique, and Unarmed Fighting styles are appropriate choices for this class.
+
+<div style='margin-top:35px;'></div>
+
+### Runes of Power
+*2nd-level death knight feature*
+<div style='margin-top:-4px;'></div>
+
+You inscribe runes onto your rune weapon that are powered by pain and suffering. Whenever you finish a long rest, your rune weapon gains a number of runes of power equal to your proficiency bonus. Your runes remain powered until your next long rest. You must be holding your rune weapon to use any of its runes of power.
+
+You regain 1 rune of power each time you roll a 20 on the d20 roll for an attack with a rune weapon, or deal a killing blow with a rune weapon to a creature of significant threat (GM’s discretion). You can't maintain more powered runes than your proficiency bonus; any excess runes are lost at the end of your next turn. 
+
+As a bonus action, you can expend these runes to regain an expended spell slot. You must expend one rune for each level of the spell slot.
+
+\columnbreak
+
+### Knighthood
+*3rd-level death knight feature*
+
+<div style='margin-top:-4px'></div>
+
+You choose a path of knighthood to follow, becoming either a Knight of Blood, Knight of Frost, or Knight of the Unholy. Your choice of knighthood provides features at 3rd level and again at 7th, 10th, 14th, and 18th level.
+
+#### Knighthood Spells
+Each knighthood has a list of associated spells. You gain access to these spells at the levels specified in the knighthood description. Once you gain access to an knighthood spell, you always know it and the spell doesn't count against your number of spells known.
+
+If you gain a knighthood spell that doesn't appear on the death knight spell list, the spell is nonetheless a death knight spell for you.
+
+### Ability Score Improvement
+*4th-level death knight feature*
+
+<div style='margin-top:-4px'></div>
+
+When you reach 4th level, and again at 8th, 12th, 16th, and 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.
+
+#### Deathly Versatility (Optional)
+Whenever you reach a level in this class that grants the Ability Score Improvement feature, you can do one of the following, representing a change of focus:
+- Replace a fighting style you know with another fighting style available to death knights.
+- Replace one cantrip you learned from this class' runic magic feature with another cantrip from the death knight spell list.
+
+### Extra Attack
+*5th-level death knight feature*
+
+<div style='margin-top:-4px;'></div>
+
+You can attack twice, instead of once, whenever you take the Attack action on your turn. Moreover, you can cast one of your cantrips in place of one of those attacks.
+
+### Improved rune weapon
+*6th-level death knight feature*
+
+<div style='margin-top:-4px;'></div>
+
+Your attacks with your rune weapon count as magical for the purpose of overcoming resistance and immunity to nonmagical attacks and damage.
+
+You can also inscribe a rune onto a second weapon, turning it into a lesser rune weapon. As long as you are wielding your rune weapon, this lesser rune weapon can generate runes of power, counts as a magical weapon, and you cannot be disarmed of it unless incapacitated. You can summon both weapons to your hands as part of the same bonus action.
+
+\pagebreakNum
+
+### Runeforging
+*6th-level death knight feature*
+
+<div style='margin-top:-4px;'></div>
+
+You have learned to inscribe enchantments onto your rune weapon which draw upon your runes of power to fuel their effects.
+
+**[This is still a WIP. You get a passive benefit based on the rune, and you can expend a rune of power to gain an active ability.]**
+
+<!-- Whenever you finish a long rest, you may inscribe one of the following runes onto your rune weapon. Your rune remains on an object
+
+Your rune remains on an object until you finish a long rest, and an object can bear only one of your runes at a time.
+
+Each rune has a passive benefit
+
+You can inscribe specialized runes onto your rune weapon to enhance its abilities.
+
+Whenever you finish a long rest, you can touch a number of objects equal to the number of runes you know, and you inscribe a different rune onto each of the objects. To be eligible, an object must be a weapon, a suit of armor, a shield, a piece of jewelry, or something else you can wear or hold in a hand. Your rune remains on an object until you finish a long rest, and an object can bear only one of your runes at a time.
+
+The following runes are available to you when you learn a rune. If a rune has a level requirement, you must be at least that level in this class to learn the rune. If a rune requires a saving throw, your Rune Magic save DC equals 8 + your proficiency bonus + your Constitution modifier.
+
+<br> You only gain the benefits of the rune while wielding your rune weapon. You can only have one rune active at a time.
+
+You can inscribe special runes into your rune weapon
+
+You can use magic runes to enhance your gear. You learn two magic runes of your choice, from among the runes described below, and each time you gain a level in this class, you can replace one rune you know with a different one from this feature. When you reach certain levels in this class, you learn additional runes, as shown in the Runes Known table.
+
+-->
+
+#### Runes Known	
+Death Knight Level | Number of Runes
+----|-------
+6th | 2
+11th| 3
+17th| 4
+
+<!--
+
+Whenever you finish a long rest, you can touch a number of objects equal to the number of runes you know, and you inscribe a different rune onto each of the objects. To be eligible, an object must be a weapon, a suit of armor, a shield, a piece of jewelry, or something else you can wear or hold in a hand. Your rune remains on an object until you finish a long rest, and an object can bear only one of your runes at a time.
+
+The following runes are available to you when you learn a rune. If a rune has a level requirement, you must be at least that level in this class to learn the rune. If a rune requires a saving throw, your Rune Magic save DC equals 8 + your proficiency bonus + your Constitution modifier.
+
+-->
+
+
+#### Rune of the Fallen Crusader
+
+#### Rune of Spellbreaking
+**Prerequisite: 14th level**
+
+In addition, you can expend a rune of power to end one spell on yourself as an action. 
+
+### Lichborne
+*8th-level death knight feature*
+<div style='margin-top:-4px;'></div>
+
+You can't be charmed or frightened, and magic can't put you to sleep.
+
+### Death's Advance
+*9th-level death knight feature*
+<div style='margin-top:-4px;'></div>
+
+Your movement is unaffected by difficult terrain, and spells and other magical effects cannot reduce your speed.
+
+### Empowered rune weapon
+*11th-level death knight feature*
+
+<div style='margin-top:-4px;'></div>
+
+The runes inscribed in your weapon begin to resonate, building off of each other's power. Whenever you would gain a rune of power, you instead gain two runes.
+
+Additionally as an action, you can draw deep upon your rune weapon to recharge your abilities, regaining all expended runes of power. Once you use this ability, you cannot do so again until you finish a long rest.
+
+### Will of the Necropolis
+*13th-level death knight feature*
+<div style='margin-top:-4px;'></div>
+
+If you drop to 0 hit points and don't die outright, you can make a DC 10 Constitution saving throw. If you succeed, you drop to 1 hit point instead.
+
+Each time you use this feature after the first, the DC increases by 5. When you finish a short or long rest, the DC resets to 10.
+
+### UNKNOWN-15
+*15th-level death knight feature*
+<div style='margin-top:-4px;'></div>
+
+
+
+### Hungering rune weapon
+*17th-level death knight feature*
+<div style='margin-top:-4px;'></div>
+
+Whenever you would gain a rune of power, you instead gain three runes.
+
+### Deathlord
+*20th-level death knight feature*
+<div style='margin-top:-4px;'></div>
+
+**[Unknown. Related to rune weapons. Limited immortality?]**
+
+\pagebreak
+
+## Knighthoods
+
+### Knight of Blood
+
+#### Presence of Blood
+*3rd-level Knight of Blood feature*
+
+<div style='margin-top:-4px;'></div>
+
+Whenever you deal damage, you regain a number of hit points equal to your proficiency bonus, up to the amount of damage dealt.
+
+At 18th level, this benefit extends to all allies within 30 feet.
+
+#### ???
+*7th-level Knight of Blood feature*
+
+<div style='margin-top:-4px;'></div>
+
+#### ???
+*10th-level Knight of Blood feature*
+
+<div style='margin-top:-4px;'></div>
+
+#### ???
+*14th-level Knight of Blood feature*
+
+<div style='margin-top:-4px;'></div>
+
+#### ???
+*18th-level Knight of Blood feature*
+
+<div style='margin-top:-4px;'></div>
+
+### Knight of Frost
+#### Presence of Frost
+*3rd-level Knight of Frost feature*
+
+<div style='margin-top:-4px;'></div>
+
+Your body is filled with the chill of deep winter. You gain resistance to cold damage, can tolerate temperatures as low as -100 degrees Fahrenheit, and ignore difficult terrain created by ice and snow.
+
+Additionally, whenever you deal damage with a weapon attack, the target takes an additional amount of cold damage equal to your proficiency bonus. 
+
+#### ???
+*7th-level Knight of Frost feature*
+
+<div style='margin-top:-4px;'></div>
+
+#### ???
+*10th-level Knight of Frost feature*
+
+<div style='margin-top:-4px;'></div>
+
+Whenever a creature hits you with a melee attack, they take cold damage equal to your proficiency bonus.
+
+#### ???
+*14th-level Knight of Frost feature*
+
+<div style='margin-top:-4px;'></div>
+
+#### ???
+*18th-level Knight of Frost feature*
+
+<div style='margin-top:-4px;'></div>
+
+### Knight of the Unholy
+#### ???
+*3rd-level Knight of the Unholy feature*
+
+<div style='margin-top:-4px;'></div>
+
+#### ???
+*7th-level Knight of the Unholy feature*
+
+<div style='margin-top:-4px;'></div>
+
+#### ???
+*10th-level Knight of the Unholy feature*
+
+<div style='margin-top:-4px;'></div>
+
+#### ???
+*14th-level Knight of the Unholy feature*
+
+<div style='margin-top:-4px;'></div>
+
+#### ???
+*18th-level Knight of the Unholy feature*
+
+<div style='margin-top:-4px;'></div>
+
+#### Unholy Presence
+#### Plaguebringer
+
+
+\pagebreakNum
+
+<div style='column-count:2'>
+
+### Death Kt. Spells
+##### Cantrips
+Blood Strike
+<br/> Death Coil
+<br/> Death Strike
+<br/> Frost Strike
+<br/> Heart Strike
+<br/> Necrotic Strike
+<br/> Plague Strike
+<br/> Rune Strike
+
+##### 1st Level
+Absorb Elements ^XGE^
+<br> Bane
+<br> Cause Fear ^XGE^
+<br> ✦ Chains of Ice
+<br> Command
+<br> Compelled Duel
+<br> ✦ Corpse Explosion
+<br> ✦ Death Grip
+<br> Detect Evil and Good
+<br> Detect Magic
+<br> Detect Poison and Disease
+<br> ✦ Dread Favor
+<br> Fog Cloud
+<br> Heroism
+<br> Ice Knife ^XGE^
+<br> ✦ Icy Touch
+<br> Prot. from Evil and Good
+<br> Ray of Sickness
+<br> Thunderous Smite
+<br> Wrathful Smite
+
+##### 2nd Level
+✦ Anti-Magic Shell
+<br> Augury
+<br> Blindness/Deafness
+<br> ✦ Blood Boil
+<br> Calm Emotions
+<br> Crown of Madness
+<br> Darkvision
+<br> Find Steed
+<br> Gentle Repose
+<br> Hold Person
+<br> ✦ Howling Blast
+<br> ✦ Icebound Fortitude
+<br> Ray of Enfeeblement
+<br> Silence
+<br> Snilloc's Snowball <br>&nbsp;&nbsp;&nbsp; Swarm ^XGE^
+<br> Zone of Truth
+
+##### 3rd Level
+✦ Asphyxiate
+<br> Bestow Curse
+<br> Clairvoyance
+<br> Dispel Magic
+<br> Enemies Abound ^XGE^
+<br> Fear
+<br> Feign Death
+<br> Gaseous Form
+<br> Life Transference ^XGE^
+<br> ✦ Mantle of the <br>&nbsp;&nbsp;&nbsp; Fallen Crusader
+<br> Phantom Steed
+<br> Sleet Storm
+<br> Speak with Dead
+<br> Vampiric Touch
+<br> Water Walk
+
+##### 4th Level
+Arcane Eye
+<br> Banishment
+<br> Blight
+<br> ✦ Death and Decay
+<br> Death Ward
+<br> Divination
+<br> ✦ Dominate Undead
+<br> Find Greater Steed ^XGE^
+<br> Ice Storm
+<br> Phantasmal Killer
+<br> Sickening Radiance ^XGE^
+<br> Staggering Smite
+<br> Stoneskin
+<br> ✦ Summon Undead
+<br> Vitriolic Sphere ^XGE^
+
+##### 5th Level
+Antilife Shell
+<br> ✦ Army of the Dead
+<br> Banishing Smite
+<br> Circle of Power
+<br> Danse Macabre ^XGE^
+<br> ✦ Death Chain
+<br> ✦ Deathwyrm's Fury
+<br> Dispel Evil and Good
+<br> Enervation ^XGE^
+<br> Hallow
+<br> Hold Monster
+<br> Negative Energy Flood ^XGE^
+<br> ✦ Unholy Weapon
+
+</div>
+
+
+\pagebreakNum
+#### Blood Strike
+*Evocation cantrip*
+___
+- **Casting Time:** 1 action
+- **Range:** Self (5-foot radius)
+- **Components:** S, M (a melee weapon worth at least 1 sp)
+- **Duration:** Instantaneous
+---
+You make a melee attack with your runeblade against one creature within range. On a hit, the target takes an additional 1d6 fire damage as the creature's blood boils. This strike has no effect on creatures without blood or similar fluids. 
+
+Deals increased damage based on number of diseases on the target.
+
+#### Death Coil
+*Necromancy cantrip*
+___
+- **Casting Time:** 1 action
+- **Range:** 120 feet
+- **Components:** V, S
+- **Duration:** Instantaneous
+---
+You launch a bolt of necromantic energy from your runeblade at a target you can see within 120 feet. Make a ranged spell attack. On a hit, the target takes 1d10 necrotic damage. 
+
+The damage done by this bolt increases by 1d10 when you reach 5th level (2d10), 11th level (3d10), and 17th level (4d10).
+
+#### Death Strike
+*Necromancy cantrip*
+___
+- **Casting Time:** 1 action
+- **Range:** Self (5-foot radius)
+- **Components:** S, M (a melee weapon worth at least 1 sp)
+- **Duration:** Instantaneous
+---
+You make a melee attack with your runeblade against one creature within range. On a hit, the target takes an additional 1d4 necrotic damage, and you can gain a number of temporary hit points equal to the necrotic damage dealt. 
+
+The extra damage dealt by this strike increases by 1d4 when you reach 5th level (2d4), 11th level (3d4), and 17th level (4d4).
+
+#### Frost Strike
+*Evocation cantrip*
+___
+- **Casting Time:** 1 action
+- **Range:** Self (5-foot radius)
+- **Components:** S, M (a melee weapon worth at least 1 sp)
+- **Duration:** Instantaneous
+---
+You make a melee attack with your runeblade against one creature within range. On a hit, the target takes an additional amount of cold damage equal to your Charisma modifier and the creature's movement speed is reduced by half until the beginning of your next turn.
+
+This strike deals an additional 1d8 cold damage when reach 5th level, increasing by 1d8 when you reach 11th level (2d8) and 17th level (3d8). 
+
+\columnbreak
+#### Heart Strike
+*Evocation cantrip*
+___
+- **Casting Time:** 1 action
+- **Range:** Self (5-foot radius)
+- **Components:** S, M (a melee weapon worth at least 1 sp)
+- **Duration:** Instantaneous
+---
+You make a melee attack with your runeblade against one creature within range. On a hit, the target suffers the attack's normal effects, and a burst of weaponized blood strikes another creature of your choice that you can see within 5 feet of it. The second creature takes necrotic damage equal to your Charisma modifier.
+
+This strike's damage increases when you reach certain levels. At 5th level, the melee attack deals an extra 1d8 necrotic damage to the target on a hit, and the necrotic damage to the second creature increases to 1d8 + your Charisma modifier. Both damage rolls increase by 1d8 at 11th level (2d8 and 2d8) and 17th level (3d8 and 3d8). 
+
+#### Necrotic Strike
+*Necromancy cantrip*
+___
+- **Casting Time:** 1 action
+- **Range:** Self (5-foot radius)
+- **Components:** S, M (a melee weapon worth at least 1 sp)
+- **Duration:** Instantaneous
+---
+You make a melee attack with your runeblade against one creature within range. On a hit, the target's maximum hit point total is reduced by an amount equal to half the damage dealt and they can't regain hit points until the start of your next turn. The maximum hit point total reduction lasts for 1 hour.
+
+The strike also deals 1d8 necrotic damage when you reach 5th level, increasing by 1d8 at 11th level (2d8) and 17th level (3d8).
+
+#### Plague Strike
+*Necromancy cantrip*
+___
+- **Casting Time:** 1 action
+- **Range:** Self (5-foot radius)
+- **Components:** S, M (a melee weapon worth at least 1 sp)
+- **Duration:** Instantaneous
+---
+You make a melee attack with your runeblade against one creature within range. On a hit, the target takes an additional 1d10 poison damage. 
+
+The extra damage dealt by this strike increases by 1d10 when you reach 5th level (2d10), 11th level (3d10), and 17th level (4d10).
+
+#### Rune Strike
+*Divination cantrip*
+___
+- **Casting Time:** 1 action
+- **Range:** Self (5-foot radius)
+- **Components:** S, M (a melee weapon worth at least 1 sp)
+- **Duration:** Instantaneous
+---
+You make a melee attack with your runeblade against one creature within range, rolling 1d4 and adding it to the attack roll.
+
+The die size increases when you increase in level: to 1d6 at 5th level, 1d8 at 11th level, and 1d10 at 17th level.
