@@ -1,0 +1,200 @@
+<style>
+  .phb { background-image: url("https://www.gmbinder.com/images/QrLSPUv.jpg"); }
+  .phb { background-size: cover; }
+
+.memo1{
+    background-image: url(https://www.gmbinder.com/images/mLtvLEl.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 280px;
+    height: 211px;
+    position: absolute;
+    top: -40px;
+    left: 0px;
+    transform: rotate(-15deg);
+    padding: 20px 20px;
+    padding-top: 55px;
+}
+
+.memo1-bottom{
+    background-image: url(https://www.gmbinder.com/images/NLqlUKx.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 280px;
+    height: 211px;
+    position: absolute;
+    bottom: -40px;
+    right: 0px;
+    transform: rotate(-15deg);
+    padding: 5px 20px;
+}
+
+.memo2-top{
+    background-image: url(https://www.gmbinder.com/images/xAkCMa0.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 280px;
+    height: 196px;
+    position: absolute;
+    top: -20px;
+    transform: rotate(6deg);
+    padding: 20px 20px;
+    padding-top: 35px;
+}
+
+.memo2-bottom{
+    background-image: url(https://www.gmbinder.com/images/uz1AipU.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 280px;
+    height: 196px;
+    position: absolute;
+    bottom: -15px;
+    transform: rotate(6deg);
+    padding: 10px 20px;
+}
+
+.memo2-left{
+    background-image: url(https://www.gmbinder.com/images/b78l21b.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 280px;
+    width: 196px;
+    position: absolute;
+    left: -15px;
+    transform: rotate(6deg);
+    padding: 5px 20px;
+    padding-left: 45px;
+}
+
+.memo2-right{
+    background-image: url(https://www.gmbinder.com/images/aZw7Ex0.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 280px;
+    width: 196px;
+    position: absolute;
+    right: -15px;
+    transform: rotate(6deg);
+    padding: 5px 20px;
+    padding-right: 25px;
+}
+
+.memo3{
+    background-image: url(https://www.gmbinder.com/images/4MErzAb.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 280px;
+    height: auto;
+    position: absolute;
+    padding: 20px 20px;
+}
+
+.phb:after{display:none;}
+
+</style>
+
+<div class="wide" style='margin-top:200px;' align="center">
+
+# Memos For GM Binder
+##### An alternative box to add some more text in!
+When copying the styling between the tags, you don't absolutely need the<br> background for it to work. Perfect for adding bits of flavor or pencil drawings <br>to your doc, or even use it for meta purposes. 
+
+</div>
+
+<div class="memo1">
+
+##### This memo? memo1-top
+
+This little folded paper is best used in the top left corner, which is why you don't get the positioning style tag. 
+
+This is memo1-top. You can't put that much on here, but it is enough . You have to be careful not too put in too much text, as it will keep going outside this memo. 
+
+</div>
+
+<div class="memo2-top" style="right:20px;">
+
+##### Want this memo? memo2-top
+
+This memo, like its left neighbour, is best used at the top, but this one has the horizontal positioning in the div itself. This allows you to change the default `right:20px;`, or even positioned relative to the left page edge. This note also overflows if you have too much text. 
+
+</div>
+
+<div class="memo3" style="top:400px;left:268px;rotate(0deg);">
+
+##### Need a flexible memo? memo3
+
+This snippet will automagically correct the height of this little memo so you can fill this up with a lot of nonsense. You can't overdo it and make it too long, but for most purposes this note should do just fine automatically adjusting its height. If you'd want the height to be static, you could do so by adding `height:XYZpx;` in the div style tag. 
+
+In the div style tag, you can also choose where you want to position this note, and if you'd want to rotate it. 
+
+</div>
+
+<div class="memo1-bottom">
+
+##### This memo? memo1-bottom
+
+This little folded paper is best used in the bottom right corner, which is why you don't get the positioning style tag but a snippet variant. You can't put that much on here, even less, as you have can't put in too much text, as it will be outside this memo and off page. 
+
+</div>
+
+<div class="memo2-bottom" style="left:150px;">
+
+##### This is: memo2-bottom
+
+This memo, like its right neighbour, is best used at the bottom, but this one has the horizontal positioning in the div itself. This allows you to change the default `left:150px;` or even positioned relative to the right page edge. This note also overflows if you have too much text. 
+
+</div>
+
+<div class="memo2-left" style="top:400px;">
+
+##### This: memo2-left
+
+This memo, like its side neighbour, is best used at the vertical edge, but this one has the vertical positioning in the div itself. This allows you to change the default `top:400px;` or even positioned relative to the bottom page edge. This note also overflows if you have too much text. In contrast to the other memo2's, this one can take a bit more text.
+
+</div>
+
+<div class="memo2-right" style="top:400px;">
+
+##### This: memo2-right
+
+This memo, like its side neighbour, is best used at the vertical edge, but this one has the vertical positioning in the div itself. This allows you to change the default `top:400px;` or even positioned relative to the bottom page edge. This note also overflows if you have too much text. In contrast to the other memo2's, this one can take a bit more text.
+
+</div>
+
+\pagebreak
+
+<div class="wide">
+
+**When using a memo, replace the "```${#: field description}```" with the value of your choosing!** First make sure to copy the above styling.
+
+## Code Snippet Memo1
+```
+<div class="memo1-${1:Position(top/bottom)}">
+
+${2:Memo Title and Text}
+
+</div>
+```
+
+## Code Snippet Memo2
+```
+<div class="memo2-${1:Position(top/bottom/left/right)}" 
+     style="${2:Page edge}:${3:Spacing from page edge};">
+
+${4:Memo Title and Text}
+
+</div>
+```
+
+## Code Snippet Memo3
+```
+<div class="memo3" 
+ style="top:${1:Spacing from top}px;left:${2:Spacing from left}px;rotate(${3:Rotation}deg);">
+
+${4:Memo Title and Text}
+
+</div>
+```
+
+</div>
