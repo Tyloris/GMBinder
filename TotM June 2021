@@ -1,0 +1,116 @@
+<style>
+  .phb#p4:after { display:none; }
+  .phb#p5:after { display:none; }
+
+/* Background */
+  .phb{ background-image: url('https://gmbinder.com/images/KN1O92T.png') }
+  .phb{ background-size: cover }
+
+/* Notes */
+  .phb section blockquote {background-color: #f6e5d4}
+  .phb hr + section blockquote tr:nth-child(odd) td {background-color: transparent;}
+
+/* Tables */
+  table tr:nth-child(odd) td {background-color: #cccccc}
+
+/* Footer */
+  .phb .pageNumber {color: rgba(0, 0, 0, 0.5)}
+  .phb .footnote {color: rgba(0, 0, 0, 0.5)}
+  .phb:nth-child(odd):after{ 
+    content          : '';
+    position         : absolute;
+    bottom           : -3px;
+    left             : 10px;
+    z-index          : -1;
+    height           : 336px;
+    width            : 100%;
+    background-image : url('https://gmbinder.com/images/p7wvb4z.png');
+    background-size  : cover;
+}
+
+.phb:nth-child(even):after{ 
+    content          : '';
+    position         : absolute;
+    bottom           : -3px;
+    left             : -10px;
+    z-index          : -1;
+    height           : 336px;
+    width            : 100%;
+    background-image : url('https://gmbinder.com/images/p7wvb4z.png');
+    background-size  : cover;
+}
+
+/* Page Number */
+.phb .pageNumber{
+    position   : absolute;
+    bottom     : 30px;
+    width      : 50px;
+    text-align : center;
+}
+.phb:nth-child(even) .pageNumber{
+    left      : 12px;
+}
+.phb:nth-child(odd) .pageNumber{
+    right      : 12px;
+}
+
+.phb .pageNumber.auto{
+    position   : absolute;
+    bottom     : 41px;
+    width      : 50px;
+    text-align : center;
+}
+.phb:nth-child(even) .pageNumber.auto{
+    left      : 12px;
+}
+.phb:nth-child(odd) .pageNumber.auto{
+    right      : 12px;
+}
+
+</style>
+<style>
+  .phb {width: 500px;height: auto;}
+  .phb:after {display:none;}
+  .centered {width: 90%;margin: auto;display: block;}
+  .phb img {height: 200px;margin: auto; margin-bottom:30px;display: block;}
+
+</style>
+
+### The Balance of Light and Shadow
+*Staff, legendary (requires attunement by a priest)*
+
+This staff counts as a holy symbol and can be wielded as a magic quarterstaff that grants a +2 bonus to attack and damage rolls made with it. While holding it, gain a +2 bonus to Armor Class, saving throws, and spell attack rolls.
+
+You can use a bonus action to cause the staff to shed bright light in a 20-foot radius and dim light for an additional 20 feet, or to extinquish the light. 
+
+The staff can either take the form of the golden staff Benediction or the silver staff Anathema. Some of its properties vary based on which form it currently takes, and it can be transformed from one form to the other as an action.
+
+The staff has 20 charges for the following properties. The staff regains 1d8 + 2 expended twice daily: once at dawn and once at dusk. If you expend the last charge, roll a d20. On a 20, the staff regains 1d4 + 1 charges.
+
+#### Anathema
+
+_For every light, there is a shadow._
+
+<img src='https://gamepedia.cursecdn.com/wowpedia/thumb/9/96/Anathema_TCG.jpg/1024px-Anathema_TCG.jpg' style='width:320px' />
+
+You have resistance to necrotic damage while you hold this staff.
+
+***Shadow Aura.*** When Anathema is shedding light, you gain the following abilities: If you deal necrotic damage with a spell on a target within 40 feet, the target takes an additional 4 (1d8) necrotic damage. Additionally, at the end of your turn, you can deal 1 necrotic damage to any number of creatures within 20 feet.
+
+***Shadow Smite.*** When you hit with a melee attack using the staff, you can expend 1 charge to deal an extra 4 (1d8) necrotic damage to the target. The target must make a DC 15 Wisdom saving throw or be frightened until the beginning of your next turn.
+
+***Spells.*** While holding the staff, you can use an action to expend some of its charges to cast one of the following spells from it, using your spell save DC and spellcasting ability: *bestow curse* (3 charges), *dark void* (1 charge per spell level, up to 5th), *harm* (6 charges), *mind spike* (2 charges), or *shadow crash* (5 charges).
+
+#### Benediction
+
+_Behind every shadow there is the light of hope._
+
+<img src='https://gamepedia.cursecdn.com/wowpedia/2/2e/Benediction_TCG.jpg?version=84430f533af672296715c5201f9fa4a5' style='width:320px' />
+
+You have resistance to radiant damage while you hold this staff.
+
+***Blessed Aura.*** When Benediction is shedding light, you gain the following abilities: If you deal radiant damage with a spell on a target within 40 feet, the target takes an additional 4 (1d8) radiant damage. Additionally, at the end of your turn, you can stabilize any number of dying creatures within 20 feet.
+
+***Blessed Smite.*** When you hit with a melee attack using the staff, you can expend 1 charge to deal an extra 4 (1d8) radiant damage to the target. The target must make a DC 15 Dexterity saving throw or be blinded until the beginning of your next turn.
+
+***Spells.*** While holding the staff, you can use an action to expend some of its charges to cast one of the following spells from it, using your spell save DC and spellcasting ability: *cure wounds* (1 charge per spell level, up to 5th), *heal* (6 charges), *lesser restoration* (2 charges), *mass cure wounds* (5 charges), or *remove curse* (3 charges).
