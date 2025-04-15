@@ -1,0 +1,2702 @@
+<style>
+/* GLOBAL FORMATTING  */
+
+  /* Resize page to international A4 */
+  .phb {
+    width: 210mm;
+    height: 296.8mm;
+  }
+  .phb:after { content: ""; }
+
+
+/* TABLE OF CONTENTS  */
+
+  /* toc specifically wants black text. This resets the headers*/
+  .toc a {
+    color: inherit !important;
+  }
+  /* Allow dot leaders to fill remaining space but not overlap */
+  .toc li span:nth-child(2) {
+    width: auto;
+    overflow: hidden;
+    white-space: nowrap;
+    display: block;
+  }
+  .toc li span:nth-child(2):after {
+    font-family: BookSanity;
+    font-size: 0.317cm;
+    font-weight: normal;
+    color: black;
+    content:
+      " ........................................"
+      "........................................."
+      ".........................................";
+    }
+
+  /* Style TOC page numbers*/
+  .toc li span:first-child {
+    float: right;
+    font-family: BookSanity;
+    font-size: 0.317cm;
+    font-weight: normal;
+    color: black;
+    margin-left: 1px;
+  }
+
+  /* Adjust TOC H3 styles */
+  .toc li h3 span:nth-child(2):after {
+  	content: " ";
+  }
+  .toc li h3 {
+    margin-bottom: 4px !important;
+    margin-top: 10px !important;
+    line-height: initial !important;
+  }
+  .toc li h3 span:first-child {
+  	line-height: 1.8em !important;
+  }
+
+  /* Reduce TOC list indentation*/
+  .toc ul ul {
+  	margin-left: 10px !important;
+  }
+  .toc>ul>li {
+    margin-bottom: initial !important;
+  }
+
+
+/* TABLES AND BLOCKS */
+
+  /* Clear internal padding and add gap above for green note blocks*/
+  .phb blockquote {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .phb blockquote { margin-top: 1em;
+  }
+
+
+/* INK BLOT STYLES */
+
+  /* Root style for inkblots. Use alone, or together with
+  one of the inkb lotstyle classes below. Essentially:
+  <img url='{url}' class='inkblot inkblot-blue' />
+  */
+  .inkblot {
+    position: absolute;
+    mix-blend-mode: multiply;
+    opacity: 0.6;
+  }
+
+  .inkblot-blue {
+    filter: hue-rotate(190deg) saturate(120%)
+  }
+
+  .inkblot-green {
+    filter: hue-rotate(120deg)
+  }
+
+</style>
+
+<style>
+/* Background */
+  .phb{ background-image: url('https://gmbinder.com/images/KN1O92T.png') }
+  .phb{ background-size: cover }
+
+/* Notes */
+  .phb section blockquote {background-color: #f6e5d4}
+  .phb hr + section blockquote tr:nth-child(odd) td {background-color: transparent;}
+
+/* Tables */
+  table tr:nth-child(odd) td {background-color: #cccccc}
+
+/* Footer */
+  .phb .pageNumber {color: rgba(0, 0, 0, 0.5)}
+  .phb .footnote {color: rgba(0, 0, 0, 0.5)}
+  .phb:nth-child(odd):after{ 
+    content          : '';
+    position         : absolute;
+    bottom           : -7px;
+    left             : 10px;
+    z-index          : -1;
+    height           : 336px;
+    width            : 100%;
+    background-image : url('https://www.gmbinder.com/images/bNTz1nk.png');
+    background-size  : cover;
+}
+
+.phb:nth-child(even):after{ 
+    content          : '';
+    position         : absolute;
+    bottom           : -7px;
+    left             : -10px;
+    z-index          : -1;
+    height           : 336px;
+    width            : 100%;
+    background-image : url('https://www.gmbinder.com/images/6NCzAN0.png');
+    background-size  : cover;
+}
+
+/* Page Number */
+.phb .pageNumber{
+    position   : absolute;
+    bottom     : 30px;
+    width      : 50px;
+    text-align : center;
+}
+.phb:nth-child(even) .pageNumber{
+    left      : 12px;
+}
+.phb:nth-child(odd) .pageNumber{
+    right      : 12px;
+}
+
+.phb .pageNumber.auto{
+    position   : absolute;
+    bottom     : 41px;
+    width      : 50px;
+    text-align : center;
+}
+.phb:nth-child(even) .pageNumber.auto{
+    left      : 12px;
+}
+.phb:nth-child(odd) .pageNumber.auto{
+    right      : 12px;
+}
+
+/* INK BLOT STYLES */
+
+  /* Root style for inkblots. Use alone, or together with
+  one of the inkb lotstyle classes below. Essentially:
+  <img url='{url}' class='inkblot inkblot-blue' />
+  */
+  .inkblot {
+    position: absolute;
+    mix-blend-mode: multiply;
+    opacity: 0.6;
+  }
+
+  .inkblot-blue {
+    filter: hue-rotate(190deg) saturate(120%)
+  }
+
+  .inkblot-green {
+    filter: hue-rotate(120deg)
+  }
+
+</style>
+
+# Chapter 4: New Equipment
+Azeroth is home to a great many intelligent races, each with their own unique set of cultures and craftsmen. From the great dwarven smiths of Ironforge to the brilliant gnomish engineers of Gadgetzan, from the bubbling cauldrons of the undead alchemists of Undercity to the durable leatherwork of the tauren of Mulgore, there are quality creations in every corner of the world.
+
+New forms of nonmagical equipment, from weapons to tools, that originate in this setting are collected in this chapter, to be used alongside the equipment presented in Chapter 5 of the Player's Handbook.
+
+## Magic and Technology
+<!-- Goblins and gnomes have shown great ingenuity in using natural materials and science to create items ranging from simple explosives to mechanical lifeforms. Magic is also rather ubiquitous; whether crafted intentionally by spellcasters and craftsmen or arising naturally from the presence or demise of powerful magical creatures, magic items practically litter the world.
+
+Commerce is the lifeblood of any world and Azeroth is no different. Goblins are shameless profiteers, willing to put themselves at risk by conducting trade across faction lines in search of wealth. Additionally, auction houses are common features in large cities, where harvested materials and discovered artifacts are sold to the highest bidder--or whoever is willing to meet the buyout price. 
+
+These elements combined make Warcraft a setting with a very active market goods both magical and mundane. A  -->
+
+Warcraft as a setting is perhaps best described as both *High Magic* and *Sword and Sorcery*, as defined on <br/> page 38 of the Dungeon Master's Guide. Mundane magic equipment is commonplace, particularly in larger cities.
+
+Elven cities such as Silvermoon and Darnassus are renowned for their streetside displays and mystical enclaves, and the floating mage city of Dalaran is said to practically overflow with arcane power. Most other major cities share this phenomena, to some extent; playing host to guilds and orders that dedicate themselves to different magical arts.
+
+Azeroth is also a world of gunpowder, steam engines, and clockwork devices. Some technological creations are so advanced that they blur the line between magic and the mundane. Gnomes and goblins search for oil and esoteric substances to power their sprawling tech-hub cities and settlements.
+
+## Starting Equipment
+When you create your character, follow the standard rules located in the Player's Handbook for determining your starting equipment. If you choose the alternative option of starting with a number of gold pieces based on your class, consult the Starting Wealth by Class table below.
+
+##### Starting Wealth by Class
+|&nbsp; Class        | Funds       | Average|
+|:-------------------|------------:|-------:|
+|&nbsp; Death Knight | 4d4 x 10 gp | 100 gp |
+|&nbsp; Demon Hunter | 2d4 x 10 gp |  50 gp |
+|&nbsp; Druid        | 2d4 x 10 gp |  50 gp |
+|&nbsp; Hunter       | 5d4 x 10 gp | 125 gp |
+|&nbsp; Mage         | 4d4 x 10 gp | 100 gp |
+|&nbsp; Monk         | 2d4 x 10 gp |  50 gp |
+|&nbsp; Paladin      | 5d4 x 10 gp | 125 gp |
+|&nbsp; Priest       | 4d4 x 10 gp | 100 gp |
+|&nbsp; Rogue        | 4d4 x 10 gp | 100 gp |
+|&nbsp; Shaman       | 5d4 x 10 gp | 125 gp |
+|&nbsp; Warlock      | 4d4 x 10 gp | 100 gp |
+|&nbsp; Warrior      | 5d4 x 10 gp | 125 gp |
+
+\columnbreak
+
+<div style='margin-top:430px;'></div>
+
+> #### Variant: Silver Standard
+> In most D&D settings, gold is the most common coin and therefore the standard unit of wealth, aka the "gold standard." 
+>
+> While this remains true in Azeroth, the ratios of the values of coins differs. Instead of a ratio of 1:10 (Ex: 1 gp to 10 sp), the Warcraft setting uses a ratio of 1:100 (1 gp to 100 sp). Platinum and electrum pieces are not used in this system.
+>
+> In terms of roleplaying, this ensures that gold is more rarely handed out and therefore feels more rewarding to earn. The GM can choose to implement this system, aka the "silver standard," by making the following changes:
+> - Prices in terms of gp are now in sp. For example, a dagger worth 2 gp is now worth 2 sp.
+> - Prices in terms of sp are now 1/10 their original value. For example, a club worth 1 sp is now worth 1/10 sp, or 10 cp.
+> - Prices in terms of cp do not change. 
+> - The following trade goods now have new prices: 1 lb. of silver (50 sp), 1 lb. of gold (5,000 sp), and 1 lb. of platinum (500,000 sp).
+>
+> ##### Silver Standard Exchange Rates
+> Coin          | cp        | sp        | gp        |
+> --------------|----------:|----------:|----------:|
+> Copper (cp)   | 1         | 1/100     | 1/10,000  |
+> Silver (sp)   | 100       | 1         | 1/100     |
+> Gold (gp)     | 10,000    | 100       | 1         |
+
+<img src='https://www.firstbenefits.org/wp-content/uploads/2017/10/placeholder.png' style='position:absolute; top:90px; right:0px; width:400px;' />
+
+<!--
+<img src='https://www.gmbinder.com/images/gJg0VCn.jpg' style='position:absolute; top:585px; right:-200px; width:750px' />
+<img src='https://www.gmbinder.com/images/1Ns1K1B.png' style='position:absolute; top:-0px; right:0px; width:900px' /> 
+-->
+
+\pagebreakNum
+
+<img src='https://www.gmbinder.com/images/i8nEjoG.png' style='position:absolute; top:0px; left:0px; width:100%' />
+
+> Placeholder image for commissioned art
+
+<div style='margin-top:900px;'></div>
+
+<div class='classTable wide'>
+
+##### New Weapons
+
+|&nbsp; Name | Cost |&nbsp;&nbsp;&nbsp;&nbsp;| Damage | Weight |&nbsp;&nbsp;&nbsp;&nbsp;| Properties |
+|--------------------------------|------:|-|:---------------|------:|-|------------------------------|
+|&nbsp; *Simple Melee Weapons*          |       ||                 |       ||
+|&nbsp;&nbsp;&nbsp; Bayonet      | 2 gp  || 1d4 piercing    | 1 lb. || Special, versatile (1d6)
+|&nbsp;&nbsp;&nbsp; Knuckles     | 2 gp  || 1d4 bludgeoning | 1 lb. || Glove, light
+|&nbsp;&nbsp;&nbsp; Scythe       | 5 gp  || 1d8 slashing    | 5 lb. || Two-handed
+|&nbsp; *Martial Melee Weapons*          |       ||                 |       ||
+|&nbsp;&nbsp;&nbsp; Battle Totem | 35 gp || 1d12 bludgeoning|35 lb. || Heavy, two-handed
+|&nbsp;&nbsp;&nbsp; Boomerang    | 25 gp || 1d6 bludgeoning | 2 lb. || Finesse, returning, thrown (range 30/120)
+|&nbsp;&nbsp;&nbsp; Chakram      | 25 gp || 1d6 slashing    | 2 lb. || Finesse, returning, thrown (range 30/120)
+|&nbsp;&nbsp;&nbsp; Greatspear   | 40 gp || 2d6 piercing    |12 lb. || Heavy, two-handed
+|&nbsp;&nbsp;&nbsp; Spiked Chain | 15 gp || 1d6 slashing    | 5 lb. || Finesse, reach, two-handed
+|&nbsp;&nbsp;&nbsp; Twinblade    | 50 gp || 1d8 slashing    | 5 lb. || Special, two-handed 
+|&nbsp;&nbsp;&nbsp; Warclaw      | 12 gp || 1d6 slashing    | 2 lb. || Glove, light
+|&nbsp;&nbsp;&nbsp; Warglaive    | 25 gp || 1d6 slashing    | 2 lb. || Light, thrown (range 20/60)
+|&nbsp; *Martial Ranged Weapons*         |       ||                 |       ||                                                       |
+|&nbsp;&nbsp;&nbsp; Blunderbuss  | 85 gp || 2d6 piercing    |10 lb. || Firearm (range 20/60), loading, two-handed  |
+|&nbsp;&nbsp;&nbsp; Bolas        | 5 gp  || 1d4 bludgeoning | 1 lb. || Special, thrown (range 20/60)
+|&nbsp;&nbsp;&nbsp; Net Launcher | 50 gp || —               |10 lb. || Ammunition (range 40/160), loading, special, <br/> two-handed |
+|&nbsp;&nbsp;&nbsp; Pistol       | 75 gp || 1d8 piercing    | 3 lb. || Firearm (range 30/120), loading, light      |
+|&nbsp;&nbsp;&nbsp; Musket       | 75 gp || 1d12 piercing   |10 lb. || Firearm (range 60/240), loading, two-handed |
+
+</div>
+
+\pagebreakNum
+
+##  New Weapons
+
+Azeroth is home to many cultures, some of whom have their own unique weapons. Some weapons can be described as those already existing in Chapter 5 of the Player's Handbook, such as the umbral crescent of the night elves as a scimitar.
+
+Others exist that are unique enough to require their own entry. These are intended to be general weapons and do not conform to a specific culture: the warglaive can equally apply to that wielded by blood elven demon hunters as it does troll shadow hunters, and the chakram could be either those thrown by the winged arakkoa or represent the moon glaives used by the night elven sentinels.
+
+### New Weapon Properties
+New weapon properties are described here.
+
+***Firearm.*** You can use a weapon that has the firearm property to make a ranged attack only if you have ammunition to fire from the weapon. Each time you attack with the weapon, you expend one piece of ammunition. Drawing the ammunition from a bullet pouch is part of the attack (you need a free hand to load a one-handed weapon). When fired, this weapon creates a loud noise, a flash of light, and a smell of burnt explosives. The sound can easily be heard up to 200 feet away when a ranged attack roll is made with it. If you use a weapon that has the exploding ammunition property to make a melee attack, you treat the weapon as an improvised weapon.
+
+***Glove.*** A glove weapon is worn on your hand or forearm, and you cannot be disarmed of it. Your attacks with a glove weapon count as both an unarmed strike and a weapon attack. You can hold objects, wield weapons, and cast spells with a hand fitted with a glove weapon, but you can only attack with the glove weapon if that hand is unoccupied. It takes an action to don or doff a glove weapon.
+
+***Returning.*** When you throw this weapon and miss, it returns to your hand when the attack resolves.
+
+> ##### Azeroth's Guns: Primitive or Modern?
+> In our world, firearms have gone through hundreds of years of development, starting from a curiosity so inaccurate, slow, and unreliable that it was only useful in massed numbers and eventually developing into the key component of modern combat. 
+> 
+> The setting of Azeroth on the other hand has a very loose definition on what level of firearms technology it utilizes. A blunderbuss can be seen alongside a sniper rifle, with the rare automatic rifles regulated to being belt-fed variants used on large siege vehicles. The setting runs on "rule of cool," with most firearms using a flintlock aesthetic with a focus on long guns over handguns (which are typically very rare).
+>
+> Following this pattern, the firearms depicted in this chapter are meant to be simplified represen&shy;tations that can be used alongside other projectile weapons like bows, crossbows, and slings. More advanced versions than these do exist within the setting, but should be regarded as more like magic items than simple equipment.
+
+\columnbreak
+
+<div class='classTable' >
+
+##### New Adventuring Gear
+
+|&nbsp; Name | Cost |&nbsp;&nbsp;&nbsp;| Weight &nbsp;|
+|----------------------------------------|------:|-|------------:|
+|&nbsp; *Ammunition*                     |       ||        &nbsp;|
+|&nbsp;&nbsp;&nbsp; Firearm bullets (40) |  1 gp ||  5 lb. &nbsp;|
+|&nbsp; Banner                           | 10 gp ||  5 lb. &nbsp;|
+|&nbsp; Bullet pouch                     |  2 gp ||  2 lb. &nbsp;|
+|&nbsp; Buzzbox                          |2,000 gp || 10 lb. &nbsp;|
+|&nbsp; Calculator                       | 50 gp ||  1 lb. &nbsp;|
+|&nbsp; Dynamite (stick)                 |100 gp ||  1 lb. &nbsp;|
+|&nbsp; Firework                         | 25 gp ||  1 lb. &nbsp;|
+|&nbsp; Fishing Tackle                   | ## gp ||  # lb. &nbsp;|
+|&nbsp; Flashlight                       | 50 gp ||  2 lb. &nbsp;|
+|&nbsp; Glowstick                        |  5 cp ||  —     &nbsp;|
+|&nbsp; *Grenades*                       |       ||        &nbsp;|
+|&nbsp;&nbsp;&nbsp; Fragmentation        |150 gp ||  2 lb. &nbsp;|
+|&nbsp;&nbsp;&nbsp; Incendiary           |150 gp ||  2 lb. &nbsp;|
+|&nbsp;&nbsp;&nbsp; Smoke                | 25 gp ||  2 lb. &nbsp;|
+|&nbsp; *Holy Symbols*                   |       ||        &nbsp;|
+|&nbsp;&nbsp;&nbsp; Libram               | 25 gp ||  5 lb. &nbsp;|
+|&nbsp;&nbsp;&nbsp; Rush'kah             | 10 gp ||  1 lb. &nbsp;|
+|&nbsp; Lantern, Electric                | 50 gp ||  —     &nbsp;|
+|&nbsp; Lighter                          | 25 gp ||  —     &nbsp;|
+|&nbsp; Music Box                        | 20 gp ||  1 lb. &nbsp;|
+|&nbsp; Parachute                        | 30 gp || 15 lb. &nbsp;|
+|&nbsp; Scope                            |1,000 gp ||  1 lb. &nbsp;|
+|&nbsp; Snap-o-Matic                     | 30 gp || 15 lb. &nbsp;|
+|&nbsp; Timepiece                        | 50 gp ||  —     &nbsp;|
+
+##### New Tools
+
+|&nbsp; Name | Cost |&nbsp;&nbsp;&nbsp;| Weight &nbsp;|
+|----------------------------------------|------:|-|------------:|
+|&nbsp; *Artisan's Tools*                |       ||        &nbsp;|
+|&nbsp;&nbsp;&nbsp; Engineer's Tools     | 50 gp || 15 lb. &nbsp;|
+|&nbsp;&nbsp;&nbsp; Enchanter's Supplies | 30 gp ||  5 lb. &nbsp;|
+|&nbsp; *Gaming Sets*                    |       ||        &nbsp;|
+|&nbsp;&nbsp;&nbsp; Hearthstone card set |  5 gp ||  —     &nbsp;|
+|&nbsp;&nbsp;&nbsp; Pandaren jihui board |  5 gp ||  2 lb. &nbsp;|
+|&nbsp; *Musical Instruments*            |       ||        &nbsp;|
+|&nbsp;&nbsp;&nbsp; War Drums            | ## gp ||  # lb. &nbsp;|
+|&nbsp; Suturing Kit                     | 25 gp ||  3 lb. &nbsp;|
+|&nbsp; Vehicles (air)                   |     ✦ ||      ✦ &nbsp;|
+✦ See the "New Mounts and Vehicles" section.
+
+</div>
+
+\pagebreakNum
+
+### Special Weapons
+Weapons with special rules are described here.
+
+***Bayonet.*** This blade can be attached or removed from the end of a crossbow or firearm as an action, allowing it to be used it to be used as a melee weapon instead of an improvised one. In order to use the bayonet's versatile property, the attached weapon must have the two-handed property. While the most common form of bayonet is a slim blade for piercing, other forms of bayonet exist such as those that appear as axe blades or hammer heads, dealing slashing or bludgeoning damage as appropriate.
+
+***Bolas.*** ***[TODO. Trip attack at distance. Based on recently added hunter ability.]***
+
+***Net Launcher.*** This weapon allows you to make an attack with a net at a greater distance (see chapter 5 of the Player's Handbook for more rules on the net). A net must be folded before it can be used as ammunition; folding a net takes 1 minute.
+
+***Twinblade.*** This weapon has a set of twin blades on either side of its hilt. If you make an attack with it as part of the Attack action on your turn, you can use a bonus action imme&shy;diately after to make another melee attack with it. This attack deals 1d4 slashing damage on a hit, instead of 1d8.
+
+\pagebreak
+
+## New Adventuring Gear
+This section describes items that have special rules or require further explanation.
+
+***Bandages.*** 
+
+***Banner.*** This vertical flag on a 10-foot pole is typically used to indicate the position of a commander on the battlefield and to relay their commands.
+
+***Binoculars.*** When looking at distant objects through the twin tubes of this device, they appear to be twice as close. Typical binoculars are only effective when looking at objects more than 120 feet away but less than 1/2 mile.
+
+***Bipod.*** This simple device can be attached to a crossbow or firearm, allowing it to be braced against the ground. You do not have disadvantage on attack rolls when firing an attached ranged weapon while prone.
+
+***Bullet Pouch.*** A watertight leather pouch or bandolier, capable of holding up to forty firearm bullets.
+
+***Buzzbox.*** This device, contained within a small backpack, allows the wearer to communicate with other buzzboxes within 5 miles of it. The device's range is reduced by dense materials. For every 3 feet of wood or dirt, 1 foot of stone, 1 inch of common metal, or thin sheet of lead, its range is halved (down to a minimum of 120 feet). 
+
+***Calculator.*** This palm-sized but bulky mechanical device can be used to perform basic trigonometry and arithmetic functions, printing the results on a thin strip of paper.
+
+***Clockwork Toy.*** This toy is a clockwork animal, monster, or person, such as a frog, mouse, bird, dragon, or soldier. When placed on the ground, the toy moves 5 feet across the ground on each of your turns in a random direction. It makes noises as appropriate to the creature it represents.
+
+***Clothes, Cold Weather.*** Made of heavy cloth and fur, these clothes allow you to automatically succeed on saving throws against the effects of extreme cold. They provide no benefit if they are no longer dry.
+
+***Clothes, Hot Weather.*** Made of thin, breezy cloth, these clothes allow you to automatically succeed on saving throws against the effects of extreme heat.
+
+***Compass.*** A simple device that always points north, unless disrupted by nearby magnetic fields. All Wisdom (Survival) checks made to determine location and direction while using a compass are made with advantage.
+
+***Diving Helmet.*** (The diving bell kind. Has a hose attached to a buoy that automatically pumps air for X hours.)
+
+***Duct tape.*** (Or the tech equivalent of it.)
+
+***Dynamite.*** As an action, a creature can light a stick of dynamite and throw it at a point up to 60 feet away. Each creature within 5 feet of that point must make a DC 13 Dexterity saving throw, taking 3d6 bludgeoning damage on a failed save, or half as much damage on a successful one.
+
+A character can bind up to eight sticks together over 1 minute so they explode at the same time. Each additional stick increases the damage by 1d6 (to a maximum of 10d6) and the burst radius by 5 feet (to a maximum of 20 feet). A set of bound dynamite cannot be thrown more than 10 feet, but deals double damage to objects and structures.
+
+Dynamite can be rigged with a longer fuse to explode after a set amount of time, usually 1 to 6 rounds. Roll initiative for the dynamite. After the set number of rounds goes by, the dynamite explodes on that initiative.
+
+***Lighter.*** This small container is capable of producing a tiny flame that sheds bright light in 5-foot radius and dim light for an additional 5 feet. Using it to light a torch—or anything else with exposed fuel—takes a ***BONUS*** action.
+
+***Firework, Signal.*** A simple rocket that propels itself for 150 feet then explodes in a burst of colored sparks. When fired into the air, the explosion can be seen for up to 15 miles. 
+
+***Flare.*** [More road flare than flare gun. Or not.]
+
+***Flashlight.*** This tube-shaped device, sometimes called an "electric torch," can be turned on or off as an action. It casts bright light in 60-foot cone and dim light for an additional 60 feet. A flashlight is powered by turning a crank on the side. Turning the crank for 10 minutes provides enough power for 8 hours.
+
+***Fume Mask.***
+
+***Fuse and Detonator.*** [A device that can be used to instantaneously detonate dynamite it is attached to at a distance; comes with a roll of fuse akin to a roll of twine.] 
+
+***Glowstick.*** As an action, you can light one or more glowsticks, providing bright light in a 5-foot radius and dim light for an additional 5 feet. A lit glowstick starts to fade after 8 hours, no longer illuminating its surroundings (though it still sheds enough light to be noticed in the dark for another 4 hours). Once lit, a glowstick cannot be extinguished.
+
+***Goggles.*** A set of goggles protects your eyes from wind, smoke, and other irritants. Goggles sometimes have special lenses, such as smoky glass to protect from bright lights and sparks or magnifying lenses for precision work.
+
+***Grenade, Fragmentation.*** As an action, you can throw the grenade up to 60 feet away. Each creature within 5 feet of that point must succeed on a DC 12 Dexterity saving throw or take 3d6 piercing damage.
+
+***Grenade, Incendiary.*** As an action, you can throw the grenade up to 60 feet away. Each creature within 5 feet of that point must succeed on a DC 12 Dexterity saving throw or take 1d6 fire damage and be set on fire. A creature on fire take 1d6 fire damage at the end of each of their turns unless they take an action make a DC 10 Dexterity check to extinguish the flame.
+
+***Grenade, Smoke.*** As an action, you can throw the grenade up to 60 feet away. One round after a smoke grenade lands, it emits a cloud of smoke that creates a heavily obscured area in a 20-foot radius. A moderate wind (at least 10 miles per hour) disperses the smoke in 4 rounds; a strong wind (20 or more miles per hour) disperses it in 1 round.
+
+This metal sphere’s casing is pockmarked with holes and capped with a thick fuse. When lit, it spews suffocating black smoke, heavily obscuring a 10-foot cube for 1 minute. Air-breathing creatures within the smoke must make a DC 10 Constitution saving throw, or have disadvantage on all rolls made while breathing the fumes. A wind of moderate or greater speed suppresses the smoke effect. Rounds where the smoke is suppressed still count against the effect’s 1-minute duration.
+
+***Lantern, Electric.*** An electric lantern has three settings, which you can switch between as an action: high, low, and off. When on the high setting, it sheds bright light in a 30-foot radius and dim light for an additional 30 feet. On the low setting, it sheds dim light for 5 feet. An electric lantern is powered by turning a crank on the side. Turning the crank for 10 minutes provides enough power for 8 hours on the high setting, or 48 hours on the low setting.
+
+\pagebreak
+
+***Libram.*** This book of prayers, philosophy, and holy teachings can be used as a holy symbol.
+
+***Music Box.*** When opened. this music box plays a single song at a moderate volume. The box stops playing when it reaches the song's end or when it is closed.
+
+***Parachute.*** When wearing this backpack-shaped piece of gear, you can deploy it as a reaction while falling. If deployed while at least 120 feet above the ground, your falling speed is reduced to 60 feet per round until you land, taking no damage. While falling, your size becomes one size larger for purposes of space. Once it has been used, the parachute takes 10 minutes to repack.
+
+***Pen.***
+
+***Pencil.***
+
+***Portable Stove.*** (Camp stove for cooking.)
+
+***Rocket.*** (The offensive variety, basic.)
+
+***Rush'kah.*** This carved and painted wooden mask the size of a small shield is typically used by troll cultures as holy symbols for their spirit worship.
+
+***Scope.*** A scope can be attached to a two-handed firearm or crossbow using 1 minute. You can use your bonus action to aim through the scope, gaining disadvantage on attack rolls against targets in normal range but removing the disadvantage of attacking at long range until the beginning of your next turn.
+
+***Snowshoes.*** [Speed is reduced, but can walk on snow at "full" speed.]
+
+***Spyglass.*** When looking at distant objects through the twin tubes of this device, they appear to be twice as close. Spyglasses have an adjustable range, but are usually only effective when looking at objects more than 1/2 mile away.
+
+***Snap-o-matic.*** This device can be used to capture the image of whatever it is looking at and print it out on a small piece of special paper called film. When used, a small flashlight on the front of the device flashes brightly. Spare cartidges of film, each containing enough for ten snap-shots, can be bought for 1 gp each.
+
+***Syringe.***
+
+***Timepiece.*** This pocket-sized device keeps perfect time. Wealthy gnomes and goblins are known to have elaborately decorated versions kept on a thin chain about their waist.
+
+***Translator's Dictionary.*** [Allows you to--slowly--translate.]
+
+<!-- 
+
+### Old Adventuring Gear
+
+<div class='classTable' >
+
+|&nbsp; Name | Old<br/>Cost | New<br/>Cost |&nbsp;&nbsp;&nbsp;| Weight &nbsp;|
+|----------------------------------------|------:|------:|-|------------:|
+|&nbsp; Book                             |~~25 gp~~| 10 gp ||  5 lb. &nbsp;|
+|&nbsp; Bottle, glass                    |~~2 gp~~|  1 sp ||  2 lb. &nbsp;|
+|&nbsp; Chain (10 feet)                  |~~5 gp~~|  2 gp || 10 lb. &nbsp;|
+|&nbsp; Hourglass                        |~~25 gp~~|  2 gp ||  1 lb. &nbsp;|
+|&nbsp; Ink (1 ounce bottle)             |~~10 gp~~|  4 gp ||  —     &nbsp;|
+|&nbsp; Magnifying glass                 |~~100 gp~~|  5 gp ||  —     &nbsp;|
+|&nbsp; Mirror, steel                    |~~5 gp~~|  2 sp ||1/2 lb. &nbsp;|
+|&nbsp; Paper (one sheet)                |~~2 sp~~|  1 sp ||  —     &nbsp;|
+|&nbsp; Parchment (one sheet)            |~~1 sp~~|  5 cp ||  —     &nbsp;|
+|&nbsp; Signet ring                      |~~5 gp~~|  2 gp ||  —     &nbsp;|
+|&nbsp; Spyglass                         |~~1,000 gp~~| 50 gp || 1 lb.  &nbsp;|
+|&nbsp; Vial                             |~~1 gp~~|  5 cp ||  —     &nbsp;|
+
+</div>
+
+-->
+
+<!-- 
+<img src='https://www.gmbinder.com/images/QZF2e9J.jpg' style='position:absolute; left:-60px; bottom:-120px; width:440px; transform:scaleX(-1)' />
+<img src='https://www.gmbinder.com/images/uOtSsu1.png' style='position:absolute; right:0px; bottom:0px; width:104%' />
+<img src='https://www.gmbinder.com/images/3e9S91s.png' style='position:absolute; left:0px; top:0px; width:104%' />
+
+<img src='https://www.firstbenefits.org/wp-content/uploads/2017/10/placeholder.png' style='position:absolute; left:0px; bottom:0px; width:400px; height:167px' />
+
+-->
+
+\pagebreakNum
+
+<!-- 
+#### Gunsmith's Tools
+Using these tools, you can create firearms as well as explosives such as dynamite and grenades.
+
+***Components.*** Gunsmith's tools include safety goggles, bullet molds, a powder horn, cleaning rods, a small set of hand tools, and basic alchemy equipment.
+
+***Arcana, History.*** Your expertise lends you additional insight when inspecting firearms and explosives.
+
+***Investigation, Perception.*** You can spot clues and make deductions that others might overlook when firearms or explosives are involved in an investigation.
+
+***Medicine.*** You are better able to determine how to treat a bullet wound, such as whether to leave it in or not.
+
+***Repair.*** As part of a short rest, you can repair a single damaged firearm.
+
+***Craft Bullets.*** As part of a short rest you can craft up to five bullets. As part of a long rest you can craft up to twenty. You must have enough metal such as pewter or lead on hand to produce them and a source of fire hot enough to make it pliable.
+
+Activity                                | DC
+----------------------------------------|-----
+Clear a jammed gun                      | 10
+Craft bullets using an unusual material | 15
+-->
+
+## New Tools
+The following items can be selected as tool proficiencies in addition to the options presented in Chapter 5 of the Player's Handbook.
+
+***Engineer's tools.*** This set of artisan's tools allows you to craft and maintain a wide variety of marvels, from firearms and explosives to gadgets and constructs. <!-- ***Gunsmith's tools.*** These artisan's tools are used not only to craft firearms and their ammunition, but explosives such as dynamite and grenades. --> 
+
+***Enchanter's supplies.*** These artisan's tools are used to inspect and manipulate magic items and spells.
+
+***Hearthstone card set.*** This game pits two opponents against each other using decks of thirty constructed by each player pulled from thousands of potential cards. Each card set comes with a protective box that includes dice, the rule book, and a catalog of official cards.
+
+***Pandaren jihui board.*** This board game is designed to allow for both players to arrive at a satisfying conclusion and thus is a good way to pass the time peacefully.
+
+***Suturing kit.*** This set of needles, thread, and other tools is used to stitch together flesh. The usage of this kit varies from stapling together large wounds to creating taxidermy. Corporeal undead such as the forsaken have made use of these kits to repair and replace their rotting flesh and limbs. Proficiency with this kit allows you to add your proficiency bonus to any ability checks you make to stitch flesh or even simpler materials such as cloth or leather.
+
+***War Drums.*** **[The large orc drums carried on the back of a kodo.]**
+
+\pagebreak
+
+> #### Variant: Industrial Revolution
+> The table of prices for adventuring gear in the Player's Handbook is designed for a typical fantasy setting. Azeroth is not a typical fantasy setting. Between the gnomes, dwarves, and goblins, a certain level of technological advancement and a low level of industry has emerged. This results in certain items that would normally be expensive to be cheaper to acquire. When using this variant rule, follow the below guidelines:
+> - Items made primarily of paper or ink cost half as much.
+> - Items made of intricate or precision metalwork, such as a signet ring or timepiece, are ten times cheaper.
+> - Items made of complex glasswork, such as a magnifying glass or spyglass, are twenty times cheaper.
+> - Items that have significant game effects, such as plate armor or alchemist's fire, should not have their price adjusted.
+
+
+
+### Expanded Tool Descriptions
+Below are expanded descriptions of potential uses of the new tools, following the rules set forth in Chapter 2 of Xanathar's Guide to Everything.
+
+#### Air Vehicles
+Proficiency with air vehicles covers both powered flight options, from the single-pilot gyrocopter to the mighty gunship, and unpowered vehicles, such as simple gliders and hot air balloons. Proficiency with these vehicles also includes the knowledge needed to handle them, such as being able to identify weather patterns and potential landing sites, as well as how to repair and maintain their vehicles.
+
+***Arcana.*** When you study a magic vehicle, this tool proficiency aids you in uncovering lore or determining how the vehicle operates.
+
+***Investigation, Perception.*** When you inspect a vehicle for clues or hidden information, your proficiency aids you in noticing things that others might miss.
+
+***Nature.*** When you try to determine future weather conditions such as a potential rainstorm, you can add your proficiency bonus to the check.
+
+***Vehicle Handling.*** When piloting a vehicle, you can apply your proficiency bonus to the vehicle’s AC and saving throws.
+
+##### Air Vehicles
+Activity                            | DC
+------------------------------------|----
+Navigate rough air currents         | 10
+Assess a vehicle's condition        | 15
+Take a tight corner at high speed   | 20
+
+#### Enchanter's Supplies
+These supplies are used to inspect and manipulate magic items and spells.
+
+***Components.*** A set of enchanter's supplies includes several pouches of magic-infused powders and crystal shards, as well as small brushes, tweezers, a runed metal rod, and a pair of crystal lenses.
+
+***Arcana.*** Proficiency with enchanter's supplies allows you to unlock more information on Arcana checks involving magic items.
+
+***Investigation.*** When you inspect or research a magic item, your proficiency with enchanter's supplies grants additional insight.
+
+***Detect Magic.*** By closely inspecting an item for 10 minutes, your proficiency with enchanter's supplies allows you to duplicate the effects of the *identify* spell. By using your enchanter's supplies and spending 1 minute walking around an area with no more than a 30 foot radius, you can instantaneously identify any magical auras, as the *detect magic* spell.
+
+##### Enchanter's Supplies
+Activity                                | DC
+----------------------------------------|-----
+Determine whether an item is magical    | 10
+Disable a magical trap                  | Varies
+
+\pagebreak
+
+#### Engineer's Tools
+A set of engineer's tools allows you to craft and maintain a wide variety of marvels, from firearms and explosives to gadgets and constructs.
+
+***Components.*** Engineer's tools come in a metal box with compartments containing a plethora of springs, gears, wires, powders, and other parts, as well as a variety of hammers, screwdrivers, and wrenches.
+
+***Arcana, History.*** Your expertise lends you additional insight into firearms, explosives, and mechanical constructs or devices.
+
+***Investigation, Perception.*** You can spot clues and make deductions that others might overlook when firearms, explosives, or mechanical constructs or devices are involved in an investigation.
+
+***Repair.*** As part of a short rest, you can repair a single damaged firearm. With sufficient spare parts, you can restore 10 hit points to a mechanical construct or device for each hour of work.
+
+***Mechanical Crafting.*** You can use this tool proficiency to create mechanical items. A character can spend money to collect raw materials, which weigh 1 pound for every 50 gp spent. The GM can allow a character to make a check using the indicated skill with advantage. As part of a long rest, you can use engineer's tools to make twenty firearm bullets or one stick of dynamite, electric lantern, flashlight, grenade, music box, scope, or spyglass. Subtract half the value of the created item from the total gp worth of raw materials you are carrying.
+
+##### Engineer's Tools
+Activity                                | DC
+----------------------------------------|-----
+Craft bullets using an unusual material | 15
+Disarm an explosive                     | Varies
+
+#### Fishing Tackle
+
+Adventuring gear
+1 gp, 4 lb.
+This kit includes a wooden rod, silken line, corkwood bobbers, steel hooks, lead sinkers, velvet lures, and narrow netting.
+
+---
+
+Adventuring gear, 1 sp
+
+Basic Fishing Equipment includes a pole, a line, a hook, and either a lure or some bait.
+
+Fishing is a popular pastime in Wildspace and the Astral Sea, though this activity isn't possible aboard a ship that is moving faster than its flying speed. At the end of each hour spent fishing, a character can make a DC 15 Wisdom (Survival) check. A failed check indicates no fish is caught during that hour. On a successful check, roll a d10 and consult the Fishing table to determine the catch.
+
+##### Fishing
+|&nbsp; d10 |&nbsp;&nbsp;&nbsp;| Catch |
+|:---:|-|---|
+| 1–2 || Tiny, inedible fish (a creature that consumes it is poisoned for 1 hour) |
+| 3–5 || Tiny, edible fish (feeds one person) |
+| 6–8 || Small, edible fish (feeds up to four people) |
+| 9   || Hostile murloc fisherman (carrying enough fish to feed up to twelve people) <br/> [ORIGINAL: **space eel**](https://5e.tools/bestiary.html#space%20eel_bam) (see *Boo's Astral Menagerie*; feeds up to twelve people) |
+| 10  || Hostile (crocolisk? naga? markrura?) <br/> [ORIGINAL: **gray scavver**](https://5e.tools/bestiary.html#gray%20scavver_bam) (see *Boo's Astral Menagerie*; feeds up to twenty people), some other creature of the DM's choosing, or an Tiny object of the DM's choosing |
+
+#### Suturing Kit
+Originally a tool used by surgeons to sew together gaping wounds or taxidermists to preserve a beloved animal companion, these tools have come into greater prominence with the rise of the living dead.
+
+***Components.*** A suturing kit contains a variety of needles, surgical blades, and threads, as well as small jars of preservatives, antiseptics, and painkillers.
+
+***Medicine.*** Your practice at stitching flesh gives you insight into how to best treat large wounds.
+
+***Perception.*** Your familiarity with the patterns of flesh lets you better notice faded scars and surgical marks.
+
+***Rapid Stabilize.*** When using a healer's kit to stabilize a creature, you can do so as a bonus action.
+
+***Repair Undead.*** You can use your kit to attach or reattach flesh and limbs to corporeal undead, provided that the new material is similar to the missing body part. This may take anywhere from a few minutes to several hours.
+
+##### Suturing Kit
+Activity                                | DC
+----------------------------------------|-----
+Stitch or patch skin, cloth, or leather | 10
+Reattach limb                           | 15
+Attach new limb in place of missing one | 20
+
+\pagebreakNum
+
+### Variant Rule: Intoxication
+**[A variant ruleset for intoxication? Between dwarves, pandaren, and Brewfest, alcohol is more of a thing for WoW than other places. So a minor ruleset for alcohol and inebriation might not be amiss.]**
+
+Examples:
+- [One](https://www.reddit.com/r/DnD/comments/4o1p6m/5e_drinking_rules/)
+- [Two](https://www.gmbinder.com/share/-LwW9VsLu8w6Fe475DMj)
+
+1+CON_SCORE+RACIAL_MODIFIER
+
+Racial modifier is from +2 to -2, based on the race's size and Con bonus, with humans being +0. Gnomes get drunk a lot faster than a tauren would, after all.
+
+##### Alcohol Strengths
+Drink<br/>Strength  | Intoxication<br/>Points |&nbsp;&nbsp;&nbsp;| Examples <br/>&nbsp;&nbsp;&nbsp;          |
+----------------|:-:|-|------------------------------------|
+Weak            |1/2| | Watered-down drinks, <br/> spiked punch  |
+Typical         | 1 | | Ale, beer, cider, malt liquor      |
+Strong          | 2 | | Mead, sake, wine                   |
+Potent          | 3 | | Gin, rum, tequila, whiskey         |
+Extremely<br/>potent| 4 | | Absinthe, moonshine, vodka         |
+Deadly*         | 5 | | Pure grain alcohol                 |
+
+*Immediate drunkenness
+
+**[I don't drink, so don't get pissy with me about the classifications.]**
+
+##### Intoxication Levels
+Tipsy (1/2 your intox level)
+Drunk (= your intox level)
+Smashed (1+1/2 your intox level)
+Drunken Vomit (Alcohol poisoning) (double your intox level)
+
+Level   | Drunkenness
+--------|---------------|--------
+Less than half your maximum Intoxication Points       | Sober         |   |   
+1       | Tipsy         |
+2       | Drunk         |
+3       | Smashed       |
+4       | Drunken Vomit |
+
+
+#### Hangover
+- Disadvantage on Int and Wis-based rolls
+- Disadvantage on saves against being blinded or deafened
+
+##### MISC
+- Stupor spell, making group of enemies drunk. A brewmaster monk ability? For every X you fail the save by, +1 level of intoxication.
+- Alemental, wolpentiger, other alcohol-based enemies
+
+\pagebreakNum
+
+## Mounts and Vehicles
+A good mount can help you move more quickly through the wilderness, but its primary purpose is to carry the gear that would otherwise slow you down. The Ground Mounts table shows each animal’s speed and base carrying capacity.
+
+An animal pulling a carriage, cart, chariot, sled, or wagon can move weight up to five times its base carrying capacity, including the weight of the vehicle. If multiple animals pull the same vehicle, they can add their carrying capacity together.
+
+The Ground Mounts, Flying Mounts, and Aquatic Mounts list the most common animals used as mounts and beasts of burden in Azeroth. Other mount types do exist, but are typically used by more localized races and require special circumstances or training.
+
+***Barding.*** Barding is armor designed to protect an animal’s head, neck, chest, and body. Any type of armor shown on the Armor table can be purchased as barding. The cost is four times the equivalent armor made for humanoids, and it weighs twice as much.
+
+***Saddles.*** A military saddle braces the rider, helping you keep your seat on an active mount in battle. It gives you advantage on any check you make to remain mounted. An exotic saddle is required for riding any aquatic or flying mount.
+
+***Vehicle Proficiency.*** If you have proficiency with a certain kind of vehicle (land, water or air), you can add your proficiency bonus to any check you make to control that kind of vehicle in difficult circumstances.
+
+***Rowed Vessels.*** Keelboats and rowboats are used on lakes and rivers. If going downstream, add the speed of the current (typically 3 miles per hour) to the speed of the vehicle. These vehicles can’t be rowed against any significant current, but they can be pulled upstream by draft animals on the shores. A rowboat weighs 100 pounds, in case adventurers carry it over land.
+
+***Powered Vessels.*** Some vehicles are self-propelled through the use of magic or machinery. They often require a fuel of some kind in order to function, as noted in the individual vehicle descriptions. 
+
+<!-- 
+> ##### Inexhaustible Mounts
+> Some mounts, such as the mechanostrider and the skeletal warhorse, have an immunity to exhaustion. While this means that the mount can be ridden for as long as needed, long periods of time on a mount has detrimental effects on its rider. 
+>
+> Whether you are riding or walking, you must make Constitution checks for a forced march as normal. The benefit of an inexhaustible mount is that it can pull a land vehicle without end and that it can be ridden at a gallop without needing to be swapped out every hour, though a mount ridden this way requires twice as much fuel or feed. -->
+
+> ##### NOTE: COSTS
+> Should maintenance costs (food, stabling, etc.) be based solely on the creature's size? Following the square-cube law, for each category larger than Large, the costs should quadruple.
+
+##### Powered Ground Vehicles
+Item            |Cost   |Speed  |Fuel/day
+----------------|-------|-------|--------
+Hot Rod         |#### gp|# mph  |# gal
+Mechacycle      |#### gp|# mph  |# gal
+Mechano-tank    |1,378 gp|4 mph |# gal
+Mechanostrider  |70 gp  |4 mph  |# gal
+Shredder        |578 gp |3 mph  |# gal
+Turbo Trike     |### gp |# mph  |# gal
+
+\columnbreak
+
+##### Tack, Harness, and Drawn Vehicles
+Item                        | Cost  | Weight
+----------------------------|-------|------
+Barding                     |×4     |×2
+Bit and bridle              |2 gp   |1 lb.
+Carriage                    |100 gp |600 lb.
+Cart                        |15 gp  |200 lb.
+Chariot                     |250 gp |100 lb.
+Feed, Carnivore (per day)   |5 cp   |5 lb.
+Feed, Herbivore (per day)   |5 cp   |10	lb.
+Fuel (1 pint)               |1 sp   |1 lb.
+*Saddle*                    |       |
+&nbsp;&nbsp;&nbsp;Exotic    |60 gp |40 lb.
+&nbsp;&nbsp;&nbsp;Military  |20 gp |30 lb.
+&nbsp;&nbsp;&nbsp;Pack      |5 gp |15 lb.
+&nbsp;&nbsp;&nbsp;Riding    |10 gp |25 lb.
+Parking (per day)           |5 sp  |—
+Saddlebags                  |4 gp   |8 lb.
+Sled                        |20 gp  |300 lb.
+Stabling (per day)          |5 sp |—
+Wagon                       |35 gp  |400 lb.
+
+##### Flying Vehicles
+Item            |Cost       |Speed  |Fuel/day
+----------------|-----------|-------|--------
+Glider          |#### gp    |## mph |—
+Gryocopter      |##,000 gp  |## mph |### gal
+Gunship         |150,000 gp |## mph |#### gal
+Hot Air Balloon |2,500 gp   |Special|—
+Zeppelin        |20,000 gp  |15 mph |## gal
+
+##### Waterborne Vehicles
+Item            |Cost       |Speed  |Fuel/day
+----------------|-----------|-------|--------
+Galley          |30,000 gp  |4 mph  |—
+Keelboat        |3,000 gp   |3 mph  |—
+Longship        |10,000 gp  |5 mph  |—
+Rowboat         |50 gp      |3 mph  |—
+Sailing ship    |10,000 gp  |5 mph  |—
+Steam Engine    |+##,000 gp |+3 mph |### gal
+Submarine       |##,000 gp  |6 mph  |### gal
+Warship         |25,000 gp  |4  mph |—
+
+\pagebreakNum
+
+##### Mounts and Other Animals
+
+Item                    |Cost       |Ground<br/>Speed   |Carrying <br/> Capacity
+------------------------|----------:|------------------:|---------------:|
+Camel                   |31 gp      |50 ft.             |480 lb.
+Dark iron hound         |400 gp     |40 ft.             |240 lb.
+Dire wolf               |250 gp     |50 ft.             |510 lb.
+Donkey or mule          |25 gp      |40 ft.             |420 lb.
+Dragon turtle           |300 gp     |30 ft.             |510 lb.
+Elekk                   |400 gp     |40 ft.             |510 lb.
+Giant goat              |100 gp     |40 ft.             |510 lb.
+Hawkstrider             |75 gp      |60 ft.             |360 lb.
+Horse, draft            |50 gp      |40 ft.             |510 lb.
+Horse, riding           |75 gp      |60 ft.             |480 lb.
+Hyena                   |125 gp     |50 ft.             |390 lb.
+Kodo                    |300 gp     |30 ft.             |1,260 lb.
+Mastiff                 |25 gp      |40 ft.             |195 lb.
+Pony                    |25 gp      |40 ft.             |225 lb.
+Raptor, riding          |250 gp     |50 ft.             |360 lb.
+Sabercat                |200 gp     |40 ft.             |510 lb.
+Talbuk, riding          |125 gp     |50 ft.             |480 lb.
+Warhorse                |150 gp     |60 ft.             |540 lb.
+Warhorse skeleton       |285 gp     |60 ft.             |540 lb.
+
+##### Flying Mounts
+Item                    |Cost       |Ground<br/>Speed   |Flying<br/>Speed   |Carrying <br/> Capacity
+------------------------|----------:|------------------:|------------------:|---------------:|
+Dragonhawk              |1,200 gp   |10 ft.             |60 ft.             |360 lb.
+Giant Bat               |600 gp     |10 ft.             |60 ft.             |450 lb.
+Gryphon                 |600 gp     |40 ft.             |60 ft.             |540 lb.
+Hippogriff              |300 gp     |40 ft.             |60 ft.             |510 lb.
+Wyvern                  |600 gp     |30 ft.             |60 ft.             |480 lb.
+Young Cloud Serpent     |2,400 gp   |30 ft.             |80 ft.             |240 lb.
+
+
+***Glider.*** While attached to a glider, you gain the following benefits:
+- Your size increases by two categories for the purposes of movement and space.
+- Your fall speed is reduced to 100 feet per round. You can intentionally dive, increasing your fall speed up to the maximum.
+- When you fall, you can move up to 5 feet horizontally for every 1 foot you descend.
+
+A glider takes 10 minutes to assemble or disassemble.
+
+If you are not incapacitated or wearing heavy armor, you can extend your skin membranes and glide. When you do so, you can perform the following aerial maneuvers:
+When you fall, you can move up to 5 feet horizontally for every 1 foot you descend.
+When you would take damage from a fall, you can use your reaction to reduce the fall’s damage to 0.
+
+\columnbreak
+
+> #### Racial Mounts
+> [Explanation about how certain mounts are preferred by certain races, and thus more likely to be for sale in settlements populated by them.]
+>
+> ##### Racial Mounts
+> Race                  | Preferred Mount
+> ----------------------|------------
+> Blood elves           | Hawkstriders
+> Draenei               | Riding talbuks, elekks
+> Dwarves (any)         | Giant goats
+> Dwarves (Dark Iron)   | Dark iron hounds
+> Forsaken              | Warhorse skeletons
+> Gnomes                | Mechanostrider
+> Goblins               | Turbo trikes
+> Humans                | Horses, ponies
+> Night elves           | Sabercats
+> Nightborne            | Sabercats
+> Orcs                  | Dire wolves, kodos
+> Pandaren              | Dragon turtles
+> Tauren                | Kodos
+> Trolls                | Riding raptors
+> Void elves            | Hawkstriders
+> Vulpera               | Hyenas
+> Worgen                | Horses, ponies
+
+> ##### From the RPG...
+> - Gryphons cost 5,000 gp
+> - Sabercats are called nightsaber panthers and cost 600 gp
+> - Dire wolves cost 600 gp
+
+\pagebreakNum
+
+## New Trade Goods
+##### New Trade Goods
+Cost    |&nbsp;&nbsp;&nbsp;| Goods
+-------:|---|-------------
+1 cp    || 1 lb. of rice
+2 cp    || 1 lb. of coal
+5 sp    || 1 sq. yd. of wool cloth
+1 gp    || 1 sq. yd. of leather
+2 gp    || 1 lb. of sugar
+5 gp    || 1 barrel^†^ of medium-quality ale, 1 lb. of steel
+50 gp   || 1 barrel^†^ of oil, 1 barrel^†^ of fine wine
+
+† 1 barrel = 60 gallons
+
+
+<!-- source for trade good prices: https://www.dandwiki.com/wiki/5e_Trade_Goods -->
+
+## New Expenses
+
+### New Services
+
+[Things like portal, zeppelin, and tram ticket fares.]
+
+[Flightmaster -- maybe a way of handling flying mounts? Where a flightmaster owns a series of flying mounts and can be chartered to fly a person, party, or package to another flightmaster location.]
+
+[Portals -- a series of permanent teleportation circles in certain cities. Wards prevent those without authorization/a specific key from teleporting into these cities.]
+
+##### New Services
+Service                                 | Pay
+----------------------------------------|---------
+Flightmaster Passage (point to point)   | # Xp per mile
+Portal to another city                  | 100 gp
+Zeppelin Passage                        | # Xp per mile
+
+
+## New Trinkets
+
+\pagebreakNum
+
+##### Trinkets
+d100|Trinket
+----|-------
+01  |A punchcard to an unknown device
+02  |A piece of crystal that faintly glows in the moonlight
+03  |
+04  |
+05  |
+06  |
+07  |
+08  |
+09  |
+10  |
+11  |
+12  |
+13  |
+14  |
+15  |
+16  |
+17  |
+18  |
+19  |
+20  |
+21  |
+22  |
+23  |
+24  |
+25  |
+
+\columnbreak
+
+d100|Trinket
+----|-------
+26  |
+27  |
+28  |
+29  |
+30  |
+31  |
+32  |
+33  |
+34  |
+35  |
+36  |
+37  |
+38  |
+39  |
+40  |
+41  |
+42  |
+43  |
+44  |
+45  |
+46  |
+47  |
+48  |
+49  |
+50  |
+
+<img src='https://www.firstbenefits.org/wp-content/uploads/2017/10/placeholder.png' style='position:absolute; left:0px; bottom:0px; width:100%; height:450px' />
+
+\pagebreakNum
+
+d100|Trinket
+----|-------
+51  |
+52  |
+53  |
+54  |
+55  |
+56  |
+57  |
+58  |
+59  |
+60  |
+61  |
+62  |
+63  |
+64  |
+65  |
+66  |
+67  |
+68  |
+69  |
+70  |
+71  |
+72  |
+73  |
+74  |
+75  |
+
+\columnbreak
+
+d100|Trinket
+----|-------
+76  |
+77  |
+78  |
+79  |
+80  |
+81  |
+82  |
+83  |
+84  |
+85  |
+86  |
+87  |
+88  |
+89  | A vial of dragon blood
+90  |
+91  |
+92  |
+93  |
+94  |
+95  |
+96  |
+97  |
+98  |
+99  |
+100 | A metal urn containing the ashes of a hero
+
+<img src='https://www.firstbenefits.org/wp-content/uploads/2017/10/placeholder.png' style='position:absolute; left:0px; bottom:0px; width:100%; height:450px' />
+
+\pagebreakNum
+
+
+<style>.phb{width : 210mm;height : 296.8mm;} .phb:after {content: "";} </style>
+<style>.phb hr+section blockquote { padding-left: 0px; padding-right: 0px; }</style>
+<style>.phb blockquote { padding-left: 0px; padding-right: 0px; }</style>
+<style> .phb blockquote { margin-top: 1em; } </style>
+ 
+ 
+<style>
+ 
+/* TABLES AND BLOCKS */
+ 
+  /* Use black tones for statblock backgrounds */
+  .phb blockquote {
+    box-shadow: 1px 4px 14px rgba(0,0,0,0.42);
+  }
+ 
+ 
+/* APPENDIX STYLES */
+ 
+  /* Avoid upscaling first letter on an appendix page */
+  .phb:nth-of-type(n+0):nth-of-type(-n+100) h1+p::first-letter {
+    font-family: BookSanity;
+    font-size: .317cm;
+    text-rendering: optimizeLegibility;
+    float: initial;
+  }
+ 
+  /* For creature statblocks within range (start and end must be specified),
+  don't show a background. Used for the appendix creatures */
+  .phb:nth-of-type(n+0):nth-of-type(-n+100) hr+section blockquote {
+    background: none;
+    border: none;
+    box-shadow: none;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+  }
+</style>
+
+
+# Appendix D: Creature Statistics
+Spells [and class features] allow characters to [transform into animals,] summon creatures [to serve as familiars], and create undead. Statistics for such creatures are grouped in this appendix for your convenience. For information on how to read a stat block, see the *Manual of Monsters* or *Monster Manual*.
+
+\columnbreak
+
+___
+> ## Bat <!-- https://wc5e-cr-calculator.frogvall.com/?0;12;1;0;13;1;0;0;0;0;0;0;0;0;0;0;0;;;;;3;;;;;;;;;;1;;;;;;;;10;;;;;;;;;;; -->
+> *Tiny beast, unaligned*
+> ___
+> - **Armor Class** 12
+> - **Hit Points** 1 (1d4 - 1)
+> - **Speed** 5 ft., fly 30 ft.
+> ___
+> |  STR  |  DEX  |  CON  |  INT  |  WIS  |  CHA  |
+> |:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+> | 2 (-4)|15 (+2)| 8 (-1)| 2 (-4)|12 (+1)| 4 (-3)|
+> ___
+> - **Senses** blindsight 60 ft., passive Perception 11
+> - **Languages** —
+> - **Challenge** 0 (0 or 10 XP)
+> ___
+> ***Echolocation.*** The bat can't use its blindsight while deafened.
+>
+> ***Keen Hearing.*** The bat has advantage on Wisdom (Perception) checks that rely on hearing.
+>
+> ### Actions
+> ***Bite.*** *Melee Weapon Attack:* +0 to hit, reach 5 ft., one creature. *Hit:* 1 piercing damage.
+
+___
+> ## Camel <!-- https://wc5e-cr-calculator.frogvall.com/?0;9;15;5;11;2;0;0;0;0;0;0;0;0;0;0;0;;;;;3;;;;;;;;;;1;;;;;;;;10;;;;;;;;;;; NOTE: Does not apply Str to damage for some reason. -->
+> *Large beast, unaligned*
+> ___
+> - **Armor Class** 9
+> - **Hit Points** 15 (2d10 + 4)
+> - **Speed** 50 ft.
+> ___
+> |  STR  |  DEX  |  CON  |  INT  |  WIS  |  CHA  |
+> |:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+> |16 (+3)| 8 (-1)|14 (+2)| 2 (-4)| 8 (-1)| 5 (-3)|
+> ___
+> - **Senses** passive Perception 9
+> - **Languages** —
+> - **Challenge** 1/8 (25 XP)
+> ___
+>
+> ### Actions
+> ***Bite.*** *Melee Weapon Attack:* +5 to hit, reach 5 ft., one target. *Hit:* 2 (1d4) bludgeoning damage.
+
+\pagebreakNum
+
+___
+> ## Cat <!-- https://wc5e-cr-calculator.frogvall.com/?0;12;2;0;11;1;0;0;0;0;0;0;0;0;0;0;0;;;;;3;;;;;;;;;;1;;;;;;;;10;;;;;;;;;;; -->
+> *Tiny beast, unaligned*
+> ___
+> - **Armor Class** 12
+> - **Hit Points** 2 (1d4)
+> - **Speed** 40 ft., climb 30 ft.
+> ___
+> |  STR  |  DEX  |  CON  |  INT  |  WIS  |  CHA  |
+> |:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+> | 3 (-4)|15 (+2)|10 (+0)| 3 (-4)|12 (+1)| 7 (-2)|
+> ___
+> - **Skills** Perception +3, Stealth +4
+> - **Senses** passive Perception 13
+> - **Languages** —
+> - **Challenge** 0 (0 or 10 XP)
+> ___
+> ***Keen Smell.*** The cat has advantage on Wisdom (Perception) checks that rely on smell.
+>
+> ### Actions
+> ***Claws.*** *Melee Weapon Attack:* +0 to hit, reach 5 ft., one target. *Hit:* 1 slashing damage.
+
+___
+> ## Crab <!-- https://wc5e-cr-calculator.frogvall.com/?0;11;2;0;14;1;0;0;0;0;0;0;0;0;0;0;0;;;;;3;;;;;;;;;;1;;;;;;;;10;;;;;;;;;;; -->
+> *Tiny beast, unaligned*
+> ___
+> - **Armor Class** 11 (natural armor)
+> - **Hit Points** 2 (1d4)
+> - **Speed** 20 ft., swim 20 ft.
+> ___
+> |  STR  |  DEX  |  CON  |  INT  |  WIS  |  CHA  |
+> |:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+> | 2 (-4)|11 (+0)|10 (+0)| 1 (-5)| 8 (-1)| 2 (-4)|
+> ___
+> - **Skills** Stealth +2
+> - **Senses** blindsight 30 ft., passive Perception 9
+> - **Languages** —
+> - **Challenge** 0 (0 or 10 XP)
+> ___
+>
+> ***Amphibious.*** The crab can breathe air and water.
+>
+> ### Actions
+> ***Claw.*** *Melee Weapon Attack:* +0 to hit, reach 5 ft., one target. *Hit:* 1 bludgeoning damage.
+
+> ##### Variant: Frost Wolf
+> Frost wolves are an arctic version of wolves native to Draenor. A number of them followed the orcish Frostwolf clan during the invasions of Azeroth, to whom they have a special bond. It has the same statistics as a dire wolf, except that it gains resistance to cold damage and gains the following trait:
+>
+> ***Snow Camouflage.*** The wolf has advantage on Dexterity (Stealth) checks made to hide in snowy terrain.
+
+\columnbreak
+
+___
+> ## Dark Iron Hound <!-- https://wc5e-cr-calculator.frogvall.com/?0;14;30;5;12;14;7;14;0;14;0;0;0;0;0;0;0;;;;;3;;;;;;;;;;1;;;;;;;;10;;;;;; -->
+>*Medium elemental, neutral evil*
+> ___
+> - **Armor Class** 14
+> - **Hit Points** 30 (4d8 + 12)
+> - **Speed** 40 ft.
+>___
+>|STR|DEX|CON|INT|WIS|CHA|
+>|:---:|:---:|:---:|:---:|:---:|:---:|
+>|16 (+3)|10 (+0)|17 (+3)|6 (-2)|11 (+0)|5 (-3)|
+>___
+> - **Damage Immunities** fire
+> - **Senses** darkvision 60 ft., passive Perception 10
+> - **Languages** understands Kalimag and Dwarven but can't speak
+> - **Challenge** 2 (450 XP)
+> ___
+> ***Charge.*** If the hound moves at least 20 feet straight toward a target and then hits it with a bite attack on the same turn, the target takes an extra 7 (2d6) piercing damage. If the target is a creature, it must succeed on a Dc 13 Strength saving throw or be knocked prone.
+>
+> ***Illumination.*** The hound sheds bright light in a 10-foot radius and dim light in an additional 10 feet.
+>
+> ### Actions
+> ***Bite.*** *Melee Weapon Attack:* +5 to hit, reach 5 ft., one target. *Hit:*  7 (1d8 + 3) piercing damage plus 7 (2d6) fire damage.
+
+___
+> ## Dire Wolf <!-- https://wc5e-cr-calculator.frogvall.com/?0;14;37;5;12;10;0;0;0;0;0;0;0;0;0;0;0;;;;;3;;;;;;;;;;1;;;1;;;;;10;;;;;;;;;;; -->
+>*Large beast, unaligned*
+> ___
+> - **Armor Class** 14 (natural armor)
+> - **Hit Points** 37 (5d10 + 10)
+> - **Speed** 50 ft.
+> ___
+> |  STR  |  DEX  |  CON  |  INT  |  WIS  |  CHA  |
+> |:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+> |17 (+3)|15 (+2)|15 (+2)| 4 (-3)|12 (+1)| 8 (-1)|
+> ___
+> - **Skills** Perception +3, Stealth +4
+> - **Senses** passive Perception 13
+> - **Languages** —
+> - **Challenge** 1 (200 XP)
+> ___
+> ***Keen Hearing and Smell.*** The wolf has advantage on Wisdom (Perception) checks that rely on hearing or smell.
+>
+> ***Pack Tactics.*** The wolf has advantage on an attack roll against a creature if at least one of the wolf's allies is within 5 feet of the creature and the ally isn't incapacitated.
+>
+> ### Actions
+>
+> ***Bite.*** *Melee Weapon Attack:* +5 to hit, reach 5 ft., one target. *Hit:* 10 (2d6 + 3) piercing damage. If the target is a creature, it must succeed on a DC 13 Strength saving throw or be knocked prone.
+
+\pagebreakNum
+
+___
+> ## Draft Horse <!-- https://wc5e-cr-calculator.frogvall.com/?0;12;13;5;12;5;0;0;0;0;0;0;0;0;0;0;0;;;;;3;;;;;;;;;;1;;;;;;;;10;;;;;;;;;;; -->
+> *Large beast, unaligned*
+> ___
+> - **Armor Class** 12 (natural armor)
+> - **Hit Points** 13 (2d10 + 2)
+> - **Speed** 40 ft.
+> ___
+> |  STR  |  DEX  |  CON  |  INT  |  WIS  |  CHA  |
+> |:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+> |17 (+3)|10 (+0)|12 (+1)| 2 (-4)|11 (+0)| 7 (-2)|
+> ___
+> - **Senses** passive Perception 10
+> - **Languages** —
+> - **Challenge** 1/4 (50 XP)
+> ___
+>
+> ### Actions
+> ***Hooves.*** *Melee Weapon Attack:* +5 to hit, reach 5 ft., one target. *Hit:* 5 (2d4) bludgeoning damage.
+
+___
+> ## Dragon Turtle <!-- https://wc5e-cr-calculator.frogvall.com/?0;15;57;5;12;7;0;0;0;0;0;0;0;0;0;0;0;;;;;3;;;;;;;;;;1;;;;;;;;10;;;;;;;;;;; -->
+> *Large beast, unaligned*
+> ___
+> - **Armor Class** 15 (natural armor)
+> - **Hit Points** 57 (6d10 + 24)
+> - **Speed** 30 ft., swim 30 ft.
+> ___
+> |  STR  |  DEX  |  CON  |  INT  |  WIS  |  CHA  |
+> |:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+> |17 (+3)| 8 (-1)|18 (+4)| 4 (-3)|13 (+1)| 6 (-2)|
+> ___
+> - **Senses** passive Perception 11
+> - **Languages** —
+> - **Challenge** 2 (450 XP)
+> ___
+>
+> ***Amphibious.*** The dragon turtle can breathe air and water.
+>
+> ***Slow and Steady.*** The dragon turtle's speed is not reduced from pushing, dragging, or lifting more than its carrying capacity.
+>
+> ***Stable.*** Whenever an effect knocks the turtle prone, it can make a DC 10 Constitution saving throw to avoid being knocked prone. A prone turtle is upside down. To stand up, it must succeed on a DC 10 Dexterity check on its turn and then use all its movement for that turn.
+>
+> ### Actions
+> ***Bite.*** *Melee Weapon Attack:* +5 to hit, reach 5 ft., one target. *Hit:* 7 (1d8 + 3) piercing damage.
+>
+> ***Shell Defense.*** The turtle withdraws itself into its shell. Until it emerges it gain +4 bonus to AC and has advantage on Strength and Constitution saving throws. While in its shell, it is prone, its speed is 0 and can't increase, it has disadvantage on Dexerity saving throws, it can't take reactions, and the only action it can take is a bonus action to emerge from its shell.
+
+\columnbreak
+___
+> ## Elekk <!-- https://wc5e-cr-calculator.frogvall.com/?0;14;85;5;13;12;16;12;0;12;0;0;0;0;0;0;0;;;;;3;;;;;;;;;;1;;;;;;;;10;;;;;;;;;;; -->
+> *Large beast, unaligned*
+> ___
+> - **Armor Class** 14 (natural armor)
+> - **Hit Points** 85 (10d10 + 30)
+> - **Speed** 40 ft.
+> ___
+> |  STR  |  DEX  |  CON  |  INT  |  WIS  |  CHA  |
+> |:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+> |17 (+3)|11 (+0)|16 (+3)| 3 (-4)|12 (+1)| 6 (-2)|
+> ___
+> - **Senses** passive Perception 11
+> - **Languages** —
+> - **Challenge** 2 (450 XP)
+> ___
+> ***Trampling Charge.*** If the elekk moves at least 20 feet straight toward a creature and then hits it with a gore attack on the same turn, that target must succeed on a DC 13 Strength saving throw or be knocked prone. If the target is prone, the elekk can make one stomp attack against it as a bonus action.
+>
+> ### Actions
+> ***Gore.*** *Melee Weapon Attack:* +5 to hit, reach 5 ft., one target. *Hit:* 12 (2d8 + 3) piercing damage.
+>
+> ***Stomp.*** *Melee Weapon Attack:* +5 to hit, reach 5 ft., one prone creature. *Hit:* 16 (3d8 + 3) bludgeoning damage.
+
+___
+> ## Frenzyfish <!-- https://wc5e-cr-calculator.frogvall.com/?0;13;1;0;10;1;0;0;0;0;0;0;0;0;0;0;0;;;;;3;;;;1;;;;;;1;;;;;;;;10;;;;;;;;;;; -->
+> *Tiny beast, unaligned*
+> ___
+> - **Armor Class** 13
+> - **Hit Points** 1 (1d4 - 1)
+> - **Speed** swim 40 ft.
+> ___
+> |  STR  |  DEX  |  CON  |  INT  |  WIS  |  CHA  |
+> |:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+> | 2 (-4)|16 (+3)| 9 (-1)| 1 (-5)| 7 (-2)| 2 (-4)|
+> ___
+> - **Senses** darkvision 60 ft., passive Perception 8
+> - **Languages** —
+> - **Challenge** 0 (0 or 10 XP)
+> ___
+>
+> ***Blood Frenzy.*** The frenzyfish has advantage on melee attacks against any creature that doesn't have all its hit points.
+>
+> ***Water Breathing.*** The frenzyfish can breathe only underwater.
+>
+> ### Actions
+> ***Bite.*** *Melee Weapon Attack:* +0 to hit, reach 5 ft., one target. *Hit:* 1 piercing damage.
+
+\pagebreakNum
+
+___
+> ## Frog <!-- https://wc5e-cr-calculator.frogvall.com/?0;11;1;0;10;0;0;0;0;0;0;0;0;0;0;0;0;;;;;3;;;;;;;;;;1;;;;;;;;10;;;;;;;;;;; -->
+> *Tiny beast, unaligned*
+> ___
+> - **Armor Class** 11 (natural armor)
+> - **Hit Points** 1 (1d4 - 1)
+> - **Speed** 20 ft., swim 20 ft.
+> ___
+> |  STR  |  DEX  |  CON  |  INT  |  WIS  |  CHA  |
+> |:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+> | 1 (-5)|13 (+1)| 8 (-1)| 1 (-5)| 8 (-1)| 3 (-4)|
+> ___
+> - **Skills** Perception +1, Stealth +3
+> - **Senses** passive Perception 11
+> - **Languages** —
+> - **Challenge** 0 (0 or 10 XP)
+> ___
+> ***Amphibious.*** The frog can breathe air and water.
+>
+> ***Standing Leap.*** The frog's long jump is up to 10 feet and its hight jump is up to 5 feet, with or without a running start.
+
+___
+> ## Giant Goat <!-- https://wc5e-cr-calculator.frogvall.com/?0;11;45;5;13;6;5;6;0;6;0;0;0;0;0;0;0;;;;;3;;;;;;;;;;1;;;;;;;;10;;;;;;;;;;; -->
+> *Large beast, unaligned*
+> ___
+> - **Armor Class** 11 (natural armor)
+> - **Hit Points** 45 (7d10 + 7)
+> - **Speed** 40 ft., climb 30 ft.
+> ___
+> |  STR  |  DEX  |  CON  |  INT  |  WIS  |  CHA  |
+> |:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+> |17 (+3)|11 (+0)|12 (+1)| 3 (-4)|12 (+1)| 6 (-2)|
+> ___
+> - **Senses** passive Perception 11
+> - **Languages** —
+> - **Challenge** 1/2 (100 XP)
+> ___
+> ***Charge.*** If the goat moves at least 20 feet straight toward a target and the hits it with a ram attack on the same turn, the target takes an extra 5 (2d4) bludgeoning damage. If the target is a creature, it must succeed on a DC 13 Strength saving throw or be knocked prone.
+>
+> ***Sure-Footed.*** The goat has advantage on Strength and Dexterity saving throws made against effects that would knock it prone.
+>
+> ### Actions
+> ***Ram.*** *Melee Weapon Attack:* +5 to hit, reach 5 ft., one target. *Hit:* 6 (1d6 + 3) bludgeoning damage.
+
+\columnbreak
+
+___
+> ## Hawk <!-- https://wc5e-cr-calculator.frogvall.com/?0;13;1;5;10;1;0;0;0;0;0;0;0;0;0;0;0;;;;;3;;;;;;;;;;1;;;;;;;;10;;;;;;;;;;; -->
+> *Tiny beast, unaligned*
+> ___
+> - **Armor Class** 13
+> - **Hit Points** 1 (1d4 - 1)
+> - **Speed** 10 ft., fly 60 ft.
+> ___
+> |  STR  |  DEX  |  CON  |  INT  |  WIS  |  CHA  |
+> |:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+> | 5 (-3)|16 (+3)| 8 (-1)| 2 (-4)|14 (+2)| 6 (-2)|
+> ___
+> - **Skills** Perception +4
+> - **Senses** passive Perception 14
+> - **Languages** —
+> - **Challenge** 1/8 (25 XP)
+> ___
+> ***Keen Sight.*** The hawk has advantage on Wisdom (Perception) checks that rely on sight.
+>
+> ### Actions
+> ***Talons.*** *Melee Weapon Attack:* +5 to hit, reach 5 ft., one target. *Hit:* 1 slashing damage.
+
+___
+> ## Hawkstrider <!-- https://wc5e-cr-calculator.frogvall.com/?0;12;27;3;10;4;0;0;0;0;0;0;0;0;0;0;0;;;;;3;;;;;;;;;;1;;;;;;;;10;;;;;;;;;;; -->
+> *Large beast, unaligned*
+> ___
+> - **Armor Class** 12
+> - **Hit Points** 27 (5d10)
+> - **Speed** 60 ft.
+> ___
+> |  STR  |  DEX  |  CON  |  INT  |  WIS  |  CHA  |
+> |:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+> |12 (+1)|15 (+2)|10 (+0)| 3 (-4)|11 (+0)| 7 (-2)|
+> ___
+> - **Skills** Athletics +3, Acrobatics +4, Perception +2
+> - **Senses** passive Perception 12
+> - **Languages** —
+> - **Challenge** 1/4 (50 XP)
+> ___
+> ***Running Leap.*** With a 10-foot running start, the hawkstrider can jump up to 20 feet.
+>
+> ***Swift Stride.*** The hawkstrider can use a bonus action to take the Dash action.
+>
+> ### Actions
+> ***Beak.*** *Melee Weapon Attack:* +3 to hit, reach 5 ft., one target. *Hit:* 4 (1d6 + 1) piercing damage.
+
+\pagebreakNum
+
+___
+> ## Hyena <!-- https://wc5e-cr-calculator.frogvall.com/?0;12;22;3;10;7;0;0;0;0;0;0;0;0;0;0;0;;;;;3;;;;;;;;;;1;;;1;;;;;10;;;;;;;;;;; -->
+> *Medium beast, unaligned*
+> ___
+> - **Armor Class** 12
+> - **Hit Points** 22 (4d8 + 4)
+> - **Speed** 50 ft.
+> ___
+> |  STR  |  DEX  |  CON  |  INT  |  WIS  |  CHA  |
+> |:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+> |13 (+1)|14 (+2)|12 (+1)| 2 (-4)|12 (+1)| 5 (-3)|
+> ___
+> - **Skills** Perception +3
+> - **Senses** passive Perception 13
+> - **Languages** —
+> - **Challenge** 1/2 (100 XP)
+> ___
+>
+> ***Pack Tactics.*** The hyena has advantage on an attack roll against a creature if at least one of the hyena's allies is within 5 feet of the creature and the ally isn't incapacitated.
+>
+> ### Actions
+> ***Multiattack***. The hyena makes two attacks: one with its bite and one with its claws.
+>
+> ***Bite.*** *Melee Weapon Attack:* +3 to hit, reach 5 ft., one target. *Hit:* 4 (1d6 + 1) piercing damage.
+>
+> ***Claw.*** *Melee Weapon Attack:* +3 to hit, reach 5 ft., one target. *Hit:* 3 (1d4 + 1) slashing damage.
+
+___
+> ## Kodo <!-- https://wc5e-cr-calculator.frogvall.com/?0;12;45;7;15;30;0;14;0;14;0;0;0;0;0;0;0;;;;;3;;;;;;;;;;1;;;;;;;;30;;;;;; -->
+>*Large beast, unaligned*
+> ___
+> - **Armor Class** 12 (natural armor)
+> - **Hit Points** 45 (6d10 + 12)
+> - **Speed** 30 ft.
+>___
+>|STR|DEX|CON|INT|WIS|CHA|
+>|:---:|:---:|:---:|:---:|:---:|:---:|
+>|21 (+5)|9 (-1)|15 (+2)|3 (-4)|10 (+0)|6 (-2)|
+>___
+> - **Senses** passive Perception 10
+> - **Languages** —
+> - **Challenge** 2 (450 XP)
+> ___
+> ***Beast of Burden.*** The kodo is considered to be a Huge animal for the purpose of determining its carrying capacity.
+> 
+> ***Trampling Charge.*** If the kodo moves at least 20 feet straight towards a Large or smaller creature and then hits it with a gore attack on the same turn, that target must succeed on a DC 15 Strength saving throw or be knocked prone. If the target is prone, the kodo can make one stomp attack against it as a bonus action.
+>
+> ### Actions
+> ***Gore.*** *Melee Attack Weapon:* +7 to hit, reach 5 ft., one target. *Hit:* 14 (2d8 + 5) piercing damage.
+>
+> ***Stomp.*** *Melee Attack Weapon:* +7 to hit, reach 5 ft., one prone target. *Hit:* 16 (2d10 + 5) bludgeoning damage. 
+
+___
+> ## Lizard <!-- https://wc5e-cr-calculator.frogvall.com/?0;10;2;0;10;1;0;1;0;1;0;0;0;0;0;0;0;;;;;3;;;;;;;;;;1;;;;;;;;10;;;;;;;;;;;1;0;1; -->
+> *Tiny beast, unaligned*
+> ___
+>- **Armor Class** 10
+>- **Hit Points** 2 (1d4)
+>- **Speed** 20 ft., climb 20 ft.
+>___
+>|STR|DEX|CON|INT|WIS|CHA|
+>|:---:|:---:|:---:|:---:|:---:|:---:|
+>|2 (-4)|11 (+0)|10 (+0)|1 (-5)|8 (-1)|3 (-4)|
+>___
+>- **Senses** darkvision 30 ft., passive Perception 9
+>- **Languages** —
+>- **Challenge** 0 (0 or 10 XP)
+>___
+>### Actions
+>***Bite.*** *Melee Weapon Attack:* +0 to hit, reach 5 ft., one target. *Hit:* 1 piercing damage.
+
+___
+> ## Mastiff <!-- https://wc5e-cr-calculator.frogvall.com/?0;12;5;3;11;4;0;0;0;0;0;0;0;0;0;0;0;;;;;3;;;;;;;;;;1;;;;;;;;10;;;;;;;;;;; -->
+> *Medium beast, unaligned*
+> ___
+> - **Armor Class** 12
+> - **Hit Points** 5 (1d8 + 1)
+> - **Speed** 40 ft.
+> ___
+> |  STR  |  DEX  |  CON  |  INT  |  WIS  |  CHA  |
+> |:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+> |13 (+1)|14 (+2)|12 (+1)| 3 (-4)|12 (+1)| 7 (-2)|
+> ___
+> - **Skills** Perception +3
+> - **Senses** passive Perception 13
+> - **Languages** —
+> - **Challenge** 1/8 (25 XP)
+> ___
+> ***Keen Hearing and Smell.*** The mastiff has advantage on Wisdom (Perception) checks that rely on hearing or smell.
+>
+> ### Actions
+> ***Bite.*** *Melee Weapon Attack:* +3 to hit, reach 5 ft., one target. *Hit:* 4 (1d6 + 1) piercing damage. If the target is a creature, it must succeed on a DC 11 Strength saving throw or be knocked prone.
+
+\pagebreakNum
+___
+> ## Mechanostrider
+>*Medium construct, unaligned*
+> ___
+> - **Armor Class** 11
+> - **Hit Points** 9 (2d8)
+> - **Speed** 40 ft.
+>___
+>|STR|DEX|CON|INT|WIS|CHA|
+>|:---:|:---:|:---:|:---:|:---:|:---:|
+>|12 (+1)|13 (+1)|10 (+0)|3 (-4)|11 (+0)|1 (-5)|
+>___
+> - **Skills** Athletics +3
+> - **Condition Immunities** charmed, exhaustion, frightened paralyzed, petrified, poisoned
+> - **Senses** darkvision 60 ft., passive Perception 10
+> - **Languages** understands gnomish but can't speak
+> - **Challenge** 1/8 (25 XP)
+> ___
+> ***Immutable Form.*** The mechanostrider is immune to any spell or effect that would alter its form.
+>
+> ### Actions
+> ***Beak.*** *Melee Weapon Attack:* +3 to hit, reach 5 ft., one target. *Hit:* 3 (1d4 + 1) piercing damage.
+>
+> ***Claws.*** *Melee Weapon Attack:* +3 to hit, reach 5 ft., one target. *Hit:* 4 (1d6 + 1) slashing damage.<!-- https://wc5e-cr-calculator.frogvall.com/?0;11;9;3;12;4;0;0;0;0;0;0;0;0;0;0;0;;;;;3;;;;;;;;;;1;;;;;;;;10;;;;;; -->
+
+___
+> ## Mule <!-- https://wc5e-cr-calculator.frogvall.com/?0;10;11;2;10;2;0;0;0;0;0;0;0;0;0;0;0;;;;;3;;;;;;;;;;1;;;;;;;;10;;;;;;;;;;; -->
+> *Medium beast, unaligned*
+> ___
+> - **Armor Class** 10
+> - **Hit Points** 11 (2d8 + 2)
+> - **Speed** 40 ft.
+> ___
+> |  STR  |  DEX  |  CON  |  INT  |  WIS  |  CHA  |
+> |:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+> |14 (+2)|10 (+0)|13 (+1)| 2 (-4)|10 (+0)| 5 (-3)|
+> ___
+> - **Senses** passive Perception 10
+> - **Languages** —
+> - **Challenge** 1/8 (25 XP)
+> ___
+> ***Beast of Burden.*** The mule is considered to be a Large animal for the purpose of determining its carrying capacity.
+>
+> ***Sure-Footed.*** The mule has advantage on Strength and Dexterity saving throws made against effects that would knock it prone.
+>
+> ### Actions
+> ***Hooves.*** *Melee Weapon Attack:* +2 to hit, reach 5 ft., one target. *Hit:* 2 (1d4) bludgeoning damage.
+
+\columnbreak
+
+___
+> ## Octopus <!-- https://wc5e-cr-calculator.frogvall.com/?0;12;3;4;10;1;0;1;0;1;0;0;0;0;0;0;0;;;;;3;;;;;1;;;;;1;;;;;;;;10;;;;;;;;;;;1;0;1; -->
+> *Small beast, unaligned*
+> ___
+>- **Armor Class** 12
+>- **Hit Points** 3 (1d6)
+>- **Speed** 5 ft., swim 30 ft.
+>___
+>|STR|DEX|CON|INT|WIS|CHA|
+>|:---:|:---:|:---:|:---:|:---:|:---:|
+>|4 (-3)|15 (+2)|11 (+0)|3 (-4)|10 (+0)|4 (-3)|
+>___
+>- **Skills** Perception +2, Stealth +4
+>- **Senses** darkvision 30 ft., passive Perception 12
+>- **Languages** —
+>- **Challenge** 0 (0 or 10 XP)
+>- **Proficiency Bonus** +2
+>___
+>***Hold Breath.*** While out of water, the octopus can hold its breath for 30 minutes.  
+>
+>***Underwater Camouflage.*** The octopus has advantage on Dexterity (Stealth) checks made while underwater.  
+>
+>***Water Breathing.*** The octopus can breathe only underwater.  
+>
+>### Actions
+>***Tentacles.*** *Melee Weapon Attack:* +4 to hit, reach 5 ft., one target. *Hit:* 1 bludgeoning damage, and the target is grappled (escape DC 10). Until this grapple ends, the octopus can't use its tentacles on another target.  
+>
+>***Ink Cloud (Recharges after a Short or Long Rest).*** A 5-foot-radius cloud of ink extends all around the octopus if it is underwater. The area is heavily obscured for 1 minute, although a significant current can disperse the ink. After releasing the ink, the octopus can use the Dash action as a bonus action.
+
+\pagebreakNum
+
+___
+> ## Owl <!-- https://wc5e-cr-calculator.frogvall.com/?0;11;1;3;10;1;0;0;0;0;0;0;0;0;0;0;0;;;;;3;;;;;;;;;;1;;;;;;;;10;;;;;;;;;;; -->
+> *Tiny beast, unaligned*
+> ___
+> - **Armor Class** 11
+> - **Hit Points** 1 (1d4 - 1)
+> - **Speed** 5 ft., fly 60 ft.
+> ___
+> |  STR  |  DEX  |  CON  |  INT  |  WIS  |  CHA  |
+> |:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+> | 3 (-4)|13 (+1)| 8 (-1)| 2 (-4)|12 (+1)| 7 (-2)|
+> ___
+> - **Skills** Perception +3, Stealth +3
+> - **Senses** darkvision 120 ft., passive Perception 13
+> - **Languages** —
+> - **Challenge** 0 (0 or 10 XP)
+> ___
+>
+> ***Flyby.*** The owl doesn't provoke opportunity attacks when it flies out of an enemy's reach.
+>
+> ***Keen Hearing and Sight.*** The owl has advantage on Wisdom (Perception) checks that rely on hearing or sight.
+>
+> ### Actions
+> ***Talons.*** *Melee Weapon Attack:* +3 to hit, reach 5 ft., one target. *Hit:* 1 slashing damage.
+
+___
+> ## Poisonous Snake <!-- https://wc5e-cr-calculator.frogvall.com/?0;13;2;5;10;3;0;0;0;0;0;0;0;0;0;0;0;;;;;3;;;;;;;;;;1;;;;;;;;10;;;;;;;;;;; -->
+> *Tiny beast, unaligned*
+> ___
+> - **Armor Class** 13
+> - **Hit Points** 2 (1d4)
+> - **Speed** 30 ft., swim 30 ft.
+> ___
+> |  STR  |  DEX  |  CON  |  INT  |  WIS  |  CHA  |
+> |:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+> | 2 (-4)|16 (+3)|11 (+0)| 1 (-5)|10 (+0)| 3 (-4)|
+> ___
+> - **Senses** blindsight 10 ft., passive Perception 10
+> - **Languages** —
+> - **Challenge** 1/8 (25 XP)
+> ___
+>
+> ### Actions
+> ***Bite.*** *Melee Weapon Attack:* +5 to hit, reach 5 ft., one target. *Hit:* 1 piercing damage, and the target must make a DC 10 Constitution saving throw, taking 2 (1d4) poison damage on a failed save, or half as much damage on a successful one.
+
+___
+> ## Pony <!-- https://wc5e-cr-calculator.frogvall.com/?0;10;11;4;10;5;0;0;0;0;0;0;0;0;0;0;0;;;;;3;;;;;;;;;;1;;;;;;;;10;;;;;;;;;;; -->
+> *Medium beast, unaligned*
+> ___
+> - **Armor Class** 10
+> - **Hit Points** 11 (2d8 + 2)
+> - **Speed** 40 ft.
+> ___
+> |  STR  |  DEX  |  CON  |  INT  |  WIS  |  CHA  |
+> |:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+> |15 (+2)|10 (+0)|13 (+1)| 2 (-4)|11 (+0)| 7 (-2)|
+> ___
+> - **Senses** passive Perception 10
+> - **Languages** —
+> - **Challenge** 1/8 (25 XP)
+> ___
+>
+> ### Actions
+> ***Hooves.*** *Melee Weapon Attack:* +4 to hit, reach 5 ft., one target. *Hit:* 5 (2d4) bludgeoning damage.
+
+___
+> ## Rat <!-- https://wc5e-cr-calculator.frogvall.com/?0;10;1;0;10;1;0;0;0;0;0;0;0;0;0;0;0;;;;;3;;;;;;;;;;1;;;;;;;;10;;;;;;;;;;; -->
+> *Tiny beast, unaligned*
+> ___
+> - **Armor Class** 10
+> - **Hit Points** 1 (1d4 - 1)
+> - **Speed** 20 ft.
+> ___
+> |  STR  |  DEX  |  CON  |  INT  |  WIS  |  CHA  |
+> |:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+> | 2 (-4)|11 (+0)| 9 (-1)| 2 (-4)|10 (+0)| 4 (-3)|
+> ___
+> - **Senses** darkvision 30 ft., passive Perception 10
+> - **Languages** —
+> - **Challenge** 0 (0 or 10 XP)
+> ___
+> ***Keen Smell.*** The rat has advantage on Wisdom (Perception) checks that rely on smell.
+>
+> ### Actions
+> ***Bite.*** *Melee Weapon Attack:* +0 to hit, reach 5 ft., one target. *Hit:* 1 piercing damage.
+
+\pagebreakNum
+
+___
+> ## Raven <!-- https://wc5e-cr-calculator.frogvall.com/?0;12;1;4;10;1;0;0;0;0;0;0;0;0;0;0;0;;;;;3;;;;;;;;;;1;;;;;;;;10;;;;;;;;;;; -->
+> *Tiny beast, unaligned*
+> ___
+> - **Armor Class** 12
+> - **Hit Points** 1 (1d4 - 1)
+> - **Speed** 10 ft., fly 50 ft.
+> ___
+> |  STR  |  DEX  |  CON  |  INT  |  WIS  |  CHA  |
+> |:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+> | 2 (-4)|14 (+2)| 8 (-1)| 2 (-4)|12 (+1)| 6 (-2)|
+> ___
+> - **Skills** Perception + 3
+> - **Senses** passive Perception 13
+> - **Languages** —
+> - **Challenge** 0 (0 or 10 XP)
+> ___
+> ***Mimicry.*** The raven can mimic simple sounds it has heard, such as a person whispering, a baby crying, or an animal chittering. A creature that hears the sounds can tell they are imitations with a successful DC 10 Wisdom (Insight) check.
+>
+> ### Actions
+> ***Beak.*** *Melee Weapon Attack:* +4 to hit, reach 5 ft., one target. *Hit:* 1 piercing damage.
+
+___
+> ## Riding Horse
+> *Large beast, unaligned*
+> ___
+> - **Armor Class** 11 (natural armor)
+> - **Hit Points** 13 (2d10 + 2)
+> - **Speed** 60 ft.
+> ___
+> |  STR  |  DEX  |  CON  |  INT  |  WIS  |  CHA  |
+> |:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+> |16 (+3)|10 (+0)|12 (+1)| 2 (-4)|11 (+0)| 7 (-2)|
+> ___
+> - **Senses** passive Perception 10
+> - **Languages** —
+> - **Challenge** 1/4 (50 XP)
+> ___
+>
+> ### Actions
+> ***Hooves.*** *Melee Weapon Attack:* +5 to hit, reach 5 ft., one target. *Hit:* 5 (2d4) bludgeoning damage.
+
+\columnbreak
+
+___
+> ## Riding Raptor <!-- https://wc5e-cr-calculator.frogvall.com/?0;13;32;5;12;14;0;0;0;0;0;0;0;0;0;0;0;;;;;3;;;;;;;;;;1;;;1;;;;;10;;;;;;;;;;; -->
+>*Large beast, unaligned*
+> ___
+> - **Armor Class** 13 (Natural Armor)
+> - **Hit Points** 32 (5d10 + 5)
+> - **Speed** 50 ft
+> ___
+>|STR|DEX|CON|INT|WIS|CHA|
+>|:---:|:---:|:---:|:---:|:---:|:---:|
+>|12 (+1)|16 (+3)|12 (+1)|3 (-4)|14 (+2)|6 (-2)|
+> ___
+> - **Skills** Perception +4, Stealth +4
+> - **Senses** passive Perception 14
+> - **Languages** —
+> - **Challenge** 1 (200 XP)
+> ___
+> ***Keen Hearing and Smell.*** The raptor has advantage on Wisdom (Perception) checks that rely on hearing or smell.
+>
+> ***Pack Tactics.*** The raptor has advantage on attack rolls against a creature if at least one of the raptor's allies is within 5 feet of the creature and the ally isn't incapacitated.
+>
+> ***Pounce***. If the raptor moves at least 20 ft. straight toward a creature and then hits it with a claw or bite attack on the same turn, that target must succeed on a DC 13 Strength saving throw or be knocked prone.
+>
+> ### Actions
+> ***Multiattack.*** The raptor makes two attacks: one with its bite and one with its claws.
+>
+> ***Bite***. Melee Weapon Attack: +5 to hit, reach 5 ft., one creature. Hit: 6 (1d6+3) piercing damage.
+>
+> ***Claws***. Melee Weapon Attack: +5 to hit, reach 5 ft., one creature. Hit: 8 (1d8+3) slashing damage.
+
+\pagebreakNum
+
+___
+> ## Riding Talbuk <!-- https://wc5e-cr-calculator.frogvall.com/?0;11;32;5;10;6;3;8;0;8;0;0;0;0;0;0;0;;;;;3;;;;;;;;;;1;;;;;;;;10;;;;;;;;;;; -->
+> *Large beast, unaligned*
+> ___
+> - **Armor Class** 11
+> - **Hit Points** 32 (5d10 + 5)
+> - **Speed** 50 ft.
+> ___
+> |  STR  |  DEX  |  CON  |  INT  |  WIS  |  CHA  |
+> |:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+> |16 (+3)|12 (+1)|13 (+1)| 2 (-4)|10 (+0)| 6 (-2)|
+> ___
+> - **Senses** passive Perception 10
+> - **Languages** —
+> - **Challenge** 1/2 (100 XP)
+> ___
+> ***Charge.*** If the talbuk moves at least 20 feet straight toward a target and then hits it with a ram attack on the same turn, the target takes an extra 3 (1d6) slashing damage. If the target is a creature, it must succeed on a DC 12 Strength saving throw or be knocked prone.
+>
+> ### Actions
+> ***Ram.*** *Melee Weapon Attack:* +5 to hit, reach 5 ft., one target. *Hit:* 6 (1d6 + 3) bludgeoning damage.
+>
+> ***Hooves.*** *Melee Weapon Attack:* +5 to hit, reach 5 ft., one target. *Hit:* 8 (2d4 + 3) bludgeoning damage.
+
+___
+> ## Sabercat <!-- https://wc5e-cr-calculator.frogvall.com/?0;12;37;5;12;18;0;10;0;10;0;0;0;0;0;0;0;;;;;4;;;;;;;;;;1;;;;;;;;10;;;;;; -->
+>*Large beast, unaligned*
+> ___
+> - **Armor Class** 12
+> - **Hit Points** 37 (5d10 + 10)
+> - **Speed** 40 ft., climb 30 ft.
+>___
+>|STR|DEX|CON|INT|WIS|CHA|
+>|:---:|:---:|:---:|:---:|:---:|:---:|
+>|17 (+3)|14 (+2)|15 (+2)|3 (-4)|12 (+1)|8 (-1)|
+>___
+> - **Skills** Perception +3, Stealth +6
+> - **Senses** darkvision 60 ft., passive Perception 13
+> - **Languages** —
+> - **Challenge** 1 (200 XP)
+> ___
+> ***Keen Smell.*** The sabercat has advantage on Wisdom (Perception) checks that rely on smell.
+>
+> ***Pounce.*** If the sabercat moves at least 20 feet straight toward a creature and then hits it with a claw attack on the same turn, that target must succeed on a DC 13 Strength saving throw or be knocked prone. If the target is prone, the sabercat can make one bite attack against it as a bonus action.
+>
+> ### Actions
+> ***Bite.*** *Melee Weapon Attack:* +5 to hit, reach 5 ft., one target. *Hit:* 8 (1d10 + 3) piercing damage.
+>
+> ***Claw.*** *Melee Weapon Attack:* +5 to hit, reach 5 ft., one target. *Hit:* 10 (2d6 + 3) slashing damage.
+
+___
+>## Sea Horse
+>*Tiny beast, unaligned*
+>___
+>- **Armor Class** 11
+>- **Hit Points** 1 (1d4 - 1)
+>- **Speed** 0 ft., swim 20 ft.
+>___
+>|STR|DEX|CON|INT|WIS|CHA|
+>|:---:|:---:|:---:|:---:|:---:|:---:|
+>|1 (-5)|12 (+1)|8 (-1)|1 (-5)|10 (+0)|2 (-4)|
+>___
+>- **Senses** passive Perception 10
+>- **Languages** —
+>- **Challenge** 0 (0 or 10 XP)
+>- **Proficiency Bonus** +2
+>___
+>***Water Breathing.*** The sea horse can breathe only underwater.
+
+___
+> ## Spider <!-- https://wc5e-cr-calculator.frogvall.com/?0;12;1;0;10;3;0;0;0;0;0;0;0;0;0;0;0;;;;;3;;;;;;;;;;1;;;;;;;;10;;;;;;;;;;; -->
+> *Tiny beast, unaligned*
+> ___
+> - **Armor Class** 12
+> - **Hit Points** 1 (1d4-1)
+> - **Speed** 20 ft., climb 20 ft.
+> ___
+> |  STR  |  DEX  |  CON  |  INT  |  WIS  |  CHA  |
+> |:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+> | 2 (-4)|14 (+2)| 8 (-1)| 1 (-5)|10 (+0)| 2 (-4)|
+> ___
+> - **Skills** Stealth +4
+> - **Senses** darkvision 30 ft., passive Perception 10
+> - **Languages** —
+> - **Challenge** 0 (0 or 10 XP)
+> ___
+> ***Spider Climb.*** The spider can climb difficult surfaces, including upside down on ceilings, without needing to make an ability check.
+>
+> ***Web Sense.*** While in contact with a web, the spider knows the exact location of any other creature in contact with the same web.
+>
+> ***Web Walker.*** The spider ignores movement restrictions caused by webbing.
+>
+> ### Actions
+> ***Bite.*** *Melee Weapon Attack:* +0 to hit, reach 5 ft., one creature. *Hit:* 1 piercing damage, and the target must succeed on a DC 9 Constitution saving throw or take 2 (1d4) poison damage.
+
+\pagebreakNum
+___
+> ## Warhorse <!-- https://wc5e-cr-calculator.frogvall.com/?0;11;45;4;12;7;7;7;0;7;0;0;0;0;0;0;0;;;;;3;;;;;;;;;;1;;;;;;;;10;;;;;;;;;;; -->
+> *Large beast, unaligned*
+> ___
+> - **Armor Class** 11
+> - **Hit Points** 45 (7d10 + 7)
+> - **Speed** 60 ft.
+> ___
+> |  STR  |  DEX  |  CON  |  INT  |  WIS  |  CHA  |
+> |:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+> |18 (+4)|12 (+1)|13 (+1)| 2 (-4)|12 (+1)| 7 (-2)|
+> ___
+> - **Senses** passive Perception 11
+> - **Languages** —
+> - **Challenge** 1/2 (100 XP)
+> ___
+> ***Trampling Charge.*** If the warhorse moves at least 20 feet straight toward a creature and then hits it with a hooves attack on the same turn, that target must succeed on a DC 13 Strength saving throw or be knocked prone. If the target is prone, the warhorse can make another attack with its hooves against it as a bonus action.
+>
+> ### Actions
+> ***Hooves.*** *Melee Weapon Attack:* +4 to hit, reach 5 ft., one target. *Hit:* 7 (2d6) bludgeoning damage.
+
+___
+> ## Warhorse Skeleton <!-- https://wc5e-cr-calculator.frogvall.com/?0;13;22;6;12;7;0;7;0;7;0;0;0;0;0;0;0;;;;;4;;;;;;;;;;1;;;;;;;;10;;;;;; -->
+>*Large undead, lawful evil*
+> ___
+> - **Armor Class** 13 (barding scraps)
+> - **Hit Points** 22 (3d10 + 6)
+> - **Speed** 60 ft.
+>___
+>|STR|DEX|CON|INT|WIS|CHA|
+>|:---:|:---:|:---:|:---:|:---:|:---:|
+>|18 (+4)|12 (+1)|15 (+2)|2 (-4)|8 (-1)|5 (-3)|
+>___
+> - **Damage Vulnerabilities** bludgeoning
+> - **Damage Immunities** poison
+> - **Condition Immunities** exhaustion, poison
+> - **Senses** darkvision 60 ft., passive Perception 9
+> - **Languages** —
+> - **Challenge** 1/2 (100 XP)
+> ___
+>
+> ### Actions
+> ***Hooves.*** *Melee Weapon Attack:* +6 to hit, reach 5 ft., one target. *Hit:* 7 (1d6 + 4) bludgeoning damage
+
+___
+> ## Weasel
+>*Tiny beast, unaligned*
+>___
+>- **Armor Class** 13
+>- **Hit Points** 1 (1d4 - 1)
+>- **Speed** 30 ft.
+>___
+>|STR|DEX|CON|INT|WIS|CHA|
+>|:---:|:---:|:---:|:---:|:---:|:---:|
+>|3 (-4)|16 (+3)|8 (-1)|2 (-4)|12 (+1)|3 (-4)|
+>___
+>- **Skills** Perception +3, Stealth +5
+>- **Senses** passive Perception 13
+>- **Languages** —
+>- **Challenge** 0 (0 or 10 XP)
+>- **Proficiency Bonus** +2
+>___
+>***Keen Hearing and Smell.*** The weasel has advantage on Wisdom (Perception) checks that rely on hearing or smell.  
+>
+>### Actions
+>***Bite.*** *Melee Weapon Attack:* +5 to hit, reach 5 ft., one creature. *Hit:* 1 piercing damage.
+
+<!-- 
+
+\pagebreakNum
+> ##### Find (Greater) Steed
+> [Define what the two spells summon now. Deathchargers are DK specific, felsteeds are warlock specific.]
+
+FS: (CR < 1)
+
+FGS: (CR = 2)
+
+
+##### 
+
+\pagebreakNum
+
+
+
+# Appendix D: Creature Statistics
+Spells [and class features] allow characters to [transform into animals,] summon creatures [to serve as familiars], and create undead. Statistics for such creatures are grouped in this appendix for your convenience. For information on how to read a stat block, see the *Manual of Monsters* or *Monster Manual*.
+
+Creature                |CR |Source
+------------------------|---|-----
+Camel                   |   |Equipment
+Deathcharger            |   |Spell (*find greater steed*)
+Dire Wolf               |   |Equipment
+Draft Horse             |   |Equipment
+Dragon Turtle           |   |Equipment
+Dragonhawk              |   |Equipment
+Elekk                   |   |Equipment
+Felsteed                |   |Spell (*find greater steed*)
+Gryphon                 |   |Equipment
+Hippogriff              |   |Equipment
+Hyena                   |   |Equipment
+Kodo                    |   |Equipment
+Mastiff                 |   |Equipment
+Mule                    |   |Equipment
+Pony                    |   |Equipment
+Riding Horse            |   |Equipment
+Riding Raptor           |   |Equipment
+Riding Talbuk           |   |Equipment
+Shambling Horde         |8  |Spell (*army of the dead*, death knight)
+Skeleton                |   |Spell (*animate dead*)
+Warhorse                |   |Equipment
+Warhorse Skeleton       |   |Equipment
+Zombie                  |   |Spell (*animate dead*)
+
+All undead, CR 5-6: Spell (*summon undead*, death knight)
+
+\pagebreakNum -->
+
+
+\pagebreak
+
+
+<div class='classTable' >
+
+##### New Class Proficiencies
+
+Class       | Weapon Proficiencies
+------------|---------------------
+Death Knight| Simple weapons, martial weapons
+Demon Hunter| Simple weapons, martial weapons
+Druid       | Simple weapons
+Hunter      | Simple weapons, martial weapons
+Mage        | Simple weapons
+Monk        | Simple weapons, chakram, shortswords, warclaws
+Paladin     | Simple weapons, martial weapons
+Priest      | Simple weapons
+Rogue       | Simple weapons, blunderbuss, hand crossbows, longswords, pistols, rapiers, shortswords
+Shaman      | Simple weapons, battle totems, warclaws
+Warlock     | Simple weapons
+Warrior     | Simple weapons, martial weapons
+
+</div>
+
+\pagebreak
+
+#### Silver Standard: Copper Base
+
+In this system, prices are converted to their equivalent in copper (so a 10 gp suit of leather armor is worth 1,000 cp), then the new exchange rate is applied (the 1,000 cp is converted back to 10 sp).
+
+<div class='table wide'>
+
+##### Armor
+Name                                | Cost      |&nbsp;&nbsp;&nbsp;&nbsp;| Armor Class (AC)     | Strength  | Stealth   | Weight
+------------------------------------|----------:|-|---------------------|--|---|------:
+|&nbsp; *Light Armor*               |           ||                          |           
+|&nbsp;&nbsp;&nbsp; Padded          |      5 sp || 11 + Dex modifier        | —         | Disadvantage  |  8 lb.
+|&nbsp;&nbsp;&nbsp; Leather         |     10 sp || 11 + Dex                 | —         | —             | 10 lb.
+|&nbsp;&nbsp;&nbsp; Studded Leather |     45 sp || 12 + Dex                 | —         | —             | 13 lb.
+|&nbsp; *Medium Armor*              |           ||                          |           |               |
+|&nbsp;&nbsp;&nbsp; Hide            |     10 sp || 12 + Dex modifier (max 2)| —         | —             | 12 lb.
+|&nbsp;&nbsp;&nbsp; Chain shirt     |     50 sp || 13 + Dex modifier (max 2)| —         | —             | 20 lb.
+|&nbsp;&nbsp;&nbsp; Scale mail      |     50 sp || 14 + Dex modifier (max 2)| —         | Disadvantage  | 45 lb.
+|&nbsp;&nbsp;&nbsp; Breastplate     |    400 sp || 14 + Dex modifier (max 2)| —         | —             | 20 lb.
+|&nbsp;&nbsp;&nbsp; Half plate      |    750 sp || 15 + Dex modifier (max 2)| —         | Disadvantage  | 40 lb.
+|&nbsp; *Heavy Armor*               |           ||                          |           |               |
+|&nbsp;&nbsp;&nbsp; Ring mail       |     30 sp || 14                       | —         | Disadvantage  | 40 lb.
+|&nbsp;&nbsp;&nbsp; Chain mail      |     75 sp || 16                       | Str 13    | Disadvantage  | 55 lb.
+|&nbsp;&nbsp;&nbsp; Splint          |    200 sp || 17                       | Str 15    | Disadvantage  | 60 lb.
+|&nbsp;&nbsp;&nbsp; Full plate      |  1,500 sp || 18                       | Str 15    | Disadvantage  | 65 lb.
+|&nbsp; *Shield*                    |           ||                          |           |               |
+|&nbsp;&nbsp;&nbsp; Shield          |     10 sp || +2                       | —         | —             | 6 lb.
+
+</div>
+
+<div class='table wide'>
+
+##### Simple Weapons
+
+|&nbsp; Name |&nbsp;&nbsp; Cost |&nbsp;&nbsp;| Damage | Weight |&nbsp;| Properties 
+|------------|----:|------------|--------|-------:|------------------|------------
+|&nbsp; *Simple Melee Weapons*      |       ||                 |       ||
+|&nbsp;&nbsp;&nbsp; ✦ Bayonet         | 2 sp  || 1d8 piercing    | 1 lb. || Special, two-handed
+|&nbsp;&nbsp;&nbsp; Club            | 10 cp || 1d4 bludgeoning | 2 lb. || Light
+|&nbsp;&nbsp;&nbsp; Dagger          |  2 sp || 1d4 piercing    | 1 lb. || Finesse, light, thrown (range 20/60)
+|&nbsp;&nbsp;&nbsp; Greatclub       | 20 cp || 1d8 bludgeoning |10 lb. || Two-handed                          
+|&nbsp;&nbsp;&nbsp; Handaxe         |  5 sp || 1d6 slashing    | 2 lb. || Light, thrown (range 20/60)         
+|&nbsp;&nbsp;&nbsp; Javelin         | 50 cp || 1d6 piercing    | 2 lb. || Thrown (range 30/120)               
+|&nbsp;&nbsp;&nbsp; ✦ Knuckles        | 2 sp  || 1d4 bludgeoning | 1 lb. || Glove, light
+|&nbsp;&nbsp;&nbsp; Light hammer    | 2 sp  || 1d4 bludgeoning | 2 lb. || Light, thrown (range 20/60)
+|&nbsp;&nbsp;&nbsp; Mace            | 5 sp  || 1d6 bludgeoning | 4 lb. || —                          
+|&nbsp;&nbsp;&nbsp; Quarterstaff    |20 cp  || 1d6 bludgeoning | 4 lb. || Versatile (1d8)            
+|&nbsp;&nbsp;&nbsp; ✦ Scythe          | 5 sp  || 1d8 slashing    | 5 lb. || Two-handed
+|&nbsp;&nbsp;&nbsp; Sickle          | 1 sp  || 1d4 slashing    | 2 lb. || Light
+|&nbsp;&nbsp;&nbsp; Spear           | 1 sp  || 1d6 piercing    | 3 lb. || Thrown (range 20/60), versatile (1d8)
+|&nbsp; *Simple Ranged Weapons*     |       ||                 |       ||
+|&nbsp;&nbsp;&nbsp; Crossbow, light |25 sp  || 1d8 piercing    | 5 lb. || Ammunition (range 80/320), loading, two-handed
+|&nbsp;&nbsp;&nbsp; Dart            | 5 cp  || 1d4 piercing    |1/4 lb.|| Finesse, thrown (range 20/60)        
+|&nbsp;&nbsp;&nbsp; Shortbow        |25 sp  || 1d6 piercing    | 2 lb. || Ammunition (range 80/320), two-handed
+|&nbsp;&nbsp;&nbsp; Sling           |10 cp  || 1d4 bludgeoning | —     || Ammunition (range 30/120)            
+
+</div>
+
+\pagebreak
+
+<div class='table wide'>
+
+##### Martial Weapons
+
+|&nbsp; Name |&nbsp;&nbsp; Cost |&nbsp;&nbsp;| Damage | Weight |&nbsp;| Properties 
+|------------|----:|------------|--------|-------:|------------------|------------
+|&nbsp; *Martial Melee Weapons*     |       ||                 |       ||
+|&nbsp;&nbsp;&nbsp; ✦ Battle Totem    | 35 sp || 1d12 bludgeoning|35 lb. || Heavy, two-handed
+|&nbsp;&nbsp;&nbsp; Battleaxe       | 10 sp || 1d8 slashing    | 4 lb. || Versatile (1d10) 
+|&nbsp;&nbsp;&nbsp; ✦ Chakram         | 25 sp || 1d6 slashing    | 2 lb. || Finesse, light, special, thrown (range 30/120)
+|&nbsp;&nbsp;&nbsp; Flail           | 10 sp || 1d8 bludgeoning | 2 lb. || —
+|&nbsp;&nbsp;&nbsp; Glaive          | 20 sp || 1d10 slashing   | 6 lb. || Heavy, reach, two-handed
+|&nbsp;&nbsp;&nbsp; Greataxe        | 30 sp || 1d12 slashing   | 7 lb. || Heavy, two-handed
+|&nbsp;&nbsp;&nbsp; Greatsword      | 50 sp || 2d6 slashing    | 6 lb. || Heavy, two-handed
+|&nbsp;&nbsp;&nbsp; Halberd         | 20 sp || 1d10 slashing   | 6 lb. || Heavy, reach, two-handed
+|&nbsp;&nbsp;&nbsp; Lance           | 10 sp || 1d12 piercing   | 6 lb. || Reach, special
+|&nbsp;&nbsp;&nbsp; Longsword       | 15 sp || 1d8 slashing    | 3 lb. || Versatile (1d10)
+|&nbsp;&nbsp;&nbsp; Maul            | 10 sp || 2d6 bludgeoning |10 lb. || Heavy, two-handed
+|&nbsp;&nbsp;&nbsp; Morningstar     | 15 sp || 1d8 piercing    | 4 lb. || —
+|&nbsp;&nbsp;&nbsp; Pike            |  5 sp || 1d10 piercing   |18 lb. || Heavy, reach, two-handed
+|&nbsp;&nbsp;&nbsp; Rapier          | 25 sp || 1d8 piercing    | 2 lb. || Finesse
+|&nbsp;&nbsp;&nbsp; Scimitar        | 25 sp || 1d6 slashing    | 3 lb. || Finesse, light
+|&nbsp;&nbsp;&nbsp; Shortsword      | 10 sp || 1d6 piercing    | 2 lb. || Finesse, light
+|&nbsp;&nbsp;&nbsp; ✦ Spiked Chain    |  5 sp || 1d6 slashing    |11 lb. || Finesse, reach, two-handed
+|&nbsp;&nbsp;&nbsp; Trident         |  5 sp || 1d6 piercing    | 4 lb. || Thrown (range 20/60), versatile (1d8)
+|&nbsp;&nbsp;&nbsp; ✦ Twinblade       | 50 sp || 1d6 slashing    | 5 lb. || Special
+|&nbsp;&nbsp;&nbsp; War pick        |  5 sp || 1d8 piercing    | 2 lb. || —
+|&nbsp;&nbsp;&nbsp; ✦ Warclaw         | 12 sp || 1d6 slashing    | 2 lb. || Glove, light
+|&nbsp;&nbsp;&nbsp; ✦ Warglaive       | 25 sp || 1d6 slashing    | 2 lb. || Light, thrown (range 20/60)
+|&nbsp;&nbsp;&nbsp; Warhammer       | 15 sp || 1d8 bludgeoning | 2 lb. || Versatile (1d10)
+|&nbsp;&nbsp;&nbsp; Whip            |  2 sp || 1d4 slashing    | 3 lb. || Finesse, reach
+|&nbsp; *Martial Ranged Weapons*    |       ||                 |       ||                                                       |
+|&nbsp;&nbsp;&nbsp; Blowgun         | 10 sp ||   1 piercing    | 1 lb. || Ammunition (range 25/100), loading
+|&nbsp;&nbsp;&nbsp; ✦ Blunderbuss     | 85 sp || 2d6 piercing    |25 lb. || Ammunition (range 15/60), booming, heavy, <br/> loading, two-handed 
+|&nbsp;&nbsp;&nbsp; Crossbow, hand  | 75 sp || 1d6 piercing    | 3 lb. || Ammunition (range 30/120), light, loading
+|&nbsp;&nbsp;&nbsp; Crossbow, heavy | 50 sp || 1d10 piercing   |18 lb. || Ammunition (range 100/400), heavy, loading, <br/> two-handed
+|&nbsp;&nbsp;&nbsp; Longbow         | 50 sp || 1d8 piercing    | 2 lb. || Ammunition (range 150/600), heavy, two-handed
+|&nbsp;&nbsp;&nbsp; Net             |  1 sp || —               | 3 lb. || Special, thrown (range 5/15)
+|&nbsp;&nbsp;&nbsp; ✦ Pistol          | 75 sp || 1d8 piercing    | 4 lb. || Ammunition (range 30/120), booming, loading, light             |
+|&nbsp;&nbsp;&nbsp; ✦ Rifle           | 75 sp || 1d12 piercing   |18 lb. || Ammunition (range 60/240), booming, heavy, <br/> loading, two-handed |
+
+</div>
+
+\pagebreak
+
+<div class='table wide' style='column-count:2'>
+
+##### Adventuring Gear
+
+|&nbsp; Item                                | Cost  | Weight
+--------------------------------------------|------:|----:
+|&nbsp; Abacus                              | 2 sp  | 2 lb.
+|&nbsp; Acid (vial)                         | 25 sp | 1 lb.
+|&nbsp; Alchemist's fire                    | 50 sp | 1 lb.
+|&nbsp; ✦ Ammo pouch
+|&nbsp; *Ammunition*                        |       |
+|&nbsp;&nbsp;&nbsp; Arrows (20)             | 1 sp  | 1 lb.
+|&nbsp;&nbsp;&nbsp; Blowgun needles (50)    | 1 sp  | 1 lb.
+|&nbsp;&nbsp;&nbsp; Crossbow bolts (20)     | 1 sp  | 1½ lb.
+|&nbsp;&nbsp;&nbsp; ✦ Firearm bullets (20)    | 2 sp  | 2 lb.
+|&nbsp;&nbsp;&nbsp; Sling bullets (20)      | 4 cp  | 1½ lb.
+|&nbsp; Antitoxin (vial)                    | 50 sp | —
+|&nbsp; *Arcane focus*                      |       |
+|&nbsp;&nbsp;&nbsp; Crystal                 | 10 sp | 1 lb.
+|&nbsp;&nbsp;&nbsp; Orb                     | 20 sp | 3 lb.
+|&nbsp;&nbsp;&nbsp; Rod                     | 10 sp | 2 lb.
+|&nbsp;&nbsp;&nbsp; Staff                   | 5 sp  | 4 lb.
+|&nbsp;&nbsp;&nbsp; Wand                    | 10 sp | 1 lb.
+|&nbsp; Backpack                            | 2 sp  | 5 lb.
+|&nbsp; Ball bearings (bag of 1,000)        | 1 sp  | 2 lb.
+|&nbsp; Barrel                              | 2 sp  | 70 lb.
+|&nbsp; Basket                              | 40 cp | 2 lb.
+|&nbsp; Bedroll                             | 1 sp  | 7 lb.
+|&nbsp; Bell                                | 1 sp  | —
+|&nbsp; Blanket                             | 50 cp | 3 lb.
+|&nbsp; Block and tackle                    | 1 sp  | 5 lb.
+|&nbsp; Book                                | 25 sp | 5 lb.
+|&nbsp; Bottle, glass                       | 2 sp  | 2 lb.
+|&nbsp; Bucket                              | 5 cp  | 2 lb.
+|&nbsp; ✦ Buzzbox                             |2,000 sp| 10 lb.
+|&nbsp; ✦ Calculator                          | 50 sp | 1 lb.
+|&nbsp; Caltrops (bag of 20)                | 1 sp  | 2 lb.
+|&nbsp; Candle                              | 1 cp  | —
+|&nbsp; Case, crossbow bolt                 | 1 sp  | 1 lb.
+|&nbsp; Case, map or scroll                 | 1 sp  | 1 lb.
+|&nbsp; Chain (10 feet)                     | 5 sp  | 10 lb.
+|&nbsp; Chalk (1 piece)                     | 1 cp  | —
+|&nbsp; Chest                               | 5 sp  | 25 lb.
+|&nbsp; Climber's kit                       | 25 sp | 12 lb.
+|&nbsp; Clothes, common                     | 50 cp | 3 lb.
+|&nbsp; Clothes, costume                    | 5 sp  | 4 lb.
+|&nbsp; Clothes, fine                       | 15 sp | 6 lb.
+|&nbsp; Clothes, traveler's                 | 2 sp  | 4 lb.
+|&nbsp; Component pouch                     | 25 sp | 2 lb.
+
+\columnbreak
+
+<div style='margin-top:31px;'></div>
+
+|&nbsp; Item                                | Cost  | Weight
+--------------------------------------------|------:|----:
+|&nbsp; Crowbar                             | 2 sp  | 5 lb.
+|&nbsp; *Druidic focus*                     |       |
+|&nbsp;&nbsp;&nbsp; Sprig of mistletoe      | 1 sp  | —
+|&nbsp;&nbsp;&nbsp; Totem                   | 1 sp  | —
+|&nbsp;&nbsp;&nbsp; Wooden staff            | 5 sp  | 4 lb.
+|&nbsp;&nbsp;&nbsp; Yew wand                | 10 sp | 1 lb.
+|&nbsp; ✦ Dynamite (stick)                    |150 sp | 1 lb.
+|&nbsp; ✦ Firestarter                         | 25 sp | —
+|&nbsp; ✦ Firework                            | 25 sp | 1 lb.
+|&nbsp; Fishing tackle                      | 1 sp  | 4 lb.
+|&nbsp; ✦ Flashlight                          | 50 sp | 2 lb.
+|&nbsp; Flask or tankard                    | 2 cp  | 1 lb.
+|&nbsp; ✦ Glowstick                           | 5 cp  | —
+|&nbsp; *Grenades*                          |       |
+|&nbsp;&nbsp;&nbsp; ✦ Fragmentation           | 150 sp| 2 lb.
+|&nbsp;&nbsp;&nbsp; ✦ Incendiary              | 150 sp| 2 lb.
+|&nbsp;&nbsp;&nbsp; ✦ Smoke                   | 25 sp | 2 lb.
+|&nbsp; Grappling hook                      | 2 sp  | 4 lb.
+|&nbsp; Hammer                              | 1 sp  | 3 lb.
+|&nbsp; Hammer, sledge                      | 2 sp  | 10 lb.
+|&nbsp; Healer's kit                        | 5 sp  | 3 lb.
+|&nbsp; *Holy symbol*                       |       |
+|&nbsp;&nbsp;&nbsp; Amulet                  | 5 sp  | 1 lb.
+|&nbsp;&nbsp;&nbsp; Emblem                  | 5 sp  | —
+|&nbsp;&nbsp;&nbsp; ✦ Libram                  | 25 sp | 5 lb.
+|&nbsp;&nbsp;&nbsp; Reliquary               | 5 sp  | 2 lb.
+|&nbsp; Holy water (flask)                  | 25 sp | 1 lb.
+|&nbsp; Hourglass                           | 25 sp | 1 lb.
+|&nbsp; Hunting trap                        | 5 sp  | 25 lb.
+|&nbsp; Ink (1 ounce bottle)                | 10 sp | —
+|&nbsp; Ink pen                             | 2 cp  | —
+|&nbsp; Jug or pitcher                      | 2 cp  | 4 lb.
+|&nbsp; Ladder (10-foot)                    | 10 cp | 25 lb.
+|&nbsp; Lamp                                | 50 cp | 1 lb.
+|&nbsp; Lantern, bullseye                   | 10 sp | 2 lb.
+|&nbsp; ✦ Lantern, electric                   | 50 sp | 2 lb.
+|&nbsp; Lantern, hooded                     | 5 sp  | 2 lb.
+|&nbsp; Lock                                | 10 sp | 1 lb.
+|&nbsp; Magnifying glass                    |100 sp | —
+|&nbsp; Manacles                            | 2 sp  | 6 lb.
+|&nbsp; Mess kit                            | 20 cp | 1 lb.
+|&nbsp; Mirror, steel                       | 5 sp  | 1/2 lb.
+|&nbsp; ✦ Music box                           | 20 sp | 1 lb.
+
+</div>
+
+\pagebreak
+
+##### Adventuring Gear (Continued)
+
+|&nbsp; Item                                | Cost  | Weight
+--------------------------------------------|------:|----:
+|&nbsp; Oil (flask)                         | 10 cp | 1 lb.
+|&nbsp; Paper (one sheet)                   | 20 cp | —
+|&nbsp; ✦ Parachute                           | 30 sp | 15 lb.
+|&nbsp; Parchment (one sheet)               | 10 cp | —
+|&nbsp; Perfume (vial)                      | 5 sp  | —
+|&nbsp; Pick, miner's                       | 2 sp  | 10 lb.
+|&nbsp; Piton                               | 5 cp  | 1/4 lb.
+|&nbsp; Poison, basic (vial)                | 100 sp|
+|&nbsp; Pole (10-foot)                      | 5 cp  | 7 lb.
+|&nbsp; Pot, iron                           | 2 sp  | 10 lb.
+|&nbsp; *Potion of healing*                 | 50 sp | 1/2 lb.
+|&nbsp; Pouch                               | 50 cp | 1 lb.
+|&nbsp; Quiver                              | 1 sp  | 1 lb.
+|&nbsp; Ram, portable                       | 4 sp  | 35 lb.
+|&nbsp; Rations (1 day)                     | 50 cp | 2 lb.
+|&nbsp; Robes                               | 1 sp  | 4 lb.
+|&nbsp; Rope, hempen (50 feet)              | 1 sp  | 10 lb.
+|&nbsp; Rope, silk (50 feet)                | 10 sp | 5 lb.
+|&nbsp; Sack                                | 1 cp  | 1/2 lb.
+|&nbsp; Scale, merchant's                   | 5 sp  | 3 lb.
+|&nbsp; ✦ Scope                               |1,000 sp| 1 lb.
+|&nbsp; Sealing wax                         | 50 cp | —
+|&nbsp; Shovel                              | 2 sp  | 5 lb.
+|&nbsp; Signal whistle                      | 5 cp  | —
+|&nbsp; Signet ring                         | 5 sp  | —
+|&nbsp; Soap                                | 2 cp  | —
+|&nbsp; Spellbook                           | 50 sp | 3 lb.
+|&nbsp; Spikes, iron (10)                   | 1 sp  | 5 lb.
+|&nbsp; Spyglass                            |1,000 sp| 1 lb.
+|&nbsp; Tent, two-person                    | 2 sp  | 20 lb.
+|&nbsp; ✦ Timepiece                           | 50 sp | —
+|&nbsp; Tinderbox                           | 50 cp | 1 lb.
+|&nbsp; Torch                               | 1 cp  | 1 lb.
+|&nbsp; Vial                                | 1 sp  | —
+|&nbsp; Waterskin                           | 20 cp | 5 lb. (full)
+|&nbsp; Whetstone                           | 1 cp  | 1 lb.
+
+\columnbreak
+
+##### Equipment Packs
+|&nbsp; Item                                | Cost  | Weight
+--------------------------------------------|------:|----:
+|&nbsp; Burglar's pack                      | 16 sp | 44½ lb.
+|&nbsp; Diplomat's pack                     | 39 sp | 36 lb.
+|&nbsp; Dungeoneer's pack                   | 12 sp | 61½ lb.
+|&nbsp; Entertainer's pack                  | 40 sp | 38 lb.
+|&nbsp; Explorer's pack                     | 10 sp | 59 lb.
+|&nbsp; Priest's pack                       | 19 sp | 24 lb.
+|&nbsp; Scholar's pack                      | 40 sp | 10 lb.
+
+\pagebreak
+
+##### Tools
+|&nbsp; Item                                | Cost  | Weight
+--------------------------------------------|------:|----:
+|&nbsp; *Artisan's tools*                   |       |
+|&nbsp;&nbsp;&nbsp; Alchemist's supplies    | 50 sp | 8 lb.
+|&nbsp;&nbsp;&nbsp; Brewer's supplies       | 20 sp | 9 lb.
+|&nbsp;&nbsp;&nbsp; Calligrapher's supplies | 10 sp | 5 lb.
+|&nbsp;&nbsp;&nbsp; Carpenter's tools       | 8 sp  | 6 lb.
+|&nbsp;&nbsp;&nbsp; Cartographer's tools    | 15 sp | 6 lb.
+|&nbsp;&nbsp;&nbsp; Cobbler's tools         | 5 sp  | 5 lb.
+|&nbsp;&nbsp;&nbsp; Cook's utensils         | 1 sp  | 8 lb.
+|&nbsp;&nbsp;&nbsp; ✦ Engineer's tools        | 50 sp | 15 lb.
+|&nbsp;&nbsp;&nbsp; ✦ Enchanter's supplies    | 30 sp | 5 lb.
+|&nbsp;&nbsp;&nbsp; Glassblower's tools     | 30 sp | 5 lb.
+|&nbsp;&nbsp;&nbsp; Jeweler's tools         | 25 sp | 2 lb.
+|&nbsp;&nbsp;&nbsp; Leatherworker's tools   | 5 sp  | 5 lb.
+|&nbsp;&nbsp;&nbsp; Mason's tools           | 10 sp | 8 lb.
+|&nbsp;&nbsp;&nbsp; Painter's supplies      | 10 sp | 5 lb.
+|&nbsp;&nbsp;&nbsp; Potter's tools          | 10 sp | 3 lb.
+|&nbsp;&nbsp;&nbsp; Smith's tools           | 20 sp | 8 lb.
+|&nbsp;&nbsp;&nbsp; Tinker's tools          | 50 sp | 10 lb.
+|&nbsp;&nbsp;&nbsp; Weaver's tools          | 1 sp  | 5 lb.
+|&nbsp;&nbsp;&nbsp; Woodcarver's tools      | 1 sp  | 5 lb.
+|&nbsp; Disguise kit                        | 25 sp | 3 lb.
+|&nbsp; Forgery kit                         | 15 sp | 3 lb.
+|&nbsp; *Gaming set*                        |       |
+|&nbsp;&nbsp;&nbsp; Dice set                | 10 cp | 
+|&nbsp;&nbsp;&nbsp; Dragonchess set         | 1 sp  | 1/2 lb.
+|&nbsp;&nbsp;&nbsp; ✦ Hearthstone card set    | 5 sp  |
+|&nbsp;&nbsp;&nbsp; ✦ Pandaren jihui board    | 5 sp  | 2 lb.
+|&nbsp;&nbsp;&nbsp; Playing card set        | 50 cp | 
+|&nbsp;&nbsp;&nbsp; Three-Dragon Ante set   | 1 sp  |
+|&nbsp; Herbalism kit                       | 5 sp  | 3 lb.
+|&nbsp; *Musical instrument*                |       |
+|&nbsp;&nbsp;&nbsp; Bagpipes                | 30 sp | 6 lb.
+|&nbsp;&nbsp;&nbsp; Drum                    | 6 gp  | 3 lb.
+|&nbsp;&nbsp;&nbsp; Dulcimer                | 25 sp | 10 lb.
+|&nbsp;&nbsp;&nbsp; Flute                   | 2 sp  | 1 lb.
+|&nbsp;&nbsp;&nbsp; Lute                    | 35 sp | 2 lb.
+|&nbsp;&nbsp;&nbsp; Lyre                    | 30 sp | 2 lb.
+|&nbsp;&nbsp;&nbsp; Horn                    | 3 sp  | 2 lb.
+|&nbsp;&nbsp;&nbsp; Pan flute               | 12 sp | 2 lb.
+|&nbsp;&nbsp;&nbsp; Shawm                   | 2 sp  | 1 lb.
+|&nbsp;&nbsp;&nbsp; Viol                    | 30 sp | 1 lb.
+|&nbsp; Navigator's tools                   | 25 sp | 2 lb.
+
+\columnbreak
+
+<div style='margin-top:31px;'></div>
+
+|&nbsp; Item                                | Cost  | Weight
+--------------------------------------------|------:|----:
+|&nbsp; Poisoner's kit                      | 50 sp | 2 lb.
+|&nbsp; ✦ Suturing kit                        | 25 sp | 3 lb.
+|&nbsp; Thieves' tools                      | 25 sp | 1 lb.
+|&nbsp; Vehicles (air, land or water)       | *     | *
+
+* See the "Mounts and Vehicles" section
+
+
+
+##### Trade Goods
+Cost    |&nbsp;| Goods
+-------:|---|-------------
+1 cp   || 1 lb. of wheat
+2 cp	|| 1 lb. of flour or one chicken
+5 cp	|| 1 lb. of salt
+10 cp	|| 1 lb. of iron or 1 sq. yd. of canvas
+50 cp	|| 1 lb. of copper or 1 sq. yd. of cotton cloth
+1 sp	|| 1 lb. of ginger or one goat
+2 sp	|| 1 lb. of cinnamon or pepper, or one sheep
+3 sp	|| 1 lb. of cloves or one pig
+5 sp	|| ~~1 lb. of silver~~ or 1 sq. yd. of linen
+10 sp	|| 1 sq. yd. of silk or one cow
+15 sp	|| 1 lb. of saffron or one ox
+50 sp	|| ~~1 lb. of gold~~ or **1 lb. of silver**
+500 sp  || ~~1 lb. of platinum~~
+5,000 sp||**1 lb. of gold**
+500,000 sp||**1 lb. of platinum**
+
+##### Lifestyle Expenses
+Lifestyle   |&nbsp;&nbsp;&nbsp;| Price/Day
+------------|-|----
+Wretched    || —
+Squalid	    || 10 cp
+Poor	    || 20 cp
+Modest	    || 1 sp
+Comfortable || 2 sp
+Wealthy	    || 4 sp
+Aristocratic|| 10 sp minimum
+
+
+
+\pagebreak
+
+#### Silver Standard: Adjusted
+In this system, gp prices are now x10 sp (so 2 gp -> 20 sp), sp remain the same, and cp are now x10.<div class='table wide'>
+
+##### Armor
+Name                                | Cost      |&nbsp;&nbsp;&nbsp;&nbsp;| Armor Class (AC)     | Strength  | Stealth   | Weight
+------------------------------------|----------:|-|---------------------|--|---|------:
+|&nbsp; *Light Armor*               |           ||                          |           
+|&nbsp;&nbsp;&nbsp; Padded          |     50 sp || 11 + Dex modifier        | —         | Disadvantage  |  8 lb.
+|&nbsp;&nbsp;&nbsp; Leather         |    100 sp || 11 + Dex                 | —         | —             | 10 lb.
+|&nbsp;&nbsp;&nbsp; Studded Leather |    450 sp || 12 + Dex                 | —         | —             | 13 lb.
+|&nbsp; *Medium Armor*              |           ||                          |           |               |
+|&nbsp;&nbsp;&nbsp; Hide            |    100 sp || 12 + Dex modifier (max 2)| —         | —             | 12 lb.
+|&nbsp;&nbsp;&nbsp; Chain shirt     |    500 sp || 13 + Dex modifier (max 2)| —         | —             | 20 lb.
+|&nbsp;&nbsp;&nbsp; Scale mail      |    500 sp || 14 + Dex modifier (max 2)| —         | Disadvantage  | 45 lb.
+|&nbsp;&nbsp;&nbsp; Breastplate     |  4,000 sp || 14 + Dex modifier (max 2)| —         | —             | 20 lb.
+|&nbsp;&nbsp;&nbsp; Half plate      |  7,500 sp || 15 + Dex modifier (max 2)| —         | Disadvantage  | 40 lb.
+|&nbsp; *Heavy Armor*               |           ||                          |           |               |
+|&nbsp;&nbsp;&nbsp; Ring mail       |    300 sp || 14                       | —         | Disadvantage  | 40 lb.
+|&nbsp;&nbsp;&nbsp; Chain mail      |    750 sp || 16                       | Str 13    | Disadvantage  | 55 lb.
+|&nbsp;&nbsp;&nbsp; Splint          |  2,000 sp || 17                       | Str 15    | Disadvantage  | 60 lb.
+|&nbsp;&nbsp;&nbsp; Full plate      | 15,000 sp || 18                       | Str 15    | Disadvantage  | 65 lb.
+|&nbsp; *Shield*                    |           ||                          |           |               |
+|&nbsp;&nbsp;&nbsp; Shield          |    100 sp || +2                       | —         | —             | 6 lb.
+
+</div>
+
+<div class='table wide'>
+
+##### Simple Weapons
+
+|&nbsp; Name |&nbsp;&nbsp; Cost |&nbsp;&nbsp;| Damage | Weight |&nbsp;| Properties 
+|------------|----:|------------|--------|-------:|------------------|------------
+|&nbsp; *Simple Melee Weapons*      |       ||                 |       ||
+|&nbsp;&nbsp;&nbsp; ✦ Bayonet         | 20 sp  || 1d8 piercing    | 1 lb. || Special, two-handed
+|&nbsp;&nbsp;&nbsp; Club            |  1 sp || 1d4 bludgeoning | 2 lb. || Light
+|&nbsp;&nbsp;&nbsp; Dagger          | 20 sp || 1d4 piercing    | 1 lb. || Finesse, light, thrown (range 20/60)
+|&nbsp;&nbsp;&nbsp; Greatclub       |  2 sp || 1d8 bludgeoning |10 lb. || Two-handed                          
+|&nbsp;&nbsp;&nbsp; Handaxe         | 50 sp || 1d6 slashing    | 2 lb. || Light, thrown (range 20/60)         
+|&nbsp;&nbsp;&nbsp; Javelin         |  5 sp || 1d6 piercing    | 2 lb. || Thrown (range 30/120)               
+|&nbsp;&nbsp;&nbsp; ✦ Knuckles        |20 sp  || 1d4 bludgeoning | 1 lb. || Glove, light
+|&nbsp;&nbsp;&nbsp; Light hammer    |20 sp  || 1d4 bludgeoning | 2 lb. || Light, thrown (range 20/60)
+|&nbsp;&nbsp;&nbsp; Mace            |50 sp  || 1d6 bludgeoning | 4 lb. || —                          
+|&nbsp;&nbsp;&nbsp; Quarterstaff    | 2 sp  || 1d6 bludgeoning | 4 lb. || Versatile (1d8)            
+|&nbsp;&nbsp;&nbsp; ✦ Scythe          |50 sp  || 1d8 slashing    | 5 lb. || Two-handed
+|&nbsp;&nbsp;&nbsp; Sickle          |10 sp  || 1d4 slashing    | 2 lb. || Light
+|&nbsp;&nbsp;&nbsp; Spear           |10 sp  || 1d6 piercing    | 3 lb. || Thrown (range 20/60), versatile (1d8)
+|&nbsp; *Simple Ranged Weapons*     |       ||                 |       ||
+|&nbsp;&nbsp;&nbsp; Crossbow, light |250 sp || 1d8 piercing    | 5 lb. || Ammunition (range 80/320), loading, two-handed
+|&nbsp;&nbsp;&nbsp; Dart            |50 cp  || 1d4 piercing    |1/4 lb.|| Finesse, thrown (range 20/60)        
+|&nbsp;&nbsp;&nbsp; Shortbow        |250 sp || 1d6 piercing    | 2 lb. || Ammunition (range 80/320), two-handed
+|&nbsp;&nbsp;&nbsp; Sling           | 1 sp  || 1d4 bludgeoning | —     || Ammunition (range 30/120)            
+
+</div>
+
+\pagebreak
+
+<div class='table wide'>
+
+##### Martial Weapons
+
+|&nbsp; Name |&nbsp;&nbsp; Cost |&nbsp;&nbsp;| Damage | Weight |&nbsp;| Properties 
+|------------|----:|------------|--------|-------:|------------------|------------
+|&nbsp; *Martial Melee Weapons*     |       ||                 |       ||
+|&nbsp;&nbsp;&nbsp; ✦ Battle Totem    |350 sp || 1d12 bludgeoning|35 lb. || Heavy, two-handed
+|&nbsp;&nbsp;&nbsp; Battleaxe       |100 sp || 1d8 slashing    | 4 lb. || Versatile (1d10) 
+|&nbsp;&nbsp;&nbsp; ✦ Chakram         |250 sp || 1d6 slashing    | 2 lb. || Finesse, light, special, thrown (range 30/120)
+|&nbsp;&nbsp;&nbsp; Flail           |100 sp || 1d8 bludgeoning | 2 lb. || —
+|&nbsp;&nbsp;&nbsp; Glaive          |200 sp || 1d10 slashing   | 6 lb. || Heavy, reach, two-handed
+|&nbsp;&nbsp;&nbsp; Greataxe        |300 sp || 1d12 slashing   | 7 lb. || Heavy, two-handed
+|&nbsp;&nbsp;&nbsp; Greatsword      |500 sp || 2d6 slashing    | 6 lb. || Heavy, two-handed
+|&nbsp;&nbsp;&nbsp; Halberd         |200 sp || 1d10 slashing   | 6 lb. || Heavy, reach, two-handed
+|&nbsp;&nbsp;&nbsp; Lance           |100 sp || 1d12 piercing   | 6 lb. || Reach, special
+|&nbsp;&nbsp;&nbsp; Longsword       |150 sp || 1d8 slashing    | 3 lb. || Versatile (1d10)
+|&nbsp;&nbsp;&nbsp; Maul            |100 sp || 2d6 bludgeoning |10 lb. || Heavy, two-handed
+|&nbsp;&nbsp;&nbsp; Morningstar     |150 sp || 1d8 piercing    | 4 lb. || —
+|&nbsp;&nbsp;&nbsp; Pike            | 50 sp || 1d10 piercing   |18 lb. || Heavy, reach, two-handed
+|&nbsp;&nbsp;&nbsp; Rapier          |250 sp || 1d8 piercing    | 2 lb. || Finesse
+|&nbsp;&nbsp;&nbsp; Scimitar        |250 sp || 1d6 slashing    | 3 lb. || Finesse, light
+|&nbsp;&nbsp;&nbsp; Shortsword      |100 sp || 1d6 piercing    | 2 lb. || Finesse, light
+|&nbsp;&nbsp;&nbsp; ✦ Spiked Chain    | 50 sp || 1d6 slashing    |11 lb. || Finesse, reach, two-handed
+|&nbsp;&nbsp;&nbsp; Trident         | 50 sp || 1d6 piercing    | 4 lb. || Thrown (range 20/60), versatile (1d8)
+|&nbsp;&nbsp;&nbsp; ✦ Twinblade       |500 sp || 1d6 slashing    | 5 lb. || Special
+|&nbsp;&nbsp;&nbsp; War pick        | 50 sp || 1d8 piercing    | 2 lb. || —
+|&nbsp;&nbsp;&nbsp; ✦ Warclaw         |120 sp || 1d6 slashing    | 2 lb. || Glove, light
+|&nbsp;&nbsp;&nbsp; ✦ Warglaive       |250 sp || 1d6 slashing    | 2 lb. || Light, thrown (range 20/60)
+|&nbsp;&nbsp;&nbsp; Warhammer       |150 sp || 1d8 bludgeoning | 2 lb. || Versatile (1d10)
+|&nbsp;&nbsp;&nbsp; Whip            | 20 sp || 1d4 slashing    | 3 lb. || Finesse, reach
+|&nbsp; *Martial Ranged Weapons*    |       ||                 |       ||                                                       |
+|&nbsp;&nbsp;&nbsp; Blowgun         |100 sp ||   1 piercing    | 1 lb. || Ammunition (range 25/100), loading
+|&nbsp;&nbsp;&nbsp; ✦ Blunderbuss     |850 sp || 2d6 piercing    |25 lb. || Ammunition (range 15/60), booming, heavy, <br/> loading, two-handed 
+|&nbsp;&nbsp;&nbsp; Crossbow, hand  |750 sp || 1d6 piercing    | 3 lb. || Ammunition (range 30/120), light, loading
+|&nbsp;&nbsp;&nbsp; Crossbow, heavy |500 sp || 1d10 piercing   |18 lb. || Ammunition (range 100/400), heavy, loading, <br/> two-handed
+|&nbsp;&nbsp;&nbsp; Longbow         |500 sp || 1d8 piercing    | 2 lb. || Ammunition (range 150/600), heavy, two-handed
+|&nbsp;&nbsp;&nbsp; Net             | 10 sp || —               | 3 lb. || Special, thrown (range 5/15)
+|&nbsp;&nbsp;&nbsp; ✦ Pistol          |750 sp || 1d8 piercing    | 4 lb. || Ammunition (range 30/120), booming, loading, light             |
+|&nbsp;&nbsp;&nbsp; ✦ Rifle           |750 sp || 1d12 piercing   |18 lb. || Ammunition (range 60/240), booming, heavy, <br/> loading, two-handed |
+
+</div>
+
+\pagebreak
+
+<div class='table wide' style='column-count:2'>
+
+##### Adventuring Gear
+
+|&nbsp; Item                                | Cost  | Weight
+--------------------------------------------|------:|----:
+|&nbsp; Abacus                              |20 sp  | 2 lb.
+|&nbsp; Acid (vial)                         |250 sp | 1 lb.
+|&nbsp; Alchemist's fire                    |500 sp | 1 lb.
+|&nbsp; ✦ Ammo pouch
+|&nbsp; *Ammunition*                        |       |
+|&nbsp;&nbsp;&nbsp; Arrows (20)             |10 sp  | 1 lb.
+|&nbsp;&nbsp;&nbsp; Blowgun needles (50)    |10 sp  | 1 lb.
+|&nbsp;&nbsp;&nbsp; Crossbow bolts (20)     |10 sp  | 1½ lb.
+|&nbsp;&nbsp;&nbsp; ✦ Firearm bullets (20)    |20 sp  | 2 lb.
+|&nbsp;&nbsp;&nbsp; Sling bullets (20)      |40 cp  | 1½ lb.
+|&nbsp; Antitoxin (vial)                    |500 sp | —
+|&nbsp; *Arcane focus*                      |       |
+|&nbsp;&nbsp;&nbsp; Crystal                 |100 sp | 1 lb.
+|&nbsp;&nbsp;&nbsp; Orb                     |200 sp | 3 lb.
+|&nbsp;&nbsp;&nbsp; Rod                     |100 sp | 2 lb.
+|&nbsp;&nbsp;&nbsp; Staff                   |50 sp  | 4 lb.
+|&nbsp;&nbsp;&nbsp; Wand                    |100 sp | 1 lb.
+|&nbsp; Backpack                            |20 sp  | 5 lb.
+|&nbsp; Ball bearings (bag of 1,000)        |10 sp  | 2 lb.
+|&nbsp; Barrel                              |20 sp  | 70 lb.
+|&nbsp; Basket                              | 4 sp  | 2 lb.
+|&nbsp; Bedroll                             |10 sp  | 7 lb.
+|&nbsp; Bell                                |10 sp  | —
+|&nbsp; Blanket                             |  5 sp | 3 lb.
+|&nbsp; Block and tackle                    |10 sp  | 5 lb.
+|&nbsp; Book                                |250 sp | 5 lb.
+|&nbsp; Bottle, glass                       |20 sp  | 2 lb.
+|&nbsp; Bucket                              |50 cp  | 2 lb.
+|&nbsp; ✦ Buzzbox                             |20,000 sp|10 lb.
+|&nbsp; ✦ Calculator                          |500 sp | 1 lb.
+|&nbsp; Caltrops (bag of 20)                |10 sp  | 2 lb.
+|&nbsp; Candle                              |10 cp  | —
+|&nbsp; Case, crossbow bolt                 |10 sp  | 1 lb.
+|&nbsp; Case, map or scroll                 |10 sp  | 1 lb.
+|&nbsp; Chain (10 feet)                     |50 sp  | 10 lb.
+|&nbsp; Chalk (1 piece)                     |10 cp  | —
+|&nbsp; Chest                               |50 sp  | 25 lb.
+|&nbsp; Climber's kit                       |250 sp | 12 lb.
+|&nbsp; Clothes, common                     | 5 sp  | 3 lb.
+|&nbsp; Clothes, costume                    |50 sp  | 4 lb.
+|&nbsp; Clothes, fine                       |150 sp | 6 lb.
+|&nbsp; Clothes, traveler's                 |20 sp  | 4 lb.
+|&nbsp; Component pouch                     |250 sp | 2 lb.
+
+\columnbreak
+
+<div style='margin-top:31px;'></div>
+
+|&nbsp; Item                                | Cost  | Weight
+--------------------------------------------|------:|----:
+|&nbsp; Crowbar                             |20 sp  | 5 lb.
+|&nbsp; *Druidic focus*                     |       |
+|&nbsp;&nbsp;&nbsp; Sprig of mistletoe      |10 sp  | —
+|&nbsp;&nbsp;&nbsp; Totem                   |10 sp  | —
+|&nbsp;&nbsp;&nbsp; Wooden staff            |50 sp  | 4 lb.
+|&nbsp;&nbsp;&nbsp; Yew wand                |100 sp | 1 lb.
+|&nbsp; ✦ Dynamite (stick)                    |1,500 sp|1 lb.
+|&nbsp; *Equipment Packs*                   |       |
+|&nbsp;&nbsp;&nbsp; Burglar's pack          |160 sp | 44½ lb.
+|&nbsp;&nbsp;&nbsp; Diplomat's pack         |390 sp | 36 lb.
+|&nbsp;&nbsp;&nbsp; Dungeoneer's pack       |120 sp | 61½ lb.
+|&nbsp;&nbsp;&nbsp; Entertainer's pack      |400 sp | 38 lb.
+|&nbsp;&nbsp;&nbsp; Explorer's pack         |100 sp | 59 lb.
+|&nbsp;&nbsp;&nbsp; Priest's pack           |190 sp | 24 lb.
+|&nbsp;&nbsp;&nbsp; Scholar's pack          |400 sp | 10 lb.
+|&nbsp; ✦ Firestarter                         |250 sp | —
+|&nbsp; ✦ Firework                            |250 sp | 1 lb.
+|&nbsp; Fishing tackle                      |10 sp  | 4 lb.
+|&nbsp; ✦ Flashlight                          |500 sp | 2 lb.
+|&nbsp; Flask or tankard                    |20 cp  | 1 lb.
+|&nbsp; ✦ Glowstick                           |50 cp  | —
+|&nbsp; *Grenades*                          |       |
+|&nbsp;&nbsp;&nbsp; ✦ Fragmentation           |1,500 sp|2 lb.
+|&nbsp;&nbsp;&nbsp; ✦ Incendiary              |1,500 sp|2 lb.
+|&nbsp;&nbsp;&nbsp; ✦ Smoke                   |250 sp | 2 lb.
+|&nbsp; Grappling hook                      |20 sp  | 4 lb.
+|&nbsp; Hammer                              |10 sp  | 3 lb.
+|&nbsp; Hammer, sledge                      |20 sp  | 10 lb.
+|&nbsp; Healer's kit                        |50 sp  | 3 lb.
+|&nbsp; *Holy symbol*                       |       |
+|&nbsp;&nbsp;&nbsp; Amulet                  |50 sp  | 1 lb.
+|&nbsp;&nbsp;&nbsp; Emblem                  |50 sp  | —
+|&nbsp;&nbsp;&nbsp; ✦ Libram                  |250 sp | 5 lb.
+|&nbsp;&nbsp;&nbsp; Reliquary               |50 sp  | 2 lb.
+|&nbsp; Holy water (flask)                  |250 sp | 1 lb.
+|&nbsp; Hourglass                           |250 sp | 1 lb.
+|&nbsp; Hunting trap                        |50 sp  | 25 lb.
+|&nbsp; Ink (1 ounce bottle)                |100 sp | —
+|&nbsp; Ink pen                             |20 cp  | —
+|&nbsp; Jug or pitcher                      |20 cp  | 4 lb.
+|&nbsp; Ladder (10-foot)                    |  1 sp | 25 lb.
+|&nbsp; Lamp                                |  5 sp | 1 lb.
+|&nbsp; Lantern, bullseye                   |100 sp | 2 lb.
+
+</div>
+
+\pagebreak
+
+|&nbsp; Item                                | Cost  | Weight
+--------------------------------------------|------:|----:
+|&nbsp; ✦ Lantern, electric                   |500 sp | 2 lb.
+|&nbsp; Lantern, hooded                     |50 sp  | 2 lb.
+|&nbsp; Lock                                |100 sp | 1 lb.
+|&nbsp; Magnifying glass                    |1,000 sp|—
+|&nbsp; Manacles                            |20 sp  | 6 lb.
+|&nbsp; Mess kit                            | 2 sp  | 1 lb.
+|&nbsp; Mirror, steel                       |50 sp  | 1/2 lb.
+|&nbsp; ✦ Music box                           |200 sp | 1 lb.
+|&nbsp; Oil (flask)                         | 1 sp  | 1 lb.
+|&nbsp; Paper (one sheet)                   | 2 sp  | —
+|&nbsp; ✦ Parachute                           |300 sp | 15 lb.
+|&nbsp; Parchment (one sheet)               | 1 sp  | —
+|&nbsp; Perfume (vial)                      |50 sp  | —
+|&nbsp; Pick, miner's                       |20 sp  | 10 lb.
+|&nbsp; Piton                               |50 cp  | 1/4 lb.
+|&nbsp; Poison, basic (vial)                |1,000 sp| —
+|&nbsp; Pole (10-foot)                      |50 cp  | 7 lb.
+|&nbsp; Pot, iron                           |20 sp  | 10 lb.
+|&nbsp; *Potion of healing*                 |500 sp | 1/2 lb.
+|&nbsp; Pouch                               | 5 sp  | 1 lb.
+|&nbsp; Quiver                              |10 sp  | 1 lb.
+|&nbsp; Ram, portable                       |40 sp  | 35 lb.
+|&nbsp; Rations (1 day)                     | 5 sp  | 2 lb.
+|&nbsp; Robes                               |10 sp  | 4 lb.
+|&nbsp; Rope, hempen (50 feet)              |10 sp  | 10 lb.
+|&nbsp; Rope, silk (50 feet)                |100 sp | 5 lb.
+|&nbsp; Sack                                |10 cp  | 1/2 lb.
+|&nbsp; Scale, merchant's                   |50 sp  | 3 lb.
+|&nbsp; ✦ Scope                               |10,000 sp|1 lb.
+|&nbsp; Sealing wax                         | 5 sp  | —
+|&nbsp; Shovel                              |20 sp  | 5 lb.
+|&nbsp; Signal whistle                      |50 cp  | —
+|&nbsp; Signet ring                         |50 sp  | —
+|&nbsp; Soap                                |20 cp  | —
+|&nbsp; Spellbook                           |500 sp | 3 lb.
+|&nbsp; Spikes, iron (10)                   |10 sp  | 5 lb.
+|&nbsp; Spyglass                            |10,000 sp|1 lb.
+|&nbsp; Tent, two-person                    |20 sp  | 20 lb.
+|&nbsp; ✦ Timepiece                           |500 sp | —
+|&nbsp; Tinderbox                           | 5 sp  | 1 lb.
+|&nbsp; Torch                               |10 cp  | 1 lb.
+|&nbsp; Vial                                |10 sp  | —
+|&nbsp; Waterskin                           | 2 sp  | 5 lb. (full)
+|&nbsp; Whetstone                           |10 cp  | 1 lb.
+
+\pagebreak
+
+##### Tools
+|&nbsp; Item                                | Cost  | Weight
+--------------------------------------------|------:|----:
+|&nbsp; *Artisan's tools*                   |       |
+|&nbsp;&nbsp;&nbsp; Alchemist's supplies    |500 sp | 8 lb.
+|&nbsp;&nbsp;&nbsp; Brewer's supplies       |200 sp | 9 lb.
+|&nbsp;&nbsp;&nbsp; Calligrapher's supplies |100 sp | 5 lb.
+|&nbsp;&nbsp;&nbsp; Carpenter's tools       |80 sp  | 6 lb.
+|&nbsp;&nbsp;&nbsp; Cartographer's tools    |150 sp | 6 lb.
+|&nbsp;&nbsp;&nbsp; Cobbler's tools         |50 sp  | 5 lb.
+|&nbsp;&nbsp;&nbsp; Cook's utensils         |10 sp  | 8 lb.
+|&nbsp;&nbsp;&nbsp; ✦ Engineer's tools        |500 sp | 15 lb.
+|&nbsp;&nbsp;&nbsp; ✦ Enchanter's supplies    |300 sp | 5 lb.
+|&nbsp;&nbsp;&nbsp; Glassblower's tools     |300 sp | 5 lb.
+|&nbsp;&nbsp;&nbsp; Jeweler's tools         |250 sp | 2 lb.
+|&nbsp;&nbsp;&nbsp; Leatherworker's tools   |50 sp  | 5 lb.
+|&nbsp;&nbsp;&nbsp; Mason's tools           |100 sp | 8 lb.
+|&nbsp;&nbsp;&nbsp; Painter's supplies      |100 sp | 5 lb.
+|&nbsp;&nbsp;&nbsp; Potter's tools          |100 sp | 3 lb.
+|&nbsp;&nbsp;&nbsp; Smith's tools           |100 sp | 8 lb.
+|&nbsp;&nbsp;&nbsp; Tinker's tools          |500 sp | 10 lb.
+|&nbsp;&nbsp;&nbsp; Weaver's tools          |10 sp  | 5 lb.
+|&nbsp;&nbsp;&nbsp; Woodcarver's tools      |10 sp  | 5 lb.
+|&nbsp; Disguise kit                        |250 sp | 3 lb.
+|&nbsp; Forgery kit                         |150 sp | 3 lb.
+|&nbsp; *Gaming set*                        |       | 
+|&nbsp;&nbsp;&nbsp; Dice set                | 1 sp  | —
+|&nbsp;&nbsp;&nbsp; Dragonchess set         |10 sp  | 1/2 lb.
+|&nbsp;&nbsp;&nbsp; ✦ Hearthstone card set    |50 sp  | —
+|&nbsp;&nbsp;&nbsp; ✦ Pandaren jihui board    |50 sp  | 2 lb.
+|&nbsp;&nbsp;&nbsp; Playing card set        | 5 sp  | —
+|&nbsp;&nbsp;&nbsp; Three-Dragon Ante set   |10 sp  | —
+|&nbsp; Herbalism kit                       |50 sp  | 3 lb.
+|&nbsp; *Musical instrument*                |       |
+|&nbsp;&nbsp;&nbsp; Bagpipes                |300 sp | 6 lb.
+|&nbsp;&nbsp;&nbsp; Drum                    |60 sp  | 3 lb.
+|&nbsp;&nbsp;&nbsp; Dulcimer                |250 sp | 10 lb.
+|&nbsp;&nbsp;&nbsp; Flute                   |20 sp  | 1 lb.
+|&nbsp;&nbsp;&nbsp; Lute                    |350 sp | 2 lb.
+|&nbsp;&nbsp;&nbsp; Lyre                    |300 sp | 2 lb.
+|&nbsp;&nbsp;&nbsp; Horn                    |30 sp  | 2 lb.
+|&nbsp;&nbsp;&nbsp; Pan flute               |120 sp | 2 lb.
+|&nbsp;&nbsp;&nbsp; Shawm                   |20 sp  | 1 lb.
+|&nbsp;&nbsp;&nbsp; Viol                    |300 sp | 1 lb.
+|&nbsp; Navigator's tools                   |250 sp | 2 lb.
+
+\columnbreak
+
+<div style='margin-top:31px;'></div>
+
+|&nbsp; Item                                | Cost  | Weight
+--------------------------------------------|------:|----:
+|&nbsp; Poisoner's kit                      |500 sp | 2 lb.
+|&nbsp; ✦ Suturing kit                        |250 sp | 3 lb.
+|&nbsp; Thieves' tools                      |250 sp | 1 lb.
+|&nbsp; Vehicles (air, land or water)       | *     | *
+
+* See the "Mounts and Vehicles" section
+
+##### Trade Goods
+Cost    |&nbsp;&nbsp;&nbsp;| Goods
+-------:|---|-------------
+10 cp   || 1 lb. of wheat
+20 cp	|| 1 lb. of flour or one chicken
+50 cp	|| 1 lb. of salt or **1 lb. of copper**
+1 sp	|| 1 lb. of iron or 1 sq. yd. of canvas
+5 sp	|| ~~1 lb. of copper~~ or 1 sq. yd. of cotton cloth
+10 sp	|| 1 lb. of ginger or one goat
+20 sp	|| 1 lb. of cinnamon or pepper, or one sheep
+30 sp	|| 1 lb. of cloves or one pig
+50 sp	|| 1 lb. of silver or 1 sq. yd. of linen
+100 sp	|| 1 sq. yd. of silk or one cow
+150 sp	|| 1 lb. of saffron or one ox
+500 sp	|| ~~1 lb. of gold~~
+5,000 sp|| **1 lb. of gold** or ~~1 lb. of platinum~~
+50,000 sp||**1 lb. of platinum**
+
+##### Lifestyle Expenses
+Lifestyle   |&nbsp;&nbsp;&nbsp;| Price/Day
+------------|-|----
+Wretched    || —
+Squalid	    || 1 sp
+Poor	    || 2 sp
+Modest	    || 10 sp
+Comfortable || 20 sp
+Wealthy	    || 40 sp
+Aristocratic|| 100 sp minimum
