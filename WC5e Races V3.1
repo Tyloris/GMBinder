@@ -1,0 +1,1487 @@
+<style>
+/* GLOBAL FORMATTING  */
+
+  /* Resize page to international A4 */
+  .phb {
+    width: 210mm;
+    height: 296.8mm;
+  }
+  .phb:after { content: ""; }
+
+/* Temporary Fix for heading issues */
+    .phb p{ line-height: 15px; } 
+    .phb blockquote p{ line-height: 14px; } 
+    .phb h2{ line-height: 26px; } 
+    .phb h3{ line-height: 19px; } 
+    .phb h4{ line-height: 15px; padding-bottom: 3px; } 
+    .phb h5{ line-height: 17px; } 
+    th, td { line-height: 14px; }
+
+
+/* TABLE OF CONTENTS  */
+
+  /* toc specifically wants black text. This resets the headers*/
+  .toc a {
+    color: inherit !important;
+  }
+  /* Allow dot leaders to fill remaining space but not overlap */
+  .toc li span:nth-child(2) {
+    width: auto;
+    overflow: hidden;
+    white-space: nowrap;
+    display: block;
+  }
+  .toc li span:nth-child(2):after {
+    font-family: BookSanity;
+    font-size: 0.317cm;
+    font-weight: normal;
+    color: black;
+    content:
+      " ........................................"
+      "........................................."
+      ".........................................";
+    }
+
+  /* Style TOC page numbers*/
+  .toc li span:first-child {
+    float: right;
+    font-family: BookSanity;
+    font-size: 0.317cm;
+    font-weight: normal;
+    color: black;
+    margin-left: 1px;
+  }
+
+  /* Adjust TOC H3 styles */
+  .toc li h3 span:nth-child(2):after {
+  	content: " ";
+  }
+  .toc li h3 {
+    margin-bottom: 4px !important;
+    margin-top: 10px !important;
+    line-height: initial !important;
+  }
+  .toc li h3 span:first-child {
+  	line-height: 1.8em !important;
+  }
+
+  /* Reduce TOC list indentation*/
+  .toc ul ul {
+  	margin-left: 10px !important;
+  }
+  .toc>ul>li {
+    margin-bottom: initial !important;
+  }
+
+
+/* TABLES AND BLOCKS */
+
+  /* Clear internal padding and add gap above for green note blocks*/
+  .phb blockquote {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .phb blockquote { margin-top: 1em;
+  }
+
+
+/* INK BLOT STYLES */
+
+  /* Root style for inkblots. Use alone, or together with
+  one of the inkb lotstyle classes below. Essentially:
+  <img url='{url}' class='inkblot inkblot-blue' />
+  */
+  .inkblot {
+    position: absolute;
+    mix-blend-mode: multiply;
+    opacity: 0.6;
+  }
+
+  .inkblot-blue {
+    filter: hue-rotate(190deg) saturate(120%)
+  }
+
+  .inkblot-green {
+    filter: hue-rotate(120deg)
+  }
+
+/* PAGE STYLE */
+
+   /* Background */
+     .phb{ background-image: url('https://gmbinder.com/images/KN1O92T.png') }
+     .phb{ background-size: cover }
+
+   /* Notes */
+     .phb section blockquote {background-color: #f6e5d4}
+     .phb hr + section blockquote tr:nth-child(odd) td {background-color: transparent;}
+
+   /* Tables */
+     table tr:nth-child(odd) td {background-color: #cccccc}
+
+   /* Footer */
+     .phb .pageNumber {color: rgba(0, 0, 0, 0.5)}
+     .phb .footnote {color: rgba(0, 0, 0, 0.5)}
+     .phb:nth-child(odd):after{ 
+       content          : '';
+       position         : absolute;
+       bottom           : -7px;
+       left             : 10px;
+       z-index          : -1;
+       height           : 336px;
+       width            : 100%;
+       background-image : url('https://www.gmbinder.com/images/bNTz1nk.png');
+       background-size  : cover;
+   }
+
+   .phb:nth-child(even):after{ 
+       content          : '';
+       position         : absolute;
+       bottom           : -7px;
+       left             : -10px;
+       z-index          : -1;
+       height           : 336px;
+       width            : 100%;
+       background-image : url('https://www.gmbinder.com/images/6NCzAN0.png');
+       background-size  : cover;
+   }
+
+   /* Page Number */
+   .phb .pageNumber{
+       position   : absolute;
+       bottom     : 30px;
+       width      : 50px;
+       text-align : center;
+   }
+   .phb:nth-child(even) .pageNumber{
+       left      : 12px;
+   }
+   .phb:nth-child(odd) .pageNumber{
+       right      : 12px;
+   }
+
+   .phb .pageNumber.auto{
+       position   : absolute;
+       bottom     : 41px;
+       width      : 50px;
+       text-align : center;
+   }
+   .phb:nth-child(even) .pageNumber.auto{
+       left      : 12px;
+   }
+   .phb:nth-child(odd) .pageNumber.auto{
+       right      : 12px;
+   }
+
+/* FRONT PAGE STYLES */
+
+  .cover-header-container {
+    display: block;
+    position: absolute;
+    width: 100%;
+    top: 80px;
+    left: 0;
+    right: 0;
+    clear: both;
+  }
+
+  .cover-header-logo {
+    display: block;
+    width: 700px;
+    margin: auto;
+  }
+
+  .cover-header-divider {
+    display: block;
+    width: 580px;
+    margin: -12px auto -6px;
+  }
+
+  .cover-header-title {
+    display: block;
+    width: 700px;
+    margin: auto;
+    color: white;
+    font-family: NodestoCaps,nodesto,sans-serif;
+    font-weight: normal;
+    font-size: 72px;
+    line-height: 72px;
+    text-align: center;
+    text-shadow: 2px 2px 4px #000, -2px 2px 4px #000, 2px -2px 4px #000, -2px -2px 4px #000;
+  }
+
+  .cover-footer-container {
+    display: block;
+    position: absolute;
+    width: 100%;
+    bottom: 28px;
+    left: 0;
+    right: 0;
+    clear: both;
+  }
+
+  .cover-footer-subtitle,
+  .cover-footer-version {
+    display: block;
+    width: 500px;
+    margin: auto;
+    color: white;
+    font-family: NodestoCaps,nodesto,sans-serif;
+    font-weight: normal;
+    text-align: center;
+    text-shadow: 1px 1px 2px #000, -1px 1px 2px #000, 0px 0px 2px #000;
+  }
+  .cover-footer-subtitle {
+    font-size: 28px;
+    line-height: 28px;
+  }
+  .cover-footer-version {
+    margin-top: 16px;
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+/* STAT BLOCKS */
+  /* For creature statblocks within range (start and end must be specified),
+     don't show a background. Used for the appendix creatures */
+  .phb:nth-of-type(n+140):nth-of-type(-n+200) hr+section blockquote {
+    background: none;
+    border: none;
+    box-shadow: none;
+<style> .phb#p1:after { display:none; } </style>
+
+## Things to help out with
+The Broken do not currently have any features. They need about four features to match up with the other draenei, none of which should deal with the Light. Their main themes are: 
+- **Hardiness.** They have to endure being cut off from the Light, which they spent their whole (sometimes 1000s of years long) life being guided by. The ones who couldn't handle it have died off, leaving only the most enduring.
+- **Survival.** They are practically exiled from draenei society, having to live in the wilderness and wastes.
+- **"Magical Alzheimer's."** They are gradually forgetting what it felt like to be connected to the Light. Could either be a gradual degeneracy like blood elves' Wretched and nightborne's Withered, or just naturally forgetting what your parent's faces looked like after they've been dead for years.
+- **Melancholy.** They've lost so much that it leads to a generally Eeyore-like personality. Similar to LotR elves, in how they bemoan how the world has been declining. A possible ability would be the equivalent of using a depression power on someone already depressed.
+
+### 
+The Lightforged have the aasimar's transformation ability, which felt appropriate. I'm not wild about just copy-pasting their specific transformations; is it possible to come up with ones more thematically appropriate?
+
+## Second pass tasklist
+- Condense the number of traits. An example: Wildhammer dwarves have 10 traits in total.
+- Consider what races should get darkvision.
+- What traits would be better off as racial feats?
+- Check for overlap between racial features. What needs to be unique, what can be shared?
+- Which racial features are too common? Examples are advantages on saves against certain features or additional skill proficiencies.
+- Add a Highborne subrace for night elves? Or just point at blood elves?
+- Add some sort of Mag'har variant for orcs?
+- Simplify the gnomish tinkering trait.
+
+##### Potential Alternate Abilities
+- Instead of pure advantage, rolling d4 on specific ability or tool checks. It would break up cases where there are too many races with advantage on this or that.
+- Borrow from the Eberron Dragonmark features: "If you have the Spellcasting or the Pact Magic class feature, the spells on the XXXX Spells table are added to the spell list of your spellcasting class.""
+- Using the hobgoblin trait from Eberron: "**Martial Training.** You are proficient with two martial weapons of your choice and with light armor." Particularly as a racial feat for some of the human kingdoms, as a sort of militia training thing.
+- From Eberron again, specifically the Mark of the Sentinel human: "**Vigilant Guardian.** When a creature you can see within 5 feet of you is hit by an attack roll, you can use your reaction to swap places with that creature, and you are hit by the attack instead. Once you use this trait, you can't do so again until you finish a long rest." Works pretty well as a human racial feat.
+
+\pagebreak
+
+# Humans
+### Human Traits
+It's hard to make generalizations about humans, no matter where you were born your character has these traits.
+
+***Creature Type.*** You are a Humanoid. You are also considered a human for any prerequisite or effect that requires you to be a human.
+
+***Ability Score Increase.*** One ability score of your choice increases by 2, and another ability score of your choice increases by 1. **[Other option: increase each ability score by 1? It would be 18 RP vs the normal 12 RP.]**
+
+***Age.*** Humans reach adulthood in their late teens and live less than a century.
+
+***Alignment.*** Humans tend toward no particular alignment. The best and the worst are found among them.
+
+***Size.*** Humans range from barely 5 to well over 6 feet tall and weigh an average of 175 pounds. Your size is Medium. 
+
+***Speed.*** Your base walking speed is 30 feet. 
+
+***Human Spirit.*** When you roll a 1 on an attack roll, ability check, or saving throw, you can reroll the die. You must use the new result, even if it is a 1.
+
+***Skill Versatility.*** You gain proficiency in two skills or tools of your choice.
+
+***Will to Survive.*** When you make an ability check, attack roll, or saving throw and have disadvantage on the roll, you can cancel the disadvantage for that roll. You can use this trait a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest.
+
+***Languages.*** You can speak, read, and write Common and one extra language of your choice. Humans typically learn the languages of other peoples they deal with, including obscure dialects. 
+
+\pagebreakNum
+# Dwarves
+### Dwarf Traits
+Your dwarf character has the following racial traits.
+
+***Creature Type.*** You are a Humanoid. You are also considered a dwarf for any prerequisite or effect that requires you to be a dwarf.
+
+***Ability Score Increase.*** Your Constitution score <br> increases by 2.
+
+***Age.*** Dwarves mature at the same rate as humans, but they're considered young until they reach the age of 40. On average, they live about 320 years.
+
+***Alignment.*** Most dwarves are lawful, believing firmly in the benefits of a well-ordered society. They tend toward good as well, with a strong sense of fair play and a belief that all deserve to share in the benefits of a just order.
+
+***Size.*** Dwarves stand between 4 and 5 feet tall and average about 150 pounds. Your size is Medium.
+
+***Speed.*** Your base walking speed is 25 feet. Your speed is not reduced by wearing heavy armor.
+
+***Darkvision.*** Accustomed to life underground, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray.
+
+***Earthen Heritage.*** As a bonus action you can call upon your resilient ancestry and end either one disease or the poisoned condition on yourself. You can use this trait a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest.
+
+***Stonecunning.*** Whenever you make an Intelligence (History) check related to the origin of stonework, you are considered proficient in the History skill and add double your proficiency bonus to the check, instead of your normal proficiency bonus.
+
+***Tool Proficiency.*** You gain proficiency with the artisan's tools of your choice: brewer's supplies, cartographer's tools, mason's tools, navigator's tools, or smith's tools.
+
+***Languages.*** You can speak, read, and write Common and Dwarven. Dwarven is full of hard consonants and guttural sounds, and those characteristics spill over into whatever other language a dwarf might speak.
+
+***Clans.*** Ancient divides among the dwarves have resulted in different clans. The three most prominent are the Dark Iron, Ironforge, and Wildhammer dwarves. Choose one of these clans.
+
+#### Dark Iron Dwarf
+As a dark iron dwarf, you have a fiery temper and a fierce determination. Dark iron dwarves worshiped the firelord Ragnaros and gained an affinity for fire and flames. 
+
+***Ability Score Increase.*** Your Intelligence score <br> increases by 1.
+
+***Superior Darkvision.*** Your darkvision has a radius of 120 feet.
+
+***Dungeon Delver.*** Without squeezing, you can move through and stop in a space large enough for a Small creature.
+
+***Fireblood.*** When you use your Earthen Heritage trait, your blood feels aflame, increasing your speed by 15 feet and giving you advantage on your next attack roll, until the end of your next turn.
+
+***Forged in Flame.*** You have resistance to fire damage. **[Note that the ability in game actually reduces *physical* damage.]**
+
+***Secrets of Steel.*** You can use your Stonecunning trait to inspect metalwork.
+
+#### Ironforge Dwarf
+As an ironforge dwarf, you are strong and hardy, capable of enduring the cold of Dun Morogh and blows of battle. Iron&shy;forge dwarves are known for their military expertise and rarely back down from a fight, or a brawl.
+
+***Ability Score Increase.*** Your Strength score <br> increases by 1.
+
+***Frost Resistance.*** Your stocky build and thick hair grants you resistance to cold damage.
+
+***Dwarven Combat Training.*** You have proficiency with the blunderbuss, light hammer, rifle, and warhammer. You are also proficient with light and medium armor.
+
+***Stoneform.*** When you use your Earthen Heritage trait, your flesh takes on a stony texture, giving you resistance to bludgeoning, piercing, and slashing damage until the beginning of your next turn.
+
+#### Wildhammer Dwarf
+As a Wildhammer dwarf, you have a free spirit and will to live life as you please. Wildhammer dwarves are untamed in comparison to the rest of their kin, often feeling more at home in the air than on the ground.
+
+***Ability Score Increase.*** Your Wisdom score <br> increases by 1.
+
+***Aerie Dweller.*** You're acclimated to high altitude, in&shy;cluding elevations above 20,000 feet. You're also naturally adapted to cold climates, as described in chapter 5 of the *Dungeon Master's Guide.* 
+
+***Brave Beyond Reason.*** You have advantage on saving throws against being frightened. When you use your Earthen Heritage trait, you can instead end the frightened condition on yourself.
+
+***Inspirational Courage.*** When you use your Earthen Heritage trait, each ally within 60 feet who can see you has advantage on the next saving throw they make against the frightened condition within 1 minute. If they are currently frightened, they can make another save against the condition as a reaction. 
+
+***Mountain Climber.*** You have advantage on Strength (Athletics) checks made to climb.
+
+***Natural Handler.*** You gain proficiency with the Animal Handling skill, and have advantage on Wisdom (Animal Handling) checks made towards gryphons.
+
+***Storm Resistance.*** Long exposure to lightning strikes and stormhammers have given you resistance to lightning damage.
+
+\pagebreakNum
+# Night Elves
+### Night Elf Traits
+Your night elf character has the following racial traits.
+
+***Creature Type.*** You are a Humanoid. You are also considered an elf for any prerequisite or effect that requires you to be an elf.
+
+***Ability Score Increase.*** Your Dexterity score increases by 2, and your Wisdom score increases by 1.
+
+***Age.*** Night elves reach physical maturity at the pace of humans, but the night elven understanding of adulthood goes beyond physical growth. Night elves typically claim adulthood and an adult name around the age of 100, and can live to become thousands of years old. 
+
+***Alignment.*** Night elves live in close ties with the natural world, they have an unprecedented connection to nature and protect it fiercely, pulling many night elves towards good. They love freedom and variety, making most lean toward the gentler aspects of chaos as well.
+
+***Size.*** Night elves are between 7 and 8 feet tall and weigh between 200 and 240 pounds. Your size is medium. 
+
+***Speed.*** Your base walking speed is 35 feet.
+
+***Superior Darkvision.*** Accustomed to twilit forests <br> and the night sky, you have superior vision in dark and dim conditions. You can see in dim light within 120 feet of you as if it were bright light, and in darkness as if it were dim light. Your night elven heritage makes your darkvision un&shy;usual: everything you see in darkness is in a shade of violet.
+
+***Mask of the Wild.*** You can attempt to hide even when you are only lightly obscured by foliage, heavy rain, falling snow, mist, and other natural phenomena.
+
+***Nature's Lore.*** You gain proficiency with one of the following skills of your choice: Animal Handling, Nature, Perception, Stealth, and Survival.
+
+***Nature Resistance.*** You have advantage on saving throws you make against spells cast by Fey creatures, or to avoid or end the poisoned condition on yourself. You also have resistance to poison damage. 
+
+***Languages.*** You can speak, read, and write Common and Darnassian. Darnassian is fluid, with subtle intonations and intricate grammar. Its literature is rich and varied, and their songs and poems are famous among other races.
+
+> ##### High Elf/Highborne Sidebar
+> [Points you to the blood elf section to create a character of this type.]
+> 
+> Alternatively, a subrace option
+
+\pagebreak
+
+# Gnomes
+### Gnome Traits
+Your gnome character has the following racial traits.
+
+***Creature Type.*** You are a Humanoid. You are also considered a gnome for any prerequisite or effect that requires you to be a gnome.
+
+***Ability Score Increase.*** Your Intelligence score increases by 2.
+
+***Age.*** Gnomes mature at the same rate humans do, and most are expected to settle down into an adult life by around age 40. They can live 350 to almost 500 years.
+
+***Alignment.*** Gnomes are good-hearted, and even the tricksters amongst them are more playful than vicious. Those of evil alignment are often the result of madness. An innovative idea that consumed them.
+
+***Size.*** Gnomes are between 3 and 4 feet tall and average about 40 pounds. Your size is Small.
+
+***Speed.*** Your base walking speed is 25 feet.
+
+***Artificer's Lore.*** Whenever you make an Intelligence (History) check related to magic items, alchemical <br> objects, or technological devices, you can add twice your proficiency bonus, instead of any proficiency bonus you normally apply.
+
+***Expansive Mind.*** You have advantage on all Intelligence, Wisdom, and Charisma saves against spells.
+
+***Gnomish Tinkering.*** Utilizing incredible gnomish technology, you can craft devices with near magical effects. You have proficiency with either engineer's tools or tinker's tools. Using those tools, you can spend 1 hour and 10 gp worth of materials to construct a Tiny device (AC 5, 1 HP). The device ceases to function after 24 hours (unless you spend 1 hour maintain&shy;ing it. This can be done as part of a short or long rest), or when you use your action to dismantle it; at that time, you can reclaim the materials used to create it. You can maintain a number of devices equal to your proficiency bonus.
+
+When you create a device, choose an effect from the *druidcraft, prestidigitation*, or *thaumaturgy* cantrips (for example, increase the volume of your voice or clean an object), or a similar effect at your GM's discretion. A character can use their action to activate a device and produce the effect chosen for it.
+
+***Languages.*** You can speak, read, and write Common and Gnomish. Gnomish in many ways look like dwarven, it uses the same script, and is renowned for its technical treatises and its catalogs of knowledge about the natural world.
+
+***Subrace.*** Two subraces of gnomes exst in the Alliance: Gnomeregan gnomes and Mechagon Gnomes. Choose one of these subraces.
+
+#### Gnomeregan Gnome
+As a gnome, you are born with a brilliant mind and cheerful disposition. However, these gnome have suffered treachery, displacement, and near-genocide. It is their remarkable optimism in the face of such calmity that symbolizes their truly unshakable spirit. 
+
+***Ability Score Increase.*** Your Charisma score <br> increases by 1.
+
+***Escape Artist.*** You gain advantage on ability checks and saving throws to end early and avoid the grappled and restrained conditions, and can move through the space of any creature that is of a size larger than yours.
+
+***Gnomeregan Ingenuity.*** You can add half your proficiency bonus, rounded down, to any Intelligence ability check you make that doesn't already include your proficiency bonus.
+
+#### Mechagon Gnome
+You have chosen the path of trans-gnome-ism, seeking to emulate your ancient roots by gradually replacing parts of your body with improved mechanical counterparts. 
+
+***Ability Score Increase.*** Your Constitution score increases by 1.
+
+***Borderline Construct.*** If the *mending* spell is cast on you, you can expend a Hit Die, roll it, and regain a number of hit points equal to the roll plus your Constitution modifier (minimum of 1 hit point). 
+
+***Cyber Gnome.*** Your body has been altered and enhanced with mechanical marvels. Choose two of the upgrades below:
+<div style='margin-top:-5px;'></div>
+
+- **Bionic Eyes.** Your eyes have been replaced with advanced lenses. You have advantage on saves versus being blinded, you have darkvision out to a range of 60 feet, and you can see as if using a spyglass or magnifying glass.
+- **Cybernetic Core.** The exterior of your torso has been replaced with simple and functional mechanical counterparts. When you aren't wearing armor, your AC is 14 + your Dexterity modifier. You can use your natural armor to determine your AC if the armor you wear would leave you with a lower AC. A shield's benefits apply as normal while you use your natural armor.
+- **Mecha-arms** Your arms have been replaced by sturdier mechanical limbs. Your unarmed strike deals 1d6 bludgeoning damage and you may also ignore the heavy property of weapons. In addition, you gain proficiency with thieves' tools and have incorporated its necessary tools into your mechanical arms, allowing you to don or doff the tools as an action.
+- **Robo-Legs.** Your legs have been replaced by powerful mechanical contraptions. Your base movement speed increases to 30 feet. When you move on your turn, you can double your speed until the end of the turn. Once you use this trait, you can't use it again until you move 0 feet on one of your turns. **[The worgen also get this trait, for darkflight. Keep it? Alternative options are the** ~~harengon's Rabbit Hop~~ *(used by the goblin's rocket jump)* **and the satyr's mirthful leaps.]**
+<div style='margin-top:-5px;'></div>
+
+&nbsp;&nbsp;&nbsp; Whenever you gain the Ability Score Improvement class feature you may, instead of increasing one ability score of your choice by 2, either select an additional option above and increase one ability score by 1, or you may select two additional options.
+
+\pagebreak
+
+# Draenei
+### Draenei Traits
+Your draenei character has the following racial traits.
+ 
+***Creature Type.*** You are a Humanoid. You are also considered a draenei for any prerequisite or effect that requires you to be a draenei.
+
+***Ability Score Increase.*** Your Charisma score <br> increases by 2.
+ 
+***Age.*** Draenei mature slightly slower than humans, reach&shy;ing adulthood around age 20 and they can live thousands of year, exceeding the ancient ages of the night elves.
+
+***Alignment.*** Draenei are mostly good. Those who strive towards law are sages, priests, paladins, vindicators, or scholars. Those who tend toward chaos are warriors, rangers, or in other ways people more fond of pure fighting.
+ 
+***Size.*** Draenei are between 7 and 8 feet tall and weigh between 240 and 300 pounds. Your size is Medium. 
+
+***Speed.*** Your base walking speed is 30 feet.
+
+***Gemcutting.*** Due to long familiarity with crystal-based technology, you are proficient with the jeweler's tools. Whenever you make an Intelligence (History) check related to crystals or gemstones, you can add twice your proficiency bonus, instead of any proficiency bonus you would normally apply.
+ 
+***Unyielding Faith.*** You have proficiency in the Religion skill and you have advantage on death saving throws.
+
+***Languages.*** You can speak, read, and write Common and Draenei. The Draenei language, is a strange and compli-cated language for other races to learn. Seemingly having no resemblance with any Azerothian languages.
+
+***Subrace.*** Two main subraces of draenei exist: exodar draenei and lightforged draenei. Choose one of these subraces.
+
+#### Exodar Draenei
+***Ability Score Increase.*** Your Strength score <br> increases by 1.
+ 
+***Gift of the Naaru.*** You know the *light* cantrip; when you cast it with this trait, a sigil of the Naaru appears above your forehead. Starting at 3rd level, you can cast the *bless* spell with this trait, without requiring a material component. Starting 5th level, you can also cast the *lesser restoration* spell with this trait. 
+
+Once you cast *bless* or *lesser restoration* with this trait, you can't cast that spell with it again until you finish a long rest. You can also cast either of those spells using any spell slots you have of the appropriate level. Charisma is your spellcasting ability for these spells when you cast them with this trait.
+
+***Shadow Resistance.*** You have resistance to necrotic damage.
+
+***Touch of the Naaru.*** As an action, you can touch a creature and roll a number of d4s equal to your proficiency bonus. The creature regains a number of hit points equal to the total rolled. Once you use this trait, you can't use it again until you finish a long rest.
+
+\columnbreak
+#### Lightforged Draenei
+***Ability Score Increase.*** Your Constitution score increases by 1.
+
+***Holy Resistance.*** You have resistance to radiant damage.
+
+***Light's Judgment.*** You know your choice of either the *sacred flame* or *spare the dying* cantrips. Intelligence, Wisdom, or Charisma is your spellcasting ability for it (choose when you select this race). You can draw upon your inner Light to fuel the following abilities. You can use this trait a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest.
+- You can cast the *detect evil and good* spell.
+- Once per turn when you deal damage with a cantrip or weapon attack, you can add twice your proficiency bonus as additional radiant damage against one target. If the target is a fiend or undead creature, they take twice as much additional damage.
+
+As long as you have at least one use of this ability left, you can create a glowing symbol of the Naaru to appear above your head. It sheds bright light for 10 feet and dim light for an additional 10 feet. You can summon and dismiss the symbol as an action.
+
+***Spells of the Light.*** If you have the Spellcasting or the Pact Magic class feature, the spells on the Light Spells table are added to the spell list of your spellcasting class. 
+
+##### Light Spells 
+Spell<br/>Level|Spells 
+------|---------
+1st | *bless*, *cure wounds*
+2nd | *lesser restoration*, *shining force*
+3rd | *beacon of hope*, *blinding light*
+4th | *death ward*, *guardian of faith*
+5th | *dawn*
+
+
+\pagebreak
+
+#### Broken Draenei V1
+***Ability Score Increase.*** Your Wisdom score increases by 1.
+
+***Corrupted Blood.*** You have advantage on saving throws you make to avoid or end the poisoned condition on yourself, advantage on saving throws against spells cast by fiends, and resistance to poison damage. You also count as a fiend or purposes of effects that detect fiends, such as a paladin's Divine Sense.
+
+***Wisdom of the Outcast.*** You gain proficiency with one of the following skills of your choice: Animal Handling, Insight, Nature, or Survival.
+
+###
+
+##### Void Spells 
+Spell Level|Spells 
+------|---------
+1st | bane, inflict wounds
+2nd | darkness, ray of enfeeblement
+3rd | fear, hunger of hadar
+4th | phantasmal killer, shadow of moil
+5th | shadow crash
+
+
+***Light's Judgment.*** You know the *light* cantrip; when you cast it with this trait, a sigil of the Naaru appears above your forehead. Starting at 3rd level, you can cast the *divine favor* spell with this trait. Starting 5th level, you can also cast the ✦ *righteous smite* spell with this trait. 
+
+Once you cast *divine favor* or ✦ *righteous smite* with this trait, you can't cast that spell with it again until you finish a long rest. You can also cast either of those spells using any spell slots you have of the appropriate level. Charisma is your spellcasting ability for these spells when you cast them with this trait.
+
+***Light's Reckoning.*** When you are reduced to 0 hit points, your body erupts in a burst of holy light with a 10-foot radius. Each enemy creature within range takes radiant damage equal to 1d8 per level, or half with a successful Dexterity saving throw (DC 8 + your proficiency bonus + your Charisma modifier). You regain use of this ability when you finish a long rest.
+
+
+***Gift of the Naaru.*** [Intro text.] You can use this trait a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest.
+- As an action, you can touch a creature and roll a number of d4s equal to your proficiency bonus. The creature regains a number of hit points equal to the total rolled. 
+- [2nd feature.]
+
+As long as you have at least one use of this ability left, you can create a glowing symbol of the Naaru to appear above your head. It sheds bright light for 10 feet and dim light for an additional 10 feet. You can summon and dismiss the symbol as an action.
+
+***Light's Judgment.*** You know your choice of either the *sacred flame* or *spare the dying* cantrips. Intelligence, Wisdom, or Charisma is your spellcasting ability for it (choose when you select this race). You can draw upon your inner Light to fuel the following abilities. You can use this trait a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest.
+- You can cast the *detect evil and good* spell.
+- Once per turn when you deal damage with a cantrip or weapon attack, you can roll a number of d4s equal to your proficiency bonus and add that number as additional radiant damage against one target. If the target is a fiend or undead creature, they take twice as much additional damage.
+- As a reaction when you are reduced to 0 hit points, you can emit a burst of holy light in a 10-foot radius. Roll a number of d8s equal to your proficiency bonus; each enemy creature within range takes radiant damage equal to the total rolled, or twice that amount if the creature is a fiends or undead.
+
+As long as you have at least one use of this ability left, you can create a glowing symbol of the Naaru to appear above your head. It sheds bright light for 10 feet and dim light for an additional 10 feet. You can summon and dismiss the symbol as an action.
+
+when you hit a creature with a melee weapon attack, you can expend one spell slot to deal radiant damage to the target, in addition to the weapon's damage. The extra damage is 2d8 for a 1st-level spell slot, plus 1d8 for each spell level higher than 1st, to a maximum of 5d8. The damage increases by 1d8 if the target is an undead or a fiend, to a maximum of 6d8.
+
+- When you deal damage with a weapon attack, you can deal an additional amount of radiant damage equal to your proficiency bonus, or twice your bonus if the target is an undead or fiend.
+- When you deal damage with a cantrip, you can add your proficiency bonus to the damage dealt to a single creature, or twice your bonus if the target is an undead or fiend.
+- 
+
+As a bonus action, you enhance your attacks with holy might for 1 minute. Once per turn for the duration, you can add your proficiency bonus in radiant damage to one target when you deal damage with a weapon attack or cantrip. If the target is an undead or fiend, you deal twice as much bonus damage.
+
+\pagebreak
+
+# Worgen
+### Worgen Traits
+Your worgen character has the following racial traits.
+
+***Creature Type.*** You are a Humanoid. You are also considered a worgen and a shapeshifter for any prerequisite or effect that requires you to be either. 
+
+***Ability Score Increase.*** Your Strength score increases by 2.
+
+***Age.*** Worgen age like they did before becoming cursed, but even though their bodies continue to age, they never feel the strain of old age, and continue to fight as if they were a young pup. 
+
+***Alignment.*** Worgen tend to become chaotic, the infection of their blood with the wolves making them more unpredictable.
+
+***Size.*** Worgen vary in height and build like uncursed members of their race. Their cursed form is typically a third larger in girth and height than their uncursed form. Your size is Medium. 
+
+***Speed.*** Your base walking speed is 30 feet.
+
+***Aberration.*** You have advantage on saves against curses and diseases. You count as an Aberration for purposes of animating undead. **[Instead of counting as an aberration, should it just require a spell slot of, say, 6th level or higher?]**
+
+**_Two Forms._** You are the master of your curse, able to transform from your worgen form to your former uncursed form at will over 1 minute. You can transform back into your worgen form as an action. If you die while in your uncursed form, you revert to your worgen form after death. You gain certain the following racial traits when you are in worgen form:
+<div style='margin-top:-5px;'></div>
+ 
+- **Claws.** You can use your claws to make unarmed strikes. When you hit with them, the strike deals 1d6 + your Strength modifier slashing damage, instead of the bludgeoning damage normal for an unarmed strike.
+- **Climb.** Your sharp claws gives you a climbing speed equal to your movement speed.
+- **Darkflight.** Your reflexes and agility allow you to move with a burst of speed. When you move on your turn in combat, you can double your speed until the end of the turn. Once you use this trait, you can't use it again until you move 0 feet on one of your turns.
+- **Darkvision.** Accustomed to the black nights, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray.
+- **Keen Hearing and Smell.** You have advantage on Wisdom (Perception), Wisdom (Survival), and Intelligence (Investigation) checks that involve hearing or smell.
+- **Running Wild.** When running on all fours, you can move faster over long distances. When calculating travel pace, you can use twice your movement speed. 
+- **Standing Leap.** Your long jump is equal to your movement speed and your high jump is equal to 2/3 your movement speed, rounded down to the nearest 5 foot increment, with or without a running start. **[Simplify the math?]**
+<div style='margin-top:-5px;'></div>
+
+***Former Life.*** The worgen curse can affect a number of differing types of humanoids, but the two most common are those who were formerly human or night elves. Choose one of the following.
+
+#### Worgen Human
+The vast majority of modern worgen were former humans, and the vast majority of those are composed of the former people of the kingdom of Gilneas. You were either infected by the curse through the bite or blood of a worgen or you were cursed directly by the Scythe of Elune. Either way, you owe your sanity to the night elves and their usage of the powerful artifact.
+
+***Creature Type.*** You are also considered a human for any prerequisite or effect that requires you to be a human.
+
+***Ability Score Increase.*** One other ability score of your choice increases by 1.
+
+***Human Spirit.*** When you roll a 1 on an attack roll, ability check, or saving throw, you can reroll the die. You must use the new result, even if it is a 1.
+
+***???.*** [Add another trait here, to balance out the number of traits between humans and night elves? See the Forsaken Human for inspiration.]
+
+#### Worgen Night Elf
+A smaller number of night elves have been infected by the worgen curse. Either you were one of the first druids to be transformed, one of their victims throughout the thousands of years since their creation, or your transformation may have been a recent case due to the creation of the Ritual of Balance that allows you to retain your sanity.
+
+***Creature Type.*** You are also considered an elf for any prerequisite or effect that requires you to be an elf.
+
+***Ability Score Increase.*** Your Dexterity score increases by 1.
+
+***Fleet of Foot.*** Your base movement speed increases to 35 feet.
+
+***Superior Darkvision.*** You retain your darkvision whether in your worgen or uncursed form. Its range increases to 120 feet and instead of shades of gray the world is tinted red. 
+
+\pagebreak
+
+<div style='margin-top:350px;'></div>
+
+## Orc
+*To pretend the demonic corruption did not exist is to forget how dreadful the impact was. To make ourselves into victims, rather than claiming our participation in our own destruction. We chose this path, we orcs. We chose it right up until it was too late to turn back. And having made that choice, we can, with the knowledge that we have of the end of that dark and shameful road, choose not to take it.*
+<div style="text-align:Right"> 
+
+*— Warchief Thrall* &nbsp;</div>
+<div style='margin-top:-5px'></div>
+
+When the orcs were freed from the Burning Legion, they experienced a spiritual revolution as the unnatural blood&shy;lust left their bodies, connecting them with states of heart and mind that were common to their ancestors. This new generation of orcs for the most part followed Thrall as he forged the Horde through shamanism and tribal traditions.
+
+Though prone to fits of rage in warfare, orcs tend to display a curious feral grace that can rival even the finest fencing of an elven noble. The orcs of today continue to stand in drastic contrast to those that were enslaved by the Burning Legion, who embodied a bestial and diabolical force which was barely being controlled by warlock magic.
+
+### Mindful Individuals
+To orcs, prowess in battle bestows great personal honor on an individual. This notion of honor pervades every echelon of orcish culture, and the loss or gain of honor has equal consequence to all orcs regardless of their stature. 
+
+Even the naming of orcs is temporary until they have performed rites of passage; only when orcs bring honor to themselves and thus to their clan do elders grant them adult names based upon their deeds. Orcs may appear quick to anger but they are tempered by the wisdom of <br> the shamans, who are revered across Horde society.
+
+While many in the Alliance still perceive the orcs as brutish or even mindless, they have forged a complex culture embracing many occupations and many different races. No doubt Thrall's leadership aided in bringing this about, yet it is apparent that the Alliance has underesti&shy;mated the orcs' ability to construct a society that is highly influential in world affairs.
+
+\columnbreak
+
+<div style='margin-top:595px;'></div>
+
+### A Spiritual Connection
+As far back as orcish history has been recorded, shaman have been mentioned, and learning to speak with the elemental spirits of Draenor was a pivotal achievement in destiny for the orc clans. The first orcs to learn the ways of shamanism hailed from the Shadowmoon clan, but many clans claim the mythical "First Shaman" arose from their ranks, even though the truth is that no one is sure of his or her allegiance.
+
+Several orc shaman worship or at least acknowledge <br> the Earth Mother, the benevolent creator deity primarily worshipped by the tauren.
+
+### Frightful Appearance
+Orc males are massive and brutish looking creatures. Weighing in at 250 to 350 pounds and standing from 6 to 7 feet in height, they are not a small race. Even orc women tend to be only a half-foot or so shorter than most males, having broad shoulders and muscular, powerful bodies.
+
+Orcs tend to have bristly hair and beards, often black or brown in color. Their skin ranges from a light green to a dark drab olive. Eyes range in color from a fierce red to a pale blue. Orcs have broad, flat noses, tusk-like teeth jutting from their lower and sometimes upper jaws, and large, pointed ears. They favor clothes of hide, and armor and arm themselves with a variety of gear.
+
+<div class='footnote'>PART 1 | RACES</div>
+<img src='https://www.gmbinder.com/images/E086d0Y.jpg' style='position:absolute; top:-50px; right:0px; width:800px' />
+<img src='https://www.gmbinder.com/images/L60ii4e.png' style='position:absolute; top:0px; right:0px; width:900px; transform:scaley(-1)' />
+<img src='https://www.gmbinder.com/images/tPFTqoe.png' style='position:absolute; top:100px; right:0px; width:400px' />
+
+\pagebreakNum
+
+<div style='margin-top:370px;'></div>
+
+### Affiliation
+Orcs are members of the Horde and it would not exist with&shy;out them. They forged the Orcish Horde prior to the First War and the New Horde—also known as the Horde—during the Third War as the orcs made a lasting bond with races native to the continent of Kalimdor. Much of the Horde continues to be influenced by orcish culture and laws.
+
+Although most orcs are members of the Horde, there are those who chose to isolate themselves from its influence and affiliated races. These reclusive clans are rarely friendly towards the Horde or its races and some show open hostility.
+
+### Orc Names and Clans
+Most orcish names derive from words in their language that have some complex meaning or hidden significance to their families. Typically, this is the name of a favorite thing or relative. Family names don’t exist; most orcs have last names related to some great deed of heroism or honor.
+
+Orcs typically form into similarly minded groups known as clans. Each clan is lead by a chieftain and the leader of all clans is known as the Warchief, a title given to the leader of the current Horde. Some clans are ancestral and well-established, while others were established relatively recently by specific people for a specific purpose. In the latter case, loyalty is typically only held to the clan leader; once they die, the clan disperses.
+
+The clan system has largely been abolished during the reign of Thrall as the Warchief in favor of a single Horde. Still, there are some who proudly bear the name of ancient clans or follow their ways. Below are seven orc clans who have been major players in the history of both Azeroth and Draenor, though many more exist.
+<div style='margin-top:-18px;'></div>
+
+<br>**Male Names:** Grom, Thrum, Drog, Gorrum, Harg, Thurg, <br>&nbsp;&nbsp;&nbsp; Karg, Regg, Kavenk, Uketel, Thrarturg, Crurn
+<br>**Female Names:** Groma, Hargu, Igrim, Agra, Dragga, <br>&nbsp;&nbsp;&nbsp; Grima, Fehmo, Mohma, Sherge, Zuri, Orgis
+<br>**Deed Names:** Cravensmile, Steelflame, Twinthunder, <br>&nbsp;&nbsp;&nbsp; Gravepride, Aridfire, Coldbrass, Foebinder, Elfkiller
+
+\columnbreak
+
+#### Blackrock
+The Blackrock are a disciplined, organized, and 
+<br/> militaristic clan who boast expert smiths and 
+<br/> metalworkers who utilize the tough ore from 
+<br/> which they share their name. The Blackrock 
+<br/> shamans used elemental forges and were the 
+<br/> first to descend into using fel magic during the 
+<br/> First and Second Wars.
+
+Blackrock orcs typically have gray-hued skin from their time living under mountains. Male orcs of the Blackrock Clan never cut their hair until they come of age, at which point their head is shaved and their role in this extremely regimented society is determined.
+
+The Blackrocks follow the ways of either a mystic or warrior clan.
+
+#### Bleeding Hollow
+The Bleeding Hollow gain their name from the 
+<br/> ritual performed by their chieftains and elders, 
+<br/> where they ritualistically gouge out an eye in 
+<br/> exchange for visions of the future, often of the 
+<br/> time of their death. 
+
+Hailing from the jungles of old Draenor, they 
+<br/> imbue themselves with berserk fury, slather their 
+<br/> weapons in hallucinogenic venom, and stalk prey from the treetops, branding their victims' final moments with visions of pure horror.
+
+The orcs of the Bleeding Hollow follow the ways of the hunter and mystic clans.
+
+#### Frostwolf
+The Frostwolves are known for two things: their prowess in single combat and their close bonds with the wolves with which they share their name. Though smaller than many other orc clans, it is from this clan that the first leader of the Horde known as Thrall was descended. 
+
+No two creatures will share a stronger relationship than that of a Frostwolf orc and his or her companion wolf. The two eat, sleep, and fight side by side until one or both dies an honorable death. Even then, sometimes not even death itself can stop a frostwolf from coming to the aid of its beloved orc.
+
+The Frostwolves follow the ways of hunter and warrior clans.
+
+#### Shadowmoon
+These highly spiritual and shamanistic orcs come from Shadowmoon Valley in old Draenor and their magic was derived from the moon, earth, and stars. A key source of their power was their understanding of the movements of the stars and their omens. Their skin was often marked with bone-white tattoos of secret runes used to enhance their connections to the elements and their ancestors.
+
+Despite these peaceful origins, it was the Shadowmoon chieftain Ner'zhul who led the orcs in the second invasion of Azeroth, who created so many portals on Draenor that the planet was shattered into the broken Outland, and whose spirit was twisted by the demon Kil'jaeden into becoming the Lich King. Due to his actions, very few Shadowmoon orcs remain.
+
+Orcs of the Shadowmoon clan almost exclusively follow the path of a mystic clan.
+
+<img src='https://www.gmbinder.com/images/RjHe5sR.png' style='position:absolute; top:30px; left:40px; width:350px' /> <!-- Icon of Battle, the Orc Icon -->
+<img src='https://www.gmbinder.com/images/4JIFFWR.png' style='position:absolute; top:30px; right:5px; width:130px' /> <!-- Icon of the Blackrock Clan -->
+<img src='https://www.gmbinder.com/images/76hRPzp.png' style='position:absolute; top:270px; right:0px; width:130px' /> <!-- Icon of the Bleeding Hollow Clan -->
+<img src='https://www.gmbinder.com/images/rBsVY8r.png' style='position:absolute; top:270px; right:0px; width:130px' /> <!-- Icon of the Frostwolf Clan -->
+
+
+\pagebreak
+
+#### Shattered Hand
+Hunter/Mystic/Warrior
+#### Thunderlord
+Hunter
+#### Warsong
+Warrior
+
+\pagebreak
+
+### Orc Traits
+Your orc character has the following racial traits.
+
+***Creature Type.*** You are a Humanoid. You are also considered an orc for any prerequisite or effect that requires you to be an orc.
+
+***Ability Score Increase.*** Your Strength score increases by 1, and your Constitution score increases by 1.
+
+***Age.*** Orcs mature a little faster than humans, reaching adulthood around age 14. They age noticeably faster and rarely live longer than 75 years.
+
+***Alignment.*** Orcs might not have an innate tendency toward evil, but many end up there. Evil or not, many orcs lean toward a chaotic alignment.
+
+***Size.*** Orcs are between 6 and 7 feet tall and muscularly built, averaging around 300 pounds. Your size is Medium. 
+
+***Speed.*** Your base walking speed is 30 feet. 
+
+***Hardiness.*** You have advantage on saves against being stunned or exhausted.
+
+***Relentless Endurance.*** When you are reduced to 0 hit points but not killed, you can drop to 1 hit point instead. You must then finish a long rest to use this feature again.
+
+***Savage Attacks.*** When you score a critical hit with a melee weapon attack, you can roll one of the weapon's damage dice one additional time and add it to the extra damage of the critical hit.
+
+***Languages.*** You can speak, read, and write Common and Orcish. Orcish is a harsh, grating language with hard consonants. It has no script of its own but is written in a mix of dwarven runes and common.
+
+***Clans.*** Orcs are taught different skills depending on their clan. Orcish clans are categorized into three: hunter clans, mystic clans, and warrior clans. Choose one of these clans and work with your DM to determine the significance of your chosen clan.
+
+#### Hunter Clans
+Some orc clans prefer a more stealth approach to things, hiding and waiting for the perfect time to ambush, such as the Shattered Hand clan, and the Bleeding Hollow clan. 
+
+***Ability Score Increase.*** Your Dexterity score <br> increases by 1.
+
+***Ambusher.*** You gain proficiency in the Perception and Stealth skills.
+
+***Surprise Attack.*** If you hit a creature with an attack roll, the creature takes an extra 2d6 damage if it hasn't taken a turn yet in the current combat.
+
+#### Mystic Clans
+Not many orc clans go in for the use of magic, and those that do are usually more secretive than the rest. Generally less keen on working with other clans are spend their time as a nomadic folk rather than settling in a certain area. Such clans include The Shadowmoon, and Stormreaver. 
+
+***Ability Score Increase.*** Your choice of your Intelligence or Wisdom score increases by 1.
+
+***Ancestral Call.*** You know the *guidance* cantrip. Starting at 3rd level, you can cast the *heroism* spell with this trait. Starting 5th level, you can also cast the *augury* spell with this trait, without requiring a material component.
+
+Once you cast *heroism* or *augury* with this trait, you can't cast that spell with it again until you finish a long rest. You can also cast either of those spells using any spell slots you have of the appropriate level. Intelligence, Wisdom, or Charisma is your spellcasting ability for these spells when you cast them with this trait (choose when you select this race).
+
+***Mystic Lore.*** You are proficient with the following skills: Medicine and Nature.
+
+#### Warrior Clans
+Most known orc clans go for the brute forced approach, entering combat gladly with raised weapons, hammering down everything in their way. Some of the larger clans include Warsong, Burning Blade, and the Frostwolves. 
+
+***Ability Score Increase.*** Your Strength score <br> increases by 1.
+
+***Adrenaline Rush.*** You can take the Dash action as a bonus action. You can use this trait a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest.
+
+Whenever you use this trait, you gain a number of temporary hit points equal to your proficiency bonus.
+
+***Intimidating Stature.*** You gain proficiency in the Athletics and Intimidation skills.
+
+##### Potential Alternate Abilities
+- **Vengeful Assault.** When you take damage from a creature in range of a weapon you are wielding, you can use your reaction to make an attack with the weapon against that creature. Once you use this trait, you can't do so again until you finish a short or long rest. [From the Ravenite Dragonborn, from Wildemount.]
+- **Blood Fury.** Use the Necrotic Shroud transformation from the aasimar, but with physical damage bonus. Credit to Silverblade for the idea.
+- A simpler rage would be: start a blood fury as a bonus action, lasting for 1 minute. +2 to melee and thrown weapon damage, can't cast or concentrate on spells during this time. 
+
+\pagebreak
+
+# Forsaken
+### Forsaken Traits
+Your forsaken character has the following racial traits.
+
+***Creature Type.*** You are an Undead.
+
+***Ability Score Increase.*** Your Constitution score increases by 2.
+
+***Age.*** Forsaken do not age, as the undeath ends this process when they are brought back. However, decay and rot can affect the forsaken's mind, and as time goes on they experience issues similar to those of aging.
+
+***Alignment.*** When brought back to undeath, forsaken keep the alignment they had in life. However, most tend to become more chaotic and very few keep a good alignment after decades of being an undead.
+
+***Size.*** Forsaken stand as tall as they did in life and weigh between half as much to as much as they did in life. Your size is Medium.
+
+***Speed.*** Your base walking speed is 30 feet.
+
+***Darkvision.*** Born into undeath by unholy magic, you can see normal in dark and dim conditiions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray.
+
+***Cannibalize.*** You can consume the flesh of corpses to repair your injuries. For every minute you spend doing so, you can spend a Hit Die, roll it, and regain a number of hit points equal to the roll plus your Constitution modifier (minimum of 1 hit point). 
+
+You can only do so using corpses that are mostly intact and have a true anatomy (for example, you may not con&shy;sume oozes). A typical fresh Medium corpse can be fed upon for five minutes, after which it is stripped of flesh.
+
+***Grave's Rest.*** When you take a long rest, you spend at least 6 hours performing light activities instead of sleeping.
+
+***Living Dead.*** You have resistance to poison damage and immunity to disease, and you have advantage on saving throws against being poisoned. You don't need to eat, drink, breathe, or sleep, and magic can't put you to sleep.
+
+Additionally, you benefit from certain spells that normally don’t affect undead: spells that restore hit points, though these feel immensely painful to you; spells that return dead creatures to life, though these instead return you to undeath; and spells that stabilize dying creatures.
+
+~~***Pained by the Light.*** Whenever you take radiant damage, you must make a Constitution saving throw to avoid being wracked by pain, becoming stunning them until the start of their next turn. The saving throw DC is 10 or half the radiant damage taken, whichever is higher.~~
+
+***Will of the Forsaken.*** You have advantage on saving throws against being charmed or frightened and against effects that turn undead.
+
+***Languages.*** You can speak, read, and write Common and one other language determined by your subrace.
+
+***Subrace.*** Two subraces of forsaken are found among the undead of Lordaeron: forsaken humans and forsaken elves. Choose one of these subraces.
+
+\columnbreak
+
+#### Forsaken Human
+As a forsaken human, you were once a human of the proud nation of Lordaeron. Raised as a minion to the Scourge as it passed through and leveled the kingdom with the ground. These forsaken make up the majority of their race, filling the roles of great commanders and simple merchants for the growing forsakens.
+
+***Creature Type.*** You are also considered a human for any prerequisite or effect that requires you to be a human.
+
+***Ability Score Increase.*** One other ability score of your choice increases by 1.
+
+***False Appearance.*** While you remain motionless, you are indistinguishable from an ordinary corpse.
+
+***Human Spirit.*** When you roll a 1 on an attack roll, ability check, or saving throw, you can reroll the die. You must use the new result, even if it is a 1.
+
+***Languages.*** You can also speak, read, and write Gutterspeak. Gutterspeak is a lower form of Common used by shady underground markets and rogues' guilds as a tongue of ill-repute.
+
+#### Forsaken Elf
+As a forsaken elf, you were once a high elf of Quel'thalas who died to the Scourge as it crawled through the land on its journey towards the Sunwell. The tenacity of the elves have made you rise above the common humans that fill out the forsaken nation. These forsaken are often found in high places and positions of power.
+
+***Creature Type.*** You are also considered an elf for any prerequisite or effect that requires you to be an elf.
+
+***Ability Score Increase.*** Your Intelligence score increases by 1.
+
+***Banshee's Wail.*** You can emit a horrifying wail in a <br/> 15-foot cone. This wail has no effect on constructs and undead. All other creatures within the area take 2d8 psychic damage, or half on a successful Constitution saving throw (DC = 8 + your Constitution modifier + your profi&shy;ciency bonus). This damage increases by 1d8 when you reach 5th level (3d8), 11th level (4d8), and 17th level (5d8).
+
+You can use your Banshee's Wail a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest.
+
+***Languages.*** You can also speak, read, and write Thalassian, the language of the blood elves.
+
+\pagebreak
+
+##### Potential Alternate Abilities
+Ideas pulled from [this homebrew](https://www.reddit.com/r/DnD/comments/7q2el3/warcraft_5e_races_looking_for_some_feedback/)
+- Forsaken humans gain a False Appearance trait to appear like a corpse when motionless
+- Forsaken elves have a banshee's wail ability instead of spellcasting, dealing scaling psychic damage in a cone. Note: The 3rd level spell *fear* works pretty well as an equivalent to a banshee wail (frightening creatures in a 30 foot cone). It might be a good upgrade via a racial feat.
+- Can put in a vulnerability to radiant damage to balance out the race.
+
+##### Other
+***Forsaken Versatility.*** Choose one of the following traits:
+- **Arcane Hunger (5 points, Elf Heritage).** You can cast the *detect magic* spell  without spending a spell slot. You can do so a number of times equal to your proficiency bonus and you regain all expended uses of this ability when you finish a long rest.
+- **Banshee's Wail (5 points, Elf Heritage).** You can emit a horrifying wail as an action in a 15-foot cone. This wail has no effect on constructs and undead. All other creatures within the area take 2d8 psychic damage, or half on a successful Constitution saving throw (DC = 8 + your Constitution modifier + your profi&shy;ciency bonus). This damage increases by 1d8 when you reach 5th level (3d8), 11th level (4d8), and 17th level (5d8).
+- **Corpselike (General).** 
+- **Human Spirit (4 points, Human Heritage).** When you roll a 1 on an attack roll, ability check, or saving throw, you can reroll the die. You must use the new result, even if it is a 1.
+- **Perfectly Preserved (General).**
+- **Shadow Resistance (General).**
+- **Touch of the Grave (General).**
+- **Will to Survive (5 points, Human Heritage).** When you make an ability check, attack roll, or saving throw and have disadvantage on the roll, you can cancel the disadvantage for that roll. You can use this trait a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest.
+
+
+\pagebreak
+
+# Tauren
+### Tauren Traits
+Your tauren character has the following racial traits.
+
+***Creature Type.*** You are a Humanoid. You are also considered a tauren for any prerequisite or effect that requires you to be a tauren.
+
+***Ability Score Increase.*** Your Strength increases by 2.
+
+***Age.*** Tauren reaches adulthood in their mid teens, and most grow to be 95 years old, few live beyond a century. 
+
+***Alignment.*** Most tauren are lawful, keeping to their tribal code. Those who are evil are shunned upon, most either outlaws or corrupted in some form.
+
+***Size.*** Tauren are between 8 and 10 feet tall and weigh between 400 and 600 pounds. Your size is Medium, yet you tower over most other humanoids. 
+
+***Speed.*** Your base walking speed is 30 feet.
+
+***Horns.*** Your horns are natural melee weapons, which you can use to make unarmed strikes. If you hit with them, you deal piercing damage equal to 1d6 + your Strength modifier, instead of the bludgeoning damage normal for an unarmed strike.
+
+***Goring Rush.*** Immediately after you use the dash action on your turn and move at least 20 feet, you can make one melee attack with your horns as a bonus action.
+
+***Hammering Horns.*** Immediately after you hit a creature with a melee attack as a part of the Attack action on your turn, you can use a bonus action to attempt to shove that target with your horns. The target must be within 5 feet of you and no more than one size larger than you. Unless it succeeds on a Strength saving throw against a DC equal to 8 + your proficiency bonus + your Strength modifier, you push it up to 10 feet away from you.
+
+***Brawn.*** You have proficiency in the Athletics skill, and you count as one size larger when determining your carrying weight and the weight you can push, drag, or lift.
+
+***Languages.*** You can speak, read, and write Common and Taur-ahe. Taur-ahe is a harsh, and low sounding language, without a proper alphabet, their written language is made of elaborate pictograms and pictoforms.
+
+***Subrace.*** Three subraces of tauren populate Azeroth: mulgore tauren, highmountain tauren, and taunka. Choose one of these subraces.
+
+#### Mulgore Tauren
+As a mulgore tauren, you are among the most common of the tauren kin's. Mulgore tauren have lived on Kalimdor for countless years. These taurens are calm and honorable when met, and fierce fighters when fought. These tauren have a deep respect for nature and the Earth Mother, only taking what they need from the land to survive.
+
+***Ability Score Increase.*** Your Wisdom score <br> increases by 1.
+
+***Endurance.*** Your hit point maximum increases by 1, and it increases by 1 every time you gain a level.
+
+***War Stomp.*** When you take the Attack action on your turn, you can replace one of your attacks with a mighty stomp, shaking the ground in a 10-foot radius. Each creature in that area must make a Dexterity saving throw (DC = 8 + your Strength modifier + your proficiency bonus). On a failed save, the creature takes 1d12 bludgeoning damage and falls prone. On a successful save, it takes half as much damage and no other effect. This damage increases by 1d12 when you reach 5th level (2d12), 11th level (3d12), and 17th level (4d12).
+
+You can use your War Stomp a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest.
+
+#### Highmountain Tauren
+As a highmountain tauren, you hail from the Broken Isles. Highmountain taurens have secluded themselves in the isle's mountains for generations. They harbour no hatred towards other races and are generally peaceful and kind hearted. These tauren does not have horns like the rest of their kin, instead they grow large antlers.
+
+***Ability Score Increase.*** Your Wisdom score <br> increases by 1.
+
+***Mountaineer.*** You're acclimated to high altitude, includ&shy;ing elevations above 20,000 feet. You're also naturally adapted to cold climates, as described in chapter 5 of the *Dungeon Master's Guide*.
+
+Additionally, you are adept at traveling and surviving in mountainous regions. When you make an Intelligence or Wisdom check related to mountainous terrain, your proficiency bonus is doubled if you are using a skill that you're proficient in.
+
+***Rugged Tenacity.*** You can draw upon the legacy of your ancestors to shrug off harm. When you take damage, you can use your reaction to roll a d12. Add your Constitution modifier to the number rolled and reduce the damage by that total.
+
+You can use this trait a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest.
+
+#### Taunka
+As a taunka, you are considered a relative to the tauren race and a branch of the tauren race that adapted to the harsh environment found in Northrend. These tauren have endured much and don't harbor the same respect for nature as is prominent in other subraces of the tauren race.
+
+***Ability Score Increase.*** Your Constitution score increases by 1.
+
+***Snowstorm Senses.*** Accustomed to your vision being impaired by the storms of your homeland, you have superior vision in lightly and heavily obscured conditions. You can see in lightly obscured areas within 60 feet of you as if it was not obscured, and in heavily obscured areas as if it were lightly obscured.
+
+***Tundra Walker.*** You are well-adapted to near arctic climates. You have resistance to cold damage and can move across difficult terrain made of ice or snow without expending extra movement.
+
+***Waste Not, Want Not.*** Accustomed to the harsh difficulties of the far north, you know how to make every bit count. You can go up to 10 days without food before suffering exhaustion. You also have advantage on Wisdom (Survival) checks made to gather food.
+
+Additionally, as part of a short rest, you can harvest bone and hide from a slain beast, construct, dragon, monstrosity, or plant creature of size small or larger to create one of the following items: a shield, a blanket, a club, a greatclub, a javelin, or a spear. To use this trait, you need a blade, such as a dagger, or appropriate artisan's tools, such as leatherworker's tools.
+
+<div class='footnote'>PART 1 | RACES</div>
+
+\pagebreakNum
+
+# Troll
+### Troll Traits
+Your troll character has the following racial traits.
+
+***Creature Type.*** You are a Humanoid. You are also considered a troll for any prerequisite or effect that requires you to be a troll.
+
+***Ability Score Increase.*** Your Constitution score increases by 1.
+
+***Age.*** Trolls mature a little faster than humans, reaching adulthood around age 16. Although they age at the same rate as humans, trolls aren't weakened by old age and can live well over a century.
+
+***Alignment.*** Trolls are a neutral race and their alignment can vary drastically between subraces. Most trolls tend to be lawful, with each tribe often having particular customs and rules for tribesmen to abide by.
+
+***Size.*** Trolls are between 7 and 8 feet tall and weigh between 200 and 300 pounds. Your size is Medium.
+
+***Speed.*** Your base walking speed is 30 feet. 
+
+***Darkvision.*** Trolls retain their vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray.
+
+***Berserk.*** As a bonus action, you select one of the following options. You can use this trait a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest.
+- You may make a single weapon attack, or two weapon attacks if both are with your offhand weapon.
+- You can cast a cantrip with a casting time of an action.
+- The first time you make an attack roll this turn, you do so with advantage.
+- You can take the Dash action.
+
+***Regeneration.*** Troll powers of regeneration are legend&shy;ary, if sometimes exaggerated. As a bonus action you can spend a Hit Die, roll it, and regain a number of hit points equal to the roll plus your Constitution modifier (minimum of 1 hit point). 
+
+Additionally, if you lose a body member (finger, leg, arm, etc.), it is reattached if held against the stump for 1 hour. Otherwise, any missing body parts or organs will regrow and return to full functionality after 2d6 + 4 days if you have at least 1 hit point the whole time.
+
+***Languages.*** You can speak, read, and write Common and Zandali. Zandali is the tongue of all trolls. It is a largely syllabic language and taught down through generations.
+
+***Subrace.*** Few races are as diverse as trolls, who seem to have a variant for every biome. Three main subraces of trolls can be found among the Horde: jungle trolls, Zandalari trolls, and forest trolls. Choose one of these subraces.
+
+##### Potential Alternate Abilities
+- **Vengeful Assault.** When you take damage from a creature in range of a weapon you are wielding, you can use your reaction to make an attack with the weapon against that creature. Once you use this trait, you can't do so again until you finish a short or long rest. [From the Ravenite Dragonborn, from Wildemount.]
+- Use the Shifter trait for Berserk instead, with each subrace getting a unique expression of the berserk.
+- Use the Necrotic Shroud transformation from the aasimar for berserk, but with physical damage bonus. Credit to Silverblade for the idea (though he used it for the orc blood fury).
+
+#### Jungle Troll
+As a jungle troll, you have a knowledge of voodoo and a ferocity that is unmatched by most of your kin. These trolls are superstitious and believe that their way is guided by the spirits of the world. Their fierce determination is matched only by their wits and prowess. Many would consider jungle trolls to be the most dangerous and brutal troll-kin for their influence and power in the Eastern Kingdoms.
+
+***Ability Score Increase.*** Your Constitution score increases by 1, and your Wisdom score increases by 1.
+
+***Da Voodoo Shuffle.*** On your turn, you can choose to ignore any magical difficult terrain for 1 minute. Once you use this trait, you can't use it again until you finish a long rest.
+
+***Jungle Strider.*** You can move across any non-magical difficult terrain without expending any extra movement.
+
+***Jungle Survivalist.*** You have advantage on saving throws you make to avoid or end diseases or the poisoned condition on yourself. You also have resistance to poison damage.
+
+#### Zandalari Troll
+As a Zandalari troll, you have an unparalleled connection to the loas and ancient traditions older than most races. They are the ancestral race of all trolls and sit at the center of the troll union in their temple city of Zuldazar on Zandalar. These trolls are more powerful than the rest of their race and carry immense influence and respect among its tribes.
+
+***Ability Score Increase.*** Your Wisdom score <br> increases by 2.
+
+***Ancient Lore.*** You gain proficiency with one of the following skills of your choice: Arcana, History, Nature, Performance or Religion.
+
+***Consult the Loa.*** You can seek the counsel of the Loa. You know the *guidance* cantrip, but can only cast it on yourself. If you have levels in a class that has *guidance* in its spell list, you can cast it normally.
+
+***Favored by the Loa.*** As an action, you beseech the blessing of the Loa. You roll a number of d4s equal to your proficiency bonus and regain a number of hit points equal to the total rolled. Once you use this trait, you can't use it again until you finish a long rest.
+
+\pagebreak
+#### Forest Troll
+As a forest troll, you have a keen knowledge of the natural world, a cunning for warfare, and an ancient hatred of men and elf. These trolls are among those who remain from the Amani Empire, an empire that has fallen by the hands of the Alliance and Horde. 
+
+***Ability Score Increase.*** Your Dexterity score increases by 1, and your Constitution score increases by 1.
+
+***Amani Instincts.*** You gain proficiency with one of the following skills of your choice: Acrobatics, Nature, Stealth, or Survival.
+
+***Forest Camouflage.*** You have advantage on Dexterity (Stealth) checks made to hide while in forested terrain.
+
+***Forest Traveller.*** Well accustomed to the dense forests, you also have a climb speed equal to your movement speed. Your movement is not impeded by difficult terrain caused by plants.
+
+<div class='footnote'>PART 1 | RACES</div>
+
+\pagebreakNum
+
+# Blood Elf
+### Blood Elf Traits
+Your blood elf character has the following racial traits.
+
+***Creature Type.*** You are a Humanoid. You are also considered an elf for any prerequisite or effect that requires you to be an elf.
+
+***Ability Score Increase.*** Your Dexterity score increases by 2, and your Intelligence score increases by 1.
+
+***Age.*** Blood elves reach adulthood at the rate of humans, but aren't considered to have entered adulthood until they reach age 60, and can live to become many hundred years old with ease. That being said, many blood elves have lived for thousands of years due to the power of the Sunwell extending their lifespan indefinitely.
+
+***Alignment.*** Blood elves live in a society where ranks and titles carry tremendous weight and where strict laws have been put in place for them to follow, pushing them towards lawful alignments. Personal desires varies drastically, and both those of good and evil alignment exist.
+
+***Size.*** Blood elves are between 5 and 6 feet tall and weigh between 125 and 175 pounds. Your size is Medium.
+
+***Speed.*** Your base walking speed is 30 feet.
+
+***Darkvision.*** Due to your elven heritage, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can’t discern color in darkness, only shades of gray.
+
+***Arcane Affinity.*** Every blood elf has at least a small talent at the arcane. You know the *prestidigitation* cantrip and can draw upon your mana to perform one of the following abilities. You can do so a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest.
+<div style='margin-top:-5px;'></div>
+
+- You can cast the *detect magic* spell.
+- As a bonus action, you enhance your attacks with arcane might for 1 minute. Once per turn for the duration, you can add your proficiency bonus in force damage to one target when you deal damage with a weapon attack or cantrip.
+<div style='margin-top:-5px;'></div>
+
+&nbsp;&nbsp;&nbsp; ***Arcane Resistance.*** You have resistance to force damage.
+
+***Mana Tap.*** When you succeed on a saving throw against a spell, you regain an expended use of Arcane Affinity.
+
+***Thalassian Lore.*** You gain proficiency with one of the following skills of your choice: Arcana, History, or Perception.
+
+***Languages.*** You can speak, read, and write Common and Thalassian. Thalassian derives from the Darnassian tongue of night elves, and in many cases sound the same to an inexperienced ear.
+
+> ##### Creating a High Elf
+> Few high elves remain on Azeroth, as the quel'dorei renamed themselves sin'dorei, blood elves, upon retaking much of their homeland from the Scourge. You can create a high elf by using the racial traits of a blood elf, as the two races are indistinguishable.
+
+<!--
+- When you deal damage with a weapon attack, you can deal an additional amount of force damage equal to your proficiency bonus.
+- When you deal damage with a cantrip, you can add your proficiency bonus to the damage dealt to a single creature.
+-->
+
+\pagebreak
+
+# Goblin
+### Goblin Traits
+Your goblin character has the following racial traits.
+
+***Creature Type.*** You are a Humanoid. You are also considered a goblin for any prerequisite or effect that requires you to be a goblin.
+
+***Ability Score Increase.*** Your Intelligence score increases by 1, and your Charisma score increases by 2.
+
+***Age.*** Goblins mature slightly slower than humans and reach adulthood in their early 20s. Most goblins die within a century, but a goblin can live into the middle of his or her second century.
+
+***Alignment.*** Most goblins lean towards chaotic neutral. They rarely show a sense of moral or consideration for the consequences of their actions, preferring to live in the moment and leave the troubles to tomorrow.
+
+***Size.*** Goblins are between 3 and 4 feet and weigh between 40 and 80 pounds. Your size is Small. 
+
+***Speed.*** Your base walking speed is 25 feet.
+
+***Best Deals Anywhere.*** Whenever you make a Charisma (Persuasion) check related to haggling, you are considered proficient in the Persuasion skill and add double your proficiency bonus to the check, instead of your normal proficiency bonus.
+
+***Goblin Craftiness.*** You can add half your proficiency bonus, rounded down, to any Charisma ability check you make that doesn't already include your proficiency bonus.
+
+***Goblin Rocket Science.*** Using superior goblin engineering, you can utilize the destructive potential of rockets to assist you in combat, using the following options: 
+- **Rocket Barrage.** When you take the attack action on your turn, you can replace one of your attacks with a barrage of rockets affecting a 30-foot line that is 5 feet wide. Each creature in that area must make a Dexterity saving throw (DC = 8 + your Intelligence modifier + your proficiency bonus). On a failed save, the creature takes 1d10 fire damage. On a successful save, it takes half as much damage. This damage increases by 1d10 when you reach 5th level (2d10), 11th level (3d10), and 17th level (4d10).
+- **Rocket Jump.** As a bonus action, you can use rockets to give yourself a boost, allowing you to jump a number of feet equal to five times your proficiency bonus, without costing movement or provoking opportunity attacks.
+
+You can use this trait a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest. 
+
+You can also try to use this trait when you have no uses by rolling a d6. If the result is 4 or higher, you successfully use it. Otherwise, your rocket fuel explodes, knocking you prone and dealing fire damage equal to your level to you and each creature within 5 feet of you, and you cannot try to use it again until you finish a long rest.
+
+***Prepared for Failure.*** Goblin technology has such a propensity for explosive failure that dodging on a moment's notice has become second nature. When you fail a Dexterity saving throw, you can use your reaction to roll a d4 and add it to the save, potentially turning the failure into a success. You can't use this reaction if you are prone or your speed is 0.
+
+***Tool Proficiency.*** You gain proficiency with the artisan's tools of your choice: alchemist's supplies, engineer's tools, or tinker's tools.
+
+***Languages.*** You can speak, read, and write Common, Goblin and one extra language of your choice. Goblins are born merchants and trade with any race willing to buy from them, picking up the languages of those they trade with.
+
+\pagebreak
+# Mag'har Orc
+### Mag'har Orc Traits
+Your mag'har orc character has the following racial traits.
+
+***Creature Type.*** You are a Humanoid. You are also considered an orc for any prerequisite or effect that requires you to be an orc.
+
+***Ability Score Increase.*** Your Strength score increases by 1, and your Constitution score increases by 1.
+
+***Age.*** Orcs mature a little faster than humans, reaching adulthood around age 14. They age noticeably faster and rarely live longer than 75 years.
+
+***Alignment.*** Orcs might not have an innate tendency toward evil, but many end up there. Evil or not, many orcs lean toward a chaotic alignment.
+
+***Size.*** Orcs are between 6 and 7 feet tall and muscularly built, averaging around 300 pounds. Your size is Medium. 
+
+***Speed.*** Your base walking speed is 30 feet. 
+
+***Hardiness.*** You have advantage on saves against being stunned or exhausted.
+
+***Relentless Endurance.*** When you are reduced to 0 hit points but not killed, you can drop to 1 hit point instead. You must then finish a long rest to use this feature again.
+
+***Savage Attacks.*** When you score a critical hit with a melee weapon attack, you can roll one of the weapon's damage dice one additional time and add it to the extra damage of the critical hit.
+
+***Languages.*** You can speak, read, and write Common and Orcish. Orcish is a harsh, grating language with hard consonants. It has no script of its own but is written in a mix of dwarven runes and common.
+
+***Clans.*** Orcs are taught different skills depending on their clan. Orcish clans are categorized into three: hunter clans, mystic clans, and warrior clans. Choose one of these clans and work with your DM to determine the significance of your chosen clan.
+
+\pagebreak
+
+# Nightborne
+### Nightborne Traits
+Your nightborne character has the following racial traits.
+
+***Creature Type.*** You are a Humanoid. You are also considered an elf for any prerequisite or effect that requires you to be an elf.
+
+***Ability Score Increase.*** Your Dexterity score increases by 1, and your Intelligence score increases by 2.
+
+***Age.*** Nightborne reach physical maturity at the pace of humans, but the nightborne understanding of adulthood goes beyond physical growth. Nightbornes typically claim adulthood and an adult name around the age of 100, and can live to become thousands of years old. 
+
+***Alignment.*** Order and structure are key to nightborne societies, they believe that reputation and status are of the utmost concern and that mortality and principles of right and wrong are viewed too often in that light. Most night&shy;borne are lawful.
+
+***Size.*** Nightborne are between 7 and 8 feet tall and weigh between 180 and 220 pounds. Your size is Medium.
+
+***Speed.*** Your base walking speed is 30 feet.
+
+***Superior Darkvision.*** Accustomed to twilit forests <br> and the night sky, you have superior vision in dark and dim conditions. You can see in dim light within 120 feet of you as if it were bright light, and in darkness as if it were dim light. Your nightborne heritage makes your darkvision un&shy;usual: everything you see in darkness is in a shade of violet.
+
+***Light Sensitivity.*** You have disadvantage on Wisdom (Perception) checks that rely on sight when trying to perceive something in an area of bright light.
+
+***Magic Resistance.*** You have advantage on saving throws against spells.
+
+***Mental Spellbook.*** You have proficiency in the Arcana skill. If you have levels in a class that uses a spellbook as part of its spellcasting, instead of inscribing your spells into the book, you can permanently memorize them, allowing you to prepare your spells from memory. Memorizing a spell, or inscribing your memorized spells into a physical spellbook, still takes the normal amount of time and material components.
+
+Additionally, whenever you finish a long rest, you can select one cantrip from the mage spell list. You know that spell until the end of your next long rest. Intelligence, Wisdom, or Charisma is your spellcasting ability for it (choose when you select this race).
+
+***Languages.*** You can speak, read, and write Common and Shalassian. Shalassian, like Thalassian, originates from the Darnassian language. Its dialect has been scrutinized through the ages, making it nearly impossible for members outside of the Nightborne to read or write.
+
+##### Potential Alternate Abilities
+Ideas pulled from [this homebrew](https://www.reddit.com/r/DnD/comments/7q2el3/warcraft_5e_races_looking_for_some_feedback/)
+- Instead of a spellbook, they can memorize their spells permanently and thus are always counted as having a spellbook. Could be combined with an equivalent of the wizard's Cantrips Formulas optional ability from TCE, allowing them to swap out the cantrip they know during a long rest.
+
+\columnbreak
+
+##### Temporary Changelog
+- Replaced Sunlight Sensitivity with Light Sensitivity, which is less debilitating.
+- Upgraded Mental Warding to apply to all spell saving throws, like a satyr.
+- Removed Keen Senses and Nightborne Magic, rolled Arcane Knowledge into Mental Spellbook.
+- Added Mental Spellbook feature.
+
+\pagebreakNum
+
+# Pandaren
+### Pandaren Traits
+Your pandaren character has the following racial traits.
+
+***Creature Type.*** You are a Humanoid. You are also considered a pandaren for any prerequisite or effect that requires you to be a pandaren.
+
+***Ability Score Increase.*** Your Constitution score increases by 1, and your Wisdom score increases by 2.
+
+***Age.*** Pandaren age at the same rate as humans, reaching adulthood in their late teens, and  generally die before they reach their first century.
+
+***Alignment.*** Pandaren are a peaceful and sociable race that for the most parts tend to their own, making most pandaren neutral or good aligned. Pandaren are rarely of an evil alignment and finding an evil pandaren is often the product of foul magic influencing its mind.
+
+***Size.*** Pandaren are between 5 and 7 feet tall and weigh between 250 and 400 pounds. Your size is Medium. 
+
+***Speed.*** Your base walking speed is 30 feet.
+
+***Bouncy.*** You can reduce any falling damage you take by an amount equal to twice your proficiency bonus.
+
+***Gourmand.*** Your culture values the simple pleasures of good food and know how a warm meal can bring comfort in the worst of times. You gain proficiency with cook's utensils and brewer's supplies. Using either of these tools, you can spend 10 minutes and 10 gp of materials to craft a satisfying meal for up to six creatures. 
+
+Each creature who partakes of this meal over a short rest gain a number of temporary hit points equal to twice your proficiency bonus + your Wisdom modifier. While they have these temporary hit points, they can add their proficiency bonus to saving throws against being frightened if they do not do so already.
+
+***Inner Peace.*** [Intro text.] You have advantage on saving throws against being charmed or frightened. When you roll a 1 or 2 on any Hit Die you spend at the end of a short rest, you can reroll the die and must use the new roll.
+
+***Keen Smell and Taste.*** You have advantage on Wisdom (Perception), Wisdom (Survival), and Intelligence (Investigation) checks that involve smell or taste.
+
+***Tavern Brawler.*** Pandaren love hard and play hard, with drunken roughhousing and a monastic tradition meaning they are used to fighting with whatever is on hand. You are proficient with improvised weapons, your unarmed attacks deal 1d4 + your Strength modifier bludgeoning damage on a hit, and when you hit a creature with an unarmed strike or an improvised weapon on your turn, you can use a bonus action to attempt to grapple the target.
+
+***Languages.*** You can speak, read, and write Common and Pandaren. Pandaren is the language of Pandaria, a descendant of the Mogu language forced upon the inhabitants of Pandaria by the mogu empire. It is a strange and unfamiliar language to the rest of Azeroth, with a multitude of words meaning one common thing.
+
+\columnbreak
+##### Potential abilities
+***Keen Smell and Taste.*** You have advantage on Wisdom (Perception), Wisdom (Survival), and Intelligence (Investigation) checks that involve smell or taste. [Inspired by Silverblade's version.]
+
+***Well Rested.*** [Related to rests. Options:]
+- When you finish a long rest, you regain all expended hit dice and remove an additional level of exhaustion.
+- Whenever you spend one or more hit dice during a short rest, you can regain an extra 1d6 hit points. [Source](https://www.dndbeyond.com/feats/131-well-rested)
+- You can add your Wisdom modifier to hit points regained during a short rest. [Source](https://www.reddit.com/r/UnearthedArcana/comments/sb6slp/im_creating_a_variation_of_the_warcraft_pandaren/)
+- When you roll a 1 or 2 on any Hit Die you spend at the end of a short rest, you can reroll the die and must use the new roll. (Source: the Verdan race from the Acquisitions Incorporated book)
+
+##### Temporary Changelog
+- Added Keen Smell and Taste.
+- Added Bouncy trait.
+- Added Well Rested trait.
+- Expanded Gourmand to become like a gnome's tinkering, taking in some features from the Inspiring Leader feat and heroism and hero's feast spells. [Credit for the idea.](https://homebrewery.naturalcrit.com/share/ryDhrVf2e)
+- Removed AC bonus from Martial Adept. Martial Adept renamed into Tavern Brawler and integrates the non-ASI portions of that feat.
+- Quaking Palm moved to a racial feat.
+
+\pagebreak
+
+# Void Elf
+### Void Elf Traits
+Your void elf character has the following racial traits.
+
+***Creature Type.*** You are a Humanoid. You are also considered an elf for any prerequisite or effect that requires you to be an elf.
+
+***Ability Score Increase.*** Your Dexterity score increases by 2, and your Intelligence or Charisma score (your choice) increases by 1.
+
+***Age.*** Void elves reach adulthood at the rate of humans, but aren't considered to have entered adulthood until they reach age 60, and can live to become many hundred years old with ease. That being said, many void elves have lived for thousands of years due to the power of the Sunwell extending their lifespan indefinitely.
+
+***Alignment.*** Although chaos and unpredictability is pro&shy;minent in many void elves, they have maintained a lawful alignment similar to blood elves. Those that succumb to the void often turn chaotic in their alignment.
+
+***Size.*** Void elves are between 5 and 6 feet tall and weigh between 125 and 175 pounds. Your size is Medium.
+
+***Speed.*** Your base walking speed is 30 feet.
+
+***Darkvision.*** Due to your elven heritage, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can’t discern color in darkness, only shades of gray. **[Should be upgraded? Superior range, and/or including magical darkness?]**
+
+***Chill of Night.*** You have resistance to cold and necrotic damage.
+
+***Preternatural Calm.*** You are immune to being frightened and have advantage on Constitution saving throws to maintain concentration on a spell.
+
+***Spatial Rift.*** As a bonus action, you can open a rift in space and time and magically teleport up to 30 feet to an unoccupied space you can see. You can use this trait a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest.
+
+Start at 3rd level, you also gain resistance to all damage when you teleport using this trait. The resistance lasts until the start of your next turn. During that time, you appear ghostly and translucent.
+
+***Spells of the Void.*** If you have the Spellcasting or the Pact Magic class feature, the spells on the Void Elf Spells table are added to the spell list of your spellcasting class.
+
+##### Void Spells 
+Spell<br/>Level|Spells 
+------|---------
+1st | *bane*, *inflict wounds*
+2nd | *darkness*, *ray of enfeeblement*
+3rd | *fear*, *hunger of hadar*
+4th | *phantasmal killer*, *shadow of moil*
+5th | *shadow crash*
+
+***Languages.*** You can speak, read, and write Common and Thalassian. Thalassian derives from the Darnassian tongue of night elves, and in many cases sound the same to an inexperienced ear.
+
+\columnbreak
+
+##### Other Ideas
+- Gain an Indefinite Madness as a flavor thing?
+- Entropic Embrace as a racial feat.
+- Darkvision getting an upgrade.
+
+##### Temporary Changelog
+- Removed Keen Senses.
+- Removed Thalassian Legacy.
+- Added cold resistance to Chill of Night.
+- Added Preternatural Calm.
+- Spacial Rift changed to match that of the Shadar-Kai from MotM.
+- Added Spells of the Void.
+
+\pagebreak
+
+# Vulpera
+### Vulpera Traits
+Your vulpera character has the following racial traits.
+
+***Creature Type.*** You are a Humanoid. You are also considered a vulpera for any prerequisite or effect that requires you to be a vulpera.
+
+***Ability Score Increase.*** Your Dexterity score increases by 2, and your Intelligence score increases by 1.
+
+***Age.*** Vulperas mature significantly faster than humans, reaching physical adulthood at the age of 5. However, a vul&shy;pera isn't considered an adult until they are ready to take on the responsibilities of their kin and caravan. They age noticeably faster and rarely live longer than 75 years.
+
+***Alignment.*** Most vulpera lean towards true neutral, they keep to themselves and care for the wellbeing of their own. However, their affection for other beings can often be inter&shy;preted as acts of kindness, even if it is not done out of the kindness of their hearts. 
+
+***Size.*** Vulpera are between 3 and 4 feet and average about 50 pounds. Your size is Small.
+
+***Speed.*** Your base walking speed is 25 feet.
+
+***Desert Born.*** You're naturally adapted to hot climates, as described in chapter 5 of the *Dungeon Master's Guide*.
+
+***Fury of the Small.*** When you damage a creature with an attack or a spell and the creature's size is larger than yours, you can cause the attack or spell to deal extra damage to the creature. The extra damage equals your proficiency bonus.
+
+You can use this trait a number of times equal to your proficiency bonus, regaining all expended uses when you finish a long rest, and you can use it no more than once per turn.
+
+***Keen Hearing.*** You have advantage on Wisdom (Perception), Wisdom (Survival), and Intelligence (Investigation) checks that involve hearing.
+
+***Nomad's Knowledge.*** You gain proficiency with one of the following skills of your choice: Animal Handling, Na&shy;ture, Stealth, or Survival.
+
+***Nose for Trouble.*** You can add your proficiency bonus to your initiative rolls and you can take the Disengage or Hide action as a bonus action on each of your turns.
+
+***Pathfinder.*** You always know which direction is north, and whenever you make a Wisdom (Survival) check related to tracking or navigating, you are considered proficient in the Survival skill and add double your proficiency bonus to the check, instead of your normal proficiency bonus.
+
+***Languages.*** You can speak, read, and write Common 
+<br> and two other languages of your choice. Vulpera are a nomadic race that picks up the languages of those
+<br> they travel among.
+
+\columnbreak
+
+##### Temporary Changelog
+- Reduced their speed to 25 feet, matching other Small races.
+- Changed Fury of the Small to match the MotM version. Less powerful, but also less bursty.
+- Expanded Keen Hearing to include other perception-based checks, like the worgen and pandaren.
+- Reworked Nose For Trouble to be a combination of the harengon's Hare-Trigger and the goblin's Nimble Escape.
+- Expanded Pathfinder based on the MotM Minotaur's Labyrinthine Recall, adding the expertise to tracking and knowing which way is north.
+
+\pagebreak
+
+# Racial Feats
+### Heroic Presence
+*Prerequisite: Draenei*
+
+You gain the following benefits:
+- Increase your Wisdom or Charisma by 1, to a maximum of 20.
+- When an allied creature within 10 feet of you makes a saving throw against the frightened condition, they can roll a d4 and add it to the total. If a creature is affected by multiple instances of this ability, they can only use the highest roll. You must be conscious and not frightened to use this ability.
+
+### Light's Reckoning
+*Prerequisite: Draenei (lightforged)*
+
+When you are reduced to 0 hit points, you can use your reaction to drop to 1 hit point instead, causing your body to erupt with holy light. Each other creature that is within 30 feet either regains hit points or takes radiant damage (your choice) equal to 2d10 + your level. You then gain 1 level of exhaustion. Once you use this reaction, you can’t do so again until you finish 1d4 long rests.
+
+### Light's Wrath
+*Prerequisite: Draenei (lightforged)*
+
+Choose one of the wrath options below. Thereafter, you can use a bonus action to unleash the celestial energy within yourself, gaining the benefits of that wrath. Your transformation lasts for 1 minute or until you end it as a bonus action. Once you transform using your wrath below, you can't use it again until you finish a long rest.
+<div style='margin-top:-5px;'></div>
+
+- **Forged in the Light.** Armor composed of pure light surrounds you. If your Armor Class is less than 20, it increases to 20 for the duration. Until the transformation ends, once on each of your turns, you can deal extra radiant damage to one target when you deal damage to it with an attack or a spell. The extra damage equals your proficiency bonus.
+- **Hope of the Light.** Glowing symbols surround you, shedding bright light in a 10-foot radius and dim light for an additional 10 feet for the duration. You, and each allied creature within 10 feet of you, are immune to the frightened condition and gain a number of temporary hit points equal to your proficiency bonus at the beginning of your turn. Until the transformation ends, once on each of your turns, you can deal extra radiant damage to one target when you deal damage to it with an attack or a spell. The extra damage equals your proficiency bonus.
+- **Wings of Light.** Two luminous, spectral wings sprout from your back temporarily. Until the transformation ends, you have a flying speed equal to your walking speed, and once on each of your turns, you can deal extra radiant damage to one target when you deal damage to it with an attack or a spell. The extra damage equals your proficiency bonus.
+
+### Quaking Palm
+*Prerequisite: Pandaren*
+
+You are able to target focal points on a target. As a bonus action, you can make a special unarmed attack. If the attack hits, it deals no damage and the target falls unconscious for 1 minute. The target wakes up early if they take damage or if someone uses an action to shake or slap the sleeper awake.
+
+### Shadowmeld
+*Prerequisite: Night elf*
+
+As a bonus action, you can magically turn invisible until the start of your next turn or until you attack, make a damage roll, or force someone to make a saving throw. You can use this trait a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest.
+
+\pagebreak
+
+## Changelog
+### General
+- Added the 'Creature Type' trait to all creatures.
+- Removed the random height/weight sections.
+- Removed all weapon proficiency traits (night elf, trolls, tauren, etc).
+
+### Human
+- Pruned the languages section of their last two sentences; too reliant on a specific character type.
+- Added Human Spirit trait.
+- Replaced Determination with Will to Survive (from DGB Rebalanced Races)
+
+### Dwarf
+- Added the Earthen Heritage trait. Changed Brave Beyond Reason, Fireblood, and Stoneform traits to be attached to it, thematically.
+- Added Tool Proficiency trait.
+- Rearranged the dwarf subraces to be alphabetical.
+- Changed 'subraces' to 'clans.'
+- **Dark Iron:** Added the Dungeon Delver and Secrets of Steel traits.
+- **Ironforge:** Added the Dwarven Combat Training and Frost Resistance traits.
+- **Ironforge:** Removed the Dwarven Toughness trait.
+- **Wildhammer:** Added the Inspirational Courage and Lightning Resistance traits.
+- **Wildhammer:** Added advantage on climb checks to Aerie Dwelling.
+
+### Night Elf
+- Removed Shadowmeld.
+- Removed weapon training.
+- Keen Senses rolled into Nature's Lore.
+- Added Nature Resistance.
+
+### Gnome
+- Renamed Mechagnomes to Mechagon Gnomes.
+- Added Tool Proficiency. Moved the Tinker and Intelligence-based Jack of All Trades to core.
+- **Gnomeregan:** Added old Gnome Cunning as Expanded Mind, as they were lagging behind in power.
+- **Gnomeregan:** Redesigned Escape Artist and moved to be Gnomeregan specific.
+- **Mechagon:** Added the ability to get additional improvements in exchange for ASIs.
+- **Mechagon:** Removed Emergency Countermeasures
+- **Mechagon:** Renamed Mechanical Improvements, Enhanced Vision, Mechanical Legs, and Metallurgic Resilience to be more fun.
+- **Mechagon:** Added advantage versus being blinded and telescope/magnifying glass functionality to Bionic Eyes.
+- **Mechagon:** Added the ability to ignore the heavy weapon property to Mecha-Arms, as well as changed generic artisan tools proficiency to thieves' tools.
+- **Mechagon:** Increase AC for Cybernetic Core to 14 + Dex.
+
+### Draenei
+- Replaced Shadow (necrotic) Resistance with Strength in Spirit.
+- **Exodar:** Updated Gift of the Naaru to match the MotM aasimar, changed name to Touch of the Naaru.
+- **Exodar:** Changed the Heroic Presence trait to be a quasi-aura.
+- **Exodar:** Added back in Shadow Resistance.
+- **Exodar:** Added in Gift of the Naaru.
+- **Lightforged:** Removed Forged of Light.
+- **Lightforged:** Added Light Form, rolled Holy Resistance in.
+- **Lightforged:** Added Light's Reckoning.
+- **Lightforged:** Replaced *branding smite* in Light's Judgment with ✦ *righteous smite*.
+- **Lightforged:** Added Light's Wrath, which is the MotM aasimar ability, minus the necrotic damage option and with a change to Radiant Consumption from the suggested changes in Detect Greater Balance.
+
+### Worgen
+- Rearranged the layout, tying the Climb, Darkvision, Keen Hearing and Smell, and Standing Leap traits to the Two Forms trait.
+- Replaced Bite with Claw.
+- Added the Aberration trait.
+- Removed Hunter's Lore.
+- Tied climb speed and Standing Jump to movement speed.
+- Added Darkflight (Feline Agility) and Running Wild.
+- Added secondary benefits to Keen Hearing and Smell, beyond just Perception. Based on the loxodon.
+- Added a 'subrace' option, where you pick what your uncursed form was (human or night elf).
+
+### Orc
+- Removed Menacing trait.
+- Added Hardiness trait.
+- Added Savage Attacks trait.
+- **Hunter:** Updated Surprise Attack with new language from the MotM bugbear.
+- **Hunter:** Added Perception proficiency.
+- **Mystic:** Changed Mystic Lore to provide two skills, Medicine and Nature, instead of a pick from a list.
+- **Mystic:** Changed Ancestral Recall to be a standard delayed magic.
+- **Warrior:** Replaced Aggressive with the Adrenaline Rush from the MotM orc.
+- **Warrior:** Added Intimidating Stature trait.
+- **Warrior:** Removed Savage Attacks.
+
+### Forsaken
+- **Forsaken Human** Replaced Determination with Human Spirit.
+
+### Tauren
+- Added the Goring Rush and Hammering Horns traits.
+- Added Athletics proficiency to core, mixed it in with Powerful Build to create Brawn.
+- **Mulgore:** Changed War Stomp to be based on the FTD version of dragon breath.
+- **Taunka:** Removed Athletics proficiency.
+
+\pagebreak
+
+### Troll
+- Removed weapon proficiency from all subraces.
+- Changed Regeneration, adding the ability to regrow/reattach limbs and changing the ability to function on a bonus action. Removed bonus healing when spending Hit Dice.
+- Moved Berserk to core race. Now has multiple options, and can be used PB/LR.
+- Removed Ice Trolls.
+- **Jungle:** Da Voodoo Shuffle now instead allows for limited ignoring of magical difficult terrain. The ability to ignore nonmagical difficult terrain moved to the Jungle Strider trait.
+- **Jungle:** Added Jungle Survivalist.
+- **Zandalari:** Expanded Ancient Lore to choose between multiple skills.
+- **Zandalari:** Removed the enhance ability spell from Embraced by the Loa, to be turned into a racial feat. Renamed into Consult the Loa, now guidance is self-only.
+- **Zandalari:** Added Favored by the Loa.
+- **Forest:** Removed Mask of the Wild due to similarity to night elves.
+- **Forest:** Added Acrobatics to choice of skills.
+- **Forest:** Added Forest Camouflage and Forest Traveller traits.
+
+### Blood Elf
+- The Perception proficiency from Keen Senses and the Arcana proficiency from Arcane Knowledge have been rolled in to a single feature, Thalassian Lore.
+- Arcane Knowledge's ability to cast *detect magic* on a short rest has been reworked into a larger trait, Arcane Affinity, that includes the ability to deal additional damage with cantrips or weapon attacks. Changed to be a PB/LR trait.
+- Spell Turning has been removed. Split into two features: Arcane Resistance and Mana Tap.
+- Removed weapon proficiency from Thalassian Legacy. The free cantrip has been replaced with a static *prestidigitation* cantrip and rolled into Arcane Affinity.
+
+### Goblin
+- DODGE renamed to Prepared for Failure. Uses the Harengon's Lucky Footwork trait instead.
+- Goblin Engineering and Mechanical Familiarity removed. 
+- Cartel Craftiness, Goblin Rocket Science , and Tool Proficiency added.
