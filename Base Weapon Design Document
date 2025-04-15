@@ -1,0 +1,1867 @@
+<style>
+/* Background */
+  .phb{ background-image: url('https://www.gmbinder.com/images/UCIUXyr.jpg') }
+  .phb{ background-size: cover }
+
+/* Notes */
+  .phb blockquote {background-color: #ebcec3; }
+  .phb hr + blockquote tr:nth-child(odd) td {background-color: #FDF1DC;}
+
+/* Tables */
+  .phb hr+section blockquote tr:nth-child(odd) td {background-color:transparent; }
+  table tr:nth-child(odd) td {background-color: #ebcec3}
+  
+/* Temporary Fix for heading issues */
+    .phb p{ line-height: 15px; } 
+    .phb blockquote p{ line-height: 14px; } 
+    .phb h2{ line-height: 26px; } 
+    .phb h3{ line-height: 19px; } 
+    .phb h4{ line-height: 15px; padding-bottom: 3px; } 
+    .phb h5{ line-height: 17px; } 
+    th, td { line-height: 14px; }
+
+/* Footer */
+  .phb#p3 {counter-reset: phb-page-numbers 1;}
+  .phb .pageNumber {color: rgba(0, 0, 0, 0.6)}
+  .phb .footnote {color: rgba(0, 0, 0, 0.6)}
+  .phb:after{ background-image: url('https://www.gmbinder.com/images/EsLXSby.png') }
+
+  .phb#p1{ text-align:center; }
+  .phb#p1:after{ display:none; }
+
+  .toc a {
+    color: inherit !important;	/*toc specifically wants black text. This resets the headers*/
+  }
+
+  .toc li span:nth-child(2){	/*Allow dot leaders to fill remaining space but not overlap*/
+    width: auto;
+    overflow: hidden;
+    white-space: nowrap; 
+    display: block;
+  }
+
+  .toc li span:nth-child(2):after{
+    font-family		: BookSanity;	/*Remove any header styles from dot leaders*/
+     font-size   	: 0.317cm;
+    font-weight		: normal;
+    color			: black;
+    conte
+nt:
+      " ........................................"
+      "........................................."
+      "........................................."; 
+  }
+  
+  .toc li span:first-child{
+    float: right;
+    font-family		: BookSanity;	/*Remove any header styles from page numbers*/
+    font-size   	: 0.317cm;
+    font-weight		: normal;
+    color			: black;
+    margin-left		: 1px;	/*Leaves a small space between page numbers and dot leaders*/
+  }
+  
+/*Special cases for headings*/    
+  .toc li h3 span:nth-child(2):after{
+  	content: " ";						/*Remove dot leaders on h3*/
+  }
+  
+  .toc li h3 {
+    margin-bottom: 4px !important;		/*Special spacing for h3*/
+    margin-top: 10px !important;
+    line-height: initial !important;	/*For some reason Multi-line h3 line spacing changed*/
+  }
+  
+  .toc li h3 span:first-child{
+  	line-height: 1.8em !important;  	/*Line page numbers up with Multi-line h3 better*/
+  }
+  
+  .toc ul ul {
+  	margin-left: 10px !important;		/*Original lists indented too much*/
+  }
+  
+  .toc>ul>li {
+    margin-bottom: initial !important;	/*Margin for list items needs to be removed or 0*/
+  }
+</style>
+
+<img src='https://orig00.deviantart.net/6fa6/f/2014/224/a/f/old_wizard_by_skiorh-d7utatm.png' class='cover-image' />
+
+<div class='cover-diamond'></div>
+
+<div class='cover-header'>Base Weapon Design (Version 2.2)</div>
+
+<div class='cover-splotch'></div>
+
+<div class='cover-footer'>A Step-by-Step Guide to the creation of base weapons and a compendium of weapons from global historical cultures. A tool to fill your worlds' armories.</div>
+
+\pagebreak
+
+##### Credits
+This guide is created by myself, /u/ilovegoodfood, for my own use and enjoyment.
+
+It is tailored to suit my own ideas and thematic choices, which may differ to yours.
+
+Please feel free to use this guide and/or compendium to create or import weapons for your campaigns and game worlds.
+
+<div style='margin-top:10px'></div>
+
+This guide is a compilation of two previous guides:  
+**[Weapon Logic](https://www.reddit.com/r/UnearthedArcana/comments/61nya1/weapon_logic/?ref=share&ref_source=link)** by /u/anomiex  
+**[The Simple Guide to Designing new Base Weapons](https://www.reddit.com/r/DnDHomebrew/comments/5qefcu/5e_the_simple_guide_to_designing_new_base_weapons/?ref=share&ref_source=link)** by /u/Hillsy7
+
+<div style='margin-top:10px'></div>
+
+All credit for the initial analysis of D&D 5E's base weapons goes to them.
+
+Re-assessing the guides, as well as several others that I did not use, and merging them to better fit the given stats and style of the D&D 5E base weapons was performed solely by myself, /u/ilovegoodfood/.
+
+<div style='margin-top:10px'></div>
+
+My primary source of knowledge of historical combat and weapons, while not strictly relevant to this guide, is from the **[Skalagrim YouTube channel](https://www.youtube.com/user/SkallagrimNilsson)**.
+
+<div style='margin-top:10px'></div>
+
+The information used to compile the weapons in the compendium is derived from general searches and will include mixed sources which I will not reference.
+
+As I am in no way an expert on any of these topics, I cannot guarantee that the information and translations are correct.
+
+<div style='margin-top:25px'></div>
+
+> ##### Image Liscences
+> Contrary to what many people in [/r/UnearthedArcana](www.reddit.com/r/unearthedarcana) believe, the use of image without the express consent of the author is piracy. Therefore, while this document is styled to match the Dungeon Master's Guide as closely as possible, it has no images.
+>
+> The current cover image is the default provided by GMBinder, for which I am assuming they have proper licensing.
+>
+> There are blank spaces for the images to go in, should I ever go out of my way to find such images, or should any artists using this guide be interested in offering up some of their own work. Should you do so, please be aware that I'm not in a position to pay for commissions.
+
+\columnbreak
+
+## Contents
+
+<div class='toc'>
+
+- ### [<span>2</span><span>Part 1 - Guide</span>](#p3)
+- #### [<span>3</span><span>Homebrew Weapons</span>](#p4)
+ - [<span>3</span><span>Step 1 - Choose a Weapon</span>](#p4)
+ - [<span>3</span><span>Step 2 - Choose a Damage Type</span>](#p4)
+ - [<span>3</span><span>Step 3 - Weight and Handedness</span>](#p4)
+ - [<span>4</span><span>Step 4 - Weapon Categories</span>](#p5)
+ - [<span>5</span><span>Step 5 - Additional Properties</span>](#p6)
+ - [<span>7</span><span>Representation of Firearms</span>](#p8)
+- #### [<span>10</span><span>Apendix 1 - Weapon Properties</span>](#p11)
+- ### [<span>11</span><span>Part 2 - Compendium</span>](#p12)
+- #### [<span>12</span><span>About this Compendium</span>](#p13)
+- #### [<span>12</span><span>Weapon Proficiency</span>](#p13)
+- #### [<span>12</span><span>Period</span>](#p13)
+- #### [<span>12</span><span>Custom Weapon Properties</span>](#p13)
+ - [<span>13</span><span>Africa</span>](#p14)
+ - [<span>14</span><span>Australia</span>](#p15)
+ - [<span>15</span><span>China</span>](#p16)
+ - [<span>17</span><span>Egypt</span>](#p18)
+ - [<span>18</span><span>Eurasian Steppe and the Middle East</span>](#p19)
+ - [<span>20</span><span>Europe</span>](#p21)
+ - [<span>22</span><span>Japan</span>](#p23)
+ - [<span>24</span><span>Mesoamerica</span>](#p25)
+ - [<span>26</span><span>North America</span>](#p27)
+ - [<span>27</span><span>South Asia</span>](#p28)
+ - [<span>29</span><span>Southeast Asia</span>](#p30)
+ - [<span>31</span><span>South America</span>](#p32)
+- ### [<span>33</span><span>Part 3 - Notes and Observations</span>](#p34)
+- #### [<span>34</span><span>Cause and Effect</span>](#p35)
+- #### [<span>34</span><span>International Trade</span>](#p35)
+- #### [<span>34</span><span>Change Log</span>](#p35)
+
+</div>
+
+<div class='footnote'>CONTENTS</div>
+
+<div class='pageNumber'>1</div>
+
+\pagebreak
+
+<div class='partpage-dmg'>
+
+# PART 1
+##### Guide
+
+</div>
+
+\pagebreakNum
+
+# Homebrew Weapons
+
+The real world contains a vast plethora of cultures, each with their own unique, fascinating and often bloodied histories. This has lead to an immense variety of weapons, armors, fighting styles and tactical methods, many of which are not found in the WoTC PHB.
+
+This guide and compendium aim to facilitate the diversification of weapons in your games, so that you will never encounter a situation where the weapons available to you do not match the culture, history or theme of the world or characters that you, the DM, have chosen to create and allow.
+
+It also aims, by borrowing from the credited analyses, to ensure that the weapons that you create match the existing power-levels and gameplay mechanics, ensuring that whatever absurd or fascinating weapons you choose to include, whether real or impossible, remain balanced at the expense of minimal effort.
+
+
+### Step 1 - Choose a Weapon
+
+Before you start playing with stats, features and special traits, the most important thing to have is an idea of the weapon.
+
+This can be an image or review of a real weapon, a mental picture of something that you always thought would be cool or an idea to fill a mechanical hole in the basic set.
+
+Since Dungeons and Dragons is a fiction, set in a huge variety of worlds times and levels of technology, you are not bound by what would be truly effective in reality. If something takes your fancy, and it fits with the themes you have chosen to play with, you can make that too.
+
+<div class='descriptive'>
+
+##### Estoc - Step 1
+For this example we are going to create a slim-line, lightweight longsword, designed to thrust between the joints of enemy armor.
+
+These weapons are often classed as Estoc and many instances of these weapons have been documented and discovered in historical Europe.
+</div>
+
+### Step 2 - Choose a Damage Type
+The three physical damage types in D&D 5E are bludgeoning, representing blunt impacts, piercing, representing deep, narrow wounds that are created by thrusting attacks, and slashing, representing a cutting action common to swords and axes.
+
+If you are unsure of what type of damage your weapon should deal, you can consult the PHB for similar weapons or look up how similar weapons were used in actual historical combat (it's very different from the movies).
+
+\columnbreak
+
+Most monsters that are resistant to one of the physical damage types are resistant to all three, so unless you choose to alter that yourself, this choice is predominantly important for accuracy, roleplay and creative reasons.
+
+<div class='descriptive'>
+
+##### Estoc - Step 2
+Since this weapon is designed for use with thrusting attacks it is likely to cause precise, deep, narrow wounds.
+
+This is piercing damage.
+</div>
+
+### Step 3 - Weight and Handedness
+
+There are two different ways to calculate Weight and Handedness included in this guide.
+
+The first of them is the official method used by Wizards of the Coast in the official Dungeons and Dragons 5E Books. It results in a very clean, easy to use weapons table that contains minimal overlap between simple and martial weapons (*[See Step 4 - Weapon Category](#p6)*). Unfortunately, it also prevents the existence of certain kinds of very real weapons in the DUngeons and Dragons multiverse.
+
+The second method is of my own creation. It has been carefully crafted to match the stats of the official weapons, but it does create significantly more overlap between simple and martial weapons and more opportunities for some weapons to simply be outright better than others. The attached compendium will be using this method.
+
+Review them, decide on how you want weapons in your world to work, and then continue on with your chosen method.
+
+<div style='margin-top:25px'></div>
+
+> ##### Weapon Dice
+>
+> **All weapons have an initial damage dice of 1d6.**
+>
+> While following this guide, it can be useful to understand the damage dice associated with the various weapons in the game. 
+> 
+> These values are: **1d4**, **1d6**, **1d8**, **1d10** and either **1d12 or 2d6**
+> 
+> **2d6** is used by some weapons as an equivalent value to **1d12**. Having multiple dice will result in fewer extreme rolls, either high or low.
+> 
+> The resulting damage, while only 0.5 higher on average, will be more consistently near average values than if rolling a single die.
+> 
+> When this guide provides damage modifiers, they are referring to dice size, not to total damage.
+> 
+> A +1 modifier to a **1d6** weapon increases the dice size to **1d8**. It does not increase the damage by 1.
+
+<div class='footnote'>PART 1 | GUIDE</div>
+
+\pagebreakNum
+
+#### Method A - The Right Way
+
+The official method is to combine weight of the weapon with how many hands it needs to be used into a single, extremely simple scale.
+
+A weapon can only be one of the following weight brackets, as it cannot be both light and heavy at the same time.
+
+##### Official Weight System
+| Weapon Size | Dice Size Modifier |
+|:--------|:---:|
+| Light  | -1 |
+| Balanced | 0 |
+| Versatile | 0 (+1) |
+| Two-handed | +1 |
+| Heavy, two-handed | +2 |
+
+The boundary between weight brackets are semi-arbitrary, that is to say that they are rough estimates, and dependent on the type of weapon. As such, you will sometimes find a light weapon of one type that is heavier than a heavy weapon of a different type, such as a light pole-hammer being heavier than a heavy sword.
+
+#### Method B - A More Versatile Way
+
+My alternative method is to separate the weight of the weapon and the number of hands needed to sue it into two complimentary scales.
+
+The damage is modified separately by both weight and handedness then modified depending on how many hands are needed to wield it. A weapon can only be one of the following Weight and Handedness brackets, as it cannot be both light and heavy at the same time.
+
+##### Dual Weight-Handedness System
+| Weight | Dice Size Modifier | Handedness | Dice Size Modifier |
+|:------|:----:|:--------|:----:|
+| Light | -1 | One-Handed | 0 |
+| Balanced | 0 | Versatile | 0 (+1) |
+| Heavy | +1 | Two-handed | +1 |
+
+This method allows for the creation of much more nuanced weapons. Using it I could, for instance, make a light, two-handed weapon with a total Dice Size Modifier of 0.
+
+<div class='descriptive'>
+
+##### Estoc - Step 3
+Since this weapon has a much thinner blade, it weighs significantly less than a standard Longsword.
+
+I am choosing to make this weapon Light (-1 Dice Size).
+</div>
+
+\columnbreak
+
+> ##### Heavy Weapons and Small Creatures
+> **Remember:** 
+> Small Creatures have disadvantage on attack rolls with Heavy Weapons.
+> 
+> If you are designing a weapon for a character who is small, you may want to consider making a lighter version of it.
+
+<div style='margin-top:25px'></div>
+
+### Step 4 - Weapon Categories
+
+#### Melee Vs Ranged
+A Melee weapon is any weapon that can effectively be used in Melee.
+
+This includes purely Melee Weapons, Melee Weapons that can be Thrown with the Thrown (Melee) property and weapons that are designed for throwing but are still usable in a melee with the Thrown (Ranged) property.
+
+<div style='margin-top:10px'></div>
+
+A Ranged Weapon is any weapon that cannot be used effectively in a melee, such as a blowpipe, bow or sling.
+
+<div style='margin-top:10px'></div>
+
+Firearms are weapons that use gunpowder or other propellants to direct a projectile at great velocity.
+
+While a few samples are included in the DMG, and they are included in this guide, the attached compendium will not contain any firearms due to the enormous variety of forms and functions. For further details, see the Firearms section of this guide.
+
+##### Base Weapon Category
+| Type | Dice Size Modifier |
+|:----:|:----|
+| Melee | 0 |
+| Ranged  | 0 |
+| Firearm | +1 |
+
+#### Simple Vs Martial
+
+A simple weapon is a commonly available, relatively easy to use weapon that any individual in the world might have some limited ability to use.
+
+A Martial Weapon is more complex, requiring specific training and familiarity to use effectively at all. They are less commonly found and are usually limited to martial classes, such as Fighter.
+
+A weapon can only be one of the following classifications, as it cannot be both simple and Martial.
+
+##### Base Weapon Skill Level
+| Type | Dice Size Modifier |
+|:----:|:-------------|
+| Simple  | 0 |
+| Martial  | +1 |
+
+<div class='descriptive'>
+
+##### Estoc - Step 4
+This weapon is a Melee Weapon (no modifier) that requires proficiency in Martial Weapons (+1 Dice Size).
+</div>
+
+<div class='footnote'>PART 1 | GUIDE</div>
+
+\pagebreakNum
+
+### Step 5 - Additional Properties
+
+#### Universal Properties
+There are a number of additional properties and features that can be assigned to a weapon to further define what it does and how.
+
+Any weapon can have a combination of the Universal Weapon Properties. Additionally, a Ranged Weapon will have some properties from the Ranged Weapon Properties and a Firearm will have some properties from the Firearm Properties. These sections can be found on the following two pages.
+
+The Thrown (Melee) and Thrown (Ranged) properties are described in further detail in the Ranged Properties section.
+
+<div style='margin-top:75px'></div>
+
+<div class='descriptive'>
+
+##### Estoc - Step 5
+I am giving the slender longsword both the Finesse and Versatile Property.
+
+To determine the final damage dice, total the modifier and apply the resulting Dice Size Modifier to the base **1d6**.
+
+Finesse (0), Light (-1), Martial (+1), Versatile (0 (+1)) = 0 (+1)
+**1d6** + 0 (1) = **1d6 (1d8)**
+<div style='margin-top:10px'></div>
+
+
+##### Weapons
+| Name | Cost | Damage | Weight | Properties |
+|:----:|:----:|:----:|:----:|:--------|
+| Slender Longsword | 15gp | 1d6 piercing | 2lb | Finesse, light, versatile (1d8) |
+</div>
+
+<div class='wide'>
+
+##### Official Weapon Properties (Universal)
+| Property | Damage Dice Modifier | Function | Description and Typical Use |
+|:----:|:-------:|:-------|:-------|
+| Finesse | 0 | This weapon uses either Strength or Dexterity, player's choice. | For weapons where precise aim and timing is more important than strength. Typically only used for none two-Handed, Light Weapons. |
+| Reach | -2 | Increases attack range by 5ft. | Weapons that are exceptionally long, such as spears and other polearms, are granted the Reach property. |
+| Two-Handed | +1 | Occupies both hands. | This weapon is sufficiently large, or requires so much leverage that two hands are required to wield it effectively. It can only be used with two hands. Typically only used for Heavy Weapons. |
+| Versatile  | (+1) | Can be weilded as a One-Handed Weapon or as a Two-Handed Weapon for additional damage. | Typically used as a intermediary step between Balanced and Heavy Weapons. |
+</div>
+
+#### Ranged Weapon Properties
+In addition to the Universal Features, ranged weapons have a number of specific features that further define their use.
+
+For gameplay reasons, the effective range of weapons in Dungeons and Dragons appears to be, in feet, roughly half of the effective range of the real weapon in yards. For instance, an English Longbow could be used up to 300 yards, but has a range of 150 feet in-game.
+
+##### Thrown Weapons
+Thrown Weapons come in two distinct categories, each with its own version of the Thrown(x/y) property.
+
+<div style='margin-top:10px'></div>
+
+Thrown (Melee) is used for melee weapons that are sufficiently aerodynamic for throwing.
+
+These weapons are only found in the Melee category, use strength as their ability score modifier and have a lower effective range.
+
+After being thrown, a throwable weapon is no longer in the possession of the character who threw it.
+
+Their standard and disadvantage ranges are represented by a 1:3 ratio, meaning that you can throw it three times as far at disadvantage than without disadvantage.
+
+All of the Thrown (Melee) weapons in the PHB have ranges of 20/60.
+
+<div style='margin-top:10px'></div>
+
+Thrown (Ranged) weapons is used for weapons that are specifically designed to be thrown.
+
+Some of these can also be used effectively in melee, and are found in the Melee category, while others cannot be effectively used in melee, and are found in the Ranged category.
+
+After being thrown, a throwable weapon is no longer in the possession of the character who threw it.
+
+Their standard and disadvantage ranges are represented by a 1:4 ratio, meaning that you can throw it four times as far at disadvantage than without disadvantage.
+
+The typical range of Thrown (Ranged) weapons in the PHB is 30/120.
+
+##### Ammunition
+Weapons with the Ammunition property are designed to accelerate a projectile to greater speeds than is possible by throwing.
+
+In the PHB they are found exclusively in the Ranged category and have the highest effective ranges of all weapons, excluding firearms (example firearms are found in the DMG, not the PHB).
+
+Firing these weapons consumes a stock of ammunition, allowing the player to reload and reuse the weapon multiple times.
+
+<div class='footnote'>PART 1 | GUIDE</div>
+
+\pagebreakNum
+
+Their standard and disadvantage ranges are represented by a 1:4 ratio, meaning that you can throw it four times further at disadvantage than without disadvantage.
+
+Their typical ranges vary enormously, but still adhere to the 1:4 ratio.
+
+> ##### Dice Size Modifier - Ranged Weapons
+> Weapons in the Ranged Category do not change dice sizes as quickly as other weapons.
+>
+> After choosing all of the various properties of the weapon, total the dice size modifier and divide it by 2, rounding down where you have a half modifier.
+>
+> Only after the devision do you apply the modifier to the weapon.
+
+<div style='margin-top:25px'></div>
+
+<div class='descriptive'>
+
+##### Example Dice Size Operation - Crossbow, heavy
+**Modifiers -** Heavy, Two Handed (+2), Loading (+1), Martial (+1).  
+**Modifier Total -** +4 dice sizes (**1d14** which is not a valid dice size)  
+**Final Modifier -** +4/2 = +2 (**1d10** which is correct)
+</div>
+
+<div style='margin-top:100px'></div>
+
+<div class='wide'>
+
+##### Official Weapon Properties (Ranged)
+| Property | Damage Dice Modifier | Function | Description and Typical Use |
+|:----:|:-------:|:-------|:-------|
+| Ammunition (x/y) | 0 | 1:4 range ratio. | For mechanical ranged weapons such as Bows, Crossbows, Arbalests, Slings and other devices. Highly variable ranges. |
+| Finesse | 0 | This weapon uses either Strength or Dexterity, player's choice. | Most weapons in the Ranged category use Dexterity as the ability score modifier instead of strength. You can use Finesse to mark weapons that can be used with either. |
+| Loading | +1 | Maximum of 1 attack per attack action. | For complex weapon systems with prolonged loading procedures, such as heavy crossbows and early firearms. |
+| Melee (Thrown (x/y)) | 0 | 1:3 range ratio. | For melee weapons that are aerodynamic enough to throw effectively. Typically 20/60 Range.|
+| Ranged (Thrown (x/y)) | 0 | 1:4 range ratio. | For ranged weapons that do not consume or propel separate ammunition. Typically 30/120 Range. Such weapons may be usable in melee combat, in which case they are found in the Melee category. |
+</div>
+
+#### Firearm Properties
+In addition to the Universal and Ranged Weapon Properties, there are some example properties listed in the DMG that apply to firearms.
+
+Firearms also change damage dice at half the normal rate (see Dice Size Modifiers under Ranged Weapon Properties).
+
+##### Common Properties
+Unlike Melee (Thrown) and Ranged (Thrown) weapons, firearms almost always require and consume Ammunition.
+
+Depending on weather the Ammunition is loaded individually or in magazines, Ammunition Firearms are generally either Loading or Reloading.
+
+##### Range
+The example firearms found on Page 268 of the DMG all follow the 1:3 ratio found in Melee (Thrown) weapons.
+
+This means that if they can be fired 30ft without disadvantage, they can be fired 90ft with disadvantage.
+
+\columnbreak
+
+> ##### Loading and Reloading
+>The loading property requires the user to reload between each shot, thus limiting the weapon to a single attack per round.
+>
+>The reload property limits the weapon to a fixed number of shots before requiring a reload. This is typically associated with more modern firearms, as early firearms were loaded with individual shots instead of magazines.
+
+<div class='footnote'>PART 1 | GUIDE</div>
+
+\pagebreakNum
+
+<div class='wide'>
+
+##### Official Weapon Properties (Firearms)
+| Property | Damage Dice Modifier | Function | Description and Typical Use |
+|:----:|:-------:|:-------|:-------|
+| Ammunition (x/y) | 0 | 1:3 range ratio. | Ammunition for firearms. It is typically destroyed on use (may vary in science fiction settings - See Appendix 1). Highly variable ranges. |
+| Burst Fire | 0 | Enables an AoE attack | Enables a multi-ammunition burst fire that effects all targets within a 10ft. cube. |
+| Reload (x) | 0 | Batch-loads ammunition | Multiple attacks can be performed prior to needing to reload. |
+</div>
+
+### Representation of Firearms
+The introduction of firearms to the human arsenal lead to many changes in the art of warfare.
+
+While the vast majority of these changes didn't occur until more recently, early firearms and associated explosive weaponry introduced many new ways to kill, maim and demoralize the enemy.
+
+Due to this diversity of form, effect and use, it is extremely difficult to reduce firearms to fit within the D&D 5E system.
+
+This section is dedicated to explaining some of the issues associated with such an endeavor and to suggest a few possible ways to do so successfully.
+
+The potential solutions offered are only very simple and limited suggestions. There are many other ways to tackle these issues.
+
+#### Rate of Fire
+Extremely early firearms, such as the original ancient Chinese Fire-Lance, were made of materials that couldn't withstand repeated exposure to explosive forces, such as bamboo (a type of wood).
+
+These weapons were often mass produced, non-reloadable devices that were shipped onto the battlefield or stored near to the fortifications from which they were to be used and then discarded after use.
+
+This disposable nature would require a character in D&D 5E to constantly draw a new weapon, which, depending on your DM, may cost you an action each and every time, reducing your fire rate to one shot every two rounds of combat.
+
+Even more modern muskets, such as those used in the English Civil War (1642-1651), were limited to one or two shots per minute.
+
+In in-game terms, that is one shot, followed by a five combat rounds long reload.
+
+##### Potential Solutions
+Assuming that you favor usability over historical accuracy, you could use the loading property as the minimum rate of fire of any firearm.
+
+This would ensure that your minimum rate of fire is one shot per round.
+
+#### Effectiveness
+Not only did many early firearms suffer from poor fire rates, but they also suffered from poor accuracy and damage.
+
+The effectiveness of early firearms in harming the enemy is unknown, however, their overall effectiveness on a battlefield is not necessarily limited to these values, as they are in D&D 5E.
+
+The loud noise, bright flashes and flames brought forth by the ancient chinese fire-lance would have been an excellent distraction, possibly capable of disrupting entire formations when used on mass, and the barrage of light, sound and heat would be devastating to the moral and discipline of enemy soldiers.
+
+All in all, this may have been far more important than their direct damage value.
+
+##### Potential Solutions
+Again, if you strictly care about usefulness to the character, then you could easily ignore these factors and create guns that are mathematically in-line, using the properties listed in this guide or others.
+
+If you would like greater historical accuracy, but still want to keep the weapon's accuracy high enough to be effective then you may consider making the target a 10 ft sphere.
+
+The bullet is guaranteed to hit a random creature within that sphere, so your accuracy is 100%, better than other ranged weapons in the D&D 5E system, but you cannot choose which creature the projectile hits.
+
+<div style='margin-top:10px'></div>
+
+In regards to the low damage and demoralizing effect, you could substitute the demoralizing effect with psychic damage.
+
+This would increase the effectiveness of the weapon within the D&D 5E system, while maintaining a historical stylization.
+
+You could also introduce an element of moral to your game, giving all PCs, NPCs and monsters a willingness to fight, and forcing them to surrender or flee when they become too demoralized.
+
+<div style='margin-top:25px'></div>
+
+> ##### Dice Size Modifier - Firearms
+> Firearms are a sub-type of Ranged Weapons. Just like other weapons in the Ranged Category, they do not change dice sizes as quickly as melee weapons.
+>
+> After choosing all of the various properties of the weapon, total the dice size modifier and divide it by 2, rounding down where you have a half modifier.
+>
+> Only after the devision do you apply the modifier to the weapon.
+
+<div class='footnote'>PART 1 | GUIDE</div>
+
+\pagebreakNum
+
+#### Formatting
+Because of the wide variety of effects that firearms and associated explosive weaponry can have, many of these weapons would require either a detailed description of what they are and how they work, or a Special property.
+
+This could lead to issues with the standard weapons table, as it offers limited space to describe the item.
+
+##### Potential Solutions
+My recommended solution to this is to create a new formatting that closely mimics the formatting used for spells or potions. This formatting would be used for firearms or explosives that have additional effects. Point-and-shoot firearms, such as most modern handguns and rifles, can still be created using a standard weapons table.
+
+This allows for a description of the item, what it is, how it is triggered, what sort of range it has, what sort of triggers it has and exactly what it does.
+
+My suggesting formatting template is as follows:
+
+<div style='margin-top:10px'></div>
+
+**Name**  
+**Trigger:**   
+**Range:**  
+**Ammunition:**  
+**Reload:**  
+A description of what it does.
+
+<div class='wide' style='margin-top:25px'>
+
+#### Example Firearms
+##### Spell-like Formatting
+
+</div>
+
+<div class='descriptive'>
+
+##### Example - Dragon Pistol
+**Dragon**  
+**Trigger:** Attack Action - Instant  
+**Range:** Self (15ft Cone)  
+**Ammunition:** Lead Drop Bullets  
+**Reload:** Loading  
+When fired, the Dragon Pistol sprays a 15ft cone of lead pellets. All creatures within the area must make a DC 13 Constitution Saving Throw. On a failed saving throw they receive 1d8 piercing damage, or, on a successful saving throw, they suffer half damage.
+</div>
+
+<div style='margin-top:25px'></div>
+
+<div class='descriptive'>
+
+##### Example - Gatling Gun
+**Gatling Gun**  
+**Trigger:** Attack Action - Instant  
+**Range:** Self (60ft Cone)  
+**Ammunition:** Broadwell Drum Feed (400)  
+**Reload:** Reloading (400)  
+The gatling gun is a wheel-mounted six-barrel crank-action firearm that can sustain extremely high rates of fire. Weighing in at 170lb, the weapon was often transported behind horses or dragged by human operators like a hand cart. The weapon requires a party of four to set up and position, but can be operated by one or two soldiers. It is classed as a medium machine.
+
+Each attack made with the Gatling Gun consumes 20 rounds of ammunition.  All creatures within the area of effect must make a DC 15 Dexterity saving throw. On a failed save, they take 4d6 piercing damage, or, on a successful save, they suffer half damage.
+</div>
+
+\columnbreak
+
+<div class='descriptive'>
+
+##### Example - Fire-Lance
+**Fire-Lance**  
+**Trigger:** Attack Action - Instant  
+**Range:** Self (10ft. line)  
+**Ammunition:** Gunpowder  
+**Reload:** Disposable  
+When ignited, a jet of flames and grit launch from the barrel of the weapon. The closest creature along the line takes 1d4 bludgeoning damage. All creatures in the area must then make a DC 13 Dexterity saving throw. On a failed saving throw they take 1d4 fire damage and 1d4 psychic damage, or, on a successful saving throw, they suffer half damage.
+</div>
+
+<div style='margin-top:25px'></div>
+
+<div class='descriptive'>
+
+##### Example - Fragmentation Grenade
+**Fragmentation Grenade**  
+**Trigger:** Thrown - 1 round delay  
+**Range:** 30ft. (30ft. Sphere)  
+**Ammunition:** Self  
+**Reload:** Disposable  
+All creatures in the target area must make a DC 13 Dexterity Saving Throw. On a failed saving throw, they take 1d6 force damage and 1d6 slashing damage, or, on a successful saving throw, they take no slashing damage.
+</div>
+
+<div class='footnote'>PART 1 | GUIDE</div>
+
+\pagebreakNum
+
+<div class='wide'>
+
+##### Firearms (Weapon Table)
+| Name | Description | Cost | Damage | Weight | Properties |
+|:----|:----:|:----:|:------:|:----:|:------|
+| **Simple Firearms** |  |  |  |  |  |
+| Beaumont-Adam's Revolver | A double-action-only revolver and predecessor to the Beaumont–Adams. | 50gp | 1d6 piercing | 2.4lb | Ammunition(20/60), reloading(5) |
+| **Martial Firearms** |  |  |  |  |  |
+| Colt Model 1855 Revolving Carbine | The Colt New Model Revolving rifles were early repeating rifles produced by the Colt's Manufacturing Company 1856 until 1864 | 125gp | 1d10 piercing | 10lb | Ammunition (60/180), heavy, reloading (6), special, two-handed |
+| Pattern 1853 Enfield | The Enfield Pattern 1853 rifle-musket was a .577 calibre Minié-type muzzle-loading rifled musket. | 50gp | 1d10 piercing | 9.5 lb | Ammunition (200/600), loading, two-handed |
+| Springfield Model 1863 | A .58 caliber rifled musket manufactured by the Springfield Armory between 1863 and 1865. | 100gp | 1d10 piercing | 9lb | Ammunition(150/450), loading, two-handed |
+| **Ammo** |  |  |  |  |  |
+| .444" rounds (10) | Used by the Colt Model 1855 Revolving Carbine | 5gp |  |  |  |
+| .479" rounds (10) | Used by the Beaumont-Adam's Revolvers | 5gp |  |  |  |
+| .58" rounds (10) | Used by the Springfield Model 1863 and the Pattern 1853 Enfield | 5gp |  |  |  |
+</div>
+
+<div class='footnote'>PART 1 | GUIDE</div>
+
+#### Special
+Weapons with special rules are described here.
+
+##### Colt Model 1855 Revolving Carbine
+After having taken the attack action with this weapon, you may, as a bonus action, make one additional attack.
+
+On a natural 1 to hit, the wielder suffers 1d10 piercing damage and the remaining loaded ammunition is destroyed.
+
+\pagebreakNum
+
+## Apendix 1 - Weapon Properties
+
+#### Ammunition
+You can use a weapon that has the ammunition property to make a ranged attack only if you have ammunition to fire from the weapon. Each time you attack with the weapon, you expend one piece of ammunition. Drawing the ammunition from a quiver, case, or other container is part of the attack. At the end of the battle, you can recover half your expended ammunition by taking a minute to search the battlefield.
+
+If you use a weapon that has the ammunition property to make a melee attack, you treat the weapon as an improvised weapon (see "Improvised Weapons" later in the section). A sling must be loaded to deal any damage when used in this way.
+
+#### Ammunition (Firearms)
+The Ammunition of a firearm is destroyed upon use. Renaissance and modern firearms use bullets. Futuristic firearms are powered by a special type of ammunition called energy cells. An energy cell contains enough power for all the shots its firearm can make.
+
+#### Burst Fire
+A weapon that has the burst fire property can make a single normal attack, or it can spray a 10-foot-cube area within normal range with shots. Each creature in the area must succeed a DC 15 Dexterity saving throw or take the weapon's normal damage. This action uses 10 pieces of ammunition.
+
+#### Finesse
+When making an attack with a finesse weapon, you use your choice of your Strength or Dexterity modifier for the attack and damage rolls. You must use the same modifier for both rolls.
+
+#### Heavy
+Due to the weight of the weapon, you cannot wield this weapon if you are small size or lower. Also, when it is wielded in one hand you cannot do the following things:
+
+* You cannot make Opportunity Attacks.  
+* You cannot gain benefits from the Dueling Fighting Style.  
+* You cannot wield an off-hand weapon.  
+
+If the weapon has the Ranged Property, it cannot be fired without using two hands.
+
+#### Light
+A light weapon is small and easy to handle, making it ideal for use when fighting with two weapons. See the rules for two-weapon fighting in chapter 9.
+
+#### Loading
+Because of the time required to load this weapon, you can fire only one piece of ammunition from it when you use an action, bonus action, or reaction, regardless of the number of attacks you can normally make. Can only be applied to a Thrown or Ranged Weapon.
+
+\columnbreak
+
+#### Ranged
+A Ranged Weapon has a much longer range than a thrown weapon. There is a general range table at the end of the guide, but work with your DM to make adjustments where appropriate. Automatically gains the Ammunition Property.
+
+#### Reach
+This weapon adds 5 feet to your reach when you attack with it.
+
+#### Reload
+A limited number of shots can be made with a weapon that has the reload property. A character must then reload it using an action or bonus action (the character's choice).
+
+#### Thrown
+If a weapon has the thrown property, you can throw the weapon to make a ranged attack. If the weapon is a melee weapon, you use the same ability modifier for that attack roll and damage roll that you would use for a melee attack with the weapon. If the weapon has the Ranged Property, you use your choice of your Strength or Dexterity modifier for the attack and damage rolls. You must use the same modifier for both rolls. Automatically gains the Ammunition Property
+
+#### Martial
+This weapon is uniquely designed and balanced in such a way that attempting to use it without the correct proficiency means you suffer disadvantage on the attack.
+
+<div style='margin-top:25px'></div>
+
+> ##### Dual Wielder Feat
+> If you are using Method B for the wight and Handedness of weapons, there are two different ways to manage the Dual Wielder feat when interacting with heavy weapons.
+>
+> 1. Yes, you can in fact wield two heavy weapons.
+> 2. Reword the feat so that instead of saying: "You can use two-weapon fighting even when the one-handed melee weapons you are wielding aren't light.", it reads "You can use two-weapon fighting even when the one-handed melee weapons you are wielding are of a balanced weight or lighter".
+>
+> The first option allows the character to deal more damage with the use of heavy weapons. The second option prevents them from using heavy weapons while dual-wielding and thus the feat remains as intended.
+
+<div class='footnote'>PART 1 | GUIDE</div>
+
+\pagebreakNum
+
+<div class='partpage-dmg'>
+
+# PART 2
+##### Compendium
+
+</div>
+
+\pagebreakNum
+
+## About this Compendium
+This compendium of Base Weapons is designed for my, /u/ilovegoodfood, personal use, judging weapons by my own limited knowledge.
+
+My primary source of knowledge of historical weapons and weapons use is the **[Skallagrim Youtube channel](https://www.youtube.com/user/SkallagrimNilsson)**.
+
+The decisions that I make in this compendium may not be the same as the ones you would have, and you may have very different knowledge on the topic.
+
+#### Duplicate Stats
+The weapons in this compendium are primarily designed to provide varied forms of weaponry, not new ways to play.
+
+Many of them will have similar or even identical stats to existing items in the PHB, DMG and each other.
+
+## Weapon Proficiency
+If you wish to prevent a European Themed Fighter from just randomly picking up and immediately being proficient with weapons from other cultures, such as the Chinese Lian Nu, more commonly known by the Romanization "Chu Ko Nu", you can optionally insert the region name into the proficiency.
+
+Martial Weapon proficiency will instead read as Martial [Regional] Weapon proficiency, and only apply to weapons from that region.
+
+All of the weapons provided in the PHB are considered European.
+
+## Period
+Most of the weapons included in this list were developed and used by civilizations and peoples spread across their respective regions during the classical and medieval periods.
+
+## Custom Weapon Properties
+There are a number of functional real-world weapons that have functions and uses not covered by the base weapon properties provided in the PHB or DMG.
+
+In order to facilitate their existence and accurate use, I will be designating a small list of additional weapon properties.
+
+Some of the weapons in this compendium will use these new weapon properties.
+
+### Universal Properties
+
+#### Bound
+These weapons are attached or held in such a way that it is very difficult to remove them from the wielder.
+
+The wielder has advantage on any saving throw required to avoid being disarmed.
+
+Switching weapons from a Bound weapon requires at least 1 action to unbind and store the weapon.
+
+#### Bulky
+These weapons are so large and heavy that they are difficult to handle in normal combat.
+
+While wielding any item that has the bulky property, your base movement speed is reduced by 5ft.
+
+Dice Size Modifier: +1
+
+\columnbreak
+
+#### Concealed
+These weapons can be built into or concealed within other objects and garments.
+
+When someone checks you for weapons, they must succeed a contested Wisdom (Perception) skill check against your Intelligence (Deception) for each weapon with the concealed property.
+
+If they fail the skill check, they fail to detect the weapon.
+
+#### Interchangeable
+These weapons are comprised of multiple interchangeable parts, allowing the user to alter the physical damage type that it causes.
+
+If the weapon also has the Multiattack (X) property, it can be configured to deal up to as many damage types as it has multiattacks.
+
+#### Multiattack (X)
+These weapons are comprised of multiple separate components, have multiple ends or fire multiple projectiles.
+
+The weapon performs a number of separate attacks, equal to X. These attacks can be made against any combination of enemies, including all to the same target and all to different targets.
+
+Ranged weapons with the Multiattack (X) property fire all projectiles in one volley, at the same target, unless specified by a Special property.
+
+Most Multiattack Weapons have attack dice half the expected size (1d8 would become 1d4).
+
+#### Poisonous
+These weapons have been specifically designed for the application and delivery of poisons.
+
+The target has disadvantage on any saving throws against poisons applied from weapons with the poisonous property.
+
+Dice Size Modifier: -1
+
+### Melee Only Properties
+#### Defensive
+If both hands are occupied with weapons that have the defensive modifier, you gain 1 bonus AC.
+
+#### Disarming
+These weapons can be used to quickly entangle or disarm an opponent, allowing for direct and unchallenged assault.
+
+Once per short or long rest, you may spend an action to attempt to disarm an opponent (having multiple weapons with the Disarming property does not provide additional uses or benefits).
+
+Make an attack roll with the weapon that has the disarming property. If you hit the creature with the weapon attack, the target must pass a Strength Saving Throw with a DC equal to the damage they received. On a failed save, it drops one of the objects, of the attacker's choice, that it is holding. The objects lands at its feet.
+
+Dice Size Modifier: -1
+
+#### Parrying
+When attacked, after the attack has been rolled but before it is resolved, you may take the block reaction to raise your AC by 2 for that attack only.
+
+<div class='footnote'>PART 2 | COMPENDIUM</div>
+
+\pagebreakNum
+
+### Thrown (Melee and Ranged) Weapons
+
+#### Returning
+These throwable weapons can be thrown in precise arcs, returning to the user even after striking a target.
+
+The user must spend their bonus action to catch the weapon, or it falls to the ground at their feet.
+
+Only one attack can be made per attack action.
+
+\columnbreak
+
+## Africa
+
+The vast majority of African Empires date back to classical antiquity and older.
+
+Their territories, ways of life, politics and warfare are mostly unknown to our historians, as far as I am aware.
+
+Even for those that we do have significant historical and archaeological records of, the exact names, nature and methods of specific weapons is mostly unknown.
+
+Furthermore, much of African socio-political history is defined by tribal or blood related groups, social ethnicities that remain distinct, in some cases, to this day.
+
+Each of these myriad cultures have their own histories, weapons, martial arts and long forgotten conflicts.
+
+With my level of expertise in this area, practically none, and the amount of time I can devote to this project, it would be a great disservice to these peoples to try and include them in this compendium.
+
+If you wish to set your campaign or character in one of these many cultures, be sure to negotiate with your DM and/or players, research the martial arts and history of that specific culture and use the guide above to define the weapons in the D&D 5E system.
+
+<div class='footnote'>PART 2 | COMPENDIUM</div>
+
+\pagebreakNum
+
+## Australia
+
+<div style='margin-top:15px'></div>
+<div class='wide'>
+
+##### Weapons
+| Name | Description | Cost | Damage | Weight | Properties |
+|:----|:----:|:----:|:------:|:----:|:------|
+| **Simple Melee Weapons** |  |  |  |  |  |
+| Galarra | Long Fishing Spear | 2gp | 1d8 piercing | 6lb | Heavy, reach, two-handed |
+| Gamai | Spear | 2gp | 1d6 piercing | 4lb | Finesse, thrown (20/60), versatile (1d8) |
+| Mugu | Stone Hatchet | 5gp | 1d6 slashing | 4lb | Thrown (20/60) |
+| Wuda | Wooden Club | 2gp | 1d10 bludgeoning | 8lb | Heavy, two-handed |
+| **Simple Ranged Weapons** |  |  |  |  |  |
+| Wumara | Spear Thrower | 1gp | +1d4 | 2lb | Ammunition (30/120), finesse, light, special |
+| **Martial Melee Weapons** |  |  |  |  |  |
+| Gunang | Combat Spear | 5gp | 1d8 piercing | 4lb | Finesse, thrown (20/60), versatile (1d10) |
+| Ngalangala | Club | 5gp | 2d6 bludgeoning | 8lb | Heavy, two-handed |
+| **Martial Ranged Weapons** |  |  |  |  |  |
+| Bumarang | Boomerang | 10gp | 1d8 bludgeoning | 1lb | thrown (30/120) |
+| Karli | Large Hunting Boomerang | 25gp | 1d12 bludgeoning | 2lb | Heavy, thrown (80/320), two-handed |
+</div>
+
+#### Special
+Weapons with special rules are described here.
+
+##### Wumara
+The Wumara is an Aboriginal analogue to the Atlatl, a simple spear throwing mechanism that allows for extremely precise, hard throws.
+
+This weapon uses Gamai or other spears as ammunition and deals the damage of the launched spear plus an additional 1d4 damage.
+
+\columnbreak
+
+#### Notes
+Additional information, justifications and notes are described here.
+
+<div class='descriptive'>
+
+##### Weapon Names
+Between the various Aboriginal Tribes, there are a recorded 660-ish languages, most of which are very poorly understood and many of which are lost or are at risk of loss.
+
+As far as I am aware, the names used here will be predominantly from one region, the Sydney Aboriginal Groups, but that may not be the case.
+</div>
+
+<div class='footnote'>PART 2 | COMPENDIUM</div>
+
+\pagebreakNum
+
+## China
+
+<div class='wide'>
+
+##### Weapons
+| Name | Description | Cost | Damage | Weight | Properties |
+|:----|:----:|:----:|:------:|:----:|:------|
+| **Simple Melee Weapons** |  |  |  |  |  |
+| Feishi | Slungshot | 2gp | 1d8 bludgeoning | 6lb | Bound, heavy, versatile (1d10) |
+| Liuyedao | Curved Shortsword | 5gp | 1d4 slashing | 2lb | Finesse, light |
+| Niuweidao | Saber | 10gp | 1d6 slashing | 3lb | — |
+| Podao | Blade-Spear | 10gp | 1d6 slashing | 3lb | Finesse, versatile (1d8) |
+| Qiang | Spear | 2gp | 1d6 piercing | 3lb | Thrown (20/60), versatile (1d8) |
+| **Simple Ranged Weapons** |  |  |  |  |  |
+| Hei Gong | Shortbow | 10gp | 1d8 piercing | 2lb | Ammunition (80/320), two-handed |
+| **Martial Melee Weapons** |  |  |  |  |  |
+| Changdao | Long-handled Saber | 25gp | 1d6 slashing | 4lb | Reach, versatile (1d8) |
+| Chui | War Hammer | 25gp | 1d10 bludgeoning | 12lb | Heavy |
+| Dadao | Shortsword | 10gp | 1d6 slashing | 2lb | Finesse, light |
+| Dao | Sword | 10gp | 1d8 slashing | 3lb | — |
+| Emeici | Piercing-Dagger | 5gp | 1d6 piercing | — | Bound, finesse, light |
+| Feng Huo Lun | Wind and Fire Wheel | 15gp | 1d6 slashing | 2lb | Defensive, finesse, light, thrown (10/30) |
+| Guandao | Blade-Spear | 10gp | 1d10 slashing | 4lb | Defensive, two-handed |
+| Gun | Staff | 5gp | 1d6 bludgeoning | 2lb | Light, versatile (1d8) |
+| Hudie Shuangdoa | Butterfly Sword | 5gp | 1d6 slashing | 2lb | Concealed, light |
+| Ji | Polearm | 5gp | 1d6 piercing | 6lb | Reach, versatile (1d8) |
+| Jian | Longsword | 25gp | 1d8 slashing | 4lb | Versatile (1d10) |
+| Jiujie Bian | Chain Whip | 15gp | 1d4 interchangeable | 6lb | Concealed, defensive, disarming, finesse, heavy, multiattack (2), reach, special, two-handed |
+| Piandao | Scimitar | 10gp | 1d6 slashing | 3lb | Finesse, light |
+| Sanjiegun | Three Piece Satff | 10gp | 1d8 bludgeoning | 3lb | Defensive, disarming, reach (1d6), special, two-handed |
+| Sheng Biao | Rope Dart |  2gp | 1d4 peircing | 2lb | Concealed, finesse, multiattack (2), reach, two-handed |
+| Wodao | Greatsword | 50gp | 2d6 slashing | 6lb | Heavy, two-handed |
+| Yanmaodao | Saber | 10gp | 1d8 slashing | 3lb | — |
+| Zhanmadao | Horse Cutting Sword | 50gp | 2d6 slashing | 12lb| Bulky, heavy, reach, special, two-handed |
+</div>
+
+<div class='footnote'>PART 2 | COMPENDIUM</div>
+
+\pagebreakNum
+
+<div class='wide'>
+
+##### Weapons
+| Name | Description | Cost | Damage | Weight | Properties |
+|:-----|:-----------:|:----:|:------:|:----:|:------|
+| **Martial Ranged Weapons** |  |  |  |  |  |
+| Laba Gong | Horn Bow | 25gp | 1d8 P | 4lb | Ammunition (100/400), heavy, two-handed |
+| Lian Nu | Machine-Crossbow | 25gp | 1d4 P | 6lb | Ammunition (range 0/200), burst fire, heavy, multiattack (5), reloading (10), special, two-handed |
+| Nu | Crossbow | 50gp | 1d10 P | 6lb | Ammunition (100/400), heavy, two-handed |
+| Manchu Bow | Composite Longbow | 50gp | 1d8 P | 2lb | Ammunition (100/400), heavy, two-handed |
+</div>
+
+#### Special
+Weapons with special rules are described here.
+
+##### Lian Nu
+This weapon always fires at disadvantage. If firing
+
+##### Sanjiegun
+This weapon can effectively be used in both close quarters and at extended reach.
+
+This weapon deals 1d8 bludgeoning damage against targets in melee range (5ft.) and 1d6 bludgeoning damage against targets attacked at reach (10ft.).
+
+##### Zhanmadao
+This weapon has advantage against mounted opponents or their mount and +1 to hit against large or larger targets.
+
+Due to this weapon's enormous size, you require a minimum of 18 strength to use it effectively.
+
+If your strength is below 17 when trying to wield this weapon, all attack rolls are made at disadvantage and you are limited to no more than one attack per round, regardless of how many attacks you could otherwise perform.
+
+\columnbreak
+
+#### Notes
+Additional information, justifications and notes are described here.
+
+<div style='margin-top:25px'></div>
+
+<div class='descriptive'>
+
+##### Jiujie Bian
+In this case I am using the Jiujie Bian to refer to all varieties of Chinese chain weapon, including chain-spears, chain-knives and the meteor hammer.
+
+Many varieties have a handle, in which case the handle always deals bludgeoning damage and only 1 of the two attacks has the interchanagble property. Some varieties, specifically including the meteor hammer (Liuxingchui) have two distinct ends.
+
+Due to their use in the performing arts, it is also possible to find, buy or create flame or smoke ends for the Jiujie Bian, allowing the player to create elemental end-peices for the weapon. Daggers, Darts and Spear tips, including enchanted varieties of these items, can also be used in place of the end pieces.
+
+Enchantments can be applied separately to each end piece and, if your DM allows it, also to the chain itself.
+</div>
+
+<div style='margin-top:25px'></div>
+
+<div class='descriptive'>
+
+##### Lian Nu
+While it has a historically stated effective range of 80 meters, which, relative to the longbow, converts to 50ft in in-game mechanics, I have limited it to always fire at disadvantage.
+
+This is because the weapon has an extremely low accuracy, low power and high rate of fire.
+
+It was historically used from behind fortifications or elevated positions during sieges where the number of projectiles was more important than the accuracy or power of the projectiles. Their ammunition was often poisoned, to increase the amount of harm that they caused.
+</div>
+
+<div class='footnote'>PART 2 | COMPENDIUM</div>
+
+\pagebreakNum
+
+## Egypt
+
+<div style='margin-top:15px'></div>
+<div class='wide'>
+
+##### Weapons
+| Name | Cost | Damage | Weight | Properties |
+|:----|:----:|:------:|:----:|:------|
+| **Simple Melee Weapons** |  |  |  |  |  |
+| Cudgel | 2gp | 1d8 bludgeoning | 4lb | Heavy |
+| Dagger | 2gp | 1d4 piercing | 1lb | Finesse, light, thrown (20/60) |
+| Javelin | 5gp | 1d6 piercing | 2lb | Thrown (30/120) |
+| Mallet | 1gp | 1d6 bludgeoning | 3lb | — |
+| Spear | 1gp | 1d6 piercing | 3lb | Thrown (20/60), versatile (1d8) |
+| **Simple Ranged Weapons** |  |  |  |  |  |
+| Horn Bow | 25gp | 1d6 piercing | 4lb | Ammunition (80/320), two-handed |
+| Sling | 1sp | 1d4 bludgeoning | — | Ammunition (30/120) |
+| Throwing Stick | 2gp | 1d6 bludgeoning | 3lb | Thrown (30/120) |
+| **Martial Melee Weapons** |  |  |  |  |  |
+| Crescent Axe | 30gp | 1d8 slashing | 4lb | — |
+| Greataxe | 50gp | 1d12 slashing | 7lb | Heavy, two-handed |
+| Khopesh | 50gp | 1d6 slashing | 2lb | Finesse, light |
+| Mace | 30gp | 1d10 bludgeoning | 4lb | Heavy |
+| Pole-Axe | 50gp | 1d10 slashing | 6lb | Heavy, reach, two-handed |
+| **Martial Ranged Weapons** |  |  |  |  |  |
+| Composite Bow | 50gp | 1d8 piercing | 2lb | Ammunition (150/600), heavy, two-handed |
+| Wooden Bow | 25gp | 1d8 piercing | 2lb | Ammunition (80/320), two-handed |
+</div>
+
+#### Notes
+Additional information, justifications and notes are described here.
+
+\columnbreak
+
+<div class='descriptive'>
+
+##### A Wealthy Nation
+Egypt, home of the Pharaoh and the Nile. The cultural and material wealth of this north African country, sometimes referred to as "The Gateway to Africa", and the fertile floodplains of the river Nile have seen it sought after as an economic and strategic trophy throughout most of its history.
+
+Rich in gold but almost completely devoid of military metals such as iron, the nation's military and martial development was slow.
+
+Most of the weaponry traditionally associated with the Egyptian peoples were taken from previous invaders, traded for directly or forged with traded metals.
+
+That is not to say that Egypt is not deserving of respect for its many military developments, forms and weapons, all of which served the Egyptian people very well. The modifications made to weapon designs from their enemies were a great display of technical capability, often producing far better, or more locally suitable war machines and tools than the originals, and often allowing them to ultimate push out the invader.
+</div>
+
+<div class='footnote'>PART 2 | COMPENDIUM</div>
+
+\pagebreakNum
+
+<div class='wide'>
+
+## Eurasian Steppe and the Middle East
+</div>
+
+<div class='wide'>
+
+##### Weapons
+| Name | Description | Cost | Damage | Weight | Properties |
+|:----|:----:|:----:|:------:|:----:|:------|
+| **Simple Melee Weapons** |  |  |  |  |  |
+| Crescent Axe | — | 5gp | 1d6 slashing | 2lb | Light, thrown (20/60) |
+| **Martial Melee Weapons** |  |  |  |  |  |
+| Kontos | Iranian Lance | 15gp | 3d6 piercing | 12lb | Bulky, heavy, reach, special, two-handed |
+| Langseax | Long Dagger | 10gp | 1d8 slashing | 2lb | — |
+| Shashka | Cassack Saber | 15gp | 1d8 slashing | 2lb | — |
+| **Martial Ranged Weapons** |  |  |  |  |  |
+| Manchu Bow | Chinese Composite Bow | 50gp | 1d8 piercing | 2lb | Ammunition (150/600), heavy, two-handed |
+| Mongol Bow | Composite Shortbow | 50gp | 1d6 piercing | 1lb | Ammunition (100/400), special, two-handed |
+</div>
+
+#### Special
+Weapons with special rules are described here.
+
+##### Kontos
+You have disadvantage when you use a Kontos to attack a target within 5 ft of you.
+
+Also, you are limited to a maximum of one attack per round, regardless of how many attacks you could otherwise perform, when not mounted.
+
+##### Mongol Bow
+While mounted, you may expend your bonus action to make an additional attack with the Mongol Bow.
+
+#### Notes
+Additional information, justifications and notes are described here.
+
+<div class='descriptive'>
+
+##### Eurasian Steppe
+The Eurasian Steppe is the vast steppe ecosystem of Eurasia.
+
+It stretches from Romania and Moldova all the way through Ukraine, Russia, Kazakhstan, Xinjiang, Mongolia and Manchura. It includes regions of the Middle East, Southern Russia and Central, Northern and even Western Asia.
+
+This section includes weaponry used by, among many other empires and tribal peoples, the Achaemenid Empire, the Sasanian Empire and the Mongol Empire.
+
+Translations and distinctions between differing forms of these weapons are difficult to find, so most listed items will be listed with English terms.
+</div>
+
+\columnbreak
+
+<div class='descriptive'>
+
+##### Russia and the Slavic States
+The modern superpower of Russia, previously the USSR, didn't form a distinct Empire until modern or near-modern times.
+
+Instead, the early history of Russia was dominated by Nomadic Peoples and the Empires of the Eurasian Steppe.
+
+It wasn't until the 9th Century that Kievan Rus' a unified slavic states, formed to the south-west of the Ural Mountains, a region that is now dominated by Poland and other Slavic Nations.
+
+It wasn't until the Grand Dutchy of Moscow began absorbing the surrounding provinces in the 14th century, and in so doing become the new capitol of Rus', that the modern Russia began to emerge.
+
+It wasn't proclaimed as an Empire until the 17th century.
+
+Russian weaponry is also covered by this section.
+</div>
+
+<div class='descriptive'>
+
+##### The Persian and Mongol Empires
+The early and Classical Persian Empires of the Eurasian Steppe also extended to the south, frequently encompassing the Middle East and even Egypt.
+
+The weapons and tactics of the Middle East up to and including the Medieval period are closely related to and descended from those of the Persian Empires.
+
+As such, the weapons of the Middle East are included here, alongside the Eurasian Steppe Empires.
+
+It is worth noting that the Persian Empires, while some extended deep into Central Asia, never extended into Mongolia.
+</div>
+
+<div class='footnote'>PART 2 | COMPENDIUM</div>
+
+\pagebreakNum
+
+<div class='descriptive'>
+
+##### The Player's Handbook
+The weapons available to the various cultures of the Eurasian steppe include most of the weapons available in Europe.
+
+As such, all of the weapons listed in the PHB are available to the empires and tribes of the Eurasian step along with the additional weapons in this table.
+</div>
+
+<div class='footnote'>PART 2 | COMPENDIUM</div>
+
+\pagebreakNum
+
+## Europe
+
+<div class='wide'>
+
+##### Weapons
+| Name | Descritpion | Cost | Damage | Weight | Properties |
+|:----|:----:|:----:|:------:|:----:|:------|
+| **Simple Melee Weapons** |  |  |  |  |  |
+| Baselard | Heavy Dagger | 4gp | 1d8 slashing | 3lb | Heavy |
+| Brass Knuckles | — | 5gp | 1d4 bludgeoning | 1lb | Bound, light |
+| Cleaver | — | 8gp | 1d8 slashing | 6lb | Heavy |
+| Fauchard | Blade-Spear | 20gp | 1d6 slashing | 3lb | Finesse, versatile (1d8) |
+| Fork | Two-pronged Polearm | 2gp | 1d6 piercing | 4lb | Reach, two-handed |
+| Seax | Germanic Dagger | 4gp | 1d4 slashing | 1lb | Finesse, light |
+| Slungshot | — | 1sp | 1d8 bludgeoning | 6lb | Bound, heavy, versatile (1d10) |
+| Voulge | Pole-cleaver | 5gp | 1d6 slashing | 4lb | Reach, two-handed |
+| **Martial Melee Weapons** |  |  |  |  |  |
+| Ahlspiess | Thrusting Spear with Guard | 10gp | 1d8 piercing | 4lb | Defensive, reach, two-handed |
+| Bardische | Austrian Pole-Axe | 20gp | 1d10 slashing | 6lb | Heavy, reach, two-handed |
+| Basket-hilted Sword | — | 50gp | 1d10 slashing | 5lb | Heavy, special |
+| Claymore | Scottish Greatsword | 50gp | 2d6 slashing | 3lb | Heavy, two-handed |
+| Cutlass | — | 25gp | 1d8 slashing | 3lb | — |
+| Czeczuga | Polish Saber | 25gp | 1d6 slashing | 2lb | Finesse, light |
+| Dane Axe | Pole-Axe | 10gp | 1d8 slashing | 4lb | Versatile (1d10) |
+| Dusack | German Cutlass | 20gp | 1d8 slashing | 3lb | — |
+| Estoc | Edgeless Longsword | 10gp | 1d10 piercing | 3lb | Two-Handed |
+| Falchion | Single-bladed Sword | 20gp | 1d6 slashing | 2lb | Finesse, light |
+| Francisca | Germanic Throwing Axe | 5gp | 1d6 slashing | 2lb | Light, thrown (30/120) |
+| Gladius Hispanensis | — | 20gp | 1d6 slashing | 2lb | Finesse, light, special |
+| Lucern Hammer | Polearm Hammer | 15gp | 1d10 bludgeoning | 6lb | Heavy, reach, two-handed |
+| Falx | Scythe-like Short Polearm | 15gp | 1d12 slashing | 6lb | Heavy, two-handed |
+| Flammenschwert | Flame-bladed Sword | 70gp | 1d10 slashing | 6lb | Heavy, reach, two-handed |
+| Kriegsmesser | German Great Knife | 70gp | 1d12 slashing | 4lb | Heavy, two-handed |
+| Messer | German War Knife | 10gp | 1d8 slashing | 3lb | — |
+| Ordynka | Polish Cavalry Saber | 25gp | 1d12 slashing | 4lb | Heavy, special |
+| Panzerstecher | German Bastard Sword | 15gp | 1d8 piercing | 4lb | Versatile (1d10) |
+| Plancon a picot | Spiked Iron Truncheon | 5sp | 1d10 bludgeoning or slashing | 8lb | Heavy, special, versatile (1d12) |
+| Ranseur | Spear with Cross-hilt | 10gp | 1d8 piercing | 4lb | Defensive, special, versatile (1d10) |
+| Saber | — | 15gp | 1d8 slashing | 3lb | — |
+| Sica | Sword-handled Falx | 10gp | 1d6 slashing | 2lb | Finesse, light |
+|  | Slender Longsword | 15gp | 1d6 piercing | 2lb | Finesse, light, versatile (1d8) |
+| Zweihander | German Two-hander | 70gp | 2d6 slashing | 5lb | Heavy, two-handed |
+</div>
+
+<div class='footnote'>PART 2 | COMPENDIUM</div>
+
+\pagebreakNum
+
+#### Special
+Weapons with special rules are described here.
+
+##### Basket-hilted Sword
+The Basket-hilted sword grants a bonus 1 AC.
+
+##### Gladius Hispanensis
+When used with a shield you gain a bonus 1 AC.
+
+##### Ordynka
+An Ordynka only deals 1d10 damage when used while you are not mounted and you are limited to no more than one attack per round, regardless of how many you could otherwise perform.
+
+##### Plancon a picot
+This weapon can deal either bludgeoning or piercing damage, player's choice per attack.
+
+##### Ranseur
+On successfully striking a mounted opponent, they must make a Constitution Saving throw with a DC of 10 plus your strength modifier. On a failed saving throw, they fall from their mount.
+
+#### Notes
+Additional information, justifications and notes are described here.
+
+<div class='descriptive'>
+
+##### The Player's Handbook
+The weapons provided by WoTC in the PHB and DMG are considered to be European.
+
+They are available along with the additional weapons in this table.
+</div>
+
+<div class='footnote'>PART 2 | COMPENDIUM</div>
+
+\pagebreakNum
+
+## Japan
+
+<div class='wide'>
+
+##### Weapons
+| Name | Description | Cost | Damage | Weight | Properties |
+|:----|:----:|:----:|:------:|:----:|:------|
+| **Simple Melee Weapons** |  |  |  |  |  |
+| Bisento | Glaive | 10gp | 1d10 slashing | 6lb | Heavy, two-handed |
+| Kaiken | Selfdefense Dagger | 5gp | 1d4 slashing | 1lb | Concealed, finesse, light, thrown (20/60)
+| Ono | Axe | 10gp | 1d6 slashing | 2lb | — |
+| Tanto | Dagger | 5gp | 1d4 piercing | 1lb | Light |
+| Tekkan | Truncheon | 10gp | 1d6 bludgeoning | 4lb | — |
+| Tekko | Knuckle Duster | 10gp | 1d6 bludgeoning | 1lb | — |
+| Yari | Spear | 5gp | 1d8 piercing | 6lb | Heavy, reach, two-handed |
+| **Simple Ranged Weapons** |  |  |  |  |  |
+| Fukiya | Blowpipe | 5gp | 1d4 piercing | 3lb | Ammunition (50/200), finesse, loading, poisonous |
+| Shuriken | Improvised Throwing Weapon | 2sp | 1d4 piercing | — | Concealed, finesse, light, thrown (30/120) |
+| **Martial Melee Weapons** |  |  |  |  |  |
+| Bo | Quarterstaff | 15gp | 1d10 bludgeoning | 3lb | Two-handed |
+| Chigiriki | Flail | 10gp | 1d8 bludgeoning | 2lb | — |
+| Chokuto | One-edged Sword | 15gp | 1d8 slashing | 3lb | — |
+| Hanbo | Half-Staff | 10gp | 1d6 bludgeoning | 2lb | Light, versatile (1d8) |
+| Johyo | Rope Dart | 2gp | 1d4 interchangable | 2lb | Concealed, finesse, multiattack (2), reach, two-handed |
+| Kama | Sickle | 10gp | 1d6 slashing | 4lb | Defensive |
+| Kanabo | War Club | 5gp | 2d6 bludgeoning | 6lb | Heavy, two-handed |
+| Katana | Curved Sword | 25gp | 1d6 slashing | 2lb | Finesse, light, versatile (1d8) |
+| Kodachi | Curved Shortsword | 15gp | 1d6 slashing | 2lb | Finesse, light |
+| Kusarigama | Cahin Sickle | 25gp | 1d4 slashing | 6lb | Defensive, disarming, heavy, multiattack (2), reach, two-handed |
+| Naginata | Blade-Spear | 20gp | 1d10 piercing | 18lb | Heavy, reach, two-handed |
+| Odachi | Curved Greatsword | 70gp | 2d6 slashing | 4lb | Heavy, two-handed |
+| Shobo | Piercing-Dagger | 2gp | — | — | Bound, concealed, light, special |
+| Tachi | Curved Sword | 25gp | 1d8 slashing | 3lb | Versatile (1d0) |
+| Tanbo | Short Staff | 5gp | 1d6 bludgeoning | 1lb | Finesse, light |
+| Tessen | War Fan | 25gp | 1d6 bludgeoning | 1lb | Concealed, defensive, light |
+| Tonfa | Fighting Sticks | 5sp | 1d6 bludgeoning | 1lb | Defensive, finesse, light |
+</div>
+
+<div class='footnote'>PART 2 | COMPENDIUM</div>
+
+\pagebreakNum
+
+<div class='wide'>
+
+##### Weapons
+| Name | Description | Cost | Damage | Weight | Properties |
+|:----|:----:|:----:|:------:|:----:|:------|
+| Tsurugi | Sword | 20gp | 1d8 slashing | 3lb | Versatile (1d10) |
+| Uchigatana | Curved Sword | 20gp | 1d6 slashing | 2lb | Light |
+| Wakizaki | Shortsword | 15gp | 1d6 slashing | 2lb | Finesse, light |
+| **Martial Ranged Weapons** |  |  |  |  |  |  |
+| Yumi | Longbow | 25gp | 1d8 piercing | 2lb | Ammunition (150/600), heavy, two-handed |
+</div>
+
+#### Special
+Weapons with special rules are described here.
+
+##### Shobo
+On a successful strike against a humanoid creature up to CR2, the affected creature must make a Dexterity Saving Throw equal to or greater than your intelligence or be paralyzed until the end of your next turn.
+
+#### Notes
+Additional information, justifications and notes are described here.
+
+<div class='descriptive'>
+
+##### Johyo
+In this case I am using the Johyo to refer to all varieties of Japanese rope weapon, including rope-darts (Johyo) and rope-knives (Kyoketsu-shoge).
+
+Many varieties have a handle, in which case the handle always deals bludgeoning damage and only 1 of the two attacks has the interchanagble property. Some varieties, specifically including the meteor hammer (Liuxingchui) have two distinct ends.
+
+Due to their use in the performing arts, it is also possible to find, buy or create flame or smoke ends for the Johyo, allowing the player to create elemental end-peices for the weapon. Daggers, Darts and Spear tips, including enchanted varieties of these items, can also be used in place of the end pieces.
+
+Enchantments can be applied separately to each end piece and, if your DM allows it, also to the rope itself.
+</div>
+
+<div class='footnote'>PART 2 | COMPENDIUM</div>
+
+\pagebreakNum
+
+## Mesoamerica
+
+<div style='margin-top:15px'></div>
+<div class='wide'>
+
+##### Weapons
+| Name | Descritpion | Cost | Damage | Weight | Properties |
+|:----|:----:|:----:|:------:|:----:|:------|
+| **Simple Melee Weapons** |  |  |  |  |  |
+| Cuahuitl | Hardwood Baton | 5gp | 1d8 bludgeoning | 6lb | Heavy |
+| Mācuāhuitzōctli | Small Club | 5gp | 1d6 bludgeoning | 4lb | — |
+| Tepoztōpīlli | Spear | 5gp | 1d6 piercing | 3lb | Thrown (20/60), versatile (1d8) |
+| Tecpatl | Knife or Dagger | 2gp | 1d4 slashing | 1lb | Light, finesse, thrown (20/60) |
+| Tlacochtli | Throwing Spear | 5sp | 1d6 piercing | 3lb | Thrown (30/120) |
+| **Simple Ranged Weapons** |  |  |  |  |  |
+| Atlatl | Spear Thrower | 2gp | +1d4 | 2lb | Ammunition (30/120), finesse, light, special |
+| Tlacalhuazcuahuitl | Blowpipe | 10gp | 1d4 piercing | 3lb | Ammunition (50/200), finesse, loading, poisonous |
+| **Martial Melee Weapons** |  |  |  |  |  |
+| Huitzauhqui | Wooden Club | 10gp | 1d10 bludgeoning | 6lb | Heavy |
+| Macuahuitl | Obsidian-Edged Wooden Sword | 50gp | 1d12 slashing | 6lb | Heavy, two-handed |
+| Quauholōlli | Mace or Warhammer | 30gp | 1d8 bludgeoning | 4lb | Versatile (1d10) |
+| Tlāximaltepōztli | Axe representative of the God Tepoztecatl | 30gp | 1d8 slashing | 4lb | Special, versatile (1d10) |
+| **Martial Ranged Weapons** |  |  |  |  |  |
+| Tēmātlatl | Sling | 1sp | 1d4 bludgeoning | — | Ammunition (30/120) |
+| — | Hunting Bow | 50gp | 1d8 piercing | 2lb | Ammunition (80/320), two-handed |
+| Tlahhuītōlli | War Bow | 50gp | 1d8 piercing | 3lb | Ammunition (120/480), heavy, two-handed |
+</div>
+
+#### Special
+Weapons with special rules are described here.
+
+##### Atlatl
+The Atlatl is a simple spear throwing mechanism that allows for extremely precise, hard throws.
+
+This weapon uses spears as ammunition and deals the damage of the launched spear plus an extra 1d4 damage dice.
+
+##### Tlāximaltepōztli
+The Tlāximaltepōztli is a two sided stone or copper ax.
+
+One side of the head is shaped like an ax, the other side is usually a spike or a blunt protrusion.
+
+At the DMs discretion, the Tlāximaltepōztli can be used to deal slashing damage or one of either bludgeoning or piercing damage.
+
+\columnbreak
+
+#### Notes
+
+Additional information, justifications and notes are described here.
+
+<div class='descriptive'>
+
+##### Language
+Most of the names assigned to the weapons in this list are translations to the Nahuatl language, the primary language of the Aztec Empire.
+
+The weapons included in this list originate both from the Mayan Peoples and the Aztec Peoples.
+</div>
+
+<div class='footnote'>PART 2 | COMPENDIUM</div>
+
+\pagebreakNum
+
+<div class='descriptive'>
+
+##### Chert and Obsidian
+Flaked Chert and Obsidian made up the bulk of weaponry in the Central American geographical region. Arrowheads, knives, spearheads and swordblades were all commonly made of obsidian and set into an otherwise wooden weapon.
+</div>
+
+<div class='footnote'>PART 2 | COMPENDIUM</div>
+
+\pagebreakNum
+
+## North America
+
+<div style='margin-top:15px'></div>
+<div class='wide'>
+
+##### Weapons
+| Name | Descritpion | Cost | Damage | Weight | Properties |
+|:----|:----:|:----:|:------:|:----:|:------|
+| **Simple Melee Weapons** |  |  |  |  |  |
+| Béésh | Knife | 2gp | 1d4 slashing | 1lb | Finesse, light, Thrown (20/60) |
+| Tomahawk | Metal Axe | 25gp | 1d6 slashing | 2lb | Thrown (20/60) |
+| Tsénił | Wooden Axe | 5gp | 1d4 slashing | 2lb | Thrown (20/60) |
+| Tsiiʼdétáán | Spear | 2gp | 1d6 piercing | 2lb | Thrown (20/60), versatile (1d8) |
+| Tsihał | Club | 2gp | 1d6 bludgeoning | 3lb | — |
+| **Simple Ranged Weapons** |  |  |  |  |  |
+| Atlatl | Spear Thrower | 2gp | +1d4 | 2lb | Ammunition (30/120), finesse, light, special |
+| Bee aditłʼį́į́h | Sling | 1sp | 1d4 bludgeoning | — | Ammunition (30/120) |
+| Bolas | Thown Weights | 5sp | 1d4 bludgeoning | 2lb | Special, thrown (30/120) |
+| Gah Gish | Throwing Sticks | 2gp | 1d6 bludgeoning | 3lb | Thrown (30/120) |
+| **Martial Melee Weapons** |  |  |  |  |  |
+| Bee atsidí | Hammer | 5gp | 1d10 bludgeoning | 6lb | Heavy, versatile (1d12)  |
+| Lansa | Lance | 5gp | 1d12 piercing | 3lb | Reach, special |
+| **Martial Ranged Weapons** |  |  |  |  |  |
+| Ałtį́į́ | Hunting Bow | 30gp | 1d8 piercing | 2lb | Ammunition (80/320), two-handed |
+| — | War Bow | 50gp | 1d8 piercing | 3lb | Ammunition (120/480), heavy, two-handed |
+</div>
+
+#### Special
+Weapons with special rules are described here.
+
+##### Atlatl
+The Atlatl is a simple spear throwing mechanism that allows for extremely precise, hard throws.
+
+This weapon uses spears as ammunition and deals the damage of the launched spear plus an extra 1d4 damage dice.
+
+##### Bolas
+The Bolas is a cluster of small weights or stones tied together with rope.
+
+On a successful attack, the target must make an Dexterity Saving Throw of DC10 plus the damaage they took or become Restrained.
+
+The target may spend an action to remove the Restrained condition.
+
+##### Lansa
+You have disadvantage when you use a Lansa to attack a target within 5 ft of you.
+
+Also, a Lansa requires two hands to wield when you aren't mounted.
+
+\columnbreak
+
+#### Notes
+Additional information, justifications and notes are described here.
+
+<div class='descriptive'>
+
+##### Language
+Most of the names assigned to the weapons in this list are translations to the Navajo language, part of the Na-Dene language group.
+
+It is one of the more widely spoken language groups among Native North American Tribes, including a number of distinct languages.
+</div>
+
+<div class='footnote'>PART 2 | COMPENDIUM</div>
+
+\pagebreakNum
+
+## South Asia
+
+<div class='wide'>
+
+##### Weapons
+| Name | Description | Cost | Damage | Weight | Properties |
+|:----|:----:|:----:|:------:|:----:|:------|
+| **Simple Melee Weapons** |  |  |  |  |  |
+| Barcha | Lance-Spear hybrid | 10gp | 1d4 piercing | — | Light, finesse, reach, two-handed |
+| Dha-Hmyaung | Dagger | 5gp | 1d4 slashing | 1lb | Light |
+| Dha-Ma | Cleaver | 10gp | 1d6 slashing | 3lb | Finesse |
+| Katar | Push Dagger | 5gp | 1d4 piercing | 1lb | Concealed, light, finesse |
+| Lathi | Fighting Stick | 1sp | 1d4 bludgeoning | 1lb | Reach, versatile (1d6) |
+| Sarvayasam | Iron Club | 10gp | 1d8 bludgeoning | 6lb | Heavy |
+| Tomara | Javelin | 10gp | 1d6 piercing | 2lb | Thrown (30/120) |
+| **Simple Ranged Weapons** |  |  |  |  |  |
+| Chhota Dhanush | Small Bow | 25gp | 1d6 piercing | 2lb | Ammunition (80/320), two-handed |
+| Valari | Boomerang | 10gp | 1d6 bludgeoning | — | Thrown (20/80) |
+| **Martial Melee Weapons** |  |  |  |  |  |
+| Bagh Naga | Tiger Claws | 10gp | 1d4 piercing | — | Bound, concealed, light, finesse, poisonous |
+| Bindipala | Club | 10gp | 1d8 bludgeoning | 8lb | Versatile (1d10) |
+| Chakri | Throwing Disc | 15gp | 1d6 slashing | — | Light, finesse, returning, thrown (30/120) |
+| Dha | Sword | 15gp | 1d6 slashing | 2lb | Finesse, light |
+| Dha-shay | Long Curved Sword | 50gp | 2d6 slashing | 6lb | Heavy, two-handed |
+| Firangi | Cavalry Sword | 50gp | 1d10 | 4lb | Heavy, versatile (1d12) |
+| Gada | Mace | 25gp | 2d6 bludgeoning | 16lb | Heavy, two-handed |
+| Kaduthala | Curved Sword | 15gp | 1d10 slashing | 2lb | — |
+| Kastane | Ornate Ceremonial Dagger | 200gp | 1d4 slashing | 1lb | Light |
+| Khanda | Sword | 15gp | 1d8 slashing | 4lb | — |
+| Maduvu | Horn Dagger - Buckler hybrid | 25gp | 1d4 piercing | 2lb | Disarming, finesse, light, parrying |
+| Pata | Gauntlet Sword | 50gp | 1d6 piercing | 2lb | Bound, defensive, finesse, light |
+| Talwar | Saber | 25gp | 1d8 slashing | 4lb | Versatile (1d10) |
+| Trishula | Trident | 25gp | 1d6 piercing | 4lb | Finesse, reach, thrown (20/60), versatile (1d8) |
+| Urumi | Curling Whip-like Blade |  50gp | 3d4 slashing | 4lb | Finesse, special |
+| Vada Chakra | Large Throwing Disc | 25gp | 1d10 slashing | 1lb | Heavy, returning, thrown (30/120) |
+| Vita | Short Corded Lance | 10gp | 1d4 piercing | 2lb | Bound, light, finesse, reach, returning, special, thrown (20) |
+| **Martial Ranged Weapons** |  |  |  |  |  |
+| Dhanush | Bow | 50gp | 1d8 piercing | 2lb | Ammunition (150/600), heavy, two-handed |
+</div>
+
+<div class='footnote'>PART 2 | COMPENDIUM</div>
+
+\pagebreakNum
+
+#### Special
+Weapons with special rules are described here.
+
+##### Urumi
+Urumi is exceptionally difficult to master. If the wielder is not proficient in it's use or if their Dexterity is below 17, the wielder will receive the damage instead of the target.
+
+The urumi's damage is not effected by ability score modifiers.
+
+##### Vita
+The Vita is tied to the user, so it cannot be thrown beyond 20ft.
+
+#### Notes
+Additional information, justifications and notes are described here.
+
+<div class='descriptive'>
+
+##### India (South Asia)
+The country currently known as India used to be a much larger series of empires that waxed and waned considerably throughout history.
+
+The weapons listed here originate from the regions with Indian heritage, however, it is considered more politically and historically neutral to say South Asia instead of India.
+</div>
+
+<div class='descriptive'>
+
+##### Kastane
+The kastane, whilst most traditionally a dagger, actually refers to the style of hilt and the decorative forms that extend to the overall blade design.
+
+It is both possible to attach a Kastane hilt to many other bladed weapons and to make a Kastane that is another weapon.
+
+These items were sometimes used as status symbols or trophies among decorated officers or lords.
+
+If forging a Kastane based on another weapon, increase the value of the base weapon by a multiple of 40.
+</div>
+
+<div class='descriptive'>
+
+##### Martial Weapon Proficiency
+The five major classes of Central Asian martial arts were widely practiced by both military personnel and common people.
+
+Religious leaders and their followers not only developed many of the components of these martial arts, but were also skilled martial arts practitioners.
+
+Almost all character Classes listed in the PHB would, if they originated from South Asia, possess both simple and martial weapon proficiencies.
+</div>
+
+<div class='footnote'>PART 2 | COMPENDIUM</div>
+
+\pagebreakNum
+
+## Southeast Asia
+
+<div class='wide'>
+
+##### Weapons
+| Name | Description | Cost | Damage | Weight | Properties |
+|:----|:----:|:----:|:------:|:----:|:------|
+| **Simple Melee Weapons** |  |  |  |  |  |
+| Arit | Sickle | 2gp | 1d4 piercing | 1lb | Disarming, light |
+| Badik | Knife | 1gp | 1d4 piercing | 1lb | Finesse, light |
+| Blakas | Cleaver | 5gp | 1d4 slashing | 2lb | Light |
+| Burusa | Dagger |  2gp | 1d4 piercing | 3lb | Finesse, reach, thrown (20/60) |
+| Kabeala | Machete | 5gp | 1d6 slashing | 3lb | — |
+| Kujang | Sickle-Knife | 5gp | 1d4 slashing | 1lb | Finesse, light |
+| Pring Lancip | Sharp Bamboo | 1sp | 1d4 piercing | 1lb | Finesse, light, reach, thrown (30/120), versatile (1d6) |
+| **Simple Ranged Weapons** |  |  |  |  |  |
+| Paku | Throwing Spike | 5sp | 1d4 piercing | — | Concealed, finesse, light, thrown (30/120) |
+| **Martial Melee Weapons** |  |  |  |  |  |
+| Alamang | Sacred Cutlass | 500gp | 1d6 slashing | 2lb | Finesse, light, special |
+| Arbir | Halberd | 10gp | 1d6 piercing | 4lb | Reach, versatile (1d8) |
+| Balato | Sword | 10gp | 1d6 slashing | 2lb | Finesse, light, versatile (1d8) |
+| Cambuk | Whip | 2gp | 1d4 bludgeoning | 2lb | Finesse, reach |
+| Chabang | Short Trident-Truncheon | 15gp | 1d4 piercing | 2lb | Defensive, disarming, finesse, light |
+| Golok | Machete | 15gp | 1d10 slashing | 4lb | Heavy |
+| Kalis | Waveblade Dagger | 25gp | 1d6 slashing | 1lb | Finesse, light, thrown (20/60) |
+| Kampilan | Sword | 10gp | 1d8 slashing | 3lb | — |
+| Kiam | Longsword | 15gp | 1d8 slashing | 4lb | Finesse, versatile (1d10) |
+| Kipas | War Fan | 25gp | 1d6 bludgeoning | 1lb | Concealed, defensive, light |
+| Klewang | Longsword | 20gp | 1d8 slashing | 3lb | — |
+| Mandau | Serrated "Headhunting" Knife | 20gp | 1d6 slashing | 2lb | Finesse, light, special |
+| Niabor | Cutlass | 15gp | 1d8 slashing | 3lb | — |
+| Rantai | Chain Whip | 15gp | 1d4 interchangeable | 6lb | Concealed, defensive, disarming, finesse, heavy, multiattack (2), reach, two-handed |
+| Topang | Fighting Stick | 5sp | 1d6 bludgeoning | 1lb | Defensive, finesse, light |
+| Toya | Staff | 5gp | 1d6 bludgeoning | 2lb | Light, versatile (1d8) |
+| **Martial Ranged Weapons** |  |  |  |  |  |
+| Gandewa | Bow | 50gp | 1d8 piercing | 2lb | Ammunition (150/600), heavy, two-handed |
+| Gelang Besi | Throwing Disc | 15gp | 1d6 slashing | — | Light, finesse, returning, thrown (30/120) |
+| Sumpitan | Blowpipe | 5gp | 1d4 piercing | 3lb | Ammunition (50/200), finesse, loading, poisonous |
+</div>
+
+<div class='footnote'>PART 2 | COMPENDIUM</div>
+
+\pagebreakNum
+
+#### Special
+Weapons with special rules are described here.
+
+##### Mandau
+This weapon's distinct, many toothed blade was particularly effective at ripping jagged wounds in flesh.
+
+Against unarmored targets, this weapon deals 2d6 damage.
+
+#### Notes
+Additional information, justifications and notes are described here.
+
+<div class='descriptive'>
+
+##### Alamang
+This straight-edged sword is a powerful status symbol among its native peoples.
+
+As such, reproductions are generally forbidden and only a small number exist, either in the hands of high ranking members of society, or illegal reproductions.
+</div>
+
+<div class='descriptive'>
+
+##### South East Asia
+The weapons listed in this section originate from South East Asia including both Mainland Southeast Asia (aka Indochina) and the Maritime Southeast Asia (sometimes known as East India).
+
+These regions contain a wide variety of complex cultures with wide variations in culture, language, resources and martial systems.
+
+This section is a compilation of various weapon forms that are found within the region. Some names, languages and cultures are no represented.
+</div>
+
+<div class='descriptive'>
+
+##### Mandau
+The Mandau is a ceremonial single-edged cleaver of small size and low weight.
+
+It was predominantly used during the headhunting ceremony, when people would gather to attack other tribes and gather their heads for use in various decorations and ceremonies.
+</div>
+
+<div class='footnote'>PART 2 | COMPENDIUM</div>
+
+\pagebreakNum
+
+## South America
+
+<div style='margin-top:15px'></div>
+<div class='wide'>
+
+##### Weapons
+| Name | Description | Cost | Damage | Weight | Properties |
+|:----|:----:|:----:|:------:|:----:|:------|
+| **Simple Melee Weapons** |  |  |  |  |  |
+| Chuchna Chucuna | Handaxe | 5gp | 1d6 slashing | 2lb | Light, thrown (20/60) |
+| Knife | Stone Knife | 2gp | 1d4 slashing | 1gp | Finesse, light, thrown (20/60) |
+| Suchuc Chiqui | Spear | 1gp | 1d6 piercing | 3lb | Versatile (1d8) |
+| Tcamahias | Mace | 5gp | 1d6 bludgeoning | 4lb | — |
+| Tumi | Ornate Ceremonial Dagger | 200gp | 1d4 slashing | — | Finesse, light |
+| **Simple Ranged Weapons** |  |  |  |  |  |
+| Bolas | Thown Weights | 5sp | 1d4 bludgeoning | 2lb | Special, thrown (30/120) |
+| Estolica | Spear Thrower | 2gp | +1d4 | 2lb | Ammunition (30/120), finesse, light, special |
+| **Martial Melee Weapons** |  |  |  |  |  |
+| — | Battleaxe | 20gp | 1d10 slashing | 5lb | Heavy, versatile (1d12) |
+| Chambi | Club | 2gp | 2d6 bludgeoning | 8lb | Heavy, two-handed |
+| Long Spear | — | 2gp | 1d10 piercing | 6lb | Heavy, reach, two-handed |
+| Macana | Star Headed Spear | 5gp | 1d6 bludgeoning | 3lb | Reach, versatile (1d8) |
+| — | Sharp Hardwood Sword | 5gp | 1d6 slashing | 1lb | Finesse, light |
+| **Martial Ranged Weapons** |  |  |  |  |  |
+| — | Blowpipe | 5gp | 1d4 piercing | 3lb | Ammunition (50/200), finesse, loading, poisonous |
+| Huaraca | — | 1sp | 1d4 bludgeoning | — | Ammunition (30/120) |
+| — | Hunting Bow | 30gp | 1d8 piercing | 2lb | Ammunition (80/320), two-handed |
+| — | War Bow | 50gp | 1d8 piercing | 3lb | Ammunition (120/480), heavy, two-handed |
+</div>
+
+### Special
+Weapons with special rules are described here.
+
+##### Bolas
+The Bolas is a cluster of small weights or stones tied together with rope.
+
+On a successful attack, the target must make an Dexterity Saving Throw of DC10 plus the damage they took or become Restrained.
+
+The target may spend an action to remove the Restrained condition.
+
+\columnbreak
+
+##### Estolica
+The Estolica is a simple spear throwing mechanism that allows for extremely precise, hard throws.
+
+This weapon uses spears as ammunition and deals the damage of the launched spear plus an extra 1d4 damage dice.
+
+<div class='footnote'>PART 2 | COMPENDIUM</div>
+
+\pagebreakNum
+
+#### Notes
+Additional information, justifications and notes are described here.
+
+<div class='descriptive'>
+
+##### Andean Civilizations
+Four of the most advanced civilizations in South American pre-columbian history all occupied territories in the north-western Andes.
+
+I have used records these civilizations, including the Chimu, Inca Empire, Muisca Confederation and Timoto-Cuica, as a proxy for the state of weaponry on the South American continent.
+
+Weaponry and names from other cultural groups are included, but not exhaustively.
+</div>
+
+<div class='footnote'>PART 2 | COMPENDIUM</div>
+
+\pagebreakNum
+
+<div class='partpage-dmg'>
+
+# PART 3
+
+##### Notes and Observations
+
+</div>
+
+\pagebreakNum
+
+## Cause and Effect
+As with most other aspects of human development, natural and social constraints often define the way that our cultures, technologies, practices and weaponry evolve.
+
+Areas with relatively low quantities of weaponizable metals, or limited knowledge of metalworking, often lead to fabric armor and simple wooden or wicker shields.
+
+In these areas, lighter, thinner blades that use up less material, such as in Japanese history, or the use of stone tools and weapons instead of metal ones, was more common.
+
+The same can be said for factors such as temperature and humidity, both of which would have destroyed horn, sinew and composite bows that many cultures relied on.
+
+Meanwhile, in areas with better access to metals and metalworking, heavy plate armor became a powerful tool of war, and the dominant weapons shifted to compensate. Heavy warhammers, polearms and maces became extremely popular in medieval Europe, for instance.
+
+<div style='margin-top:10px'></div>
+
+Even if an area in your campaign world is culturally based on a corresponding area in this list, the weapons that you grant that culture, and their respective prevalence, may not match if other physical and environmental factors do not match.
+
+If this is the case, it may be worth choosing a list of weapons from an area that is technologically and environmentally more similar, and then to rename the items to better suit the culture that you have associated with it.
+
+## International Trade
+A common mistake made by modern peoples is to think of these cultures in isolation, as separate, static cultures that do not have long distance trade or relations.
+
+While working on this project, my research has reaffirmed how false that view really is.
+
+Many ancient Empires spanned areas far larger than modern ones and the current locations of the countries that have descended from these empires are often not in the locations from which these empires and cultures first emerged.
+
+<div style='margin-top:10px'></div>
+
+The history of many weapons is one of connectivity and trade, extending across much of the world and in good time.
+
+If you consider all of the weapons of the chosen culture to be common in that country or region of your campaign world, then the weapons of all neighboring countries and direct trade partners would be uncommon, but still fairly frequently available and usable.
+
+Empires with limited contact, or that are separated by several other cultural regions, will be rare, or even very rare to encounter within your region.
+
+<div style='margin-top:10px'></div>
+
+This connectivity will also affect the weapons that evolve in your region, since they will be heavily influenced by the prevalent weaponry of their immediate neighbors and direct trade partners.
+
+\columnbreak
+
+## Change Log
+
+### Version 2
+- **Complete overhaul** including; rewording of guide, disambiguations, inclusion of firearms and expansion and re-balancing of the Compendium and its custom weapon properties.
+
+#### Version 2.0.1
+- **Nerfed** the *disarming property* to be limited to *once per short or long rest*.  
+I was made aware that it encroached too much on the *Disarming Attack Maneuver*.
+- **Nerfed** the *Urumi* from *South Asia*.
+
+### Version 2.1
+- **Added** *Wealthy Nation* Note to *Egypt*.
+- **Added** *Weapon Sizes and the Player's Handbook* to *Additional Notes and Observations*.
+- **Added** *Change Log*.
+- **Added** some semi-arbitrary version numbers to use in the new *Change Log*.
+- **Added** two possible ways to reconsile the *Dual Wielder feat* with the *one-handed, heavy weapons* available in this guide and compendium.
+- **Updated** *Brew Metadata*, both the *Title* and the *Description*.
+
+#### Version 2.1.1
+- **Rebalanced** the *Multiattack (X) Custom Weapon Property*.
+- **Rebalanced** all weapons using the *Multiattack (X) Custom Weapon Property*.
+- **Disambiguated** the conditions of the *Lian Nu* (aka Chu Ko Nu) machine crossbow from *China*.
+- **Added** special property to the *Lian Nu* (aka Chu Ko Nu) machine crossbow from *China* to assist and clarify the disambiguation.
+- **Fixed** Missing damage type on the Slender Longsword Example.
+- **Added** *Slender Longsword* to the *Europe* weapons list.
+- **Added** the document's name to the 1st page.
+- **Added** *Alternative Heavy Property* to the end of the *Custom Weapon Properties* section.
+- **Fixed** weapon prerequisites being on even numbers. All stat prerequisites in the PHB are on odd numbers, and now, so are the ones in here.
+
+### Version 2.2
+- **Transfered** from Homebrewery to GMBinder.
+- **Integrated** both forms of weight-handedness scale into guide.
+- **Removed** weight-handedness from Additional Notes section.
+- **Fixed** damage for the *Lian Nu* (aka Chu Ko Nu).
+- **Reformatted** pretty much everything!
+- **Added** additional example firearms.
+
+<div class='footnote'>PART 3 | NOTES AND OBSERVATIONS</div>
+
+\pagebreakNum
+
+ <style>
+   /** Change the p2 to whatever page number is the last page in your document **/
+   .phb#p2:after { display:none; }
+ </style>
+ 
+ <div class='back-cover-image'></div>
+ 
+ <div style='margin-top:20px;'></div>
+ 
+ <div class='back-cover-header'>
+ 
+ A Tool For
+ 
+ Many Worlds
+ 
+ </div>
+ 
+ <div class='back-cover-text'>
+ 
+ This guide and compendium are intended to facilitate the rapid and balanced addition of homebrew weapons, from many cultures, eras and themes.
+ 
+ Not all of it will be useful to everyone and not all of it will fit into every world. Remember, this is tool, not an additional set of rules. Use what you need, when you need it and if that means only having weapons from one region, or only using the guide portion to help in pre-game preparations, then do exactly that.
+ 
+ </div>
+ 
+ <div class='back-cover-diamond' style='top: 679px;'></div>
+ 
+ <div style='margin-top:35px;'></div>
+ 
+ <div class='back-cover-close'>
+ 
+ 
+ 
+ </div>
+ 
+ <div class='back-cover-logo'></div>
+ 
+ <div class='back-cover-logo-link'>
+ 
+ [WWW.GMBINDER.COM](https://www.gmbinder.com)
+ 
+ </div>
+ 
+ \columnbreak
+ 
+ <div class='back-cover-right'>
+ 
+ 
+ 
+ </div>
+ 
