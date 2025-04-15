@@ -1,0 +1,1336 @@
+<style>
+/* GLOBAL FORMATTING  */
+
+  /* Resize page to international A4 */
+  .phb {
+    width: 210mm;
+    height: 296.8mm;
+  }
+  .phb:after { content: ""; }
+
+/* Temporary Fix for heading issues */
+    .phb p{ line-height: 15px; } 
+    .phb blockquote p{ line-height: 14px; } 
+    .phb h2{ line-height: 26px; } 
+    .phb h3{ line-height: 19px; } 
+    .phb h4{ line-height: 15px; padding-bottom: 3px; } 
+    .phb h5{ line-height: 17px; } 
+    th, td { line-height: 14px; }
+
+/* TABLE OF CONTENTS  */
+
+  /* toc specifically wants black text. This resets the headers*/
+  .toc a {
+    color: inherit !important;
+  }
+  /* Allow dot leaders to fill remaining space but not overlap */
+  .toc li span:nth-child(2) {
+    width: auto;
+    overflow: hidden;
+    white-space: nowrap;
+    display: block;
+  }
+  .toc li span:nth-child(2):after {
+    font-family: BookSanity;
+    font-size: 0.317cm;
+    font-weight: normal;
+    color: black;
+    content:
+      " ........................................"
+      "........................................."
+      ".........................................";
+    }
+
+  /* Style TOC page numbers*/
+  .toc li span:first-child {
+    float: right;
+    font-family: BookSanity;
+    font-size: 0.317cm;
+    font-weight: normal;
+    color: black;
+    margin-left: 1px;
+  }
+
+  /* Adjust TOC H3 styles */
+  .toc li h3 span:nth-child(2):after {
+  	content: " ";
+  }
+  .toc li h3 {
+    margin-bottom: 4px !important;
+    margin-top: 10px !important;
+    line-height: initial !important;
+  }
+  .toc li h3 span:first-child {
+  	line-height: 1.8em !important;
+  }
+
+  /* Reduce TOC list indentation*/
+  .toc ul ul {
+  	margin-left: 10px !important;
+  }
+  .toc>ul>li {
+    margin-bottom: initial !important;
+  }
+
+
+/* TABLES AND BLOCKS */
+
+  /* Clear internal padding and add gap above for green note blocks*/
+  .phb blockquote {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .phb blockquote { margin-top: 1em;
+  }
+
+
+/* INK BLOT STYLES */
+
+  /* Root style for inkblots. Use alone, or together with
+  one of the inkb lotstyle classes below. Essentially:
+  <img url='{url}' class='inkblot inkblot-blue' />
+  */
+  .inkblot {
+    position: absolute;
+    mix-blend-mode: multiply;
+    opacity: 0.6;
+  }
+
+  .inkblot-blue {
+    filter: hue-rotate(190deg) saturate(120%)
+  }
+
+  .inkblot-green {
+    filter: hue-rotate(120deg)
+  }
+
+/* PAGE STYLE */
+
+   /* Background */
+     .phb{ background-image: url('https://gmbinder.com/images/KN1O92T.png') }
+     .phb{ background-size: cover }
+
+   /* Notes */
+     .phb section blockquote {background-color: #f6e5d4}
+     .phb hr + section blockquote tr:nth-child(odd) td {background-color: transparent;}
+
+   /* Tables */
+     table tr:nth-child(odd) td {background-color: #cccccc}
+
+   /* Footer */
+     .phb .pageNumber {color: rgba(0, 0, 0, 0.5)}
+     .phb .footnote {color: rgba(0, 0, 0, 0.5)}
+     .phb:nth-child(odd):after{ 
+       content          : '';
+       position         : absolute;
+       bottom           : -7px;
+       left             : 10px;
+       z-index          : -1;
+       height           : 336px;
+       width            : 100%;
+       background-image : url('https://www.gmbinder.com/images/bNTz1nk.png');
+       background-size  : cover;
+   }
+
+   .phb:nth-child(even):after{ 
+       content          : '';
+       position         : absolute;
+       bottom           : -7px;
+       left             : -10px;
+       z-index          : -1;
+       height           : 336px;
+       width            : 100%;
+       background-image : url('https://www.gmbinder.com/images/6NCzAN0.png');
+       background-size  : cover;
+   }
+
+   /* Page Number */
+   .phb .pageNumber{
+       position   : absolute;
+       bottom     : 30px;
+       width      : 50px;
+       text-align : center;
+   }
+   .phb:nth-child(even) .pageNumber{
+       left      : 12px;
+   }
+   .phb:nth-child(odd) .pageNumber{
+       right      : 12px;
+   }
+
+   .phb .pageNumber.auto{
+       position   : absolute;
+       bottom     : 41px;
+       width      : 50px;
+       text-align : center;
+   }
+   .phb:nth-child(even) .pageNumber.auto{
+       left      : 12px;
+   }
+   .phb:nth-child(odd) .pageNumber.auto{
+       right      : 12px;
+   }
+
+/* FRONT PAGE STYLES */
+
+  .cover-header-container {
+    display: block;
+    position: absolute;
+    width: 100%;
+    top: 80px;
+    left: 0;
+    right: 0;
+    clear: both;
+  }
+
+  .cover-header-logo {
+    display: block;
+    width: 700px;
+    margin: auto;
+  }
+
+  .cover-header-divider {
+    display: block;
+    width: 580px;
+    margin: -12px auto -6px;
+  }
+
+  .cover-header-title {
+    display: block;
+    width: 700px;
+    margin: auto;
+    color: white;
+    font-family: NodestoCaps,nodesto,sans-serif;
+    font-weight: normal;
+    font-size: 72px;
+    line-height: 72px;
+    text-align: center;
+    text-shadow: 2px 2px 4px #000, -2px 2px 4px #000, 2px -2px 4px #000, -2px -2px 4px #000;
+  }
+
+  .cover-footer-container {
+    display: block;
+    position: absolute;
+    width: 100%;
+    bottom: 28px;
+    left: 0;
+    right: 0;
+    clear: both;
+  }
+
+  .cover-footer-subtitle,
+  .cover-footer-version {
+    display: block;
+    width: 500px;
+    margin: auto;
+    color: white;
+    font-family: NodestoCaps,nodesto,sans-serif;
+    font-weight: normal;
+    text-align: center;
+    text-shadow: 1px 1px 2px #000, -1px 1px 2px #000, 0px 0px 2px #000;
+  }
+  .cover-footer-subtitle {
+    font-size: 28px;
+    line-height: 28px;
+  }
+  .cover-footer-version {
+    margin-top: 16px;
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+/* STAT BLOCKS */
+  /* For creature statblocks within range (start and end must be specified),
+     don't show a background. Used for the appendix creatures */
+  .phb:nth-of-type(n+140):nth-of-type(-n+200) hr+section blockquote {
+    background: none;
+    border: none;
+    box-shadow: none;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+  }
+
+</style>
+
+<style>
+/* GLOBAL FORMATTING  */
+
+  /* Resize page to international A4 */
+  .phb {
+    width: 210mm;
+    height: 296.8mm;
+  }
+  .phb:after { content: ""; }
+
+
+/* TABLE OF CONTENTS  */
+
+  /* toc specifically wants black text. This resets the headers*/
+  .toc a {
+    color: inherit !important;
+  }
+  /* Allow dot leaders to fill remaining space but not overlap */
+  .toc li span:nth-child(2) {
+    width: auto;
+    overflow: hidden;
+    white-space: nowrap;
+    display: block;
+  }
+  .toc li span:nth-child(2):after {
+    font-family: BookSanity;
+    font-size: 0.317cm;
+    font-weight: normal;
+    color: black;
+    content:
+      " ........................................"
+      "........................................."
+      ".........................................";
+    }
+
+  /* Style TOC page numbers*/
+  .toc li span:first-child {
+    float: right;
+    font-family: BookSanity;
+    font-size: 0.317cm;
+    font-weight: normal;
+    color: black;
+    margin-left: 1px;
+  }
+
+  /* Adjust TOC H3 styles */
+  .toc li h3 span:nth-child(2):after {
+  	content: " ";
+  }
+  .toc li h3 {
+    margin-bottom: 4px !important;
+    margin-top: 10px !important;
+    line-height: initial !important;
+  }
+  .toc li h3 span:first-child {
+  	line-height: 1.8em !important;
+  }
+
+  /* Reduce TOC list indentation*/
+  .toc ul ul {
+  	margin-left: 10px !important;
+  }
+  .toc>ul>li {
+    margin-bottom: initial !important;
+  }
+
+
+/* TABLES AND BLOCKS */
+
+  /* Clear internal padding and add gap above for green note blocks*/
+  .phb blockquote {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .phb blockquote { margin-top: 1em;
+  }
+
+
+/* INK BLOT STYLES */
+
+  /* Root style for inkblots. Use alone, or together with
+  one of the inkb lotstyle classes below. Essentially:
+  <img url='{url}' class='inkblot inkblot-blue' />
+  */
+  .inkblot {
+    position: absolute;
+    mix-blend-mode: multiply;
+    opacity: 0.6;
+  }
+
+  .inkblot-blue {
+    filter: hue-rotate(190deg) saturate(120%)
+  }
+
+  .inkblot-green {
+    filter: hue-rotate(120deg)
+  }
+
+</style>
+
+<style>
+/* Background */
+  .phb{ background-image: url('https://gmbinder.com/images/KN1O92T.png') }
+  .phb{ background-size: cover }
+
+/* Notes */
+  .phb section blockquote {background-color: #f6e5d4}
+  .phb hr + section blockquote tr:nth-child(odd) td {background-color: transparent;}
+
+/* Tables */
+  table tr:nth-child(odd) td {background-color: #cccccc}
+
+/* Footer */
+  .phb .pageNumber {color: rgba(0, 0, 0, 0.5)}
+  .phb .footnote {color: rgba(0, 0, 0, 0.5)}
+  .phb:nth-child(odd):after{ 
+    content          : '';
+    position         : absolute;
+    bottom           : -7px;
+    left             : 10px;
+    z-index          : -1;
+    height           : 336px;
+    width            : 100%;
+    background-image : url('https://www.gmbinder.com/images/bNTz1nk.png');
+    background-size  : cover;
+}
+
+.phb:nth-child(even):after{ 
+    content          : '';
+    position         : absolute;
+    bottom           : -7px;
+    left             : -10px;
+    z-index          : -1;
+    height           : 336px;
+    width            : 100%;
+    background-image : url('https://www.gmbinder.com/images/6NCzAN0.png');
+    background-size  : cover;
+}
+
+/* Page Number */
+.phb .pageNumber{
+    position   : absolute;
+    bottom     : 30px;
+    width      : 50px;
+    text-align : center;
+}
+.phb:nth-child(even) .pageNumber{
+    left      : 12px;
+}
+.phb:nth-child(odd) .pageNumber{
+    right      : 12px;
+}
+
+.phb .pageNumber.auto{
+    position   : absolute;
+    bottom     : 41px;
+    width      : 50px;
+    text-align : center;
+}
+.phb:nth-child(even) .pageNumber.auto{
+    left      : 12px;
+}
+.phb:nth-child(odd) .pageNumber.auto{
+    right      : 12px;
+}
+
+/* INK BLOT STYLES */
+
+  /* Root style for inkblots. Use alone, or together with
+  one of the inkb lotstyle classes below. Essentially:
+  <img url='{url}' class='inkblot inkblot-blue' />
+  */
+  .inkblot {
+    position: absolute;
+    mix-blend-mode: multiply;
+    opacity: 0.6;
+  }
+
+  .inkblot-blue {
+    filter: hue-rotate(190deg) saturate(120%)
+  }
+
+  .inkblot-green {
+    filter: hue-rotate(120deg)
+  }
+
+</style>
+
+## Monk
+*Why do we fight? To protect Home, and Family... To preserve Balance, and bring Harmony. For my kind, the true question is: What is worth fighting **for**?*
+<div style="text-align:Right"> 
+
+*— Chen Stormstout* &nbsp;</div>
+
+Bounding across a battlefield, a gnome ducks, weaves, and rolls between the legs of other combatants towards a distant opponent. When an ogre tries to stomp her flat underfoot, a slight movement from the gnome leaves him flat on his back.
+
+A dwarf lazily eyes the incoming wave of murlocs, seemingly unconcerned by their battle cries. As the first foes begin to reach him, he takes a swig from a jug on his belt and spits out a blast of engulfing flame.
+
+**[Mistwalker entry.]**
+
+Whatever their discipline, monks are united in their ability to magically harness the energy that flows in their bodies. Whether channeled as a striking display of combat prowess or a subtler focus of defensive ability and speed, this energy infuses all that a monk does.
+
+### The Flow of Chi
+Monks make careful study of the magical energy they call chi. The pandaren word for 'spirit', they use the energy of their inner spirit, that flows through every living body. Monks harness this power within themselves to create magical effects and exceed their bodies' physical capabili-ties. Using this energy, monks channel uncanny speed and strength into their unarmed strikes, as they gain experi-ence, their training and their mastery of chi gives them more power over their bodies and the bodies of their foes.
+
+<!-- 
+### The Magic of Ki
+Monks make careful study of a magical energy that most monastic traditions call ki. This energy is an element of the magic that suffuses the multiverse—specifically, the element that flows through living bodies. Monks harness this power within themselves to create magical effects and exceed their bodies' physical capabilities, and some of their special attacks can hinder the flow of ki in their opponents. Using this energy, monks channel uncanny speed and strength into their unarmed strikes. As they gain experience, their martial training and their mastery of ki gives them more power over their bodies and the bodies of their foes.
+
+### Training and Asceticism
+Small walled cloisters dot the landscapes of the worlds of D&D, tiny refuges from the flow of ordinary life, where time seems to stand still. The monks who live there seek personal perfection through contemplation and rigorous training. Many entered the monastery as children, sent to live there when their parents died, when food couldn't be found to support them, or in return for some kindness that the monks had performed for their families.
+
+Some monks live entirely apart from the surrounding population, secluded from anything that might impede their spiritual progress. Others are sworn to isolation, emerging only to serve as spies or assassins at the command of their leader, a noble patron, or some other mortal or divine power.
+
+The majority of monks don't shun their neighbors, making frequent visits to nearby towns or villages and exchanging their service for food and other goods. As versatile warriors, monks often end up protecting their neighbors from monsters or tyrants.
+
+For a monk, becoming an adventurer means leaving a structured, communal lifestyle to become a wanderer. This can be a harsh transition, and monks don't undertake it lightly. Those who leave their cloisters take their work seriously, approaching their adventures as personal tests of their physical and spiritual growth. As a rule, monks care little for material wealth and are driven by a desire to accomplish a greater mission than merely slaying monsters and plundering their treasure.
+
+### Creating a Monk
+As you make your monk character, think about your connection to the monastery where you learned your skills and spent your formative years. Were you an orphan or a child left on the monastery's threshold? Did your parents promise you to the monastery in gratitude for a service performed by the monks? Did you enter this secluded life to hide from a crime you committed? Or did you choose the monastic life for yourself?
+
+Consider why you left. Did the head of your monastery choose you for a particularly important mission beyond the cloister? Perhaps you were cast out because of some violation of the community's rules. Did you dread leaving, or were you happy to go? Is there something you hope to accomplish outside the monastery? Are you eager to return to your home?
+
+As a result of the structured life of a monastic community and the discipline required to harness ki, monks are almost always lawful in alignment.
+
+### Quick Build
+You can make a monk quickly by following these suggestions. First, make Dexterity your highest ability score, followed by Wisdom. Second, choose the hermit background.
+-->
+
+### Training and Asceticism
+Small walled cloisters dot the world,  tiny refuges from the flow of ordinary life, where time seems to stand still. The monks who live there seek personal perfection through contemplation and rigorous training. Many entered the monastery as children, sent to live there when their parents died, when food couldn't be found to support them, or in return for some kindness that the monks had performed for their families.
+
+Some monks live entirely apart from the surrounding population, secluded from anything that might impede their spiritual progress. Others are sworn to isolation, emerging only to serve as spies or assassins at the command of their leader, a noble patron, or other mortal or divine power.
+
+The majority of monks don't shun their neighbors, making frequent visits to nearby towns or villages and exchanging their service for food and other goods. As versatile warriors, monks often end up protecting their neighbors from monsters or tyrants.
+
+### Creating a Monk
+As you make your monk character, think about your connection to the monastery where you learned your skills and spent your formative years. Were you an orphan or a child left on the monastery's threshold? Did your parents promise you to the monastery in gratitude for a service performed by the monks? Did you enter this secluded life to hide from a crime you committed? Or did you choose the monastic life for yourself?
+
+<div class='footnote'>PART 1 | CLASSES</div>
+<img src='https://www.gmbinder.com/images/NYSqgLC.jpg' style='position:absolute; top:0px; right:-400px; width:1500px' />
+<img src='https://www.gmbinder.com/images/76ytPWI.png' style='position:absolute; top:100px; right:0px; width:800px' />
+<img src='https://www.gmbinder.com/images/E8GrMME.png' style='position:absolute; top:0px; right:0px; width:900px' />
+<img src='https://www.gmbinder.com/images/cUVZ02S.png' style='position:absolute; top:200px; right:-60px; width:500px' />
+
+\pagebreakNum
+
+<div style='margin-top:35px;'></div>
+
+<!-- 
+<div class='classTable wide'>
+
+##### The Monk
+|Level|Proficiency<br>Bonus|&nbsp;|Martial<br>Arts|&nbsp;|Chi<br>Points|&nbsp;|Features|
+|:---:|:-:|-|:-:|-|:-:|-|:--------------------------------------------------|
+| 1st | +2 || 1d6|| — || Unarmored Defense, Martial Arts                    |
+| 2nd | +2 || 1d6|| 2 || Chi, Celerity, Dedicated Weapon                    |
+| 3rd | +2 || 1d6|| 3 || Monastic Style, Combo Strike, Swift Reflexes       |
+| 4th | +2 || 1d6|| 4 || Ability Score Improvement, Roll                    |
+| 5th | +3 || 1d6|| 5 || Extra Attack, Stunning Strike                      |
+| 6th | +3 || 1d6|| 6 || Monastic Style feature, Chi Strikes                |
+| 7th | +3 || 1d6|| 7 || Evasion, Detox                                     |
+| 8th | +3 || 1d6|| 8 || Ability Score Improvement                          |
+| 9th | +4 || 1d6|| 9 || Celerity improvement, Zen Flight                   |
+| 10th| +4 || 1d6|| 10|| Monastic Style feature, Inner Peace                |
+| 11th| +4 || 1d8|| 11|| Improved Chi Techniques                            |
+| 12th| +4 || 1d8|| 12|| Ability Score Improvement                          |
+| 13th| +5 || 1d8|| 13|| Spinning Crane Kick, Zen Flight improvement        |
+| 14th| +5 || 1d8|| 14|| Diffuse Magic, Transcendance                       |
+| 15th| +5 || 1d8|| 15|| Celerity improvement, Timeless Body                |                       |
+| 16th| +5 || 1d8|| 16|| Ability Score Improvement                          |
+| 17th| +6 ||1d10|| 17|| Monastic Style feature                             |
+| 18th| +6 ||1d10|| 18|| August Blessing, Touch of Death                    |
+| 19th| +6 ||1d10|| 19|| Ability Score Improvement                          |
+| 20th| +6 ||1d10|| 20|| Grand Master                                       |
+</div>
+-->
+
+<div class='classTable wide'>
+
+##### The Monk
+|Level|Proficiency<br>Bonus|&nbsp;|Martial<br>Arts|&nbsp;|Chi<br>Points|&nbsp;|Celerity|&nbsp;|Swift<br>Reflexes|&nbsp;|Features|
+|:---:|:-:|-|:-:|-|:-:|-|:-:|-|:-:|-|:--------------------------------------------------|
+| 1st | +2 || 1d6|| — ||    —    || — || Unarmored Defense, Martial Arts                    |
+| 2nd | +2 || 1d6|| 2 || +10 ft. || — || Chi, Celerity, Dedicated Weapon                    |
+| 3rd | +2 || 1d6|| 3 || +10 ft. || 2 || Monastic Style, Combo Strike, Swift Reflexes       |
+| 4th | +2 || 1d6|| 4 || +10 ft. || 2 || Ability Score Improvement                          |
+| 5th | +3 || 1d6|| 5 || +10 ft. || 3 || Extra Attack, Extra Reaction                       |
+| 6th | +3 || 1d6|| 6 || +15 ft. || 3 || Monastic Style feature, Chi-Empowered Strikes      |
+| 7th | +3 || 1d6|| 7 || +15 ft. || 3 || Evasion, Inner Peace                               |
+| 8th | +3 || 1d6|| 8 || +15 ft. || 3 || Ability Score Improvement                          |
+| 9th | +4 || 1d6|| 9 || +15 ft. || 3 || Celerity improvement                               |
+| 10th| +4 || 1d6|| 10|| +20 ft. || 3 || Purity of Body
+| 11th| +4 || 1d8|| 11|| +20 ft. || 4 || Monastic Style feature, Extra Reaction (2)         |
+| 12th| +4 || 1d8|| 12|| +20 ft. || 4 || Ability Score Improvement                          |
+| 13th| +5 || 1d8|| 13|| +20 ft. || 4 || Improved Martial Arts
+| 14th| +5 || 1d8|| 14|| +25 ft. || 4 || Enlightenment                                      |
+| 15th| +5 || 1d8|| 15|| +25 ft. || 4 || Timeless Body, Celerity improvement                |
+| 16th| +5 || 1d8|| 16|| +25 ft. || 4 || Ability Score Improvement                          |
+| 17th| +6 ||1d10|| 17|| +25 ft. || 5 || Monastic Style feature, Extra Reaction (3)         |
+| 18th| +6 ||1d10|| 18|| +30 ft. || 5 || Transcendence                                      |
+| 19th| +6 ||1d10|| 19|| +30 ft. || 5 || Ability Score Improvement                          |
+| 20th| +6 ||1d10|| 20|| +30 ft. || 5 || Grand Master                                       |
+</div>
+
+<!-- 
+&nbsp;&nbsp;&nbsp; ~~Consider why you left. Did the head of your monastery choose you for a particularly important mission beyond the cloister? Perhaps you were cast out because of some violation of the community's rules. Did you dread leaving, or were you happy to go? Is there something you hope to accomplish outside the monastery? Arc you eager to return to your home? As a result of the structured life of a monastic community and the discipline required to harness chi, monks are almost always lawful in alignment.~~
+-->
+
+#### Quick Build
+You can make a monk quickly by following these sugges-tions. First, Dexterity should be your highest ability score, followed by Wisdom.
+
+#### Optional Rule: Multiclassing
+If your group uses the optional rule on multiclassing in the *Player's Handbook*, here's what you need to know if you choose monk as one of your classes.
+
+***Ability Score Minimum.*** As a multiclass character, you must have at least a Dexterity and Wisdom score of 13 to take a level in this class, or to take a level in another class if you are already a monk.
+
+***Proficiencies Gained.*** If monk isn't your initial class, here are the proficiencies you gain when you take your first level as a monk: light armor, simple weapons, shortswords, and improvised weapons.
+
+\columnbreak
+
+## Class Features
+<div style='margin-top:-4px;'></div>
+As a monk, you gain the following class features.
+
+#### Hit Points
+___
+- **Hit Dice:** 1d8 per monk level
+- **Hit Points at 1st Level:** 8 + your Constitution modifier
+- **Hit Points at Higher Levels:** 1d8 (or 5) + your Constitution modifier per monk level after 1st
+
+#### Proficiencies
+___
+- **Armor:** Light armor
+- **Weapons:** Simple weapons, shortswords, improvised weapons
+- **Tools:** Choose one type of artisan's tools or one musical instrument
+___
+- **Saving Throws:** Strength, Dexterity
+- **Skills:** Choose two from Acrobatics, Athletics, History, Insight, Intimidation, Perception, Religion, and Stealth
+
+#### Equipment
+You start with the following equipment, in addition to the equipment granted by your background:
+ - *(a)* a shortsword or *(b)* any simple weapon
+ - *(a)* a dungeoneer's pack or *(b)* an explorer's pack
+ - leather armor and 10 darts
+
+<div class='footnote'>PART 1 | CLASSES</div>
+<img src='https://www.gmbinder.com/images/eec1Qjq.png' style='position:absolute; top:-70px; right:50px; width:700px' />
+
+\pagebreakNum
+
+### Unarmored Defense
+*1st-level monk feature* <br/>
+<div style='margin-top:-4px;'></div>
+
+While you are wearing no armor and not wielding a shield, your AC equals 10 + your Dexterity modifier + your Wisdom modifier.
+
+### Martial Arts
+*1st-level monk feature* <br/>
+<div style='margin-top:-4px;'></div>
+
+Your practice of martial arts gives you mastery of combat styles that use unarmed strikes and monk weapons, which are darts, shortswords, and any simple or improvised melee weapons that don't have the two-handed or heavy property.
+
+You gain the following benefits while you are unarmed or wielding only monk weapons and you aren't wearing medium or heavy armor.
+- You can use Dexterity instead of Strength for the attack and damage rolls of your unarmed strikes and weapons.
+- You can use Dexterity instead of Strength for Athletics checks made to grapple or shove.
+- You can roll a d6 in place of the normal damage of your unarmed strike or monk weapon. This die changes as you gain monk levels, as shown in the Martial Arts column of the Monk table.
+- When you use the Attack action with an unarmed strike or a monk weapon on your turn while not wielding a shield, you can make one additional attack with an unarmed strike or monk weapon as a bonus action. For example, if you take the Attack action and attack with a quarterstaff, you can also make an unarmed strike as a bonus action.
+
+Certain styles use specialized forms of the monk weapons. For example, you might use a club that is two lengths of wood connected by a short chain (called a nunchaku) or a sickle with a shorter, straighter blade (called a kama). Whatever name you use for a monk weapon, you can use the game statistics provided for the weapon on the Weapons page.
+
+### Chi
+*2nd-level monk feature* <br/>
+<div style='margin-top:-4px;'></div>
+
+Your training allows you to harness your inner spirit, prominently known in most monk circles as "chi," to accomplish supernatural feats. Your access to this energy is represented by a number of chi points. Your monk level determines the number of points you have, as shown in the Chi Points column of the Monk table.
+
+\columnbreak
+
+You can spend these points to fuel various chi features. You start knowing four such features: Stance of the Fierce Tiger, Stance of the Spirited Crane, Stance of the Sturdy Ox, and Stance of the Wise Serpent.. You learn more chi features as you gain levels in this class.
+
+When you spend a chi point, it is unavailable until you finish a short or long rest, at the end of which you draw all of your expended chi back into yourself. You must spend 30 minutes of the rest meditating to regain your chi points.
+
+Some of your chi features require your target to make a saving throw to resist the feature's effects. The saving throw DC is calculated as follows:
+
+<div style="text-align: Center">
+
+**Chi save DC** = 8 + your proficiency bonus + <br> your Wisdom modifier
+</div>
+
+#### Stance of the Fierce Tiger
+Immediately after you take the Attack action on your turn, you can spend 1 chi point to make two unarmed strikes as a bonus action.
+
+#### Stance of the Spirited Crane
+You can spend 1 chi point to take the Help action as a bonus action on your turn.
+
+#### Stance of the Sturdy Ox
+You can spend 1 chi point to take the Dodge action as a bonus action on your turn.
+
+#### Stance of the Wise Serpent
+You can spend 1 chi point as a bonus action to roll a Martial Arts die. You regain a number of hit points equal to the number rolled plus your Wisdom modifier.
+
+<!-- 
+
+#### Expel Harm
+
+\columnbreak
+
+#### Fists of Fury
+Immediately after you take the Attack action on your turn, you can spend 1 chi point to make two unarmed strikes as a bonus action if you are not using a shield.
+
+#### Leg Sweep
+You can spend 1 chi point as an action to make a sweeping attack with an unarmed strike or monk weapon against any number of creatures within reach. Each creature must make a Dexterity saving throw of be knocked prone.
+
+
+#### Roll
+???????????
+
+#### **MORE CHI TECHNIQUES?**
+**[I kind of want to add more techniques here, since just two doesn't feel right. Roll is a big contender.]**
+
+#### **STANCES?**
+**[An alternate idea is to call four chi techniques "stances" based on the August Celestials, which replicate the effects of the base Chi techniques. As examples: Flurry of Blows becomes Stance of the White Tiger, Patient Defense becomes Stance of the Sturdy Ox, etc.]**
+
+-->
+
+### Celerity
+*2nd-level monk feature* <br/>
+<div style='margin-top:-4px;'></div>
+
+While you are not wearing medium or heavy armor or wielding a shield you can gain the following benefits:
+- Your speed increases by 10 feet. This bonus increases when you reach certain monk levels, as shown in the Monk table.
+- You can use your Dexterity instead of Strength when determining jump distance. 
+- You can take the Dash or Disengage action as a bonus action. When you do, your jump distance is doubled for that turn.
+- At 9th level, you gain the ability to move along vertical surfaces and across liquids on your turn without falling during the move.
+- At 15th level, you can also move upside down along ceilings while leaving your hands free on your turn without falling during the move.
+
+<img src='https://www.gmbinder.com/images/ZUiw9ln.jpg' style='position:absolute; top:760px; right:0px; width:800px; transform:scaleX(-1)' />
+<img src='https://www.gmbinder.com/images/3e9S91s.png' style='position:absolute; top:-160px; right:0px; width:900px' />
+<img src='https://www.gmbinder.com/images/vdfpNvz.png' style='position:absolute; bottom:-50px; left:45px; width:350px;' />
+
+<div class='footnote'>PART 1 | CLASSES</div>
+
+\pagebreakNum
+
+### Dedicated Weapon
+*2nd-level monk feature* <br/>
+<div style='margin-top:-4px;'></div>
+
+You train yourself to use a variety of weapons as monk weapons, not just simple melee weapons and shortswords. Whenever you finish a short or long rest, you can touch one weapon, focus your chi on it, and then count that weapon as a monk weapon until you use this feature again.
+
+Whenever you finish a short or long rest, you can touch one weapon, or a number of weapons of a single type with the thrown weapon property up to your monk level, and then count that weapon as a monk weapon until you use this feature again. The weapon must be a simple or martial weapon that you are proficient with, and must lack the heavy and special properties. Alternatively, it may be a weapon with both the heavy and reach properties.
+
+### Monastic Style
+*3rd-level monk feature* <br/>
+<div style='margin-top:-4px;'></div>
+
+You commit yourself to a monastic style, a specific method of combat and lifestyle. Three styles, the Way of the Brewmaster, the Way of the Mistweaver, or the Way of the Windwalker are all detailed at the end of the class description. Your style grants you features at 3rd level and again at 6th, 11th, and 17th level.
+
+### Combo Strike
+*3rd-level monk feature* <br/>
+<div style='margin-top:-4px;'></div>
+
+If you spend 1 chi point or more as part of your action on your turn, you can make one attack with an unarmed strike or a monk weapon as a bonus action before the end of the turn.
+
+### Swift Reflexes
+*3rd-level monk feature* <br/>
+<div style='margin-top:-4px;'></div>
+
+In your practice of the martial arts, you have improved your reflexes beyond the norm. You have trained to respond to certain events with startling haste.
+
+You gain two Swift Reflexes of your choice at 3rd level. A list of the available options can be found at the end of this class description. When you gain certain monk levels, you gain additional reflexes of your choice, as shown on the Swift Reflexes column of the Monk table.
+
+Additionally, when you gain a level in this class, you can choose one of the reflexes you know and replace it with another reflex that you could learn at that level.
+
+### Ability Score Improvement
+*4th-level monk feature* <br/>
+<div style='margin-top:-4px;'></div>
+
+When you reach 4th level, and again at 8th, 12th, 16th, and 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.
+
+<!-- 
+### ~~Roll~~
+*4th-level monk feature* <br/>
+<div style='margin-top:-4px;'></div>
+
+~~As a reaction when you take damage from an area effect, such as a blue dragon's frost breath or a *fireball* spell, you can attempt to roll out of the way, moving up to your speed. If you move out of the affected area with this movement, you can reduce the damage taken by your Martial Arts die + your Dexterity or Strength modifier + your proficiency bonus.~~
+
+**[I'm not a fan of the above implementation; it feels like it clashes with Evasion, even if they work together. The Slow Fall portion below is fine, but I'm thinking of making Roll a chi technique, if I can make it not step on the toes of other abilities.]**
+
+Additionally, you can use your reaction when you fall to reduce any falling damage you take by an amount equal to five times your monk level.
+
+-->
+
+### Extra Attack
+*5th-level monk feature* <br/>
+<div style='margin-top:-4px;'></div>
+
+You can attack twice, instead of once, whenever you take the Attack action on your turn.
+
+<!-- 
+### Stunning Strike
+*5th-level monk feature* <br/>
+<div style='margin-top:-4px;'></div>
+
+You can interfere with the flow of chi in an opponent's body. Once per turn when you hit another creature with a melee weapon attack, you can spend 2 chi points to attempt a stunning strike. The target must succeed on a Constitution saving throw or be stunned until the end of your next turn.
+-->
+
+\columnbreak
+
+### Extra Reaction
+*5th-level monk feature* <br/>
+<div style='margin-top:-4px;'></div>
+
+You can can use a reaction up to twice before the start of your next turn. You can only use one reaction to a given trigger. If a feature or effect would prevent you from taking reactions but does not incapacitate you, you instead lose one use of your reaction for the duration of the effect.
+
+The number of times you can use a reaction in between the start of your turns increases to three when you reach 11th level in this class and to four when you reach 17th level in this class.
+
+### Chi-Empowered Strikes
+*6th-level monk feature* <br/>
+<div style='margin-top:-4px;'></div>
+
+Starting at 6th level, your unarmed strikes count as magical for the purpose of overcoming resistance and immunity to nonmagical attacks and damage.
+
+### Evasion
+*7th-level monk feature* <br/>
+<div style='margin-top:-4px;'></div>
+
+Your instinctive agility lets you dodge out of the way of certain area effects, such as a blue dragon's frost breath or a *fireball* spell. When you are subjected to an effect that allows you to make a Dexterity saving throw to take only half damage, you instead take no damage if you succeed on the saving throw, and half damage if you fail.
+
+### Inner Peace
+*7th-level monk feature* <br/>
+<div style='margin-top:-4px;'></div>
+
+You can use your bonus action to end one effect on yourself that is causing you to be charmed or frightened.
+
+### Purity of Body
+*10th-level monk feature* <br/>
+<div style='margin-top:-4px;'></div>
+
+Your mastery of the chi flowing through you makes you immune to common ailments. You are immune to disease, poison damage, and the poisoned condition.
+
+<!--
+**[I guess this isn't too bad as names go. Does the idea of inner tranquility clash with a monk who is more about rigid self-discipline? Plus you have to know that you are being affected to use this ability.]**
+
+**[Should this be able to be used on others, like Detox?]**
+-->
+
+<!--
+### Detox
+*7th-level monk feature* <br/>
+<div style='margin-top:-4px;'></div>
+
+You can use your action to remove one disease or poisoned condition that is affecting you. 
+
+If you spend 1 chi point, you can touch another creature to affect it instead. You can cure multiple diseases and neutralize multiple poisons with a single use of Detox, spending an additional chi point for each one.
+
+**[Rename to be less alcohol-based? "Purge Illness/Toxins" or something similar.]**
+-->
+
+<!-- 
+### Zen Flight
+*9th-level monk feature* <br/>
+<div style='margin-top:-4px;'></div>
+
+By concentrating your chi, you can summon a cloud of mist beneath your feet, bearing you aloft. You can spend 1 chi point to cast the *levitate* spell, targeting yourself and without needing material components.
+
+At 13th level, you can instead cast *fly* targeting yourself by spending 3 chi points.
+
+**[I really, *really* liked this ability in game, but it's a lot more prominently external chi manipulation and Pandaria-monk based than I'd like.]**
+-->
+
+<!--
+### Improved Chi Techniques
+*11th-level monk feature* <br/>
+<div style='margin-top:-4px;'></div>
+
+Your proficiency over chi grants you improved effects when using your basic chi techniques:
+- When using Expel Harm, each creature of your choice within 10 feet of you takes an amount of psychic damage equal to the number of temporary hit points you gain, or half as much damage on a successful Constitution saving throw.
+- When using Fists of Fury, you can make a total of three unarmed strikes instead of two.
+
+**[These were added when using [kireikasu's guide](https://www.gmbinder.com/share/-MTlouFHmy1ywgAcT4D3) as a framework, pushing the subclass feature to 10th level. My problem with it is that it kind of makes it difficult for adding more base chi techniques like Roll. An alternative option would be adding *Advanced* Chi Techniques instead, like the Spinning Crane Kick below, that maybe cost more chi to use.]**
+-->
+
+<!-- 
+### Something Something Chi
+*11th-level monk feature* <br/>
+<div style='margin-top:-4px;'></div>
+
+#### [Chi Wave]
+[Hadouken]
+
+#### [Clash]
+[You charge at the target like an ox.]
+
+#### [Hurricane Strike]
+[An upgraded Fists of Fury?]
+
+#### [Flying Serpent Kick]
+
+#### [Mighty Ox Kick]
+[Can push a target a great distance.]
+
+#### [Pressure Points]
+[A crowd control ability. Kind of like Stunning Strike; redundant?]
+
+#### [Shoryuken]
+
+#### [Spinning Crane Kick]
+You can spend 2 chi points as an action to make an attack with an unarmed strike or a monk weapon against any number of creatures within reach, making a separate attack roll for each target.
+-->
+
+<!--
+### Spinning Crane Kick
+*13th-level monk feature* <br/>
+<div style='margin-top:-4px;'></div>
+
+You can use your action to make an attack with an unarmed strike or a monk weapon against any number of creatures within reach, making a separate attack roll for each target.
+
+**[I'm not wild about the Shaolin-styled name, even if I like the ability. See the comment in Improved Chi Techniques as well.]**
+-->
+
+<!-- 
+### Diffuse Magic
+*14th-level monk feature* <br/>
+<div style='margin-top:-4px;'></div>
+
+Your flow of chi fortifies you against harmful spells and effects. You have advantage on all Intelligence, Wisdom, and Charisma saving throws against magic.
+
+**[I didn't alter this ability because I wasn't sure of the logic behind it. I mean, 5e monks get Diamond Soul that gives proficiency in all saving throws AND lets you reroll failed saves for 1 chi point. This is significantly weaker and the second portion got moved to 18th level for some reason.]**
+-->
+
+<!--
+**[I'm not sure whether or not this should be here. It's partially added because Transcendence was already added and partially because Diffuse Magic is kind of weak in comparison to Diamond Soul. On the other hand, between the WoW monks, the Blademaster's ability to do Mirror Images, and the Evoker's whole Dream illusion abilities, I can see this as being about as agnostic as you can get for this class.]**
+-->
+
+
+<div class='footnote'>PART 1 | CLASSES</div>
+
+\pagebreakNum
+
+### Improved Martial Arts
+*13th-level monk feature* <br/>
+<div style='margin-top:-4px;'></div>
+
+#### Charging Ox Wave
+[Charge attack, pushing target back or knocking them down.]
+
+You can spend 2 chi points as an action to move up to your speed in a straight line. When you do, you can pass through the space of other creatures. Each creature whose space you pass through must succeed on a Strength saving throw or take 
+
+##### Thunderous Blows
+Source: Tal'Dorei Campaign Setting
+
+Starting when you choose this path at 3rd level, your rage instills you with the strength to batter around your foes, making any battlefield your domain. Once per turn while raging, when you damage a creature with a melee attack, you can force the target to make a Strength saving throw (DC 8 + your proficiency bonus + your Strength modifier). On a failure, you push the target 5 feet away from you, and you can choose to immediately move 5 feet into the target’s previous position.
+
+##### Mighty Impel
+10th-Level Path of the Giant Feature (Source: Unearthed Arcana 83 - Giant Options)
+
+Your connection to giant strength now allows you to hurl both allies and enemies on the battlefield. As a bonus action while raging, you can choose one Medium or smaller creature within your reach and move it to an unoccupied space you can see within 30 feet of yourself. An unwilling creature must succeed on a Strength saving throw (DC equals 8 + your proficiency bonus + your Strength modifier) to avoid the effect.
+
+If, at the end of this movement, the thrown creature isn’t on a surface or liquid that can support it, the creature falls, taking damage as normal and landing prone.
+
+##### Totemic Attunement
+At 14th level, you gain a magical benefit based on a totem animal of your choice. You can choose the same animal you selected previously or a different one.
+
+Bear. While you're raging, any creature within 5 feet of you that's hostile to you has disadvantage on attack rolls against targets other than you or another character with this feature. An enemy is immune to this effect if it can't see or hear you or if it can't be frightened.
+
+Eagle. While raging, you have a flying speed equal to your current walking speed. This benefit works only in short bursts; you fall if you end your turn in the air and nothing else is holding you aloft.
+
+Elk. While raging, you can use a bonus action during your move to pass through the space of a Large or smaller creature. That creature must succeed on a Strength saving throw (DC 8 + your Strength bonus + your proficiency bonus) or be knocked prone and take bludgeoning damage equal to 1d12 + your Strength modifier.
+
+Tiger. While you're raging, if you move at least 20 feet in a straight line toward a Large or smaller target right before making a melee weapon attack against it, you can use a bonus action to make an additional melee weapon attack against it.
+
+Wolf. While you're raging, you can use a bonus action on your turn to knock a Large or smaller creature prone when you hit it with melee weapon attack.
+
+##### Thunderous Blows
+Starting when you choose this path at 3rd level, your rage instills you with the strength to batter around your foes, making any battlefield your domain. Once per turn while raging, when you damage a creature with a melee attack, you can force the target to make a Strength saving throw (DC 8 + your proficiency bonus + your Strength modifier). On a failure, you push the target 5 feet away from you, and you can choose to immediately move 5 feet into the target’s previous position.
+
+
+#### Flying Tiger Palm
+[Can make a large jump attack against a distant target.]
+
+#### Rising Serpent Fist
+[Can knock a target into the air.]
+
+When you hit a creature with a weapon attack, you can expend one superiority die to attempt to drive the target back. You add the superiority die to the attack's damage roll, and if the target is Large or smaller, it must make a Strength saving throw. On a failed save, you push the target up to 15 feet away from you.
+
+\pagebreakNum
+
+#### Spinning Crane Kick
+You can spend 2 chi points as an action to make a melee attack with an unarmed strike or a monk weapon against any number of creatures within reach, making a separate attack roll for each target.
+
+### Enlightenment
+*14th-level monk feature* <br/>
+<div style='margin-top:-4px;'></div>
+
+Your mastery of chi grants you proficiency in all saving throws.
+
+Additionally, whenever you make a saving throw and fail, you can use a reaction and spend 1 ki point to reroll it. You must take the second result.
+
+### Timeless Body
+*15th-level monk feature* <br/>
+<div style='margin-top:-4px;'></div>
+
+Your chi sustains you so that you suffer none of the frailty of old age and you can't be aged magically. You can still die of old age, however. In addition, you no longer need food or water.
+
+<!-- 
+### August Blessing
+*18th-level monk feature* <br/>
+<div style='margin-top:-4px;'></div>
+
+Whenever you make a saving throw and fail, you can spend 1 chi point to reroll it and take the second result.
+
+**[This is...eh. The name doesn't fit, and I've already stated my confusion about it under Diffuse Magic.]**
+-->
+
+<!-- 
+### Touch of Death
+*18th-level monk feature* <br/>
+<div style='margin-top:-4px;'></div>
+
+You can make a single, powerful attack to exploit an enemy's weakest point, instantly killing them. When you hit a creature with an unarmed strike, you can deal an additional 10d10 necrotic damage to the target, or half as much on a successful Constitution saving throw.
+
+Once you use this feature, you can’t do so again until you finish a long rest, unless you spend 5 chi points.
+-->
+
+### Transcendence
+*18th-level monk feature* <br/>
+<div style='margin-top:-4px;'></div>
+
+You have transcended the limited connections between body and spirit. You can use your action to spend 4 ki points to partially shift your body into the spiritual realm, becoming invisible for 1 minute. During that time, you also have resistance to all damage but force damage.
+
+Additionally, you can spend 8 ki points to enter a state of deep meditation, allowing your spirit to become untethered from your physical form. As an action, you can project your spirit from your body. The body you leave behind is unconscious and in a state of suspended animation.
+
+Your spirit resembles your mortal form in almost every way, replicating game statistics but not your possessions. Any damage or other effects that apply to your spirit or physical body affects the other. Your spirit can remain outside your body for up to 1 hour or until your concentration is broken (as if concentrating on a spell). When your projection ends, your spirit returns to your body or your body magically teleports to your spirit’s space (your choice).
+
+While projecting your spirit, your spirit and body gain resistance all damage but force damage. Additionally, you have a flying speed equal to your walking speed and can hover. You can move through creatures and objects as if they were difficult terrain, but you take 1d10 force damage if you end your turn inside a creature or an object.
+
+### Grand Master
+*20th-level monk feature* <br/>
+<div style='margin-top:-4px;'></div>
+
+You have achieved true mastery of your inner self. Your Wisdom and either your Dexterity or Strength scores increase by 4. Your maximum for those scores is now 24.
+
+Additionally, if you start your turn with no chi points, you immediately regain 1 chi point.
+
+## Swift Reflexes
+### Deflect Blows
+While you are not wearing medium or heavy armor or wielding a shield, you can use your reaction when you are hit by a weapon attack to deflect the blow. When you do so, the damage you take from the attack is reduced by 1d10 + your Dexterity + your monk level.
+
+If the attack is from a melee weapon and you reduce the damage to 0, you can spend 1 chi point to make a melee attack with an unarmed strike or monk weapon against the attacker or against another target within reach of both you and the attacker. On a hit, you can push the target up to 5 feet away or knock it prone.
+
+If the attack is from a ranged weapon and you reduce the damage to 0, you can catch the missile if it is small enough for you to hold in one hand and you have at least one hand free. If you catch a missile in this way, you can spend 1 chi point to make a ranged attack with the weapon or piece of ammunition you just caught, as part of the same reaction. You make this attack with proficiency, regardless of your weapon proficiencies, and the missile counts as a monk weapon for the attack, which has a normal range of 20 feet and a long range of 60 feet.
+
+**[Separate?]**
+
+### Leaping Evasion
+*Prerequisite: 7th level*
+
+When you succeed on a Dexterity save against a spell or effect that affects an area, you can use your reaction to attempt to jump out of the effect's area. This movement does not provoke attacks of opportunity.
+
+**[Needs more cowbell.]**
+
+### Parry
+You can use your reaction to add your proficiency bonus to your Armor Class against one melee attack that would hit you. 
+
+Parry. Aurelia adds 7 to her AC against one melee attack that would hit her. To do so, Aurelia must see the attacker and be wielding a melee weapon.
+
+### ???
+Unyielding. When Aurelia is subjected to an effect that would move her, knock her prone, or both, she can use her reaction to be neither moved nor knocked prone.
+
+### Slow Fall
+You can use your reaction when you fall to reduce any falling damage you take by an amount equal to five times your monk level. If you still take fall damage from the triggering fall, it does not knock you prone.
+
+### ???
+When you reduce a creature to 0 hit points, you can use your reaction to move up to half your speed and make a melee attack.
+
+### ???
+Retaliating Strike. When a creature within 5 feet of the infiltrator hits or misses the infiltrator with a melee attack, the infiltrator makes one Unarmed Strike attack against the attacker.
+
+\pagebreakNum
+
+
+## Monastic Styles
+There are many monastic styles that have made their mark on Azeroth, some reminiscent of the martial artists from Pandaria and others much more unique. Three such styles are honored among monks and taught. All three styles rely on the same basic techniques, diverging as the student grows more adept. Thus, a monk need choose a tradition only upon reaching 3rd level.
+
+### Way of the Brewmaster
+Brewmasters are often quirky and joyful, many would think them merely as fools that enjoy a drink to bring gladness to the despondent or to demonstrate humility to the arrogant, but when battle is joined, the brewmaster can be a madden-ing, masterful foe.
+
+#### The Good Stuff
+*3rd-level Way of the Brewmaster feature* <br/>
+<div style='margin-top:-4px;'></div>
+
+You gain proficiency in brewer's supplies. If you are already proficient in brewer's supplies, your proficiency bonus doubles for any ability check you make with it. You also have advantage on ability checks and saving throws involving alcohol and can drink potions as a bonus action.
+
+You gain proficiency in brewer's supplies. Whenever you make an ability check related to alcohol
+
+
+Whenever you make an Intelligence (History) check related to the Origin of Stonework, you are considered proficient in the History skill and add double your Proficiency bonus to the check, instead of your normal Proficiency bonus.
+
+\columnbreak
+
+#### Bonus Proficiency
+Starting when you choose this tradition at 3rd level, you gain proficiency in brewer's supplies. If you are already proficient in brewer's supplies, your proficiency bonus doubles for any ability check you make with it.
+
+#### Elusive Brewer
+At 3rd level, you learn to channel your chi into brews that bolster your powers.
+
+You know the Black Ox brew and one other brew of your choice, all of which are detailed in the "Elusive Brews" section below. You learn one additional brew of your choice at 6th, 11th, and 17th level.
+
+When you gain a level in this class, you can choose one of the brews you know and replace it with another brew that you could learn at that level
+
+***Using Elusive Brews.*** Your elusive brews all require an action to be used, when you take the action you choose which known brew you wish to drink and spend chi points equal to its cost. A brew requires you to spend chi points each time you use it unless specified otherwise.
+
+To use any of your known brews, you must have a flask of drinkable liquid on you as all brews require you to channel chi into some liquid as you drink it.
+
+#### Stagger
+Beginning at 6th level, you learn to shrug off harmful attacks made against you. You can use your reaction upon taking damage to give yourself resistance to all damage dealt by the attack, except psychic damage.
+
+You can use this feature twice. You regain expended uses when you finish a short or long rest.
+
+#### Light Brewing
+Starting at 11th level, when you use your action to drink a brew, you can make one unarmed strike as a bonus action.
+
+At 17th level, this increases to two unarmed strikes.
+
+\columnbreak
+
+#### Elusive Brews
+The elusive brews are presented in alphabetical order. If a brew requires a level, you must be that level in this class to learn the brew.
+
+***Black Ox Brew.*** You can spend 1 chi point to give yourself advantage on the next melee attack you make within 1 minute. You may make one melee attack as part <br> of the same action.
+
+***Blackout Brew (11th level Required).*** You can spend 3 chi points to gain the effects of the *blur* spell for 1 minute.
+
+***Breath of Fire (6th level Required).*** You can spend 2 chi points to exhale fire in a 15-foot cone. Each creature in the area must make a Dexterity saving throw, taking fire damage equal to your Monk level + your Wisdom modifier on a failed save, or half as much damage on a success.
+
+***Fortifying Brew.*** You can spend 1 chi point to gain temporary hit points equal to half your Monk level + your Wisdom modifier.
+
+***Invigorating Brew (11th level Required).*** You can spend 4 chi points to gain the effects of the *haste* spell for 1 minute.
+
+***Ironskin Brew (6th level required).*** You can spend 2 chi points to gain resistance to bludgeoning, piercing, and slashing damage dealt by nonmagical attacks for 1 minute.
+
+***Nimble Brew (11th level Required).*** You can spend 3 chi points to gain the effects of the *freedom of movement* spell for 1 minute.
+
+***Purifying Brew. (17th level Required).*** You can spend 5 chi points to cast *greater restoration* on yourself.
+
+***Thunder Tea.*** You can spend 1 chi point to gain the strength of Xuen, until the end of your next turn, your melee attacks deal extra thunder damage equal to your Wisdom modifier.
+
+<div class='footnote'>PART 1 | CLASSES</div>
+
+\pagebreakNum
+
+### Way of the Mistweaver
+Mistweavers are unique among those who heal. They channel energies that are mysterious, oftentimes misunder&shy;stood by commoners as some form of folk medicine. <br> But those who weave the mists wield the power of life’s essence, using a mixture of preventative and restorative spells to mend their allies’ wounds.
+
+#### Soothing Mist
+Starting when you choose this tradition at 3rd level, you have a pool of healing chi that replenishes when you take a long rest. With that pool, you can restore a total number of hit points equal to your monk level x 10.
+
+As an action, you can manifest a beam of chi towards a creature within 30 feet of you and draw power from the pool to restore a number of hit points to that creature, up to the maximum amount remaining in your pool.
+
+Alternatively, you can expend 5 hit points from your pool of healing to cure the target of one disease or neutralize one poison affecting it. You can cure multiple diseases and neutralize multiple poisons with a single use of Soothing Mist, expending hit points separately for each one.
+
+This feature has no effect on undead and constructs.
+
+#### Chi-Ji's Palm
+At 3rd level, when you use your Soothing Mist feature, you can make an unarmed strike as a bonus action and may use your Wisdom modifier for the attack and damage roll with this attack.
+
+#### Mistwalk
+At 6th level, you are able to teleport short distances through mist. As an action, you can spend 1 chi point and teleport 60 feet to an unoccupied space you can see. As part of the same action you can use your soothing mist on a target within range of your new position.
+
+#### Ring of Peace
+Upon reaching 11th level, you can use your action and choose a number of creatures within 15 feet of you equal to your Wisdom modifier. A target must succeed on a Wisdom saving throw or be incapacitated until the end of your next turn or until it takes damage.
+
+You can use this feature a number of times equal to your Wisdom modifier. You regain expended uses when you finish a long rest.
+
+#### Statue of the Jade Serpent
+At 17th level, you can give your chi physical form, shaping it into a statue of Yu'lon the Jade Serpent. You can spend 3 chi points as an action, and choose an empty space within 30 feet of you, manifesting a statue of jade. 
+The statue has hit points equal to twice your monk level, resistance to all damage, and immunity to psychic and poison damage. Whenever you use your Soothing Mist feature, you may choose a second target within 60 feet of the jade statue to be healed for half of the hit points you restore.
+
+The statue remains for 1 minute or until it is destroyed.
+
+\pagebreak
+
+### Way of the Windwalker
+Among monks, none have mastered the martial arts as the windwalkers have, and few across Azeroth can fight with their grace. Windwalkers possess unparalleled physical finesse, and are capable of overwhelming their enemies with a dizzying flurry of punches and kicks. 
+
+#### Windwalking
+*6th-level Way of the Windwalker feature* <br/>
+<div style='margin-top:-4px;'></div>
+
+Your speed increases by 5 feet while you are not wearing medium or heavy armor or wielding a shield. This bonus stacks increases when you reach certain monk levels, as shown in the Monk table.
+
+
+#### Spear Hand Strikes
+Starting when you choose this tradition at 3rd level, you can manipulate your enemy's chi when you harness your own. Whenever you hit a creature with one of the attacks granted by your Fists of Fury, you can impose one of the following effects on that target:
+
+ - It must succeed on a Dexterity saving throw or be knocked prone.
+ - It must make a Strength saving throw. If it fails, you can push it up to 15 feet away from you.
+ - It can't take reactions until the end of your next turn.
+
+#### Tiger's Reflexes
+Also at 3rd level, you react with the swiftness of a tiger. You can give yourself a bonus to your initiative equal to your Wisdom modifier.
+
+#### Windwalking
+Beginning at 6th level, when you use Step of the Wind chi feature you gain a flying speed equal to half your movement speed until the end of your turn. If you end your turn in the air, you immediately fall to the ground.
+
+In addition, you can use your reaction when you fall to reduce any falling damage you take by an amount equal to twice your monk level.
+
+#### Unpredictable Strikes
+Upon reaching at 11th level, whenever you make an oppor-tunity attack, you may spend 1 chi point to use your Fists of Fury feature against the target instead.
+
+#### Quivering Palm
+At 17th level, you are able to set up lethal vibrations in someone's body. When you hit a creature with an unarmed strike, you can spend 3 chi points to start these impercep&shy;tible vibrations, which lats for a number of days equal to your monk level. The vibrations are harmless unless you use your action to end them. To do so, you and the target must be on the same plane of existence. When done, the creature must make a Constitution saving throw. If it fails, it is reduced to 0 hit points. If it succeeds, it takes 10d10 necrotic damage.
+
+You can only have one creature under the effect of this feature at a time. You can chose to end the vibrations harmlessly without using an action.
+
+<div class='footnote'>PART 1 | CLASSES</div>
+
+\pagebreakNum
+
+## Changelog V1
+A lot of inspiration was taken from kireikasu's work [here](https://www.gmbinder.com/share/-MTlouFHmy1ywgAcT4D3). In general, the monk was redesigned to be less about pandaren zen and monasteries, instead being relatively agnostic in core to allow for more broad multiclass concepts and non-Pandaria based custom subclasses.
+
+### General
+- Intimidation and Perception added to the list of skill proficiency options.
+- Fixed an odd typo in Martial Arts, listing medium and heavy armor as mail and plate.
+- Martial Arts now works with light armor or when using a shield, though the ability to make "no-hand" bonus action unarmed attack does not work while wielding a shield.
+- Added the ability to Martial Arts to use Dexterity in place of Strength for grapples and jumps.
+- Increased the starting Martial Arts die from d4 to d6, so as not to force players into wielding a weapon for the first couple levels.
+- Removed the Chi techniques Effuse, Elusive Dance, and Step of the Wind. The two remaining Chi techniques, Fists of Fury and the new Expel Harm, now also upgrade at 11th level.
+- Added Celerity, which is composed of most of the Unarmored Movement feature (now working with light armor and with an upgrade at 15th level) as well as the former Chi technique Step of the Wind (without a chi point cost).
+- Removed the 2nd level version of Roll.
+- Renamed "Monastic Traditions" to "Monastic Styles," to evoke the concept of things like "Drunken Fist Style" and "Monkey Style."
+- Added the Dedicated Weapon ability from Tasha's Cauldron of Everything.
+- Removed Serenity from 3rd level.
+- Added Swift Reflexes at 3rd level, which is composed of the Deflect Missiles ability from the PHB as well as a melee equivalent of that ability, and some other minor changes.
+- Added the Ki-Fueled Attack from Tasha's Cauldron of Everything, renamed as Combo Strike.
+- Added Slow Fall back in as Roll, with a second option to reduce damage taken from AoE attacks.
+- Added the ability to use Detox on other creatures, at the cost of chi.
+- Added Zen Flight at 9th level.
+- Removed the old version of Transcendence from 9th level.
+- Added Improved Chi Techniques at 11th level.
+- Removed Rushing Jade Wind from 13th level.
+- Added Spinning Crane Kick at 13th level, which is a slightly modified version of Whirlwind Attack ability from the Ranger: Hunter Conclave in the PHB.
+- Added an alternate version of Transcendence at 14th level, using the Spirit Projection ability from the Warlock: Undead patron from Van Richten's Guide to Ravenloft. The only changes were to remove two abilities related to casting spells and a warlock subclass ability.
+- Added Touch of Death at 18th level. It is based on Quivering Palm, but being instantaneous, costing more to use, and removing the win-win scenario of either reducing a creature to 0 hit points on a failed save or dealing 10d10 damage on a successful one.
+- Changed Perfect Zen to Grand Master, giving a +4 bonus to Wisdom and Dexterity/Strength like the barbarian capstone.
+
+### Subclasses
+- Moved the 11th level subclass abilities to 10th level.
+
+## Changelog V1.1
+- Added leather armor to their starting equipment
+- Added improvised weapons to the list of weapon proficiencies
+- Added darts (aka shuriken) to the list of monk weapons, under Martial Arts.
+- Moved the ability to use Dexterity for Jump checks to Celerity.
+- Re-added unarmored movement's full speed bonus to Celerity. 
+- Replaced starting Chi abilities.
+
+<!-- 
+
+\pagebreak
+
+### Way of the Evoker
+
+#### Scaleclad Warrior
+*3rd-level Way of the Evoker feature*<br/>
+<div style='margin-top:-4px;'></div>
+
+You learn the Draconic language, if you did not know it already, and gain proficiency in medium armor. You continue to gain the benefits of your monk class features while wearing medium armor.
+
+In addition you learn two cantrips of your choice: *control flames*, *gust*, *mold earth*, or *shape water*. Wisdom is your spellcasting modifier for these spells. You learn an additional cantrip from this list when you reach 6th and 10th level in this class.
+
+#### Evocations
+*3rd-level Way of the Evoker feature*<br/>
+<div style='margin-top:-4px;'></div>
+
+You learn to use the power of chi to mimic the abilities of the dragonflights through evocations. An evocation requires you to spend chi points each time you use it.
+
+**Evocations Known.** You know three evocations of your choice. You learn two additional disciplines of your choice at 6th, 10th and 17th level. Whenever you learn a new evocation, you can also replace one evocation that you already know with a different one.
+
+**Essence Chi.** You gain an additional pool of chi points equal to half your monk level (rounded up). You can use either pool of chi points to cast your evocations but your essence chi points can not be used for any monk ability that isn't an evocation.
+
+You regain all expended essence chi points when you finish a long rest.
+
+**Casting Evocation Spells.** Some evocations allow you to cast spells. See chapter 10 of the Player's Handbook for the general rules of spellcasting. To cast one of these spells, you use its casting time and other rules, but you don't need to provide material components for it.
+
+Once you reach 5th level in this class, you can spend additional chi points to increase the level of that spell, provided that the spell has an enhanced effect at a higher level, as *burning hands* does. The spell's level increases by 1 for each additional chi point you spend. For example, if you are a 5th-level monk and use **???Sweeping Cinder Strike???** to cast *burning hands*, you can spend 3 chi points to cast it as a 2nd-level spell (the evocation's base cost of 2 chi points plus 1).
+
+The maximum number of chi points you can spend to cast a spell in this way (including its base chi point cost and any additional chi points you spend to increase its level) is determined by your monk level, as shown in the Spells and Chi Points table.
+
+##### Spells and Chi Points
+Monk Levels | Maximum Chi Points for a Spell
+:----------:|:------------------------------:
+5th-8th     | 3
+9th-12th    | 4
+13th-16th   | 5
+17th-20th   | 6
+
+\columnbreak
+
+##### Monk 3rd level
+Thunderwave (Fist of Four Thunders) - 2 chi points
+Burning Hands (Sweeping Cinder Strike) - 2 chi points
+Gust of Wind (Rush of the Gale Spirits) - 2 chi points
+Armor of Agathys - 2 chi points
+Catapult - 2 chi points
+Earth Tremor - 2 chi points
+Ice Knife - 2 chi points
+Misty Step - 2 chi points
+Levitate - 2 chi points
+Warding Wind - 2 chi points
+
+##### Monk 6th level
+Shatter (Gong of the Summit) - 3 chi points
+Stoneskin (Eternal Mountain Defense) - 3 chi points
+Flaming Sphere - 3 chi points
+Earthen Grasp - 3 chi points
+Scorching Ray - 3 chi points
+Wind Wall - 3 chi points
+
+##### Monk 11th level
+Fireball (Flames of the Phoenix) - 4 chi points
+Gaseous Form (Mist Stance) - 4 chi points
+Fly (Ride the Wind) - 4 chi points
+Erupting Earth - 4 chi points
+Tidal Wave - 4 chi points
+Thunder Step - 4 chi points
+Wall of Water - 4 chi points
+
+##### Monk 17th level
+Cone of Cold (Breath of Winter) - 6 chi points
+Wall of Fire (River of Hungry Flame) - 5 chi points
+Wall of Stone (Wave of Rolling Earth) - 6 chi points
+Storm Sphere - 6 chi points
+Watery Sphere - 5 chi points
+
+#### Evocations
+***Dragon Breath: Black.*** 
+
+***Dragon Breath: Blue.*** 
+
+***Dragon Breath: Bronze.*** 
+
+***Dragon Breath: Green.*** 
+
+***Dragon Breath: Red.*** 
+
+***???.*** You can spend 2 chi points to cast *armor of agathys*.
+
+***???.*** You can spend 2 chi points to cast *burning hands*.
+
+***???.*** You can spend 4 chi points to cast *counterspell*.
+
+***???.*** You can spend 2 chi points to cast *cure wounds*.
+
+***???.*** You can spend 2 chi points to cast *detect magic*, or you can cast it as a ritual.
+
+***???.*** You can spend 4 chi points to cast *dispel magic*.
+
+***???.*** You can spend 2 chi points to cast *entangle*.
+
+***Chrono Loop.*** You can spend 3 chi points to cast *hold person*.
+
+***Dream Breath.*** You can spend 2 chi points to cast *sleep*.
+
+***Emerald Communication.*** You can spend 4 chi points to cast *catnap*.
+
+***Obsidian Scales.*** You can spend 5 chi points to cast *stoneskin*, targeting yourself.
+
+***Sindragosa's Wrath.*** You can spend 6 chi points to cast *cone of cold*.
+
+***Time Dilation.*** You can spend 4 chi points to cast *haste*, targeting yourself.
+
+***Visage Mask.*** You can spend 2 chi points to cast *disguise self*.
+
+***Zephyr.*** You can spend 2 chi points to cast *gust of wind*.
+
+-->
