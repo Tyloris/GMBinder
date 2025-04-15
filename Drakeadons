@@ -1,0 +1,473 @@
+<style>
+/* GLOBAL FORMATTING  */
+
+  /* Resize page to international A4 */
+  .phb {
+    width: 210mm;
+    height: 296.8mm;
+    background-image: url('https://www.gmbinder.com/images/RVaHjr8.png');
+    background-size: cover;
+  }
+  .phb:after { content: ""; }
+
+  /* Temporary Fix for heading issues */
+    .phb p{ line-height: 15px; } 
+    .phb blockquote p{ line-height: 14px; } 
+    .phb h2{ line-height: 26px; } 
+    .phb h3{ line-height: 19px; } 
+    .phb h4{ line-height: 15px; padding-bottom: 3px; } 
+    .phb h5{ line-height: 17px; } 
+    th, td { line-height: 14px; }
+
+
+/* FRONT PAGE STYLES */
+
+  .cover-header-container {
+    display: block;
+    position: absolute;
+    width: 100%;
+    top: 80px;
+    left: 0;
+    right: 0;
+    clear: both;
+  }
+
+  .cover-header-logo {
+    display: block;
+    width: 700px;
+    margin: auto;
+  }
+
+  .cover-header-divider {
+    display: block;
+    width: 580px;
+    margin: -12px auto -6px;
+  }
+
+  .cover-header-title {
+    display: block;
+    width: 700px;
+    margin: auto;
+    color: white;
+    font-family: NodestoCaps,nodesto,sans-serif;
+    font-weight: normal;
+    font-size: 72px;
+    line-height: 72px;
+    text-align: center;
+    text-shadow: 2px 2px 4px #000, -2px 2px 4px #000, 2px -2px 4px #000, -2px -2px 4px #000;
+  }
+
+  .cover-footer-container {
+    display: block;
+    position: absolute;
+    width: 100%;
+    bottom: 28px;
+    left: 0;
+    right: 0;
+    clear: both;
+  }
+
+  .cover-footer-subtitle,
+  .cover-footer-version {
+    display: block;
+    width: 500px;
+    margin: auto;
+    color: white;
+    font-family: NodestoCaps,nodesto,sans-serif;
+    font-weight: normal;
+    text-align: center;
+    text-shadow: 1px 1px 2px #000, -1px 1px 2px #000, 0px 0px 2px #000;
+  }
+  .cover-footer-subtitle {
+    font-size: 28px;
+    line-height: 28px;
+  }
+  .cover-footer-version {
+    margin-top: 16px;
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+/* TABLE OF CONTENTS  */
+
+  /* toc specifically wants black text. This resets the headers*/
+  .toc a {
+    color: inherit !important;
+  }
+  /* Allow dot leaders to fill remaining space but not overlap */
+  .toc li span:nth-child(2) {
+    width: auto;
+    overflow: hidden;
+    white-space: nowrap;
+    display: block;
+  }
+  .toc li span:nth-child(2):after {
+    font-family: BookSanity;
+    font-size: 0.317cm;
+    font-weight: normal;
+    color: black;
+    content:
+      " ........................................"
+      "........................................."
+      ".........................................";
+    }
+
+  /* Style TOC page numbers*/
+  .toc li span:first-child {
+    float: right;
+    font-family: BookSanity;
+    font-size: 0.317cm;
+    font-weight: normal;
+    color: black;
+    margin-left: 1px;
+  }
+
+  /* Adjust TOC H3 styles */
+  .toc li h3 span:nth-child(2):after {
+    content: " ";
+  }
+  .toc li h3 {
+    margin-bottom: 4px !important;
+    margin-top: 10px !important;
+    line-height: initial !important;
+  }
+  .toc li h3 span:first-child {
+    line-height: 1.8em !important;
+  }
+
+  /* Reduce TOC list indentation*/
+  .toc ul ul {
+    margin-left: 10px !important;
+  }
+  .toc>ul>li {
+    margin-bottom: initial !important;
+  }
+
+
+/* TABLES AND BLOCKS */
+
+  /* Adjust tables */
+  table tr:nth-child(odd) td { background-color: #FFF0f5; }
+  .phb hr+section blockquote tr:nth-child(odd) td { background-color: transparent; }
+
+  /* Clear internal padding and add gap above for green note blocks*/
+  .phb blockquote {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .phb blockquote { margin-top: 1em; }
+
+  /* Clear internal padding in creature statblocks */
+  .phb hr+section blockquote {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  .phb blockquote {
+    box-shadow: 1px 4px 14px rgba(0,0,0,0.42);
+  }
+
+  /* For creature statblocks within range (start and end must be specified),
+     don't show a background. Used for the appendix creatures */
+  .phb:nth-of-type(n+116):nth-of-type(-n+150) hr+section blockquote {
+    background: none;
+    border: none;
+    box-shadow: none;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+  }
+
+  /* For double-wide creature statblocks that we want to have anchored to the
+  bottom of the page regardless of content flow. */
+  .statblock-bottom-wide {
+    position:absolute;
+    bottom:63px;
+    right:1.7cm;
+    left:1.7cm;
+    margin-top:1200px;
+  }
+
+
+/* FOOTER */
+
+  /* Footnotes */
+  .phb .pageNumber {
+    color: #7e735c;
+    z-index: 1000;
+  }
+  .phb .footnote { color: #7e735c; }
+
+  /* On odd pages before the bestiary, have just the page tear */
+  .phb:nth-child(odd):nth-of-type(n+2):after {
+    content: '';
+    height: 125px;
+    background-image: url(https://www.gmbinder.com/images/PB8On0U.png), url('https://gmbinder.com/images/YWardeu.png');
+    background-size: 120px 120px, 816px 55px;
+    background-repeat: no-repeat, no-repeat;
+    background-position: bottom right -10px, bottom;
+  }
+
+  /* Reversed for alternating pages */
+  .phb:nth-child(even):nth-of-type(n+2):after {
+    content: '';
+    height: 125px;
+    background-image: url(https://www.gmbinder.com/images/PB8On0U.png), url('https://gmbinder.com/images/YWardeu.png');
+    background-size: 120px 120px, 816px 55px;
+    background-repeat: no-repeat, no-repeat;
+    background-position: bottom right -10px, bottom;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+  }
+
+  /* On odd bestiary pages, have the Monster Manual page tear and lettering */
+  .phb:nth-child(odd):nth-of-type(n+10):nth-of-type(-n+115):after {
+    content: '';
+    height: 125px;
+    background-image: url(https://gmbinder.com/images/lLWeevR.png), url('https://gmbinder.com/images/YWardeu.png');
+    background-size: 120px 120px, 816px 55px;
+    background-repeat: no-repeat, no-repeat;
+    background-position: bottom right -10px, bottom;
+  }
+
+  /* Reversed for alternating pages */
+  .phb:nth-child(even):nth-of-type(n+10):nth-of-type(-n+115):after {
+    content: '';
+    height: 125px;
+    background-image: url(https://gmbinder.com/images/lLWeevR.png), url('https://gmbinder.com/images/YWardeu.png');
+    background-size: 120px 120px, 816px 55px;
+    background-repeat: no-repeat, no-repeat;
+    background-position: bottom right -10px, bottom;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+  }
+
+  /* The page number position */
+  .phb .pageNumber {
+    right: 0px;
+  }
+
+  /* The page number position for alternating pages */
+  .phb:nth-child(even) .pageNumber {
+    left: 0px;
+  }
+
+  /* The letter in the Monster Manual page tear */
+  .pageLetter {
+    position: absolute;
+    right: 15px;
+    bottom: 87.5px;
+    color: #905727;
+    z-index: 1000;
+    font-size: 135%;
+  }
+
+  /* Reversed for alternating pages */
+  .phb:nth-child(even) .pageLetter {
+      left: 15px;
+  }
+
+
+/* MONSTER MANUAL LETTER SECTION HEADER */
+
+  /* Adds the surrounding framing for the big, bold monster letter headings */
+  .letterheader {
+    position: absolute;
+    top: 30px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: url(https://gmbinder.com/images/YH3aESG.png);
+    background-size: cover;
+    width: 775px;
+    height: 133px;
+  }
+
+  /* Base component for the actual letter in the heading */
+  .mmletter {
+      position: absolute;
+      top: 20px;
+      left: 0;
+      right: 0;
+      margin-left: auto;
+      margin-right: auto;
+      background-size: cover;
+      width: 163.2px;
+      height: 163.2px;
+  }
+
+  /* Use one in combination with .mmletter to show that letter */
+  .mml-a { background-image: url(https://gmbinder.com/images/fVVv93s.png); }
+  .mml-b { background-image: url(https://gmbinder.com/images/21X6N0B.png); }
+  .mml-c { background-image: url(https://gmbinder.com/images/MvnpOWF.png); }
+  .mml-d { background-image: url(https://gmbinder.com/images/AFbLU4P.png); }
+  .mml-e { background-image: url(https://gmbinder.com/images/28NVNf9.png); }
+  .mml-f { background-image: url(https://gmbinder.com/images/Oyrhmqy.png); }
+  .mml-g { background-image: url(https://gmbinder.com/images/fRyiQn4.png); }
+  .mml-h { background-image: url(https://gmbinder.com/images/N8NamlT.png); }
+  .mml-i { background-image: url(https://gmbinder.com/images/xWI93aa.png); }
+  .mml-j { background-image: url(https://gmbinder.com/images/GgIzsun.png); }
+  .mml-k { background-image: url(https://gmbinder.com/images/OcObsWl.png); }
+  .mml-l { background-image: url(https://gmbinder.com/images/B7AUyR6.png); }
+  .mml-m { background-image: url(https://gmbinder.com/images/q4wXoxt.png); }
+  .mml-n { background-image: url(https://gmbinder.com/images/OJtC4w9.png); }
+  .mml-o { background-image: url(https://gmbinder.com/images/adeRr5d.png); }
+  .mml-p { background-image: url(https://gmbinder.com/images/EEhcrSR.png); }
+  .mml-q { background-image: url(https://gmbinder.com/images/O1AhfzL.png); }
+  .mml-r { background-image: url(https://gmbinder.com/images/w66eIuZ.png); }
+  .mml-s { background-image: url(https://gmbinder.com/images/YEoe0PP.png); }
+  .mml-t { background-image: url(https://gmbinder.com/images/7Bk9D35.png); }
+  .mml-u { background-image: url(https://gmbinder.com/images/uVJZYUg.png); }
+  .mml-v { background-image: url(https://gmbinder.com/images/gKjngey.png); }
+  .mml-w { background-image: url(https://gmbinder.com/images/14WWpsC.png); }
+  .mml-x { background-image: url(https://gmbinder.com/images/ojIYjh0.png); }
+  .mml-y { background-image: url(https://gmbinder.com/images/Gi1ePwY.png); }
+  .mml-z { background-image: url(https://gmbinder.com/images/0ZTFNVs.png); }
+
+
+/* INK BLOT STYLES */
+
+  /* Root style for inkblots. Use alone, or together with
+  one of the inkb lotstyle classes below. Essentially:
+  <img url='{url}' class='inkblot inkblot-blue' />
+  */
+  .inkblot {
+    position: absolute;
+    mix-blend-mode: multiply;
+    opacity: 0.6;
+  }
+
+  .inkblot-blue {
+    filter: hue-rotate(190deg) saturate(120%)
+  }
+
+  .inkblot-green {
+    filter: hue-rotate(120deg)
+  }
+
+</style>
+
+<div style='margin-top:485px'></div>
+
+## Drakeadon
+In the shadowy peak of Blackrock Mountain, the black dragon Nefarian executed many sick and twisted experiments using the blood and bodies of dragons. This resulted in the creation of his chromatic dragons; but never content to let progress lie still, Nefarian saw fit to further experiment. The exact methods are thankfully lost to time, but the result was a hideous amalgamation of draconic and elemental features, a breed of two-headed monsters of opalescent scales, immense power, and uncontrollable aggression.
+
+***Chromatic Instability.***  Drakeadons possess the same physical properties as Nefarian's other chromatic experiments, with the combined strengths and weaknesses of many breeds of dragon; however, their bodies are unstable and shift form and function constantly, ever changing their color and power.
+
+***Blackwing's Pride.*** As perhaps Nefarian's greatest creations, the few living Drakeadons were seen exclusively guarding his lair in Blackrock Mountain. Held in chains and cages, they were barely able to be  controlled, and lashed out at any intruders that dared encroach their master's sanctum.
+
+***Elemental Anomalies.*** The nature of the experiments that spawned these abominations is unknown - however it is believed by some explorers that the dragon spawned them using the essence of the elemental core hounds, the favored pets of Nefarian's hated enemy, Ragnaros the Firelord. Were this true, it would demonstrate yet further the depths of the black dragon's depraved approach to science.
+
+\columnbreak
+
+<div style='margin-top:350px'></div>
+
+___
+> ## Drakeadon
+> *Huge dragon, alignment varies*
+> ___
+> - **Armor Class** 17 (natural armor)
+> - **Hit Points** 121 (9d12 + 63)
+> - **Speed** 40 ft.
+> ___
+> |  STR  |  DEX  |  CON  |  INT  |  WIS  |  CHA  |
+> |:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+> |21 (+5)| 9 (-1)|24 (+7)| 8 (-1)|10 (+0)| 6 (-2)|
+> ___
+> - **Damage Resistances** bludgeoning, piercing, and slashing from non magical attacks
+> - **Senses** darkvision 60 ft., passive Perception 10
+> - **Languages** understands Draconic but can't speak
+> - **Challenge** 8 (3,900 XP)
+> ___
+> ***Brood Powers.*** A drakeadon is infused with the power of all five dragonflights. Each time its breath weapon recharges, a different dragonflight randomly manifests itself. See the Brood Powers sidebar for details.
+>
+> ***Magically Aged.*** The drakeadon has disadvantage to all Intelligence and Wisdom checks.
+>
+> ***Two Heads.*** The drakeadon has advantage on Wisdom (Perception) checks and on saving throws against being blinded, charmed, deafened, frightened, stunned, and knocked unconscious.
+> 
+> ***Wakeful.*** When one of the drakeadon's heads is asleep, its other head is awake.
+>
+> ### Actions
+> ***Multiattack.*** The drakeadon makes two bite attacks. 
+> 
+> ***Bite.*** *Melee Weapon Attack:* +8 to hit, reach 5 ft., one target. *Hit:* 16 (2d10 + 5) piercing damage plus 9 (2d8) acid, cold, or fire damage (chosen randomly).
+>
+> ***Breath Weapons (Recharge 4-6).*** The drakeadon has a breath weapon determined by its Brood Power. The breath weapon affects a 60-foot cone. <!-- https://wc5e-cr-calculator.frogvall.com/?1;17;121;8;13;56;5;50;0;56;0;0;0;0;0;0;0;1;;;;2;;;;;;;;;;1;;;;;;;;10;;;;;; -->
+
+\columnbreak
+
+<div class="pageLetter">D</div>
+<div class='footnote'>DRAKEADONS </div>
+<img src='https://www.gmbinder.com/images/ehvr4Xh.jpg' style='position:absolute; left:0px; top:0px; width:850px' />
+<img src='https://www.gmbinder.com/images/epoShfv.png' style='position:absolute; bottom:-800px; left:0px; transform:scaleY(-1)' />
+
+\pagebreakNum
+
+<br />
+
+<div style='margin-top:1100px'></div>
+
+<div class="note wide">
+
+> ##### Brood Powers
+> When a drakeadon manifests a particular dragonflight, it gains unique abilities. Each has the special features described below.
+>
+> <br>
+>
+> <div style='margin-top:-30px'></div>
+>
+> ***Black Drakeadon.*** A black drakeadon is resistant to fire damage and vulnerable to radiant damage.
+>
+> **Lava Breath.** Each creature in the breath's area must make a DC 18 Dexterity saving throw, taking 28 (8d6) fire damage on a failed save, or half as much damage on a successful one.
+>
+> In addition, any creature who failed the saving throw is covered in molten slag. The creature takes 5 (1d10) fire damage at the beginning of each of its turns until it or another creature uses an action to remove the slag.
+>
+> <br />
+>
+> <div style='margin-top:-30px'></div>
+>
+> ***Blue Drakeadon.*** A blue drakeadon is resistant to cold damage and vulnerable to fire damage. 
+>
+> **Frost Breath.** Each creature in the breath's area must make a DC 18 Dexterity saving throw, taking 28 (8d6) cold damage on a failed save, or half as much damage on a successful one.
+>
+> In addition, any creature who failed the saving throw has their speed reduced by half for 1 minute.
+>
+> <br>
+>
+> <div style='margin-top:-30px'></div>
+>
+> ***Bronze Drakeadon.*** A bronze drakeadon is resistant to lightning damage and vulnerable to poison damage.
+>
+> **Sand Breath.** Each creature in the breath's area must make a DC 18 Constitution saving throw, taking 28 (8d6) fire damage on a failed save, or half as much damage on a successful one. Their maximum hit point total is reduced by the same amount for 1 hour. A creature whose maximum hit point total is reduced to 0 hit points is killed.
+>
+> In addition, any creature who failed the saving throw is stunned until the beginning of the drakeadon's next turn.
+>
+> <br>
+>
+> <div style='margin-top:-30px'></div>
+>
+> ***Green Drakeadon.*** A green drakeadon is resistant to acid damage and vulnerable to force damage.
+>
+> **Acid Breath.** Each creature in the breath's area must make a DC 18 Dexterity saving throw, taking 28 (8d6) acid damage on a failed save, or half as much damage on a successful one.
+>
+> In addition, any creature who failed the saving throw who wears nonmagical armor or a shield take a permanent and cumulative -1 penalty to the AC it offers. Armor reduced to an AC of 10 or a shield that drops to a +0 bonus is destroyed.
+>
+> <br>
+>
+> <div style='margin-top:-30px'></div>
+>
+> ***Red Drakeadon.*** A red drakeadon is resistant to fire damage and vulnerable to cold damage.
+>
+> **Fire Breath.** Each creature in the breath's area must make a DC 18 Dexterity save, taking 28 (8d6) fire damage on a failed save, or half as much damage on a successful one.
+>
+> In addition, the drakeadon regains a number of hit points equal to the damage dealt by this breath attack.
+
+</div>
+
+<img src='https://www.gmbinder.com/images/LSquXba.jpg' style='position:absolute; top:0px; left:-140px' />
+<img src='https://www.gmbinder.com/images/NO1EQoX.png' style='position:absolute; bottom:230px; left:0px; width:435px' />
+<img src='https://www.gmbinder.com/images/NO1EQoX.png' style='position:absolute; bottom:230px; right:0px; width:435px; transform:scaleX(-1)' />
+<div class="pageLetter">D</div>
+<div class='footnote'>DRAKEADONS </div>
