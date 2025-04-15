@@ -1,0 +1,415 @@
+<style>
+/* GLOBAL FORMATTING  */
+
+  /* Resize page to international A4 */
+  .phb {
+    width: 210mm;
+    height: 296.8mm;
+  }
+  .phb:after { content: ""; }
+
+/* Temporary Fix for heading issues */
+    .phb p{ line-height: 15px; } 
+    .phb blockquote p{ line-height: 14px; } 
+    .phb h2{ line-height: 26px; } 
+    .phb h3{ line-height: 19px; } 
+    .phb h4{ line-height: 15px; padding-bottom: 3px; } 
+    .phb h5{ line-height: 17px; } 
+    th, td { line-height: 14px; }
+
+/* TABLE OF CONTENTS  */
+
+  /* toc specifically wants black text. This resets the headers*/
+  .toc a {
+    color: inherit !important;
+  }
+  /* Allow dot leaders to fill remaining space but not overlap */
+  .toc li span:nth-child(2) {
+    width: auto;
+    overflow: hidden;
+    white-space: nowrap;
+    display: block;
+  }
+  .toc li span:nth-child(2):after {
+    font-family: BookSanity;
+    font-size: 0.317cm;
+    font-weight: normal;
+    color: black;
+    content:
+      " ........................................"
+      "........................................."
+      ".........................................";
+    }
+
+  /* Style TOC page numbers*/
+  .toc li span:first-child {
+    float: right;
+    font-family: BookSanity;
+    font-size: 0.317cm;
+    font-weight: normal;
+    color: black;
+    margin-left: 1px;
+  }
+
+  /* Adjust TOC H3 styles */
+  .toc li h3 span:nth-child(2):after {
+  	content: " ";
+  }
+  .toc li h3 {
+    margin-bottom: 4px !important;
+    margin-top: 10px !important;
+    line-height: initial !important;
+  }
+  .toc li h3 span:first-child {
+  	line-height: 1.8em !important;
+  }
+
+  /* Reduce TOC list indentation*/
+  .toc ul ul {
+  	margin-left: 10px !important;
+  }
+  .toc>ul>li {
+    margin-bottom: initial !important;
+  }
+
+
+/* TABLES AND BLOCKS */
+
+  /* Clear internal padding and add gap above for green note blocks*/
+  .phb blockquote {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .phb blockquote { margin-top: 1em;
+  }
+
+
+/* INK BLOT STYLES */
+
+  /* Root style for inkblots. Use alone, or together with
+  one of the ink blotstyle classes below. Essentially:
+  <img url='{url}' class='inkblot inkblot-blue' />
+  */
+  .inkblot {
+    position: absolute;
+    mix-blend-mode: multiply;
+    opacity: 0.6;
+  }
+
+  .inkblot-blue {
+    filter: hue-rotate(190deg) saturate(120%)
+  }
+
+  .inkblot-green {
+    filter: hue-rotate(120deg)
+  }
+
+</style>
+
+<style>
+/* Background */
+  .phb{ background-image: url('https://gmbinder.com/images/KN1O92T.png') }
+  .phb{ background-size: cover }
+
+/* Notes */
+  .phb section blockquote {background-color: #f6e5d4}
+  .phb hr + section blockquote tr:nth-child(odd) td {background-color: transparent;}
+
+/* Tables */
+  table tr:nth-child(odd) td {background-color: #cccccc}
+
+/* Footer */
+  .phb .pageNumber {color: rgba(0, 0, 0, 0.5)}
+  .phb .footnote {color: rgba(0, 0, 0, 0.5)}
+  
+  /* Bottom metalwork art */
+  .phb:nth-child(odd):after{ 
+    content          : '';
+    position         : absolute;
+    bottom           : -7px;
+    left             : 10px;
+    z-index          : -1;
+    height           : 336px;
+    width            : 100%;
+    background-image : url('https://www.gmbinder.com/images/bNTz1nk.png');
+    background-size  : cover;
+  }
+  /* Bottom metalwork art */
+  .phb:nth-child(even):after{ 
+    content          : '';
+    position         : absolute;
+    bottom           : -7px;
+    left             : -10px;
+    z-index          : -1;
+    height           : 336px;
+    width            : 100%;
+    background-image : url('https://www.gmbinder.com/images/6NCzAN0.png');
+    background-size  : cover;
+  }
+
+  /* Footer with white text against dark backgrounds */
+  .phb .footnote.footnote-white,
+  .phb .footnote.footnote-white + .pageNumber,
+  .phb .footnote.footnote-white + section .pageNumber {
+    color: rgba(255,255,255,0.8);
+  }
+
+/* Page Number */
+.phb .pageNumber{
+    position   : absolute;
+    bottom     : 30px;
+    width      : 50px;
+    text-align : center;
+}
+.phb:nth-child(even) .pageNumber{
+    left      : 12px;
+}
+.phb:nth-child(odd) .pageNumber{
+    right      : 12px;
+}
+
+.phb .pageNumber.auto{
+    position   : absolute;
+    bottom     : 41px;
+    width      : 50px;
+    text-align : center;
+}
+.phb:nth-child(even) .pageNumber.auto{
+    left      : 12px;
+}
+.phb:nth-child(odd) .pageNumber.auto{
+    right      : 12px;
+}
+
+/* Use black tones for statblock backgrounds */
+.phb blockquote {
+  box-shadow: 1px 4px 14px rgba(0,0,0,0.42);
+}
+
+</style>
+
+</style>
+
+
+<div class="classTable wide" />
+
+##### Warlock
+
+Level   | Proficiency <br/> Bonus | Features          | Cantrips <br/> Known | Spells <br/> Known | Spell <br/> Slots | Slot <br/> Level | Invocations <br/> Known|
+--------|:-:|---------------------------------------------------|:-:|:--:|:-:|:-:|:-:|
+1st     |+2 | Otherworldly Patron, Pact Magic                   | 2 |  2 | 1 |1st| —
+2nd     |+2 | Eldritch Invocations                              | 2 |  3 | 2 |1st| 2
+3rd     |+2 | —                                                 | 2 |  4 | 2 |2nd| 3
+4th     |+2 | Ability Score Improvement                         | 3 |  5 | 2 |2nd| 3
+5th     |+3 | —                                                 | 3 |  6 | 3 |3rd| 4
+6th     |+3 | Otherworldy Patron feature                        | 3 |  7 | 3 |3rd| 4
+7th     |+3 | —                                                 | 3 |  8 | 3 |4th| 5
+8th     |+3 | Ability Score Improvement                         | 3 |  9 | 3 |4th| 5
+9th     |+4 | —                                                 | 3 | 10 | 3 |5th| 6
+10th    |+4 | Otherworldy Patron feature                        | 4 | 10 | 3 |5th| 6
+11th    |+4 | —                                                 | 4 | 11 | 4 |5th| 7
+12th    |+4 | Ability Score Improvement                         | 4 | 11 | 4 |5th| 7
+13th    |+5 | —                                                 | 4 | 12 | 4 |5th| 8
+14th    |+5 | Otherworldy Patron feature                        | 4 | 12 | 4 |5th| 8
+15th    |+5 | —                                                 | 4 | 13 | 4 |5th| 9
+16th    |+5 | Ability Score Improvement                         | 4 | 13 | 4 |5th| 9 
+17th    |+6 | —                                                 | 4 | 14 | 5 |5th| 10
+18th    |+6 | —                                                 | 4 | 14 | 5 |5th| 10
+19th    |+6 | Ability Score Improvement                         | 4 | 15 | 5 |5th| 11
+20th    |+6 | Eldritch Master                                   | 4 | 15 | 5 |5th| 11
+
+</div>
+
+\columnbreak
+
+## Class Features
+As a warlock, you have the following class features.
+
+#### Hit Points
+___
+- **Hit Dice:** 1d8 per warlock level
+- **Hit Points at 1st Level:** 8 + your Constitution modifier
+- **Hit Points at Higher Levels:** 1d8 (or 5) + your Constitution modifier per warlock after 1st
+
+#### Proficiencies
+___
+- **Armor:** Light armor
+- **Weapons:** Simple weapons
+- **Tools:** None
+___
+- **Saving Throws:** Wisdom, Charisma
+- **Skills:** Choose two skills from Arcana, Deception, History, Intimidation, Investigation, Nature, and Religion
+
+#### Equipment
+You start with the following equipment, in addition to the equipment granted by your background
+
+- *(a)* a light crossbow and 20 bolts or *(b)* any simple weapon
+- *(a)* a component pouch or *(b)* an arcane focus
+- *(a)* a scholar's pack or *(b)* a dungeoneer's pack
+- Leather armor, any simple weapon, and two daggers
+
+\pagebreakNum
+
+### Otherworldly Patron
+*1st-level warlock feature*
+<div style='margin-top:-4px'></div>
+
+You have struck a bargain with an otherworldly being of your choice: the Archfey, the Fiend, or the Great Old One, each of which is detailed at the end of the class description. Your choice grants you features at 1st level and again at 6th, 10th, and 14th level.
+
+### Pact Magic
+*1st-level warlock feature*
+<div style='margin-top:-4px'></div>
+
+Your arcane research and the magic bestowed on you by your patron have given you facility with spells. See Chapter 10 of the Player's Handbook for the general rules of spellcasting.
+
+#### Cantrips
+You know *eldritch blast* and two other cantrips of your choice from the warlock spell list. You learn additional warlock cantrips of your choice at higher levels, as shown in the Cantrips Known column of the Warlock table.
+
+#### Spell Slots
+The Warlock table shows how many spell slots you have to cast your warlock spells of 1st through 5th level. The table also shows what the level of those slots is; all of your spell slots are the same level. To cast one of your warlock spells of 1st level or higher, you must expend a spell slot. You regain all expended spell slots when you finish a short or long rest.
+
+For example, when you are 5th level, you have two 3rd-level spell slots. To cast the 1st-level spell witch bolt, you must spend one of those slots, and you cast it as a 3rd-level spell.
+
+#### Spells Known of 1st Level and Higher
+At 1st level, you know two 1st-level spells of your choice from the warlock spell list.
+
+The Spells Known column of the Warlock table shows when you learn more warlock spells of your choice of 1st level or higher. A spell you choose must be of a level no higher than what's shown in the table's Slot Level column for your level. When you reach 6th level, for example, you learn a new warlock spell, which can be 1st, 2nd, or 3rd level.
+
+Additionally, when you gain a level in this class, you can choose one of the warlock spells you know and replace it with another spell from the warlock spell list, which also must be of a level for which you have spell slots.
+
+#### Spellcasting Ability
+Charisma is your spellcasting ability for your warlock spells, so you use your Charisma whenever a spell refers to your spellcasting ability. In addition, you use your Charisma modifier when setting the saving throw DC for a warlock spell you cast and when making an attack roll with one.
+
+<div style="text-align: center">
+
+**Spell save DC** = 8 + your proficiency bonus + <br/> your Intelligence modifier
+
+**Spell attack modifier** = your proficiency bonus + <br/> your Intelligence modifier
+</div>
+
+#### Spellcasting Focus
+You can use an arcane focus as a spellcasting focus for your warlock spells.
+
+\columnbreak
+
+### Pact Boon
+*2nd-level warlock feature*
+<div style='margin-top:-4px'></div>
+
+Your otherworldly patron bestows a gift upon you for your loyal service. You gain one of the following features of your choice.
+
+#### Pact of the Blade
+You can use your action to conjure a magic simple or martial melee weapon in your outstretched hand, or you create a bond with a magic weapon you touch. The weapon you conjure or touch must lack the heavy property, and you cannot bond with a magic item that is attuned to someone else.
+
+The weapon grants you the following benefits: <br/><div style='margin-top:-6px;'></div>
+___
+- **Eldritch Warrior.** When you attack with the weapon, you can use your Charisma modifier for the attack and damage rolls, instead of using Strength or Dexterity.
+- **Proficiency.** You have proficiency with the weapon.
+- **Returning Weapon.** If the weapon has the thrown property, the weapon returns to your hand immediately after hitting or missing a target.
+- **Extradimensional Space.** If your weapon is a non-sentient, non-artifact bonded magic item, then you can use your action to shunt it into an extradimensional space. You can summon it back to hand as an action. The weapon appears at your feet if it is in the extradimensional space when the bond breaks.
+
+The weapon disappears if it is more than 5 feet away from you for 1 minute or more, returning to your extra&shy;dimensional space if it is a bonded weapon. It also disappears if you use this feature again, if you dismiss the weapon (no action required), or if you die.
+
+***Pact Boon Improvement.*** Starting at 5th level, when you take the Attack action with your pact weapon, you can attack twice instead of once.
+
+#### Pact of the Chain
+Using a 1 hour long ritual, you summon an unearthly entity to serve you. It manifests in an unoccupied space of your choice within 10 feet and uses the Pact Familiar stat block. If you perform this ritual again, any existing familiar trans&shy;forms into a new shape but retains its memories; you don’t get a second Pact Familiar.
+
+Whenever you cast the spell, choose the familiar’s creature type: Aberration (flumph or knot of tentacles), Celestial (owl, raven, or other bird), Dragon (pseudodragon or similar dragonet), Fey (pixie or sprite), Fiend (imp or quasit), or Undead (shadow or skull). This choice affects the familiar’s default appearance, as noted in the parentheses, and it determines certain traits in its stat block. You can alter details of the creature’s appearance each time you summon it.
+
+**Combat.** The familiar is an ally to you and your companions, and it obeys you. In combat, it shares your initiative count, but it takes its turn immediately after yours. On its turn, the familiar takes the dodge action and moves to avoid danger, unless you use your bonus action to command it to attack instead.
+
+**Disappearance of the Familiar.** The familiar disappears if it drops to 0 hit points, if you dismiss it as a bonus action, or if you die. When it disappears, it leaves behind anything it was wearing or carrying. If you cast this spell again, you decide whether you summon the familiar that disappeared or a different one.
+
+\pagebreakNum
+
+___
+> ## Pact Familiar
+> *Tiny Aberration, Celestial, Dragon, Fey, Fiend, or Undead (Choose When Performing the Ritual), Any Alignment*
+> ___
+> - **Armor Class** 10 + your Charisma modifier (natural armor)
+> - **Hit Points** 5 + your warlock level (the familiar has a number of Hit Dice [d4s] equal to your warlock level)
+> - **Speed** 40 ft., fly 40 ft. (hover)
+> ___
+> |  STR  |  DEX  |  CON  |  INT  |  WIS  |  CHA  |
+> |:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+> | 3 (–4)|14 (+2)|12 (+1)|10 (+0)|14 (+2)| 8 (–1)|
+> ___
+> - **Condition Immunities** charmed, exhaustion
+> - **Senses** darkvision 120 ft., passive Perception 12 + PB
+> - **Languages** telepathy 120 ft. (only between you and the familiar), understands the languages you speak
+> - **Challenge** — <span style="float:right"> **Proficiency Bonus** equals your bonus </span>
+>___
+> ***Channel Magic.*** When your familiar is within 120 feet of you, it can deliver any spell you can cast that has a range of touch.
+>
+> ***Eldritch Bond.*** You can add your proficiency bonus to any ability check or saving throw that the familiar makes.
+>
+> <h3 style="font-size:1vw">Actions (Requires Your Bonus Action)</h3>
+> 
+> ***Eldritch Strike.*** *Ranged or Melee Spell Attack:* your spell attack modifier to hit, range 30 ft., one target. *Hit:* 2 + half your Warlock level (round up) damage of a type determined by the familiar’s creature type: Aberration (Acid), Celestial (Radiant), Dragon (Fire), Fey (Psychic), Fiend (Poison), or Undead (Necrotic).
+>
+> ***Invisibility.*** The familiar is invisible until the end of its next turn.
+___
+
+***Remote Viewing.*** As an action, you can see what your familiar sees and hear what it hears until the end of your next turn.
+
+***Pact Boon Improvement.*** When you reach 5th level, you can communicate telepathically with your familiar as long as you two are on the same plane of existence. Additionally, while perceiving through your familiar’s senses, you can also speak through your familiar in your own voice.
+
+#### Pact of the Talisman
+Your patron gives you an amulet, a talisman that can aid the wearer when the need is great. When the wearer fails an ability check, they can add a d4 to the roll, potentially turning the roll into a success. This benefit can be used a number of times equal to your proficiency bonus, and all expended uses are restored when you finish a long rest.
+
+If you lose the talisman, you can perform a 1-hour ceremony to receive a replacement from your patron. This ceremony can be performed during a short or long rest, and it destroys the previous amulet. The talisman turns to ash when you die.
+
+***Pact Boon Improvement.*** Once you reach 5th level, when the wearer of your talisman fails a saving throw, they can add a d4 to the roll, potentially turning the save into a success. This benefit can be used a number of times equal to your proficiency bonus, and all expended uses are restored when you finish a long rest.
+
+#### Pact of the Tome
+Your patron gives you a grimoire called a Book of Shadows. The book grants you the following benefits:
+___
+- ***Cantrips.*** When you you first gain this feature, choose three cantrips from any class's spell list (the three needn't be from the same list). While the book is on your person, you can cast those cantrips at will.
+- **Rituals.** While holding the book, you can cast any warlock spell as a ritual if it has the ritual tag. You can also inscribe spells with the ritual tag from any class's spell list into your book, as though it were a wizard's spellbook. The spell must have a level equal to or less than half your warlock level (rounded up).
+- **Spellcasting Focus.** You can use the book as a Spellcasting Focus.
+
+If you lose your Book of Shadows, you can perform a 1-hour ceremony to receive a replacement from your patron. This ceremony can be performed during a short or long rest, and it destroys the previous book. The book turns to ash when you die.
+
+***Pact Boon Improvement.*** At 5th level, choose three spells of 3rd level or lower from any class's spell list (the three needn't be from the same list). While holding the book, you can cast those spells without expending a spell slot and regain the ability to do so when you finish a long rest. You can also select the same spell multiple times, gaining an additional use of it each time you do so.
+
+### Eldritch Invocations
+*2nd-level warlock feature*
+<div style='margin-top:-4px'></div>
+
+In your study of occult lore, you have unearthed Eldritch Invocations, fragments of forbidden knowledge that imbue you with an abiding magical ability.
+
+You gain two eldritch invocations of your choice. When you gain certain warlock levels, you gain additional invocations of your choice, as shown in the Invocations Known column of the Warlock table. A level prerequisite refers to your level in this class.
+
+Additionally, when you gain a level in this class, you can choose one of the invocations you know and replace it with another invocation that you could learn at that level.
+
+### Ability Score Improvement
+*4th-level warlock feature*
+<div style='margin-top:-4px'></div>
+
+When you reach 4th level, and again at 8th, 12th, 16th, and 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.
+
+\pagebreak
+
+#### Eldritch Versatility (Optional)
+Whenever you reach a level in this class that grants the Ability Score Improvement feature, you can do one of the following, representing a change of focus in your occult studies:
+- Replace one cantrip you learned from this class's Pact Magic feature with another cantrip from the warlock spell list.
+- Replace the option you chose for the Pact Boon feature with one of that feature's other options.
+- If you're 12th level or higher, replace one spell from your Mystic Arcanum feature with another warlock spell of the same level.
+- If this change makes you ineligible for any of your Eldritch Invocations, you must also replace them now, choosing invocations for which you qualify.
+
+### Mystic Arcanum
+*11th-level warlock feature*
+<div style='margin-top:-4px'></div>
+
+Your patron bestows upon you a magical secret called an arcanum. Choose one 6th-level spell from the warlock spell list as this arcanum.
+
+You can cast your arcanum spell once without expending a spell slot. You must finish a long rest before you can do so again.
+
+At higher levels, you gain more warlock spells of your choice that can be cast in this way: one 7th-level spell at 13th level, one 8th-level spell at 15th level, and one 9th-level spell at 17th level. You regain all uses of your Mystic Arcanum when you finish a long rest.
+
+### Eldritch Master
+*20th-level warlock feature*
+<div style='margin-top:-4px'></div>
+
+You can draw on your inner reserve of mystical power while entreating your patron to regain expended spell slots. You can spend 1 minute entreating your patron for aid to regain all your expended spell slots from your Pact Magic feature. Once you regain spell slots with this feature, you must finish a long rest before you can do so again.
