@@ -1,0 +1,69 @@
+### School of Universalism
+
+#### Universal Savant
+*2nd-level School of Transmutation feature*<br/>
+<div style='margin-top:-4px;'></div>
+
+The gold and time you must spend to copy a spell into your spellbook is halved.
+
+#### Mastery of Fundamentals
+*2nd-level School of Transmutation feature*<br/>
+<div style='margin-top:-4px;'></div>
+
+You gain proficiency in the Arcana skill and your proficiency bonus is doubled for any ability check that uses it. If you already had proficiency in Arcana, you gain another proficiency of your choice from those offered by this class.
+
+You know two additional number of cantrips of your choice from the wizard spell list, and an additional cantrip when you reach 6th, 10th, and 14th level in this class. These do not count against your number of cantrips known.
+
+#### Improved Familiar
+*6th-level School of Transmutation feature*<br/>
+<div style='margin-top:-4px;'></div>
+
+You add the *find familiar* spell to your spellbook if you don't already have it. You can cast the spell using a 200 gp XXX instead of the normal material component. The XXX is not consumed unless the familiar is reduced to 0 hit points. 
+
+When you summon a familiar this way, it gains the following benefits:
+- You can cast a spell with a target of Self as though it had a target of Touch, targeting your familiar.
+- Your familiar can communicate with others of its kind: cats with felines, hawks and owls and ravens with birds, lizards and snakes with reptiles, and so on.
+- If the familiar is subjected to an effect that allows it to make a Dexterity saving throw to take only half damage, it instead takes no damage if it succeeds on the saving throw, and only half damage if it fails. It can't use this trait if it's incapacitated.
+- When you or your familiar makes a Perception check while within arm's reach of each other, you may roll a d4 and add it to the total.
+
+222
+- You add your proficiency bonus to the familiar's AC.
+- The familiar has an additional number of hit points equal to your wizard level.
+- The familiar can attack using your spell attack bonus and spell save DC where appropriate. You can command it to do so as a bonus action.
+
+
+<!--
+When you make a Perception check, you may roll a d4 and add it to the total if your familiar is within 10 feet. You gain an additional benefit, based on the familiar's type:
+___
+- **Bat:** Your Alertness bonus increases to 1d6 on sight-based Perception checks when the target is within darkness.
+- **Cat:** You may apply your Alertness bonus to Stealth checks.
+- **Crab:** 
+- **Frog (toad):** You and your familiar's maximum hit point totals are increased by your proficiency bonus.
+- **Hawk:** Your Alertness bonus increases to 1d6 on sight-based Perception checks when the target is within bright light.
+- **Lizard:** You may apply your Alertness bonus to Athletics checks made to climb.
+- **Octopus:** 
+- **Owl:** Your Alertness bonus increases to 1d6 on sight-based Perception checks when the target is within dim light.
+- **Poisonous snake:** You may apply your Alertness bonus to Deception checks.
+- **Fish (quipper):** 
+- **Rat:** You can apply your Alertness bonus to concentration checks.
+- **Raven:** The raven can speak one language you know. You may apply your Alertness bonus to checks made to estimate the value of precious items. 
+- **Sea horse:** 
+- **Spider:** 
+- **Weasel:** 
+-->
+
+#### ???
+*10th-level School of Transmutation feature*<br/>
+<div style='margin-top:-4px;'></div>
+
+~~Limited Use Magic Device feature from Thief Rogue (normally 13th level): Lets you count as any spellcaster type.~~
+
+Can recharge wands and staves?
+
+#### Limited Wish
+*14th-level School of Transmutation feature*<br/>
+<div style='margin-top:-4px;'></div>
+
+You have learned the basic principles behind the *wish* spell, allowing you to use a lessened version of it. You can spend a spell slot of 6th level or below to cast any spell one level or lower, regardless of whether it is prepared, in your spellbook, or even a wizard spell. You do not need to provide any material components for the spell, unless they cost more than <br/> 100 gp and are consumed by the spell.
+
+You can use this ability a number of times equal to your proficiency bonus and regain all expended uses when you finish a long rest.
