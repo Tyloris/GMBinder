@@ -1,0 +1,1258 @@
+## Todo
+- Need training points instead of just wild features. Matches the WoW system more and allows for lower tier abilities and split abilities.
+- *Split ability examples: Only one keen sense or one skill training.*
+- *Lower tier ability examples: Amphibious is not on the same tier as Dive Attack, for the most part.*
+- Mechanical creature sidebar? The part about their diet.
+- Stable trait is unfinished.
+- The bit about swim speed for amphibious.
+- Add Reckless trait as part of Ferocity archetype?
+- Do the spider's ability scores.
+- Elemental nature origin trait.
+- Greater Locomotion trait, removing the speed penalty.
+- Make sure all abilities are useful at all levels. Example: making the web's hit point total increase with levels.
+- Make the archetypes scaling.
+- State that the Cunning, Ferocity, and Tenacity archetypes are specifically beast archetypes, as well as for Mechanical Creature, Spirit Creature, and Undead Creature templates. These archetypes use the alternate point buy system.
+
+\pagebreakNum
+
+
+___
+> ## Pact Familiar
+> *Tiny to Huge Creature, Unaligned*
+> ___
+> - **Armor Class** 10 + your Cha modifier (natural armor)
+> - **Hit Points** ### (PBd8 or PBd10 + PBxCon)
+> - **Speed** ## ft.
+> ___
+> |  STR  |  DEX  |  CON  |  INT  |  WIS  |  CHA  |
+> |:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+> | 3 (–4)|14 (+2)|12 (+1)|10 (+0)|14 (+2)| 8 (–1)|
+> ___
+> - **Saving Throws** XX +#, XX +#
+> - **Senses** passive Perception 10 + Wis
+> - **Challenge** — <span style="float:right"> **Proficiency Bonus** equals your bonus </span>
+>___
+> <h3 style="font-size:18px">Actions (Requires Your Bonus Action)</h3>
+> 
+> ***Eldritch Strike.*** *Ranged or Melee Spell Attack:* your spell attack modifier to hit, range 30 ft., one target. *Hit:* 2 + half your Warlock level (round up) damage. Damage type is the same as your eldritch blast.
+___
+
+
+
+\pagebreakNum
+
+#### Archetypes
+
+##### Cunning
+___
+- **Ability Scores:** Strength 6, Dexterity 14, Constitution 8, Intelligence 3, Wisdom 12, Charisma 6
+- **Ability Score Points:** 2
+- **Hit Die:** d8
+- **Armor Class:** 11 + Dexterity modifier
+- **Saving Throws:** Dexterity, Charisma
+- **Speed:** 35 ft.
+- ***Bite.*** *Melee Weapon Attack:* Dexterity modifier + proficiency bonus to hit, reach 5 ft., one target. *Hit:* d4 + Dexterity modifier piercing damage.
+- ***Sneak Attack.*** Once per turn, your animal companion can deal an extra 1d6 damage to one creature it hit with an attack if it has advantage on the attack roll or at least one of the creature's allies are within 5 feet of it.
+
+##### Ferocity
+___
+- **Ability Scores:** Strength 12, Dexterity 14, Constitution 8, Intelligence 3, Wisdom 10, Charisma 6
+- **Ability Score Points:** 2
+- **Hit Die:** d8
+- **Armor Class:** 11 + Dexterity modifier
+- **Saving Throws:** Strength, Dexterity
+- **Speed:** 30 ft.
+- ***Swipe.*** *Melee Weapon Attack:* Dexterity modifier + proficiency bonus to hit, reach 5 ft., one target. *Hit:* d8 + Dexterity modifier bludgeoning damage.
+
+##### Tenacity
+___
+- **Ability Scores:** Strength 12, Dexterity 10, Constitution 14, Intelligence 3, Wisdom 6, Charisma 8
+- **Ability Score Points:** 2
+- **Hit Die:** d10
+- **Armor Class:** 12 + Constitution modifier
+- **Saving Throws:** Constitution, Charisma
+- **Speed:** 25 ft.
+- ***Slam.*** *Melee Weapon Attack:* Strength modifier + proficiency bonus to hit, reach 5 ft., one target. *Hit:* d6 + Strength modifier bludgeoning damage.
+- ***Protective.*** When a creature your animal companion can see attacks a target that is within 5 feet of it, it can use its reaction to impose disadvantage on the attack roll.
+
+\columnbreak
+
+> #### Animal Companion Point Buy
+> 
+> The basic rules of the point buy method are:
+> 
+> - Each ability score begins at 8
+> - Ability scores above 8 cost a certain number of points
+> - Ability scores below 8 give you a certain number of points
+> - You have 3 points to spend to increase scores
+> - Maximum ability score is 17
+> - Minimum ability score is 2
+> - The ability score point cost table shows what you can spend your points on.
+> 
+> 
+> 
+> |Ability Score | Point Cost | Ability Score | Point Cost |
+> |:---:|:-----:|:-----:|:-----:|
+> | 2   | -19   | 10    | 2     | 
+> | 3   | -14   | 11	| 3     |
+> | 4   | -10   | 12	| 4     |
+> | 5   | -7    | 13	| 5     |
+> | 6   | -4    | 14	| 7     |
+> | 7   | -2    | 15	| 9     |
+> | 8   | 0     | 16    | 12    |
+> | 9	| 1     | 17    | 16
+>
+
+> Alternative Point Buy Table (117 point budget)
+> |Ability Score | Point Cost | Ability Score | Point Cost |
+> |:---:|:-----:|:-----:|:-----:|
+> | 2   | 0     | 10    | 21    | 
+> | 3   | 5     | 11	| 22    |
+> | 4   | 9     | 12	| 23    |
+> | 5   | 12    | 13	| 24    |
+> | 6   | 15    | 14	| 26    |
+> | 7   | 17    | 15	| 28    |
+> | 8   | 19    | 16    | 31    |
+> | 9	| 20    | 17    | 35    |
+
+
+\pagebreakNum
+
+#### Companion Origin
+##### Aberration
+___
+- ***Ability Score Increase.*** Your animal companion's Strength and Constitution scores increase by 1.
+- ***Bonus Wild Feature.*** Your animal companion starts with the Elemental Resistance (Psychic) wild feature.
+- ***Training Modifier.*** The DC of any training checks involving aberrations is increased by 2.
+
+##### Beast
+___
+- ***Ability Score Increase.*** One of your animal companion's ability scores of your choice increases by 2, and another increases by 1.
+- ***Bonus Wild Feature.*** Your animal companion starts with any two Low tier wild features.
+- ***Training Modifier.*** The DC of any training checks involving beasts is decreased by 2.
+
+##### Celestial
+___
+- ***Ability Score Increase.*** Your animal companion's Charisma scores increases by 1.
+- ***Bonus Wild Feature.*** Your animal companion starts with the Elemental Resistance (Radiant) and either the Locomotion (Flight) or Trained wild features.
+- ***Training Modifier.*** The DC of any training checks involving celestials is decreased by 1.
+
+##### Construct [TBD]
+Not included.
+___
+- ***Ability Score Increase.*** Your animal companion's Constitution scores increases by 1.
+- ***Bonus Wild Feature.*** Your animal companion starts with the Overtune and XXX wild features.
+- ***Constructed Nature.*** Your animal companion doesn't require air, food, drink, or sleep.
+- ***Training Modifier.*** The DC of any training checks involving dragons is increased by 1.
+
+##### Dragon
+___
+- ***Ability Score Increase.*** Your animal companion's Constitution scores increases by 1.
+- ***Bonus Wild Feature.*** Your animal companion starts with the Elemental Breath and Natural Defenses wild features.
+- ***Training Modifier.*** The DC of any training checks involving dragons is increased by 1.
+
+##### Elemental
+___
+- ***Ability Score Increase.*** Your animal companion's Dexterity scores increases by 1.
+- ***Bonus Wild Feature.*** Your animal companion starts with the Elemental Immunity (any one) wild feature.
+- ***Training Modifier.*** The DC of any training checks involving elementals is increased by 1.
+
+\columnbreak
+
+##### Fey
+___
+- ***Ability Score Increase.*** Your animal companion's Charisma scores increases by 1.
+- ***Bonus Wild Feature.*** Your animal companion starts with the Cunning and Sleepless wild features.
+- ***Training Modifier.*** The DC of any training checks involving fey is increased by 1.
+
+##### Fiend
+___
+- ***Ability Score Increase.*** Your animal companion's Intelligence scores increases by 1.
+- ***Bonus Wild Feature.*** Your animal companion starts with the Elemental Resistance (Fire) and Innate Spellcasting wild features.
+- ***Training Modifier.*** The DC of any training checks involving fiends is increased by 1.
+
+##### Giant
+Not included.
+
+##### Humanoid
+Not included.
+
+##### Monstrosity
+___
+- ***Ability Score Increase.*** Your animal companion's Strength or Constitution score increases by 1.
+- ***Bonus Wild Feature.*** Your animal companion starts with the Keen Senses and one additional Low tier wild feature.
+- ***Training Modifier.*** The DC of any training checks involving monstrosities is increased by 1.
+
+##### Ooze
+___
+- ***Ability Score Increase.*** Your animal companion's Dexterity scores increases by 1.
+- ***Bonus Wild Feature.*** Your animal companion starts with the Amorphous and Elemental Resistance (Poison) wild feature.
+- ***Training Modifier.*** The DC of any training checks involving oozes is increased by 2.
+
+##### Plant
+___
+- ***Ability Score Increase.*** Your animal companion's Strength or Charisma score increases by 1.
+- ***Bonus Wild Feature.*** Your animal companion starts with the Elemental Resistance (Poison) and False Appearance wild features.
+- ***Fire Vulnerability.*** Your animal companion is vulnerable to fire damage.
+- ***Training Modifier.*** The DC of any training checks involving dragons is decreased by 1.
+
+##### Undead
+Not included.
+___
+- ***Training Modifier.*** The DC of any training checks involving aberrations is increased by 2.
+- ***Undead Nature.*** Your animal companion doesn't require air, food, drink, or sleep.
+
+
+\pagebreakNum
+
+### Wild Features
+#### Low-Tier
+##### Ability Score Increase
+You can increase one of your animal companion's ability scores of your choice by 2, or you can increase two of its ability scores of your choice by 1. As normal, you can’t increase an ability score above 20 using this feature. You can select this wild feature multiple times.
+
+##### Aggressive
+As a bonus action, your animal companion can move up to its speed towards a hostile creature that it can see.
+
+##### Amphibious
+Your animal companion can breathe air and water. If the animal companion does not already have a swim speed, it gains one equal to its movement speed with a value to its base speed -10 feet.
+
+##### Cunning
+Your animal companion has advantage on saving throws against being charmed.
+
+##### Darkvision
+Your animal companion has darkvision out to a range of 60 feet.
+
+##### Dive Attack
+If the animal companion is flying and dives at least 20 feet straight towards a target and then hits it with a melee attack, the attack deals an extra 4 (1d8) damage to the target.
+
+##### Echolocation
+Your animal companion has advantage on Wisdom (Perception) checks that rely on hearing and blindsight with a range of 60 feet. It can't use its blindsight while deafened.
+
+##### Hold Breath
+Your animal companion can hold its breath for 15 minutes.
+
+##### Keen Senses
+Choose two from the following senses: hearing, sight, and smell. Your animal companion has advantage on Wisdom (Perception) checks that rely on those two senses.
+
+##### Locomotion
+Your animal companion can move in a unique way. Choose from burrow, climb, fly, or swim. Your animal companion gains that type of movement speed with a value equal to its base speed -10 feet.
+
+##### Mimicry
+Your animal companion can mimic any sounds it has heard, including voices. A creature that hears the sounds can tell they are imitations with a successful Wisdom (Insight) check with a DC equal to your companion's Feature save DC.
+
+##### Mount
+Your animal companion is large enough to be ridden by you. Unlike most mountable creatures, your animal companion can be your size or larger. The companion cannot be smaller than your character's size to take this wild feature. [Cannot fly unless it is larger than you.]
+
+##### Natural Attack
+Your animal companion gains a new form of natural attack (eg bite, claw, gore, trample, etc). This new attack deals 1d6 damage and you choose the type of damage the attack does and which ability score (except Constitution) the attack uses for its attack and damage bonuses. Melee attacks have a reach of 5 feet and ranged attacks have a range of 25/50 feet.
+
+##### Natural Camouflage
+Your animal companion has advantage on Dexterity (Stealth) checks made to hide in one favored terrain of your choice from the ranger's Natural Explorer class feature.
+
+##### Natural Defenses
+Your animal companion increases its Armor Class by 1.
+
+##### Nimble
+Your animal companion is particularly quick. Its base land speed increases by 5 feet.
+
+##### Poisonous
+Your animal companion's basic attack deals an additional 2 (1d4) poison damage.
+
+##### Powerful Attack
+Your animal companion's basic attack increases its damage die by one size.
+
+##### Protective Shell
+Your animal companion's AC increases to 17; it does not gain a bonus to AC from having a positive Dexterity or Constitution modifier. It also gains the following action:
+
+Stable. Whenever an effect knocks the turtle prone, it can make a DC 10 Constitution saving throw to avoid being knocked prone. A prone turtle is upside down. To stand up, it must succeed on a DC 10 Dexterity check on its turn and then use all its movement for that turn.
+
+***Shell Defense.*** You can withdraw into your shell as an action. Until you emerge, you gain a +4 bonus to your AC, and you have advantage on Strength and Constitution saving throws. While in your shell, you are prone, your speed is 0 and can't increase, you have disadvantage on Dexterity saving throws, you can't take reactions, and the only action you can take is a bonus action to emerge from your shell.
+
+\pagebreakNum
+
+##### Reach
+Your animal companion increases the range of one of its melee attacks by 5 feet. You can select this wild feature multiple times. Each time it is taken, choose a different melee attack.
+
+##### Reckless
+At the start of its turn, your animal companion can gain advantage on all melee attack rolls it makes during that turn, but attack rolls against it have advantage until the start of its next turn.
+
+##### Skulk
+Your animal companion can take its Hide action as a bonus action on each of its turns.
+
+##### Slippery
+Your animal companion is slick to the touch. It has advantage on ability checks and saving throws made to escape a grapple or being restrained.
+
+##### Stable
+Your animal companion is particularly sure-footed. ???????????????
+
+##### Standing Leap
+Your animal companion's long jump is up to 20 feet and its high jump is up to 10 feet, with or without a running start.
+
+##### Stench
+The animal companion produces some form of noxious gas or stench around it. Any creature that starts its turn within 5 feet of your animal companion must succeed on a Constitution saving throw or be poisoned until the start of its next turn. On a successful saving throw, the creature is immune to its Stench for 24 hours.
+
+##### Sticky
+Your animal companion is sticky to the touch. Attempts it makes to make or maintain a grapple have advantage.
+
+##### Trained
+Your animal companion gains proficiency in two skills of your choice. You can take this wild feature multiple times. Each time it is taken, select two different skills your animal companion gains proficiency with.
+
+##### Trip
+When your animal companion hits a creature with its basic attack, the target must make a DC XX Strength saving throw or be knocked prone.
+
+##### Web Weaver
+Your animal companion ignores movement restrictions caused by webbing. While in contact with a web, the spider knows the exact location of any other creature in contact with the same web. It also gains the following action:
+
+***Web (Recharge 5-6).*** *Ranged Weapon Attack:* Dexterity modifier + proficiency bonus to hit, range 30/60 ft., one Large or smaller creature. *Hit:* The creature is restrained by webbing. As an action, the restrained creature can make a Strength check against your Feature save DC, escaping the webbing on a success. The effect ends if the webbing is destroyed. The webbing has AC 10, 5 hit points, resistance to bludgeoning damage, and immunity to poison and psychic damage.
+
+\pagebreakNum
+
+#### Medium-Tier
+##### Ambusher
+Your animal companion has advantage on attack rolls against any creature it has surprised.
+
+##### Armored
+Your animal companion increases its Armor Class by 1.
+
+##### Avoidance
+Choose one ability score. If your animal companion is subjected to a spell or effect that allows it to make a saving throw with that ability score to only take half damage, it instead takes no damage if it succeeds on the saving throw, and only half damage if it fails.
+
+##### Charger
+Your animal companion gains the Charger feat.
+
+##### Constrict
+Your animal companion can crush creatures it grapples. As a bonus action, when the companion has a creature grappled it cna deal 1d8 + Strength modifier damage to the grappled creature.
+
+##### Hemorrhaging
+Your animal companion's attacks cause deep internal or external bleeding on creatures struck by its basic attack. When a struck creature starts their turn, the target loses 4 (1d8) hit point due to blood loss. At the end of each of the creature's turn it can attempt a Constitution saving throw with a DC equal to 8 + your animal companion's Strength modifier + its proficiency bonus to end this effect. Magical healing or regeneration also end this effect.
+
+##### Improved Difficulty
+Your animal companion is more skilled in the use of its abilities. It increases the DC of its wild features by 1.
+
+##### Pack Tactics
+Your animal companion has advantage on attack rolls against a creature if at least one of its allies are within 5 feet of the target and the ally isn't incapacitated.
+
+##### Pounce
+If the animal companion moves at least 20 feet straight towards a target and then hits it with a melee attack on the same turn, the creature must make a DC XX Strength saving throw or be knocked prone. If the target is prone, the animal companion can then make one melee attack against it as a bonus action.
+
+##### Rampage
+When your animal companion reduces a creature to 0 hit points with a melee attack on its turn, it can take a bonus action to move up to half its speed and make a basic attack against another target.
+
+##### Spider Climb
+The animal companion can climb difficult surfaces, including upside down on ceilings, without needing to make an ability check. It must have a climb speed to take this wild feature.
+
+##### Swift
+Your animal companion is especially quick. Its base land speed increases by 10 feet. This stacks with the Nimble trait.
+
+##### Venomous
+Your animal companion's basic attack is venomous. Creatures hit by its attack must make a DC 14 Constitution saving throw. On a failed save, the target is poisoned until the end of its next turn.
+
+##### Wounded Fury
+While you or your animal companion have 10 hit points or fewer, your animal companion has advantage on attack rolls. In addition, it deals an extra 7 (2d6) damage to any target it hits with a melee attack.
+
+#### High Tier
+##### Blood Frenzy
+Your animal companion deals 3 (1d6) extra damage and has advantage that doesn't have all of its hit points.
+
+##### Masterful Difficulty
+Your animal companion is a master at using its abilities. It increases the DC of its wild features by 1. This wild feature stacks with the Improved Difficulty wild feature.
+
+##### Speedy
+Your animal companion is exceptionally quick. Its base land speed increases by 15 feet. This stacks with the Nimble and Swift traits.
+
+\pagebreakNum
+
+#### Unknown Tier
+##### Alternative Primary Movement
+Able to switch your primary movement from walking to burrow, climb, fly, or swim. Makes your walking speed a lot lower, but gives a faster other movement speed.
+##### Aquatic
+##### Charge
+##### Defensive Quills
+##### Desert Dweller
+
+##### Howl
+##### [Infectious Bite]
+Rats, hyenas.
+##### Moth Dust attack
+##### Phosphorescence
+Fireflies, deep sea fish
+##### Pin
+You can grapple a target with an attack.
+##### Pounce
+##### Powerful Build
+##### Prowl
+Sneak Attack?
+##### Relentless
+##### Rend/Ravage
+Reduce armor
+##### Screech
+##### Shell Spin
+Turtle based ability, able to spin in place and attack nearby creatures.
+##### Snatch
+Can attempt a disarm
+
+##### Spit/Poo Fling
+##### Stomp
+##### Swallow Whole
+##### Trample
+
+\pagebreakNum
+
+### Example Animal Companions
+#### Bear
+___
+- **Archetype:** Tenacity
+- **Origin:** Beast
+- **Ability Scores:** Strength 15, Dexterity 10, Constitution 14, Intelligence 2, Wisdom 13, Charisma 7
+- **Hit Points:** XX (PBd10+2xPB)
+- **Armor Class:** 14
+- **Saving Throws:** Constitution +2+PB, Charisma -2+PB
+- **Speed:** 30 ft.
+- ***Slam.*** *Melee Weapon Attack:* +2PB to hit, reach 5 ft., one target. *Hit:* d6 + Strength modifier bludgeoning damage.
+- ***Protective.*** When a creature your animal companion can see attacks a target that is within 5 feet of it, it can use its reaction to impose disadvantage on the attack roll.
+- **Wild Features:** Keen Senses (smell), Locomotion (Climb), Nimble, Trained (Perception)
+
+#### Bird of Prey
+___
+- **Archetype:** Cunning
+- **Origin:** Beast
+- **Ability Scores:** Strength XX, Dexterity XX, Constitution XX, Intelligence XX, Wisdom XX, Charisma XX
+- **Hit Points:** XX (XdXX+X)
+- **Armor Class:** XX
+- **Saving Throws:** Weak +X, Strong +X
+- **Speed:** XX ft.
+- ***Action.***
+- **Wild Features:** XXX, XXX, 
+
+#### Boar
+___
+- **Archetype:** Tenacity
+- **Origin:** Beast
+- **Ability Scores:** Strength XX, Dexterity XX, Constitution XX, Intelligence XX, Wisdom XX, Charisma XX
+- **Hit Points:** XX (XdXX+X)
+- **Armor Class:** XX
+- **Saving Throws:** Weak +X, Strong +X
+- **Speed:** XX ft.
+- ***Action.***
+- **Wild Features:** XXX, XXX, 
+
+#### Dragon Turtle
+___
+- **Archetype:** Tenacity
+- **Origin:** Beast
+- **Ability Scores:** Strength 15, Dexterity 6, Constitution 17, Intelligence 3, Wisdom 11, Charisma 5
+- **Hit Points:** XX (Xd10+X)
+- **Armor Class:** 17
+- **Saving Throws:** Constitution +3+PB, Charisma -3+PB
+- **Speed:** 25 ft., swim 15 ft.
+- ***Bite.*** *Melee Weapon Attack:* +2+PB to hit, reach 5 ft., one target. *Hit:* d6 + Strength modifier piercing damage.
+- ***Protective.*** When a creature your animal companion can see attacks a target that is within 5 feet of it, it can use its reaction to impose disadvantage on the attack roll.
+- **Wild Features:** Amphibious, Locomotion (Swim), Protective Shell
+
+\pagebreakNum
+
+#### Poisonous Snake
+
+#### Raptor
+___
+- **Archetype:** Ferocity
+- **Origin:** Beast
+- **Ability Scores:** Strength XX, Dexterity XX, Constitution XX, Intelligence XX, Wisdom XX, Charisma XX
+- **Hit Points:** XX (XdXX+X)
+- **Armor Class:** XX
+- **Saving Throws:** Weak +X, Strong +X
+- **Speed:** XX ft.
+- ***Action.***
+- **Wild Features:** XXX, XXX, 
+
+#### Sabercat
+___
+- **Archetype:** Cunning
+- **Origin:** Beast
+- **Ability Scores:** Strength 13, Dexterity 15, Constitution 10, Intelligence 3, Wisdom 14, Charisma 6
+- **Hit Points:** XX (Xd8+X)
+- **Armor Class:** 13
+- **Saving Throws:** Dexterity +2+PB, Charisma -2+PB
+- **Speed:** 40 ft.
+- ***Claw.*** *Melee Weapon Attack:* Dexterity modifier + proficiency bonus to hit, reach 5 ft., one target. *Hit:* d4 + Dexterity modifier slashing damage.
+- ***Sneak Attack.*** Once per turn, your animal companion can deal an extra 1d6 damage to one creature it hit with an attack if it has advantage on the attack roll or at least one of the creature's allies are within 5 feet of it.
+- **Wild Features:** Nimble, Skulk, Trained (Perception, Stealth)
+- **Missing Features:** Darkvision 60 ft.
+
+#### Scorpid
+___
+- **Archetype:** Ferocity
+- **Origin:** Beast
+- **Ability Scores:** Strength XX, Dexterity XX, Constitution XX, Intelligence XX, Wisdom XX, Charisma XX
+- **Hit Points:** XX (XdXX+X)
+- **Armor Class:** XX
+- **Saving Throws:** Weak +X, Strong +X
+- **Speed:** XX ft.
+- ***Action.***
+- **Wild Features:** XXX, XXX, 
+
+#### Spider
+___
+- **Archetype:** Cunning
+- **Origin:** Beast
+- **Ability Scores:** Strength XX, Dexterity XX, Constitution XX, Intelligence XX, Wisdom XX, Charisma XX
+- **Hit Points:** XX (XdXX+X)
+- **Armor Class:** 11+Dex
+- **Saving Throws:** Dexterity +X+PB, Charisma +X+PB
+- **Speed:** 35 ft., climb 25 ft.
+- ***Bite.*** *Melee Weapon Attack:* Dexterity modifier + proficiency bonus to hit, reach 5 ft., one target. *Hit:* d4 + Dexterity modifier piercing damage.
+- ***Sneak Attack.*** Once per turn, your animal companion can deal an extra 1d6 damage to one creature it hit with an attack if it has advantage on the attack roll or at least one of the creature's allies are within 5 feet of it.
+- **Wild Features:** Locomotion (Climb), Poisonous, Web Weaver
+- **Missing Features:** Blindsight 10 ft., Darkvision 60 ft., Paralyzing Poison, Spider Climb, Trained (Perception, Stealth)
+
+#### Wolf
+___
+- **Archetype:** Ferocity
+- **Origin:** Beast
+- **Ability Scores:** Strength 12, Dexterity 15, Constitution 12, Intelligence 3, Wisdom 12, Charisma 6
+- **Hit Points:** XX (Xd8+0)
+- **Armor Class:** 13
+- **Saving Throws:** Strength +1+PB, Dexterity +2+PB
+- **Speed:** 30 ft.
+- ***Bite.*** *Melee Weapon Attack:* +2+PB to hit, reach 5 ft., one target. *Hit:* 6 (1d8 + 2 modifier) piercing damage.
+- **Wild Features:** Keen Senses (smell, hearing), Trained (Perception, Stealth), Trip
+
+
+
+
+Bear            3
+Dragon Turtle   3
+Sabercat        3
+Wolf            3
+
+\pagebreakNum
+
+\pagebreakNum
+
+### Example Animal Companions
+#### Bat
+___
+- **Archetype:** Ferocity
+- **Origin:** Beast
+- **Ability Scores:** Strength XX, Dexterity XX, Constitution XX, Intelligence XX, Wisdom XX, Charisma XX
+- **Hit Points:** XX (XdXX+X)
+- **Armor Class:** XX
+- **Saving Throws:** Weak +X, Strong +X
+- **Speed:** XX ft.
+- ***Action.***
+- **Wild Features:** XXX, XXX, Screech, Echolocation
+
+#### Bear
+___
+- **Archetype:** Tenacity
+- **Origin:** Beast
+- **Ability Scores:** Strength XX, Dexterity XX, Constitution XX, Intelligence XX, Wisdom XX, Charisma XX
+- **Hit Points:** XX (XdXX+X)
+- **Armor Class:** XX
+- **Saving Throws:** Weak +X, Strong +X
+- **Speed:** XX ft.
+- ***Action.***
+- **Wild Features:** XXX, XXX, 
+
+#### Bird of Prey
+___
+- **Archetype:** Cunning
+- **Origin:** Beast
+- **Ability Scores:** Strength XX, Dexterity XX, Constitution XX, Intelligence XX, Wisdom XX, Charisma XX
+- **Hit Points:** XX (XdXX+X)
+- **Armor Class:** XX
+- **Saving Throws:** Weak +X, Strong +X
+- **Speed:** XX ft.
+- ***Action.***
+- **Wild Features:** XXX, XXX, 
+
+#### Boar
+___
+- **Archetype:** Tenacity
+- **Origin:** Beast
+- **Ability Scores:** Strength XX, Dexterity XX, Constitution XX, Intelligence XX, Wisdom XX, Charisma XX
+- **Hit Points:** XX (XdXX+X)
+- **Armor Class:** XX
+- **Saving Throws:** Weak +X, Strong +X
+- **Speed:** XX ft.
+- ***Action.***
+- **Wild Features:** XXX, XXX, 
+
+#### Carrion Bird
+___
+- **Archetype:** Ferocity
+- **Origin:** Beast
+- **Ability Scores:** Strength XX, Dexterity XX, Constitution XX, Intelligence XX, Wisdom XX, Charisma XX
+- **Hit Points:** XX (XdXX+X)
+- **Armor Class:** XX
+- **Saving Throws:** Weak +X, Strong +X
+- **Speed:** XX ft.
+- ***Action.***
+- **Wild Features:** XXX, XXX, 
+
+\columnbreak
+
+#### Crab
+___
+- **Archetype:** Tenacity
+- **Origin:** Beast
+- **Ability Scores:** Strength XX, Dexterity XX, Constitution XX, Intelligence XX, Wisdom XX, Charisma XX
+- **Hit Points:** XX (XdXX+X)
+- **Armor Class:** XX
+- **Saving Throws:** Weak +X, Strong +X
+- **Speed:** XX ft.
+- ***Action.***
+- **Wild Features:** XXX, XXX, 
+
+#### Crocolisk
+___
+- **Archetype:** Ferocity
+- **Origin:** Beast
+- **Ability Scores:** Strength XX, Dexterity XX, Constitution XX, Intelligence XX, Wisdom XX, Charisma XX
+- **Hit Points:** XX (XdXX+X)
+- **Armor Class:** XX
+- **Saving Throws:** Weak +X, Strong +X
+- **Speed:** XX ft.
+- ***Action.***
+- **Wild Features:** XXX, XXX, 
+
+#### Direhorn
+___
+- **Archetype:** ???
+- **Origin:** Beast
+- **Ability Scores:** Strength XX, Dexterity XX, Constitution XX, Intelligence XX, Wisdom XX, Charisma XX
+- **Hit Points:** XX (XdXX+X)
+- **Armor Class:** XX
+- **Saving Throws:** Weak +X, Strong +X
+- **Speed:** XX ft.
+- ***Action.***
+- **Wild Features:** XXX, XXX, 
+
+#### Elephant
+___
+- **Archetype:** Tenacity
+- **Origin:** Beast
+- **Ability Scores:** Strength XX, Dexterity XX, Constitution XX, Intelligence XX, Wisdom XX, Charisma XX
+- **Hit Points:** XX (XdXX+X)
+- **Armor Class:** XX
+- **Saving Throws:** Weak +X, Strong +X
+- **Speed:** XX ft.
+- ***Action.***
+- **Wild Features:** XXX, XXX, 
+
+\pagebreakNum
+
+#### Fox
+___
+- **Archetype:** Cunning
+- **Origin:** Beast
+- **Ability Scores:** Strength XX, Dexterity XX, Constitution XX, Intelligence XX, Wisdom XX, Charisma XX
+- **Hit Points:** XX (XdXX+X)
+- **Armor Class:** XX
+- **Saving Throws:** Weak +X, Strong +X
+- **Speed:** XX ft.
+- ***Action.***
+- **Wild Features:** XXX, XXX, 
+
+#### Goat
+___
+- **Archetype:** ???
+- **Origin:** Beast
+- **Ability Scores:** Strength XX, Dexterity XX, Constitution XX, Intelligence XX, Wisdom XX, Charisma XX
+- **Hit Points:** XX (XdXX+X)
+- **Armor Class:** XX
+- **Saving Throws:** Weak +X, Strong +X
+- **Speed:** XX ft.
+- ***Action.***
+- **Wild Features:** XXX, XXX, 
+
+#### Gorilla
+___
+- **Archetype:** Ferocity
+- **Origin:** Beast
+- **Ability Scores:** Strength XX, Dexterity XX, Constitution XX, Intelligence XX, Wisdom XX, Charisma XX
+- **Hit Points:** XX (XdXX+X)
+- **Armor Class:** XX
+- **Saving Throws:** Weak +X, Strong +X
+- **Speed:** XX ft.
+- ***Action.***
+- **Wild Features:** XXX, XXX, 
+
+#### Horse
+___
+- **Archetype:** Ferocity
+- **Origin:** Beast
+- **Ability Scores:** Strength XX, Dexterity XX, Constitution XX, Intelligence XX, Wisdom XX, Charisma XX
+- **Hit Points:** XX (XdXX+X)
+- **Armor Class:** XX
+- **Saving Throws:** Weak +X, Strong +X
+- **Speed:** XX ft.
+- ***Action.***
+- **Wild Features:** XXX, XXX, 
+
+#### Hound
+___
+- **Archetype:** Cunning
+- **Origin:** Beast
+- **Ability Scores:** Strength XX, Dexterity XX, Constitution XX, Intelligence XX, Wisdom XX, Charisma XX
+- **Hit Points:** XX (XdXX+X)
+- **Armor Class:** XX
+- **Saving Throws:** Weak +X, Strong +X
+- **Speed:** XX ft.
+- ***Action.***
+- **Wild Features:** XXX, XXX, 
+
+\columnbreak
+
+#### Kodo
+___
+- **Archetype:** Tenacity
+- **Origin:** Beast
+- **Ability Scores:** Strength XX, Dexterity XX, Constitution XX, Intelligence XX, Wisdom XX, Charisma XX
+- **Hit Points:** XX (XdXX+X)
+- **Armor Class:** XX
+- **Saving Throws:** Weak +X, Strong +X
+- **Speed:** XX ft.
+- ***Action.***
+- **Wild Features:** XXX, XXX, Increased AC, Powerful Build
+
+#### Lizard
+___
+- **Archetype:** Tenacity
+- **Origin:** Beast
+- **Ability Scores:** Strength XX, Dexterity XX, Constitution XX, Intelligence XX, Wisdom XX, Charisma XX
+- **Hit Points:** XX (XdXX+X)
+- **Armor Class:** XX
+- **Saving Throws:** Weak +X, Strong +X
+- **Speed:** XX ft.
+- ***Action.***
+- **Wild Features:** XXX, XXX, 
+
+#### Monkey
+___
+- **Archetype:** Cunning
+- **Origin:** Beast
+- **Ability Scores:** Strength XX, Dexterity XX, Constitution XX, Intelligence XX, Wisdom XX, Charisma XX
+- **Hit Points:** XX (XdXX+X)
+- **Armor Class:** XX
+- **Saving Throws:** Weak +X, Strong +X
+- **Speed:** XX ft.
+- ***Action.***
+- **Wild Features:** XXX, XXX, 
+
+#### Moth
+___
+- **Archetype:** Cunning
+- **Origin:** Beast
+- **Ability Scores:** Strength XX, Dexterity XX, Constitution XX, Intelligence XX, Wisdom XX, Charisma XX
+- **Hit Points:** XX (XdXX+X)
+- **Armor Class:** XX
+- **Saving Throws:** Weak +X, Strong +X
+- **Speed:** XX ft.
+- ***Action.***
+- **Wild Features:** XXX, XXX, 
+
+#### Orca
+___
+- **Archetype:** Ferocity
+- **Origin:** Beast
+- **Ability Scores:** Strength XX, Dexterity XX, Constitution XX, Intelligence XX, Wisdom XX, Charisma XX
+- **Hit Points:** XX (XdXX+X)
+- **Armor Class:** XX
+- **Saving Throws:** Weak +X, Strong +X
+- **Speed:** XX ft.
+- ***Action.***
+- **Wild Features:** XXX, XXX, 
+
+\pagebreakNum
+
+#### Oxen
+___
+- **Archetype:** Tenacity
+- **Origin:** Beast
+- **Ability Scores:** Strength XX, Dexterity XX, Constitution XX, Intelligence XX, Wisdom XX, Charisma XX
+- **Hit Points:** XX (XdXX+X)
+- **Armor Class:** XX
+- **Saving Throws:** Weak +X, Strong +X
+- **Speed:** XX ft.
+- ***Action.***
+- **Wild Features:** XXX, XXX, 
+
+#### Pterrodax
+___
+- **Archetype:** Cunning
+- **Origin:** Beast
+- **Ability Scores:** Strength XX, Dexterity XX, Constitution XX, Intelligence XX, Wisdom XX, Charisma XX
+- **Hit Points:** XX (XdXX+X)
+- **Armor Class:** XX
+- **Saving Throws:** Weak +X, Strong +X
+- **Speed:** XX ft.
+- ***Action.***
+- **Wild Features:** XXX, XXX, 
+
+#### Raptor
+___
+- **Archetype:** Ferocity
+- **Origin:** Beast
+- **Ability Scores:** Strength XX, Dexterity XX, Constitution XX, Intelligence XX, Wisdom XX, Charisma XX
+- **Hit Points:** XX (XdXX+X)
+- **Armor Class:** XX
+- **Saving Throws:** Weak +X, Strong +X
+- **Speed:** XX ft.
+- ***Action.***
+- **Wild Features:** XXX, XXX, 
+
+#### Saber Cat
+___
+- **Archetype:** ???
+- **Origin:** Beast
+- **Ability Scores:** Strength XX, Dexterity XX, Constitution XX, Intelligence XX, Wisdom XX, Charisma XX
+- **Hit Points:** XX (XdXX+X)
+- **Armor Class:** XX
+- **Saving Throws:** Weak +X, Strong +X
+- **Speed:** XX ft.
+- ***Action.***
+- **Wild Features:** XXX, XXX, 
+
+#### Scorpid
+___
+- **Archetype:** Ferocity
+- **Origin:** Beast
+- **Ability Scores:** Strength XX, Dexterity XX, Constitution XX, Intelligence XX, Wisdom XX, Charisma XX
+- **Hit Points:** XX (XdXX+X)
+- **Armor Class:** XX
+- **Saving Throws:** Weak +X, Strong +X
+- **Speed:** XX ft.
+- ***Action.***
+- **Wild Features:** XXX, XXX, 
+
+\columnbreak
+
+#### Serpent
+___
+- **Archetype:** Cunning
+- **Origin:** Beast
+- **Ability Scores:** Strength XX, Dexterity XX, Constitution XX, Intelligence XX, Wisdom XX, Charisma XX
+- **Hit Points:** XX (XdXX+X)
+- **Armor Class:** XX
+- **Saving Throws:** Weak +X, Strong +X
+- **Speed:** XX ft.
+- ***Action.***
+- **Wild Features:** XXX, XXX, 
+
+#### Spider
+___
+- **Archetype:** Ferocity
+- **Origin:** Beast
+- **Ability Scores:** Strength XX, Dexterity XX, Constitution XX, Intelligence XX, Wisdom XX, Charisma XX
+- **Hit Points:** XX (XdXX+X)
+- **Armor Class:** XX
+- **Saving Throws:** Weak +X, Strong +X
+- **Speed:** XX ft.
+- ***Action.***
+- **Wild Features:** XXX, XXX, 
+
+#### Stag
+___
+- **Archetype:** Tenacity
+- **Origin:** Beast
+- **Ability Scores:** Strength XX, Dexterity XX, Constitution XX, Intelligence XX, Wisdom XX, Charisma XX
+- **Hit Points:** XX (XdXX+X)
+- **Armor Class:** XX
+- **Saving Throws:** Weak +X, Strong +X
+- **Speed:** XX ft.
+- ***Action.***
+- **Wild Features:** XXX, XXX, 
+
+#### Tallstrider
+___
+- **Archetype:** Ferocity
+- **Origin:** Beast
+- **Ability Scores:** Strength XX, Dexterity XX, Constitution XX, Intelligence XX, Wisdom XX, Charisma XX
+- **Hit Points:** XX (XdXX+X)
+- **Armor Class:** XX
+- **Saving Throws:** Weak +X, Strong +X
+- **Speed:** XX ft.
+- ***Action.***
+- **Wild Features:** XXX, XXX, 
+
+#### Toad
+___
+- **Archetype:** Tenacity
+- **Origin:** Beast
+- **Ability Scores:** Strength XX, Dexterity XX, Constitution XX, Intelligence XX, Wisdom XX, Charisma XX
+- **Hit Points:** XX (XdXX+X)
+- **Armor Class:** XX
+- **Saving Throws:** Weak +X, Strong +X
+- **Speed:** XX ft.
+- ***Action.***
+- **Wild Features:** XXX, XXX, 
+
+\pagebreakNum
+
+#### Turtle
+___
+- **Archetype:** Tenacity
+- **Origin:** Beast
+- **Ability Scores:** Strength XX, Dexterity XX, Constitution XX, Intelligence XX, Wisdom XX, Charisma XX
+- **Hit Points:** XX (XdXX+X)
+- **Armor Class:** XX
+- **Saving Throws:** Weak +X, Strong +X
+- **Speed:** XX ft.
+- ***Action.***
+- **Wild Features:** XXX, XXX, 
+
+#### Wolf
+___
+- **Archetype:** Ferocity
+- **Origin:** Beast
+- **Ability Scores:** Strength 12, Dexterity 15, Constitution 10, Intelligence 3, Wisdom 12, Charisma 6
+- **Hit Points:** XX (Xd8+0)
+- **Armor Class:** 13
+- **Saving Throws:** Strength +1+PB, Dexterity +2+PB
+- **Speed:** 30 ft.
+- ***Bite.*** *Melee Weapon Attack:* +2+PB to hit, reach 5 ft., one target. *Hit:* 6 (1d8 + 2 modifier) piercing damage.
+- **Wild Features:** Keen Senses (smell, hearing), Trained (Perception, Stealth), Trip
+
+#### Worm
+___
+- **Archetype:** Tenacity
+- **Origin:** Beast
+- **Ability Scores:** Strength XX, Dexterity XX, Constitution XX, Intelligence XX, Wisdom XX, Charisma XX
+- **Hit Points:** XX (XdXX+X)
+- **Armor Class:** XX
+- **Saving Throws:** Weak +X, Strong +X
+- **Speed:** XX ft.
+- ***Action.***
+- **Wild Features:** XXX, XXX, 
+
+\pagebreakNum
+
+##### Starting Pets
+Race                | Pet Family        | Appearance
+------------|-------------------|--------
+Human               | Wolf          | Gray
+Dwarf               | Bear          | Dark brown
+Night Elf           | Cat           | Frostsaber
+Gnome               | Mechanical    | Mechanical rabbit
+Draenei             | Moth          | Red with green wings
+Worgen              | Hound/Dog     | Black mastiff
+Void Elf            | Warp stalker  | Voidstalker
+Lightforged Draenei | Stag          | Argussian talbuk with golden fur
+Dark Iron Dwarf     | Hound/Dog     | Fiery brown darkhound
+Kul Tiran           | Bird of prey  | White-spotted tawny falcon
+Mechagnome          | Mechanical	| Slate and yellow mechanical wolf
+Pandaren            | Turtle        | Green dragon turtle
+Orc                 | Boar          | Black
+Undead              | Spider        | Black with red markings
+Tauren              | Tallstrider   | Purple
+Troll               | Raptor        | Red
+Blood Elf           | Dragonhawk    | Orange and red
+Goblin              | Crab          | Orange
+Nightborne          | Cat           | Blue manasaber
+Highmountain Tauren | Bird of prey  | Brown eagle with white head
+Mag'har orc         | Wolf          | Black wolf
+Zandali Troll       | Direhorn      | Blue-gray primordial direhorn
+Vulpera             | Serpent       | Red cobra
+
+\pagebreakNum
+
+\pagebreakNum
+
+## Exotic Beasts
+### Exotic Features
+#### Low-Tier
+##### Breath Weapon
+Your animal companion can exhale a type of elemental energy. It gains the Breath Weapon trait from the Dragonborn race.
+
+##### Elemental Body
+A creature that touches your animal companion or hits it with a melee attack while within 5 feet of it takes 4 (1d8) elemental damage. Choose the type of elemental damage this feature deals when this feature is taken.
+
+##### Elemental Resistance
+Choose a damage type that isn't bludgeoning, force, slashing, or piercing. Your animal companion has resistance to damage of that type.
+
+##### False Appearance
+Your animal companion can blend in to the world in a unique way. While it remains motionless, it is indistinguishable from one specific type of object such as a dead shrub or rock.
+
+##### Familiar
+Your animal companion becomes a permanent semi-familiar. When you case a spell with a range of touch, your animal companion can deliver the spell as if it had cast the spell. Your animal companion must be within 100 feet of you, and it must use its reaction to deliver the spell when you cast it. If the spell requires an attack roll, you use your attack modifier for the roll.
+
+##### Iron Scent
+Your animal companion can pinpoint, by scent, the location of ferrous metal within 30 feet of it.
+
+##### Limited Telepathy
+Your animal companion can magically transmit simple messages and images to any creature within 120 feet of it that can understand a language. This form of telepathy doesn't allow the receiving creature to telepathically respond.
+
+##### Multiple Heads
+Your animal companion has more than one head. It gains an extra reaction that can be used only for opportunity attacks. You can select this wild feature multiple times. Each time your animal companion gains a new head which, in turn, gains an extra reaction that can be used only for opportunity attacks.
+
+##### Overtune
+Your animal companion can move with a burst of speed. When its move on its turn in combat, it can double its speed until the end of the turn. Once it uses this trait, it can't use it again until you move 0 feet on one of its turns.
+
+##### Shared Senses
+You can use a bonus action to transfer your senses into that of your animal companion. You can see, hear, and smell anything that it can. Your animal companion must be within 10 miles of you to use this feature.
+
+##### Sleepless
+Your animal companion does not need to sleep and cannot be put to sleep with magic.
+
+##### Unarmored Defense
+Your animal companion's Armor Class equals 10 + its Dexterity modifier + its Constitution or Wisdom modifier.
+
+\pagebreakNum
+
+#### Medium
+##### Amorphous
+Your animal companion can move through a space as narrow as 1 inch wide without squeezing.
+
+##### Confer Elemental Resistance
+For any damage your animal companion has resistance to, it can grant resistance to anyone riding it. Your animal companion must have the Elemental Resistance and Mount wild features to take Confer Elemental Resistance.
+
+##### Damage Transfer
+While grappling a creature, your animal companion takes only half the damage dealt to it (rounded down), and that creature takes the other half.
+
+##### Devil's Sight
+Magical darkness doesn't impeded your animal companion's darkvision. Your animal companion must have the Darkvision wild feature to take Devil's Sight.
+
+##### Displacement
+Your animal companion projects a magical illusion that makes it appear to be standing near its actual location, causing attack rolls against it to have disadvantage. If it is hit by an attack, this feature is disrupted until the end of its next turn. This feature is also disrupted while the animal companion is incapacitated or has a speed of 0.
+
+##### Elemental Immunity
+Your animal companion becomes immune to one type of elemental damage. It must have the Elemental Resistance wild feature and it must choose an energy type it already has resistance to when taking this wild feature.
+
+##### Innate Spellcasting
+Your animal companion gains the ability to cast spells. It gains the Magic Initiate feat, though the DC of its spells are still determined by its Feature save DC.
+
+##### Invisibility
+Your animal companion can cast the *invisibility* spell on itself at will. Casting the spell is a bonus action.
+
+##### Magic Attacks
+Your animal companion's basic attack counts as magical for the purposes of overcoming resistance and immunity to nonmagical attacks and damage.
+
+##### Petrifying Attack
+##### Rust Metal
+##### Siege Monster
+##### Tunneler
+
+#### High
+##### Magic Resistance
+##### Magical Hide
+##### Regeneration
+##### Treestride
+##### Truesight
+#### Unknown Tier
+##### Death Burst
+##### Disrupt Magic
+##### Lightning Powered
+##### Programmable
+##### Shadowmeld
+Just invisibility.
+##### Spirit Mend
+Regeneration?
+##### Steam Powered
+##### Unstable
+Like goblin technology. Gain a bonus, but chance of catastrophic failure.
+
+\pagebreakNum
+
+## Example Exotic Beasts
+#### Chimaera
+Ferocity
+#### Cloud Serpent
+Ferocity
+#### Core Hound
+Ferocity
+#### Dark Iron Hound
+#### Dragonhawk
+Cunning
+#### Feathermane (Gryphon, Hippogrphy, Wyvern)
+___
+- **Archetype:** Tenacity
+- **Origin:** Beast
+- **Ability Scores:** Strength XX, Dexterity XX, Constitution XX, Intelligence XX, Wisdom XX, Charisma XX
+- **Hit Points:** XX (XdXX+X)
+- **Armor Class:** XX
+- **Saving Throws:** Weak +X, Strong +X
+- **Speed:** XX ft.
+- ***Action.***
+- **Wild Features:** XXX, XXX, 
+
+#### Hydra
+Tenacity
+#### Mechanical
+Cunning
+#### Mana Serpent
+#### Murloc
+#### Red Dragon Whelp
+Ferocity
+#### Shale Beast
+Cunning
+#### Spirit Beasts
+#### Thunder Lizard
+#### Warp Stalker
+Cunning
+#### Wind Serpent
+
+\pagebreakNum
+
+<div class='classTable wide'>
+
+##### List of families
+Source  | Family<br/>name | Archetype | Family ability    | Additional abilities  |Bread|Cheese|Fish|Fruit|Fungus|Meat
+--------|---------------|-----------|-----------------------------|---------------------------|:-:|:-:|:-:|:-:|:-:|:-:|
+MoP     | Basilisk      | Cunning   | [Petrifying Gaze] (Slow)  |                           |   |   | ✓ |   |   | ✓ |
+WoW     | Bat           | Ferocity  | [Sonic Screech] (Dispel)  |						    |   |   |   | ✓ | ✓ | ✓ |
+WoW     | Bear          | Tenacity  | [Thick Fur] (Defensive)   | Trick: [Rest]             | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
+Cata    | Beetle        | Tenacity	| [Harden Carapace] (Defensive) |                       |   |   |   | ✓ | ✓ |   |
+WoW     | Bird of prey  | Cunning   | [Talon Rend] (Slow)	    | Trick: [Trick]			|	|   | ✓ |   |   | ✓ |
+BfA     | Blood beast	| Tenacity  | [Blood Bolt] (Slow)       |                           |   |   | ✓ |   |   | ✓ |
+WoW     | Boar		    | Cunning   | [Bristle] (Defensive)     |                           | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
+Shadow  | Camel         | Cunning   | [Hardy] (Defensive)       |                           | ✓ |   |   | ✓ | ✓ |   |
+WoW     | Carrion bird	| Ferocity  | [Bloody Screech] (Mortal Wounds)  |                   |   |   |   | ✓ |   | ✓ |
+WoW     | Cat		    | Ferocity  | [Catlike Reflexes] (Dodge)| Bonus: [Prowl]            |   |   |   | ✓ |   | ✓ |
+Shdw    | Courser		| Ferocity	| [Fleethoof] (Dodge)       |                           |   |   |   | ✓ | ✓ |   |
+WoW     | Crab		    | Tenacity	| [Pin] (Slow)              |                           | ✓ |   | ✓ | ✓ | ✓ |   |
+WoW     | Crocolisk		| Ferocity  | [Ankle Crack] (Slow)      |                           |   |   | ✓ |   |   | ✓ |
+MoP     | Direhorn		| Tenacity  | [Gore] (Mortal Wounds)    |                           |   |   |   | ✓ | ✓ |   |
+BC      | Dragonhawk    | Tenacity	| [Dragon's Guile] (Dodge)  |                           |   |   | ✓ | ✓ |   | ✓ |
+Legion	| Feathermane	| Tenacity  | [Feather Flurry] (Dodge)	| Bonus: [Updraft]          | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
+Cata    | Fox		    | Cunning   | [Agile Reflexes] (Dodge)  | Trick: [Play]             |   |   | ✓ | ✓ |   | ✓ |
+WoW     | Gorilla       | Ferocity	| [Silver Back] (Defensive)	|                           | ✓ |   |   | ✓ | ✓ |   |
+MoP     | Gruffhorn		| Cunning	| [Gruff] (Defensive)       |                           | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
+Cata    | Hound		    | Cunning	| [Lock Jaw] (Slow)			|                           | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
+WoD     | Hydra		    | Tenacity	| [Acid Bite] (Mortal Wounds)   |                       |   |   | ✓ |   |   | ✓ |
+WoW     | Hyena		    | Cunning	| [Infected Bite] (Mortal Wounds)   |                   |   |   |   |   |   | ✓ |
+Drgnflt | Lesser Dragonkin| Ferocity	| [Shimmering Scales] (Defensive)   |                   |   |   | ✓ |   |   | ✓ |
+BfA     | Lizard	    | Tenacity  | [Grievous Bite] (Mortal Wounds)   |					|   |   | ✓ | ✓ | ✓ | ✓ |
+Shdw    | Mammoth		| Tenacity	| [Trample] (Slow)			|                           | ✓ | ✓ |   |   | ✓ | ✓ |
+Legion	| Mechanical    | Cunning   | [Defense Matrix] (Defensive)  | Mechanical diet       |   |   |   |   |   |   |
+Cata    | Monkey		| Cunning	| [Primal Agility] (Dodge)  |                           |   |   |   | ✓ | ✓ |   |
+WotLK	| Moth          | Cunning	| [Serenity Dust] (Dispel)  |                           | ✓ | ✓ |   | ✓ | ✓ |	|
+Legion	| Oxen		    | Tenacity	| [Niuzao's Fortitude] (Defensive) |                    | ✓ | ✓ |   | ✓ | ✓ |	|
+WoW     | Raptor        | Cunning   | [Savage Rend] (Mortal Wounds) |                       |   |   |   |   |   | ✓ |
+BC      | Ravager		| Ferocity	| [Ravage] (Mortal Wounds)  |                           |   |   |   |   |   | ✓ |
+BC      | Ray		    | Ferocity  | [Nether Energy] (Dispel)  |                           |   |   |   |   | ✓ | ✓ |
+WoD     | Riverbeast    | Tenacity	| [Gruesome Bite] (Mortal Wounds)   |                   | ✓ |   |   | ✓ | ✓ |   |
+MoP     | Rodent		| Cunning	| [Gnaw] (Mortal Wounds)    | Trick: [Rest]             |   |   |   |   | ✓ |   |
+Legion	| Scalehide		| Ferocity	| [Scale Shield] (Defensive)    |                       | ✓ | ✓ |   | ✓ | ✓ |   |
+
+</div>
+
+\pagebreakNum
+
+<div class='classTable wide'>
+
+Source  | Family<br/>name | Archetype | Family ability    | Additional abilities  |Bread|Cheese|Fish|Fruit|Fungus|Meat
+--------|---------------|-----------|-----------------------------|---------------------------|:-:|:-:|:-:|:-:|:-:|:-:|
+WoW     | Scorpid		| Ferocity	| [Deadly Sting] (Mortal Wounds)    |                   |   |   |   |   |   | ✓ |
+WoW     | Serpent		| Cunning	| [Serpent's Swiftness] (Dodge) |                       |   |   |   |   |   | ✓ |
+WoW     | Spider		| Ferocity	| [Web Spray] (Slow)            |                       |   |   |   |   |   | ✓ |
+BC      | Sporebat		| Cunning	| [Spore Cloud] (Dispel)		|                       | ✓ | ✓ |   |   | ✓ | ✓ |
+WoD     | Stag		    | Tenacity	| [Nature's Grace] (Dispel)		|                       | ✓ | ✓ |   | ✓ | ✓ |   |
+WoW     | Tallstrider	| Ferocity	| [Dust Cloud] (Slow)			|                       | ✓ | ✓ |   |   | ✓ | ✓ |
+BfA     | Toad		    | Tenacity  | [Swarm of Flies] (Dodge)		|                       |   |   | ✓ | ✓ | ✓ | ✓ |
+WoW     | Turtle		| Tenacity	| [Shell Shield] (Defensive)	|                       | ✓ |   | ✓ | ✓ | ✓ |   |
+BC      | Warp stalker	| Cunning	| [Warp Time] (Slow)			|                       |   |   | ✓ |   |   | ✓ |
+WotLK	| Wasp		    | Ferocity	| [Toxic Sting] (Mortal Wounds)	|                       | ✓ | ✓ |   | ✓ | ✓ |   |
+MoP     | Waterfowl		| Tenacity	| [Oiled Feathers] (Dispel)	    | Trick: [Trick]		| ✓ |   | ✓ |   |   |   |
+WoW     | Wind serpent	| Ferocity	| [Winged Agility] (Dodge)		|                       | ✓ | ✓ | ✓ |   |   |   |
+WoW     | Wolf		    | Ferocity	| [Furious Bite] (Slow)			|                       |   |   |   |   |   | ✓ |
+
+</div>
+
+<div class='classTable wide'>
+
+##### Exotic Families
+
+Source  | Family<br/>name | Exotic? | Archetype | Family ability    | Additional abilities  |Bread|Cheese|Fish|Fruit|Fungus|Meat
+--------|---------------|:-:|-----------|-----------------------------|---------------------------|:-:|:-:|:-:|:-:|:-:|:-:|
+WotLK   | Aqiri         | ✓ | Cunning   | [Tendon Rip] (Slow)       | Exotic: [Dune Strider]    |   |   |   |   | ✓ | ✓ |
+BfA     | Carapid	    | ✓ | Tenacity	| [Bulwark] (Defensive)	    | Exotic: [Calcified Carapace]| |   |   |   |   | ✓ |
+WotLK	| Chimaera	    | ✓ | Ferocity	| [Frost Breath] (Slow)	    | Exotic: [Froststorm Breath]|  |   |   |   |	| ✓ |
+WotLK	| Clefthoof	    | ✓ | Ferocity	| [Thick Hide] (Defensive)	| Exotic: [Blood of the Rhino]| ✓ | ✓ | | ✓ | ✓ |   |
+WotLK	| Core hound	| ✓ | Ferocity	| [Obsidian Skin] (Defensive)|Exotic: [Molten Hide]     |   |   |   |   |   | ✓ |
+WotLK	| Devilsaur     | ✓ | Ferocity	| [Monstrous Bite] (Mortal Wounds) | Exotic: [Feast]    |   |   |   |   |   | ✓ |
+BfA     | Pterrordax	| ✓ | Cunning	| [Ancient Hide] (Defensive)    | Exotic: [Updraft]     |   |   | ✓ | ✓ |   | ✓ |
+Cata    | Shale beast	| ✓ | Cunning	| [Solid Shell] (Defensive)	    | Exotic: [Shimmering Shale]| | | ✓ |   |   | ✓ |
+WotLK	| Spirit beast	| ✓ | Tenacity	| [Spirit Pulse] (Dispel)       | Bonus: [Spirit Walk] <br/> Exotic: [Spirit Mend]||| ✓ ||| ✓ |
+MoP     | Stone hound	| ✓ | Tenacity	| [Stone Armor] (Defensive)	    | Exotic: [Eternal Guardian]| | | ✓ |   |   | ✓ |
+MoP     | Water strider	| ✓ | Cunning	| [Soothing Waters] (Dispel)	| Exotic: [Surface Trot]|   |   |   | ✓ | ✓ |   |
+WotLK	| Worm	        | ✓ | Tenacity	| [Acid Spit] (Slow)	        | Exotic: [Burrow Attack]| ✓ | ✓ |  |   | ✓ |   |
+
+</div>
+
+\pagebreakNum
+___
+> ## Beast Companion
+> *Small Beast, unaligned*
+> ___
+>- **Armor Class** 13 + PB
+>- **Hit Points** Five (Land and Water only) or Four (Air only) times your hunter level plus one (the beast has a number of Hit Dice [d6s] equal to your hunter level)
+>- **Speed** 30 ft., climb 30 ft. (land only), fly 60 ft. (air only), swim 30 ft. (water only)
+>___
+>|STR|DEX|CON|INT|WIS|CHA|
+>|:---:|:---:|:---:|:---:|:---:|:---:|
+>|14 (+2)|14 (+2)|15 (+2)|8 (-1)|14 (+2)|11 (+0)|
+>___
+>- **Senses** darkvision 60 ft., passive Perception 12
+>- **Languages** understands the languages you speak
+>- **Challenge** —
+>___
+>***Amphibious (Water only).*** The beast can breathe both air and water.  
+>
+>***Flyby (Air only).*** The beast doesn't provoke opportunity attacks when it flies out of an enemy's reach.  
+>
+>***Primal Bond.*** You can add your proficiency bonus to any ability check or saving throw that the beast makes.  
+>
+>### Actions
+>***Maul (Land only).*** *Melee Weapon Attack:* your spell attack modifier to hit, reach 5 ft., one target. *Hit:* 1d8 + 2 + PB slashing damage.
+>
+>***Binding Strike (Water only).*** *Melee Weapon Attack:* your spell attack modifier to hit, reach 5 ft., one target. *Hit:* 1d6 + 2 + PB bludgeoning or piercing damage (your choice), and the target is grappled (escape DC equal to your spellcasting save DC). Until this grapple ends, the beast can't use this attack on another target.
+>
+>***Shred (Air only).*** *Melee Weapon Attack:* your spell attack modifier to hit, reach 5 ft., one target. *Hit:* 1d4 + 2 + PB slashing damage
+
+
+\pagebreak
+
+##### Pet Families
+Pet Family  | Specialization
+------------|------------------
+Bird of Prey| Cunning
+Dog         | Cunning
+Hyena       | Cunning
+Serpent     | Cunning
+Spider      | Cunning
+Cat         | Ferocity
+Crocolisk   | Ferocity
+Raptor      | Ferocity
+Wolf        | Ferocity
+Bear        | Tenacity
+Boar        | Tenacity
+Elephant    | Tenacity
+Scorpid     | Tenacity
+Turtle      | Tenacity
+
+Equine      |
+
+
+Bat         |
+Bear        |
+Boar        |
+Carrion Bird|
+Cat         |
+Crab        |
+Crocolisk   |
+Fox         |
+Gorilla     |
+Hound       |
+Hyena       |
+Monkey      |
+Oxen        |
+Raptor      |
+Scorpid     |
+Serpent     |
+Spider      |
+Stag        |
+Tallstrider |
+Turtle      |
+Wind Serpent|
+Wolf        |
