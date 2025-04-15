@@ -1,0 +1,1588 @@
+<style>
+/* GLOBAL FORMATTING  */
+
+  /* Resize page to international A4 */
+  .phb {
+    width: 210mm;
+    height: 296.8mm;
+    background-image: url('https://www.gmbinder.com/images/RVaHjr8.png');
+    background-size: cover;
+  }
+  .phb:after { content: ""; }
+  
+  /* Temporary Fix for heading issues */
+    .phb p{ line-height: 15px; } 
+    .phb blockquote p{ line-height: 14px; } 
+    .phb h2{ line-height: 26px; } 
+    .phb h3{ line-height: 19px; } 
+    .phb h4{ line-height: 15px; padding-bottom: 3px; } 
+    .phb h5{ line-height: 17px; } 
+    th, td { line-height: 14px; }
+
+/* FRONT PAGE STYLES */
+
+  .cover-header-container {
+    display: block;
+    position: absolute;
+    width: 100%;
+    top: 80px;
+    left: 0;
+    right: 0;
+    clear: both;
+  }
+
+  .cover-header-logo {
+    display: block;
+    width: 700px;
+    margin: auto;
+  }
+
+  .cover-header-divider {
+    display: block;
+    width: 580px;
+    margin: -12px auto -6px;
+  }
+
+  .cover-header-title {
+    display: block;
+    width: 700px;
+    margin: auto;
+    color: white;
+    font-family: NodestoCaps,nodesto,sans-serif;
+    font-weight: normal;
+    font-size: 72px;
+    line-height: 72px;
+    text-align: center;
+    text-shadow: 2px 2px 4px #000, -2px 2px 4px #000, 2px -2px 4px #000, -2px -2px 4px #000;
+  }
+
+  .cover-footer-container {
+    display: block;
+    position: absolute;
+    width: 100%;
+    bottom: 28px;
+    left: 0;
+    right: 0;
+    clear: both;
+  }
+
+  .cover-footer-subtitle,
+  .cover-footer-version {
+    display: block;
+    width: 500px;
+    margin: auto;
+    color: white;
+    font-family: NodestoCaps,nodesto,sans-serif;
+    font-weight: normal;
+    text-align: center;
+    text-shadow: 1px 1px 2px #000, -1px 1px 2px #000, 0px 0px 2px #000;
+  }
+  .cover-footer-subtitle {
+    font-size: 28px;
+    line-height: 28px;
+  }
+  .cover-footer-version {
+    margin-top: 16px;
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+/* TABLE OF CONTENTS  */
+
+  /* toc specifically wants black text. This resets the headers*/
+  .toc a {
+    color: inherit !important;
+  }
+  /* Allow dot leaders to fill remaining space but not overlap */
+  .toc li span:nth-child(2) {
+    width: auto;
+    overflow: hidden;
+    white-space: nowrap;
+    display: block;
+  }
+  .toc li span:nth-child(2):after {
+    font-family: BookSanity;
+    font-size: 0.317cm;
+    font-weight: normal;
+    color: black;
+    content:
+      " ........................................"
+      "........................................."
+      ".........................................";
+    }
+
+  /* Style TOC page numbers*/
+  .toc li span:first-child {
+    float: right;
+    font-family: BookSanity;
+    font-size: 0.317cm;
+    font-weight: normal;
+    color: black;
+    margin-left: 1px;
+  }
+
+  /* Adjust TOC H3 styles */
+  .toc li h3 span:nth-child(2):after {
+    content: " ";
+  }
+  .toc li h3 {
+    margin-bottom: 4px !important;
+    margin-top: 10px !important;
+    line-height: initial !important;
+  }
+  .toc li h3 span:first-child {
+    line-height: 1.8em !important;
+  }
+
+  /* Reduce TOC list indentation*/
+  .toc ul ul {
+    margin-left: 10px !important;
+  }
+  .toc>ul>li {
+    margin-bottom: initial !important;
+  }
+
+
+/* TABLES AND BLOCKS */
+
+  /* Adjust tables */
+  table tr:nth-child(odd) td { background-color: #FFF0f5; }
+  .phb hr+section blockquote tr:nth-child(odd) td { background-color: transparent; }
+
+  /* Clear internal padding and add gap above for green note blocks*/
+  .phb blockquote {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .phb blockquote { margin-top: 1em; }
+
+  /* Clear internal padding in creature statblocks */
+  .phb hr+section blockquote {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  .phb blockquote {
+    box-shadow: 1px 4px 14px rgba(0,0,0,0.42);
+  }
+
+  /* For creature statblocks within range (start and end must be specified),
+     don't show a background. Used for the appendix creatures */
+  .phb:nth-of-type(n+116):nth-of-type(-n+150) hr+section blockquote {
+    background: none;
+    border: none;
+    box-shadow: none;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+  }
+
+  /* For double-wide creature statblocks that we want to have anchored to the
+  bottom of the page regardless of content flow. */
+  .statblock-bottom-wide {
+    position:absolute;
+    bottom:63px;
+    right:1.7cm;
+    left:1.7cm;
+    margin-top:1200px;
+  }
+
+
+/* FOOTER */
+
+  /* Footnotes */
+  .phb .pageNumber {
+    color: #7e735c;
+    z-index: 1000;
+  }
+  .phb .footnote { color: #7e735c; }
+
+  /* On odd pages before the bestiary, have just the page tear */
+  .phb:nth-child(odd):nth-of-type(n+2):after {
+    content: '';
+    height: 125px;
+    background-image: url(https://www.gmbinder.com/images/PB8On0U.png), url('https://gmbinder.com/images/YWardeu.png');
+    background-size: 120px 120px, 816px 55px;
+    background-repeat: no-repeat, no-repeat;
+    background-position: bottom right -10px, bottom;
+  }
+
+  /* Reversed for alternating pages */
+  .phb:nth-child(even):nth-of-type(n+2):after {
+    content: '';
+    height: 125px;
+    background-image: url(https://www.gmbinder.com/images/PB8On0U.png), url('https://gmbinder.com/images/YWardeu.png');
+    background-size: 120px 120px, 816px 55px;
+    background-repeat: no-repeat, no-repeat;
+    background-position: bottom right -10px, bottom;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+  }
+
+  /* On odd bestiary pages, have the Monster Manual page tear and lettering */
+  .phb:nth-child(odd):nth-of-type(n+10):nth-of-type(-n+115):after {
+    content: '';
+    height: 125px;
+    background-image: url(https://gmbinder.com/images/lLWeevR.png), url('https://gmbinder.com/images/YWardeu.png');
+    background-size: 120px 120px, 816px 55px;
+    background-repeat: no-repeat, no-repeat;
+    background-position: bottom right -10px, bottom;
+  }
+
+  /* Reversed for alternating pages */
+  .phb:nth-child(even):nth-of-type(n+10):nth-of-type(-n+115):after {
+    content: '';
+    height: 125px;
+    background-image: url(https://gmbinder.com/images/lLWeevR.png), url('https://gmbinder.com/images/YWardeu.png');
+    background-size: 120px 120px, 816px 55px;
+    background-repeat: no-repeat, no-repeat;
+    background-position: bottom right -10px, bottom;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+  }
+
+  /* The page number position */
+  .phb .pageNumber {
+    right: 0px;
+  }
+
+  /* The page number position for alternating pages */
+  .phb:nth-child(even) .pageNumber {
+    left: 0px;
+  }
+
+  /* The letter in the Monster Manual page tear */
+  .pageLetter {
+    position: absolute;
+    right: 15px;
+    bottom: 87.5px;
+    color: #905727;
+    z-index: 1000;
+    font-size: 135%;
+  }
+
+  /* Reversed for alternating pages */
+  .phb:nth-child(even) .pageLetter {
+      left: 15px;
+  }
+
+
+/* MONSTER MANUAL LETTER SECTION HEADER */
+
+  /* Adds the surrounding framing for the big, bold monster letter headings */
+  .letterheader {
+    position: absolute;
+    top: 30px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: url(https://gmbinder.com/images/YH3aESG.png);
+    background-size: cover;
+    width: 775px;
+    height: 133px;
+  }
+
+  /* Base component for the actual letter in the heading */
+  .mmletter {
+      position: absolute;
+      top: 20px;
+      left: 0;
+      right: 0;
+      margin-left: auto;
+      margin-right: auto;
+      background-size: cover;
+      width: 163.2px;
+      height: 163.2px;
+  }
+
+  /* Use one in combination with .mmletter to show that letter */
+  .mml-a { background-image: url(https://gmbinder.com/images/fVVv93s.png); }
+  .mml-b { background-image: url(https://gmbinder.com/images/21X6N0B.png); }
+  .mml-c { background-image: url(https://gmbinder.com/images/MvnpOWF.png); }
+  .mml-d { background-image: url(https://gmbinder.com/images/AFbLU4P.png); }
+  .mml-e { background-image: url(https://gmbinder.com/images/28NVNf9.png); }
+  .mml-f { background-image: url(https://gmbinder.com/images/Oyrhmqy.png); }
+  .mml-g { background-image: url(https://gmbinder.com/images/fRyiQn4.png); }
+  .mml-h { background-image: url(https://gmbinder.com/images/N8NamlT.png); }
+  .mml-i { background-image: url(https://gmbinder.com/images/xWI93aa.png); }
+  .mml-j { background-image: url(https://gmbinder.com/images/GgIzsun.png); }
+  .mml-k { background-image: url(https://gmbinder.com/images/OcObsWl.png); }
+  .mml-l { background-image: url(https://gmbinder.com/images/B7AUyR6.png); }
+  .mml-m { background-image: url(https://gmbinder.com/images/q4wXoxt.png); }
+  .mml-n { background-image: url(https://gmbinder.com/images/OJtC4w9.png); }
+  .mml-o { background-image: url(https://gmbinder.com/images/adeRr5d.png); }
+  .mml-p { background-image: url(https://gmbinder.com/images/EEhcrSR.png); }
+  .mml-q { background-image: url(https://gmbinder.com/images/O1AhfzL.png); }
+  .mml-r { background-image: url(https://gmbinder.com/images/w66eIuZ.png); }
+  .mml-s { background-image: url(https://gmbinder.com/images/YEoe0PP.png); }
+  .mml-t { background-image: url(https://gmbinder.com/images/7Bk9D35.png); }
+  .mml-u { background-image: url(https://gmbinder.com/images/uVJZYUg.png); }
+  .mml-v { background-image: url(https://gmbinder.com/images/gKjngey.png); }
+  .mml-w { background-image: url(https://gmbinder.com/images/14WWpsC.png); }
+  .mml-x { background-image: url(https://gmbinder.com/images/ojIYjh0.png); }
+  .mml-y { background-image: url(https://gmbinder.com/images/Gi1ePwY.png); }
+  .mml-z { background-image: url(https://gmbinder.com/images/0ZTFNVs.png); }
+
+
+/* INK BLOT STYLES */
+
+  /* Root style for inkblots. Use alone, or together with
+  one of the inkb lotstyle classes below. Essentially:
+  <img url='{url}' class='inkblot inkblot-blue' />
+  */
+  .inkblot {
+    position: absolute;
+    mix-blend-mode: multiply;
+    opacity: 0.6;
+  }
+
+  .inkblot-blue {
+    filter: hue-rotate(190deg) saturate(120%)
+  }
+
+  .inkblot-green {
+    filter: hue-rotate(120deg)
+  }
+
+</style>
+
+ <div style='margin-top:100px;'></div>
+
+## Elementals
+Elementals are ageless, ever-changing spirits of the primal forces that forge worlds; volatile beings of raw elemental power, manifested in physical form. The most common primordial form of life has been these elementals, who come before any organic life is ever able to be born, and will persist long after all organic life has perished.
+
+***Base Primal Forces.*** The elements are a complex hotbed of different forces and interactions, but for the most part, four primary materials are manifested. These are, of course, fire, water, earth and air; the building blocks of the world. 
+
+***Spiritual Conflict.*** The fifth element is said to be spirit, the inner energy of all living beings. Worlds with strong spirit are tranquil and manifest few elemental spirits who act in harmony. However, worlds with compromised spirit will result in all-out war that can shatter and recreate the surface of the world multiple times in a day.
+
+Azeroth was one such world, where its four Elemental Lords fought for countless millenia. Mountains, volcanoes, oceans and storms rose and fell rapidly as one lord gained ground over another.
+
+***Bound to the Elemental Plane.*** On Azeroth, as the titanic Keepers saw to the ordering of the world, they found the elementals wreaking havoc under the corrupting influence of the Old Gods. As a safeguard, the Keepers constructed the Elemental Plane as a prison in which the elemental lords could be locked away. In their absence, the Keepers could tend to their task at hand; settling the natural order of Azeroth.
+
+The Elemental Plane is intimately connected to the world of Azeroth, preventing all but the weakest manifestations of elemental power in the world. It is divided into four interlinked realms: the Abyssal Maw, realm of water; Deepholm, realm of earth; the Firelands, realm of fire; and Skywall, realm of air.
+
+***Shamanic Allies.*** Much of the responsibilities of the elements to maintain the balance of the world falls into the hands of the shamans. Shamans commune with them using spiritual magic, borrowing their powers only at the elements' permission. Because of this, shamans are forever devoted to a cycle of favor and thanks, gaining great power in exchange for reverence, loyalty, or whatever other small favors the spirits may seek.
+
+***Elemental Instability.*** Even the Titanic prison cannot fully keep the forces of the world locked away, and any place of major elemental significance is likely to have a few minor elementals roaming around. Ancient springs, deep canyons, and especially volcanoes and powerful storms all may spawn elementals. 
+
+Similarly, skilled spellcasters can summon more powerful elementals directly from their home plane. An elemental spawned this way will be bound in a pair of bracers, necessarily limiting their power and binding them to the command of whoever summoned them.
+
+***Elemental Nature.*** Elementals do not eat, drink or sleep. They do not feel pain, and if they are killed, they will return to their home plane. They will die permanently only if killed while in their home plane.
+
+\columnbreak
+
+<div style='margin-top:134px;'></div>
+
+<img src='https://www.gmbinder.com/images/UYEg44F.jpg' style='position:absolute; bottom:-0px; right:-120px; width:850px' />
+<img src='https://www.gmbinder.com/images/7drSEMn.png' style='position:absolute; top:0px; right:0px; width:872px' />
+
+<div class='letterheader'></div>
+<div class="mmletter mml-e"></div>
+<div class="pageLetter">E</div>
+<div class='footnote'>ELEMENTALS </div>
+
+\pagebreakNum
+
+### Air Elementals
+Taking the form of a swirling vortex of air, a collection of clouds and static, or even an almost humanoid amalgam of storm, frost, or dust, the elementals of air command the realm of the sky. Turbulent gales and gentle breezes tell locals the mood of the element of air, while fierce lightning lashes at whomever may have angered them.
+
+***Thunderbolts and Lightning.*** The wrath of storms is among the most catastrophic and impressive shows of pure power within nature. Shamans wielding lightning grasp extraordinary amounts of energy, perhaps more than any other force at their call, and these shamans are careful to wield it with caution.
+
+***The Four Winds.*** The world's winds are categorized among the four cardinal directions: North, East, South, and West. Each wind carries with it a different aspect of the weather. 
+
+The frigid North Wind carries blizzards, sleet storms and cold snaps; while the swelling East Wind brings with it storm force winds, gales, cyclones and hurricanes. The South Wind carries brutal thunderstorms from the sea, crashing lightning, rain, and clinging static; while  with the West Wind comes gentle breezes, carrying the changing of winter to spring, scented with pollen.
+
+#### Skywall
+The realm of air, Skywall, takes the form of astonishing white and gold palaces that stretch into a clear sunny sky, seemingly crafted out of the clouds themselves. Ever buffeted by gentle breezes, the towering jeweled archi- tecture possesses few floors or stairways; the chief mode of travel in the realm of air is free flight, a feature every denizen possesses. 
+
+***Elemental Hierarchy.*** Sitting atop the the Throne of the Four Winds is Al'Akir the Windlord. Below him are his four lieutenants - the Conclave of Wind - who act as secondary rulers of each of the four winds. Leadership of the four winds is in flux, changing anytime their political foes decide that their time as lords is over. Al'akir, of course, watches the struggles for power with amusement, firm in the knowledge that his own rule is undisputed.
+
+***Cunning Winds.*** More than the swirling power of the sky, the element of air is most associated with intellect and cunning. Its elemental masters rule the skies with royal authority, manipulating the complex systems of friend and foe within their own realm in much the same way as a mortal government. 
+
+***Subjects of Skywall.*** These elemental creatures range widely, from spectres of the faintest squalls to mighty stormclouds given humanoid shape. Fierce elementals in the shape of Azeroth's dragons, known as storm dragons, guard Skywall's paths and bridges, while the spirits of howling gales threaten to blow smaller entities away. In the finest temples stand the djinn, swirling sultans of the winds, acting out the Windlord’s highest commands.
+
+
+<!-- Taking form as a swirling storm, or a billowing cloud given faint humanoid shape, an air elemental holds command of wind and weather. Fast and silent, it strikes out by enveloping its foes in a blinding whirlwind to seize the upper hand.
+
+#### Skywall
+[Checkmarks for each of the elemental planes for what to cover:]
+- What is the government of each plane? Non-specific as to names of current members at first. For example, the Elemental Lord of Skywall is called the Windlord. Below him is the Conclave of Winds, representing the Four Winds. And so on.
+- Who populates the realm beyond the elementals? For example, Skywall also has djinn and storm drakes.
+- What is the capital and major settlements (those worth knowing about)? 
+- What is the appearance of the plane? It's air, water, earth? What is the architectural style of its buildings?
+- Finally, cover who the current ruler(s) of the plane are. Both pre- and post- Cataclysm. Specify when they were replaced. -->
+
+\columnbreak
+
+<div style='margin-top:335px;'></div>
+
+___
+> ## Lesser Air Elemental
+> *Medium elemental, neutral*
+> ___
+> - **Armor Class** 13
+> - **Hit Points** 36 (8d8)
+> - **Speed** 0 ft., fly 90 ft. (hover)
+> ___ 
+> |  STR  |  DEX  |  CON  |  INT  |  WIS  |  CHA  |
+> |:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+> |10 (+0)|16 (+3)|10 (+0)| 4 (-3)| 8 (-1)| 4 (-3)|
+> ___
+> - **Damage Resistances** lightning, thunder; bludgeoning, piercing, and slashing from nonmagical attacks 
+> - **Damage Immunities** poison
+> - **Condition Immunities** exhaustion, grappled, paralyzed, petrified, poisoned, prone, restrained, unconscious
+> - **Senses** darkvision 60 ft., passive Perception 10
+> - **Languages** Kalimag
+> - **Challenge** 1 (200 XP)
+> ___
+> ***Air Form.*** The elemental can enter a hostile creature's space and stop there. It can move through a space as narrow as 1 inch wide without squeezing.
+> 
+> ### Actions
+> ***Slam.*** *Melee Weapon Attack.* +5 to hit, reach 5 ft., one target. Hit: 7 (1d8 + 3) bludgeoning damage.
+> 
+> ***Whirlwind (Recharge 4-6).*** Each creature in the elemental's space must make a DC 10 Strength saving throw. On a failure, a target takes 4 (1d8) bludgeoning damage and is flung up to 10 feet away from the elemental in a random direction and knocked prone. If a thrown target strikes an object, such as a wall or floor, the target takes 3 (1d6) blud­geoning damage for every 10 feet it was thrown. If the target is thrown at another creature, that creature must succeed on a DC 10 Dexterity saving throw or take the same damage and be knocked prone.
+> <br>    If the save is successful, the target takes half the damage and isn't flung away or knocked prone. <!-- https://wc5e-cr-calculator.frogvall.com/?0;13;36;5;10;7;0;7;0;7;0;0;0;0;0;0;0;1;;;;3;;;;;;;;;;1;;;;;;;;10;;;;;; -->
+
+<img src='https://www.gmbinder.com/images/zxp4HSp.png' class='inkblot' style='position:absolute; top:-30px; right:-75px; width:550px; transform:rotate(13deg);' />
+<img src='https://www.gmbinder.com/images/9oFdFdN.jpg' style='position:absolute; top:40px; left:400px; width:400px;mix-blend-mode:darken; transform:scaleX(-1)' />
+
+<img src='https://www.gmbinder.com/images/Sjc9IFl.png' class='inkblot' style='position:absolute; bottom:-320px; left:-150px; width:600px; transform:rotate(10deg) scaleX(-1);' />
+<img src='https://www.gmbinder.com/images/XEDpDG0.png' style='position:absolute; bottom:50px; left:-80px; width:600px; transform:rotate(30deg)' />
+
+<div class="pageLetter">E</div>
+<div class='footnote'>ELEMENTALS </div>
+
+\pagebreakNum
+
+<div style='margin-top:320px;'></div>
+
+___
+> ## Bound Air Elemental
+>*Large elemental, neutral*
+> ___
+> - **Armor Class** 15
+> - **Hit Points** 90 (12d10 + 24)
+> - **Speed** 0 ft., fly 90 ft. (hover)
+>___
+> |  STR  |  DEX  |  CON  |  INT  |  WIS  |  CHA  |
+> |:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+> |14 (+2)|20 (+5)|14 (+2)| 6 (-2)|10 (+0)| 6 (-2)|
+>___
+> - **Damage Resistances** lightning, thunder; bludgeoning, piercing, and slashing from nonmagical attacks
+> - **Damage Immunities** poison
+> - **Condition Immunities** exhaustion, grappled, paralyzed, petrified, poisoned, prone, restrained, unconscious
+> - **Senses** darkvision 60 ft., passive Perception 10
+> - **Languages** Kalimag
+> - **Challenge** 5 (1,800 XP)
+> ___
+>
+> ***Air Form.*** The elemental can enter a hostile creature's space and stop there. It can move through a space as narrow as 1 inch wide without squeezing.
+>
+> ### Actions
+> ***Multiattack.*** The elemental makes two slam attacks.
+>
+> ***Slam.*** *Melee Weapon Attack:* +8 to hit, reach 5 ft., one target. *Hit:* 14 (2d8 + 5) bludgeoning damage.
+>
+> ***Whirlwind (Recharge 4-6).*** Each creature in the elemental's space must make a DC 13 Strength saving throw. On a failure, a target takes 11 (2d8 + 2) bludgeoning damage and is flung up to 20 feet away from the elemental in a random direction and knocked prone. If a thrown target strikes an object, such as a wall or floor, the target takes 3 (1d6) blud­geoning damage for every 10 feet it was thrown. If the target is thrown at another creature, that creature must succeed on a DC 13 Dexterity saving throw or take the same damage and be knocked prone.
+> <br>    If the save is successful, the target takes half the damage and isn't flung away or knocked prone. <!-- https://wc5e-cr-calculator.frogvall.com/?1;15;90;8;13;31;0;28;0;31;0;0;0;0;0;0;0;1;;;;3;;;;;;;;;;1;;;;;;;;10;;;;;; -->
+
+\columnbreak
+
+<div style='margin-top:135px;'></div>
+
+___
+> ## Unbound Air Elemental
+> *Huge elemental, neutral*
+> ___
+> - **Armor Class** 17
+> - **Hit Points** 126 (12d12 + 48)
+> - **Speed** 0 ft., fly 90 ft. (hover)
+>___
+> |  STR  |  DEX  |  CON  |  INT  |  WIS  |  CHA  |
+> |:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+> |18 (+4)|24 (+7)|18 (+4)| 8 (-1)|12 (+1)| 8 (-1)|
+>___
+> - **Damage Resistances** lightning, thunder; bludgeoning, piercing, and slashing from nonmagical attacks
+> - **Damage Immunities** poison
+> - **Condition Immunities** exhaustion, grappled, paralyzed, petrified, poisoned, prone, restrained, unconscious
+> - **Senses** darkvision 60 ft., passive Perception 10
+> - **Languages** Kalimag
+> - **Challenge** 8 (3,900 XP)
+> ___
+>
+> ***Air Form.***  The elemental can enter a hostile creature's space and stop there. It can move through a space as narrow as 1 inch wide without squeezing.
+>
+> ***Buffeting Winds.*** Ranged attacks against the elemental have disadvantage on the attack rolls.
+>
+> ### Actions
+> ***Multiattack.*** The elemental makes two slam attacks.
+>
+> ***Slam.*** *Melee Weapon Attack:* +10 to hit, reach 10 ft., one target. *Hit:* 16 (2d8 + 7) bludgeoning damage plus 4 (1d8) lightning damage.
+>
+> ***Cyclone.*** The elemental creates a 15-foot cube of swirling wind centered on a point within 60 feet. Each creature in that area must make a DC 15 Constitution saving throw. A creature takes 18 (4d8) bludgeoning damage on a failed save, or half as much damage on a successful one. If a Huge or smaller creature fails the save, that creature is also pushed up to 15 feet away from the center of the cube.
+> 
+> ***Whirlwind (Recharge 4-6).*** Each creature in the elemental's space must make a DC 15 Strength saving throw. On a failure, a target takes 13 (2d8 + 4) bludgeoning damage plus 4 (1d8) lightning damage and is flung up to 20 feet away from the elemental in a random direction and knocked prone. If a thrown target strikes an object, such as a wall or floor, the target takes 3 (1d6) blud­geoning damage for every 10 feet it was thrown. If the target is thrown at another creature, that creature must succeed on a DC 15 Dexterity saving throw or take the same damage and be knocked prone.
+> <br>    If the save is successful, the target takes half the damage and isn't flung away or knocked prone. <!-- https://wc5e-cr-calculator.frogvall.com/?1;17;126;10;15;38;0;38;0;38;0;0;0;0;0;0;0;1;;1;;3;;;;;;;;;;1;;;;;;;;10;;;;;; -->
+
+
+<img src='https://www.gmbinder.com/images/pFjYqsv.jpg' style='position:absolute; top:-130px; left:-100px; width:900px' />
+<img src='https://www.gmbinder.com/images/pZatMx5.png' style='position:absolute; bottom:0px; left:0px; width:835px' />
+<div class="pageLetter">E</div>
+<div class='footnote'>ELEMENTALS </div>
+
+\pagebreakNum
+
+### Arcane Elementals
+Some entities much like elementals form out of other primordial forces. In the case of places overflowing with arcane power, the energy will manifest arcane elementals, similarly bound by bracers and similarly populated by inscrutable minds that seem to act on the seemingly random nature of the arcane itself.
+
+***A Mage's Best Servant.*** As accumulations of arcane energy, arcane elementals can be crafted and bound into service by powerful mages. It is not uncommon to find numerous lesser elementals being used as simple servants in magical academies and cities such as Silvermoon or Dalaran.
+
+***Arcane Anomalies.*** Arcane elementals are rare anomalies, and are most commonly seen in places suffused with arcane power. This makes them relatively common at the sites of exposed ley lines, the magical channels that flow under the surface of planets like blood vessels. 
+
+***Ley Lines.*** Ley lines are channels of immense arcane power that runs all along the surface of a planet in an interconnected web. They are usually buried deep in the earth, visible only to the eyes of those deeply attuned to magic such as the blue dragonflight. Those that are exposed to the surface usually begin to crystallize in the form of glowing purple mana crystals. They have been used for many things, such as creation of moonwells to powering portal spells. 
+
+Ley lines form and change based on the locations of their nexuses--areas where multiple ley lines cross or spring forth from, usually in areas of magical significance and intense use of magic such as cities with large mage academies, blue dragon nesting grounds, or ancient Titan installations.
+
+> ##### Variant: Arcane Elemental Familiar
+> Lesser arcane elementals can sometimes be found in the service of powerful mages, acting as servants and carrying out menial tasks. 
+>
+> ***Familiar.*** The elemental can be bound into serving another creature as a familiar, forming a telepathic bond with its willing master. While the two are bonded, the master can sense what the elemental senses as long as they are within 1 mile of each other. While the elemental is within 10 feet if its master, the master shares the elemental's Magic Resistance trait. If its master causes it physical harm, the elemental will end its service as a familiar, breaking the telepathic bond.
+
+\columnbreak
+
+<div style='margin-top:270px;'></div>
+
+___
+> ## Lesser Arcane Elemental
+> *Medium elemental, neutral*
+> ___
+> - **Armor Class** 12
+> - **Hit Points** 33 (6d8 + 6)
+> - **Speed** 30 ft.
+>___
+> |  STR  |  DEX  |  CON  |  INT  |  WIS  |  CHA  |
+> |:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+> | 8 (-1)|14 (+2)|12 (+1)| 5 (-2)| 8 (-1)| 4 (-3)|
+>___
+> - **Damage Resistances** acid; bludgeoning, piercing, and slashing from nonmagical attacks
+> - **Damage Immunities** force, poison
+> - **Condition Immunities** exhaustion, grappled, paralyzed, petrified, poisoned, prone, restrained, unconscious
+> - **Senses** darkvision 60 ft., passive Perception 10
+> - **Languages** telepathy 60 ft.
+> - **Challenge** 1 (200 XP)
+> ___
+> ***Arcane Form.*** The elemental can enter a hostile creature's space and stop there. It can move through a space as narrow as 1 inch wide without squeezing. When the elemental enters the area of an *antimagic field* spell for the first time on a turn or starts its turn there, it must succeed on a Constitution saving throw against the spell save DC of its spellcaster, or be stunned until the start of its next turn.
+>
+> ***Illumination.*** The elemental sheds bright light in a <br> 5-foot radius and dim light in an additional 5 feet.
+>
+> ***Magic Resistance.*** The elemental has advantage on saving throws versus spells and other magical effects. 
+>
+> ### Actions
+> ***Touch.*** *Melee Weapon Attack:* +4 to hit, reach 5 ft., one target. *Hit:* 6 (1d8 + 2) force damage. If the target is a creature, it must succeed on a DC 11 Strength saving throw or be knocked prone.
+>
+> ***Arcane Blast (Recharge 5-6).*** The elemental erupts arcane energy at a point it can see within 60 feet of it. Each creature within 5 feet of that point must make a DC 11 Dexterity saving throw, taking 12 (5d4) force damage on a failed save, or half as much damage on a successful one. <!-- https://wc5e-cr-calculator.frogvall.com/?0;12;33;4;11;24;0;6;0;6;0;0;0;0;0;0;0;1;;;;3;;;;;;;;;;1;1;;;;;;;10;;;;;; -->
+
+<img src='https://www.gmbinder.com/images/U32tbSn.jpg' style='position:absolute; bottom:0px; left:-200px; width:800px' />
+<img src='https://www.gmbinder.com/images/luZTiQ3.png' style='position:absolute; bottom:-60px; left:0px; width:835px' />
+<img src='https://www.gmbinder.com/images/Sjc9IFl.png' class='inkblot inkblot-blue' style='position:absolute; top:-50px; right:-90px; width:550px; transform:rotate(10deg);' />
+<img src='https://www.gmbinder.com/images/JdCfom0.png' style='position:absolute; top:-30px; right:0px; width:430px; transform:scaleX(-1)' />
+<div class="pageLetter">E</div>
+<div class='footnote'>ELEMENTALS </div>
+
+\pagebreakNum
+
+___
+> ## Bound Arcane Elemental
+> *Large elemental, neutral*
+> ___
+> - **Armor Class** 14
+> - **Hit Points** 85 (10d10 + 30)
+> - **Speed** 30 ft.
+>___
+> |  STR  |  DEX  |  CON  |  INT  |  WIS  |  CHA  |
+> |:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+> |12 (+1)|18 (+4)|16 (+3)| 7 (-2)|10 (+0)| 6 (-2)|
+>___
+> - **Damage Resistances** acid; bludgeoning, piercing, and slashing from nonmagical attacks
+> - **Damage Immunities** force, poison
+> - **Condition Immunities** exhaustion, grappled, paralyzed, petrified, poisoned, prone, restrained, unconscious
+> - **Senses** darkvision 60 ft., passive Perception 10
+> - **Languages** telepathy 60 ft.
+> - **Challenge** 5 (1,800 XP)
+> ___
+> ***Arcane Form.*** The elemental can enter a hostile creature's space and stop there. It can move through a space as narrow as 1 inch wide without squeezing. When the elemental enters the area of an *antimagic field* spell for the first time on a turn or starts its turn there, it must succeed on a Constitution saving throw against the spell save DC of its spellcaster, or be stunned until the start of its next turn.
+>
+> ***Illumination.*** The elemental sheds bright light in a <br> 15-foot radius and dim light in an additional 15 feet.
+> 
+> ***Magic Absorption.*** The elemental has advantage on saving throws versus spells and other magical effects. When it successfully saves versus a spell, it regains hit points equal to twice the spell's level. 
+> <br>    Additionally, whenever it is subjected to force damage, it takes no damage and regains a number of hit points equal to the force damage dealt.
+>
+> ### Actions
+> ***Multiattack.*** The elemental makes two touch attacks.
+>
+> ***Touch.*** *Melee Weapon Attack:* +7 to hit, reach 5 ft., one target. *Hit:* 13 (2d8 + 4) force damage. If the target is a creature, it must succeed on a DC 14 Strength saving throw or be knocked prone.
+>
+> ***Arcane Blast (Recharge 5-6).*** The elemental erupts arcane energy at a point it can see within 60 feet of it. Each creature within 10 feet of that point must make a DC 14 Dexterity saving throw, taking 30 (12d4) force damage on a failed save, or half as much damage on a successful one. <!-- https://wc5e-cr-calculator.frogvall.com/?1;14;85;7;14;60;0;26;0;26;0;0;0;0;0;0;0;1;;;;3;;;;;;;;;;1;1;;;;;;;10;;;;;; -->
+
+\columnbreak
+
+___
+> ## Unbound Arcane Elemental
+> *Large elemental, neutral*
+> ___
+> - **Armor Class** 16
+> - **Hit Points** 115 (10d12 + 50)
+> - **Speed** 30 ft.
+>___
+> |  STR  |  DEX  |  CON  |  INT  |  WIS  |  CHA  |
+> |:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+> |16 (+3)|22 (+6)|20 (+5)| 9 (-1)|12 (+1)| 8 (-1)|
+>___
+> - **Damage Resistances** acid; bludgeoning, piercing, and slashing from nonmagical attacks
+> - **Damage Immunities** force, poison
+> - **Condition Immunities** exhaustion, grappled, paralyzed, petrified, poisoned, prone, restrained, unconscious
+> - **Senses** darkvision 60 ft., passive Perception 10
+> - **Languages** telepathy 60 ft.
+> - **Challenge** 8 (3,900 XP)
+> ___
+> ***Arcane Form.*** The elemental can enter a hostile creature's space and stop there. It can move through a space as narrow as 1 inch wide without squeezing. When the elemental enters the area of an *antimagic field* spell for the first time on a turn or starts its turn there, it must succeed on a Constitution saving throw against the spell save DC of its spellcaster, or be stunned until the start of its next turn.
+>
+> ***Illumination.*** The elemental sheds bright light in a <br> 30-foot radius and dim light in an additional 30 feet.
+>
+> ***Magic Absorption.*** The elemental has advantage on saving throws versus spells and other magical effects. When it successfully saves versus a spell, it regains hit points equal to twice the spell's level. 
+> <br>    Additionally, whenever it is subjected to force damage, it takes no damage and regains a number of hit points equal to the force damage dealt.
+>
+> ### Actions
+> ***Multiattack.*** The elemental makes two touch attacks.
+>
+> ***Touch.*** *Melee Weapon Attack:* +9 to hit, reach 10 ft., one target. *Hit:* 19 (3d8 + 6) force damage. If the target is a creature, it must succeed on a DC 17 Strength saving throw or be knocked prone. Creatures hit by this attack have disadvantage on checks to maintain concentration until the beginning of their next turn.
+>
+> ***Arcane Blast (Recharge 5-6).*** The elemental erupts arcane energy at a point it can see within 60 feet of it. Each creature within 20 feet of that point must make a DC 16 Dexterity saving throw, taking 37 (15d4) force damage on a failed save, or half as much damage on a successful one.
+>
+> ***Consume Magic (Recharge 5-6).*** The elemental absorbs all magic in the area. It casts *dispel magic*, affecting each creature within 20 feet. For each spell level of spells ended this way, the elemental regains 2 hit points. <!-- https://wc5e-cr-calculator.frogvall.com/?1;16;115;9;17;74;0;38;0;38;0;0;0;0;0;0;0;1;;;;3;;;;;;;;;;1;1;;;;;;;10;;;;;; -->
+
+<img src='https://www.gmbinder.com/images/NILlU7U.jpg' style='position:absolute; left:50px; bottom:-70px; width:330px;' />
+<img src='https://www.gmbinder.com/images/0q6kLa3.png' style='position:absolute; left:-180px; bottom:-280px; width:780px' />
+<img src='https://www.gmbinder.com/images/7drSEMn.png' style='position:absolute; right:-50px; bottom:-20px; width:835px; transform:scaleX(-1)' />
+<img src='https://www.gmbinder.com/images/fp10Jqj.png' style='position:absolute; left:-400px; bottom:0px; width:835px; transform:scaleX(-1)' /> -->
+<div class="pageLetter">E</div>
+<div class='footnote'>ELEMENTALS </div>
+
+\pagebreakNum
+
+### Earth Elemental
+<!-- Near indistinguishable from rocks if standing still, an earth elemental is as hardy and steadfast as the element it embodies. It burrows through the ground with utmost <br/> ease, and faces its opponents head-on if engaged. -->
+
+Rumbling boulders, coated in moss or baked red in the sun, pull together as though attracted by gravity. They form the vaguest shape of a torso, misshapen from its rocky components, which begin to gently orbit one another. Tiny pinprick eyes observe the world around it, and do so for hours. What is it thinking as the world goes by?
+
+***Strength and Stability.*** The power of the earth is slow yet strong. Despite this quiet strength, no other element is able to cause as much change to the world. Mountains alter weather patterns and deny the movements of living beings merely by their presence, while an earthquake can wipe a city that has lasted a hundred years off the map in mere moments.
+
+***The Everpatient Mountain.*** The element of earth has personalities that can embody aspects of the earth such as the intimidating power of mountains or the potential motion of earthquakes and avalanches. Most commonly however, earth is the element of fortitude, patience and steadfastness. While their strength stems from this, it often comes with a weakness in an unwillingness to act, exer&shy;cising extreme caution in all decisions.
+
+#### Deepholm
+Deepholm, Azeroth’s plane of earth, is a vast, seemingly endless network of gigantic caverns, winding tunnels and quicksilver lakes. What little that is organic must live without sunlight, for only the dim glow of crystal growths and arcing energy provides illumination. Crystals grow slowly out of ancient structures built for feet that will never walk them, and throughout the realm rocks, islands and tiny articulates drift gently in the air, uninterested in gravity’s distractions.
+
+***Elemental Hierarchy.*** The ruler of Deepholme has always been Therazane the Stonemother. Below her are her sons, the immense stone colossi known as the Stone Lords, each embodying a different aspect of the earth in both appearance and personality. While whether or not the Stone Lords are the actual sons of the Stonemother is unknown, their familial bonds result in a very stable system of governance for the earthen plane.
+
+***Sanctuary of the Black.*** The black dragonflight, with their connection to the earth and deep places of the world, have been a semi-regular sight in these dark caverns. Deathwing has used the domain of the Stonemother as a sanctuary several times over the last few millenia, recuperating in the powerful energies of the Stonecore after failed clashes with the forces of Azeroth.
+
+***Holding Up the World.*** In the center of Deepholm, in the immense Temple of Earth, resides the World Pillar. This artifact of the Titans is the keystone that bears the weight of all the elemental and magnetic forces in the Elemental Plane. Without it, Deepholm and by extension the rest of the plane would collapse into Azeroth, causing untold destruction to both the elementals and the planet. Deathwing's shattering of the stone when he escaped the plane during the Cataclysm has earned the entire black dragonflight the eternal emnity of the earth elementals.
+
+***Denizens of Deepholm.*** Earthen spirits come in many forms, in various combinations of rock, crystal, or metal. When the earth is threatened, it will spawn worms of crushing crystal teeth, geode giants coated in shining opals, furious storms of dust, metal-skinned animals, earthen warriors and even stone in the shape of dragons. 
+
+\columnbreak
+
+<div style='margin-top:430px;'></div>
+
+___
+> ## Lesser Earth Elemental
+> *Medium elemental, neutral*
+> ___
+> - **Armor Class** 14 (natural armor)
+> - **Hit Points** 37 (5d8 + 15)
+> - **Speed** 30 ft., burrow 30 ft.
+> ___ 
+> |  STR  |  DEX  |  CON  |  INT  |  WIS  |  CHA  |
+> |:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+> |16 (+3)| 4 (-3)|16 (+3)| 5 (-3)|10 (+0)| 5 (-3)|
+> ___
+> - **Damage Vulnerabilities** thunder
+> - **Damage Resistances** bludgeoning, piercing, and slashing from nonmagical attacks
+> - **Damage Immunities** poison
+> - **Condition Immunities** exhaustion, paralyzed, petrified, poisoned, unconscious
+> - **Senses** darkvision 60 ft., tremorsense 60 ft., passive Perception 10 
+> - **Languages** Kalimag
+> - **Challenge** 1 (200 XP)
+> ___
+> ***Earth Glide.*** The elemental can burrow through non-magical unworked earth and stone. While doing so, the elemental doesn't disturb the material it moves through.
+> 
+> ***Siege Monster.*** The elemental deals double damage to objects and structures.
+> 
+> ### Actions
+> ***Slam.*** *Melee Weapon Attack.* +5 to hit, reach 5 ft., one target. *Hit:* 7 (1d6 + 3) bludgeoning damage. <!-- https://wc5e-cr-calculator.frogvall.com/?0;14;42;5;13;7;0;7;0;7;0;0;0;0;0;0;0;1;;;;3;;;;;;;;;;1;;;;;;;;10;;;;;; -->
+
+<img src='https://www.gmbinder.com/images/a81VyUK.png' class='inkblot' style='position:absolute; top:-180px; right:-123px; width:600px' />
+<img src='https://www.gmbinder.com/images/6aDvUEv.png' style='position:absolute; top:0px; left:360px; width:450px; transform:scaleX(-1);' />
+<div class="pageLetter">E</div>
+<div class='footnote'>ELEMENTALS </div>
+
+\pagebreakNum
+
+___
+> ## Bound Earth Elemental
+>*Large elemental, neutral*
+> ___
+> - **Armor Class** 17 (natural armor)
+> - **Hit Points** 84 (8d10 + 40)
+> - **Speed** 30 ft., burrow 30 ft.
+>___
+> |  STR  |  DEX  |  CON  |  INT  |  WIS  |  CHA  |
+> |:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+> |20 (+5)| 8 (-1)|20 (+5)| 5 (-3)|10 (+0)| 5 (-3)|
+>___
+> - **Damage Vulnerabilities** thunder
+> - **Damage Resistances** bludgeoning, piercing, and slashing from nonmagical attacks
+> - **Damage Immunities** poison
+> - **Condition Immunities** exhaustion, paralyzed, petrified, poisoned, unconscious
+> - **Senses** darkvision 60 ft., tremorsense 60 ft., <br> passive Perception 10
+> - **Languages** Kalimag
+> - **Challenge** 5 (1,800 XP)
+> ___
+> ***Earth Glide.*** The elemental can burrow through nonmagical unworked earth and stone. While doing so, the elemental doesn't disturb the material it moves through.
+>
+> ***Siege Monster.*** The elemental deals double damage to objects and structures.
+>
+> ### Actions
+> ***Multiattack.*** The elemental makes two slam attacks.
+>
+> ***Slam.*** *Melee Weapon Attack:* +8 to hit, reach 5 ft., one target. *Hit:* 12 (2d6 + 5) bludgeoning damage. <!-- https://wc5e-cr-calculator.frogvall.com/?1;17;84;8;13;24;0;24;0;24;0;0;0;0;0;0;0;1;;;;3;;;;;;;;;;1;;;;;;;;10;;;;;; -->
+
+\columnbreak
+
+___
+> ## Unbound Earth Elemental
+>*Huge elemental, neutral*
+> ___
+> - **Armor Class** 19 (natural armor)
+> - **Hit Points** 108 (8d12 + 56)
+> - **Speed** 30 ft., burrow 30 ft.
+>___
+> |  STR  |  DEX  |  CON  |  INT  |  WIS  |  CHA  |
+> |:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+> |24 (+7)|12 (+1)|24 (+7)| 7 (-2)|12 (+1)| 7 (-2)|
+>___
+> - **Damage Vulnerabilities** thunder
+> - **Damage Resistances** bludgeoning, piercing, and slashing from nonmagical attacks
+> - **Damage Immunities** poison
+> - **Condition Immunities** exhaustion, paralyzed, petrified, poisoned, unconscious
+> - **Senses** darkvision 60 ft., tremorsense 60 ft., <br> passive Perception 10
+> - **Languages** Kalimag
+> - **Challenge** 8 (3,900 XP) 
+> ___ 
+> 
+> ***Earth Glide.*** The elemental can burrow through nonmagical unworked earth and stone. While doing so, the elemental doesn't disturb the material it moves through.
+>
+> ***Siege Monster.*** The elemental deals double damage to objects and structures. 
+>
+> ### Actions
+> ***Multiattack.*** The elemental makes two slam attacks.
+>
+> ***Slam.*** *Melee Weapon Attack:* +10 to hit, reach 10 ft., one target. *Hit:* 17 (3d6 + 7) bludgeoning damage.
+>
+> ***Shockwave (Recharge 4-6).*** The elemental causes the ground to shake and crack in a 30-foot-radius circle, turning it into difficult terrain. Each creature in the area must make a DC 18 Dexterity save or take 18 (4d8) bludgeoning damage and be knocked prone. A successful save results in half damage and no other effect. <!-- https://wc5e-cr-calculator.frogvall.com/?1;19;108;10;18;36;0;34;0;34;0;0;0;0;0;0;0;1;;;;3;;;;;;;;;;1;;;;;;;;10;;;;;; -->
+
+
+<img src='https://www.gmbinder.com/images/yuiGXHd.jpg' style='position:absolute; left:-150px; bottom:0px; width:1050px' />
+<img src='https://www.gmbinder.com/images/IVAoFBN.png' style='position:absolute; left:0px; top:0px; width:1000px;' />
+<div class="pageLetter">E</div>
+<div class='footnote'>ELEMENTALS </div>
+
+\pagebreakNum
+
+### Fel Elemental
+<!-- A solid mass of green flame, these elementals are composed of pure fel energy. Their chaotic nature fuels their eternal rage, which in turn allows them to burn through almost anything. Largely unthinking, these creatures usually spontaneously form in areas of extreme fel corruption. -->
+
+On planets devastated by the invasion of demons, the very elements will invariably be poisoned by the cancerous magic of demonkind known as the Fel. Manifesting as a sick green flame that fuels itself with the life force of others, the Fel is the very definition of unnatural. In places where the Fel is exceptionally soaked into the elements, it may take form as a mindless elemental of green flame and extreme aggression, a sinful combination of creation and unmaking given shape.
+
+***Fel Cores.*** The infernal core of a Fel elemental is a disgusting thing, something like a pulsing heart of pure corruption. These cores are a vital part of demonic magic, as they are used to power many of their mechanical or magical constructs. Fel forges are fueled by malformed elemental coals, and demon weapons are crafted from ores deeply infused with the Fel. 
+
+***Terror Forming.*** The corruption of worlds that spawns these parodies of elemental life is a major step in any large-scale invasion by the Burning Legion. Their corruption of the land and poisoning of the air serves many purposes; it helps the demons acclimate, making the place more to their liking, while harming and demoralizing their enemies. 
+
+It also benefits the Burning Legion by warping natural resources to suit their needs, creating fel iron ores and brutish, corrupted wildlife that feeds their armies. The end result is a burnt-out, black wasteland colored only by neon green embers and lava, covered by layers of smog so thick that no life may remain.
+
+***Beasts of Rage.*** The fel energies that make up these elementals burns away any shred of sapience they might have once possessed, leaving them nearly rabid. This anger fuels their flames, allowing their fires to burn hot enough to singe even true flame elementals. Only the greatest of their number regain any sense of true intellect and even then only in the form of a bestial cunning.
+
+\columnbreak
+
+<div style='margin-top:395px;'></div>
+
+___
+> ## Lesser Fel Elemental <!-- https://wc5e-cr-calculator.frogvall.com/?0;10;60;3;13;4;4;0;0;0;0;0;0;0;0;0;0;1;;;;3;;;;;;;;;;1;;;;;;;;10;;;;;;;;;;; -->
+> *Medium elemental (demon), chaotic evil*
+> ___
+> - **Armor Class** 10
+> - **Hit Points** 60 (8d8 + 24)
+> - **Speed** 30 ft.
+> ___
+> |  STR  |  DEX  |  CON  |  INT  |  WIS  |  CHA  |
+> |:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+> |13 (+1)|11 (+0)|16 (+3)| 1 (-5)| 8 (-1)|16 (+3)|
+> ___
+> - **Damage Resistances** bludgeoning, piercing, and slashing from nonmagical attacks
+> - **Damage Immunities** fire, poison
+> - **Condition Immunities** exhaustion, grappled, paralyzed, petrified, poisoned, prone, restrained, unconscious
+> - **Senses** darkvision 60 ft., passive Perception 9
+> - **Languages** —
+> - **Challenge** 1 (200 XP)
+> ___
+> ***Reckless.*** At the start of its turn, the elemental can gain advantage on all melee weapon attack rolls during that turn, but attack rolls against it have advantage until the start of its next turn.
+>
+> ***Fel Flames.*** Fire damage that the elemental deals ignores other creatures' fire resistance and treats fire immunity as resistance instead.
+> 
+> ***Heat Aura.*** A creature that hits the elemental with a melee attack while within 5 feet of the elemental or ends their turn there takes 2 (1d4) fire damage.
+> 
+> ***Illumination.*** The elemental sheds bright light in a 20-foot radius and dim light in an additional 20 feet. 
+> 
+> ### Actions
+> ***Claw.*** *Melee Weapon Attack.* +3 to hit, reach 5 ft., one target. Hit: 4 (1d6 + 1) fire damage.
+
+<img src='https://www.gmbinder.com/images/a81VyUK.png' class='inkblot inkblot-green' style='position:absolute; top:-150px; right:-70px; width:550px; transform:rotate(13deg);' />
+<!-- <img src='https://www.gmbinder.com/images/Qb2VnEv.png' style='position:absolute; top:30px; right:20px; width:380px' /> -->
+<img src='https://www.gmbinder.com/images/uDBYCvh.png' style='position:absolute; top:-90px; right:20px; width:380px' />
+
+<img src='https://www.gmbinder.com/images/AYuE5Qf.png' class='inkblot inkblot-green' style='position:absolute; bottom:-120px; left:-50px; width:500px; transform:rotate(110deg)' />
+<img src='https://www.gmbinder.com/images/VrOc9kK.png' style='position:absolute; left:140px; bottom:70px; width:325px' />
+<img src='https://www.gmbinder.com/images/Y27roXt.png' style='position:absolute; left:-30px; bottom:110px; width:210px' />
+<img src='https://www.gmbinder.com/images/x7nsRQO.png' style='position:absolute; left:60px; bottom:70px;' />
+
+<div class="pageLetter">E</div>
+<div class='footnote'>ELEMENTALS </div>
+
+\pagebreakNum
+
+<div style='margin-top:360px;'></div>
+
+___
+> ## Bound Fel Elemental <!-- https://wc5e-cr-calculator.frogvall.com/?1;12;126;6;13;20;6;0;0;0;0;0;0;0;0;0;0;1;;;;3;;;;;;;;;;1;;;;;;;;10;;;;;;;;;;; -->
+> *Large elemental (demon), chaotic evil*
+> ___
+> - **Armor Class** 12
+> - **Hit Points** 126 (12d10 + 60)
+> - **Speed** 30 ft.
+> ___
+> |  STR  |  DEX  |  CON  |  INT  |  WIS  |  CHA  |
+> |:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+> |17 (+3)|15 (+2)|20 (+5)| 3 (-2)|10 (+0)|18 (+4)|
+> ___
+> - **Damage Resistances** bludgeoning, piercing, and slashing from nonmagical attacks
+> - **Damage Immunities** fire, poison
+> - **Condition Immunities** exhaustion, grappled, paralyzed, petrified, poisoned, prone, restrained, unconscious
+> - **Senses** darkvision 60 ft., passive Perception 10
+> - **Languages** —
+> - **Challenge** 5 (1,800 XP)
+> ___
+> ***Reckless.*** At the start of its turn, the elemental can gain advantage on all melee weapon attack rolls during that turn, but attack rolls against it have advantage until the start of its next turn.
+>
+> ***Fel Flames.*** Fire damage that the elemental deals ignores other creatures' fire resistance and treats fire immunity as resistance instead.
+> 
+> ***Heat Aura.*** A creature that hits the elemental with a melee attack while within 5 feet of the elemental or ends their turn there takes 3 (1d6) fire damage.
+> 
+> ***Illumination.*** The elemental sheds bright light in a 30-foot radius and dim light in an additional 30 feet. 
+> 
+> ### Actions
+> ***Multiattack.*** The elemental makes two claw attacks.
+>
+> ***Claw.*** *Melee Weapon Attack.* +6 to hit, reach 5 ft., one target. Hit: 10 (2d6 + 3) fire damage.
+
+\columnbreak
+
+<div style='margin-top:225px;'></div>
+
+___
+> ## Unbound Fel Elemental <!-- https://wc5e-cr-calculator.frogvall.com/?1;14;162;8;13;34;6;22;6;22;6;0;0;0;0;0;0;1;;;;3;;;;;;;;;;1;;;;;;;;10;;;;;;;;;;; -->
+> *Huge elemental (demon), chaotic evil*
+> ___
+> - **Armor Class** 14
+> - **Hit Points** 162 (12d12 + 84)
+> - **Speed** 30 ft.
+> ___
+> |  STR  |  DEX  |  CON  |  INT  |  WIS  |  CHA  |
+> |:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+> |21 (+5)|19 (+4)|24 (+7)| 5 (-3)|12 (+1)|20 (+5)|
+> ___
+> - **Damage Resistances** bludgeoning, piercing, and slashing from nonmagical attacks
+> - **Damage Immunities** fire, poison
+> - **Condition Immunities** exhaustion, grappled, paralyzed, petrified, poisoned, prone, restrained, unconscious
+> - **Senses** darkvision 60 ft., passive Perception 10
+> - **Languages** understands Eredun but does not speak
+> - **Challenge** 8 (3,900 XP)
+> ___
+> ***Reckless.*** At the start of its turn, the elemental can gain advantage on all melee weapon attack rolls during that turn, but attack rolls against it have advantage until the start of its next turn.
+>
+> ***Fel Flames.*** Fire damage that the elemental deals ignores other creatures' fire resistance and immunity.
+> 
+> ***Heat Aura.*** A creature that hits the elemental with a melee attack while within 10 feet of the elemental or ends their turn there takes 3 (1d6) fire damage.
+> 
+> ***Illumination.*** The elemental sheds bright light in a 60-foot radius and dim light in an additional 60 feet. 
+> 
+> ### Actions
+> ***Multiattack.*** The elemental makes two claw attacks.
+>
+> ***Claw.*** *Melee Weapon Attack.* +8 to hit, reach 10 ft., one target. Hit: 11 (2d6 + 5) fire damage.
+>
+> ***Fel Fireball (Recharge 5-6).*** The elemental creates a blast of green flame at a point it can see within 60 feet of it. Each creature within 20 feet of that point must make a DC 16 Dexterity saving throw, taking 17 (5d6) fire damage on a failed save, or half as much on a success. The elemental is immune to its own attack.
+> <br>    Creatures who fail their save have their protections against flame stripped away, gaining vulnerability to fire damage until the beginning of the elemental's next turn.
+
+<img src='https://www.gmbinder.com/images/WRYnoit.jpg' style='position:absolute; left:0px; top:0px; width:835px' />
+<img src='https://www.gmbinder.com/images/epoShfv.png' style='position:absolute; left:0px; bottom:-210px; width:835px; transform:scaleY(-1)' />
+<div class="pageLetter">E</div>
+<div class='footnote'>ELEMENTALS </div>
+
+\pagebreakNum
+
+### Fire Elementals
+<!-- A fire elemental manifests as a smoldering pillar of unwavering destruction. While susceptible to water, it is a cunning presence that will often attempt to overwhelm and outright engulf those who try to stand in its way. -->
+
+A cruel-eyed face staring out of a body like the smoldering of a furnace freed of its constraints. Overwhelming heat crisps the ground around it, and shimmers the air, even as a fire elemental reaches out, eager to spread the flames of its never-ending rage.
+
+***Burning Passion.*** Fire is, in a word, the element of passion. This is a two-sided coin, as spirits of fire are as vulnerable to extreme fits of blinding rage as they are to good humour, though the former is far more common. They are creatures of immediate need, representing both the burning heat that forged the world and the joy and anger of consciousness.
+
+***Fiery Gifts.*** More than any other element, the realm of fire has involved itself in the affairs of mortals. This ranges from simple matters such as fire elementals taking part in Summer festivals, to things as complex as whole mountain ranges being ruled by powerful fire lords, or mutations of mortal races into fire elementals. 
+
+#### The Firelands
+A simple name to elucidate the core of a place; the plane of fire is an endless sky of burning, blazing smog, filled with small islands of volcanic rock. The intense heat is enough to set ablaze anything not of the realm, and water is a thing of fantasy. Rivers of molten lava split the dry rock, while irregular igneous rock grows and cools into grand shapes, ever changing the landscape.
+
+***Elemental Hierarchy.*** Ruling from the Sulfuron Keep is Ragnaros the Firelord, with the second in command being his Majordomo. Below them are the various Lords and Barons of the Firelands. A lord's rank is determined by his martial prowess, as to gain and hold your position you must be capable of defeating all who would contest your power.
+
+***Lords of Cinder.*** The Firelands are a militant place, kept under a strict hierarchy of command with ascension in rank coming exclusively through rite of succession; the fiery lieutenants of the Firelord have for eons remained in charge by holding off competitors at every turn. There is no subtlety in the Firelands, and combat is determined quickly, and to the bitter end, inevitably resulting in a group of lords that is both ancient, and unrelenting.
+
+***Ruler of Blackrock.*** Long ago, Ragnaros was summoned by the Dark Iron dwarves as part of their war against their Bronzebeard and Wildhammer kinsmen. His arrival shattered the Redridge Mountains, created the Burning Steppes and Searing Gorge, and turned Blackrock Mountain into an active volcano. The surviving Dark Iron dwarves were enslaved by the Firelord and his lieutenants, acting as his tools for hundreds of years while he gathered his strength in the Molten Core, awaiting the time he could burn all of Azeroth to ash.
+
+***Forces of the Firelands.*** Empty fields of cracked ground are patrolled by its denizens, including by far the largest amount of fleshy creatures of any elemental plane; molten magma giants, two-headed core hounds, serpentine flamewakers and their skeletal hound pets. Huge worms swim and hunt in the magma rivers, while beautiful giant fire hawks blaze across the sky.
+
+\columnbreak
+
+<div style='margin-top:315px;'></div>
+
+___
+> ## Lesser Fire Elemental
+> *Medium elemental, neutral*
+> ___
+> - **Armor Class** 11
+> - **Hit Points** 44 (8d8 + 8)
+> - **Speed** 50 ft.
+> ___
+> |  STR  |  DEX  |  CON  |  INT  |  WIS  |  CHA  |
+> |:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+> | 6 (-2)|13 (+1)|12 (+1)| 4 (-3)| 8 (-1)| 5 (-3)|
+> ___
+> - **Damage Resistances** bludgeoning, piercing, and slashing from nonmagical attacks
+> - **Damage Immunities** fire, poison
+> - **Condition Immunities** exhaustion, grappled, paralyzed, petrified, poisoned, prone, restrained, unconscious
+> - **Senses** darkvision 60 ft., passive Perception 10
+> - **Languages** Kalimag
+> - **Challenge** 1 (200 XP)
+> ___
+> **Fire Form.** The elemental can move through a space as narrow as 1 inch wide without squeezing. A creature that touches the elemental or hits it with a melee attack while within 5 feet of it takes 3 (1d6) fire damage. In addition, the elemental can enter a hostile creature's space and stop there. The first time it enters a creature's space on a turn, that creature takes 3 (1d6) fire damage and catches fire; until someone takes an action to douse the fire, the creature takes 3 (1d6) fire damage at the start of each of its turns.
+> 
+> ***Illumination.*** The elemental sheds bright light in a 20-foot radius and dim light in an additional 20 feet. 
+> 
+> ***Water Susceptibility.*** For every 5 feet the elemental moves in water, or for every gallon of water splashed on it, it takes 1 cold damage.
+> 
+> ### Actions
+> ***Touch.*** *Melee Weapon Attack.* +3 to hit, reach 5 ft., one target. Hit: 4 (1d6 + 1) fire damage. If the target is a creature or a flammable object, it ignites. Until a creature takes an action to douse the fire, the target takes 3 (1d6) fire damage at the start of its turn. <!-- https://wc5e-cr-calculator.frogvall.com/?0;11;43;3;13;7;3;7;3;7;3;0;0;0;0;0;0;1;;;;3;;;;;;;;;;1;;;;;;;;10;;;;;; -->
+
+<img src='https://www.gmbinder.com/images/CRqcfac.png' class='inkblot' style='position:absolute; top:-60px; right:-50px; width:500px; transform:rotate(110deg)' />
+<img src='https://www.gmbinder.com/images/RHKGKqO.png' style='position:absolute; top:-20px; right:00px; width:430px; transform:scaleX(-1)' />
+<!-- <img src='https://www.gmbinder.com/images/XwZSPwQ.png' style='position:absolute; top:-20px; right:60px; width:330px; transform:scaleX(-1)' /> -->
+
+<!-- <img src='https://www.gmbinder.com/images/cNtNh1F.jpg' style='position:absolute; top:-10px; right:10px; width:400px;mix-blend-mode:darken;' />
+ -->
+<img src='https://www.gmbinder.com/images/K3yuUYN.png' style='position:absolute; left:90px; bottom:-175px; width:250px; transform:rotate(60deg)' />
+
+<!-- <img src='https://www.gmbinder.com/images/dN1tmsD.jpg' style='position:absolute; left:0px; bottom:-30px; transform:rotate(45deg)' />
+<img src='https://www.gmbinder.com/images/0q6kLa3.png' style='position:absolute; left:-200px; bottom:-250px; width:850px' />
+<img src='https://www.gmbinder.com/images/0q6kLa3.png' style='position:absolute; left:-210px; bottom:-260px; width:850px; transform:rotate(180deg)' /> -->
+<div class="pageLetter">E</div>
+<div class='footnote'>ELEMENTALS </div>
+
+\pagebreakNum
+
+___
+> ## Bound Fire Elemental
+>*Large elemental, neutral*
+> ___
+> - **Armor Class** 13
+> - **Hit Points** 102 (12d10 + 36)
+> - **Speed** 50 ft.
+>___
+> |  STR  |  DEX  |  CON  |  INT  |  WIS  |  CHA  |
+> |:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+> |10 (+0)|17 (+3)|16 (+3)| 6 (-2)|10 (+0)| 7 (-2)|
+>___
+> - **Damage Resistances** bludgeoning, piercing, and slashing from nonmagical attacks
+> - **Damage Immunities** fire, poison
+> - **Condition Immunities** exhaustion, grappled, paralyzed, petrified, poisoned, prone, restrained, unconscious
+> - **Senses** darkvision 60 ft., passive Perception 10
+> - **Languages** Kalimag
+> - **Challenge** 5 (1,800 XP)
+> ___
+> ***Fire Form.*** The elemental can move through a space as narrow as 1 inch wide without squeezing. A creature that touches the elemental or hits it with a melee attack while within 5 feet of it takes 5 (1d10) fire damage. In addition, the elemental can enter a hostile creature's space and stop there. The first time it enters a creature's space on a turn, that creature takes 5 (1d10) fire damage and catches fire; until someone takes an action to douse the fire, the creature takes 5 (1d10) fire damage at the start of each of its turns.
+>
+> ***Illumination.*** The elemental sheds bright light in a <br>30-foot radius and dim light in an additional 30 feet.
+>
+> ***Water Susceptibility.*** For every 5 feet the elemental moves in water, or for every gallon of water splashed on it, it takes 1 cold damage.
+>
+> ### Actions
+> ***Multiattack.*** The elemental makes two touch attacks
+>
+> ***Touch.*** *Melee Weapon Attack:* +6 to hit, reach 5 ft., one target. *Hit:* 10 (2d6 + 3) fire damage. If the target is a creature or a flammable object, it ignites. Until a creature takes an action to douse the fire, the target takes 5 (1d10) fire damage at the start of its turn. <!-- https://wc5e-cr-calculator.frogvall.com/?1;13;102;6;13;30;5;30;5;30;5;0;0;0;0;0;0;1;;;;3;;;;;;;;;;1;;;;;;;;10;;;;;; -->
+
+\columnbreak
+
+___
+> ## Unbound Fire Elemental
+> *Huge elemental, neutral*
+> ___
+> - **Armor Class** 15
+> - **Hit Points** 138 (12d12 + 60)
+> - **Speed** 50 ft.
+>___
+> |  STR  |  DEX  |  CON  |  INT  |  WIS  |  CHA  |
+> |:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+> |14 (+2)|21 (+5)|20 (+5)| 8 (-1)|12 (+1)| 9 (-1)|
+>___
+> - **Damage Resistances** bludgeoning, piercing, and slashing from nonmagical attacks
+> - **Damage Immunities** fire, poison
+> - **Condition Immunities** exhaustion, grappled, paralyzed, petrified, poisoned, prone, restrained, unconscious
+> - **Senses** darkvision 60 ft., passive Perception 10
+> - **Languages** Kalimag
+> - **Challenge** 8 (3,900 XP)
+> ___
+> ***Fire Form.*** The elemental can move through a space as narrow as 1 inch wide without squeezing. A creature that touches the elemental or hits it with a melee attack while within 10 feet of it takes 5 (1d10) fire damage. In addition, the elemental can enter a hostile creature's space and stop there. The first time it enters a creature's space on a turn, that creature takes 5 (1d10) fire damage and catches fire; until someone takes an action to douse the fire, the creature takes 5 (1d10) fire damage at the start of each of its turns.
+>
+> ***Illumination.*** The elemental sheds bright light in a <br>60-foot radius and dim light in an additional 60 feet.
+>
+> ***Water Susceptibility.*** For every 5 feet the elemental moves in water, or for every gallon of water splashed on it, it takes 1 cold damage.
+>
+> ### Actions
+> ***Multiattack.*** The elemental makes two touch attacks.
+>
+> ***Touch.*** *Melee Weapon Attack:* +8 to hit, reach 10 ft., one target. *Hit:* 14 (2d8 + 5) fire damage. If the target is a creature or a flammable object, it ignites. Until a creature takes an action to douse the fire, the target takes 5 (1d10) fire damage at the start of its turn.
+> 
+> ***Fire Storm (Recharge 5-6).*** The elemental creates a whirlwind of flame from its body, dealing 16 (3d10) fire damage to all creatures within 30 feet, or half damage on a successful DC 16 Dexterity save. This ability sets fire to flammable objects, and creatures that take any damage are ignited, taking 5 (1d10) fire damage at the start of their turns until they take an action to put out the flame. <!-- https://wc5e-cr-calculator.frogvall.com/?1;15;138;8;16;42;5;38;5;38;5;0;0;0;0;0;0;1;;;;3;;;;;;;;;;1;;;;;;;;10;;;;;; -->
+
+
+<img src='https://www.gmbinder.com/images/yBSVtMz.jpg' style='position:absolute; bottom:-40px; left:0px; width:835px;' />
+<img src='https://www.gmbinder.com/images/hIpYyKx.png' style='position:absolute; top:0px; left:0px; width:1000px' />
+
+<div class="pageLetter">E</div>
+<div class='footnote'>ELEMENTALS </div>
+
+\pagebreakNum
+
+### Ice Elementals
+Manifest from frozen water, ice elementals share domain and allegiance with other water elementals. It moves unhindered through the icy reaches in which it dwells, and is very quick to enrage at the sight of fire wielded in its vicinity.
+
+***Unclear Origins.*** Ice elementals are one of the anomalous mysteries of the elemental world. Some shamans say they are simply a rare type of water elemental, frozen in form and associated with water in its solid state. Others claim that some ice elementals are unnatural conglomerate elementals of ice and earth, formed in unknown circumstances, who represent and govern the changing of summer to winter. The truth is unknown, as the only ones with that knowledge - the elementals themselves - are notorious for keeping their secrets close.
+
+***Scattered Peoples.*** Unlike other elementals, there are no real homes for these creatures of ice. They tend to be found on their own or in small groups located around mountaintop glaciers or large ice floes. Only in Northrend are there large numbers of ice elementals, due to the eternal winter that grips most of the continent.
+
+***The Ice Stone has Melted.*** The master elemental of frost is undoubtedly Ahune, the Frost Lord, a poorly-tempered elemental of immense power. Ahune, easily manipulated, seeks yearly to bring an end to the hated heat of high Summer, and at this time frost elementals will manifest across the globe, seeking to cool it through the creation of vast obelisks of ice. It is a plan doomed to fail, <br/> of course, and Ahune’s persistence is held at bay on each summer solstice through shamanic ritual. 
+
+\columnbreak
+
+<div style='margin-top:330px;'></div>
+
+___
+> ## Lesser Ice Elemental
+> *Medium elemental, neutral*
+> ___
+> - **Armor Class** 13 (natural armor)
+> - **Hit Points** 39 (6d8 + 12)
+> - **Speed** 40 ft., burrow 40 ft.
+> ___
+> |  STR  |  DEX  |  CON  |  INT  |  WIS  |  CHA  |
+> |:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+> |14 (+2)|10 (+0)|14 (+2)| 3 (-4)| 8 (-1)| 6 (-2)|
+> ___
+> - **Damage Vulnerabilities** fire
+> - **Damage Resistances** bludgeoning, piercing, and slashing from nonmagical attacks
+> - **Damage Immunities** cold, poison
+> - **Condition Immunities** exhaustion, paralyzed, petrified, poisoned, unconscious
+> - **Senses** darkvision 60 ft., passive Perception 10
+> - **Languages** Kalimag
+> - **Challenge** 1 (200 XP)
+> ___
+> ***Frost Form.*** The elemental can burrow through nonmagical unworked ice and snow. While doing so, the elemental doesn't disturb the material it moves through. A creature that touches the elemental or hits it with a melee attack while within 5 feet of it takes 3 (1d6) cold damage. Additionally, the elemental freezes non-creature liquids within a 10-foot radius of it. A creature caught in the liquid when the elemental freezes it is grappled (escape DC 13).
+> 
+> ***Ice Walk.*** The elemental can move across and climb icy surfaces without needing to make an ability check. Additionally, difficult terrain composed of ice or snow doesn't cost extra movement.
+> 
+> ### Actions
+> ***Slam.*** *Melee Weapon Attack.* +4 to hit, reach 5 ft., one target. Hit: 6 (1d8 + 2) bludgeoning damage.
+> 
+> ***Icicle.*** *Ranged Weapon Attack.* +4 to hit, range 30/60 ft., one target. Hit: 6 (1d12) piercing damage. <!-- https://wc5e-cr-calculator.frogvall.com/?0;13;39;4;13;6;3;6;3;6;3;0;0;0;0;0;0;1;;;;3;;;;;;;;;;1;;;;;;;;10;;;;;; -->
+
+<img src='https://www.gmbinder.com/images/R9tzql4.jpg' style='position:absolute; left:-190px; bottom:-0px; width:780px; transform:scaleX(-1)' />
+<img src='https://www.gmbinder.com/images/61ldIkX.png' style='position:absolute; left:0px; bottom:0px; width:900px; '/>
+
+<img src='https://www.gmbinder.com/images/CRqcfac.png' class='inkblot inkblot-blue' style='position:absolute; top:-150px; left:300px; width:700px;' />
+<img src='https://www.gmbinder.com/images/8U0CLPW.png' style='position:absolute; top:-60px; right:-50px; width:500px' />
+
+<div class="pageLetter">E</div>
+<div class='footnote'>ELEMENTALS </div>
+
+\pagebreakNum
+
+<div style='margin-top:300px;'></div>
+
+___
+> ## Bound Ice Elemental
+>*Large elemental, neutral*
+> ___
+> - **Armor Class** 15 (natural armor)
+> - **Hit Points** 95 (10d10 + 40)
+> - **Speed** 40 ft., burrow 40 ft.
+>___
+> |  STR  |  DEX  |  CON  |  INT  |  WIS  |  CHA  |
+> |:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+> |18 (+4)|14 (+2)|18 (+4)| 5 (-3)|10 (+0)| 8 (-1)|
+>___
+> - **Damage Vulnerabilities** fire
+> - **Damage Resistances** bludgeoning, piercing, and slashing from nonmagical attacks
+> - **Damage Immunities** cold, poison
+> - **Condition Immunities** exhaustion, paralyzed, petrified, poisoned, unconscious
+> - **Senses** darkvision 60 ft., passive Perception 10
+> - **Languages** Kalimag
+> - **Challenge** 5 (1,800 XP)
+> ___
+> ***Frost Form.*** The elemental can burrow through nonmagical unworked ice and snow. While doing so, the elemental doesn't disturb the material it moves through. A creature that touches the elemental or hits it with a melee attack while within 5 feet of it takes 5 (1d10) cold damage. Additionally, the elemental freezes non-creature liquids within a 10-foot radius of it. A creature caught in the liquid when the elemental freezes it is grappled (escape DC 14).
+>
+> ***Ice Walk.*** The elemental can move across and climb icy surfaces without needing to make an ability check. Additionally, difficult terrain composed of ice or snow doesn't cost extra movement.
+>
+> ### Actions
+> ***Multiattack.*** The elemental makes two slam or icicle attacks.
+>
+> ***Slam.*** *Melee Weapon Attack:* +7 to hit, reach 5 ft., one target. *Hit:* 13 (2d8 + 4) bludgeoning damage.
+>
+> ***Icicle.*** *Ranged Weapon Attack:* +7 to hit, range 30/60 ft., one target. *Hit:* 11 (2d12) piercing damage. <!-- https://wc5e-cr-calculator.frogvall.com/?1;15;95;7;14;26;5;26;5;26;5;0;0;0;0;0;0;1;;;;3;;;;;;;;;;1;;;;;;;;10;;;;;; -->
+
+\columnbreak
+
+<div style='margin-top:146px;'></div>
+
+___
+> ## Unbound Ice Elemental
+>*Huge elemental, neutral*
+> ___
+> - **Armor Class** 16 (natural armor)
+> - **Hit Points** 125 (10d12 + 60)
+> - **Speed** 40 ft., burrow 40 ft.
+>___
+> |  STR  |  DEX  |  CON  |  INT  |  WIS  |  CHA  |
+> |:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+> |22 (+6)|18 (+4)|22 (+6)| 7 (-2)|12 (+1)|10 (+0)|
+>___
+> - **Damage Vulnerabilities** fire
+> - **Damage Resistances** bludgeoning, piercing, and slashing from nonmagical attacks
+> - **Damage Immunities** cold, poison
+> - **Condition Immunities** exhaustion, paralyzed, petrified, poisoned, unconscious
+> - **Senses** darkvision 60 ft., passive Perception 10
+> - **Languages** Kalimag
+> - **Challenge** 8 (3,900 XP)
+> ___
+> ***Frost Aura.*** The ground in a 10-foot radius around the elemental is icy and is difficult terrain. The radius moves with the elemental.
+> 
+> ***Frost Form.*** The elemental can burrow through nonmagical unworked ice and snow. While doing so, the elemental doesn't disturb the material it moves through. A creature that touches the elemental or hits it with a melee attack while within 10 feet of it takes 5 (1d10) cold damage. Additionally, the elemental freezes non-creature liquids within a 10-foot radius of it. A creature caught in the liquid when the elemental freezes it is grappled (escape DC 17).
+>
+> ***Ice Walk.*** The elemental can move across and climb icy surfaces without needing to make an ability check. Additionally, difficult terrain composed of ice or snow doesn't cost extra movement.
+>
+> ### Actions
+> ***Multiattack.*** The elemental makes two slam or icicle attacks.
+>
+> ***Slam.*** *Melee Weapon Attack:* +9 to hit, reach 10 ft., one target. *Hit:* 19 (3d8 + 6) bludgeoning damage.
+>
+> ***Icicle.*** *Ranged Weapon Attack:* +9 to hit, range 30/60 ft., one target. *Hit:* 19 (3d12) piercing damage.
+>
+> ***Freezing Nova (Recharge 5-6).*** A 30-foot radius of icy air blasts from the ice elemental. Each creature in the area must make a DC 17 Constitution saving throw, taking 22 (4d10) cold damage on a failed save, or half as much damage on a successful one. A creature that fails its save against this effect has its speed halved until the start of the elemental's next turn. <!-- https://wc5e-cr-calculator.frogvall.com/?1;16;125;9;17;44;5;38;5;38;5;0;0;0;0;0;0;1;;;;3;;;;;;;;;;1;;;;;;;;10;;;;;; -->
+
+<img src='https://www.gmbinder.com/images/kGbwGEn.jpg' style='position:absolute; left:0px; top:0px; width:855px' />
+<img src='https://www.gmbinder.com/images/C2bOp8u.png' style='position:absolute; left:0px; bottom:-170px; width:835px;' />
+<div class="pageLetter">E</div>
+<div class='footnote'>ELEMENTALS </div>
+
+\pagebreakNum
+
+### Water Elementals
+<!-- A favoured companion among mages, human mages in particular, a water elemental is near impossible to discern while underwater. If able, it often attempts to deal with threats by luring them along into the water -- dragging them from there into the murky depths. -->
+
+Amorphous masses of pure spring water, bound in bracers. Floating shards of ice the size of a man, glaring with cold stares. It is said that water elementals take on the fewest known types of all elementals, but this is untrue; the nature of water is shapelessness. Formless and versatile, water is the free-flowing element of change, and its elementals may take whatever form suits them. 
+
+***Ebb and Flow.*** Water is the element of change, calm, and healing, but also of crushing depths, biting cold, and secrets hidden so far down that light may never reach them. Water’s servants, therefore, channel not only the restorative powers of fresh springs, but also the freezing, lashing, pressing force of deep oceans and frigid ice.
+
+***A Spring of Calm.*** Water is seen as the most tranquil of elements, or at least the least volatile. Places significant to it are well known for their healing properties, particularly among shamanistic races. Spirits may similarly manifest in clean rivers, gushing waterfalls, or at the hearts of glaciers, wherever the water is purest. The many seas are the place of water’s greatest raw strength, and spirits of the sea are often far more robust. In places of corruption or filth, the elementals will become sickly and aggressive.
+
+#### Abyssal Maw
+Unsurprisingly, this plane is almost entirely underwater. It displays examples of all areas of sea life, from the well-lit shallow coral reefs to the lightless abyssal trenches that crisscross the ocean floor. Buildings are half made of carved stone and shells, and half of bubbles and froth, with windows made simply by supporting water vertically. 
+
+***Elemental Hierarchy.*** The Maw is ruled by Neptulon the Tidehunter, who reigns from the Throne of the Tides. Much like the Firelands, there are a number of lords below him that assist the rule of the Elemental Lord. Unlike the armies of fire, the titles of nobility rarely change hands due to the adaptive nature of the aquatic masters. 
+
+***Hydraxian Waterlords.*** While the other elements are content to help only those that appeal to themselves, water flows more freely, and its elementals are historically the most cooperative with mortals, even high-ranking lieutenants of the Tidehunter. On Azeroth, water’s servants have actively taken part in the defense of the world on multiple occasions, even as the others remained silent. 
+
+***Masses of the Abyssal Maw.*** The denizens of the plane of water are far less rigidly categorised than the other planes, owing to water’s very nature. Those few who take solid shape at all will still only be vaguely humanoid, though some mortal races are closely associated with the plane, such as the sea giants, murlocs and, of course, millions of species of fish. In many ways, these mortal species show far more than the elements the heart of the element of water, as they are the most versatile sorts across the entire multiverse. The Elemental Lord of Water, Neptulon, represents this by seldom taking a solid form, preferring to exist among his element as raging tides, gentle currents and fatherly flows.
+
+\columnbreak
+
+<div style='margin-top:265px;'></div>
+
+___
+> ## Lesser Water Elemental
+> *Medium elemental, neutral*
+> ___
+> - **Armor Class** 12 (natural armor)
+> - **Hit Points** 39 (6d8 + 12)
+> - **Speed** 30 ft., swim 90 ft.
+> ___
+> |  STR  |  DEX  |  CON  |  INT  |  WIS  |  CHA  |
+> |:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+> |14 (+2)|10 (+0)|14 (+2)| 3 (-4)| 8 (-1)| 6 (-2)|
+> ___
+> - **Damage Resistances** acid; bludgeoning, piercing, and slashing from nonmagical attacks
+> - **Damage Immunities** poison
+> - **Condition Immunities** exhaustion, grappled, paralyzed, petrified, poisoned, prone, restrained, unconscious
+> - **Senses** darkvision 60 ft., passive Perception 10
+> - **Languages** Kalimag
+> - **Challenge** 1 (200 XP)
+> ___
+> ***Water Form.*** The elemental can enter a hostile creature's space and stop there. It can move through a space as narrow as 1 inch wide without squeezing. 
+> 
+> ***Freeze.*** If the elemental takes cold damage, it partially freezes; its speed is reduced by 20 feet until the end of its next turn.
+> 
+> ### Actions
+> ***Slam.*** *Melee Weapon Attack.* +4 to hit, reach 5 ft., one target. *Hit:* 6 (1d8 + 2) bludgeoning damage.
+> 
+> ***Whelm (Recharge 4-6).*** Each creature in the elemental's space must make a DC 12 Strength saving throw. On a failure, a target takes 6 (1d8 + 2) bludgeoning damage. If it is Medium or smaller, it is also grappled (escape DC 12). Until this grapple ends, the target is restrained and unable to breathe unless it can breathe water. If the saving throw is successful, the target is pushed out of the elemental's space. 
+> <br>    The elemental can grapple one Medium or smaller creature at a time. At the start of each of the elemental's turns, each target grappled by it takes 6 (1d8 + 2) bludgeoning damage. A creature within 5 feet of the elemental can pull a creature or object out of it by taking an action to make a DC 12 Strength and succeeding. <!-- https://wc5e-cr-calculator.frogvall.com/?0;12;39;4;12;6;0;6;6;6;6;0;0;0;0;0;0;1;;;;3;;;;;1;;;;;1;;;;;;;;10;;;;;; -->
+
+<img src='https://www.gmbinder.com/images/9Rl6CcU.jpg' style='position:absolute; left:-70px; bottom:-250px; width:600px'/>
+<img src='https://www.gmbinder.com/images/nzPYZyD.png' style='position:absolute; left:-220px; bottom:-410px; width:900px'/>
+<img src='https://www.gmbinder.com/images/h5HdqeC.png' style='position:absolute; left:360px; bottom:-40px; width:300px'/>
+<img src='https://www.gmbinder.com/images/QsfphOu.png' style='position:absolute; left:300px; bottom:130px; width:300px'/>
+<img src='https://www.gmbinder.com/images/QsfphOu.png' style='position:absolute; left:300px; bottom:130px; width:300px'/>
+
+<img src='https://www.gmbinder.com/images/CRqcfac.png' class='inkblot' style='position:absolute; top:-100px; right:-70px; width:500px; transform:rotate(100deg)' />
+<img src='https://www.gmbinder.com/images/FTRgu1c.jpg' style='position:absolute; top:-50px; right:20px; width:400px; transform:scalex(-1); mix-blend-mode:darken' />
+
+<div class="pageLetter">E</div>
+<div class='footnote'>ELEMENTALS </div>
+
+\pagebreakNum
+
+___
+> ## Bound Water Elemental
+>*Large elemental, neutral*
+> ___
+> - **Armor Class** 14 (natural armor)
+> - **Hit Points** 85 (9d10 + 44)
+> - **Speed** 30 ft., swim 90 ft.
+>___
+> |  STR  |  DEX  |  CON  |  INT  |  WIS  |  CHA  |
+> |:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+> |18 (+4)|14 (+2)|18 (+4)| 5 (-3)|10 (+0)| 8 (-1)|
+>___
+> - **Damage Resistances** acid; bludgeoning, piercing, and slashing from nonmagical attacks
+> - **Damage Immunities** poison
+> - **Condition Immunities** exhaustion, grappled, paralyzed, petrified, poisoned, prone, restrained, unconscious
+> - **Senses** darkvision 60 ft., passive Perception 10
+> - **Languages** Kalimag
+> - **Challenge** 5 (1,800 XP)
+> ___
+> ***Water Form.*** The elemental can enter a hostile creature's space and stop there. It can move through a space as narrow as 1 inch wide without squeezing.
+>
+> ***Freeze.*** If the elemental takes cold damage, it partially freezes; its speed is reduced by 20 feet until the end of its next turn.
+>
+> ### Actions
+> ***Multiattack.*** The elemental makes two slam attacks.
+>
+> ***Slam.*** *Melee Weapon Attack:* +7 to hit, reach 5 ft., one target. *Hit:* 13 (2d8 + 4) bludgeoning damage.
+>
+> ***Whelm (Recharge 4-6).*** Each creature in the elemen­tal's space must make a DC 15 Strength saving throw. On a failure, a target takes 13 (2d8 + 4) bludgeoning damage. If it is Large or smaller, it is also grappled (escape DC 14). Until this grapple ends, the target is restrained and unable to breathe unless it can breathe water. If the saving throw is successful, the target is pushed out of the elemental's space.
+> <br>    The elemental can grapple one Large creature or up to two Medium or smaller creatures at one time. At the start of each of the elemental's turns, each target grappled by it takes 13 (2d8 + 4) bludgeoning damage. A creature within 5 feet of the elemental can pull a creature or object out of it by taking an action to make a DC 14 Strength and succeeding.
+
+\columnbreak
+
+___
+> ## Unbound Water Elemental
+>*Huge elemental, neutral*
+> ___
+> - **Armor Class** 15 (natural armor)
+> - **Hit Points** 112 (9d12 + 54)
+> - **Speed** 30 ft., swim 90 ft.
+>___
+> |  STR  |  DEX  |  CON  |  INT  |  WIS  |  CHA  |
+> |:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+> |22 (+6)|18 (+4)|22 (+6)| 7 (-2)|12 (+1)|10 (+0)|
+>___
+> - **Damage Resistances** acid; bludgeoning, piercing, and slashing from nonmagical attacks
+> - **Damage Immunities** poison
+> - **Condition Immunities** exhaustion, grappled, paralyzed, petrified, poisoned, prone, restrained, unconscious
+> - **Senses** darkvision 60 ft., passive Perception 10
+> - **Languages** Kalimag
+> - **Challenge** 8 (3,900 XP)
+> ___
+> ***Water Form.*** The elemental can enter a hostile creature's space and stop there. It can move through a space as narrow as 1 inch wide without squeezing.
+>
+> ***Freeze.*** If the elemental takes cold damage, it partially freezes; its speed is reduced by 20 feet until the end of its next turn.
+>
+> ### Actions
+> ***Multiattack.*** The elemental makes two slam attacks.
+>
+> ***Slam.*** *Melee Weapon Attack:* +9 to hit, reach 10 ft., one target. *Hit:* 16 (3d8 + 6) bludgeoning damage.
+>
+> ***Whirlpool (Recharge 4-6).*** Each creature within 15 feet of the elemental must make a DC 17 Strength saving throw. On a failure, they are pulled into the elemental's space, or as close as possible. Each creature that is in the elemental's space takes 15 (2d8 + 6) bludgeoning damage. If it is Huge or smaller, it is also grappled (escape DC 17). Until this grapple ends, the target is restrained and unable to breathe unless it can breathe water. If the saving throw is successful, the target is pushed out of the elemental's space.
+> <br>    The elemental can grapple one Huge creature or up to two Large or 4 Medium or smaller creatures at one time. At the start of each of the elemental's turns, each target grappled by it takes 15 (2d8 + 6) bludgeoning damage. A creature within 5 feet of the elemental can pull a creature or object out of it by taking an action to make a DC 17 Strength and succeeding. <!-- https://wc5e-cr-calculator.frogvall.com/?1;15;112;9;17;30;0;30;30;30;30;0;0;0;0;0;0;1;;;;3;;;;;1;;;;;1;;;;;;;;10;;;;;; -->
+
+<img src='https://www.gmbinder.com/images/rdwt5jh.jpg' style='position:absolute; bottom:-50px; left:0px; width:835px' />
+<img src='https://www.gmbinder.com/images/hIpYyKx.png' style='position:absolute; top:0px; left:0px; width:960px' />
+
+<div class="pageLetter">E</div>
+<div class='footnote'>ELEMENTALS </div>
+
+\pagebreakNum
+
+## Elemental Revenants
+
+The elemental revenants are yet another long-unsolved mystery among many others out in the frozen land of Northrend. Far up at the cap of the world, these elemental spirits appear to be bound within enormous, ancient sets of rough-hewn armor, drifting along above the ground as though caught in gentle breeze. They are rare and, when seen, often appear to be following some kind of distant, obscure desire to stand guard, following no apparent patterns or goals beyond protecting a single area for centuries at a time.
+
+***Mysterious Origins.*** Though they are elemental in nature, these entities are vanishingly rare outside of Northrend, and are not seen in their respective elemental planes. It is yet unknown why they act and appear the way they do, or even if they originated as elementals.
+
+***Complex Loyalties.*** Some of the revenants of Northrend have been seen serving a mysterious master in the mountains, though for what purpose, to what end, and how deep this loyalty lies is unknown.
+
+***Tundra Ghosts.*** The revenants that drift across the snow, barely visible through blizzards and mist, have a ghostly, ethereal quality to them, and are believed by some local cultures to be the spirits of dead warriors bound eternally to their armor. 
+
+### Air Revenant
+Arcing electricity and static clinging to armour or weapons herald the arrival of an air or lightning revenant, twisted ribbons of rough metal wrapped around a powerful vortex. Lightning comes to their aid, wielded like a club, while the currents of air around them whip and tug at their foes. Their voices, shrill shrieks, are that of the most violent of icy gales.
+
+### Death Revenant
+A mystery even greater than the cause of elemental revenants is the death revenants, so seldom seen as to border on mythical. Spoken of in hushed tones, and only when the sun is high, these fell spirits are said to be spirits of death itself. Great black scythes are wielded empty metal husks, who move eerily silent and speak only to the mind. It is unknown if these dread reapers are even of the same ilk as other revenants, and their desires are, once again, a mystery.
+
+### Earth Revenant
+Plumes of stones and dry earth support stout, sturdy plates roughly riveted together. A massive club, thick enough to topple walls, drifts nearby. An earth revenant wields pure, raw power, roaming their territories slowly, with the assurance that any opposition will be completely flattened. 
+
+### Fire Revenant
+Jagged, scaled armor kept red-hot by the blazing flames within, a fire revenant resembles a floating foundry, spewing molten slag and burning coals in its wake. Unlike most revenants, their weapons are well-crafted and often beautiful, albeit hot enough to brand their foes with artful scars. When rarely seen outdoors in Northrend, the extreme heat flowing out of their bodies clashes with the cold and blankets them in steam.
+
+\columnbreak
+
+### Water Revenant
+Smooth pots or jugs - connected to a water revenant's armoured body by thick chains - constantly spill out with the clear, freezing water that comprises the vague appearance of a body. Frigid temperatures accompany these revenants, who may well be the most at home in the icy land of Northrend. Water ebbs and flows at their command, frostbite awaits anyone at the receiving end of their jagged, cruel scimitars. 
+
+___
+> ## Air Revenant <!-- https://wc5e-cr-calculator.frogvall.com/?1;18;117;5;13;8;42;32;0;32;0;0;0;0;0;0;0;1;;;;3;;;;;;;;;;1;;;;;;;;10;;;;;;;0;0;0;17;Lightning%20Lure -->
+> *Medium elemental, neutral*
+> ___
+> - **Armor Class** 18 (breastplate, shield)
+> - **Hit Points** 117 (18d8 + 36)
+> - **Speed** 30 ft., fly 30 ft. (hover)
+>___
+> |  STR  |  DEX  |  CON  |  INT  |  WIS  |  CHA  |
+> |:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+> |14 (+2)|18 (+4)|14 (+2)| 9 (-1)|10 (+0)|14 (+2)|
+>___
+> - **Damage Resistances** lightning, thunder; bludgeoning, piercing, and slashing from nonmagical attacks
+> - **Damage Immunities** poison
+> - **Condition Immunities** paralyzed, petrified, poisoned, prone
+> - **Senses** darkvision 60 ft., passive Perception 10
+> - **Languages** Kalimag
+> - **Challenge** 7 (2,900 XP)
+> ___
+> ***Buffeting Winds.*** Ranged attacks against the revenant have disadvantage on the attack rolls.
+>
+> ***Innate Spellcasting.*** The revenant's spellcating ability is Charisma (spell save DC 13) and casts as a 17th level spellcaster. It can innately cast the follow&shy;ing spells, requiring no material components:
+>
+> *At will:* *gust ^XGE^, lightning lure ^TCE^*
+> <br> *1/day:* *gust of wind*
+>
+> ***Magic Weapons.*** The revenant's weapon attacks are magical.
+>
+> ### Actions
+> ***Multiattack.*** The revenant makes four mace attacks.
+>
+> ***Mace.*** *Melee Weapon Attack:* +5 to hit, reach 5 ft., one target. *Hit:* 5 (1d6 + 2) bludgeoning damage plus 3 (1d6) lightning damage. 
+> 
+> ***Lightning Strike (Recharge 5-6).*** The revenant makes one mace attack. If the attack hits, it deals an extra 21 (6d6) lightning damage plus 21 (6d6) thunder damage, and the target must succeed on a DC 13 Constitution saving throw or be stunned until the end of the revenant's next turn. 
+
+<img src='https://www.gmbinder.com/images/mr5Fl7x.jpg' style='position:absolute; bottom:-300px; right:-0px; width:480px' />
+<img src='https://www.gmbinder.com/images/zeK0PZ5.png' style='position:absolute; bottom:-300px; left:-120px; width:1000px; ' />
+
+<div class="pageLetter">E</div>
+<div class='footnote'>ELEMENTAL REVENANTS </div>
+
+\pagebreakNum
+
+<div style='margin-top:142px;'></div>
+
+___
+> ## Death Revenant <!-- https://wc5e-cr-calculator.frogvall.com/?1;20;105;6;15;15;42;36;0;45;0;0;0;0;0;0;0;1;;;;3;;;;;;;;;;1;;;;;;;;10;;;;;1;;4;0;0;17;Frostbite;Toll%20the%20Dead;Death%20and%20Decay -->
+> *Medium elemental (undead), neutral*
+> ___
+> - **Armor Class** 20 (plate, shield)
+> - **Hit Points** 105 (14d8 + 56)
+> - **Speed** 30 ft.
+> ___
+> |  STR  |  DEX  |  CON  |  INT  |  WIS  |  CHA  |
+> |:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+> |16 (+3)|10 (+0)|17 (+3)| 8 (-1)|10 (+0)|18 (+4)|
+> ___
+> - **Damage Resistances** bludgeoning, piercing, and slashing from nonmagical attacks
+> - **Damage Immunities** necrotic, poison
+> - **Condition Immunities** paralyzed, petrified, poisoned, prone
+> - **Senses** darkvision 60 ft., passive Perception 10
+> - **Languages** telepathy 60 ft.
+> - **Challenge** 8 (3,900 XP) 
+> ___
+> ***Undead Fortitude.*** If damage reduces the revenant to 0 hit points, it must make a Constitution saving throw with a DC of 5 + the damage taken, unless the damage is radiant or from a critical hit. On a success, the revenant drops to 1 hit point instead.
+>
+> ***Innate Spellcasting.*** The revenant's spellcating ability is Charisma (spell save DC 15) and casts as a 17th level spellcaster. It can innately cast the following spells, requiring no material components:
+>
+> *At will:* *frostbite ^XGE^, toll the dead ^XGE^*
+> <br> *1/day:* *✦ death and decay*
+>
+> ***Magic Weapons.*** The revenant's weapon attacks are magical.
+>
+> ### Actions
+> ***Multiattack.*** The revenant makes three scythe attacks.
+>
+> ***Scythe.*** *Melee Weapon Attack:* +6 to hit, reach 5 ft., one target. *Hit:* 8 (2d4 + 3) slashing damage plus 7 (2d6) necrotic damage. 
+>
+> ***Death Strike (Recharge 5-6).*** The revenant makes one scythe attack. If the attack hits, it deals an extra 42 (12d6) necrotic damage. The target must succeed on a DC 15 Constitution saving throw or its hit point maximum is reduced by an amount equal to the necrotic damage taken. This reduction lasts until the target finishes a long rest. The target dies if this effect reduces its hit point maximum to 0.
+>
+> A humanoid slain by this attack rises 24 hours later as a zombie under the revenant's control, unless the humanoid is restored to life or its body is destroyed. The revenant can have no more than twenty zombies under its control at one time. 
+
+\columnbreak
+
+<div style='margin-top:254px;'></div>
+
+___
+> ## Earth Revenant <!-- https://wc5e-cr-calculator.frogvall.com/?1;19;127;7;14;11;22;22;0;22;0;0;0;0;0;0;0;1;;;;3;;;;;;;;;;1;;;;;;;;10;;;;;;;3;0;0;17;Magic%20Stone;Earth%20Tremor -->
+> *Medium elemental, neutral*
+> ___
+> - **Armor Class** 19 (splint, shield)
+> - **Hit Points** 127 (17d8 + 51)
+> - **Speed** 30 ft.
+> ___
+> |  STR  |  DEX  |  CON  |  INT  |  WIS  |  CHA  |
+> |:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+> |18 (+4)|10 (+0)|17 (+3)| 8 (-1)|10 (+0)|15 (+2)|
+> ___
+> - **Damage Resistances** bludgeoning, piercing, and slashing from nonmagical attacks
+> - **Damage Immunities** poison
+> - **Condition Immunities** paralyzed, petrified, poisoned, prone
+> - **Senses** darkvision 60 ft., passive Perception 10
+> - **Languages** Kalimag
+> - **Challenge** 7 (2,900 XP) 
+> ___
+> ***Brute.*** A melee weapon deals two extra dice of damage when the revenant hits with it (included in the attack).
+> 
+> ***Innate Spellcasting.*** The revenant's spellcating ability is Charisma (spell save DC 13, +5 to hit with spell attacks). It can innately cast the following spells, requiring no material components:
+>
+> *At will:* *magic stone (4d6 + 2 bludgeoning damage), <br/>&nbsp;&nbsp; mold earth ^XGE^*
+> <br> *3/day:* *earth tremor (3rd level)*
+>
+> ***Magic Weapons.*** The revenant's weapon attacks are magical.
+>
+> ***Siege Monster.*** The revenant deals double damage to objects and structures.
+>
+> ### Actions
+> ***Multiattack.*** The revenant makes two club attacks.
+>
+> ***Club.*** *Melee Weapon Attack:* +7 to hit, reach 5 ft., one target. *Hit:* 11 (3d4 + 4) bludgeoning damage.
+>
+> ***Heavy Strike (Recharge 5-6).*** The revenant makes one club attack. On a hit, the target takes an extra 22 (4d10) bludgeoning damage, and the target must succeed on a DC 15 Strength saving throw or be knocked back up to 20 feet and fall prone. 
+
+<img src='https://www.gmbinder.com/images/txzOl8A.jpg' style='position:absolute; top:0px; right:0px; width:835px;' />
+<img src='https://www.gmbinder.com/images/C2bOp8u.png' style='position:absolute; bottom:-230px; left:0px; width:875px' />
+
+<div class="pageLetter">E</div>
+<div class='footnote'>ELEMENTAL REVENANTS </div>
+
+\pagebreakNum
+___
+> ## Fire Revenant <!-- https://wc5e-cr-calculator.frogvall.com/?1;19;123;5;14;39;7;28;7;27;7;0;0;0;0;0;0;1;;;;3;;;;;;;;;;1;;;;;;;;10;;;;;;;3;0;0;17;Fire%20Bolt;Scorching%20Ray -->
+> *Medium elemental, neutral*
+> ___
+> - **Armor Class** 19 (half-plate, shield)
+> - **Hit Points** 123 (19d8 + 38)
+> - **Speed** 50 ft.
+> ___
+> |  STR  |  DEX  |  CON  |  INT  |  WIS  |  CHA  |
+> |:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+> |15 (+2)|18 (+4)|15 (+2)| 9 (-1)|10 (+0)|16 (+3)|
+> ___
+> - **Damage Resistances** bludgeoning, piercing, and slashing from nonmagical attacks
+> - **Damage Immunities** fire, poison
+> - **Condition Immunities** paralyzed, petrified, poisoned, prone
+> - **Senses** darkvision 60 ft., passive Perception 10
+> - **Languages** Kalimag
+> - **Challenge** 7 (2,900 XP) 
+> ___
+> ***Heated Body.*** A creature that touches the revenant or hits it with a melee attack while within 5 feet of it takes 7 (2d6) fire damage.
+>
+> ***Innate Spellcasting.*** The revenant's spellcating ability is Charisma (spell save DC 14, +6 to hit with spell attacks) and casts as a 17th level spellcaster. It can innately cast the following spells, requiring no material components:
+>
+> *At will:* *control flames ^XGE^, fire bolt*
+> <br> *1/day:* *scorching ray (3rd level)*
+>
+> ***Magic Weapons.*** The revenant's weapon attacks are magical.
+>
+> ### Actions
+> ***Multiattack.*** The revenant makes three longsword attacks.
+>
+> ***Longsword.*** *Melee Weapon Attack:* +5 to hit, reach 5 ft., one target. *Hit:* 6 (1d8 + 2) slashing damage plus 3 (1d6) fire damage.
+>
+> ***Molten Strike (Recharge 5-6).*** The revenant makes one longsword attack. On a hit, the target takes an additional 28 (8d6) fire damage. If the target wears non magical armor or a shield, it takes a permanent and cumulative -1 penalty to the AC it offers. Armor reduced to an AC of 10 or a shield that drops to a +0 bonus is destroyed.
+
+\columnbreak
+___
+> ## Water Revenant <!-- https://wc5e-cr-calculator.frogvall.com/?1;18;127;6;13;9;25;36;0;27;0;0;0;0;0;0;0;1;;;;3;;;;;;;;;;1;;;;;;;;10;;;;;;;3;0;0;17;Ray%20of%20Frost;Tidal%20Wave -->
+> *Medium elemental, neutral*
+> ___
+> - **Armor Class** 19 (half-plate, shield)
+> - **Hit Points** 127 (17d8 + 51)
+> - **Speed** 30 ft., swim 30 ft.
+> ___
+> |  STR  |  DEX  |  CON  |  INT  |  WIS  |  CHA  |
+> |:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+> |17 (+3)|14 (+2)|15 (+2)| 8 (-1)|10 (+0)|14 (+2)|
+> ___
+> - **Damage Resistances** acid; bludgeoning, piercing, and slashing from nonmagical attacks
+> - **Damage Immunities** cold, poison
+> - **Condition Immunities** paralyzed, petrified, poisoned, prone
+> - **Senses** darkvision 60 ft., passive Perception 10
+> - **Languages** Kalimag
+> - **Challenge** 7 (2,900 XP) 
+> ___
+> ***Innate Spellcasting.*** The revenant's spellcating ability is Charisma (spell save DC 13, +5 to hit with spell attacks) and casts as a 17th level spellcaster. It can innately cast the following spells, requiring no material components:
+>
+> *At will:* *ray of frost, shape water ^XGE^*
+> <br/> *1/day:* *tidal wave ^XGE^*
+>
+> ***Magic Weapons.*** The revenant's weapon attacks are magical.
+>
+> ### Actions
+> ***Multiattack.*** The revenant makes three scimitar attacks.
+> 
+> ***Scimitar.*** *Melee or Ranged Weapon Attack:* +6 to hit, reach 5 ft., one target. *Hit:* 6 (1d6 + 3) slashing damage plus 3 (1d6) cold damage.
+>
+> ***Tidal Strike (Recharge 5-6).*** The makes one scimitar attack. On a hit, the target takes an additional 10 (3d6) bludgeoning damage plus 10 (3d6) cold damage and has its speed reduced by 10 feet until the end of the revenant's next turn. It must also make a DC 13 Strength saving throw or be knocked prone by the rush of freezing water.
+>
+> ### Reactions
+> ***Protective Bubble (Recharge 6).*** When it would take damage, the revenant can use its reaction to prevent all damage it would take for the turn.
+
+<img src='https://www.gmbinder.com/images/i8H9OnZ.jpg' style='position:absolute; bottom:-300px; left:-160px; width:1000px; ' />
+<img src='https://www.gmbinder.com/images/MVDaLa2.png' style='position:absolute; top:0px; left:0px; width:835px; transform:scaleX(-1)' />
+
+<div class="pageLetter">E</div>
+<div class='footnote'>ELEMENTAL REVENANTS </div>
