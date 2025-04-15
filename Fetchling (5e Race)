@@ -1,0 +1,41 @@
+### Fetchling Abilities
+***Ability Score Increase.*** Your Dexterity score increases by 2, and your Charisma score increases by 1.
+
+***Creature Type.*** You are a Humanoid.
+
+***Size.*** You are Medium.
+
+***Speed.*** Your walking speed is 30 feet.
+
+***Superior Darkvision.*** You can see in dim light within 120 feet of you as if it were bright light and in darkness as if it were dim light. You discern colors in that darkness only as shades of gray.
+
+***Stealthy.*** You have proficiency in Stealth.
+
+***??.*** Advantage on seeing through shadows and illusions.
+
+***Shadow Blending.*** While in dim light and shadows, you are considered heavily obscured instead of lightly obscured.
+
+***Light Sensitivity.*** You have disadvantage on Wisdom (Perception) checks that rely on sight when trying to perceive something in an area of bright light.
+
+\columnbreak
+
+RP| |Trait
+--|-|----
+12||ASI +3
+6 ||Darkvision 120'
+-2||Light Sensitivity
+2 ||Advantage on saving throws against a school of magic (Illusion)
+2 ||Skill Proficiency (Stealth)
+
+\pagebreak
+
+### Clever Shadow
+You can use your shadow to manipulate objects.
+You can store objects in your shadow.
+You can use your shadow to temporarily create objects (permanent hp loss until item is returned).
+
+### Shadow Walker
+You learn to walk along the edges of the boundary of the Shadow Plane. You gain the following benefits, based on your level:
+- **9th level:** You can cast the *shadow walk* spell (self only) and regain the ability to do so when you finish a long rest.
+- **13th level:** You can bring along passengers when you cast the *shadow walk* spell. You can also cast *plane shift* (self only), moving between the Material Plane and Shadow Plane, up to twice every seven days.
+- **17th level:** You can bring along passengers when you cast the *plane shift* spell.
