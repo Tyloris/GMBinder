@@ -1,0 +1,574 @@
+<style>
+/* GLOBAL FORMATTING  */
+
+  /* Resize page to international A4 */
+  .phb {
+    width: 210mm;
+    height: 296.8mm;
+  }
+  .phb:after { content: ""; }
+
+/* Temporary Fix for heading issues */
+    .phb p{ line-height: 15px; } 
+    .phb blockquote p{ line-height: 14px; } 
+    .phb h2{ line-height: 26px; } 
+    .phb h3{ line-height: 19px; } 
+    .phb h4{ line-height: 15px; padding-bottom: 3px; } 
+    .phb h5{ line-height: 17px; } 
+    th, td { line-height: 14px; }
+
+/* TABLE OF CONTENTS  */
+
+  /* toc specifically wants black text. This resets the headers*/
+  .toc a {
+    color: inherit !important;
+  }
+  /* Allow dot leaders to fill remaining space but not overlap */
+  .toc li span:nth-child(2) {
+    width: auto;
+    overflow: hidden;
+    white-space: nowrap;
+    display: block;
+  }
+  .toc li span:nth-child(2):after {
+    font-family: BookSanity;
+    font-size: 0.317cm;
+    font-weight: normal;
+    color: black;
+    content:
+      " ........................................"
+      "........................................."
+      ".........................................";
+    }
+
+  /* Style TOC page numbers*/
+  .toc li span:first-child {
+    float: right;
+    font-family: BookSanity;
+    font-size: 0.317cm;
+    font-weight: normal;
+    color: black;
+    margin-left: 1px;
+  }
+
+  /* Adjust TOC H3 styles */
+  .toc li h3 span:nth-child(2):after {
+  	content: " ";
+  }
+  .toc li h3 {
+    margin-bottom: 4px !important;
+    margin-top: 10px !important;
+    line-height: initial !important;
+  }
+  .toc li h3 span:first-child {
+  	line-height: 1.8em !important;
+  }
+
+  /* Reduce TOC list indentation*/
+  .toc ul ul {
+  	margin-left: 10px !important;
+  }
+  .toc>ul>li {
+    margin-bottom: initial !important;
+  }
+
+
+/* TABLES AND BLOCKS */
+
+  /* Clear internal padding and add gap above for green note blocks*/
+  .phb blockquote {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .phb blockquote { margin-top: 1em;
+  }
+
+
+/* INK BLOT STYLES */
+
+  /* Root style for inkblots. Use alone, or together with
+  one of the ink blotstyle classes below. Essentially:
+  <img url='{url}' class='inkblot inkblot-blue' />
+  */
+  .inkblot {
+    position: absolute;
+    mix-blend-mode: multiply;
+    opacity: 0.6;
+  }
+
+  .inkblot-blue {
+    filter: hue-rotate(190deg) saturate(120%)
+  }
+
+  .inkblot-green {
+    filter: hue-rotate(120deg)
+  }
+
+</style>
+
+<style>
+/* Background */
+  .phb{ background-image: url('https://gmbinder.com/images/KN1O92T.png') }
+  .phb{ background-size: cover }
+
+/* Notes */
+  .phb section blockquote {background-color: #f6e5d4}
+  .phb hr + section blockquote tr:nth-child(odd) td {background-color: transparent;}
+
+/* Tables */
+  table tr:nth-child(odd) td {background-color: #cccccc}
+
+/* Footer */
+  .phb .pageNumber {color: rgba(0, 0, 0, 0.5)}
+  .phb .footnote {color: rgba(0, 0, 0, 0.5)}
+  
+  /* Bottom metalwork art */
+  .phb:nth-child(odd):after{ 
+    content          : '';
+    position         : absolute;
+    bottom           : -7px;
+    left             : 10px;
+    z-index          : -1;
+    height           : 336px;
+    width            : 100%;
+    background-image : url('https://www.gmbinder.com/images/bNTz1nk.png');
+    background-size  : cover;
+  }
+  /* Bottom metalwork art */
+  .phb:nth-child(even):after{ 
+    content          : '';
+    position         : absolute;
+    bottom           : -7px;
+    left             : -10px;
+    z-index          : -1;
+    height           : 336px;
+    width            : 100%;
+    background-image : url('https://www.gmbinder.com/images/6NCzAN0.png');
+    background-size  : cover;
+  }
+
+  /* Footer with white text against dark backgrounds */
+  .phb .footnote.footnote-white,
+  .phb .footnote.footnote-white + .pageNumber,
+  .phb .footnote.footnote-white + section .pageNumber {
+    color: rgba(255,255,255,0.8);
+  }
+
+/* Page Number */
+.phb .pageNumber{
+    position   : absolute;
+    bottom     : 30px;
+    width      : 50px;
+    text-align : center;
+}
+.phb:nth-child(even) .pageNumber{
+    left      : 12px;
+}
+.phb:nth-child(odd) .pageNumber{
+    right      : 12px;
+}
+
+.phb .pageNumber.auto{
+    position   : absolute;
+    bottom     : 41px;
+    width      : 50px;
+    text-align : center;
+}
+.phb:nth-child(even) .pageNumber.auto{
+    left      : 12px;
+}
+.phb:nth-child(odd) .pageNumber.auto{
+    right      : 12px;
+}
+
+/* Use black tones for statblock backgrounds */
+.phb blockquote {
+  box-shadow: 1px 4px 14px rgba(0,0,0,0.42);
+}
+
+</style>
+
+</style>
+
+<div style='margin-top:540px'></div>
+
+## Rogue
+*You're gonna find a number of outfits that covet our skills. Adventurers, SI:7... heck, even the disorganized rabble wouldn't mind a spy or two inside Stormwind. But you remember this: You're your own man. Don't let nobody bully you into doing something you don't wanna do! Besides, we hold all the cards... at least, we do before the game's done.*
+<div style="text-align:Right"> 
+
+*— Jorik Kerridan*  </div>
+
+Signaling for her companions to wait, a female orc creeps forward through the dungeon hall. She presses an ear to the door, then pulls out a set of tools to pick it in the blink of an eye. Before disappearing into the shadows as her warrior friend moves forward to kick the door open.
+
+A human lurks in the shadows of an alley while his accomplice prepares for her part in the ambush. When their target passes the alleyway, the accomplice cries out, the slaver comes to investigate, and the assassin's blade cuts his throat before he can make a sound.
+
+Suppressing a giggle, a gnome silently sneaks up behind a guard, lifting the key ring from the his belt. In a moment, the keys are in her hand, the cell door is open, and she and her companions are free to make their escape.
+
+Rogues rely on skill, stealth, and their foes' vulnerabilities to get the upper hand in any situation. They have a knack for finding the solution to just about any problem, demonstrating a resourcefulness and versatility that is the cornerstone of any successful adventuring party.
+
+\columnbreak
+
+<div style='margin-top:241px'></div>
+
+### A Simple Code
+For rogues, the only code is the contract, and their honor is purchased in gold. Free from the constraints of a conscience, these mercenaries rely on brutal and efficient tactics. Lethal assassins and masters of stealth, they will approach their marks from behind, piercing a vital organ and vanishing into the shadows before the victim hits the ground. Rogues can dip their weapons in paralyzing toxins that render foes unable to defend themselves. These silent stalkers wear leather armor so they can move unencumbered, ensuring that they land the first strike.
+
+With the rogue’s poisons and speed, the first strike is often the last step before the killing blow.
+
+Rogues fend for themselves, looking for fights in which they dictate the terms. They’re the shadows in the night that remain unseen until the right moment comes to strike, then they dispatch an opponent with quick blade work or a deadly toxin snuck acutely into the bloodstream. Rogues are opportunistic thieves, bandits, and assassins, but there’s an unparalleled art to what they do.
+
+### Skill and Precision
+Rogues devote as much effort to mastering the use of a variety of skills as they do to perfecting their combat abilities, giving them a broad expertise that few other characters can match. Many rogues focus on stealth and deception, while others refine the skills that help them in a dungeon environment, such as climbing, finding and disarming traps, and opening locks.
+
+When it comes to combat, rogues prioritize cunning over brute strength. A rogue would rather make one precise strike, placing it exactly where the attack will hurt the target most, than wear an opponent down with a barrage of attacks. Rogues have an almost supernatural knack for avoiding danger, and a few learn magical tricks to supplement their other abilities.
+
+### Creating a Rogue
+As you create your rogue character, consider the charac-ter's relationship to the law. Do you have a criminal past, or present? Are you on the run from the law or from an angry thieves' guild master? or did you leave your guild in search of bigger risks and bigger rewards? Is it greed that drives you in your adventurers, or some other desire or ideal?
+
+What was the trigger that led you away from your previous life? Did a great con or heist gone terribly wrong cause you to reevaluate your career? Maybe you were lucky and successful robbery gave you the coin you needed to escape the squalor of your life. 
+
+<div class='footnote'>PART 1 | CLASSES</div>
+<img src='https://www.gmbinder.com/images/XHxM0Dm.jpg' style='position:absolute; top:0px; right:0px; width:800px; transform:scalex(-1)' />
+<img src='https://www.gmbinder.com/images/3e9S91s.png' style='position:absolute; top:100px; right:0px; width:800px; transform:scaley(-1)' />
+<img src='https://www.gmbinder.com/images/so5kn8u.png' style='position:absolute; top:40px; right:250px; width:600px; transform:scalex(-1)' />
+
+\pagebreakNum
+
+<div class='classTable wide'>
+
+##### The Rogue
+|Level| |Proficiency<br>Bonus||Talents<br>Known||Sneak<br>Attack|Features|
+|:---:|-|:-:|-|:-:|-|:-:|:------------------------------------------|
+| 1st || +2 || —||  1d6| Expertise, Sneak Attack, Secret Missives    |
+| 2nd || +2 || 2||  1d6| Cunning Action, Talents                     |
+| 3rd || +2 || 2||  2d6| Roguish Archetype, Steady Aim               |
+| 4th || +2 || 2||  2d6| Ability Score Improvement                   |
+| 5th || +3 || 2||  3d6| Uncanny Dodge                               |
+| 6th || +3 || 2||  3d6| Expertise                                   |
+| 7th || +3 || 2||  4d6| Evasion                                     |
+| 8th || +3 || 2||  4d6| Ability Score Improvement                   |
+| 9th || +4 || 3||  5d6| Roguish Archetype feature                   |
+| 10th|| +4 || 3||  5d6| Ability Score Improvement                   |
+| 11th|| +4 || 3||  6d6| Reliable Talent                             |
+| 12th|| +4 || 3||  6d6| Ability Score Improvement                   |
+| 13th|| +5 || 4||  7d6| Roguish Archetype feature                   |
+| 14th|| +5 || 4||  7d6| Blindsense                                  |
+| 15th|| +5 || 4||  8d6| Anticipation                                |
+| 16th|| +5 || 4||  8d6| Ability Score Improvement                   |
+| 17th|| +6 || 5||  9d6| Roguish Archetype feature                   |
+| 18th|| +6 || 5||  9d6| Elusive                                     |
+| 19th|| +6 || 5|| 10d6| Ability Score Improvement                  |
+| 20th|| +6 || 5|| 10d6| Stroke of Luck                             |
+</div>
+
+    Did wanderlust finally call you away from your home? Perhaps you suddenly found yourself cut off from your family or your mentor, and you had to find a new means of support. Or maybe you made a new friend, who showed you new possibilities for earning a living and employing your particular talents.
+
+#### Quick Build
+You can make a rogue quickly by following these sugges­tions. First, Dexterity should be your highest ability score. Make intelligence your next highest if you want to excel at Investigation. Choose Charisma instead if you plan to emphasize deception and social interaction.
+
+#### Optional Rule: Multiclassing
+If your group uses the optional rule on multiclassing in the *Player's Handbook*, here's what you need to know if you choose rogue as one of your classes.
+
+***Ability Score Minimum.*** As a multiclass character, you must have at least a Dexterity score of 13 to take a level in this class, or to take a level in another class if you are already a rogue.
+
+***Proficiencies Gained.*** If rogue isn't your initial class, here are the proficiencies you gain when you take your first level as a rogue: light armor, one skill from the class's skill list, thieves' tools.
+
+\columnbreak
+
+<div style='margin-top:-10px'></div>
+
+## Class Features
+As a rogue, you gain the following class features.
+
+#### Hit Points
+___
+- **Hit Dice:** 1d8 per rogue level
+- **Hit Points at 1st Level:** 8 + your Constitution modifier
+- **Hit Points at Higher Levels:** 1d8 (or 5) + your Constitution modifier per rogue level after 1st
+
+#### Proficiencies
+___
+- **Armor:** Light armor
+- **Weapons:** Simple weapons, hand crossbows, <br> longswords, rapiers, shortswords
+- **Tools:** Thieves' tools
+___
+- **Saving Throws:** Dexterity, Intelligence
+- **Skills:** Choose four from Acrobatics, Athletics, Deception, Insight, Intimidation, Investigation, Perception, Perfor­mance, Persuasion, Sleight of Hand, and Stealth
+
+#### Equipment
+You start with the following equipment, in addition to the equipment granted by your background: <div style='margin-top:-8px'></div>
+ - *(a)* a rapier or *(b)* a shortsword
+ - *(a)* a shortbow and quiver of 20 arrows or *(b)* a shortsword
+ - *(a)* a burglar's pack, *(b)* a dungeoneer's pack, or *(c)* an explorer's pack
+ - Leather armor, two daggers, and thieves' tools
+
+<div class='footnote'>PART 1 | CLASSES</div>
+
+\pagebreakNum
+
+<div style='margin-top:-2px;'></div>
+
+### Expertise
+<i>1st-level rogue feature</i>
+<div style="margin-top: -4px"></div>
+
+Choose two of your skill proficiencies, or one of your skill proficiencies and your proficiency with thieves' tools. Your proficiency bonus is doubled for ability checks you make that uses either of the chosen proficiencies.
+
+At 6th level, you can choose two more of your proficien­cies (in skills or with thieves' tools) to gain this benefit.
+
+### Sneak Attack
+<i>1st-level rogue feature</i>
+<div style="margin-top: -4px"></div>
+
+You know how to strike subtly and exploit a foe's distraction. Once per turn, you can deal an extra 1d6 damage to one creature you hit with an attack if you have advantage on the attack roll. The attack must use a light, finesse, or ranged weapon.
+
+You don't need advantage on the attack if another enemy of the target is within 5 feet of it, that enemy isn't incapa­citated, and you don't have disadvantage on the attack roll.
+
+The amount of the extra damage increases as you gain levels in this class, as shown in the Sneak Attack column of the Rogue table.
+
+### Secret Missives
+<i>1st-level rogue feature</i>
+<div style="margin-top: -4px"></div>
+
+During your rogue training you learned how to conceal messages, instructions, and simple ideas in plain sight. You do so by weaving subtle jargon and motions in seemingly normal dialogue, sharing statements with hidden meanings or even by writing cryptic code.
+
+You can use 4 hours to share a set of such rules with another creature, allowing you to weave secret messages and commands in your conversations and letters. More elaborate rules may require an Intelligence check at your DM's discretion.
+
+### Cunning Action
+<i>2nd-level rogue feature</i>
+<div style="margin-top: -4px"></div>
+
+Your quick thinking and agility allow you to move and act quickly. You can take a bonus action on each of your turns in combat. This action can be used only to take the Dash, Disengage, or Hide action.
+
+### Talents
+*2nd-level rogue feature*
+<div style="margin-top: -4px"></div>
+
+???
+
+***Talents Known.***
+
+***Saving Throws.*** Some of your Talents require a saving throw. The DC for this saving throw is calculated as follows:
+
+<div style="text-align: center">
+
+**Talent save DC** = 8 + your proficiency bonus + <br/> your Dexterity or Intelligence modifier (your choice)
+
+</div>
+
+
+### Roguish Archetype
+<i>3rd-level rogue feature</i>
+<div style="margin-top: -4px"></div>
+
+You choose an area to specialize yourself within, that shapes your rogue abilities: Assassin, Outlaw, or Subtlety, all detailed at the end of the class description. Your archetype choice grants you features at 3rd level and then again at 9th, 13th, and 17th level.
+
+### Steady Aim
+<i>3rd-level rogue feature</i>
+<div style="margin-top: -4px"></div>
+
+As a bonus action, you give yourself advantage on your next attack roll on the current turn. You can use this feature onlu if you haven't moved during this turn, and after you use it, your speed is 0 until the end of your current turn. 
+
+### Ability Score Improvement
+<i>4th-level rogue feature</i>
+<div style="margin-top: -4px"></div>
+
+When you reach 4th level, and again at 8th, 12th, 16th, and 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.
+
+### Sinister Strikes
+<i>5th-level rogue feature</i>
+<div style="margin-top: -4px"></div>
+
+Your attacks can hinder your foes, as well as harm them.
+
+***Sinister Strikes Known.*** You learn two Sinister Strikes, which are listed at the end of the Rogue document. If a Sinister Strike has prerequisites, you must meet them to learn it. You learn additional Sinister Strikess as you gain rogue levels, as detailed in the "Sinister Strikess Known" column of the rogue table. 
+
+Additionally, when you finish a long rest, you can change one known Sinister Strikes to another one you can know, as long as you fulfill the required level prerequisite. 
+
+***Using a Sinister Strike.*** When you deal Sneak Attack damage, you can add one of the following Sinister Strikes effects. Each effect has a die cost, which is the number of Sneak Attack damage dice you must forego to add the effect. You remove the die before rolling, and the effect occurs immediately after the attack's damage is dealt. For example, if you add the Garrote effect, remove 1d6 from the Sneak Attack's damage before rolling
+
+***Saving Throws.*** Some of your Sinister Strikes require a Saving Throw. The DC for this Saving Throw is calculated as follows:
+
+<font face='scalysans' size='2'>
+ 
+<center> 
+ 
+**Finisher save DC** </font> = <font face='scalysans' size='2'> 8 + your proficiency bonus + 
+ 
+</center>
+ 
+<div style='margin-top:-8px'></div>
+ 
+<center> your Dexterity or Intelligence modifier (your choice) </center>
+ 
+<div style='margin-top:12px'></div>
+ 
+</font>
+
+### Uncanny Dodge
+<i>5th-level rogue feature</i>
+<div style="margin-top: -4px"></div>
+
+When an attacker that you can see hits you with an attack, you can use your reaction to halve the attack's damage against you.
+
+### Evasion
+<i>7th-level rogue feature</i>
+<div style="margin-top: -4px"></div>
+
+You can nimbly dodge out of the way of certain area effects, such as a red dragon's fiery breath or an *ice storm* spell. When you are subjected to an effect that allows you to make a Dexterity saving throw to take only half damage, you instead take no damage if you succeed on the saving throw, and only half damage if you fail.
+
+### Reliable Talent
+<i>7th-level rogue feature</i>
+<div style="margin-top: -4px"></div>
+
+You have refined your chosen skills until they approach perfection. Whenever you make an ability check that lets you add your proficiency bonus, you can treat a d20 roll of 9 or lower as a 10.
+
+\pagebreakNum
+
+
+### Tight Spender
+<i>10th-level rogue feature</i>
+<div style="margin-top: -4px"></div>
+
+You can use up to two Sinister Strike effects when you deal Sneak Attack damage, expending the Sneak Attack die cost for each effect. 
+
+<div class='footnote'>PART 1 | CLASSES</div>
+
+### Preparation
+<i>11th-level rogue feature</i>
+<div style="margin-top: -4px"></div>
+
+You gain an additional bonus action you can use on your turn. You can use this bonus action only for your Cunning Action feature, and can't use both bonus actions to take the same action twice on the same turn.
+
+### Blindsense
+<i>14th-level rogue feature</i>
+<div style="margin-top: -4px"></div>
+
+If you are able to hear, you are aware of the location of any hidden or invisible creatures within 10 feet of you.
+
+### Anticipation
+<i>15th-level rogue feature</i>
+<div style="margin-top: -4px"></div>
+
+Your mind looks to be prepared for any threat that comes its way. You gain proficiency in Wisdom and Charisma saving throws.
+
+### Elusive
+<i>18th-level rogue feature</i>
+<div style="margin-top: -4px"></div>
+
+You are so evasive that attackers rarely gain the upper hand against you. No attack roll has advantage against you while you aren't incapacitated.
+
+### Stroke of Luck
+<i>20th-level rogue feature</i>
+<div style="margin-top: -4px"></div>
+
+You have an uncanny knack for succeeding when you need to. If your attack misses a target within range, you can turn the miss into a hit. Alternatively. if you fail an ability check, you can treat the d20 roll as a 20.
+
+Once you use this feature, you can't use it again until you finish a short or long rest.
+
+\pagebreakNum 
+
+
+## Simister Strikes
+
+The Sinister Strikes are presented in order of level prerequisite. A level prerequisite refers to your Rogue level. 
+
+#### Disarm
+You can expend 1 Sneak Attack die to knock a item out of a creature's hand. The target must succeed on a Dexterity saving throw, or it drops one item of your choice that it’s holding.
+
+#### Garrote 
+You can expend 1 Sneak Attack die to strike at the target's vocal cords or similar parts. The target must make a Constitution saving throw or be unable to speak or supply the vocal components of spells until the start of your next turn.
+
+#### Poison
+You can expend 1 Sneak Attack die to add toxin to your strike, forcing the target to make a Constitution saving throw. On a failed save, the target is poisoned for 1 minute. At the end of each of its turns, the poisoned target can repeat the save, ending the effect on itself on a success. 
+
+To use this effect, you must have a poisoner's kit on your person. 
+
+#### Sweep the Leg
+You can expend 1 Sneak Attack die to trip the target over. If the target is Large or smaller, the target must make a Dexterity saving throw or fall prone.
+
+#### Withdrawing Strike 
+You can expend 1 Sneak Attack die to sneak away after landing a hit. Immediately after the attack, you move up to half your speed without provoking opportunity attacks. 
+
+#### Kick
+*Prerequistite: 9th level* <br/>
+<div style='margin-top:-4px;'></div>
+
+You can expend a number of Sneak Attack dice up to half your total Sneak Attack dice, and the creature hit has a penalty on the next concentration check they make equal to the number of Sneak Attack dice expended. 
+
+#### Sap 
+*Prerequistite: 9th level* <br/>
+<div style='margin-top:-4px;'></div>
+
+You can expend 2 Sneak Attack dice and force the creature to succeed on a Constitution saving throw or be incapacitated until the beginning of your next turn, or until they take damage. 
+
+If used out of combat or while you are hidden, the creature makes this saving throw with disadvantage, and remains incapacitated for 1 minute instead. 
+
+#### Rupture 
+*Prerequistite: 9th level* <br/>
+<div style='margin-top:-4px;'></div>
+
+You can expend 2 Sneak Attack dice to open a wound on the target. The target loses 1d6 hit points at the start of each of its turns for 1 minute. Regaining any number of hit points ends the wound, as does using an action to staunch the wound with a successful Wisdom (Medicine) check against your finisher save DC. 
+
+You can expend additional Sneak Attack dice to further the wound, increasing the hit points lost per round by 1d6 for every 2 Sneak Attack dice used. 
+
+#### Cripple 
+*Prerequistite: 9th level* <br/>
+<div style='margin-top:-4px;'></div>
+
+You can expend 2 Sneak Attack dice to hamper the target's movement, forcing them to make a Strnegth saving throw. If they fail, the target's speed halved and it can't use reactions until the end of your next turn.
+
+#### Expose Armor
+*Prerequistite: 9th level* <br/>
+<div style='margin-top:-4px;'></div>
+
+You can expend 2 Sneak Attack dice to expose a chink in the enemies armor. The next weapon attack made against the creature gains a +1 bonus to the attack roll. 
+
+You can expend additional Sneak Attack dice to further expose the armor, increasing the bonus given by and additional +1 for every 2 additional Sneak Attack dice expended. 
+
+#### Recuperate 
+*Prerequistite: 13th level* <br/>
+<div style='margin-top:-4px;'></div>
+
+You can expend 3 Sneak Attack dice to regain some of your strength. Roll a Hit dice, and regain a number of Hit points equal to the number rolled + your Constitution modifier.
+
+#### Blind
+*Prerequistite: 13th level* <br/>
+<div style='margin-top:-4px;'></div>
+
+You can expend 3 Sneak Attack die to force the creature to succeed on a Constitution saving throw, or be blinded until the beginning of your next turn. 
+
+#### Concuss
+*Prerequisite: 13th level*
+
+You can expend 3 Sneak Attack dice to knock the target off balance. The target must succeed on a Dexterity saving throw, or whenever the target makes an attack roll or saving throw before the start of your next turn, it must roll a d4 and subtract the number rolled from the result.
+
+#### Dazing Blow
+*Prerequisite: 13th level*
+
+You can expend 3 Sneak Attack dice to disorient the target with a well-placed blow. The target must succeed on a Wisdom saving throw, or he creature can take either an action or bonus action on its turn, but not both,  until the start of your next turn. 
+
+#### Kidney Shot
+*Prerequisite: 17th level* 
+
+You can expend 4 Sneak Attack die to force the creature to succeed on a Constitution saving throw or be stunned until the beginning of your next turn, or until they take damage.
+
+
+\pagebreakNum
+
+
+## Changelog
+
+- General layout changes have been made.
+
+### Class Features
+
+- Energy: Replaced with Sinister Strike.
+- Added Preparation, which gives an additional BA to use your Cunning Action
+- Added Tight Spender, which allows two Finishers at once 
+- Anticipation: Rewritten to mimic the Slippery Mind Feature
+- 
+- ## Energy Uses
+#### Riposte
+#### Sprint
+You move up to three times your movement instead of two times when you take the Dash action.
