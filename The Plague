@@ -1,0 +1,732 @@
+<style>
+/* GLOBAL FORMATTING  */
+
+  /* Resize page to international A4 */
+  .phb {
+    width: 210mm;
+    height: 296.8mm;
+  }
+  .phb:after { content: ""; }
+
+
+/* Temporary Fix for heading issues */
+    .phb p{ line-height: 15px; } 
+    .phb blockquote p{ line-height: 14px; } 
+    .phb h2{ line-height: 26px; } 
+    .phb h3{ line-height: 19px; } 
+    .phb h4{ line-height: 15px; padding-bottom: 3px; } 
+    .phb h5{ line-height: 17px; } 
+    th, td { line-height: 14px; }
+
+/* TABLE OF CONTENTS  */
+
+  /* toc specifically wants black text. This resets the headers*/
+  .toc a {
+    color: inherit !important;
+  }
+  /* Allow dot leaders to fill remaining space but not overlap */
+  .toc li span:nth-child(2) {
+    width: auto;
+    overflow: hidden;
+    white-space: nowrap;
+    display: block;
+  }
+  .toc li span:nth-child(2):after {
+    font-family: BookSanity;
+    font-size: 0.317cm;
+    font-weight: normal;
+    color: black;
+    content:
+      " ........................................"
+      "........................................."
+      ".........................................";
+    }
+
+  /* Style TOC page numbers*/
+  .toc li span:first-child {
+    float: right;
+    font-family: BookSanity;
+    font-size: 0.317cm;
+    font-weight: normal;
+    color: black;
+    margin-left: 1px;
+  }
+
+  /* Adjust TOC H3 styles */
+  .toc li h3 span:nth-child(2):after {
+  	content: " ";
+  }
+  .toc li h3 {
+    margin-bottom: 4px !important;
+    margin-top: 10px !important;
+    line-height: initial !important;
+  }
+  .toc li h3 span:first-child {
+  	line-height: 1.8em !important;
+  }
+
+  /* Reduce TOC list indentation*/
+  .toc ul ul {
+  	margin-left: 10px !important;
+  }
+  .toc>ul>li {
+    margin-bottom: initial !important;
+  }
+
+
+/* TABLES AND BLOCKS */
+
+  /* Adjust tables */
+  table tr:nth-child(odd) td { background-color: #FFF0f5; }
+  .phb hr+section blockquote tr:nth-child(odd) td { background-color: transparent; }
+
+  /* Clear internal padding and add gap above for green note blocks*/
+  .phb blockquote {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .phb blockquote { margin-top: 1em; }
+
+  /* Clear internal padding in creature statblocks */
+  .phb hr+section blockquote {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  .phb blockquote {
+    box-shadow: 1px 4px 14px rgba(0,0,0,0.42);
+  }
+
+  /* For creature statblocks within range (start and end must be specified),
+     don't show a background. Used for the appendix creatures */
+  .phb:nth-of-type(n+107):nth-of-type(-n+130) hr+section blockquote {
+      background: none;
+      border: none;
+      box-shadow: none;
+  }
+
+
+/* FOOTER */
+
+  /* Footnotes */
+  .phb .pageNumber {
+    color: #7e735c;
+    z-index: 1000;
+  }
+  .phb .footnote { color: #7e735c; }
+
+  /* On odd child pages, have the Monster Manual page tear and lettering */
+  .phb:nth-child(odd):after {
+    content: '';
+    height: 125px;
+    background-image: url(https://gmbinder.com/images/lLWeevR.png), url('https://gmbinder.com/images/YWardeu.png');
+    background-size: 120px 120px, 816px 55px;
+    background-repeat: no-repeat, no-repeat;
+    background-position: bottom right, bottom;
+  }
+
+  /* Hacked reverse of the Monster Manual page tear for alternating pages */
+  .phb:nth-child(even):after {
+    content: '';
+    height: 125px;
+    background-image: url(https://gmbinder.com/images/lLWeevR.png), url('https://gmbinder.com/images/YWardeu.png');
+    background-size: 120px 120px, 816px 55px;
+    background-repeat: no-repeat, no-repeat;
+    background-position: bottom right, bottom;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+  }
+
+  /* The letter in the Monster Manual page tear */
+  .pageLetter {
+    position: absolute;
+    right: 25px;
+    bottom: 87.5px;
+    color: #673e1c;
+    z-index: 1000;
+    font-size: 135%;
+  }
+
+  /* Reversed for alternating pages */
+  .phb:nth-child(even) .pageLetter {
+      left: 25px;
+  }
+
+
+/* MONSTER MANUAL LETTER SECTION HEADER */
+
+  /* Adds the surrounding framing for the big, bold monster letter headings */
+  .letterheader {
+    position: absolute;
+    top: 30px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: url(https://gmbinder.com/images/YH3aESG.png);
+    background-size: cover;
+    width: 775px;
+    height: 133px;
+  }
+
+  /* Base component for the actual letter in the heading */
+  .mmletter {
+      position: absolute;
+      top: 20px;
+      left: 0;
+      right: 0;
+      margin-left: auto;
+      margin-right: auto;
+      background-size: cover;
+      width: 163.2px;
+      height: 163.2px;
+  }
+
+  /* Use one in combination with .mmletter to show that letter */
+  .mml-a { background-image: url(https://gmbinder.com/images/fVVv93s.png); }
+  .mml-b { background-image: url(https://gmbinder.com/images/21X6N0B.png); }
+  .mml-c { background-image: url(https://gmbinder.com/images/MvnpOWF.png); }
+  .mml-d { background-image: url(https://gmbinder.com/images/AFbLU4P.png); }
+  .mml-e { background-image: url(https://gmbinder.com/images/28NVNf9.png); }
+  .mml-f { background-image: url(https://gmbinder.com/images/Oyrhmqy.png); }
+  .mml-g { background-image: url(https://gmbinder.com/images/fRyiQn4.png); }
+  .mml-h { background-image: url(https://gmbinder.com/images/N8NamlT.png); }
+  .mml-i { background-image: url(https://gmbinder.com/images/xWI93aa.png); }
+  .mml-j { background-image: url(https://gmbinder.com/images/GgIzsun.png); }
+  .mml-k { background-image: url(https://gmbinder.com/images/OcObsWl.png); }
+  .mml-l { background-image: url(https://gmbinder.com/images/B7AUyR6.png); }
+  .mml-m { background-image: url(https://gmbinder.com/images/q4wXoxt.png); }
+  .mml-n { background-image: url(https://gmbinder.com/images/OJtC4w9.png); }
+  .mml-o { background-image: url(https://gmbinder.com/images/adeRr5d.png); }
+  .mml-p { background-image: url(https://gmbinder.com/images/EEhcrSR.png); }
+  .mml-q { background-image: url(https://gmbinder.com/images/O1AhfzL.png); }
+  .mml-r { background-image: url(https://gmbinder.com/images/w66eIuZ.png); }
+  .mml-s { background-image: url(https://gmbinder.com/images/YEoe0PP.png); }
+  .mml-t { background-image: url(https://gmbinder.com/images/7Bk9D35.png); }
+  .mml-u { background-image: url(https://gmbinder.com/images/uVJZYUg.png); }
+  .mml-v { background-image: url(https://gmbinder.com/images/gKjngey.png); }
+  .mml-w { background-image: url(https://gmbinder.com/images/14WWpsC.png); }
+  .mml-x { background-image: url(https://gmbinder.com/images/ojIYjh0.png); }
+  .mml-y { background-image: url(https://gmbinder.com/images/Gi1ePwY.png); }
+  .mml-z { background-image: url(https://gmbinder.com/images/0ZTFNVs.png); }
+
+
+/* INK BLOT STYLES */
+
+  /* Root style for inkblots. Use alone, or together with
+  one of the inkb lotstyle classes below. Essentially:
+  <img url='{url}' class='inkblot inkblot-blue' />
+  */
+  .inkblot {
+    position: absolute;
+    mix-blend-mode: multiply;
+    opacity: 0.6;
+  }
+
+  .inkblot-blue {
+    filter: hue-rotate(190deg) saturate(120%)
+  }
+
+  .inkblot-green {
+    filter: hue-rotate(120deg)
+  }
+
+</style>
+
+<div style='margin-top:463px;'></div>
+
+## The Plague
+
+At the onset of the Third War, the human kingdom of Lordaeon was wracked and devastated by a new, virulent and extremely infectious disease known only as The Plague. No other name was needed. Spreading from infected grain, within days the plague had spread across Lordaeron’s smaller villages and into major population centers. 
+
+While the priests and paladins of Lordaeron attempted to intervene, the many human victims succumbed to the symptoms of nausea, vomiting, pus-filled boils, exhaustion, delirium, and eventually death. It was then that the final symptom showed itself.
+
+In the dead of night, as bodies began to pile up and quarantine measures were started, the infected dead of Lordaeron began to rise again, walking as undead. Still infectious, and now filled with ravenous hunger, the disease-riddled undead began to rip into their own homes, tearing Lordaeron apart from the inside.
+
+From afar, evil minds were satisfied, for the Plague of Undeath had been orchestrated entirely by the Cult of the Damned, a secret cult of necromancers working for the undead Scourge, at the behest of their leader, the necromancer Kel’thuzad. It was crafted for one thing; create bodies for the Scourge’s use.
+
+The plague, an enormous success, has since left Lordaeron a desolate and empty land, its forests blighted and its earth spongy and sick. Nothing grows, and what little lives there lives a sickly, unpleasant life. Undead wander aimlessly in droves, while the remains of the Scourge’s war machines lay rotting in the sun. A kingdom suffering the full brunt of the Scourge’s plague, Lordaeron is a deadplace, where only the dead live.
+
+Its test site proved a success, and so the Scourge has gone on to employ the Plague of Undeath in grand style, and in countless forms across the world.
+
+<br/>
+
+<div style='margin-top:470px;'></div>
+
+***Virulent Strain.*** The Plague of Undeath was crafted by skilled hands under the command of the Lich King, whose overwhelming power over death bolstered the plague’s power. It was one of several strains of blight and death crafted, and was made specifically to facilitate the conversion of living populations into the undead; those killed become extremely easy to revive into undead, while being extremely hard to cure, as well as infectious to a staggering degree. It is deadly only after time has passed for sufficient infection to spread. It is, in other words, a masterpiece, and a marvel of modern science.
+
+***Ascended Lifeforms.*** To the Scourge, few things are more important than finding new ways to deliver the Plague rapidly. In the old days it was grain, but now they are far more direct: canisters of weaponized diseased fluid; undead monsters loaded with exploding infected pus; infected claws and teeth; dragons that breathe infection across the sky; even the land itself is not safe, as the grubs and worms that fester in diseased corpses then burrow underground to spread the infection further. The experimentation of the Scourge upon living and undead creatures never ceases, and neither do the depths of their ingenuity.
+
+***The Blight.*** A late-stage sign of deep, irreversible infection upon an area is called Blight, and it is a sure sign that the undead have chosen a place as base of operations. No longer grassy and live, the very earth has become sick, with spongy soil riddled with worms bursting out, not with grass and trees, but with fungus, a sickly mycelium growing over and choking previous life, and gigantic mushrooms taking their place. A malaise takes over these regions, with a thick mist adding to an atmosphere of terror. Even worse is the sound; these regions are totally silent. Everything is dead. Here, the undead flourish, strengthened by the death in the air. 
+
+<img src='https://www.gmbinder.com/images/NEFm6bT.png' style='position:absolute; left:-150px; top:-40px; width:140%' />
+<img src='https://www.gmbinder.com/images/iqsWrVi.png' style='position:absolute; left:0px; bottom:-20px; width:128% ' />
+
+<div class="pageLetter">P</div>
+<div class='footnote'>THE PLAGUE</div>
+
+\pagebreakNum 
+
+### Disease: Plague of Undeath
+While there have been several plagues throughout history, when someone mentions "*the* plague," they are referring to the Plague of Undeath, a deadly necromantic disease that ravaged most of the Eastern Kingdoms during the Third War. 
+
+The Plague affects species differently. The original Plague mostly killed humanoids, causing them to rise as zombies and other undead, while some flora and fauna instead sprouted plague-filled growths. The New Plague developed by certain Forsaken apothecaries could even kill the undead. Other variants have existed, developed in alchemical labs and secret cabals.
+ 
+When a creature is exposed to a source of the plague--such as through breathing spores, eating infested grain, or an open wound--they must make a DC 15 Constitution saving throw, contracting the disease on a failure.
+ 
+It takes 1d4 days for the plague’s symptoms to manifest in an infected creature. Symptoms range from fatigue, nausea, fever, to minor hallucinations. When it manifests, the infected creature suffers one level of exhaustion and regains only half the normal number of hit points from spending Hit Dice and no hit points from finishing a long rest.
+ 
+At the end of each long rest, an infected creature must make a DC 15 Constitution saving throw. On a failed save, the creature gains one level of exhaustion. On a successful save, the creature’s exhaustion level decreases by one level. If a successful saving throw reduces the infected creature’s level of exhaustion below 1, the creature recovers from the disease. 
+
+The plague is resistant to magic. It cannot be cured except by removing exhaustion levels, and immunity to disease only provides advantage on saves against it. If a creature dies from exhaustion while under this disease, necromantic energies infect the body. Every 24 hours it has a 5% chance to rise as an uncontrolled zombie. If *create undead* or similar spells are cast on the corpse, they do not require material components and the created undead remain under the caster's control indefinitely.
+
+<div style='margin-top:-8px;'></div>
+
+### Plagued Template
+A living creature who becomes infected by the plague, yet does not perish from it. Typically they are beasts or plants, as most humanoids die from the plague while most constructs, fiends, or undead are unaffected by it. Plagued creatures manifest different symptoms, such as pus-filled sores and open wounds, green or orange coloration, or fungal growths. 
+
+They retain their statistics unless otherwise stated, and gain the following traits. 
+
+***Alignment.*** The plagued creature's alignment is neutral evil.
+
+***Deadly Plague.*** Poison damage that the plagued creature deals ignores resistance and immunity to poison damage. It can inflict the poisoned condition even on creatures normally immune to it. When it deals a critical hit, the target is infected with the plague of undeath.
+
+***Death Burst.*** The plagued creature lets out a burst of toxic sludge when it drops to 0 hit points. Each creature within 5 feet of it must succeed on a DC 15 Constitution saving throw or take 10 (3d6) poison damage and become infected with the plague of undeath on a failed save. A successful save results in half damage and no other effect.
+
+***Attacks.*** When the plagued creature hits with a melee attack, it deals an additional 3 (1d6) poison damage.
+
+
+\columnbreak
+
+<div style='margin-top:310px;'></div>
+
+___
+> ## Plaguebear <!-- https://wc5e-cr-calculator.frogvall.com/?0;11;34;4;15;21;0;21;0;21;20;0;0;0;0;0;0;;;;;3;;;;;;;;;;1;;;;;;;;10;;;;;;;;;;; -->
+> *Large beast, neutral evil*
+> ___
+> - **Armor Class** 11 (natural armor)
+> - **Hit Points** 34 (4d10 + 12)
+> - **Speed** 40 ft., climb 30 ft.
+> ___
+> |  STR  |  DEX  |  CON  |  INT  |  WIS  |  CHA  |
+> |:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+> |15 (+2)|10 (+0)|16 (+3)| 2 (-4)|13 (+1)| 7 (-2)|
+> ___
+> - **Skills** Perception +3
+> - **Senses** passive Perception 13
+> - **Languages** —
+> - **Challenge** 2 (450 XP)
+> ___
+> ***Deadly Plague.*** Poison damage that the plaguebear deals ignores resistance and immunity to poison damage. It can inflict the poisoned condition even on creatures normally immune to it.  When it deals a critical hit, the target is infected with the plague of undeath.
+> 
+> ***Death Burst.*** The plaguebear lets out a burst of toxic sludge when it drops to 0 hit points. Each creature within 5 feet of it must succeed on a DC 15 Constitution saving throw or take 10 (3d6) poison damage and become infected with the plague of undeath on a failed save. A successful save results in half damage and no other effect.
+>
+> ***Keen Smell.*** The plaguebear has advantage on Wisdom (Perception) checks that rely on smell.
+>
+> ### Actions
+> ***Multiattack.*** The plaguebear makes two attacks: one with its bite and one with its claws.
+>
+> ***Bite.*** *Melee Weapon Attack:* +4 to hit, reach 5 ft., one target. *Hit:* 6 (1d8 + 2) piercing damage plus 3 (1d6) poison damage.
+>
+> ***Claws.*** *Melee Weapon Attack:* +4 to hit, reach 5 ft., one target. *Hit:* 9 (2d6 + 2) slashing damage plus 3 (1d6) poison damage.
+
+<img src="https://www.gmbinder.com/images/AYuE5Qf.png" class="inkblot" style="top:-350px; right:-290px; height:1100px; transform: rotate(118deg)">
+<img src='https://www.gmbinder.com/images/gzipBW3.png' style='position:absolute; top:0px; right:-28px; width:55%; transform:scaleX(-1)' />
+
+<div class="pageLetter">P</div>
+<div class='footnote'>THE PLAGUE</div>
+
+\pagebreakNum
+
+### Plagued Proto-Dragons
+During the Scourge’s spread across Northrend, a cult of worship had begun among native vrykul populations, recently awoken from long slumber. Worshipping the Lich King as a god of death, the vrykul of the Storm Peaks began volunteering to the cause their longtime, ancient animal companions - the proto-dragons, their long-established pets, mounts and friends.
+
+So incensed by this, the necromancers and plague-doctors of the Scourge resumed long abandoned experiments in crafting a new breed of dragon, a plagued dragonflight crafted to spread disease wherever they may fly. In the past this had failed miserably, with few living past whelphood.
+
+Through the use of blighted pools loaded with countless clutches of stolen eggs, the throwback dragon species were far more receptive than the old experiments, and were able to grow into adulthood despite their infusion with deathly, sickly disease. Bleached a pale green and with eternally addled minds, these great, loyal beasts were broken from birth to obey their necromancer masters, and were granted as gifts to vrykul champions of the Scourge, to act as mounts and as vectors of further infection.
+
+The new dragonflight of plagued proto-dragons took to the sky, a terrifying reminder of the totality of the Lich King’s reign over Northrend, reducing even its ancient heritage to his minions.
+
+### Plagued Dragons
+
+Beneath the earth in the dread catacombs of Scholomance, the Cult of the Damned performed sick and twisted experiments on the living. Even dragons were not exempt, as the Cult had "procured" some Black Dragonflight eggs, and had begun efforts to create a living dragonflight worthy of the Scourge.
+
+Sickly green in hue and diseased from the egg, constantly covered in sores and festering wounds, these insane creatures know only suffering and pain, which they seek only to inflict upon others. Through their blighted breath they flood their foes with sickness, spreading the dreaded Plague of Undeath to the living.
+
+***Infant mortality.*** As the Cult has learned, deathly disease causes the rapid end of life, and as such most of these foul creatures have died before they could reach adulthood. Those that do not may also become so unstable or sick that they are simply unable to function. Indeed, a great portion of the experiments - and why the Cult constantly needs new eggs - have been devoted to working out how to extend the dragonwhelps' lives, and suffering, further. 
+
+***Affront to life.*** No people of morality or goodwill may sleep soundly knowing these creatures are alive and suffering, and some groups have devoted their time to eliminating this experiment for good. Unfortunately, they realise that the only way to end the experiment is to end Scholomance itself, a task sought out only by the most powerful among Azeroth's defenders. 
+
+\columnbreak
+
+<div style='margin-top:230px;'></div>
+
+___
+> ## Plagued Proto-Whelp <!-- https://wc5e-cr-calculator.frogvall.com/?0;14;77;5;12;18;0;13;0;13;18;0;0;0;0;0;0;;;;1;2;;;;;;;;;;3;;;;;;;;10;;;;;1;;;;;; -->
+> *Small undead (dragon), neutral evil*
+> ___
+> - **Armor Class** 14 (natural armor)
+> - **Hit Points** 77 (14d6 + 28)
+> - **Speed** 30 ft., fly 60 ft.
+> ___
+> |  STR  |  DEX  |  CON  |  INT  |  WIS  |  CHA  |
+> |:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+> |17 (+3)|10 (+0)|15 (+2)| 4 (-3)|10 (+0)| 7 (-2)|
+> ___
+> - **Saving Throws** Str +5, Con +4
+> - **Skills** Perception +2, Survival +2
+> - **Damage Resistances** necrotic
+> - **Damage Immunities** poison
+> - **Condition Immunities** poisoned
+> - **Senses** blindsight 10 ft., darkvision 60 ft., passive Perception 12
+> - **Languages** -
+> - **Challenge** 2 (450 XP)
+> ___
+> ***Deadly Plague.*** Poison damage that the proto-whelp deals ignores resistance and immunity to poison damage. When it deals a critical hit, the target is infected with the plague of undeath.
+>
+> ***Death Burst.***  The proto-whelp lets out a burst of toxic sludge when it drops to 0 hit points. Each creature within 5 feet of it must succeed on a DC 15 Constitution saving throw or take 9 (2d8) poison damage and become infected with the plague of undeath on a failed save. A successful save results in half damage and no other effect.
+> 
+> ### Actions
+> ***Bite.*** *Melee Weapon Attack:* +5 to hit, reach 5 ft., one target. *Hit:* 8 (1d10 + 3) piercing damage plus 5 (2d4) poison damage.
+> 
+> ***Claw.*** *Melee Weapon Attack:* +5 to hit, reach 5 ft., one target. *Hit:* 6 (1d6 + 3) slashing damage.
+> 
+> ***Dreadful Breath (Recharge 5-6).*** The proto-whelp exhales sludge in a 15-foot cone. Each creature in that area must make a DC 12 Dexterity saving throw, taking 9 (2d8) poison damage on a failed save, or half as much damage on a successful one. A creature that fails their saving throw by 5 or more must make a DC 15 Constitution save or contract the plague of undeath.
+
+
+<img src='https://www.gmbinder.com/images/TWBbww8.png' style='position:absolute; top:-100px; right:0px; width:450px' />
+
+<div class="pageLetter">P</div>
+<div class='footnote'>THE PLAGUE</div>
+
+\pagebreakNum
+
+<div style='margin-top:158px;'></div>
+
+___
+> ## Plagued Proto-Drake <!-- https://wc5e-cr-calculator.frogvall.com/?1;15;153;7;14;44;0;25;0;25;36;0;0;0;0;0;0;;;;1;2;;;;;;;;;;3;;;;;;;;10;;;;;1;;;;;; -->
+> *Large undead (dragon), unaligned*
+> ___
+> - **Armor Class** 15 (natural armor)
+> - **Hit Points** 153 (18d10 + 54)
+> - **Speed** 40 ft., fly 80 ft.
+> ___
+> |  STR  |  DEX  |  CON  |  INT  |  WIS  |  CHA  |
+> |:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+> |19 (+4)|11 (+0)|17 (+3)| 6 (-2)|11 (+0)| 7 (-2)|
+> ___
+> - **Saving Throws** Str +7, Con +6
+> - **Skills** Perception +3, Survival +3
+> - **Damage Resistances** necrotic
+> - **Damage Immunities** poison
+> - **Condition Immunities** poisoned
+> - **Senses** blindsight 10 ft., darkvision 60 ft., passive Perception 13
+> - **Languages** -
+> - **Challenge** 7 (2,900 XP)
+> ___
+> ***Deadly Plague.*** Poison damage that the proto-drake deals ignores resistance and immunity to poison damage. When it deals a critical hit, the target is infected with the plague of undeath.
+>
+> ***Death Burst.*** The proto-drake lets out a burst of toxic sludge when it drops to 0 hit points. Each creature within 5 feet of it must succeed on a DC 15 Constitution saving throw or take 18 (4d8) poison damage and become infected with the plague of undeath on a failed save. A successful save results in half damage and no other effect. 
+> 
+> ### Actions
+> ***Bite.*** *Melee Weapon Attack:* +7 to hit, reach 10 ft., one target. *Hit:* 15 (2d10 + 4) piercing damage plus 10 (4d4) poison damage.
+> 
+> ***Claw.*** *Melee Weapon Attack:* +7 to hit, reach 5 ft., one target. Hit: 11 (2d6 + 4) slashing damage.
+> 
+> ***Dreadful Breath (Recharge 5-6).*** The proto-drake exhales sludge in a 30-foot cone. Each creature in that area must make a DC 14 Dexterity saving throw, taking 22 (5d8) poison damage on a failed save, or half as much damage on a successful one. A creature that fails their saving throw by 5 or more must make a DC 15 Constitution save or contract the plague of undeath.
+> 
+> ***Wing Buffet (Recharge 6).*** The proto-drake beats its wings with fury. Each creature within 10 feet of it must succeed on a DC 15 Dexterity saving throw or take 11 (2d6 + 4) bludgeoning damage and be knocked prone.
+
+\columnbreak
+
+<div style='margin-top:136px;'></div>
+
+___
+> ## Plagued Proto-Dragon <!-- https://wc5e-cr-calculator.frogvall.com/?2;17;231;9;14;80;0;55;0;55;27;0;0;0;0;0;0;;;;1;2;;;;;;;;;;3;;;;;;;;10;;;;;1;;;;;; -->
+> *Huge undead (dragon), unaligned*
+> ___
+> - **Armor Class** 17 (natural armor)
+> - **Hit Points** 231 (22d12 + 88)
+> - **Speed** 40 ft., fly 80 ft.
+> ___
+> |  STR  |  DEX  |  CON  |  INT  |  WIS  |  CHA  |
+> |:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+> |21 (+5)|12 (+1)|18 (+4)| 8 (-1)|12 (+1)| 7 (-2)|
+> ___
+> - **Saving Throws** Str +9, Con +8
+> - **Skills** Perception +5, Survival +5
+> - **Damage Immunities** necrotic, poison
+> - **Condition Immunities** poisoned
+> - **Senses** blindsight 10 ft., darkvision 60 ft., passive Perception 15
+> - **Languages** -
+> - **Challenge** 12 (8,400 XP)
+> ___
+> ***Deadly Plague.*** Poison damage that the proto=dragon deals ignores resistance and immunity to poison damage. When it deals a critical hit, the target is infected with the plague of undeath.
+>
+> ***Death Burst.*** The proto-drake lets out a burst of toxic sludge when it drops to 0 hit points. Each creature within 5 feet of it must succeed on a DC 15 Constitution saving throw or take 27 (6d8) poison damage and become infected with the plague of undeath on a failed save. A successful save results in half damage and no other effect.
+> 
+> ### Actions
+> ***Multiattack.*** The proto-dragon makes three attacks: one with its bite and two with its claws.
+> 
+> ***Bite.*** *Melee Weapon Attack:* +9 to hit, reach 10 ft., one target. *Hit:* 16 (2d10 + 5) piercing damage plus 15 (6d4) poison damage.
+> 
+> ***Claw.*** *Melee Weapon Attack:* +9 to hit, reach 5 ft., one target. Hit: 12 (2d6 + 5) slashing damage.
+> 
+> ***Dreadful Breath (Recharge 5-6).*** The proto-dragon exhales sludge in a 60-foot cone. Each creature in that area must make a DC 16 Dexterity saving throw, taking 40 (9d8) poison damage on a failed save, or half as much damage on a successful one. A creature that fails their saving throw by 5 or more must make a DC 15 Constitution save or contract the plague of undeath.
+> 
+> ***Wing Buffet (Recharge 5-6).*** The proto-dragon beats its wings with fury. Each creature within 10 feet of it must succeed on a DC 17 Dexterity saving throw or take 12 (2d6 + 5) bludgeoning damage and be knocked prone.
+
+<img src='https://www.gmbinder.com/images/dqQG1MI.jpg' style='position:absolute; top:0px; left:0px; width:100%' />
+<img src='https://www.gmbinder.com/images/iqsWrVi.png' style='position:absolute; bottom:0px; left:0px' />
+
+<div class="pageLetter">P</div>
+<div class='footnote'>THE PLAGUE</div>
+
+\pagebreakNum
+
+___
+___
+> ## Plagued Dragonwhelp <!-- https://wc5e-cr-calculator.frogvall.com/?0;15;55;4;12;20;8;11;8;11;8;0;0;0;0;0;0;;;;1;2;;;;;;;;;;1;;;;;;;;10;;;;;1;;;;;; -->
+> *Small undead (dragon), lawful evil*
+> ___
+> - **Armor Class** 15 (natural armor)
+> - **Hit Points** 55 (10d6 + 20)
+> - **Speed** 30 ft., fly 60 ft.
+> ___
+> |  STR  |  DEX  |  CON  |  INT  |  WIS  |  CHA  |
+> |:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+> |15 (+2)|10 (+0)|14 (+2)| 8 (-1)|11 (+0)|14 (+2)|
+> ___
+> - **Saving Throws** Dex +2, Con +4
+> - **Skills** Perception +2, Survival +2
+> - **Damage Resistances** necrotic
+> - **Damage Immunities** poison
+> - **Condition Immunities** poisoned
+> - **Senses** blindsight 10 ft., darkvision 60 ft., passive Perception 12
+> - **Languages** Common, Draconic
+> - **Challenge** 3 (700 XP)
+> ___
+> 
+> ***Deadly Plague.*** Poison damage that the dragonwhelp deals ignores resistance and immunity to poison damage. It can inflict the poisoned condition even on creatures normally immune to it.  When it deals a critical hit, the target is infected with the plague of undeath.
+>
+> ***Plagued Blood.*** When the dragonwhelp takes damage of any type but psychic, each creature within 5 feet of the dragonwhelp takes 4 (1d8) poison damage.
+>
+> ### Actions 
+> ***Bite.*** *Melee Weapon Attack:* +4 to hit, reach 5 ft., one target. *Hit:* 7 (1d10 + 2) piercing damage plus 4 (1d8) poison damage.
+>
+> ***Dreadful Breath (Recharge 5-6).*** The dragonwhelp exhales sludge in a 15-foot cone. Each creature in that area must make a DC 12 Dexterity saving throw, taking 10 (3d6) poison damage on a failed save, or half as much damage on a successful one. A creature that fails their saving throw by 5 or more must make a DC 15 Constitution save or contract the plague of undeath.
+>
+> ***Change Shape.*** The dragonwhelp can magically polymorph into a humanoid or back into its true form. Its humanoid form always appears to be sickly and half-rotted. It reverts to its true form if it dies. Any equipment it is wearing or carrying is absorbed or borne by the new form (its choice). 
+> <br/>    In a new form, the dragonwhelp retains its alignment, hit points, ability to speak, proficiencies and Intelligence, Wisdom, and Charisma scores, as well as this action.
+
+___
+___
+> ## Plagued Drake <!-- https://wc5e-cr-calculator.frogvall.com/?1;17;123;8;15;76;18;37;18;37;18;0;0;0;0;0;0;;;;1;2;;;;;;;;;;1;;;;;;;;10;;;;;1;;;;;; -->
+>*Large undead (dragon), lawful evil*
+> ___
+> - **Armor Class** 17 (natural armor)
+> - **Hit Points** 123 (13d10 + 52)
+> - **Speed** 40 ft., fly 80 ft.
+> ___
+> |  STR  |  DEX  |  CON  |  INT  |  WIS  |  CHA  |
+> |:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+> |19 (+4)|10 (+0)|18 (+4)| 8 (-1)|13 (+1)|16 (+3)|
+> ___
+> - **Saving Throws** Dex +3, Con +7
+> - **Skills** Perception +4, Survival +4
+> - **Damage Resistances** necrotic
+> - **Damage Immunities** poison
+> - **Condition Immunities** poisoned
+> - **Senses** blindsight 10 ft., darkvision 60 ft., passive Perception 14
+> - **Languages** Common, Draconic
+> - **Challenge** 8 (3,900 XP)
+> ___
+> 
+> ***Deadly Plague.*** Poison damage that the drake deals ignores resistance and immunity to poison damage. It can inflict the poisoned condition even on creatures normally immune to it.  When it deals a critical hit, the target is infected with the plague of undeath.
+>
+> ***Plagued Blood.*** When the drake takes damage of any type but psychic, each creature within 10 feet of the drake takes 9 (2d8) poison damage.
+>
+> ### Actions
+> ***Multiattack.*** The drake makes two attacks: one with its bite and one with its claws.
+>
+> ***Bite.*** *Melee Weapon Attack:* +7 to hit, reach 10 ft., one target. *Hit:* 15 (2d10 + 4) piercing damage plus 9 (2d8) poison damage.
+>
+> ***Claw.*** *Melee Weapon Attack:* +7 to hit, reach 5 ft., one target. *Hit:* 13 (2d8 + 4) slashing damage.
+>
+> ***Breath Weapons (Recharge 5-6).*** The drake uses one of the following breath weapons.
+>
+> **Dreadful Breath.** The drake exhales sludge in a 30-foot 
+<br/>    cone. Each creature in that area must make a DC 15 
+<br/>    Dexterity saving throw, taking 38 (11d6) poison 
+<br/>    damage on a failed save, or half as much damage on 
+<br/>    a successful one. A creature that fails their saving 
+<br/>    throw by 5 or more must make a DC 15 Constitution 
+<br/>    save or contract the plague of undeath.
+> <br/> **Shadow Breath.** The drake exhales shadowy fire in a 
+<br/>    30-foot cone. Each creature in that area must 
+<br/>    make a DC 15 Strength saving throw or take 
+<br/>    10 (3d6) necrotic damage at the start of each of its 
+<br/>    turns and have disadvantage on Strength-based 
+<br/>    attack rolls, checks, and saving throws for 1 minute. 
+<br/>    A creature can repeat the saving throw at the end of 
+<br/>    each of its turns, ending the effect on itself on a 
+<br/>    success.
+>
+> ***Change Shape.*** The drake can magically polymorph into a humanoid or back into its true form. Its humanoid form always appears to be sickly and half-rotted. It reverts to its true form if it dies. Any equipment it is wearing or carrying is absorbed or borne by the new form (its choice). 
+> <br/>    In a new form, the drake retains its alignment, hit points, ability to speak, proficiencies, and Intelligence, Wisdom, and Charisma scores, as well as this action.
+
+<div class="pageLetter">P</div>
+<div class='footnote'>THE PLAGUE</div>
+
+\pagebreakNum
+
+___
+___
+> ## Plagued Dragon <!-- https://wc5e-cr-calculator.frogvall.com/?3;17;200;12;20;104;44;43;44;43;44;0;0;0;0;0;0;;;;1;2;;;;;;;1;;1;3;;;;;;;;10;;;;;1;;4;;;15;Death%20and%20Decay -->
+> *Huge undead (dragon), lawful evil*
+> ___
+> - **Armor Class** 17 (natural armor)
+> - **Hit Points** 200 (16d12 + 96)
+> - **Speed** 40 ft., fly 80 ft.
+>___
+> |  STR  |  DEX  |  CON  |  INT  |  WIS  |  CHA  |
+> |:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+> |23 (+6)|10 (+0)|22 (+6)| 8 (-1)|15 (+2)|18 (+4)|
+>___
+> - **Saving Throws** Dex +6, Con +12
+> - **Skills**  Perception +8, Survival +8
+> - **Damage Immunities** poison, necrotic
+> - **Condition Immunities** poisoned
+> - **Senses** blindsight 10 ft., darkvision 60 ft., passive Perception 18
+> - **Languages** Common, Draconic
+> - **Challenge** 17 (18,000 XP)
+> ___
+>
+> ***Deadly Plague.*** Poison damage that the dragon deals ignores resistance and immunity to poison damage. It can inflict the poisoned condition even on creatures normally immune to it. When it deals a critical hit, the target is infected with the plague of undeath.
+>
+> ***Legendary Resistance (3/Day).*** If the dragon fails a saving throw, it can choose to succeed instead.
+>
+> ***Plague Cloud.*** Any creature that starts its turn within 30 feet of the dragon must succeed on a DC 20
+Constitution saving throw or take 9 (2d8) poison damage and be poisoned until the start of the creature's next turn. 
+>
+> ***Plagued Blood.*** When the dragon takes damage of any type but psychic, each creature within 15 feet of the dragon takes 9 (2d8) poison damage.
+>
+> ### Actions
+> ***Multiattack.*** The dragon can use its Cannibalize. It then makes two attacks: one with its bite and one with its claws.
+>
+> ***Bite.*** *Melee Weapon Attack:* +12 to hit, reach 10 ft., one target. *Hit:* 17 (2d10 + 6) piercing damage plus 13 (3d8) poison damage.
+>
+> ***Claw.*** *Melee Weapon Attack:* +12 to hit, reach 5 ft., one target. *Hit:* 13 (2d6 + 6) slashing damage.
+>
+> ***Tail Sweep.*** *Melee Weapon Attack:* +12 to hit, <br/> reach 15 ft., all targets in reach. *Hit:* 15 (2d8 + 6) bludgeoning damage.
+>
+> ***Cannibalize.*** The dragon cannibalizes the corpse of a dragon or humanoid within 10 feet that has been dead for less than a day, regaining 26 (4d12) hit points. Each creature of the dragon's choice that is within 60 feet of the dragon and can see it must succeed on a DC 18 Wisdom saving throw or become frightened for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. If a creature's save is successful or the effect ends for it, the creature is immune to any dragon's cannibalize for the next 24 hours.
+>
+> <br/><br/>
+> 
+> ***Breath Weapons (Recharge 5-6).*** The drake uses one of the following breath weapons.
+>
+> **Dreadful Breath.** The drake exhales sludge in a 60-foot 
+<br/>    cone. Each creature in that area must make a DC 20 
+<br/>    Dexterity saving throw, taking 52 (15d6) poison 
+<br/>    damage on a failed save, or half as much damage on 
+<br/>    a successful one. A creature that fails their saving 
+<br/>    throw by 5 or more must make a DC 15 Constitution 
+<br/>    save or contract the plague of undeath.
+<br/> In addition, any humanoid killed by the dreadful breath 
+<br/>    rises at the start of the dragon's turn as a zombie 
+<br/>    that is permanently under its command, following its 
+<br/>    verbal orders to the best of its ability.
+> <br/> **Shadow Breath.** The drake exhales shadowy fire in a 
+<br/>    60-foot cone. Each creature in that area must 
+<br/>    make a DC 20 Strength saving throw or take 
+<br/>    17 (5d6) necrotic damage at the start of each of its 
+<br/>    turns and have disadvantage on Strength-based 
+<br/>    attack rolls, checks, and saving throws for 1 minute. 
+<br/>    A creature can repeat the saving throw at the end of 
+<br/>    each of its turns, ending the effect on itself on a 
+<br/>    success.
+>
+> ***Change Shape.*** The dragon can magically polymorph into a humanoid or back into its true form. Its humanoid form always appears to be sickly and half-rotted. It reverts to its true form if it dies. Any equipment it is wearing or carrying is absorbed or borne by the new form (its choice). 
+> <br/>    In a new form, the dragon retains its alignment, hit points, ability to speak, proficiencies, Legendary Resistance, and Intelligence, Wisdom, and Charisma scores, as well as this action.
+>
+>
+> ### Legendary Actions
+> The dragon can take 3 legendary actions, choosing from the options below. Only one legendary action option can be used at a time and only at the end of another creature's turn. The dragon regains spent legendary actions at the start of its turn.
+>
+> **Call Darkness.** In a 30-foot radius of the dragon, bright 
+<br/>    light becomes dim light and dim light becomes 
+<br/>    darkness. Any nonmagical light sources within the 
+<br/>    area have the light they produce suppressed. This 
+<br/>    effect lasts until the end of the dragon's next turn 
+<br/>    and moves with the dragon.
+> <br/> **Wrack.** Target creature within 120 feet the dragon can 
+<br/>    see must succeed on a DC 18 Wisdom saving throw 
+<br/>    or have disadvantage on Strength-based attack rolls, 
+<br/>    checks, and saving throws for 1 minute. A creature 
+<br/>    can repeat the saving throw at the end of each of its 
+<br/>    turns, ending the effects on itself on a success.
+> <br/> **Death and Decay (Costs 2 Actions).** Each non-undead 
+<br/>    creature within 30 feet must make a DC 18
+<br/>    Constituion saving throw, taking 13 (3d8) necrotic 
+<br/>    damage on a failed save. Until the end of its next 
+<br/>    turn, whenever the creature makes an attack roll 
+<br/>    or saving throw, it must roll a d4 and subtract the 
+<br/>    number rolled from the attack roll or saving throw. 
+<br/>    A successful save results in half damage and no
+<br/>    other effects.
+> <br/> **Wing Attack (Costs 2 Actions).** The dragon beats its 
+<br/>    wings. Each creature within 10 feet of the dragon 
+<br/>    must succeed on a DC 20 Dexterity saving throw or 
+<br/>    take 13 (2d6 + 6) bludgeoning damage and be 
+<br/>    knocked prone. The dragon can then fly up to half its 
+<br/>    flying speed.
+
+<div class="pageLetter">P</div>
+<div class='footnote'>THE PLAGUE</div>
+
+\pagebreakNum
+
+<!--
+___
+> ## Plagued Proto-Dragon <!-- https://wc5e-cr-calculator.frogvall.com/?2;17;231;9;17;80;0;51;0;51;0;0;0;0;0;0;0;;;1;1;2;;;;;;;;;;3;;;;;;;;15;;;;;; --
+>*Huge undead (dragon), lawful evil*
+> ___
+> - **Armor Class** 17 (natural armor)
+> - **Hit Points** 231 (22d12 + 88)
+> - **Speed** 40 ft., fly 80 ft.
+>___
+> |  STR  |  DEX  |  CON  |  INT  |  WIS  |  CHA  |
+> |:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+> |21 (+5)|12 (+1)|18 (+4)| 8 (-1)|12 (+1)|10 (+0)|
+>___
+> - **Saving Throws** Str +9, Con +8
+> - **Skills**  Perception +5, Survival +5
+> - **Damage Resistances** necrotic
+> - **Damage Immunities** poison
+> - **Senses** blindsight 10ft., darkvision 60ft., passive Perception 15
+> - **Languages** Common, Draconic
+> - **Challenge** 11 (7,200 XP)
+> ___
+>
+>
+> ### Actions
+> ***Multiattack.*** The proto-dragon makes three attacks: one with its bite and two with its claws.
+>
+> ***Bite.*** *Melee Weapon Attack:* +9 to hit, reach 10ft., one target. *Hit:* 16 (2d10 + 5) piercing damage plus 7 (2d6) necrotic damage.
+>
+> ***Claw.*** *Melee Weapon Attack:* +9 to hit, reach 5 ft., one target. *Hit:* 14 (2d8 + 5) slashing damage.
+>
+> ***Dreadful Breath (Recharge 5-6).*** The proto-dragon exhales sludge in a 30-foot cone. Each creature in that area must make a DC 17 Dexterity saving throw, taking 40 (9d8) necrotic damage on a failed save, or half as much damage on a successful one.
+>
+> ***Wing Buffet (Recharge 5-6).*** The proto-dragon beats its wings with fury. Each creature within 10 feet of it must succeed on a DC 18 Dexterity saving throw or take 11 (2d10) bludgeoning damage and be knocked prone.
+>
+> ***Cannibalize (3/Day).*** The proto-dragon cannibalizes the corpse of a humanoid that has been dead for less than a day, regaining 22 (4d10) hit points. Each creature of the proto-dragon's choice that is within 30 feet of the proto-dragon and can see it must succeed on a DC 17 Wisdom saving throw or become frightened for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. If a creature's save is successful or the effect ends for it, the creature is immune to any proto-dragon's cannibalize for the next 24 hours.
+-->
+
+## Art Credits
+Page 1: https://www.deviantart.com/dlikt/art/The-Cauldron-789591347
+
+<img src='https://www.gmbinder.com/images/TWBbww8.png' style='position:absolute; top:0px; right:0px; width:450px' />
+
+<img src='https://www.gmbinder.com/images/y5CqFEQ.png' style='position:absolute; bottom:400px; right:-30px; transform:rotate(-deg);' />
