@@ -1,0 +1,1495 @@
+#### Spells By Level
+##### Cantrips
+##### 3rd Level
+Acid Breath
+##### 5th Level
+Acid Sheath
+##### 6th Level
+Acid Storm
+
+\pagebreak
+
+#### Artificer Spell List
+
+#### Cleric Spell List
+
+#### Sorcerer Spell List
+##### 3rd Level
+Acid Breath
+##### 5th Level
+Acid Sheath
+##### 6th Level
+Acid Storm
+
+#### Warlock Spell List
+##### 3rd Level
+Acid Breath
+##### 5th Level
+Acid Sheath
+##### 6th Level
+Acid Storm
+
+#### Wizard Spell List
+##### 3rd Level
+Acid Breath
+##### 5th Level
+Acid Sheath
+##### 6th Level
+Acid Storm
+
+\pagebreak
+
+#### Acid Breath
+*3rd-level conjuration (sorcerer, warlock, wizard)*
+___
+- **Casting Time:** 1 action
+- **Range:** Self (15-foot cone)
+- **Components:** V, S, M (a handful of fire ants, alive or dead)
+- **Duration:** Instantaneous
+---
+*You pop the fire ants into your mouth and exhale quickly. The ants distill into drops of pure acid in midair, spattering against your foes and leaving smoking holes.*
+___
+You breathe forth a cone of acidic droplets. Each creature in the cone must make a Dexterity saving throw. A creature takes 12d4 acid damage on a failed save, or half as much on a successful one.
+
+***At Higher Levels.*** When you cast this spell using a spell slot of 4th level or higher, the spell deals an additional 2d4 acid damage for each slot level above 3rd.
+
+#### Acid Sheath
+*5th-level conjuration (sorcerer, warlock, wizard)*
+___
+- **Casting Time:** 1 action
+- **Range:** Self
+- **Components:** V, S, M (a handful of fire ants, alive or dead, and a glass sculpture of a humanoid worth 50 gp)
+- **Duration:** Concentration, up to 1 minute
+---
+*You crush the fire ants between your fingers and rub the smashed mixture over your exposed flesh. The smashed ants liquefy, and the liquid covers your body in a thick, translucent sheath.*
+___
+You enclose yourself in a fluid sheath of acid that does not harm you for the duration. You can end the spell early by using an action to dismiss it. 
+
+The sheath provides you resistance to acid damage. Additionally, whenever a creature within 5 feet of you hits you with a melee attack, or when a creature starts their turn while grappling you, they take 2d8 acid damage.
+
+Finally, whenever you cast a spell of 1st-level or higher that deals acid damage, it deals damage as if the spell were one spell level higher.
+
+#### Acid Storm
+*6th-level conjuration (sorcerer, warlock, wizard)*
+___
+- **Casting Time:** 1 action
+- **Range:** 150 feet
+- **Components:** V, S, M (a flask of acid worth 25 gp, which the spell consumes)
+- **Duration:** Instantanous
+---
+*A dark green cloud whirls into being before unleashing a shower of foul-smelling, yellow-green rain.*
+___
+Acid rain falls in a 20-foot high, 20-foot radius cylinder centered on a point within range. Each creature and object in the area takes 16d4 acid damage, or half as much on a successful Dexterity saving throw. The acid kills any nonmagical plant life in the area.
+
+\columnbreak
+
+#### Amanuensis
+*Transmutation cantrip (artificer, bard, cleric, wizard)*
+___
+- **Casting Time:** 1 action
+- **Range:** 30 feet
+- **Components:** V, S, M (blank paper, parchment, or a book)
+- **Duration:** 1 hour
+---
+*You point at the writing and then move your hand as though holding a stylus or quill. As you intone the spell, the script appears on a sheet of paper close at hand.*
+___
+You cause writing from one source (such as a book) to be copied into a book, paper, or parchment. This spell copies 250 words per minute and creates a perfect duplicate of the original. The spell copies only nonmagical text, not illustrations or magical writings (such as the text of a spellbook or a spell scroll). If the target contains normal and magical writing (such as a letter with a *glyph of warding*), only the normal text is copied, leaving blank space in the copied text where the magical writing would be expected. Likewise, if the target contains text and illustration, only the text is copied. 
+
+The spell triggers (but does not copy) writing-based magic traps in the material being copied.
+
+Blank paper, parchment, or a book must be provided for the spell to write upon. If the target has multiple pages, the spell automatically turns to the next blank page whenever necessary. If more pages in the target exist than blank pages are available, the spell copies the original until it runs out of blank pages. At any time during the spell’s duration you can redirect the magic to copy from another target, copy onto a different blank source, or resume a duplication that was interrupted by a shortfall of blank pages.
+
+The spell does not translate the copied writing. If you do not understand the original, you have no additional ability to understand the copy.
+
+#### Amorphous Form
+*3rd-level transmutation (sorcerer, warlock, wizard)*
+___
+- **Casting Time:** 1 action
+- **Range:** Touch
+- **Components:** S, M (a pinch of gelatin)
+- **Duration:** Concentration, up to 1 hour
+---
+*You dust your ally with gelatin and silently evoke the spell. Immediately her bones begin to soften and she and her belongings slump, becoming malleable ooze.*
+___
+You transform a willing creature you touch, along with everything it's wearing and carrying, turning it amorphous and oozelike for the duration. The spell ends if the creature drops to 0 hit points. An incorporeal creature isn't affected.
+
+While in this form, the target can enter and occupy the space of another creature. The target has resistance to nonmagical damage, and it has advantage on Strength, Dexterity, and Constitution saving throws. The target can pass through small holes as small as 2 inches in diameter. The target gains a swim speed equal to its movement speed and can hold its breath indefinitely. The target is also immune to the grappled, prone, and restrained conditions.
+
+While in this oozelike form, the target can't attack or cast spells.
+
+\pagebreak
+
+#### Amplify
+*1st-level transmutation (bard; ritual)*
+___
+- **Casting Time:** 1 action
+- **Range:** 300 feet
+- **Components:** S
+- **Duration:** Concentration, up to 10 minutes
+---
+*You need to hear what’s going on. A hand motion or two, and the voices become louder to your ears.*
+___
+You cause an amplification of all sounds within a 20-foot radius of a point within range. You have advantage on all Perception checks related to hearing, as well as vulnerability to thunder damage, for sounds within the target area. 
+
+The creatures within the area do not notice the increased amplification. The spell can be centered on a creature or object, moving with them for the duration. A successful Wisdom saving throw prevents this effect, though it does not grant awareness of the spell.
+
+If any of this spell's area overlaps with the area of a *silence* spell, if both spells are of the same spell level, they are both dispelled. Otherwise, only the lower level spell is dispelled.
+
+#### Animate Fire
+*1st-level transmutation (druid)*
+___
+- **Casting Time:** 1 action
+- **Range:** 30 feet
+- **Components:** V, S, M (a handful of charcoal, sulfur, and soda ash)
+- **Duration:** Concentration, up to 1 minute
+---
+*By casting the mixture in your hand at the fire, you complete the spell. Immediately thereafter, a part of the flame coalesces into a vaguely humanoid shape more solid looking than the rest.*
+___
+You animate a fire, which must be approximately the size of a campfire. The animated fire has the statistics of a [lesser fire elemental](#new-monsters-fire-elemental-lesser), and attacks as you direct. It cannot move more than 30 feet from its source fire.
+
+\pagebreak
+
+#### Animate Breath
+*7th-level transmutation (sorcerer)*
+___
+- **Casting Time:** 1 action
+- **Range:** Self
+- **Components:** S
+- **Duration:** Concentration, up to 1 minute
+---
+*You exhale a flaming tongue of fire, but instead of lashing out against your foes, it produces a creature made of flames that answers to your bidding.*
+___
+For this spell to function, you must have a breath weapon, either as a supernatural ability or as the result of casting a spell such as *dragon's breath* ^XGE^. When you successfully cast this spell, you imbue the energy of your breath weapon with coherence, mobility, and a semblance of life. The animated breath then attacks whomever or whatever you designate. The spell works only on breath weapons that deal energy (acid, cold, fire, lightning or thunder) damage. 
+
+The animated breath uses the statistics of a Huge fire elemental (MM 99), with the following exceptions.
+- The creature deals 2d8 points of damage of the same type as the breath weapon with each successful slam attack, instead of 2d8 points of fire.
+- The creature has immunity to its own energy type, but no vulnerability to another energy type.
+- The creature does not have the burn ability.
+
+
+#### Animate Snow
+*6th-level transmutation (druid)*
+___
+- **Casting Time:** 1 action
+- **Range:** 120 feet
+- **Components:** V, S
+- **Duration:** Concentration, up to 1 minute
+---
+*Nearby snow rapidly draws together with an audible crunch, coalescing into a vaguely human-shaped form.*
+___
+You cause snow in the area to become 1d3+2 Large animated objects, 1d3 Huge animated objects, or one Gargantuan animated object (MM 14). The animated snow attacks as directed by your vocal commands.
+
+Animated snow does not have a hardness score. It possesses improved speed as if it had legs, granting it a speed of 30 feet, as well as the blind special ability (MM 13). In addition, each animated snow object has the cold subtype and deals an extra 1d6 points of cold damage on a successful hit.
+
+Animated snow objects take 1d6 points of damage per round in a place where the temperature is above freezing.
+
+Range: Medium (100 ft. + 10 ft./level)
+Target: Cube of snow up to 20 ft. on a side
+Duration: 1 round/level
+
+#### Animate Water
+*1st-level transmutation (druid)*
+___
+- **Casting Time:** 1 action
+- **Range:** 30 feet
+- **Components:** V, S, M (a vial of pure spring water mixed with cinnabar oil)
+- **Duration:** Concentration, up to 1 minute
+---
+Level: Druid 1
+Range: Close (25 ft. + 5 ft./2 levels)
+Target: Cube of water up to 5 ft. on
+a side
+*You indicate a patch of water with a hand shaking from pent-up divine spell power, and the liquid rises into a vaguely humanoid shape.*
+___
+This spell functions like animate fire, but you can instead animate a quantity of water of at least 4 cubic feet into a Small water elemental (MM 100).
+
+#### Animate Wood
+*1st-level transmutation (druid)*
+___
+- **Casting Time:** 1 action
+- **Range:** Touch
+- **Components:** V, S, M (A mixture of powdered cinnabar and ground peach pit)
+- **Duration:** Concentration, up to 1 minute
+---
+Target: One Small or smaller
+wooden object
+*By touching a piece of wood you release the energy of the spell into it. The wood begins to writhe and twist before your eyes and then rises to move in the direction you indicate.*
+___
+This spell imbues a Small or smaller wooden object with mobility and a semblance of life, then causes it to immediately attack whomever or whatever you initially designate. Statistics for the animated wood are as for a Small animated object (MM 13). Wooden objects animated by this spell have hardness 5. The spell cannot animate objects carried or worn by a creature. 
+
+Material Component: 
+
+ARC OF LIGHTNING
+Conjuration (Creation) [Electricity]
+Level: Druid 4, sorcerer/wizard 5,
+Windstorm 5
+Components: V, S, M/DF
+Casting Time: 1 standard action
+Range: Close (25 ft. + 5 ft./2 levels)
+Area: A line between two creatures
+Duration: Instantaneous
+Saving Throw: Reflex half
+Spell Resistance: No
+Static fills the air as you complete the
+spell. With a gesture you create magical
+conductivity between two creatures, and a
+bolt of electricity arcs between them with a
+shockingly loud crackle.
+This bolt deals 1d6 points of electricity
+damage per caster level (maximum
+15d6) to both creatures and
+to anything in the line
+between them.
+Both creatures
+must be in range,
+and you must be
+able to target them
+both (as if this
+spell had them as
+its targets). Draw
+the line from any
+corner in one crea-
+ture’s space to any
+corner in the other’s
+space. The bolt affects
+all squares in this line.
+Arcane Material Com-
+ponent: Two small iron
+rods.
+
+ARMOR OF DARKNESS
+Abjuration [Darkness]
+Level: Darkness 4
+Components: V, S, DF
+Casting Time: 1 standard action
+Range: Touch
+Target: Creature touched
+Duration: 10 minutes/level
+Saving Throw: Will negates
+(harmless)
+Spell Resistance: Yes (harmless)
+The spell envelops the creature in a shroud
+of flickering shadows.
+The shroud grants the subject a +4
+deflection bonus to Armor Class plus
+an additional +1 for every three caster
+levels above 7th (for a total of +5 at 10th
+level, +6 at 13th, +7 at 16th, to a maxi-
+mum of +8 at 19th level). The subject
+can see through the armor as if it did
+not exist and is also afforded darkvision
+out to 60 feet. The subject gains a +2
+saving throw bonus against any holy,
+good, or light spells or effects.
+Undead creatures that are subjects
+of armor of darkness also gain +4 turn
+resistance.
+
+AURA OF GLORY
+Transmutation
+Level: Paladin 2
+Components: V, DF
+Casting Time: 1 swift action
+Area: 10-ft.-radius spread
+Duration: Instantaneous
+Saving Throw: None
+Spell Resistance: No
+You invoke the holy words and a soft
+golden light radiates from you. You feel
+surer of yourself, bolstered by the power of
+your beliefs.
+You channel divine power into your-
+self, spreading glory to your comrades.
+This spell removes any fear effect from
+all allies within your aura of courage.
+
+AURA OF TERROR
+Necromancy [Fear, Mind-Affecting]
+Level: Sorcerer/wizard 6
+Components: V
+Casting Time: 1 standard action
+Range: 30-ft.-radius emanation
+centered on you
+Duration: 1 minute/level
+Saving Throw: Will negates; see text
+Spell Resistance: Yes
+You speak a few curt words and your face
+is briefly overlaid with the image of a
+violet-shaded skull. The skull fades, but
+the nimbus of violet light remains around
+you.
+You become surrounded by an aura of
+fear, granting you a frightful presence
+not unlike that of a dragon. Whenever
+you charge or attack, you inspire fear
+in all creatures within 30 feet that
+have fewer Hit Dice than your caster
+level. Each potentially affected oppo-
+nent must succeed on a Will save or
+become shaken—a condition that lasts
+until the opponent is out of range. A
+successful save leaves that opponent
+immune to your frightful presence
+for 24 hours.
+If you cast this spell when you
+already have the frightful presence
+ability or a fear aura, the existing ability
+becomes more effective in the follow-
+ing ways:
+• The radius of the area affected by the
+ability increases by 10 feet.
+• The DC of your frightful presence
+ability increases by 2.
+• Creatures that would normally be
+shaken by your fear aura are fright-
+ened instead, and creatures that
+would normally be frightened are
+panicked.
+
+BABAU SLIME
+Transmutation
+Level: Abyss 3, druid 1, sorcerer/
+wizard 1
+Components: V, S, M/DF
+Casting Time: 1 standard action
+Range: Touch
+Target: Creature touched
+Duration: 1 minute/level
+Saving Throw: Fortitude negates
+(harmless)
+Spell Resistance: Yes (harmless)
+You press the viscous ball of demon sweat
+between your fingers and speak the eldritch
+words. Your flesh and equipment begin
+to weep hot red tears that quickly form a
+coating over your body.
+This demon-inspired transmutation
+causes the subject to secrete a slimy
+red layer of jelly that coats its skin,
+armor, and equipment. A creature
+that strikes a slime-protected subject
+with an unarmed strike, a touch
+attack (including a touch spell), or a
+natural weapon takes 1d8 points of
+acid damage. Any creature in a grapple
+with the target of babau slime takes 1d8
+points of acid damage at the beginning
+of its turn.
+Arcane Material Component: A drop
+of babau slime.
+
+BACKBITER
+Necromancy
+Level: Sorcerer/wizard 1
+Components: V, S, F
+Casting Time: 1 standard action
+Range: Close (25 ft. + 5 ft./2 levels)
+Target: One weapon
+Duration: 1 round/level or until
+discharged
+Saving Throw: Will negates; see text
+Spell Resistance: Yes (object)
+The weapon you indicate during the spell’s
+casting briefly shimmers with a black aura
+that disappears in an eyeblink.
+You cast this spell on any melee
+weapon. The next time that weapon is
+used to make a melee attack, its shaft
+twists around so that the weapon
+strikes the wielder instead. The weapon
+hits automatically, and no attack roll
+is made.
+The wielder gets no warning or
+knowledge of the spell’s effect on his
+weapon, and although he makes the
+attack, the self-dealt damage can’t be
+consciously reduced (though damage
+reduction applies) or changed to nonle-
+thal damage. Once the weapon attacks
+its wielder (whether successfully or
+not), the spell is discharged.
+Magic weapons targeted by this
+spell receive a Will save. An item in
+a creature’s possession uses its own
+Will save bonus or its wielder’s bonus,
+whichever is higher.
+Focus: A dagger.
+
+BALL LIGHTNING
+Evocation [Electricity]
+Level: Sorcerer/wizard 5
+Components: V, S, M
+Casting Time: 1 standard action
+Range: Medium (100 ft. + 10 ft./level)
+Effect: One lightning ball
+Duration: 1 round/level
+Saving Throw: Reflex negates
+Spell Resistance: Yes
+With a circuitous pass of your hand through
+the air, a crackling ball of lightning appears
+before you, accompanied by the smell of
+ozone.
+You create a 5-foot-diameter ball of
+concentrated electricity that rolls in
+whichever direction you point, dealing
+electricity damage to creatures it strikes.
+It moves 30 feet per round. As part of
+this movement, it can ascend or jump up
+to 30 feet to strike a subject. If it enters
+a space with a creature, it stops moving
+for the round and deals 1d6 points
+of electricity damage per caster level
+(maximum 15d6), though a successful
+Reflex save negates that damage.
+The ball moves as long as you
+actively direct it (a move action for
+you), otherwise it merely stays at rest,
+damaging any creature in its space. It
+cannot push aside unwilling creatures
+or batter down large obstacles. The
+lightning winks out if it exceeds the
+spell’s range.
+Material Component: A handful of
+copper and iron pellets.
+
+BALOR NIMBUS
+Transmutation
+Level: Abyss 4, Cleric 2, sorcerer/
+wizard 2
+Components: V, S, M/DF
+Casting Time: 1 standard action
+Range: Personal
+Target: You
+Duration: 1 round/level
+Saving Throw: None
+Spell Resistance: No
+You smash the soot against your flesh and
+intone the ancient, dark words. Like the
+legendary balor, your body bursts into
+lurid flames.
+The flames created by this spell do
+not harm you or any equipment you
+carry or wear. Each round, the flames
+deal 6d6 points of fire damage to any
+creature grappling you (or any creature
+you grapple) on your turn.
+Arcane Material Component: A pinch
+of soot.
+
+BEAST CLAWS
+Transmutation
+Level: Druid 1
+Components: V, S, M
+Casting Time: 1 standard action
+Range: Personal
+Target: You
+Duration: 1 hour/level
+With crackle of popping joints and tendons,
+your hands and fingers become long curving
+claws with heavy knuckles.
+You gain two claw attacks that act as
+slashing melee weapons, dealing 1d4
+points of damage with a threat range
+of 19–20. Attacks with your trans-
+formed hands do not provoke attacks
+of opportunity.
+Your claws work just like the natural
+weapons of many monsters. You can
+make an attack with one claw or a full
+attack with two claws at your normal
+attack bonus, replacing your normal
+attack routine. You take no penalties
+for two-weapon fighting, and neither
+attack is a secondary attack. If
+your base attack bonus
+is +6 or higher, you
+do not gain any
+additional
+attacks—you simply have two claw
+attacks at your normal attack bonus.
+If you attack with a manufactured
+weapon or another natural attack, you
+can’t make any claw attacks in that
+round. The claws do not hinder your
+manual dexterity or spellcasting.
+Material Component: The claw of
+a bird of prey, such as an eagle or
+falcon.
+
+BEGET BOGUN
+Conjuration (Creation)
+Level: Druid 1
+Components: V, S, M, XP
+Casting Time: 1 standard action
+Range: Touch
+Effect: Tiny construct
+Duration: Instantaneous
+Saving Throw: None
+Spell Resistance: No
+With the bogun made, you take the
+final step and imbue it with sentience,
+breathing life into your new servant and
+companion.
+Beget bogun allows you to infuse living
+magic into a small mannequin that you
+have created from vegetable matter.
+This is the final spell in the process
+of creating a bogun. See the bogun’s
+description for further details.
+Material Component: The mannequin
+from which the bogun is created.
+XP Cost: 25 XP.
+
+Bogun
+CR 1
+N, CN, LN, NE, or NG Tiny construct
+Init +3; Senses darkvision 60 ft., low-light vision; Listen +1,
+Spot +1
+Languages telepathic link with master
+AC 15, touch 15, flat-footed 12
+hp 11 (2 HD)
+Fort +0, Ref +3, Will +1
+Speed 20 ft. (4 squares), fly 50 ft. (good)
+Melee nettles +1 (1d4–2 plus poison)
+Space 2-1/2 ft.; Reach 0 ft.
+Base Atk +1; Grp –5
+Atk Options poison (nettles, DC 11, 1d6 Dex/1d6 Dex)
+Abilities Str 7, Dex 16, Con —, Int 8, Wis 13, Cha 10
+SQ construct traits (MM 307)
+Feats Stealthy
+Skills Hide +10, Move Silently +9
+A bogun is a small nature servant created by a druid. Like
+a homunculus, it is an extension of its creator, sharing the
+same alignment and link to nature. A bogun does not fight
+particularly well, but it can perform any simple action, such
+as attacking, carrying a message, or opening a door or
+window. For the most part, a bogun simply carries out its
+creator’s instructions. Because it is self-aware and somewhat
+willful, however, its behavior is not entirely predictable. On
+rare occasions (5% of the time), a bogun might refuse to
+perform a particular task. In that case, the creator must
+make a DC 11 Diplomacy check to convince the creature to
+cooperate. Success means the bogun performs the task as
+requested; failure indicates that it either does exactly the
+opposite or refuses to do anything at all for 24 hours (DM’s
+option as to which).
+A bogun cannot speak, but the process of creating one
+links it telepathically with its creator. It knows what its cre-
+ator knows and can convey to him or her everything it sees
+and hears, up to a range of 500 yards. A bogun never travels
+beyond this range willingly, though it can be removed forcibly.
+In that case, it does everything in its power to regain contact
+with its creator. An attack that destroys a bogun also deals
+its creator 2d10 points of damage. If its creator is slain, a
+bogun also dies, and its body collapses into a heap of rotting
+vegetation.
+A bogun looks like a vaguely humanoid mound of compost.
+The creator determines its precise features, but a typical
+bogun stands about 18 inches tall and has a wingspan of about
+2 feet. Its skin is covered with nettles and branches.
+Combat: A bogun attacks by brushing against opponents
+with harsh nettles that deliver an irritating poison.
+Construction: Unlike a homunculus, a bogun is created
+from natural materials available in any forest. Thus, there is
+no gold piece cost for its creation. All materials used become
+permanent parts of the bogun.
+The creator must be at least 7th level and possess the Craft
+Wondrous Item feat to make a bogun. Before casting any
+spells, the creator must weave a physical form out of living
+(or once-living) vegetable matter to hold the magical energy.
+A bit of the creator’s own body, such as a few strands of hair
+or a drop of blood, must also be incorporated into this crude
+mannequin. The creator can assemble the body personally or
+hire someone else to do it. Creating this mannequin requires
+a DC 12 Craft (basketweaving or weaving) check.
+Once the body is finished, the creator must animate it
+through an extended magical ritual that requires a week to
+complete. The creator must labor for at least 8 hours each day
+in complete solitude in a forest grove; any interruption from
+another sentient creature undoes the magic. If the creator is
+personally weaving the creature’s body, that process and the
+ritual can be performed together.
+When not actively working on the ritual, the creator must
+rest and can perform no other activities except eating, sleep-
+ing, or talking. Missing even one day causes the process to
+fail. At that point, the ritual must be started anew, though the
+previously crafted body and the grove can be reused.
+On the final day of the ritual, the creator must personally
+cast control plants, wood shape, and beget bogun. These spells
+can come from outside sources, such as scrolls, rather than
+being prepared, if the creator prefers.
+
+BESTOW CURSE,
+GREATER
+Necromancy
+Level: Cleric 7, sorcerer/wizard 8
+Components: V, S
+Casting Time: 1 standard action
+Range: Touch
+Target: Creature touched
+Duration: Permanent
+Saving Throw: Will negates
+Spell Resistance: Yes
+Channeling your hatred into binding words
+of power, you thrust your hand at your foe
+and proclaim a terrible curse.
+The spellcaster places a curse on the
+creature touched, choosing one of the
+three following effects.
+• One ability score is reduced to 1, or
+two ability scores take –6 penalties
+(to a minimum score of 1).
+• –8 penalty on attack rolls, saving
+throws, ability checks, and skill
+checks.
+• Each turn, the subject has a 25%
+chance to act normally; otherwise,
+it takes no action.
+You can also invent your own curse,
+but it should be no more powerful
+than those described above, and the
+Dungeon Master has the final say on
+the curse’s effect.
+A greater curse cannot be dispelled,
+nor can it can be removed with break
+enchantment or limited wish. A miracle
+or wish spell removes a greater curse, as
+does remove curse cast by a spellcaster
+of at least 17th level.
+
+BINDING WINDS
+Evocation [Air]
+Level: Druid 2, Windstorm 2
+Components: V, S
+Casting Time: 1 standard action
+Range: Medium (100 ft. + 10 ft./level)
+Target: One creature
+Duration: Concentration
+Saving Throw: Reflex negates
+Spell Resistance: Yes
+Calling upon the power of elemental air, you
+encircle the target in whipping winds.
+The subject can act normally, but it
+cannot move from its current location.
+The winds carry its voice away, so it
+can speak but cannot be heard, and it
+cannot hear anything but the roar of
+the winds. This spell distracts spellcast-
+ers, and so a Concentration check is
+required to successfully cast any spell
+(DC equal to this spell’s DC + the level
+of the spell being cast).
+Furthermore, no sonic or language-
+dependent spells or effects can be cast
+into or out of the winds (though spells
+cast by you upon yourself function
+normally). Ranged attacks made into
+or out of the winds take a –2 penalty.
+Binding winds holds flying creatures in
+midair.
+
+BITE OF THE
+WEREBEAR
+Transmutation
+Level: Druid 6, sorcerer/wizard 7
+Components: V, S, M
+Casting Time: 1 standard action
+Range: Personal
+Target: You
+Duration: 1 round/level
+With an inhuman roar, your face extends
+and expands, and your hands enlarge into
+clawed paws. Powerful muscle builds under
+your skin, and you become a half-bear
+creature.
+You gain a +16 enhancement bonus to
+Strength, a +2 enhancement bonus to
+Dexterity, a +8 enhancement bonus to
+Constitution, and a +7 enhancement
+bonus to natural armor. Your hands
+become claws, granting you two claw
+attacks, and your mouth becomes that
+of a bear, giving you a bite attack. You
+can attack with both claws at your full
+attack bonus, but your bite attack takes
+a –2 penalty (as if you had the Multiat-
+tack feat). Each claw deals 1d8 points
+of damage (1d6 if you are Small) + your
+Str modifier, and your bite deals 2d8
+points of damage (2d6 if you are Small)
++ 1/2 your Str modifier. You gain the
+benefits of the Blind-Fight and Power
+Attack feats, as well. If your base attack
+bonus is +6 or higher, you do not gain
+any additional attacks.
+Material Component: A tuft of bear
+fur.
+BITE OF THE
+WEREBOAR
+Transmutation
+Level: Druid 4, sorcerer/wizard 5
+Components: V, S, M
+Casting Time: 1 standard action
+Range: Personal
+Target: You
+Duration: 1 round/level
+You shake your head, and your face reshapes
+itself into the visage of a boar. As this hap-
+pens, your body becomes bulkier, and your
+shoulders and back bristle with hair.
+You gain a +4 enhancement bonus to
+Strength, a +6 enhancement bonus to
+Constitution, and a +8 enhancement
+bonus to natural armor. Your face
+becomes that of a boar, and you gain
+a bite attack that deals 1d8 points of
+damage (or 1d6 points if you are Small)
++ 1-1/2 times your Str modifier. You
+also gain the benefit of the Blind-Fight
+feat. If your base attack bonus is +6 or
+higher, you do not gain any additional
+attacks.
+Material Component: Four boar
+bristles.
+BITE OF THE WERERAT
+Transmutation
+Level: Druid 2, sorcerer/wizard 3
+Components: V, S, M
+Casting Time: 1 standard action
+Range: Personal
+Target: You
+Duration: 1 round/level
+With a sneeze, you grow a whiskered snout
+and ratlike tail as fine gray fur covers your
+thickening skin.
+You gain a +6 enhancement bonus to
+Dexterity, a +2 enhancement bonus to
+Constitution, and a +3 enhancement
+bonus to natural armor. Your face
+lengthens into a ratlike snout, and you
+gain a bite attack that deals 1d4 points
+of damage (or 1d3 points if you are
+Small) + 1-1/2 times your Str modifier.
+You also gain the benefit of the Weapon
+Finesse feat. If your base attack bonus
+is +6 or higher, you do not gain any
+additional attacks.
+Material Component: A rat’s tail.
+BITE OF THE
+WERETIGER
+Transmutation
+Level: Druid 5, sorcerer/wizard 6
+Components: V, S, M
+Casting Time: 1 standard action
+Range: Personal
+Target: You
+Duration: 1 round/level
+You snarl, and your features shift into those
+of a tiger. Your hands grow sharp claws,
+and the thick skin and striped fur of a tiger
+covers your body.
+You gain a +12 enhancement bonus to
+Strength, a +4 enhancement bonus to
+Dexterity, a +6 enhancement bonus to
+Constitution, and a +5 enhancement
+bonus to natural armor. Your hands
+become claws, granting you two claw
+attacks, and your mouth becomes that
+of a tiger, giving you a bite attack. You
+can attack with both claws at your full
+base attack bonus, but your bite attack
+takes a –2 penalty (as if you had the
+Multiattack feat). Each claw deals 1d8
+points of damage (1d6 if you are Small)
++ your Str modifier, and your bite deals
+2d6 points of damage (2d6 if you are
+Small) + 1/2 your Str modifier. You
+gain the benefits of the Blind-Fight and
+Power Attack feats, as well. If your base
+attack bonus is +6 or higher, you do not
+gain any additional attacks.
+Material Component: A tiger’s claw.
+
+BITE OF THE
+WEREWOLF
+Transmutation
+Level: Druid 3, sorcerer/wizard 4
+Components: V, S, M
+Casting Time: 1 standard action
+Range: Personal
+Target: You
+Duration: 1 round/level
+A howl erupts from your lips as your
+face contorts and expands into a wolflike
+form.
+You gain a +2 enhancement bonus to
+Strength, a +4 enhancement bonus to
+Dexterity, a +4 enhancement bonus to
+Constitution, and a +4 enhancement
+bonus to natural armor. You gain a
+bite attack that deals 1d6 points of
+damage (or 1d4 points if you are Small)
++ 1-1/2 times your Str modifier. You
+also gain the benefit of the Blind-Fight
+feat. If your base attack bonus is +6 or
+higher, you do not gain any additional
+attacks.
+Material Component: A wolf’s tooth.
+
+BLACKFIRE
+Necromancy [Evil]
+Level: Sorcerer/wizard 8
+Components: V, S, M
+Casting Time: 1 standard action
+Range: Medium (100 ft. + 10 ft./level)
+Effect: Ray
+Duration: 1 round/level
+Saving Throw: Fortitude partial and
+Reflex negates; see text
+Spell Resistance: Yes
+With the dark words still on your tongue, a
+ray of black energy springs from your hand
+to wrap the indicated target in black flames
+that absorb heat rather than create it. The
+black fire crackles and hisses, emanating the
+smells of hot metal and sulfur.
+You must succeed on a ranged touch
+attack with the ray to strike a target.
+On a successful attack, a living target
+is engulfed in chill black flames that
+feed on the fuel of their victim’s life
+force. A creature engulfed in blackfire
+must make a successful Fortitude save
+each round that the spell is in effect or
+take 1d4 points of Constitution damage
+and become nauseated. A creature
+that makes its Fortitude save takes no
+damage for that round and is sickened
+instead. In addition to its effects on the
+subject, blackfire can spread rapidly.
+Each round on its turn, any living
+creature adjacent to a creature engulfed
+in blackfire must succeed on a Reflex
+save or become engulfed itself.
+Any creature that has its Constitu-
+tion reduced to 0 or lower by the spell
+is turned into a pile of black ash and
+can be returned to life only by true
+resurrection or wish, the caster of which
+must succeed on a DC 30 caster level
+check to restore the victim to
+life. If a creature succeeds on
+its Fortitude save in 3 con-
+secutive rounds, the blackfire
+affecting it gutters out. The
+black flames cannot otherwise
+be extinguished by normal
+means (such as immersion
+in water or smothering), but
+antimagic field, a successful
+dispel magic, remove curse, or
+break enchantment snuffs it out.
+As well, a creature protected
+by death ward has immunity
+to blackfire’s effects.
+Material Component: A pinch of
+dust from a vampire destroyed by
+sunlight.
+
+BLADE OF PAIN
+AND FEAR
+Evocation
+Le vel: Assassin 2, blackguard 2,
+cleric 3, Deathbound 2, sorcerer/
+wizard 3
+Components: V, S, DF
+Casting Time: 1 standard action
+Range: 0 ft.
+Ef fect: Swordlike column of
+gnashing teeth
+Duration: 1 round/level (D)
+Saving Throw: Will partial
+Spell Resistance: Yes
+A three-foot-long column of disem-
+bodied gnashing teeth springs forth
+from your hand.
+For the duration of the spell,
+you can make melee touch
+attacks that deal 1d6 points
+of damage +1 point per two
+caster levels (maximum +10). Your
+Strength modifier does not apply
+to the damage. A creature that
+you successfully deal damage to
+must also make a Will saving
+throw or become frightened
+for 1d4 rounds.
+
+BLINDING BREATH
+Transmutation [Light]
+Level: Sorcerer/wizard 4
+You expel your breath weapon, which
+crackles with eye-splitting intensity.
+This spell functions like breath flare
+(page 38), except that targets that fail
+their saving throws against your breath
+weapon are permanently blinded,
+rather than dazzled.
+
+BLOOD FRENZY
+Transmutation
+Level: Druid 2
+Components: V, S
+Casting Time: 1 standard action
+Range: Touch
+Target: Any creature with the rage
+ability
+Duration: Special; see text
+Saving Throw: Will negates
+Spell Resistance: Yes
+A hot rush of anger flows through your
+target’s veins.
+The target creature enters a rage, as
+its rage special ability, but this rage
+does not count toward the creature’s
+number of rage attempts per day.
+
+BLOOD SIROCCO
+Evocation
+Level: Druid 6
+Components: V, S
+Casting Time: 1 standard action
+Range: 60 ft.
+Effect: Cone-shaped emanation
+centered on you or on a point in
+space
+Duration: 1 round/level
+Saving Throw: Fortitude negates;
+see text
+Spell Resistance: Yes
+With a hot exhalation and a circular wave
+of your outstretched arm, a stifling wind
+tears across the landscape, kicking up clouds
+of dust and sand and spreading out to blow
+over your foes.
+A blood sirocco blows out from your
+location with the force of a wind-
+storm (DMG 95). Creatures in the
+affected area of Small or smaller size
+are knocked prone and rolled 1d4×10
+feet, taking 1d4 points of nonlethal
+damage per 10 feet. Medium creatures
+are knocked prone, and creatures of
+Large or Huge size are unable to move
+toward the origin point of the cone.
+A successful Fortitude save allows
+the creature to move normally in
+that round.
+In addition, the stifling winds
+dehydrate those within the cone. In
+each round when an affected living
+creature fails its saving throw, it takes
+2 points of damage.
+The wind of a blood sirocco automati-
+cally extinguishes candles, torches,
+and similar unprotected flames. It
+causes protected flames, such as
+those of lanterns, to dance wildly
+and has a 50% chance to extinguish
+these lights. The wind of a blood sirocco
+continues to blow from the origin
+point to the wide end of the cone
+for the duration of the spell. Any
+creature within this area is entitled
+a saving throw each round to ignore
+the effects of the blood sirocco.
+
+BLOODHOUND
+Divination
+Level: Ranger 1
+Components: V, S
+Casting Time: 1 standard action
+Range: Personal
+Target: You
+Duration: 24 hours (D)
+A white film slips over your vision.
+Strangely, your eyes seem more focused and
+you note barely perceptible traces of passage
+that you had missed before.
+If you fail a Survival check to track a
+creature while this spell functions, you
+can immediately attempt another roll
+against the same DC to reestablish the
+trail. If the reroll fails, you must search
+for the trail for 30 minutes (if outdoors)
+or 5 minutes (if indoors) before trying
+again.
+
+BLOODSTAR
+Conjuration (Creation)
+Level: Sorcerer/wizard 4
+Components: V, S, F
+Casting Time: 1 standard action
+Range: Medium (100 ft. + 10 ft./level)
+Effect: A bloodstar
+Duration: 1 round/level
+Saving Throw: Fortitude negates
+Spell Resistance: Yes
+In a ruby flash a blood-colored, glowing
+crystal appears near your foes to suck the
+blood from their wounds.
+You create a magic construct called
+a bloodstar that shoots from your
+hand and hovers in the air anywhere
+within the limit of the range (each
+round, you can move the bloodstar
+anywhere within range with a standard
+action spent concentrating on the new
+position). The bloodstar pulses with
+ruby light (providing illumination
+in a 20-foot radius). Any creature you
+initially designate within 10 feet of the
+bloodstar that takes damage from any
+source must make a saving throw. On
+a failed save, the victim takes 1 point
+of Constitution damage. Each time
+victims are damaged, they can attempt
+new saves.
+The bloodstar cannot be attacked or
+harmed by physical attacks.
+Focus: A ruby worth at least 30 gp.
+
+BREATH FLARE
+Transmutation [Light]
+Level: Sorcerer/wizard 1
+Components: S
+Casting Time: 1 swift action
+Range: Personal
+Target: Your breath weapon
+Duration: 1 round
+You exhale your breath weapon, and it
+flashes brilliantly, surprising your foes.
+For this spell to function, you must
+have a breath weapon that uses fire
+or electricity, either as a supernatural
+ability or as the result of casting a spell
+such as dragon breath (page 73). When
+you successfully cast this spell, your
+breath weapon is suffused with bright
+light. In addition to taking the normal
+fire or electricity damage, creatures
+that fail their saving throws against the
+breath weapon are dazzled for 1 minute
+per caster level. Sightless creatures are
+not affected by breath flare.
+
+CHAIN MISSILE
+Evocation [Force]
+Level: Sorcerer/wizard 3
+Components: V, S
+Casting Time: 1 standard action
+Range: Long (400 ft. + 40 ft./level)
+Target: One creature, plus one
+more creature/2 levels (each of
+which must be within 30 ft. of the
+primary target)
+Duration: Instantaneous
+Saving Throw: None
+Spell Resistance: Yes
+Bolts of pale blue energy spring forth
+from your finger and slam into the desired
+target. An instant later, the bolts bounce
+away toward other creatures, slamming
+into each one.
+Missiles of magical energy dart from
+your fingertip to unerringly strike
+a creature. The missiles strike one
+creature initially, then spring to other
+targets. Each missile deals 1d4+1 points
+of force damage. One missile strikes
+the primary target per two caster levels,
+to a maximum of ten missiles (deal-
+ing 10d4+10 points of damage). After
+the missiles strike, they ricochet to a
+number of targets up to the number
+of missiles created by the spell. Each
+secondary target takes 1d4+1 points of
+damage, as if struck by a single magic
+missile. You choose secondary targets as
+you like, but they must all be within 30
+feet of the primary target, and no sec-
+ondary target can be struck more than
+once. You can choose to affect fewer
+secondary targets than the maximum
+(to avoid allies in the area, for example).
+Missiles without a secondary target do
+not ricochet off the primary target.
+Spells, magic items, and abilities that
+protect against magic missile (such as
+the shield spell or a brooch of shielding)
+also protect against this spell. If the
+primary target has that sort of protec-
+tion, the spell has no effect against it
+but still springs to all secondary targets.
+(A brooch of shielding loses a number of
+charges equal to the number of missiles
+hitting the creature—up to ten mis-
+siles.) If spell resistance causes the spell
+to fail to harm the primary target, the
+spell fails and missiles do not ricochet
+to additional targets.
+The missiles strike unerringly, even
+if the targets are in melee or have
+anything less then total cover or
+concealment. You cannot single out
+specific parts of a creature to strike.
+This spell cannot target or damage
+inanimate objects.
+
+CLEAR MIND
+Abjuration
+Level: Paladin 1
+Components: V, S, DF
+Casting Time: 1 standard action
+Range: Personal
+Target: You
+Duration: 10 minutes/level
+A silver glow sheathes your body
+as you complete the spell. As the
+glow fades, you feel a touch of the
+divine at the back of your mind.
+This divine touch spreads until
+you feel your concerns and anxieties
+fade away.
+You gain a +4 sacred bonus on
+saving throws made against
+mind-affecting spells and
+effects.
+
+COMETFALL
+Conjuration (Creation)
+Level: Cleric 6, druid 6
+Components: V, S, DF
+Casting Time: 1 standard action
+Range: Medium (100 ft. + 10 ft./level)
+Effect: 400-pound ball of rock and
+ice
+Area: 5-ft.-radius burst
+Duration: Instantaneous
+Saving Throw: Reflex half
+Spell Resistance: No
+You conjure a bright, glowing comet, which
+appears in midair above your enemies, then
+strikes the ground with tremendous force
+and a thunderous boom.
+You conjure a comet that immediately
+falls to the ground, dealing 1d6 points
+of damage per caster level (maximum
+15d6) to everything in the area. The
+force of the comet can also knock
+creatures over. Creatures who fail their
+Reflex save are knocked prone. A crea-
+ture that succeeds on its saving throw
+takes half damage from the comet and
+is not knocked down.
+The comet breaks apart on impact,
+filling the 10-foot-square area with
+dense rubble (DMG 90).
+You must cast this spell in an area
+with at least 40 feet of vertical space
+above the point of impact. If you do not
+have 40 feet of space, the spell fails.
+
+FORCE MISSILES
+Evocation [Force]
+Level: Sorcerer/wizard 4
+Components: V, S
+Casting Time: 1 standard action
+Range: Medium (100 ft. + 10 ft./level)
+Targets: Up to four creatures, no two
+of which are more than 30 ft. apart
+Duration: Instantaneous
+Saving Throw: None
+Spell Resistance: Yes
+Sparking bolts of blue magic, like giant
+magic missiles, streak from your out-
+stretched hand to strike your foes and
+explode in sparkling bursts.
+You create powerful missiles of magical
+force, each of which darts from your
+fingertips and unerringly strikes its
+target, dealing 2d6 points of damage.
+The missile then explodes in a burst
+of force that deals half this amount of
+damage to any creatures adjacent to the
+primary target.
+The missile strikes unerringly, even
+if the target is in melee or has anything
+less than total cover or concealment. A
+caster cannot single out specific parts
+of a creature. The spell can target and
+damage unattended objects.
+You gain one missile for every four
+caster levels. You can make more than
+one missile strike a single target,
+if desired. However,
+you must designate
+targets before rolling
+for spell resistance
+or damage.
+
+GEMJUMP
+Conjuration [Teleportation]
+Level: Sorcerer/wizard 6
+Components: V, S, F
+Casting Time: 1 round
+Range: Unlimited; see text
+Target: You and willing creatures
+totaling up to one/3 levels; see text
+Duration: Until triggered
+Saving Throw: None; see text
+Spell Resistance: No; see text
+You mutter over the iridescent, faceted
+gem. It twinkles in response, and you feel
+a strong link between you and the stone.
+When you speak the word, the two of you
+will be reunited.
+This spell teleports you to the location
+of a specially prepared gem.
+You initially cast gemjump upon
+the focus, which you must touch. As
+a standard action any time after you
+prepare the stone, you can utter a com-
+mand word and instantly teleport to the
+location of the gem, provided you and
+the stone are on the same plane.
+The teleport is always on target (as
+though you are using a greater teleport
+spell). If the area containing the gem
+is too small for you, you appear in the
+nearest sufficiently large space.
+You can transport, in addition to
+yourself, one Medium or smaller
+creature per three caster levels, and
+can bring along objects as long as
+their weight does not exceed your
+maximum load.
+An unwilling creature can’t be
+teleported by gemjump. Likewise, a
+creature’s Will save (or spell resis-
+tance) prevents items in its possession
+from being teleported. Unattended,
+nonmagical objects receive no saving
+throw.
+Focus: A gem worth 500 gp.
+
+GHOUL LIGHT
+Necromancy
+Level: Hunger 1
+Components: V, S, M
+Casting Time: 1 standard action
+Range: Touch
+Effect: Magical, heatless flame
+Duration: 10 minutes/level
+Saving Throw: None
+Spell Resistance: No
+A sickly green flame springs forth from an
+object that you touch.
+The effect looks like a regular
+flame, equivalent in brightness
+to a torch, except for its green
+hue, but it creates no heat
+and doesn’t use oxygen.
+Ghoul light can be
+covered and hidden,
+but not smothered or
+quenched.
+All undead with-
+in 30 feet of a source
+of ghoul light gain +1
+turn resistance. Mul-
+tiple ghoul light sources
+do not stack.
+Darkness spells of 2nd level or
+higher can counter ghoul light.
+Material Component: A bit of rendered
+fat.
+
+GOLDEN BARDING
+Conjuration (Creation)
+Level: Blackguard 1, paladin 1
+Components: V, DF
+Casting Time: 1 standard action
+Range: Touch
+Target: Special mount touched
+Duration: 1 hour/level
+Saving Throw: None
+Spell Resistance: No
+With a flash, a glowing, golden suit of bard-
+ing for your special mount appears.
+You create a suit of barding for your
+mount to wear. The armor appears
+on your mount, fitting perfectly. The
+golden barding you create has no armor
+check penalty and has no effect on your
+mount’s speed. The exact nature of the
+barding depends on your caster level.
+2nd–3rd: Scale mail barding (+4
+armor bonus).
+4th–5th: Chainmail barding (+5).
+6th–7th: Splint mail barding (+6).
+8th–9th: Half-plate barding (+7).
+10th+: Full plate barding (+8).
+You can cast magic vestment or other
+spells that target a suit of armor on the
+golden barding.
+
+HEART RIPPER
+Necromancy [Death]
+Level: Assassin 4
+Components: V, S
+Casting Time: 1 standard action
+Range: Close (25 ft. + 5 ft./2 levels)
+Target: One living creature
+Duration: Instantaneous
+Saving Throw: Fortitude negates
+Spell Resistance: Yes
+With a sweep of your hand, invisible magic
+slams into your target. With a bloody pop
+and squelch, the heart of your target bursts
+out its back, dropping the creature like a
+discarded rag doll.
+Invisible bolts of force instantly slay
+the target you designate by driving its
+heart from its body unless it succeeds
+on a Fortitude save. If the target has
+HD higher than your caster level, it
+does not die on a failed saving throw,
+but instead is stunned for 1d4 rounds.
+Creatures that don’t depend on their
+hearts for survival, creatures with no
+anatomy, and creatures immune to
+extra damage from critical hits are
+unaffected by the spell.
+
+HOLY SPURS
+Transmutation
+Level: Paladin 1
+Components: V
+Casting Time: 1 swift action
+Range: Close (25 ft. + 5 ft./2 levels)
+Target: Your special mount
+Duration: 1 round
+Saving Throw: Will negates
+(harmless)
+Spell Resistance: Yes (harmless)
+You invoke the holy powers and your mount’s
+legs glow with a brilliant yellow radiance.
+This spell increases your special
+mount’s base land speed by 40 feet. This
+adjustment is treated as an enhance-
+ment bonus.
+
+ICELANCE
+Conjuration (Creation)
+Le vel: Druid 3, sorcerer/
+wizard 3
+Components: V, S, F
+Ca sting Time: 1 standard
+action
+Range: Medium (100 ft. + 10 ft./level)
+Effect: One lance of ice
+Duration: Instantaneous
+Saving Throw: Fortitude partial
+Spell Resistance: Yes
+You clutch the quartz in your hand, focusing
+the energy of the spell into a sharp spear.
+With a thought, you send it whistling
+through the air at your foe.
+You must succeed on a normal ranged
+attack to strike a target with an icelance.
+You gain a +4 bonus on your attack
+roll. If you hit, the icelance deals 6d6
+points of damage to the target. Half of
+this damage is piercing damage; the
+rest is cold damage. In addition, the
+target must make a Fortitude save or
+be stunned for 1d4 rounds. Regardless
+of the result of the attack, the icelance
+shatters upon its first use.
+Focus: A 50-gp clear quartz gemstone.
+Alternatively, if you are in a cold region,
+you can substitute 10 pounds of ice or
+snow for the quartz.
+
+IMPROVISATION
+Transmutation
+Level: Bard 1
+Components: V, S, M
+Casting Time: 1 standard action
+Range: Personal
+Target: You
+Duration: 1 round/level (D)
+With an elaborate flourish and call for luck,
+you toss the dice in your hand into the air.
+Immediately you feel as though fate favors
+you, filling you with confidence.
+You gain access to a floating “pool” of
+luck, which manifests as bonus points
+you can use as desired to improve your
+odds of success at various tasks. This
+bonus pool consists of 2 points per
+caster level, which you can spend as
+you like to improve attack rolls, skill
+checks, and ability checks, although
+no single check can receive a bonus
+greater than one-half your caster level.
+You must declare any bonus point usage
+before the appropriate roll is made.
+Used points disappear from the pool,
+and any points remaining when the
+spell ends are wasted. These points
+count as luck bonuses for the purpose
+of stacking.
+For example, a 14th-level bard pauses
+while chasing a pickpocket to cast
+improvisation. At any time during the
+next 14 rounds, he could use the points
+to provide himself a +7 luck bonus on a
+Spot check, a +7 luck bonus on a Climb
+check, and a +7 luck bonus on two of
+his attacks.
+Material Component: A pair of dice.
+
+\pagebreakNum
+
+# New Monsters
+
+___
+>## Fire Elemental, Lesser
+>*Small Elemental, neutral*
+>___
+>- **Armor Class** 13
+>- **Hit Points** 21 (6d6)
+>- **Speed** 50 ft.
+>___
+>|  STR  |  DEX  |  CON  |  INT  |  WIS  |  CHA  |
+>|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+>|10 (+0)|15 (+2)|10 (+0)| 6 (-2)|10 (+0)| 7 (-2)|
+>___
+>- **Damage Resistances** bludgeoning, piercing, and slashing from nonmagical attacks
+>- **Damage Immunities** fire, poison
+>- **Condition Immunities** exhaustion, grappled, paralyzed, petrified, poisoned, prone, restrained, unconscious
+>- **Senses** darkvision 60 ft., passive Perception 10
+>- **Languages** Ignan
+>- **Challenge** 1 (200 XP)
+>- **Proficiency Bonus** +2
+>___
+>***Fire Form.*** The elemental can move through a space as narrow as 1 inch wide without squeezing. A creature that touches the elemental or hits it with a melee attack while within 5 feet of it takes 3 (1d6) fire damage. In addition, the elemental can enter a hostile creature's space and stop there. The first time it enters a creature's space on a turn, that creature takes 3 (1d6) fire damage and catches fire; until someone takes an action to douse the fire, the creature takes 3 (1d6) fire damage at the start of each of its turns.  
+>
+>***Illumination.*** The elemental sheds bright light in a 30-foot radius and dim light in an additional 30 feet.  
+>
+>***Water Susceptibility.*** For every 5 feet the elemental moves in water, or for every gallon of water splashed on it, it takes 1 cold damage.  
+>
+>### Actions
+>***Touch.*** *Melee Weapon Attack:* +4 to hit, reach 5 ft., one target. *Hit:* 5 (1d6 + 2) fire damage. If the target is a creature or a flammable object, it ignites. Until a creature takes an action to douse the fire, the target takes 3 (1d6) fire damage at the start of each of its turns.
