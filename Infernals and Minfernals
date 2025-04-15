@@ -1,0 +1,901 @@
+<style>
+/* GLOBAL FORMATTING  */
+
+  /* Resize page to international A4 */
+  .phb {
+    width: 210mm;
+    height: 296.8mm;
+  }
+  .phb:after { content: ""; }
+
+/* Temporary Fix for heading issues */
+    .phb p{ line-height: 15px; } 
+    .phb blockquote p{ line-height: 14px; } 
+    .phb h2{ line-height: 26px; } 
+    .phb h3{ line-height: 19px; } 
+    .phb h4{ line-height: 15px; padding-bottom: 3px; } 
+    .phb h5{ line-height: 17px; } 
+    th, td { line-height: 14px; }
+
+/* TABLE OF CONTENTS  */
+
+  /* toc specifically wants black text. This resets the headers*/
+  .toc a {
+    color: inherit !important;
+  }
+  /* Allow dot leaders to fill remaining space but not overlap */
+  .toc li span:nth-child(2) {
+    width: auto;
+    overflow: hidden;
+    white-space: nowrap;
+    display: block;
+  }
+  .toc li span:nth-child(2):after {
+    font-family: BookSanity;
+    font-size: 0.317cm;
+    font-weight: normal;
+    color: black;
+    content:
+      " ........................................"
+      "........................................."
+      ".........................................";
+    }
+
+  /* Style TOC page numbers*/
+  .toc li span:first-child {
+    float: right;
+    font-family: BookSanity;
+    font-size: 0.317cm;
+    font-weight: normal;
+    color: black;
+    margin-left: 1px;
+  }
+
+  /* Adjust TOC H3 styles */
+  .toc li h3 span:nth-child(2):after {
+  	content: " ";
+  }
+  .toc li h3 {
+    margin-bottom: 4px !important;
+    margin-top: 10px !important;
+    line-height: initial !important;
+  }
+  .toc li h3 span:first-child {
+  	line-height: 1.8em !important;
+  }
+
+  /* Reduce TOC list indentation*/
+  .toc ul ul {
+  	margin-left: 10px !important;
+  }
+  .toc>ul>li {
+    margin-bottom: initial !important;
+  }
+
+
+/* TABLES AND BLOCKS */
+
+  /* Clear internal padding and add gap above for green note blocks*/
+  .phb blockquote {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .phb blockquote { margin-top: 1em;
+  }
+
+
+/* INK BLOT STYLES */
+
+  /* Root style for inkblots. Use alone, or together with
+  one of the inkb lotstyle classes below. Essentially:
+  <img url='{url}' class='inkblot inkblot-blue' />
+  */
+  .inkblot {
+    position: absolute;
+    mix-blend-mode: multiply;
+    opacity: 0.6;
+  }
+
+  .inkblot-blue {
+    filter: hue-rotate(190deg) saturate(120%)
+  }
+
+  .inkblot-green {
+    filter: hue-rotate(120deg)
+  }
+
+/* PAGE STYLE */
+
+   /* Background */
+     .phb{ background-image: url('https://gmbinder.com/images/KN1O92T.png') }
+     .phb{ background-size: cover }
+
+   /* Notes */
+     .phb section blockquote {background-color: #f6e5d4}
+     .phb hr + section blockquote tr:nth-child(odd) td {background-color: transparent;}
+
+   /* Tables */
+     table tr:nth-child(odd) td {background-color: #cccccc}
+
+   /* Footer */
+     .phb .pageNumber {color: rgba(0, 0, 0, 0.5)}
+     .phb .footnote {color: rgba(0, 0, 0, 0.5)}
+     .phb:nth-child(odd):after{ 
+       content          : '';
+       position         : absolute;
+       bottom           : -7px;
+       left             : 10px;
+       z-index          : -1;
+       height           : 336px;
+       width            : 100%;
+       background-image : url('https://www.gmbinder.com/images/bNTz1nk.png');
+       background-size  : cover;
+   }
+
+   .phb:nth-child(even):after{ 
+       content          : '';
+       position         : absolute;
+       bottom           : -7px;
+       left             : -10px;
+       z-index          : -1;
+       height           : 336px;
+       width            : 100%;
+       background-image : url('https://www.gmbinder.com/images/6NCzAN0.png');
+       background-size  : cover;
+   }
+
+   /* Page Number */
+   .phb .pageNumber{
+       position   : absolute;
+       bottom     : 30px;
+       width      : 50px;
+       text-align : center;
+   }
+   .phb:nth-child(even) .pageNumber{
+       left      : 12px;
+   }
+   .phb:nth-child(odd) .pageNumber{
+       right      : 12px;
+   }
+
+   .phb .pageNumber.auto{
+       position   : absolute;
+       bottom     : 41px;
+       width      : 50px;
+       text-align : center;
+   }
+   .phb:nth-child(even) .pageNumber.auto{
+       left      : 12px;
+   }
+   .phb:nth-child(odd) .pageNumber.auto{
+       right      : 12px;
+   }
+
+/* FRONT PAGE STYLES */
+
+  .cover-header-container {
+    display: block;
+    position: absolute;
+    width: 100%;
+    top: 80px;
+    left: 0;
+    right: 0;
+    clear: both;
+  }
+
+  .cover-header-logo {
+    display: block;
+    width: 700px;
+    margin: auto;
+  }
+
+  .cover-header-divider {
+    display: block;
+    width: 580px;
+    margin: -12px auto -6px;
+  }
+
+  .cover-header-title {
+    display: block;
+    width: 700px;
+    margin: auto;
+    color: white;
+    font-family: NodestoCaps,nodesto,sans-serif;
+    font-weight: normal;
+    font-size: 72px;
+    line-height: 72px;
+    text-align: center;
+    text-shadow: 2px 2px 4px #000, -2px 2px 4px #000, 2px -2px 4px #000, -2px -2px 4px #000;
+  }
+
+  .cover-footer-container {
+    display: block;
+    position: absolute;
+    width: 100%;
+    bottom: 28px;
+    left: 0;
+    right: 0;
+    clear: both;
+  }
+
+  .cover-footer-subtitle,
+  .cover-footer-version {
+    display: block;
+    width: 500px;
+    margin: auto;
+    color: white;
+    font-family: NodestoCaps,nodesto,sans-serif;
+    font-weight: normal;
+    text-align: center;
+    text-shadow: 1px 1px 2px #000, -1px 1px 2px #000, 0px 0px 2px #000;
+  }
+  .cover-footer-subtitle {
+    font-size: 28px;
+    line-height: 28px;
+  }
+  .cover-footer-version {
+    margin-top: 16px;
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+/* STAT BLOCKS */
+  /* For creature statblocks within range (start and end must be specified),
+     don't show a background. Used for the appendix creatures */
+  .phb:nth-of-type(n+140):nth-of-type(-n+200) hr+section blockquote {
+    background: none;
+    border: none;
+    box-shadow: none;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+  }
+
+</style>
+
+# WC5e Infernal Conversion
+
+___
+> ## Minfernal
+> *Tiny elemental (demon), chaotic evil*
+> ___
+> - **Armor Class** 12 (natural armor)
+> - **Hit Points** 10 (4d4)
+> - **Speed** 20 ft.
+> ___
+> |  STR  |  DEX  |  CON  |  INT  |  WIS  |  CHA  |
+> |:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+> |11 (+0)|11 (+0)|10 (+0)| 5 (-3)| 7 (-2)| 7 (-2)|
+> ___
+> - **Damage Immunities** fire, poison
+> - **Condition Immunities** poisoned
+> - **Senses** darkvision 60 ft., passive Perception 10
+> - **Languages** understands Eredun but cannot speak
+> - **Challenge** [1/4 (50 XP)](https://wc5e-cr-calculator.frogvall.com/?v2;0;12;4d4;3;10;1d6+(1d4+1);1d4+1;1d4+1;1d4+1;1d4+1;(1d4+1)+(1d4+1d4);;;;;3;;;;;;;;;;1;;;;;;;;10;;;;;;;;;;;1;0;1;3;;is1;;is2;;is3;)
+> <span style="float:right"> **Proficiency Bonus** +2 </span>
+> ___
+> ***Death Burst.*** When the minfernal dies, it explodes in a burst of fiery shrapnel. Each creature within 5 feet of the minfernal takes 2 (1d4) piercing damage and 2 (1d4) fire damage, or half damage upon a successful DC 10 Dexterity saving throw.
+> 
+> ***Fall Immunity.*** The minfernal does not take damage or fall prone when falling from a great height.
+> 
+> ***Meteor Strike.*** If the minfernal falls at least 10 feet towards a creature and then hits it with a slam attack on the same turn, the target takes an additional 3 (1d6) bludgeoning damage. If the minfernal 
+>
+> ***Explosive Leaper.*** The minfernal's long jump is up to 20 feet and its high jump is up to 10 feet.
+>
+> ### Actions
+> ***Slam.*** *Melee Weapon Attack:* +2 to hit, reach 5 ft., one target. *Hit:* 2 (1d4) bludgeoning damage + 1 fire damage.
+
+> ##### Variant: Minfernal Familiar
+> Some minfernals can be bound to serve as familiars. Such creatures have the following trait.
+>
+> ***Familiar.*** The minfernal can serve another creature as a familiar, forming a magical, telepathic bond with its willing master. While the two are bonded, the master can sense what the minfernal senses, as long as they are within 1 mile of each other.
+
+The page depends text being here on for some reason.
+
+\columnbreak
+
+#### Minfernals
+Mini-infernals, or "minfernals," are not true infernals at all. Instead, they are corrupted elemental spirits that sometimes spontaneously form from the rubble of a destroyed infernal or abyssal. 
+
+Some warlocks are known to keep them as pets or familiars, finding the tiny, near impotent fury of these miniature balls of destruction adorable. Those who are unfortunate enough to be on the receiving end of a burning demonic fastball to the face typically find them less so.
+
+\pagebreak
+
+___
+> ## Infernal 
+> *Large construct (demon), chaotic evil*
+> ___
+> - **Armor Class** 15 (natural armor)
+> - **Hit Points** 102 (12d8 + 48)
+> - **Speed** 20 ft.
+> ___
+> |  STR  |  DEX  |  CON  |  INT  |  WIS  |  CHA  |
+> |:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+> |19 (+4)| 9 (-1)|18 (+4)| 5 (-3)|10 (+0)| 7 (-2)|
+> ___
+> - **Damage Resistances** cold; bludgeoning, piercing, and slashing from nonmagical attacks that aren't adamantine
+> - **Damage Immunities** fire, poison
+> - **Condition Immunities** charmed, deafened, exhaustion, frightened, paralyzed, poisoned, unconscious
+> - **Senses** darkvision 60 ft., passive Perception 10
+> - **Languages** understands Eredun but cannot speak
+> - **Challenge** [7 (2,900 XP)](https://wc5e-cr-calculator.frogvall.com/?v2;1;15;102;7;15;(1d6*2)+(1d6*2)+2*((2d8+4)+1d6);(1d6*2)+(1d6*2)+2*((2d8+4)+1d6);(1d6*2)+(1d6*2)+2*((2d8+4)+1d6);(1d6*2)+(1d6*2)+2*((2d8+4)+1d6);(1d6*2)+(1d6*2)+2*((2d8+4)+1d6);(1d6*2)+(1d6*2)+2*((2d8+4)+1d6);1;;;;3;;;;;;;;;;1;1;;;;;;;10;;;;;;;;;;;1;0;1;3;;is1;;is2;;is3;) 
+> <span style="float:right"> **Proficiency Bonus** +3 </span>
+> <!-- 
+>   Author's Note: The link above does not include Meteoric Impact as part of its damage calculation, as the damage only applies if some other creature summons it and thus is not part of the encounter.
+> -->
+> ___
+> ***Fall Immunity.*** The infernal does not take damage or fall prone when falling from a great height.
+> 
+> ***Fire Aura.*** At the start of each of the infernal's turns, each creature within 5 feet of it takes 3 (1d6) fire damage, and flammable objects in the aura that aren't being worn or carried ignite. A creature that touches the infernal or hits it with a melee attack while within 5 feet of it takes 3 (1d6) fire damage.
+> 
+> ***Illumination.*** The infernal sheds bright light in a 15-foot radius and dim light in an additional 15 feet.
+>
+> ***Immutable Form.*** The infernal is immune to any spell or effect that would alter its form.
+>
+> ***Magic Resistance.*** The infernal has advantage on saving throws against spells and other magical effects.
+> 
+> ***Meteoric Impact.*** A summoned infernal appears in the air and slams to the ground with devastating force. Its fall creates a crater of difficult terrain with a 10-foot radius and deals 14 (4d6) bludgeoning damage to all creatures in that area. Flaming shrapnel deals an additional 3 (1d6) bludgeoning damage and 3 (1d6) fire damage to all creatures within 20 feet of the point of impact.
+> <br/>&nbsp;&nbsp;&nbsp; Creatures can attempt a DC 16 Dexterity saving throw to take half damage from these effects; those who fail their save are also knocked prone. 
+> <br/>&nbsp;&nbsp;&nbsp; The impact destroys plant life, ignites unattended flammable objects, and melts metals with low melting points (such as bronze, copper, gold, lead, or silver).
+>
+> ***Siege Monster.*** The infernal deals double damage to objects and structures.
+> 
+> ### Actions
+> ***Multiattack.*** The infernal makes two slam attacks.
+>
+> ***Slam.*** *Melee Weapon Attack:* +8 to hit, reach 5 ft., one target. *Hit:* 13 (2d8 + 4) bludgeoning damage + 3 (1d6) fire damage.
+
+
+___
+> ## Abyssal
+> *Huge construct (demon), chaotic evil*
+> ___
+> - **Armor Class** 17 (natural armor)
+> - **Hit Points** 157 (15d10 + 75)
+> - **Speed** 30 ft.
+> ___
+> |  STR  |  DEX  |  CON  |  INT  |  WIS  |  CHA  |
+> |:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+> |21 (+5)| 9 (-1)|20 (+5)| 5 (-3)|11 (+0)| 7 (-2)|
+> ___
+> - **Damage Resistances** cold; bludgeoning, piercing, and slashing from nonmagical attacks that aren't adamantine
+> - **Damage Immunities** fire, poison
+> - **Condition Immunities** charmed, deafened, exhaustion, frightened, paralyzed, poisoned, unconscious
+> - **Senses** darkvision 60 ft., passive Perception 10
+> - **Languages** understands Eredun but cannot speak
+> - **Challenge** [12 (8,400 XP)](https://wc5e-cr-calculator.frogvall.com/?v2;2;17;15d10+15*5;9;15;2*(1d6*1d4)+2*(2d6+2d6)+2*(2d8+5+2d6);2*(1d6*1d4)+2*(2d6+2d6)+2*(2d8+5+2d6);2*(1d6*1d4)+2*(2d6+2d6)+2*(2d8+5+2d6);2*(1d6*1d4)+2*(2d6+2d6)+2*(2d8+5+2d6);2*(1d6*1d4)+2*(2d6+2d6)+2*(2d8+5+2d6);2*(1d6*1d4)+2*(2d6+2d6)+2*(2d8+5+2d6);1;;;;3;;;;;;;;;;1;1;;;;;;;10;;;;;;;;;;;1;0;1;3;;is1;;is2;;is3;) 
+> <span style="float:right"> **Proficiency Bonus** +4 </span>
+> <!-- 
+>   Author's Note: The link above does not include Meteoric Impact as part of its damage calculation, as the damage only applies if some other creature summons it and thus is not part of the encounter.
+> -->
+>
+> ___
+> ***Burn.*** A creature that takes fire damage from the abyssal must make a DC 10 Dexterity saving throw or catch fire, taking 3 (1d6) fire damage at the beginning of that creature's turn. The flames burn for 1d4 rounds or until a creature within 5 feet uses its action to smother the flame.
+>
+> ***Fall Immunity.*** The abyssal does not take damage or fall prone when falling from a great height.
+> 
+> ***Fire Aura.*** At the start of each of the abyssal's turns, each creature within 10 feet of it takes 7 (2d6) fire damage, and flammable objects in the aura that aren't being worn or carried ignite. A creature that touches the abyssal or hits it with a melee attack while within 10 feet of it takes 7 (2d6) fire damage.
+> 
+> ***Illumination.*** The abyssal sheds bright light in a 20-foot radius and dim light in an additional 20 feet.
+>
+> ***Immutable Form.*** The abyssal is immune to any spell or effect that would alter its form.
+>
+> ***Magic Resistance.*** The abyssal has advantage on saving throws against spells and other magical effects.
+> 
+> ***Meteoric Impact.*** A summoned abyssal appears in the air and slams to the ground with devastating force. Its fall creates a crater of difficult terrain with a 15-foot radius and deals 28 (8d6) bludgeoning damage to all creatures in that area. Flaming shrapnel deals an additional 7 (2d6) bludgeoning damage and 7 (2d6) fire damage to all creatures within 20 feet of the point of impact.
+> <br/>&nbsp;&nbsp;&nbsp; Creatures can attempt a DC 15 Dexterity saving throw to take half damage from these effects; those who fail their save are also knocked prone. 
+> <br/>&nbsp;&nbsp;&nbsp; The impact destroys plant life, ignites unattended flammable objects, and melts metals with low melting points (such as bronze, copper, gold, lead, or silver).
+>
+> ***Siege Monster.*** The abyssal deals double damage to objects and structures.
+> 
+> ### Actions
+> ***Multiattack.*** The abyssal makes two slam attacks.
+>
+> ***Slam.*** *Melee Weapon Attack:* +9 to hit, reach 10 ft., one target. *Hit:* 14 (2d8 + 5) bludgeoning damage + 7 (2d6) fire damage.
+
+Why does this need this here?
+
+\pagebreak
+
+# Reference: Official RPG Infernals
+### Infernal: Manual of Monsters
+<br/>
+
+<div class='classTable' />
+
+&nbsp;      | Infernal
+------------|-----------
+Size/Type   | Large Construct
+Subtypes    | (Extraplanar)
+Hit Dice    | 16d10+30 (118 hp)
+Initiative  | -1
+Speed       | 20 ft. (4 squares)(can't run)
+Armor Class | 28 (-1 size, -1 Dex, +20 natural), touch 8, flat-footed 28
+Base Attack/Grapple | +12/+25
+Attack      | S
+Full Attack | 2 slams +20 melee (2d10+9 plus 2d6 fire)
+Spoace/Reach| 10 ft./10 ft.
+Special Attacks | Fire aura, heat, burn, meteoric impact
+Special Qualities| Darkvision 60 ft., magic immunity, damage reduction 15/adamantine, construct traits
+Saves       | Fort +5, Ref +4, Will +5
+Abilities   | Str 28, Dex 9, Con –, Int –, Wis 11, Cha 1
+Skills      | –
+Feats       | –
+Environment | Any land or underground
+Organization| Solitary or pack (2-8)
+Challenge Rating | 12
+Treasure    | None
+Alignment   | Always neutral
+Advancement | 17-32 (Large); 33-48 (Huge)
+Level Adjustment    | –
+
+</div>
+
+*The creature is of tremendous size, its roughly humanoid and brutish form engulfed in sulfurous flames*
+
+#### Description 
+Infernals are hulking brutes engulfed in arcane fire, entropic manifestations that warlocks conjure forth from the Nether. Infernals burst through the planar veil to strike like entropic meteorites, devastating everything in their impact radius. The infernals then rise to smash any and all targets in the area. Ripped from the void and cut off from the sustaining energies of the Twisting Nether, infernals endure for hours, perhaps days at the most. Still, they can wreak trememndous havoc in that time, acting as engines of pure destruction.
+
+#### Combat
+An infernal always appears in the air when summoned and falls to earth with meteoric impact (see below). It then stands and attacks as directed by its summoner. An infernal is not terrifically bright, however, and can only obey the simplest of tactical orders. Even then, it often resorts to the mindless tactic of attacking the nearest enemy (as defined by its orders) each round.
+
+An infernal endures on the Material Plane as long as the *summon* spell that brought it, for a number of hours equal to its Hit Dice, or until destroyed (whichever is shortest).
+
+***Meteoric Impact (Ex):*** A summoned infernal appears in the air and slams to the ground with devastating force. This is handled as per the *rain of fire* spell (see below). The infernal takes no falling damage from this impact.
+
+***Fire Aura (Ex):*** Infernals burn with intense heat. All creatures within a 10-foot radius of an infernal take 1d6 points of fire damage each round.
+
+***Heat (Ex):*** Merely touching or being touched by an infernal automatically deals 2d6 points of fire damage.
+
+***Burn (Ex):*** Those hit by an infernal's slam attack must succeed at a DC 18 Reflex save or catch fire. The flames burn for 1d4 rounds. A burning creature can take a move action to put out the flames. Creatures hitting an infernal with natural weapons or unarmed attacks take fire damage as though hit by the infernal's attack and also catch fire unless they succeed at a Reflex save.
+
+***Magic Immunity (Ex).*** The infernal is immune to all spells, spell-like abilities, and supernatural effects, except as follows. Spells and effects with the cold descriptor slow an infernal (as the spell) for 1 round per spell level of the spell cast, with no saving throw. Summoned infernals do not wink out in a magically created antimagic field.
+
+### Spells: WoW RPG Book (1st Ed)
+#### Rain of Fire
+*Meteorites deal impact and fire damage to creatures, ignite and batter objects.*
+___
+- **School:** Evocation [Fire]
+- **Level:** Sor/Wiz 4
+- **Components:** V, S, M
+- **Casting Time:** 1 standard action
+- **Range:** Medium (100 ft. + 10 ft./level)
+- **Area:** Cylinder (20-ft. radius, 40 ft. high)
+- **Duration:** Instantaneous
+- **Saving Throw:** None
+- **Spell Resistance:** Yes
+
+##### Description
+Small meteorites rain from the sky, exploding on impact and burning all in their wake.
+
+##### Spell Effect
+This spell deals 3d6 points of impact and 2d6 points of fire damage to creatures in the area of effect.
+
+The rain sets fire to combustibles and damages objects in the area. It can melt metals with a low melting point, such as lead, gold, copper, silver, or bronze. 
+
+*Material Components:* A chunk of sulfur and a chunk of iron.
+
+\pagebreak
+### Infernals: Monster Guide
+
+\columnbreak
+
+<div class='classTable wide'>
+
+&nbsp;          | Lesser Infernal | Infernal | Massive Infernal
+----------------|-----------------|---|---
+Size/Type       | Large Construct | Huge Construct | Gargantuan Construct
+Subtypes        | (Chaotic, Demon, Evil, Extraplanar) | (Chaotic, Demon, Evil, Extraplanar) | (Chaotic, Demon, Evil, Extraplanar)
+Hit Dice        | 8d10+30 (74 hp) | 16d10+40 [x2] (256 hp) | 32d10+60 [x3] (708 hp)
+Initiative      | +0    | +0    | +0
+Speed           | 20 ft. (4 squares) | 30 ft. (6 squares) | 40 ft. (8 squares)
+Armor Class     | 21 (–1 size, +12 natural), touch 9, flat-footed 21 | 28 (–2 size, +20 natural), touch 9, flat-footed 29 | 32 (–4 size, +26 natural), touch 9, flat-footed 35
+Base Attack/Grapple | +6/+15 | +12/+29 | +24/+52
+Attack          | Slam +10 melee (2d6+7 plus 1d6 fire and 1 fel) | Slam +19 melee (2d10+9 plus 1d6 fire and 1d6 fel) | Slam +37 melee (3d12+16/19-20 plus 2d6 fire and 2d6 fel) | 
+Full Attack     | Slam +10 melee (2d6+7 plus 1d6 fire and 1 fel) | 2 slams +19 melee (2d10+9 plus 2d6 fire and 1d6 fel) | 2 slams +37 melee (3d12+16/19–20 plus 2d6 fire and 2d6 fel)
+Space/Reach:    | 10 ft./10 ft. | 15 ft./15 ft. | 20 ft./20 ft.
+Special Attacks | Blazing body, burn (DC 14), lesser fel strike, meteoric arrival (DC 14) | Blazing body, burn (DC 18), fel strike, meteoric arrival (DC 18) | Blazing body, burn (DC 26), greater fel strike, meteoric arrival (DC 26)
+Special Qualities|  Darkvision 60 ft., damage reduction 5/good and magic, demon construct, immunity to fire, resistance to cold 10 and electricity 5, spell resistance 16, construct traits | Darkvision 60 ft., damage reduction 10/good and magic, demon construct, demonic reinforcement, immunity to fire, resistance to cold 20 and electricity 10, spell resistance 22, construct traits | Darkvision 60 ft., damage reduction 20/epic and, demon construct, improved demonic reinforcement, immunity to fire, resistance to cold 40 and electricity 20, spell resistance 34, construct traits
+Saves           | Fort +2, Ref +2, Will +2 | Fort +5, Ref +5, Will +6 | Fort +10, Ref +10, Will +12
+Abilities       | Str 20, Agy 10, Sta –, Int 1, Spt 11, Cha 7 | Str 28, Agy 10, Sta –, Int 2, Spt 13, Cha 8 | Str 42, Agy 10, Sta –, Int 3, Spt 15, Cha 9
+Skills:         | Jump +16      | Jump +28      | Jump +51
+Feats           | Cleave, Power Attack, Reckless Attack | Bash, Cleave, Great Cleave, Improved Bull Rush, Power Attack, Reckless Attack | Bash, Cleave, Great Cleave, Great Fortitude, Improved Bull Rush, Improved Critical (slam), Improved Overrun, Power Attack, Reckless Attack, Thunderous Blow, Weapon Focus (slam)
+Environment:    | Any   | Any | Any
+Area:           | Ashenvale, Twisting Nether | Felwood, Twisting Nether | Blasted Lands, Twisting Nether
+Organization:   | Solitary, pair, gang (3–7), or horde (8–20) | Solitary, pair, or gang (3–5) | Solitary
+Challenge Rating: | 7   | 12 | 22
+Treasure:       | None | None | None
+Alignment:      | Always chaotic evil | Always chaotic evil | Always chaotic evil
+Advancement:    | 9–12 HD (Large) | 17–24 HD (Huge) | 33–42 HD (Gargantuan)
+Level Adjustment: | —   | — | —
+
+</div>
+
+\pagebreak
+
+*The body of this massive creature is vaguely humanoid, made of shifting stones with an otherworldly appearance. The creature’s joints and face exude greenish-yellow flames.*
+
+#### Description
+Infernals are savage extraplanar creatures that dwell in an unknown, brutal corner of the Twisting Nether. They are a strange combination of demon and construct. Most demons shun them as uncontrollable and savage. Warlocks who summon infernals do so at great risk to themselves, for an infernal that breaks free attacks its former controller with unfettered ferocity.
+
+Unsummoned infernals arrive through weaknesses in the cross-planar boundaries, crashing to Azeroth in devastating meteoric impacts. The infernal rises from the resulting crater and sets off on an orgy of destruction that can last hours. Fortunately for the rest of the world, an infernal’s time on Azeroth is limited to less than a day, whereupon the Twisting Nether swallows it up once again. Also fortunately for Azeroth, infernals appear only in places where the boundaries between planes are unnaturally weak, and such locales are rare.
+
+Lesser infernals stand 10 feet high and weigh 2,000 pounds. They do not speak, although they understand Eredun.
+
+#### Combat
+A lesser infernal attacks indiscriminately. It is somewhat less cunning than larger infernals and tends simply to go after the nearest opponent. Damage they take only infuriates them; a lesser infernal never retreats from a fight.
+
+***Blazing Body (Ex):*** Infernals burn with otherworldly flames. Any creature within 10 feet of a lesser infernal takes 1d4 points of fire damage each round. Any creature that attacks a lesser infernal with a handheld weapon takes 1d6 points of fire damage.
+
+***Burn (Ex):*** Any creature that comes into contact with a lesser infernal, either on its own or if the infernal hits it with a slam attack, must make a DC 14 Reflex save or catch on fire (see Chapter 5: Monster Types, Subtypes, and Abilities). A burning creature can take a move action to put out the flames. The flames burn for 1d4 rounds. The save DC is Agility-based.
+
+***Lesser Fel Strike (Su):*** This ability functions as fel strike, save that it deals only 1 point of fel damage.
+
+***Meteoric Arrival (Ex):*** When a lesser infernal arrives on Azeroth, it tears through a planar rift and falls from a great height. This fall creates a crater 10 feet wide, dealing 4d6 points of bludgeoning damage to all creatures in that area and 2d6 points of damage to creatures within 20 feet. The damage is half bludgeoning, one-quarter fire, and one-quarter fel. Creatures can attempt DC 14 Reflex saves for half damage. Those who fail, in addition to taking damage, are knocked prone.
+
+Plant life and other natural formations in the area are blown apart by the impact. Structures in the area take double damage from the meteoric fall. The infernal itself is unaffected by the crash landing. The save DC is Agility-based.
+
+***Demon Construct (Ex):*** Infernals count as demons for all spells and other effects that affect demons.
+
+### Infernal
+Infernals are larger and rarer than lesser infernals. They stand 15 feet high and weigh 15,000 pounds.
+
+#### Combat 
+Infernals are straightforward combatants that enjoy destruction for destruction’s sake. In combat, they prefer to attack weak or “soft” targets first, saving more difficult opponents for last. Infernals use the Reckless Attack feat to maximize their damage against weaker
+foes; failing that, they attack the most flammable-seeming enemy, apparently enjoying the resulting blaze.
+
+***Blazing Body (Ex):*** An infernal’s blazing body deals 1d6 points of fire damage to creatures within 15 feet, and 2d6 points of fire damage to creatures attacking it with natural or hand-held weapons.
+
+***Burn (Ex):*** The Reflex save DC for an infernal’s burn ability is 18. The flames burn for 2d4 rounds. 
+
+***Meteoric Arrival (Ex):*** An infernal’s arrival creates a crater 15 feet wide and deals 8d6 points of damage to creatures within that area; it deals 4d6 points of damage to creatures within 30 feet. The Reflex save DC is 18. 
+
+***Demonic Reinforcement (Ex):*** An infernal’s creation involves unknown rituals and substances that toughen the creature. Demonic reinforcement doubles its hit points. 
+
+### Massive Infernal
+Massive infernals are terrifying monstrosities that appear only in places where the fabric of reality has been savagely torn asunder. Even then they are exceptionally rare. A warlock who would dare to summon a massive infernal does so at peril not only of his own life, but of the life of everything for miles in all directions. Massive infernals stand 24 feet high and weigh 32,000 pounds.
+
+#### Combat
+A massive infernal has a degree of cunning beyond that of other infernals, and chooses its foes with more care. It optimizes its attacks to deal the most damage and destruction with the least risk to itself. Massive infernals revel in carnage as much as their smaller cousins, but they reserve the wanton slaughter until after they have eliminated major threats.
+
+***Blazing Body (Ex):*** An infernal’s blazing body deals 2d6 points of fire damage to creatures within 20 feet and 4d6 points of fire damage to creatures attacking it with natural or hand-held weapons. 
+
+***Burn (Ex):*** The save DC for a massive infernal’s burn ability is 26. The flames burn for 2d6 rounds. 
+
+***Greater Fel Strike (Su):*** This ability functions as fel strike, save that it deals 2d6 points of damage.
+
+***Meteoric Arrival (Ex):*** A massive infernal’s arrival creates a crater 20 feet wide and deals 16d6 points of damage to creatures within that area; it deals 8d6 points of damage to creatures within 40 feet. The Reflex save DC is 26.
+
+***Improved Demonic Reinforcement (Ex):*** A massive infernal’s creation involves unknown rituals and substances. Improved demonic reinforcement triples its hit points.
+
+\pagebreak
+### Glossary
+***Blindsense (Ex):*** Using non-visual senses, such as acute smell or hearing, a creature with blindsense notices things it cannot actually see. The creature usually does not need to make Spot or Listen checks to pinpoint the location of a creature within range of its blindsense ability, provided that it has line of effect to that creature.
+
+Any opponent the creature cannot see still has total concealment against it, and the creature still has the normal miss chance when attacking foes that have concealment. Visibility still affects the movement of a creature with blindsense. A creature with blindsense is still denied its Agility bonus to Armor Class against attacks from creatures it cannot see.
+
+***Blindsight (Ex):*** This ability is similar to blindsense, but is far more discerning. Using non-visual senses, such as sensitivity to vibrations, keen smell, acute hearing, or echolocation, a creature with blindsight maneuvers and fights as well as a sighted creature. Invisibility, darkness, and most kinds of concealment are irrelevant, though the creature must have line of effect to a creature or object to discern that creature or object. The ability’s range is specified in the creature’s descriptive text (usually 60 feet). The creature usually does not need to make Spot or Listen checks to notice creatures within range of its blindsight ability.
+
+Unless noted otherwise, blindsight is continuous, and the creature need do nothing to use it. Some forms of blindsight, however, must be triggered as a free action. If so, this is noted in the creature’s description. If a creature must trigger its blindsight ability, the creature gains the benefits of blindsight only during its turn.
+
+> ##### Catching Fire
+> Characters exposed to fire elementals, burning oil, bonfires, and non-instantaneous magic fires might find their clothes, hair, or equipment on fire. Spells with an instantaneous duration don’t normally set a character on fire, since the heat and flame from these come and go in a flash.
+>
+> Characters at risk of catching fire are allowed a DC 15 Reflex save to avoid this fate. (If a creature’s attack has a chance of lighting a character on fire, the DC might be different.) If a character’s clothes or hair catch fire, he takes 1d6 points of damage immediately. In each subsequent round, the burning character must make another Reflex saving throw. Failure means he takes another 1d6 points of damage that round. Success means that the fire has gone out. (That is, once he succeeds on his saving throw, he’s no longer on fire.)
+>
+> A character on fire may automatically extinguish  the flames by jumping into enough water to douse himself. If no body of water is at hand, rolling on the ground or smothering the fire with cloaks or the like permits the character another save with a +4 bonus.
+>
+> Those unlucky enough to have their clothes or equipment catch fire must make DC 15 Reflex saves for each item. Flammable items that fail take the same amount of damage as the character.
+
+***Chaotic Subtype:*** A subtype usually applied only to certain outsiders, including some demons. Most creatures that have this subtype also have chaotic alignments; however, if their alignments change they still retain the subtype. Any effect that depends on alignment affects a creature with this subtype as if the creature had a chaotic alignment, no matter what its alignment actually is. The creature also suffers effects according to its actual alignment. A creature with the chaotic subtype overcomes damage reduction as if its natural weapons and any weapons it wields were chaotic-aligned (see Damage Reduction, below).
+
+***Construct Type:*** A construct is an animated object or artificially (perhaps technologically) constructed creature.
+
+*Features:* A construct has the following features.
+- d10 Hit Dice.
+- Base attack bonus equal to 3/4 total Hit Dice (as healer).
+- No good saving throws.
+- Skill points equal to (2 + Int modifier, minimum 1) per Hit Die, with quadruple skill points for the first Hit Die, if the construct has an Intellect score. However, most constructs are mindless and gain no skill points or feats.
+
+*Traits:* A construct possesses the following traits (unless otherwise noted in a creature’s entry).
+- No Stamina score.
+- Darkvision out to 60 feet and low-light vision.
+- Immunity to all mind-affecting effects (charms, compulsions, phantasms, patterns, and morale effects).
+- Immunity to poison, sleep effects, paralysis, stunning, disease , death effects, and necromancy effects.
+- Cannot heal damage on their own, but often can be repaired by exposing them to a certain kind of effect (see the creature’s description for details), through the use of the Craft Construct feat, or through some spells. A construct with the fast healing special
+quality still benefits from that quality. 
+- Not subject to critical hits, nonlethal damage, ability damage, ability drain, fatigue, exhaustion, or energy drain.
+- Immunity to any effect that requires a Fortitude save (unless the effect also works specifically on objects, or if it is harmless).
+- Not at risk of death from massive damage. Immediately destroyed when reduced to 0 hit points or less. 
+- Since it was never alive, a construct cannot be raised or resurrected.
+- Because its body is a mass of unliving matter, a construct is hard to destroy. It gains bonus hit points based on size, as shown on the following table.
+- Proficient with its natural weapons only, unless generally humanoid in form, in which case proficient with any weapon mentioned in its entry.
+- Proficient with no armor.
+- Constructs do not eat, sleep, or breathe.
+
+\pagebreak
+
+<div class='classTable'>
+
+Construct Size  | Bonus Hit Points
+----------------|-----------
+Fine            | —
+Diminutive      | —
+Tiny            | —
+Small           | 10
+Medium          | 20
+Large           | 30
+Huge            | 40
+Gargantuan      | 60
+Colossal        | 80
+
+</div>
+
+***Demon Subtype:*** Demons are evil creatures that inspire dread in mortals. Almost all demons are members of the Burning Legion, a group of phenomenal power that roams the cosmos preying on worlds. All demons also have the evil subtype. Demons can be of any evil alignment.
+
+Most demons were mortal once, but have been transformed into demonic beings. This change includes a powerful command of arcane energy. They define and control this arcane power with the force of their will.
+
+*Traits:* Demons possess the following traits, unless noted otherwise in their descriptions.
+- Immunity to death effects and poison.
+- Immunity to damage from negative energy.
+- Blindsight (Su): Demons have an arcane awareness of the physical world that allows them to perceive objects and creatures within 60 feet.
+- Name Vulnerability (Ex): A demon takes double damage from a weapon inscribed during its forging with that demon’s name. In addition, such a weapon always deals lethal damage to a demon with regeneration.
+- See in Darkness (Su): Demons can see perfectly in darkness of any kind, even that created by a *deeper darkness* spell.
+- Spell-Like Abilities (Sp): Demons with the spell-like ability to *plane shift* or *gate* can use it only for travel to and from the Twisting Nether. They cannot enter other planes, summon monsters through a gate, or use *plane shift* to transport others against their will.
+- Many demons have the fel strike and frightful presence abilities, as well. Many also have immunity to fire and lesser resistances to other energy attacks, such as resistance to acid 10, cold 10, and electricity 10.
+
+***Evil Subtype:*** A subtype usually applied only to cruel outsiders, notably demons. Most creatures that have this subtype also have evil alignments; however, if their alignments change, they still retain the subtype. Any effect that depends on alignment affects a creature with this subtype as if the creature has an evil alignment, no matter what its alignment actually is. The creature also suffers effects according to its actual alignment. A creature with the evil subtype overcomes damage reduction as if its natural weapons and any weapons it wields were evil-aligned (see Damage Reduction, above).
+
+***Extraplanar Subtype:*** A subtype applied to any creature when it is on a plane other than its native plane. A creature that travels the planes can gain or lose this subtype as it goes from plane to plane. Monster entries assume that encounters with creatures take place on Azeroth, and every creature whose native plane is not Azeroth has the extraplanar subtype (but does not have it when on its home plane). Most extraplanar creatures in this book have a home plane mentioned in their descriptions; some outsiders come from unknown planes. Creatures not labeled as extraplanar are natives of Azeroth, and they gain the extraplanar subtype if they leave Azeroth. No creature has the extraplanar subtype in the Twisting Nether.
+
+***Fel Strike (Su):*** Demons with this ability deal +1d6 points of fel damage on melee attacks with both natural and manufactured weapons, plus an additional 1d6 points of fel damage against creatures of good alignment. Their attacks are treated as chaotic, evil, good, and lawful for the purposes of bypassing damage reduction.
+
+### Feats
+##### Source: WoW RPG Book (2nd Ed)
+
+___
+
+#### Bash [General]
+One blow from your weapon can leave an opponent stunned and reeling.
+
+**Prerequisites:** Str 13, Power Attack, base attack bonus +4.
+
+**Benefit:** You may attempt a Bash as a full attack action with a bludgeoning weapon. If the attack hits, roll damage normally; the foe struck by your attack must then attempt a Fortitude save (DC 10 + the damage rolled). The foe takes no damage from the blow, but if he fails the save, he is stunned for 1 round (see Chapter 13: Abilities and Conditions). You can use Bash only once per round and no more than once per level per day.
+
+When you use Bash, you forfeit any bonus or extra attacks granted by other feats or abilities (such as the Cleave feat or the bloodlust spell). Creatures immune to critical hits cannot be stunned.
+
+**Special:** Warriors can select Bash as one of their warrior bonus feats.
+
+#### Cleave [General]
+You can cut through one foe to attack another foe.
+
+**Prerequisites:** Str 13, Power Attack.
+
+**Benefit:** If you deal a creature enough damage to make it drop (typically by dropping it below a number of negative hit points equal to its Stamina modifi er, or by killing it), you get an immediate, extra melee attack against another creature within reach. You cannot take a 5-foot step before making this extra attack. The extra attack is with the same weapon and at the same bonus as the attack that dropped the previous creature. You can use this ability once per round.
+
+**Special:** Warriors can select Cleave as one of their warrior bonus feats
+
+#### Great Cleave [General]
+You can make multiple attacks when you down your opponents.
+
+**Prerequisites:** Str 13, Cleave, Power Attack, base attack bonus +4.
+
+**Benefit:** This feat works like Cleave, except that there is no limit to the number times you can use it per round. 
+
+**Special:** Warriors can select Great Cleave as one of their warrior bonus feats.
+
+\pagebreak
+
+#### Great Fortitude [General]
+You resist danger with your incredible toughness.
+
+**Benefit:** You receive a +2 bonus on all Fortitude saving throws.
+
+#### Improved Bull Rush [General]
+You are skilled at pushing opponents back.
+
+**Prerequisites:** Str 13, Power Attack.
+
+**Benefit:** When you perform a bull rush, you do not provoke an attack of opportunity from the defender. You also receive a +4 bonus on the opposed Strength check you make to push back the defender. 
+
+**Normal:** See the normal bull rush rules (Chapter 12: Combat, “Special Attacks, ” Bull Rush).
+
+**Special:**Warriors can select Improved Bull Rush as one of their warrior bonus feats.
+
+#### Improved Critical [General]
+Choose one type of weapon. You make critical hits with that weapon more often.
+
+**Prerequisite:** Proficient with weapon, base attack bonus +8.
+
+**Benefit:** When using the selected weapon, your threat range is doubled.
+
+**Special:** You can take Improved Critical multiple times. Its effects do not stack. Each time, it applies to a new type of weapon. This effect doesn’t stack with any other effect that increases a weapon’s threat range. 
+
+Warriors can select Improved Critical as on of their warrior bonus feats.
+
+#### Improved Overrun [General]
+You excel at knocking opponents down.
+
+**Prerequisites:** Str 13, Power Attack.
+
+**Benefit:** When you attempt to overrun opponents, they cannot choose to avoid you. You also receive a +4 bonus on your Strength check to knock down opponents. 
+
+**Normal:** Without this feat, targets of an overrun can choose to avoid or to block you (see Chapter 12: Combat, “Special Attacks,” Overrun).
+
+**Special:** Warriors may select Improved Overrun as one of their warrior bonus feats.
+
+#### Power Attack [General]
+You can make severely damaging attacks.
+
+**Prerequisite:** Str 13.
+
+**Benefit:** On your action, before making attack rolls for the round, you can choose to subtract a number from all melee attack rolls and add it to all melee damage rolls. This number may not exceed your base attack bonus. The penalty on attacks and bonus on damage apply until your next turn.
+
+**Special:** If you attack with a two-handed weapon, or with a one-handed weapon wielded in two hands, add twice the number subtracted from your attack rolls instead. The bonus from Power Attack cannot be added to the damage dealt with a light weapon (except with unarmed strikes or natural weapon attacks), even though the penalty on all attack rolls still applies. (Normally, a double weapon is treated as a one-handed weapon and a light weapon. If you choose to use a double weapon like a two-handed weapon, attacking with only one end of it in a round, you treat it as a two-handed weapon.) 
+
+Warriors can select Power Attack as one of their warrior bonus feats.
+
+\columnbreak
+
+#### Reckless Attack [General]
+You throw caution by the wayside as you smash your opponents as hard as possible.
+
+**Prerequisite:** Str 13.
+
+**Benefit:** On your action, before making attack rolls for the round, you may choose to subtract a number from your AC and add the same number to all melee damage  rolls. This number may not exceed your base attack bonus. The penalty to AC and bonus on damage apply  until your next turn.
+
+**Special:** If you attack with a two-handed weapon, or with a one-handed weapon wielded in two hands, add twice the number subtracted from your AC instead. You cannot add the bonus from Reckless Attack to the damage dealt with a light weapon (except with unarmed strikes or natural weapon attacks), even though the penalty to AC still applies. (Normally, you treat a double weapon as a one-handed weapon and a light weapon. If you choose to use a double weapon like a two-handed weapon, attacking with only one end of it in a round, you treat it as a two-handed weapon.)
+
+Warriors can select Reckless Attack as one of their warrior bonus feats.
+
+#### Thunderous Blow [General]
+You can cause an enormous thunderclap when you strike an opponent.
+
+**Prerequisites:** Str 15, Bash, Power Attack, base attack bonus +4.
+
+**Benefit:** Once per day, you may attempt a Thunderous Blow with one normal melee attack. You must declare your intent to use Thunderous Blow before you make your attack roll. If you hit, a thunderclap effect (as the spell) triggers, centered on the target. Your caster level is equal to your character level for the purposes of this attack, and the DC to resist its effects is 10 + half your character level + your Charisma modifi er. If you miss with your Thunderous Blow, the blow has no effect but is still used up for that day.
+
+**Special:** You can gain this feat multiple times. Each time, you can use it one additional time per day.
+
+Warriors can select Thunderous Blow as one of their warrior bonus feats.
+
+#### Weapon Focus [General]
+Choose one type of weapon. You can also choose unarmed strike or grapple (or ray, if you are a spellcaster) as your weapon for purposes of this feat.
+
+**Prerequisites:** Proficiency with selected weapon, base attack bonus +1.
+
+**Benefit:** You gain a +1 bonus on all attack rolls you make using the selected weapon.
+
+**Special:** You can take this feat multiple times. Its effects do not stack. Each time, it applies to a new type of weapon.
+
+Warriors can select Weapon Focus as one of their warrior bonus feats.
+
+\pagebreak
+
+### Spells: Shadows & Light
+___
+
+#### Call Infernal 
+*Call an infernal to serve you.*
+___
+- **School:** Conjuration (Calling)
+- **Level:** Wrl 9
+- **Components:** V, S, M
+- **Casting Time:** 1 round
+- **Range:** Close (25 ft. + 5 ft./2 levels)
+- **Effect:** One infernal (see text)
+- **Duration:** See text
+- **Saving Throw:** None
+- **Spell Resistance:** No
+
+##### Description
+An infernal rockets from the sky, smashing into your foes on the battlefield.
+
+##### Spell Effect
+This spell calls a single infernal that uses its meteoric impact ability, landing where you target the spell and causing a *rain of fire* effect* (see below) before it rises to attack your foes on the following round.
+
+The infernal is not summoned, it’s called. It lasts 16 hours before the magic holding its chaotic form together is no longer sufficient for the task. When the infernal is slain or the duration expires, the infernal crumbles into a pile of useless rubble. 
+
+*Material Components:* Each casting of this spell costs 1,000 XP and an amount of gold as determined by your contract with the Tothrezim (see page 154 of **Shadows & Light**).
+
+#### Dismiss Infernal
+*Release an infernal from your service.*
+___
+- **School:** Universal
+- **Level:** Wrl 0
+- **Components:** V, S
+- **Casting Time:** 1 round
+- **Range:** Touch
+- **Target:** Touched infernals
+- **Duration:** Instantaneous
+- **Saving Throw:** None
+- **Spell Resistance:** No
+
+##### Description
+Your touch returns your infernals to their makers.
+
+##### Spell Effect
+You can touch up to six infernals to release their bonds to the plane, returning them to their makers. You can only release infernals you have called or been given control to command.
+
+\columnbreak
+
+#### Rain of Chaos
+*You summon a legion of infernals.*
+___
+- **School:** Conjuration (Calling)
+- **Level:** Wrl 12 (epic spell)
+- **Components:** V, S
+- **Casting Time:** 1 standard action
+- **Range:** Long (400 ft. + 40 ft./level)
+- **Target:** See text
+- **Duration:** Concentration, up 3 rounds
+- **Saving Throw:** None
+- **Spell Resistance:** No
+
+##### Description
+Infernals rocket from the sky and slam into the ground. They rise from their craters to serve you.
+
+##### Spell Effect 
+You call 2d6 infernals per round of concentration for up to 3 rounds. They strike the ground using their Meteoric Impact ability at random locations within range.
+
+Infernals called with this spell are permanent. They initially start attacking anything within reach. They particularly enjoy destroying structures such as homes and castles. As a standard action you can instruct infernals near you to carry out specific orders. They serve you and obey your commands until destroyed or voluntarily returned to their makers.
+
+#### Summon Infernal
+*Summon an infernal to fight for you.*
+___
+- **School:** Conjuration (Summoning)
+- **Level:** Wrl 8
+- **Components:** V, S, M
+- **Casting Time:** 1 round
+- **Range:** Close (25 ft. + 5 ft./2 levels)
+- **Effect:** One summoned creature
+- **Duration:** 1 round/level (D)
+- **Saving Throw:** None
+- **Spell Resistance:** No
+
+##### Description
+An infernal rockets from the sky, smashing into your foes on the battlefield.
+
+##### Spell Effect
+This spell functions like *summon monster VIII*, except that you can only summon a single infernal. The infernal uses its Meteoric Impact ability, landing where you target the spell and causing a rain of fire effect* (see Chapter Two: The Burning Legion in the Manual of Monsters and Chapter Four: Magic in the Warcraft RPG) before it rises to attack your foes on the following round.
+
+*Material Components:* Each casting of this spell costs an amount of gold as determined by your contract with the Tothrezim (see page 154 of **Shadows & Light**).
+
+\pagebreak
+
+#### Summon Infernals, Mass
+*Summon multiple infernals to fight for you.*
+___
+- **School:** Conjuration (Summoning)
+- **Level:** Wrl 9
+- **Components:** V, S, M
+- **Casting Time:** 1 round
+- **Range:** Close (25 ft. + 5 ft./2 levels)
+- **Effect:** One summoned creature
+- **Duration:** 1 round/level (D)
+- **Saving Throw:** None
+- **Spell Resistance:** No
+
+##### Description
+Several infernals rocket from the sky, smashing into your foes on the battlefield.
+
+##### Spell Effect 
+This spell functions like *summon infernal*, except that you summon two or three infernals (your choice, but you must pay for each individually) at the same time. Only one crashes into the location you designate. The other one or two infernals land at random locations within range and within 100 feet of the target.
+
+### Spells: WoW RPG (2nd Ed)
+#### Rain of Fire
+___
+- **School:** Evocation [Fire]
+- **Level:** Destruction 5, Mge 4, Wrl 4
+- **Components:** V, S, M
+- **Casting Time:** 1 standard action
+- **Range:** Medium (100 ft. + 10 ft./level)
+- **Area:** Cylinder (20-ft. radius, 40 ft. high)
+- **Duration:** Instantaneous
+- **Saving Throw:** None
+- **Spell Resistance:** Yes
+
+Small meteorites rain from the sky, exploding on impact and burning all in their wake. This spell deals 3d6 points of bludgeoning damage and 2d6 points of fire damage. The rain sets fire to combustibles and damages objects in the area. It can melt metals with low melting points, such as lead, gold, copper, silver or bronze. 
+
+*Material Components:* A chunk of sulfur and a chunk of iron
