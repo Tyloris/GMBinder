@@ -1,0 +1,453 @@
+<style>
+/* GLOBAL FORMATTING  */
+
+  /* Resize page to international A4 */
+  .phb {
+    width: 210mm;
+    height: 296.8mm;
+  }
+  .phb:after { content: ""; }
+
+
+/* TABLE OF CONTENTS  */
+
+  /* toc specifically wants black text. This resets the headers*/
+  .toc a {
+    color: inherit !important;
+  }
+  /* Allow dot leaders to fill remaining space but not overlap */
+  .toc li span:nth-child(2) {
+    width: auto;
+    overflow: hidden;
+    white-space: nowrap;
+    display: block;
+  }
+  .toc li span:nth-child(2):after {
+    font-family: BookSanity;
+    font-size: 0.317cm;
+    font-weight: normal;
+    color: black;
+    content:
+      " ........................................"
+      "........................................."
+      ".........................................";
+    }
+
+  /* Style TOC page numbers*/
+  .toc li span:first-child {
+    float: right;
+    font-family: BookSanity;
+    font-size: 0.317cm;
+    font-weight: normal;
+    color: black;
+    margin-left: 1px;
+  }
+
+  /* Adjust TOC H3 styles */
+  .toc li h3 span:nth-child(2):after {
+  	content: " ";
+  }
+  .toc li h3 {
+    margin-bottom: 4px !important;
+    margin-top: 10px !important;
+    line-height: initial !important;
+  }
+  .toc li h3 span:first-child {
+  	line-height: 1.8em !important;
+  }
+
+  /* Reduce TOC list indentation*/
+  .toc ul ul {
+  	margin-left: 10px !important;
+  }
+  .toc>ul>li {
+    margin-bottom: initial !important;
+  }
+
+
+/* TABLES AND BLOCKS */
+
+  /* Adjust tables */
+  table tr:nth-child(odd) td { background-color: #FFF0f5; }
+  .phb hr+section blockquote tr:nth-child(odd) td { background-color: transparent; }
+
+  /* Clear internal padding and add gap above for green note blocks*/
+  .phb blockquote {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .phb blockquote { margin-top: 1em; }
+
+  /* Clear internal padding in creature statblocks */
+  .phb hr+section blockquote {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  .phb blockquote {
+    box-shadow: 1px 4px 14px rgba(0,0,0,0.42);
+  }
+
+  /* For creature statblocks within range (start and end must be specified),
+     don't show a background. Used for the appendix creatures */
+  .phb:nth-of-type(n+107):nth-of-type(-n+130) hr+section blockquote {
+      background: none;
+      border: none;
+      box-shadow: none;
+  }
+
+
+/* FOOTER */
+
+  /* Footnotes */
+  .phb .pageNumber {
+    color: #7e735c;
+    z-index: 1000;
+  }
+  .phb .footnote { color: #7e735c; }
+
+  /* On odd child pages, have the Monster Manual page tear and lettering */
+  .phb:nth-child(odd):after {
+    content: '';
+    height: 125px;
+    background-image: url(https://gmbinder.com/images/lLWeevR.png), url('https://gmbinder.com/images/YWardeu.png');
+    background-size: 120px 120px, 816px 55px;
+    background-repeat: no-repeat, no-repeat;
+    background-position: bottom right, bottom;
+  }
+
+  /* Hacked reverse of the Monster Manual page tear for alternating pages */
+  .phb:nth-child(even):after {
+    content: '';
+    height: 125px;
+    background-image: url(https://gmbinder.com/images/lLWeevR.png), url('https://gmbinder.com/images/YWardeu.png');
+    background-size: 120px 120px, 816px 55px;
+    background-repeat: no-repeat, no-repeat;
+    background-position: bottom right, bottom;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+  }
+
+  /* The letter in the Monster Manual page tear */
+  .pageLetter {
+    position: absolute;
+    right: 25px;
+    bottom: 87.5px;
+    color: #673e1c;
+    z-index: 1000;
+    font-size: 135%;
+  }
+
+  /* Reversed for alternating pages */
+  .phb:nth-child(even) .pageLetter {
+      left: 25px;
+  }
+
+
+/* MONSTER MANUAL LETTER SECTION HEADER */
+
+  /* Adds the surrounding framing for the big, bold monster letter headings */
+  .letterheader {
+    position: absolute;
+    top: 30px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: url(https://gmbinder.com/images/YH3aESG.png);
+    background-size: cover;
+    width: 775px;
+    height: 133px;
+  }
+
+  /* Base component for the actual letter in the heading */
+  .mmletter {
+      position: absolute;
+      top: 20px;
+      left: 0;
+      right: 0;
+      margin-left: auto;
+      margin-right: auto;
+      background-size: cover;
+      width: 163.2px;
+      height: 163.2px;
+  }
+
+  /* Use one in combination with .mmletter to show that letter */
+  .mml-a { background-image: url(https://gmbinder.com/images/fVVv93s.png); }
+  .mml-b { background-image: url(https://gmbinder.com/images/21X6N0B.png); }
+  .mml-c { background-image: url(https://gmbinder.com/images/MvnpOWF.png); }
+  .mml-d { background-image: url(https://gmbinder.com/images/AFbLU4P.png); }
+  .mml-e { background-image: url(https://gmbinder.com/images/28NVNf9.png); }
+  .mml-f { background-image: url(https://gmbinder.com/images/Oyrhmqy.png); }
+  .mml-g { background-image: url(https://gmbinder.com/images/fRyiQn4.png); }
+  .mml-h { background-image: url(https://gmbinder.com/images/N8NamlT.png); }
+  .mml-i { background-image: url(https://gmbinder.com/images/xWI93aa.png); }
+  .mml-j { background-image: url(https://gmbinder.com/images/GgIzsun.png); }
+  .mml-k { background-image: url(https://gmbinder.com/images/OcObsWl.png); }
+  .mml-l { background-image: url(https://gmbinder.com/images/B7AUyR6.png); }
+  .mml-m { background-image: url(https://gmbinder.com/images/q4wXoxt.png); }
+  .mml-n { background-image: url(https://gmbinder.com/images/OJtC4w9.png); }
+  .mml-o { background-image: url(https://gmbinder.com/images/adeRr5d.png); }
+  .mml-p { background-image: url(https://gmbinder.com/images/EEhcrSR.png); }
+  .mml-q { background-image: url(https://gmbinder.com/images/O1AhfzL.png); }
+  .mml-r { background-image: url(https://gmbinder.com/images/w66eIuZ.png); }
+  .mml-s { background-image: url(https://gmbinder.com/images/YEoe0PP.png); }
+  .mml-t { background-image: url(https://gmbinder.com/images/7Bk9D35.png); }
+  .mml-u { background-image: url(https://gmbinder.com/images/uVJZYUg.png); }
+  .mml-v { background-image: url(https://gmbinder.com/images/gKjngey.png); }
+  .mml-w { background-image: url(https://gmbinder.com/images/14WWpsC.png); }
+  .mml-x { background-image: url(https://gmbinder.com/images/ojIYjh0.png); }
+  .mml-y { background-image: url(https://gmbinder.com/images/Gi1ePwY.png); }
+  .mml-z { background-image: url(https://gmbinder.com/images/0ZTFNVs.png); }
+
+
+/* INK BLOT STYLES */
+
+  /* Root style for inkblots. Use alone, or together with
+  one of the inkb lotstyle classes below. Essentially:
+  <img url='{url}' class='inkblot inkblot-blue' />
+  */
+  .inkblot {
+    position: absolute;
+    mix-blend-mode: multiply;
+    opacity: 0.6;
+  }
+
+  .inkblot-blue {
+    filter: hue-rotate(190deg) saturate(120%)
+  }
+
+  .inkblot-green {
+    filter: hue-rotate(120deg)
+  }
+
+</style>
+
+<!-- <div style='margin-top:570px;'></div> -->
+
+## Oozes
+Oozes (also known as slimes) are a type of mindless slime creatures. They are known to adapt to their environments, taking on aspects of their surroundings, which may account for the variety of oozes seen on Azeroth and beyond.
+
+***Unknown Origin.*** No one knows what their motivations are or if there is any specific ecology behind their existence. One theory is that oozes and slimes are tied to the creation of Azeroth, almost like a secretion of the planet. Another theory correlates their existence with that of the Old Gods and thus potent Void energies. Neither theory has been proven as of yet.
+
+***Slow Death.*** 
+
+***Adaptive Nature.*** Oozes form in locations of powerful energies and take on the characteristics of their surroundings. Thus oozes make for good litmus tests for environmental conditions. Oozes from different locations rarely resemble each other in more than superficial ways, even among similar origins.
+
+***Ooze Nature.*** An ooze doesn't require sleep.
+
+<!-- <div style='margin-top:20px;'></div> -->
+
+### Black Tar
+Tar pits have been death traps for creatures since prehistoric times. Occasionally a pit will give rise to oozes that are not satisfied with just the creatures that fall into the pits and will seek out nearby victims.
+
+<!-- \columnbreak
+<div style='margin-top:570px;'></div> -->
+
+### Corrosive Sludge
+When areas of filth are left unattended for long periods of time, an ooze known as a putrid waste will spawn. When those areas are left to fester and rot for even longer, a far more deadly variety known as the corrosive sludge will appear. Possessing a powerful acidic body, these creatures will eat through almost anything given time.
+
+### Glutinous Ooze
+The primal energies of the Un'goro Crater are known to give rise to these creatures. They are sometimes mispronounced as gluttonous oozes, though both descriptors are accurate due to these slimes being as sticky as they are ravenous.
+
+### Possessed Blood
+When shed from powerful creatures or created through dark magics, blood can take on a semblance of life. These globules of blood seek to drain the lifeblood of other creatures and can be absorbed into the bloodstream of those who animated them.
+
+### Putrid Waste
+These oozes are the most commonly encountered variety, arising in areas where filth has been allowed to accumulate and fester. 
+
+<img src='https://www.gmbinder.com/images/AcBMLyu.jpg' style='position:absolute; top:0px; right:-260px; width:870px' />
+<img src='https://www.gmbinder.com/images/epoShfv.png' style='position:absolute; top:-200px; left:-860px; transform:rotate(-90deg)'/>
+
+<div class="pageLetter">O</div>
+<div class='footnote'>OOZES </div>
+
+\pagebreakNum
+
+<img src='https://www.gmbinder.com/images/iqsWrVi.png' style='position:absolute; bottom:-290px; left:0px;' />
+
+<!-- Creator's Notes: CR calculation is weird for oozes. As best I can tell, Split causes the CR calculation to be done as if the ooze had been reduced to as many oozes as possible. So for example a Large ooze would have 1/4 the hp but deal 4x the damage. Without that, the ochre jelly is a CR 1/2 creature, with it it's about a CR 2-3.  -->
+
+
+<div style='margin-top:94px;'></div>
+
+___
+> ## Black Tar <!-- https://wc5e-cr-calculator.frogvall.com/?0;8;10;4;12;36;0;0;0;0;0;0;0;0;0;0;0;;;;;3;;;;;;;;;;1;;;;;;;;10;;;;;; -->
+> *Large ooze, unaligned*
+> ___
+> - **Armor Class** 8
+> - **Hit Points** 45 (6d10+12)
+> - **Speed** 10 ft., climb 10 ft.
+> ___
+> |  STR  |  DEX  |  CON  |  INT  |  WIS  |  CHA  |
+> |:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+> |15 (+2)| 6 (-2)|14 (+2)| 2 (-4)| 6 (-2)| 1 (-5)|
+> ___
+> - **Damage Resistance** fire
+> - **Damage Immunities** slashing
+> - **Condition Immunities** blinded, charmed, deafened, exhaustion, frightened, prone
+> - **Senses** blindsight 60 ft. (blind beyond this radius), passive Perception 8
+> - **Challenge** 2 (450 XP)
+> ___
+> ***Amorphous.*** The tar can move through a space as narrow as 1 inch wide without squeezing.
+>
+> ***Sticky Body.*** When a creature strikes the ooze with a melee weapon attack, the weapon gets caught in the ooze's body. The attacker must succeed on a DC 12 Strength saving throw, or the weapon becomes stuck to the ooze. 
+> <br>&nbsp;&nbsp;&nbsp; If the weapon's wielder can't or won't let go of the weapon, the wielder is grappled while the weapon is stuck. While stuck, the weapon can't be used. A creature can pull the weapon free by taking an action to make a DC 12 Strength check and succeeding.
+> 
+> ***Tar Body.*** If the tar takes any fire damage, its body becomes more viscous and its speed increases by 10 feet until the end of its next turn. 
+> <br>&nbsp;&nbsp;&nbsp; If it takes at least 5 points of fire damage on a turn, its body ignites until the end of its next turn. While ignited, a creature that touches the tar or hits it with a melee attack while within 5 feet of it takes 3 (1d6) fire damage, and the tar deals an additional 3 (1d6) fire damage with its attacks.
+>
+> ### Actions
+> ***Pseudopod.*** *Melee Weapon Attack:* +4 to hit, reach 5 ft., one target. *Hit:* 9 (2d6 + 2) bludgeoning damage.
+> <br>&nbsp;&nbsp;&nbsp; Additionally, the creature must make a DC 12 Dexterity save or have bits of tar stick to it, reducing its movement speed by 10 feet to a minimum of 0. When its speed is reduced to 0 it is considered restrained. This effect stacks with itself and lasts for 1 hour or until the tar is washed off with at least 1 gallon of alcohol as an action.
+>
+> ### Reactions
+> ***Split.*** When a tar that is Medium or larger is subjected to slashing damage, it splits into two new tars if it has at least 10 hit points. Each new tar has hit points equal to half the original tar's, rounded down. New tars are one size smaller than the original tar.
+
+\columnbreak
+
+<div style='margin-top:340px;'></div>
+
+___
+> ## Corrosive Sludge <!-- https://wc5e-cr-calculator.frogvall.com/?0;9;170;5;12;27;4;0;0;0;0;0;0;0;0;0;0;;;;;3;;;;;;;;;;1;;;;;;;;10;;;;;; -->
+> *Large ooze, unaligned*
+> ___
+> - **Armor Class** 9
+> - **Hit Points** 170 (20d10 + 60)
+> - **Speed** 30 ft.
+> ___
+> |  STR  |  DEX  |  CON  |  INT  |  WIS  |  CHA  |
+> |:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+> |16 (+3)| 5 (-3)|16 (+3)| 1 (-5)| 6 (-2)| 1 (-5)|
+> ___
+> - **Damage Immunities** acid
+> - **Condition Immunities** blinded, charmed, deafened, exhaustion, frightened, prone
+> - **Senses** blindsight 60 Ft. (blind beyond this radius), passive Perception 8
+> - **Languages** —
+> - **Challenge** 4 (1,100 XP)
+> ___
+> ***Amorphous.*** The ooze can move through a space as narrow as 2 feet wide without squeezing.
+>
+> **Corrosive Form.**  A creature that touches the sludge or hits it with a melee attack while within 5 feet of it takes 4 (1d8) acid damage.  Any nonmagical weapon made of metal or wood that hits the sludge corrodes. After dealing damage, the weapon takes a permanent and cumulative -1 penalty to damage rolls. If  its penalty drops to -5, the weapon is destroyed. Non magical ammunition made of metal or wood that hits the sludge is destroyed after dealing damage. 
+> <br>&nbsp;&nbsp;&nbsp; The sludge can eat through 2-inch-thick, nonmagical wood or metal in 1 round.
+>
+> ### Actions
+> ***Bite.*** *Melee Weapon Attack.* +5 to hit, reach 5 ft., one target. *Hit:* 10 (2d6 + 3) piercing damage plus 17 (6d6) acid damage. In addition, nonmagical armor worn by the target is partly dissolved and takes a permanent and cumulative -1 penalty to the AC it offers. The armor is  destroyed if the penalty reduces its AC to 10.
+
+<img src='https://www.gmbinder.com/images/vF61iKP.png' style='position:absolute; right:-80px; top:0px; width:550px; transform:scaleX(-1)' />
+
+<div class="pageLetter">O</div>
+<div class='footnote'>OOZES </div>
+
+\pagebreakNum
+
+<div style='margin-top:900px;'></div>
+
+___
+___
+> ## Glutinous Ooze <!-- https://wc5e-cr-calculator.frogvall.com/?0;6;84;4;12;17;21;0;0;0;0;0;0;0;0;0;0;;;;;3;;;;;;;;;;1;;;;;;;;10;;;;;; -->
+> *Large ooze, unaligned*
+> ___
+> - **Armor Class** 6
+> - **Hit Points** 84 (8d10+40)
+> - **Speed** 15 ft.
+> ___
+> |  STR  |  DEX  |  CON  |  INT  |  WIS  |  CHA  |
+> |:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+> |14 (+2)| 3 (-4)|20 (+5)| 1 (-5)| 6 (-2)| 1 (-5)|
+> ___ 
+> - **Condition Immunities** blinded, charmed, deafened, exhaustion, frightened, prone
+> - **Senses** blindsight 60 Ft. (blind beyond this radius), passive Perception 8
+> - **Languages** —
+> - **Challenge** 2 (450 XP)
+> ___
+> ***Absorbant Form.*** Other creatures can enter the ooze's space, but a creature that does so is subjected to the ooze's Engulf and has disadvantage on the saving throw.
+> <br>&nbsp;&nbsp;&nbsp; Creatures inside the ooze can be seen but have total cover.
+> <br>&nbsp;&nbsp;&nbsp; A creature within 5 feet of the ooze can take an action to pull a creature or object out of the ooze. Doing so requires a successful DC 12 Strength check, and the creature making the attempt takes 10 (3d6) acid damage.
+> <br>&nbsp;&nbsp;&nbsp; The ooze can hold up to four Medium or smaller creatures inside it at a time.
+>
+> ***Amorphous.*** The ooze can move through a space as narrow as 2 feet wide without squeezing.
+>
+> ***Sticky Body.*** When a creature strikes the ooze with a melee weapon attack, the weapon gets caught in the ooze's body. The attacker must succeed on a DC 12 Strength saving throw, or the weapon becomes stuck to the ooze. 
+> <br>&nbsp;&nbsp;&nbsp; If the weapon's wielder can't or won't let go of the weapon, the wielder is grappled while the weapon is stuck. While stuck, the weapon can't be used. A creature can pull the weapon free by taking an action to make a DC 12 Strength check and succeeding.
+> 
+> ### Actions
+> ***Bite.*** *Melee Weapon Attack:* +4 to hit, reach 5 ft., one creature. *Hit:* 13 (2d10 + 2) piercing damage plus 4 (1d8) acid damage. The creature must succeed on a DC 12 Dexterity saving throw or be pulled into the ooze's space and be affected by its Engulf.
+>
+> ***Engulf.*** The ooze moves up to its speed. While doing so, it can enter Large or smaller creatures' spaces. Whenever the ooze enters a creature's space, the creature must make a DC 12 Dexterity saving throw.
+> <br>&nbsp;&nbsp;&nbsp; On a successful save, the creature can choose to be pushed 5 feet back or to the side of the ooze. A creature that chooses not to be pushed suffers the consequences of a failed saving throw.
+> <br>&nbsp;&nbsp;&nbsp; On a failed save, the ooze enters the creature's space, and the creature takes 10 (3d6) acid damage and is engulfed. The engulfed creature can't breathe, is restrained, and takes 21 (6d6) acid damage at the start of each of the ooze's turns. When the ooze moves, the engulfed creature moves with it.
+> <br>&nbsp;&nbsp;&nbsp; An engulfed creature can try to escape by taking an action to make a DC 12 Strength check. On a success, the creature escapes and enters a space of its choice within 5 feet of the ooze.
+
+
+<img src='https://www.gmbinder.com/images/bSeo9Ys.jpg' style='position:absolute; bottom:100px; left:-100px; width:900px; transform:scaleX(-1)' />
+<img src='https://www.gmbinder.com/images/1fz5hzZ.png' style='position:absolute; left:0px; bottom:0px; width:140%' />
+
+<div class="pageLetter">O</div>
+<div class='footnote'>OOZES </div>
+
+\pagebreakNum
+
+<div style='margin-top:375px;'></div>
+
+
+
+___
+> ## Possessed Blood <!-- https://wc5e-cr-calculator.frogvall.com/?0;10;45;3;12;6;0;6;0;6;0;0;0;0;0;0;0;;;;;3;;;;;;;;;;1;;;;;;;;10;;;;;; -->
+> *Small ooze, unaligned*
+> ___
+> - **Armor Class** 10
+> - **Hit Points** 45 (6d6 + 24)
+> - **Speed** 10 ft.
+> ___
+> |  STR  |  DEX  |  CON  |  INT  |  WIS  |  CHA  |
+> |:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+> |12 (+1)|10 (+0)|18 (+4)| 3 (-4)| 8 (-1)| 4 (-3)|
+> ___
+> - **Damage Immunities** necrotic
+> - **Condition Immunities** blinded, charmed, deafened, exhaustion, frightened, prone
+> - **Senses** blindsight 60 Ft. (blind beyond this radius), passive Perception 9
+> - **Challenge** 1/4 (50 XP)
+> ___
+> ***Amorphous.*** The ooze can move through a space as narrow as 1/2 inch wide without squeezing.
+>
+> ***Consumption.*** Whenever the ooze deals necrotic damage, the target's hit point maximum is reduced by an equal amount. The ooze's current and maximum hit points are also increased by the same amount. The changes in maximum hit point totals lasts for 1 hour.
+> <br>&nbsp;&nbsp;&nbsp; If a creature's maximum hit point total is reduced to 0, the creature dies.
+>
+> ### Actions
+> ***Pseudopod.*** *Melee Weapon Attack.* +3 to hit, reach 5 ft., one target. *Hit:* 3 (1d4 + 1) bludgeoning plus 3 (1d6) necrotic damage. 
+>
+> ***Absorb.*** The possessed blood targets a creature within 5 feet. The possessed blood's hit points drop to 0 and the target creature's current and maximum hit points increase by an equal amount. The maximum hit total increase lasts for 1 hour.
+
+\columnbreak
+
+<div style='margin-top:434px;'></div>
+
+___
+> ## Putrid Waste
+> *Medium ooze, unaligned*
+> ___
+> - **Armor Class** 8
+> - **Hit Points** 68 (8d8 + 32)
+> - **Speed** 20 ft.
+> ___
+> |  STR  |  DEX  |  CON  |  INT  |  WIS  |  CHA  |
+> |:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+> |15 (+2)| 6 (-2)|19 (+4)| 3 (-4)| 6 (-2)| 4 (-3)|
+> ___
+> - **Damage Immunities** acid, poison
+> - **Condition Immunities** blinded, charmed, deafened, exhaustion, frightened, poisoned, prone
+> - **Senses** blindsight 60 Ft. (blind beyond this radius), passive Perception 8
+> - **Challenge** 1 (200 XP)
+> ___
+> ***Amorphous.*** The ooze can move through a space as narrow as 1 foot wide without squeezing.
+>
+> ***Stench.*** Any creature other than a putrid waste that starts its turn within 5 feet of the ooze must succeed on a DC 14 Constitution saving throw or be poisoned until the start of the creature's next turn. On a successful saving throw, the creature is immune to the stench of all putrid wastes for 1 hour.
+>
+> ### Actions
+> ***Bite.*** *Melee Weapon Attack.* +4 to hit, reach 5 ft., one target. *Hit:* 5 (1d6 + 2) piercing damage plus 10 (3d6) acid damage. 
+> <br>&nbsp;&nbsp;&nbsp; The target must also make a DC 14 Constitution save or be infected with the sewer plague disease, as detailed on page 257 of the Dungeon Master's Guide.
+
+<div class="pageLetter">O</div>
+<div class='footnote'>OOZES </div>
