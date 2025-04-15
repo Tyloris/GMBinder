@@ -1,0 +1,809 @@
+<style>
+/* GLOBAL FORMATTING  */
+
+  /* Resize page to international A4 */
+  .phb {
+    width: 210mm;
+    height: 296.8mm;
+  }
+  .phb:after { content: ""; }
+
+/* Temporary Fix for heading issues */
+    .phb p{ line-height: 15px; } 
+    .phb blockquote p{ line-height: 14px; } 
+    .phb h2{ line-height: 26px; } 
+    .phb h3{ line-height: 19px; } 
+    .phb h4{ line-height: 15px; padding-bottom: 3px; } 
+    .phb h5{ line-height: 17px; } 
+    th, td { line-height: 14px; }
+
+/* TABLE OF CONTENTS  */
+
+  /* toc specifically wants black text. This resets the headers*/
+  .toc a {
+    color: inherit !important;
+  }
+  /* Allow dot leaders to fill remaining space but not overlap */
+  .toc li span:nth-child(2) {
+    width: auto;
+    overflow: hidden;
+    white-space: nowrap;
+    display: block;
+  }
+  .toc li span:nth-child(2):after {
+    font-family: BookSanity;
+    font-size: 0.317cm;
+    font-weight: normal;
+    color: black;
+    content:
+      " ........................................"
+      "........................................."
+      ".........................................";
+    }
+
+  /* Style TOC page numbers*/
+  .toc li span:first-child {
+    float: right;
+    font-family: BookSanity;
+    font-size: 0.317cm;
+    font-weight: normal;
+    color: black;
+    margin-left: 1px;
+  }
+
+  /* Adjust TOC H3 styles */
+  .toc li h3 span:nth-child(2):after {
+  	content: " ";
+  }
+  .toc li h3 {
+    margin-bottom: 4px !important;
+    margin-top: 10px !important;
+    line-height: initial !important;
+  }
+  .toc li h3 span:first-child {
+  	line-height: 1.8em !important;
+  }
+
+  /* Reduce TOC list indentation*/
+  .toc ul ul {
+  	margin-left: 10px !important;
+  }
+  .toc>ul>li {
+    margin-bottom: initial !important;
+  }
+
+
+/* TABLES AND BLOCKS */
+
+  /* Clear internal padding and add gap above for green note blocks*/
+  .phb blockquote {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .phb blockquote { margin-top: 1em;
+  }
+
+
+/* INK BLOT STYLES */
+
+  /* Root style for inkblots. Use alone, or together with
+  one of the inkb lotstyle classes below. Essentially:
+  <img url='{url}' class='inkblot inkblot-blue' />
+  */
+  .inkblot {
+    position: absolute;
+    mix-blend-mode: multiply;
+    opacity: 0.6;
+  }
+
+  .inkblot-blue {
+    filter: hue-rotate(190deg) saturate(120%)
+  }
+
+  .inkblot-green {
+    filter: hue-rotate(120deg)
+  }
+
+</style>
+
+<style>
+/* Background */
+  .phb{ background-image: url('https://gmbinder.com/images/KN1O92T.png') }
+  .phb{ background-size: cover }
+
+/* Notes */
+  .phb section blockquote {background-color: #f6e5d4}
+  .phb hr + section blockquote tr:nth-child(odd) td {background-color: transparent;}
+
+/* Tables */
+  table tr:nth-child(odd) td {background-color: #cccccc}
+
+/* Footer */
+  .phb .pageNumber {color: rgba(0, 0, 0, 0.5)}
+  .phb .footnote {color: rgba(0, 0, 0, 0.5)}
+  .phb:nth-child(odd):after{ 
+    content          : '';
+    position         : absolute;
+    bottom           : -7px;
+    left             : 10px;
+    z-index          : -1;
+    height           : 336px;
+    width            : 100%;
+    background-image : url('https://www.gmbinder.com/images/bNTz1nk.png');
+    background-size  : cover;
+}
+
+.phb:nth-child(even):after{ 
+    content          : '';
+    position         : absolute;
+    bottom           : -7px;
+    left             : -10px;
+    z-index          : -1;
+    height           : 336px;
+    width            : 100%;
+    background-image : url('https://www.gmbinder.com/images/6NCzAN0.png');
+    background-size  : cover;
+}
+
+/* Page Number */
+.phb .pageNumber{
+    position   : absolute;
+    bottom     : 30px;
+    width      : 50px;
+    text-align : center;
+}
+.phb:nth-child(even) .pageNumber{
+    left      : 12px;
+}
+.phb:nth-child(odd) .pageNumber{
+    right      : 12px;
+}
+
+.phb .pageNumber.auto{
+    position   : absolute;
+    bottom     : 41px;
+    width      : 50px;
+    text-align : center;
+}
+.phb:nth-child(even) .pageNumber.auto{
+    left      : 12px;
+}
+.phb:nth-child(odd) .pageNumber.auto{
+    right      : 12px;
+}
+
+/* INK BLOT STYLES */
+
+  /* Root style for inkblots. Use alone, or together with
+  one of the inkb lotstyle classes below. Essentially:
+  <img url='{url}' class='inkblot inkblot-blue' />
+  */
+  .inkblot {
+    position: absolute;
+    mix-blend-mode: multiply;
+    opacity: 0.6;
+  }
+
+  .inkblot-blue {
+    filter: hue-rotate(190deg) saturate(120%)
+  }
+
+  .inkblot-green {
+    filter: hue-rotate(120deg)
+  }
+
+</style>
+
+# Chapter 5: Customization Options
+A feat represents a talent or an area of expertise that gives a character special capabilities. It embodies training, exper-ience, and abilities beyond what a class provides. At certain levels, your class gives you the Ability Score Improvement feature. Using the optional feats rule, you can forgo taking that feature to take a feat of your choice instead. You can take each feat only once, unless the feat's description says otherwise.
+
+You must meet any prerequisite specified in a feat to take that feat. If you ever lose a feat's prerequisite, you can't use that feat until you regain the prerequisite. For example, the Battlemage feat requires you to be able to cast a spell. If you lose your ability to cast spells somehow you can't bene-fit from the Battlemage spell until that ability is restored.
+
+The feats presented in this book are meant as additions to those presented in the 5th edition Player's Handbook.
+
+### Battlemage
+*Prerequisite: The ability to cast at least one spell*
+<div style='margin-top:-7px;'></div>
+
+You have improved you technique with spells in the heat of battle, you gain the following benefits:
+ - You learn two cantrips of your choice from the mage spell list.
+ - When you make a ranged spell attack, you do not suffer disadvantage on the attack roll if you are within 5 feet of the hostile creature.
+ - Before you cast an instantaneous spell that requires a spell attack and are unable of hitting more than a single target, you can choose to take a -5 penalty to the spell attack roll. If the spell hits, you add +10 to the spell's damage.
+
+### Exotic Weapon Master
+You have practiced extensively with the exotic weapons used by certain races, gaining the following benefits:
+ - Increase your Strength or Dexterity score by 1, to a maximum of 20.
+ - You gain proficiency with four exotic weapons of your choice.
+
+### Focus Adept
+You have learned some of the tricks that hunters can perform. You gain the following benefits:
+- You learn two tricks of your choice from among those available to the hunter class. If a trick you use requires your target to make a saving throw to resist its effects, the saving throw DC equals 8 + your proficiency bonus + your Wisdom modifier.
+- You gain one focus die, which is a d6 (this die is added to any focus dice you have from another source). This die is used to fuel your tricks. A focus die is expended when you use it. You regain your expended focus dice when you finish a short or long rest.
+
+\columnbreak
+### Gunner 
+You have a quick hand and keen eye when employing firearms, granting you the following benefits:
+- Increase your Dexterity score by 1, to a maximum of 20.
+- You gain proficiency with pistols and rifles.
+- You ignore the loading property of ranged weapons.
+- Being within 5 feet of a hostile creature doesn’t impose disadvantage on your ranged attack rolls.
+
+### Rage Initiate
+You have learned how to tap into your inner rage, using it to perform special techniques. You gain the following benefits:
+- You learn two rage maneuvers of your choice from among those available to the warrior class. If a maneuver you use requires your target to make a saving throw to resist the maneuver's effects, the saving throw DC equals 8 + your proficiency bonus + your Strength modifier.
+- As a bonus action, you can tap into your rage reserve to gain two rage points (if you have a rage reserve from another source, the amount it grants increases by two). These rage points are used to fuel your maneuvers and last for 1 hour or until used. Once you use this ability, you cannot do so again until you finish a short or long rest.
+
+## Racial Feats
+Leveling up in a class is the main way a character evolves during a campaign. Some DMs also allow the use of feats to customize a character. Feats are an optional rule in chapter 6, of the *Player's Handbook*. The DM decides whether they're used and may also decide that some feats are available in a campaign and others aren't. 
+
+This section introduces a collection of special feats that allow you to explore your character's race further. These feats are each associated with a race from chapter 1, as summarized in the Racial Feats table. A racial feat repre-sents either a deepening connection to your race's culture or a physical transformation that brings you closer to an aspect of your race's lineage.
+
+The cause of a particular transformation is up to you and your DM. A transformational feat can symbolize a latent quality that has emerged as you age, or a transformation might be the result of an event in the campaign, such as ex-posure to powerful magic or visiting a place of ancient sig-nificance to your race. Figuring out why your character has changed can be a rich addition to your campaign's story.
+
+\pagebreakNum
+##### Racial Feats
+|&nbsp; Race                    | Feat                  |
+|:------------------------------|:----------------------|
+|&nbsp; Any Race                | Faction Grudge        |
+|&nbsp; Blood elf               | Arcane Teleportation  |
+|&nbsp; Blood elf               | Elven Accuracy        |
+|&nbsp; Blood elf               | Feed the Addiction    |
+|&nbsp; Blood elf               | Mana Tap              |
+|&nbsp; Blood elf               | Twinblade Master      |
+|&nbsp; Draenei                 | Eredar Heritage       |
+|&nbsp; Draenei (broken)        | Broken and Corrupted  |
+|&nbsp; Draenei (exodar)        | Touch of the Naaru    |
+|&nbsp; Draenei (lightforged)   | Champion of the Light |
+|&nbsp; Dwarf                   | Brewer                |
+|&nbsp; Dwarf                   | Dwarven Fortitude     |
+|&nbsp; Dwarf                   | Squat Nimbleness      |
+|&nbsp; Dwarf (ironforge)       | Dwarven Sharpshooter  |
+|&nbsp; Dwarf (wildhammer)      | Spiritual Guidance    |
+|&nbsp; Dwarf (wildhammer)      | Stormhammerer         |
+|&nbsp; Forsaken                | Cannibalize           |
+|&nbsp; Forsaken                | Touch of the Grave    |
+|&nbsp; Forsaken (elf)          | Arcane Teleportation  |
+|&nbsp; Forsaken (elf)          | Elven Accuracy        |
+|&nbsp; Forsaken (human)        | Prodigy               |
+|&nbsp; Gnome                   | Prodigy               |
+|&nbsp; Gnome                   | Squat Nimbleness      |
+|&nbsp; Gnome (gnomeregan)      | Nimble Fingers        |
+|&nbsp; Gnome (mechagnome)      | Mechagnome Internals  |
+|&nbsp; Goblin                  | Better Chemistry      |
+|&nbsp; Goblin                  | Like A Boss           |
+|&nbsp; Gnome                   | Squat Nimbleness      |
+|&nbsp; Goblin                  | Time is Money         |
+|&nbsp; Human                   | Human Enduracne       |
+|&nbsp; Human                   | Inspirational Spirit  |
+|&nbsp; Human                   | Prodigy               |
+|&nbsp; Human (Dalaran)         | Sorcerer's Apprentice |
+|&nbsp; Human (Kul Tiras)       | Able Sailor           |
+|&nbsp; Human (Stormwind)       | Diplomat              |
+|&nbsp; Night elf               | Critter Friend        |
+|&nbsp; Night elf               | Darnassian Heritage   |
+|&nbsp; Night elf               | Elusiveness           |
+|&nbsp; Night elf               | Elven Accuracy        |
+|&nbsp; Night elf               | Sentinel Apprentice   |
+|&nbsp; Night elf               | Teachings of Cenarius |
+|&nbsp; Night elf               | Touch of Elune        |
+|&nbsp; Night elf               | Warden Apprentice     |
+
+\columnbreak
+##### Racial Feats Cont.
+|&nbsp; Race                    | Feat                  |
+|:------------------------------|:----------------------|
+|&nbsp; Nightborne              | Arcane Teleportation  |
+|&nbsp; Nightborne              | Elven Accuracy        |
+|&nbsp; Nightborne              | Masquerade            |
+|&nbsp; Pandaren                | Brewer                |
+|&nbsp; Pandaren                | Monastery Initiate    |
+|&nbsp; Pandaren                | Way of the Wok        |
+|&nbsp; Pandaren                | Well-Rested           |
+|&nbsp; Orc                     | Blood of Mannoroth    |
+|&nbsp; Orc                     | Orcish Fury           |
+|&nbsp; Orc                     | Savage Leader         |
+|&nbsp; Orc                     | Spiritual Guidance    |
+|&nbsp; Orc                     | Wolven Warrior        |
+|&nbsp; Tauren                  | Distance Runner       |
+|&nbsp; Tauren                  | Spiritual Guidance    |
+|&nbsp; Tauren                  | Tauren Brave          |
+|&nbsp; Tauren                  | Tauren Endurance      |
+|&nbsp; Troll                   | Regeneratin'          |
+|&nbsp; Troll                   | Spiritual Guidance    |
+|&nbsp; Void elf                | Elven Accuracy        |
+|&nbsp; Void elf                | Embrace of the Void   |
+|&nbsp; Vulpera                 | Bag of Tricks         |
+|&nbsp; Worgen                  | Distance Runner       |
+|&nbsp; Worgen                  | Hardened Predator     |
+|&nbsp; Worgen                  | Keen Nose             |
+|&nbsp; Worgen                  | Sheep's Clothing      |
+
+\pagebreakNum
+### Able Sailor
+*Prerequisite: Human (Kul Tiras)*
+<div style='margin-top:-5px;'></div>
+
+You are completely at home aboard a ship, gaining the following benefits:
+- Increase your Dexterity score by 1, to a maximum of 20.
+- You gain proficiency in Acrobatics.
+- When you make an Acrobatics check to keep your footing on a ship, a Sleight of Hand of hand skill check dealing with knots or ropes, or any check using Vehicles (Water), you double your proficiency bonus to the check.
+- Climbing no longer costs you extra movement.
+
+### [Arcane Manipulation]
+*Prerequisite: Blood elf, nightborne*
+
+### Arcane Teleportation
+*Prerequisite: Blood elf, forsaken (elf), or nightborne*
+<div style='margin-top:-5px;'></div>
+
+Your study of highborne lore has unlocked arcane power that few other elves possess. Drawing on the ley lines, you can momentarily stride through space to shorten your path from one place to another. You gain the following benefits:
+ - Increase your Intelligence or Charisma score by 1, to a maximum of 20.
+ - You learn the *misty step* spell and can cast it once without expending a spell slot. You regain the ability to cast it in this way when you finish a short or long rest. Intelligence is your spellcasting ability for this spell.
+
+### Bag of Tricks
+*Prerequisite: Vulpera*
+<div style='margin-top:-5px;'></div>
+
+You carry around a small bag of trinkets and tools, which you can use to help get you out of trouble. As long as you have a bag or component pouch you can, as an action, reach into your it and bring forth an item to create one of the following effects. 
+- *Damaging Vial:* You can make a ranged attack against a creature or object, dealing 1d6 acid or fire damage on a hit. If the target is a fiend or undead, you can instead deal radiant damage. This damage increases to 2d6 at 5th level, 3d6 at 11th level, and 4d6 at 17th level. 
+- *Healing Vial:* You, or a creature you touch, regain <br/> 1d4 + 1 hit points. This increases to 2d4 + 2 at 5th level, 3d4 + 3 at 11th level, and 4d4 + 4 at 17th level.
+- *Smoky Vial:* Choose a point within 20 feet. Smoke fills an area within a 5 foot radius of that point, lasting for 1 minute. A moderate wind disperses the smoke in 3 rounds, while a strong wind disperses it in 1 round. The radius of the smoke increases to 10 feet at 5th level, 15 feet at 11th level, and 20 feet at 17th level.
+
+Any attack roll is made with proficiency and ranged attacks have a range of 20/60 feet. You can use this ability a number of times equal to your proficiency bonus and regain the ability to do so when you finish a long rest.
+
+\columnbreak
+### Better Chemistry
+*Prerequisite: Goblin*
+<div style='margin-top:-5px;'></div>
+
+You've improved your living through chemistry, and have become an expert in its practices. You gain the following benefits:
+ - Increase your Intelligence score by 1, to a max of 20.
+ - You gain proficiency with alchemist's supplies. If you are already proficient with them, you double your profi-ciency bonus to checks you make with them.
+ - As an action, you can identify one potion within 5 feet of you, as if you had tasted it.  You must see the liquid for this benefit to work.
+ - Over the course of a short rest, you can temporarily improve the potency of one potion of healing of any rarity. You must have alchemist's supplies with you to improve the potions potency, and the potion must be within reach. For 1 hour after the short rest ends, a creature drinking the potion can forgo the potion's die roll and regains the maximum number of hit points that the potion can restore.
+
+### Blood of Mannoroth
+*Prerequisite: Orc*
+<div style='margin-top:-5px;'></div>
+
+Either through fel magic or through affinity with the nature of the Burning Legion, your latent corruption with the demonic blood flowing through your people has awakened. You gain the following benefits:
+- Increase your Strength or Constitution score by 1, to a maximum of 20.
+- You have resistance to your choice of fire or necrotic damage.
+- You gain a bite attack as a natural weapon, which you can use to make unarmed strikes. If you hit with it, you deal piercing damage equal to 1d6 + your Strength modifier, instead of the bludgeoning damage normal for an unarmed strike.
+
+### Brewer
+*Prerequisite: Dwarf or pandaren*
+<div style='margin-top:-5px;'></div>
+
+[TBD.] You gain the following benefits:
+
+- Increase your Constitution or Wisdom score by 1, to a maximum of 20.
+- You gain proficiency in brewer's tools if you didn't already have it. You add double your proficiency bonus to checks you make with them.
+- [TBD. Involves potions of healing, potentially some other brews.]
+
+### Broken and Corrupted
+*Prerequisite: Draenei (broken)*
+<div style='margin-top:-5px;'></div>
+
+[TBD. Idea is that the fel corruption is particularly strong, cutting you off from the Light and gaining physical bonuses.] You gain the following benefits:
+- Increase your Strength, Dexterity, or Constitution score by 1, to a maximum of 20.
+- You gain resistance to radiant damage.
+- You count as one size larger when determining your carrying capacity and the weight you can push, drag, or lift.
+
+\pagebreakNum
+### Cannibalize
+*Prerequisite: Forsaken*
+<div style='margin-top:-5px;'></div>
+
+[TBD.] You gain the following benefits:
+- Increase your Constitution score by 1, to a maximum 20.
+- You gain a bite attack as a natural weapon, which you can use to make unarmed strikes. If you hit with it, you deal piercing damage equal to 1d6 + your Strength modifier, instead of the bludgeoning damage normal for an unarmed strike.
+- Using 1 minute, you can cannibalize the corpse of a humanoid or undead that has been dead for less than 1 day. When done, you regain a number of hit points equal to your level + your Constitution modifier. Once you use this trait, you can't use it again until you finish a short rest.
+
+### Champion of the Light
+*Prerequisite: Draenei (Lightforged)*
+<div style='margin-top:-5px;'></div>
+
+You learn to call on your inner connection to the Light, wielding it as a weapon against your foes. You gain the following benefits:
+- Increase your Constitution or Charisma score by 1, to a maximum of 20.
+- When you roll radiant damage for a spell you cast, you can reroll any roll of 1 on the radiant damage dice, but you must use the new roll, even if it is another 1.
+- Whenever you cast a spell that deals radiant damage, you can cause light to shine forth from you until the end of your next turn. The light doesn’t harm you or your possessions, shedding bright light out to 30 feet and dim light for an additional 30 feet. While the light is present, any creature within 5 feet of you that hits you with a melee attack takes 1d4 radiant damage.
+
+### Critter Friend
+*Prerequisite: Night elf*
+<div style='margin-top:-5px;'></div>
+
+Your friendship with animals mystically deepens. You gain the following benefits:
+ - You gain proficiency in the Animal Handling skill. If you're already proficient in it, your proficiency bonus is doubled for any check you make with it.
+ - You learn the *speak with animals* spell and can cast it at will, without expending a spell slot. You also learn the *animal friendship* spell, and can cast it once with this feat, without expending a spell slot. You regain the ability to cast it in this way when you finish a long rest. Wisdom is your spellcasting ability for these spells.
+
+\columnbreak
+### Darnassian Heritage
+*Prerequisite: Night elf*
+<div style='margin-top:-5px;'></div>
+
+Your connection to your kin deepens, unlocking unique gifts. You gain the following benefits:
+ - Increase your Intelligence or Wisdom score by 1, to a maximum of 20.
+ - You have advantage on Dexterity (Stealth) checks made in dim or unlit areas.
+ - When you fail a death saving throw, you may call upon a wisp to change the dice to a success. The essence of the wisp continues to linger in your body for your next two long rests, making you unable to call for anothers aid.
+
+### Diplomat
+*Prerequisite: Human (Stormwind)*
+<div style='margin-top:-5px;'></div>
+
+You master the arts of diplomacy, gaining the following benefits:
+- Increase your Charisma score by 1, to a maximum of 20.
+- You gain proficiency in the Persuasion skill. If you are already proficient in this skill, you add double your proficiency bonus to checks you make with it.
+- If you spend 1 minute talking to someone who can understand what you say, you can make a Charisma (Persuasion) check contested by the creature’s Wisdom (Insight) check. If you or your companions are fighting the creature, your check automatically fails. If your check succeeds, the target is charmed by you as long as it remains within 60 feet of you and for 1 minute thereafter.
+
+### Distance Runner
+*Prerequisite: Tauren or worgen*
+<div style='margin-top:-5px;'></div>
+
+[TBD. Covers Running Wild and Plainsrunning.] You gain the following benefits:
+- Increase your Constitution score by 1, to a maximum of 20.
+- You have advantage on saving throws to avoid exhaustion levels from a forced march.
+- When determining travel pace, double your movement speed. If you have no more than one level of exhaustion, you can also maintain a travel pace of up to four times your speed for up to one hour, but then you gain two levels of exhaustion. It takes at least 1 minute to get up to speed, and you only gain these benefits as long as you are unmounted.
+
+### Dwarven Fortitude
+*Prerequisite: Dwarf*
+<div style='margin-top:-5px;'></div>
+
+You have the blood of dwarf heroes flowing through your veins. You gain the following benefits:
+ - Increase your Constitution score by 1, to a max of 20.
+ - Whenever you take the Dodge action in combat, you can spend one Hit Die to heal yourself. Roll the die, add your Constitution modifier, and regain a number of hit points equal to the total (minimum of 1).
+
+### Dwarven Sharpshooter 
+*Prerequisite: Dwarf (ironforge)*
+<div style='margin-top:-5px;'></div>
+
+[Benefits when wielding firearms.]
+
+\pagebreakNum
+### Elusiveness
+*Prerequisite: Night elf*
+<div style='margin-top:-5px;'></div>
+
+You are able to use your ability to meld into the shadows to escape from harm. You gain the following benefits:
+- Increase your Dexterity or Wisdom by 1, to a maximum of 20.
+- You have advantage on Dexterity (Stealth) checks.
+- Immediately after you take damage, you can use a reaction to magically become invisible until the end of your next turn or until you attack, deal damage, or force someone to make a saving throw. Once you use this ability, you can't do so again until you finish a short or long rest.
+
+### Elven Accuracy
+*Prerequisite: Blood elf, forsaken (elf), night elf, nightborne, or void elf*
+<div style='margin-top:-5px;'></div>
+
+The accuracy of elves is legendary, especially that of elf archers and spellcasters. You have an uncanny aim with attackss that rely on precision rather than brute force. You gain the following benefits:
+ - Increase your Dexterity, intelligence, Wisdom, or Charisma score by 1, to a maximum of 20.
+ - Whenever you have advantage on an attack roll using Dexterity, Intelligence, Wisdom, or Charisma, you can reroll one of the dice once.
+
+### Embrace of the Void
+*Prerequisite: Void elf*
+<div style='margin-top:-5px;'></div>
+
+You have strengthened your ability to call upon the void infused in your body. You gain the following benefits:
+ - Increase your Intelligence, Wisdom, or Charisma score by 1, to a maximum of 20.
+ - When you roll necrotic damage for a spell you cast, you can reroll any roll of 1 on the necrotic damage dice, but you must use the new roll, even if it is another 1.
+ - When you cast a spell that deals necrotic damage, you can cause void to wreathe you until the end of your next turn. The void doesn't harm, and reduces all light within 30 feet to darkness, and light within an additional 30 feet to dim light. While the void is present, any creature within 5 feet of you that hits you with a melee attack takes 1d4 damage.
+ 
+### Eredar Heritage
+*Prerequisite: Draenei*
+<div style='margin-top:-5px;'></div>
+
+The eredar people are known throughout the Great Dark Beyond to be supremely talented magic users, something that you embody as an example. Choose a class: druid, mage, priest, shaman, or warlock. You learn one cantrip, one 1st level spell, and one 2nd level spell based on the class you chose, as seen in the Eredar Heritage table. 
+
+You can cast your 1st and 2nd level spell each once per day without expending a spell slot and regain the ability to do so when you finish a long rest. Your spellcasting ability for these spells depends on the class you chose: Charisma for priest; Wisdom for druid or shaman; or Intelligence for mage or warlock.
+
+\columnbreak
+##### Eredar Heritage
+Class   | Cantrip           | 1st Level <br/> Spell   | 2nd Level Spell
+--------|-------------------|-------------------|----------------
+Druid   |*druidcraft*       |*animal friendship*|*barkskin*
+Mage    |*prestidigitation* |*mage  <br/> armor*|*mirror  <br/> image*
+Priest  |*thaumaturgy*      |*sanctuary*        |*lesser restoration*
+Shaman  |*invoke elements*  |*✦ elemental shock*|*healing  <br/>spirit ^XGE^*
+Warlock |*diabolism*        |*✦ demon skin*     |*scorching ray*
+
+
+### Faction Grudge
+*Prerequisite: Any race*
+<div style='margin-top:-5px;'></div>
+
+You have a deep hatred for a particular member of the opposite faction. Choose two races of the opposite faction to bear the burden of your wrath (each race includes all of it's sub races). You gain the following benefits:
+ - Increase your Strength, Constitution, or Wisdom by 1, to a maximum of 20.
+ - During the first round of combat against your chosen foes, your attack rolls against them have advantage.
+ - When any of your chosen foes make an opportunity attack against you, it makes the attack roll with disadvantage.
+ - When you make an Intelligence (Arcana, History, Nature, or Religion) check to recall information about your chosen foes, you add double your proficiency bonus to the check, even if you're not normally proficient in the skill.
+
+### Feed the Addiction
+*Prerequisite: Blood Elf*
+<div style='margin-top:-5px;'></div>
+
+[Can gain temp hp when you save against spells.]
+
+\pagebreakNum
+### Hardened Predator
+*Prerequisite: Worgen*
+<div style='margin-top:-5px;'></div>
+
+You have grown accustom to your worgen form, realizing the benefits that come with it. You gain the following benefits while in your worgen form:
+ - You have advantage on Wisdom (Perception) checks that rely on smell.
+ - While both your hands are empty, you can take the Dash action as a bonus action, running on all fours.
+ - Your claws grow large, and become natural weapons, which you can use to make unarmed strikes. If you hit with them, you deal slashing damage equal to 1d4 + your Strength modifier, instead of normal bludgeoning damage for an unarmed strike.
+ - If you make a bite attack as an action, you can use your bonus action to make an attack with your claws.
+
+#### Hardened Predator
+*Prerequisite: Worgen*
+
+You have grown accustom to your worgen form, realizing the benefits that come with it. You gain the following benefits while in your worgen form:
+- Your movement speed increases by 10 feet.
+- Your claws grow large, and become natural weapons, which you can use to make unarmed strikes. If you hit with them, you deal slashing damage equal to 1d4 + your Strength modifier, instead of normal bludgeoning damage for an unarmed strike.
+- If you make a bite attack as an action, you can use your bonus action to make an attack with your claws.
+- While both your hands are empty, you can run on all fours, doubling your speed until the end of the tum. Once you use this trait, you can't use it again until you move 0 feet on one of your turns.
+
+### Human Endurance
+*Prerequisite: Human*
+<div style='margin-top:-5px;'></div>
+
+Your enduring spirit allows you to better avoid deadly blows. You gain the following benefits:
+- Increase your Dexterity, Constitution, or Charisma score by 1, to a maximum of 20.
+- When a creature you can see hits you with an attack roll, you can use your reaction to force that creature to reroll. Once you use this ability, you can’t use it again until you roll initiative at the start of combat or until you finish a short or long rest.
+
+
+### Inspirational Spirit
+*Prerequisite: Human*
+<div style='margin-top:-5px;'></div>
+
+Your spirit to defy the odds can inspire your allies, preventing them from faltering at the worst times.
+
+When an ally you can see within 30 feet of you rolls a 1 on the d20 for an attack roll, an ability check, or a saving throw, you can use your reaction to let the ally reroll the die. The ally must use the new roll.
+
+When you use this ability, you can't use your Human Spirit racial trait before the end of your next turn
+
+### Keen Nose
+*Prerequisite: Worgen*
+<div style='margin-top:-5px;'></div>
+
+Your nose is especially keen, able to sniff out hidden enemies. You gain the following benefits:
+- You have advantage on Wisdom (Perception) checks based on smell.
+- You can detect the presence, but not exact location, of other creatures within 30 feet by sense of smell. Being downwind of the source doubles this range while being upwind halves it. Strong scents like smoke or rotting garbage can be detected at twice the range while overpowering scents such as skunk musk can be detected at triple the range. If you are within 5 feet of the scent's source, you pinpoint its location.
+- You can make a Wisdom (Survival) check to find or follow a scent. The typical DC for a fresh trail is 10 (or 20, if obscured by false and/or powerful odors), increasing or decreasing depending on how strong the quarry’s odor is, the number of creatures, and the age of the trail. For each hour that the trail is cold, the DC increases by 2. The type of surface, surface conditions, and poor visibility does not affect the DC.
+
+### Like A Boss
+*Prerequisite: Goblin*
+<div style='margin-top:-5px;'></div>
+
+You are accustomed to using others to avoid being attacked. You gain the following benefits:
+- Increase your Dexterity or Charisma score by 1, to a maximum of 20.
+- When a creature you can see targets you with an attack and another creature is within 5 feet of you, you can use your reaction to impose disadvantage on the attack roll. Once you use this ability, you can’t do so again until you finish a short or long rest.
+- [TBD.]
+
+### Mana Tap
+*Prerequisite: Blood elf*
+<div style='margin-top:-5px;'></div>
+
+Following the teachings of Prince Kael'thas, you are better able to absorb and release magical energy. You gain the following benefits:
+- You learn the *arcane blast* cantrip. Intelligence is your spellcasting ability for this spell. 
+- You can also unleash the cantrip as an Arcane Torrent, increasing the damage dice from 1d8 to 1d12. You can do so a number of times equal to your proficiency bonus and regain the ability to do so when you finish a short or long rest.
+- When you successfully save against a spell or spell-like effect, you can gain one of the following benefits: you regain a use of Spell Turning, you can regain a casting of *detect magic* from Arcane Knowledge, or you regain all expended uses of Arcane Torrent. You do not gain this benefit if you have used Spell Turning this turn.
+
+### Masquerade
+*Prerequisite: Nightborne*
+<div style='margin-top:-5px;'></div>
+
+The masquerade, the dance of disguise and detection, is an important part of Nightborne culture. You are better than most at performing this charade, gaining the following benefits:
+- Increase your Intelligence, Wisdom, or Charisma by 1, to a maximum of 20.
+- You learn the *disguise self* spell and can cast it without expending a spell slot. You regain the ability to do so when you finish a short or long rest. 
+- You have an advantage on Charisma (Deception) and Charisma (Performance) checks when trying to pass yourself off as a different person.
+- You have advantage on Intelligence (Investigation) checks made to disbelieve illusions and can do so as a bonus action.
+
+\pagebreakNum
+### Mechagnome Internals
+*Prerequisite: Gnome (mechagnome)*
+<div style='margin-top:-5px;'></div>
+
+You have spent additional time replacing your limbs and organs with mechanical counterparts. You gain the benefit of another three Mechanical Improvements.
+
+### Monastery Initiate
+*Prerequisite: Pandaren*
+<div style='margin-top:-5px;'></div>
+
+[Monk-like abilities.]
+
+### Nimble Fingers
+*Prerequisite: Gnome (gnomeregan)*
+<div style='margin-top:-5px;'></div>
+
+[TBD.] You gain the following benefits:
+- Increase your Dexterity score by 1, to a maximum of 20.
+- You can use the Use an Object action as a bonus action.
+- You have advantage on Dexterity (Sleight of Hand) checks and other Dexterity checks based on manual dexterity, such as picking a lock or playing an instrument.
+
+### Orcish Fury
+*Prerequisite: Orc*
+<div style='margin-top:-5px;'></div>
+
+Your fury burns tirelessly. You gain the following benefits:
+ - Increase your Strength or Constitution score by 1, to a maximum of 20.
+ - When you hit with an attack made with a simple or martial weapon, you can roll one of the weapon's damage dice an additional time and add it as extra damage of the weapon's damage type. Once you use this ability, you can't use it again until you finish a short or long rest.
+ - Immediately after you use your Relentless Endurance trait, you can make one weapon attack as a reaction.
+
+### Prodigy
+*Prerequisite: Forsaken (human), gnome, or human*
+<div style='margin-top:-5px;'></div>
+
+You have a knack for learning new things. You gain the following benefits:
+ - You gain one skill proficiency of your choice, one tool proficiency of your choice, and fluency in one language of your choice.
+ - Choose one skill in which you have proficiency. You gain expertise with that skill. The skill you choose must be one that isn't already benefiting from a feature, such as Expertise, that doubles your proficiency bonus.
+
+### Regeneratin'
+*Prerequisite: Troll*
+<div style='margin-top:-5px;'></div>
+
+You gain an additional number of 1d12 hit dice equal to your proficiency bonus, which does not increase your hit point total. You can only use these hit dice to regain hit points through a short rest or your regeneration trait.
+
+Additionally, if you lose a body part, the missing part will regrow and return to full functionality after 1d6 + 1 days if you have at least 1 hit point the whole time.
+
+\columnbreak
+### Savage Leader
+*Prerequisite: Orc*
+<div style='margin-top:-5px;'></div>
+
+[TBD.] You gain the following benefits:
+- You can use your Constitution modifier in place of your Charisma modifier when making Intimidation and Persuasion checks.
+- [TBD]
+- [TBD]
+
+### Sentinel Apprentice
+*Prerequisite: Night elf*
+<div style='margin-top:-5px;'></div>
+
+[Benefits related to moonglaive]
+
+### Sheep's Clothing
+*Prerequisite: Worgen*
+<div style='margin-top:-5px;'></div>
+
+[TBD]
+- You have advantage on checks made to pass yourself off as human.
+- You cannot be forced out of human form by making an attack or casting a spell. While transformed, you lose access to any natural attacks based on your worgen form.
+- [TBD.]
+- [TBD.]
+
+### Sorcerer's Apprentice
+*Prerequisite: Human (Dalaran)*
+<div style='margin-top:-5px;'></div>
+
+You have spent time learning the basics of magic, gaining the following benefits:
+- Increase your Intelligence score by 1, to a maximum of 20.
+- You gain proficiency in the Arcana skill. If you are already proficient in the skill, you add double your proficiency bonus to checks you make with it.
+- You learn the *prestidigitation* and *detect magic* spells. You can cast *detect magic* once without expending a spell slot, and you regain the ability to do so when you finish a long rest.
+
+### Spiritual Guidance
+*Prerequisite: Dwarf (wildhamnmer), orc, tauren, or troll*
+<div style='margin-top:-5px;'></div>
+
+You have seen the balance and harmony the spirits bring. You gain the following benefits:
+ - Increase your Wisdom or Charisma score by 1, to a maximum of 20.
+ - You have advantage on saving throws against being frightened. 
+ - You learn the *healing spirit* spell, and can cast it once with this feat, without expending a spell slot. You regain the ability to cast it in this way when you finish a long rest. Wisdom is your spellcasting ability for this spell.
+
+\pagebreakNum
+### Squat Nimbleness
+*Prerequisite: Dwarf, gnome, or goblin*
+<div style='margin-top:-5px;'></div>
+
+You are uncommonly nimble for your race. You gain the following benefits:
+ - Increase your Strength or Dexterity score by 1, to a maximum of 20.
+ - Increase your walking speed by 5 feet.
+ - You gain proficiency in the Acrobatics or Athletics skill (your choice).
+ - You have advantage on any Strength (Athletics) or Dexterity (Acrobatics) check you make to escape from being grappled.
+
+### Stormhammerer
+*Prerequisite: Dwarf (wildhammer)*
+<div style='margin-top:-5px;'></div>
+
+[Good at throwing weapons. Can craft stormhammers? Increase range of thrown weapons to that of projectile weapons (x4 normal range)?]
+
+### Tauren Brave
+*Prerequisite: Tauren*
+<div style='margin-top:-5px;'></div>
+
+[Benefits when wielding tauren totem or halberd.]
+
+[Bonus damage when using tauren totem with a spell attack (think booming blade)]
+
+### Tauren Endurance
+*Prerequisite: Tauren*
+<div style='margin-top:-5px;'></div>
+
+Your hide toughens, improving your ability to shrug off attacks. You gain the following benefits:
+ - Increase your Strength, Dexterity or Constitution score by 1, to a maximum of 20.
+ - Your hide thickens. While you aren't wearing armor, you can calculate your AC as 10 + your Dexterity modifier + your Constitution modifier. You can use a shield and still gain this benefit.
+ - Your hit point maximum increases by an amount equal to your level when you gain this feat. Whenever you gain a level thereafter, your hit point maximum increases by an additional 1 hit point.
+
+### Teachings of Cenarius
+*Prerequisite: Night Elf*
+<div style='margin-top:-5px;'></div>
+
+By studying with the children of the demigod Cenarius, you have learned how to emulate their connection to the beasts of the wild. You gain the following benefits: 
+- Increase your Wisdom by 1, to a maximum of 20.
+- You have the ability to communicate in a limited manner with beasts and plants. They can understand the meaning of your words, though you have no special ability to understand them in return. You have advantage on all Charisma checks you make to influence them.
+- You know the *animal friendship* and *speak with animals* spells. You can cast each of these spells without expending a spell slot. Once you cast either of these spells in this way, you can't cast that spell in this way again until you finish a long rest. You can also cast these spells using spell slots you have of the appropriate level. Wisdom is your spellcasting ability for these spells.
+
+\columnbreak
+### Time is Money
+*Prerequisite: Goblin*
+<div style='margin-top:-5px;'></div>
+
+[Something. Moves faster, can take extra...action?]
+- Your movement speed increases by 10 feet.
+- You can take the Dash action as a bonus action. 
+
+### Touch of Elune
+*Prerequisite: Night elf*
+<div style='margin-top:-5px;'></div>
+
+[Something. Benefits during the day, different benefits during the night. Faster at night.]
+
+### Touch of the Grave
+*Prerequisite: Forsaken*
+<div style='margin-top:-5px;'></div>
+
+[Necrotic bonus damage or spells.]
+- You learn the *chill touch* cantrip. Intelligence, Wisdom, or Charisma (your choice) is your spellcasting modifier for it.
+
+### Touch of the Naaru
+*Prerequisite: Draenei (exodar)*
+<div style='margin-top:-5px;'></div>
+
+- Your Gift of the Naaru ability recharges on a short or long rest.
+- While you have a use of Gift of the Naaru remaining, you have a holographic symbol on your forehead that sheds light as a torch. You can suppress or resume this light as an action.
+- [TBD.]
+
+### Twinblade Master
+*Prerequisite: Blood elf*
+<div style='margin-top:-5px;'></div>
+
+You are descended from a master of the twinblade, and some of that mastery has passed on to you. You gain the following benefits:
+-  Increase your Dexterity or Strength score by 1, to a maximum of 20.
+- While wielding a twinblade with two hands, you gain +1 AC.
+- A twinblade has the finesse property when you wield it.
+
+### Viciousness
+*Prerequisite: Worgen*
+
+You gain the following benefits:
+- SDS
+
+### Way of the Wok
+*Prerequisite: Pandaren*
+<div style='margin-top:-5px;'></div>
+
+You have mastered a variety of special recipes, allowing you to prepare exotic dishes with useful effects. You gain the following benefits: [??????]
+
+\pagebreakNum
+### Warden Apprentice
+*Prerequisite: Night elf*
+<div style='margin-top:-5px;'></div>
+
+[Benefits when using moon sword/umbral crescent.]
+
+### Well-Rested
+*Prerequisite: Pandaren*
+<div style='margin-top:-5px;'></div>
+
+- When you finish a long rest, you regain all expended hit dice and remove an additional level of exhaustion.
+
+[https://www.dndbeyond.com/feats/131-well-rested](Some alterations needed/)
+
+### Wolven Warrior
+*Prerequisite: Orc*
+<div style='margin-top:-5px;'></div>
+
+[Benefits when wielding warclaws.]
+
+<!-- 
+<div class='footnote'>PART 1 | CUSTOMIZATION OPTIONS</div>
+<img src='https://www.gmbinder.com/images/yeTeNNY.jpg' style='position:absolute; top:750px; right:-100px; width:1150px' />
+<img src='https://www.gmbinder.com/images/3e9S91s.png' style='position:absolute; top:-120px; right:0px; width:800px' /> -->
