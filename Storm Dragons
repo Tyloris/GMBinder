@@ -1,0 +1,489 @@
+<style>
+/* GLOBAL FORMATTING  */
+
+  /* Resize page to international A4 */
+  .phb {
+    width: 210mm;
+    height: 296.8mm;
+  }
+  .phb:after { content: ""; }
+
+
+/* TABLE OF CONTENTS  */
+
+  /* toc specifically wants black text. This resets the headers*/
+  .toc a {
+    color: inherit !important;
+  }
+  /* Allow dot leaders to fill remaining space but not overlap */
+  .toc li span:nth-child(2) {
+    width: auto;
+    overflow: hidden;
+    white-space: nowrap;
+    display: block;
+  }
+  .toc li span:nth-child(2):after {
+    font-family: BookSanity;
+    font-size: 0.317cm;
+    font-weight: normal;
+    color: black;
+    content:
+      " ........................................"
+      "........................................."
+      ".........................................";
+    }
+
+  /* Style TOC page numbers*/
+  .toc li span:first-child {
+    float: right;
+    font-family: BookSanity;
+    font-size: 0.317cm;
+    font-weight: normal;
+    color: black;
+    margin-left: 1px;
+  }
+
+  /* Adjust TOC H3 styles */
+  .toc li h3 span:nth-child(2):after {
+  	content: " ";
+  }
+  .toc li h3 {
+    margin-bottom: 4px !important;
+    margin-top: 10px !important;
+    line-height: initial !important;
+  }
+  .toc li h3 span:first-child {
+  	line-height: 1.8em !important;
+  }
+
+  /* Reduce TOC list indentation*/
+  .toc ul ul {
+  	margin-left: 10px !important;
+  }
+  .toc>ul>li {
+    margin-bottom: initial !important;
+  }
+
+
+/* TABLES AND BLOCKS */
+
+  /* Adjust tables */
+  table tr:nth-child(odd) td { background-color: #FFF0f5; }
+  .phb hr+section blockquote tr:nth-child(odd) td { background-color: transparent; }
+
+  /* Clear internal padding and add gap above for green note blocks*/
+  .phb blockquote {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .phb blockquote { margin-top: 1em; }
+
+  /* Clear internal padding in creature statblocks */
+  .phb hr+section blockquote {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  .phb blockquote {
+    box-shadow: 1px 4px 14px rgba(0,0,0,0.42);
+  }
+
+  /* For creature statblocks within range (start and end must be specified),
+     don't show a background. Used for the appendix creatures */
+  .phb:nth-of-type(n+107):nth-of-type(-n+130) hr+section blockquote {
+      background: none;
+      border: none;
+      box-shadow: none;
+  }
+
+
+/* FOOTER */
+
+  /* Footnotes */
+  .phb .pageNumber {
+    color: #7e735c;
+    z-index: 1000;
+  }
+  .phb .footnote { color: #7e735c; }
+
+  /* On odd child pages, have the Monster Manual page tear and lettering */
+  .phb:nth-child(odd):after {
+    content: '';
+    height: 125px;
+    background-image: url(https://gmbinder.com/images/lLWeevR.png), url('https://gmbinder.com/images/YWardeu.png');
+    background-size: 120px 120px, 816px 55px;
+    background-repeat: no-repeat, no-repeat;
+    background-position: bottom right, bottom;
+  }
+
+  /* Hacked reverse of the Monster Manual page tear for alternating pages */
+  .phb:nth-child(even):after {
+    content: '';
+    height: 125px;
+    background-image: url(https://gmbinder.com/images/lLWeevR.png), url('https://gmbinder.com/images/YWardeu.png');
+    background-size: 120px 120px, 816px 55px;
+    background-repeat: no-repeat, no-repeat;
+    background-position: bottom right, bottom;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+  }
+
+  /* The letter in the Monster Manual page tear */
+  .pageLetter {
+    position: absolute;
+    right: 25px;
+    bottom: 87.5px;
+    color: #673e1c;
+    z-index: 1000;
+    font-size: 135%;
+  }
+
+  /* Reversed for alternating pages */
+  .phb:nth-child(even) .pageLetter {
+      left: 25px;
+  }
+
+
+/* MONSTER MANUAL LETTER SECTION HEADER */
+
+  /* Adds the surrounding framing for the big, bold monster letter headings */
+  .letterheader {
+    position: absolute;
+    top: 30px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: url(https://gmbinder.com/images/YH3aESG.png);
+    background-size: cover;
+    width: 775px;
+    height: 133px;
+  }
+
+  /* Base component for the actual letter in the heading */
+  .mmletter {
+      position: absolute;
+      top: 20px;
+      left: 0;
+      right: 0;
+      margin-left: auto;
+      margin-right: auto;
+      background-size: cover;
+      width: 163.2px;
+      height: 163.2px;
+  }
+
+  /* Use one in combination with .mmletter to show that letter */
+  .mml-a { background-image: url(https://gmbinder.com/images/fVVv93s.png); }
+  .mml-b { background-image: url(https://gmbinder.com/images/21X6N0B.png); }
+  .mml-c { background-image: url(https://gmbinder.com/images/MvnpOWF.png); }
+  .mml-d { background-image: url(https://gmbinder.com/images/AFbLU4P.png); }
+  .mml-e { background-image: url(https://gmbinder.com/images/28NVNf9.png); }
+  .mml-f { background-image: url(https://gmbinder.com/images/Oyrhmqy.png); }
+  .mml-g { background-image: url(https://gmbinder.com/images/fRyiQn4.png); }
+  .mml-h { background-image: url(https://gmbinder.com/images/N8NamlT.png); }
+  .mml-i { background-image: url(https://gmbinder.com/images/xWI93aa.png); }
+  .mml-j { background-image: url(https://gmbinder.com/images/GgIzsun.png); }
+  .mml-k { background-image: url(https://gmbinder.com/images/OcObsWl.png); }
+  .mml-l { background-image: url(https://gmbinder.com/images/B7AUyR6.png); }
+  .mml-m { background-image: url(https://gmbinder.com/images/q4wXoxt.png); }
+  .mml-n { background-image: url(https://gmbinder.com/images/OJtC4w9.png); }
+  .mml-o { background-image: url(https://gmbinder.com/images/adeRr5d.png); }
+  .mml-p { background-image: url(https://gmbinder.com/images/EEhcrSR.png); }
+  .mml-q { background-image: url(https://gmbinder.com/images/O1AhfzL.png); }
+  .mml-r { background-image: url(https://gmbinder.com/images/w66eIuZ.png); }
+  .mml-s { background-image: url(https://gmbinder.com/images/YEoe0PP.png); }
+  .mml-t { background-image: url(https://gmbinder.com/images/7Bk9D35.png); }
+  .mml-u { background-image: url(https://gmbinder.com/images/uVJZYUg.png); }
+  .mml-v { background-image: url(https://gmbinder.com/images/gKjngey.png); }
+  .mml-w { background-image: url(https://gmbinder.com/images/14WWpsC.png); }
+  .mml-x { background-image: url(https://gmbinder.com/images/ojIYjh0.png); }
+  .mml-y { background-image: url(https://gmbinder.com/images/Gi1ePwY.png); }
+  .mml-z { background-image: url(https://gmbinder.com/images/0ZTFNVs.png); }
+
+
+/* INK BLOT STYLES */
+
+  /* Root style for inkblots. Use alone, or together with
+  one of the inkb lotstyle classes below. Essentially:
+  <img url='{url}' class='inkblot inkblot-blue' />
+  */
+  .inkblot {
+    position: absolute;
+    mix-blend-mode: multiply;
+    opacity: 0.6;
+  }
+
+  .inkblot-blue {
+    filter: hue-rotate(190deg) saturate(120%)
+  }
+
+  .inkblot-green {
+    filter: hue-rotate(120deg)
+  }
+
+</style>
+
+## Storm Dragons
+
+In mountainous Stormheim, the half-giant Vrykul both revere and fear the mighty Storm dragons, who rule the skies and the mountaintops as uncontested kings.
+
+Deep purple or red scales laced with wild electricity, wings like shocks of thunder, and slim, lean bodies characterise these mysterious cousins to the true Dragonflights. Little is known of them, other than their undisputed mastery of Stormhein's stormy skies, but it is known that they are noble and considerate creatures... to those they consider worthy.
+
+***Noble Cousins.*** The storm dragons appear unrelated to the five great Dragonflights, and were given no charge, blessing, nor obligations by the Titans. Nevertheless, they hold in their hearts the noble strength and will of dragonkind, and to the Vrykul of Stormheim they are close to divine, acting as respected protectors of Vrykul tradition. 
+
+___
+> ## Storm Dragon Whelp <!-- https://wc5e-cr-calculator.frogvall.com/?0;15;82;4;13;28;3;10;3;10;3;0;0;0;0;0;0;;;;1;3;;;;;;;;;;1;;;;;;;;10;;;;;;;;;;; --> <!-- If metal: https://wc5e-cr-calculator.frogvall.com/?0;15;82;4;13;36;4;11;4;11;4;0;0;0;0;0;0;;;;1;3;;;;;;;;;;1;;;;;;;;10;;;;;;;;;;; -->
+>*Small dragon, neutral*
+> ___
+> - **Armor Class** 15 (natural armor)
+> - **Hit Points** 82 (15d6 + 30)
+> - **Speed** 30 ft., fly 60 ft.
+>___
+> |  STR  |  DEX  |  CON  |  INT  |  WIS  |  CHA  |
+> |:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+> |15 (+2)|10 (+0)|14 (+2)|12 (+1)|11 (+0)|14 (+2)|
+>___
+> - **Saving Throws** Str +5, Dex +2, Con +4
+> - **Skills** Perception +2, Survival +2
+> - **Damage Resistances** thunder
+> - **Damage Immunities** lightning
+> - **Senses** blindsight 10 ft., darkvision 60 ft., passive Perception 12
+> - **Languages** Common, Draconic
+> - **Challenge** 3 (700 XP)
+> ___
+> ***Conductivity.*** When the whelpling deals lightning damage to a creature wielding a metal weapon or wearing metal armor, all lightning damage dice become d8s.
+> 
+> ***Electrified Scales.*** A creature that touches the whelpling or hits it with a melee attack takes 3 (1d6) lightning damage.
+>
+> ### Actions
+> ***Bite.*** *Melee Weapon Attack:* +4 to hit, reach 5 ft., one target. *Hit:* 7 (1d10 + 2) piercing damage plus 3 (1d6) lightning damage.
+>
+> ***Lightning Breath (Recharge 5-6).*** The whelpling exhales lightning in a 15-foot cone. Each creature in that area must make a DC 13 Dexterity saving throw, taking 14 (4d6) lightning damage on a failed save, or half as much damage on a successful one.
+
+\columnbreak
+
+***Flight Divided.*** These are several broods of storm dragons, each loyal to their brood mother. These broods display differing loyalties and intentions, forging their own alliances, rivalries and intentions independent of one another. While some may protect Stormheim's occupants, others may believe themselves above such things and claim land as their own, and its people as food. As such, the vrykul below them are always ready with offerings - or harpoons.
+
+___
+> ## Juvenile Storm Dragon <!-- https://wc5e-cr-calculator.frogvall.com/?1;16;142;7;15;70;7;42;7;42;7;0;0;0;0;0;0;;;1;1;3;;;;;;;;;;1;;;;;;;;10;;;;;;;;;;; --> <!-- If metal: https://wc5e-cr-calculator.frogvall.com/?1;16;142;7;15;90;9;54;9;54;9;0;0;0;0;0;0;;;1;1;3;;;;;;;;;;1;;;;;;;;10;;;;;;;;;;; -->
+>*Large dragon, meutral*
+> ___
+> - **Armor Class** 16 (natural armor)
+> - **Hit Points** 142 (15d10 + 60)
+> - **Speed** 40 ft., fly 80 ft.
+> ___
+> |  STR  |  DEX  |  CON  |  INT  |  WIS  |  CHA  |
+> |:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+> |19 (+4)|10 (+0)|18 (+4)|14 (+2)|13 (+1)|16 (+3)|
+>___
+> - **Saving Throws** Str +7, Dex +3, Con +7
+> - **Skills** Perception +4, Survival +4
+> - **Damage Resistances** thunder
+> - **Damage Immunities** lightning
+> - **Senses** blindsight 10 ft., darkvision 60ft., passive Perception 14
+> - **Languages** Common, Draconic
+> - **Challenge** 8 (3,900 XP)
+> ___
+> ***Conductivity.*** When the dragon deals lightning damage to a creature wielding a metal weapon or wearing metal armor, all lightning damage dice become d8s.
+> 
+> ***Electrified Scales.*** A creature that touches the dragon or hits it with a melee attack takes 7 (2d6) lightning damage.
+>
+> ### Actions
+> ***Multiattack.*** The dragon makes two attacks: one with its bite and one with its claws.
+>
+> ***Bite.*** *Melee Weapon Attack:* +7 to hit, reach 10 ft., one target. *Hit:* 15 (2d10 + 4) piercing damage plus 7 (2d6) lightning damage.
+>
+> ***Claw.*** *Melee Weapon Attack:* +7 to hit, reach 5 ft., one target. *Hit:* 11 (2d6 + 4) slashing damage plus 7 (2d6) lightning damage.
+>
+> ***Lightning Breath (Recharge 5-6).*** The dragon exhales lightning in a 30-foot cone. Each creature in that area must make a DC 15 Dexterity saving throw, taking 35 (10d6) lightning damage on a failed save, or half as much damage on a successful one.
+>
+> ***Storm Strike.*** The dragon spits a bolt of lightning at a point it can see within 60 feet. Each creature within 5 feet of that point must make a DC 15 Dexterity saving throw, taking 21 (6d6) lightning damage on a failed save, or half as much damage on a successful one. 
+
+<!-- 
+<img src='https://i.pinimg.com/originals/ca/25/2f/ca252f228aa3202a1982c93a9d0180fc.jpg' style='position:absolute; top:660px; right:0px; width:1050px' />
+<img src='https://www.gmbinder.com/images/MVDaLa2.png' style='position:absolute; top:-100px; right:0px; width:900px' /> 
+
+<div class="pageLetter">S</div>
+<div class='footnote'>STORM DRAGONS</div>
+
+\pagebreakNum
+
+
+
+<img src='https://i.pinimg.com/originals/e8/45/71/e8457122d833f9098291c0e15da8563d.png' style='position:absolute; top:100px; right:-350px; width:800px' />
+<img src='https://www.gmbinder.com/images/l4AHa3B.png' style='position:absolute; top:-200px; right:-130px; width:1100px' /> -->
+
+<div class="pageLetter">S</div>
+<div class='footnote'>STORM DRAGONS</div>
+
+\pagebreakNum
+
+
+___
+___
+> ## Adult Storm Dragon <!-- https://wc5e-cr-calculator.frogvall.com/?3;17;187;12;20;104;52;62;52;62;52;0;0;0;0;0;0;;;1;1;3;;;;;;;;;1;3;;;;;;;;10;;;;;;;;;;; --> <!-- If metal: https://wc5e-cr-calculator.frogvall.com/?3;17;187;12;20;134;64;80;64;80;64;0;0;0;0;0;0;;;1;1;3;;;;;;;;;1;3;;;;;;;;10;;;;;;;;;;; -->
+>*Huge dragon, neutral*
+> ___
+> - **Armor Class** 17 (natural armor)
+> - **Hit Points** 187 (15d12 + 90)
+> - **Speed** 40 ft., fly 80 ft.
+>___
+> |  STR  |  DEX  |  CON  |  INT  |  WIS  |  CHA  |
+> |:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+> |23 (+6)|10 (+0)|22 (+6)|16 (+3)|15 (+2)|18 (+4)|
+>___
+> - **Saving Throws** Str +12, Dex +6, Con +12
+> - **Skills**  Perception +8, Survival +8
+> - **Damage Resistances** thunder
+> - **Damage Immunities** lightning
+> - **Senses** blindsight 10 ft., darkvision 60 ft., passive Perception 18
+> - **Languages** Common, Draconic
+> - **Challenge** 18 (20,000 XP)
+> ___
+> ***Conductivity.*** When the dragon deals lightning damage to a creature wielding a metal weapon or wearing metal armor, all lightning damage dice become d8s.
+> 
+> ***Cyclone Winds.***  Whenever the dragon uses its wing attack, it can create a small cyclone around one creature within 30 feet of it. The creature must succeed a DC 20 Dexterity saving throw, or be grappled until the beginning of the dragon's next turn.
+>
+> ***Electrified Scales.*** A creature that touches the dragon or hits it with a melee attack takes 10 (3d6) lightning damage.
+>
+> ***Legendary Resistance (3/Day).*** If the dragon fails a saving throw, it can choose to succeed instead.
+>
+> ***Lightning Absorption.*** Whenever the dragon is subjected to lightning damage, it takes no damage and regains a number of hit points equal to the lightning damage dealt.
+>
+> ### Actions
+> ***Multiattack.*** The dragon makes two attacks: one with its bite and one with its claws.
+>
+> ***Bite.*** *Melee Weapon Attack:* +12 to hit, reach 10 ft., one target. *Hit:* 17 (2d10 + 6) piercing damage plus 10 (3d6) lightning damage.
+>
+> ***Claw.*** *Melee Weapon Attack:* +12 to hit, reach 5 ft., one target. *Hit:* 13 (2d6 + 6) slashing damage plus 10 (3d6) lightning damage.
+>
+> ***Tail Sweep.*** *Melee Weapon Attack:* +12 to hit, reach <br/> 15 ft., all targets in reach. *Hit:* 15 (2d8 + 6) bludgeoning damage plus 10 (3d6) lightning damage.
+>
+> ***Lightning Breath (Recharge 5-6).*** The dragon exhales lightning in a 60-foot cone. Each creature in that area must make a DC 20 Dexterity saving throw, taking 52 (15d6) lightning damage on a failed save, or half as much damage on a successful one. 
+<br/>    In addition, any creature damaged by the lightning breath must succeed a DC 20 Constitution saving throw or be paralyzed until the end of the dragon's next turn.
+>
+> ***Storm Strike.*** The dragon spits a bolt of lightning at a point it can see within 120 feet. Each creature within 5 feet of that point must make a DC 20 Dexterity saving throw, taking 31 (9d6) lightning damage on a failed save, or half as much damage on a successful one. 
+<br/>    In addition, any creature damaged by the storm strike has disadvantage on saving throws against effects that deal lightning damage until the end of the dragon's next turn.
+>
+>
+> ### Legendary Actions
+> The dragon can take 3 legendary actions, choosing from the options below. Only one legendary action option can be used at a time and only at the end of another creature's turn. The dragon regains spent legendary actions at the start of its turn.
+>
+> **Lightning Bolt.** *Ranged Spell Attack:* +12 to hit, range 
+<br/>    120 ft., one target. *Hit:* 10 (3d6) lightning damage.
+> <br/> **Gust of Wind.** A creature within 20 feet of the dragon 
+<br/>    must succeed on a DC 20 Strength saving throw or 
+<br/>    be knocked back up to 20 feet. 
+> <br/> **Thunderous Roar (Costs 2 Actions).** Each creature within 
+<br/>    30 feet of the dragon must make a DC 20 
+<br/>    Constitution saving throw or take 13 (3d8) thunder 
+<br/>    damage and become deafened for 1 minute. 
+<br/>    A successful save results in half damage and no 
+<br/>    other effect. The roar is audible for 300 feet.
+> <br/> **Wing Attack (Costs 2 Actions).** The dragon beats its 
+<br/>    wings. Each creature within 10 feet of the dragon 
+<br/>    must succeed on a DC 20 Dexterity saving throw or 
+<br/>    take 13 (2d6 + 6) bludgeoning damage and be 
+<br/>    knocked prone. The dragon can then fly up to half its 
+<br/>    flying speed.
+
+### A Storm Dragon's Lair
+Storm dragons lair in high mountains, where heavy ore content results in heavy storms and regular lightning strikes. 
+
+#### Lair Actions
+On initiative count 20 (losing initiative ties), the dragon can take a lair action to cause one of the following effects; the dragon can't use the same lair action twice in a row:
+
+- Static electricity sparks from all surfaces. Each creature within 120 feet of the dragon must roll a d6. On a 6, they are struck by a stray bolt of lightning, taking 10 (3d6) lightning damage. A creature wielding a metal weapon or wearing metal armor is struck on a roll of 5 or 6.
+- The storm dragon is struck by a bolt of lightning. It takes no damage, but has advantage on all attack rolls and saving throws until it performs its next lair action.
+
+
+
+<img src='https://cdnb.artstation.com/p/assets/images/images/012/739/175/large/kate-mckee-stormsongsky-03.jpg?1536257544' style='position:absolute; top:-100px; right:-20px; width:1050px' />
+<img src='https://www.gmbinder.com/images/iqsWrVi.png' style='position:absolute; top:-230px; right:0px; width:1100px' />
+
+<div class="pageLetter">S</div>
+<div class='footnote'>STORM DRAGONS</div>
+
+\pagebreakNum
+
+___
+___
+> ## Storm Dragon Matriarch
+> *Gargantuan dragon, neutral*
+> ___
+> - **Armor Class** 18 (natural armor)
+> - **Hit Points** 277 (15d20 + 120)
+> - **Speed** 40 ft., fly 80 ft.
+>___
+> |  STR  |  DEX  |  CON  |  INT  |  WIS  |  CHA  |
+> |:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+> |27 (+8)|10 (+0)|26 (+8)|18 (+4)|17 (+3)|20 (+5)|
+>___
+> - **Saving Throws** Str +15, Dex +7, Con +15
+> - **Skills**  Perception +10, Survival +10
+> - **Damage Resistances** thunder
+> - **Damage Immunities** lightning
+> - **Senses** blindsight 10 ft., darkvision 60 ft., passive Perception 20
+> - **Languages** Common, Draconic
+> - **Challenge** 22 (41,000 XP)
+> ___
+> ***Conductivity.*** When the dragon deals lightning damage to a creature wielding a metal weapon or wearing metal armor, all lightning damage dice become d8s.
+> 
+> ***Cyclone Winds.***  Whenever the dragon uses its wing attack, it can create a small cyclone around one creature within 30 feet of it. The creature must succeed a DC 23 Dexterity saving throw, or be grappled until the beginning of the dragon's next turn.
+>
+> ***Electrified Scales.*** A creature that touches the dragon or hits it with a melee attack takes 14 (4d6) lightning damage.
+>
+> ***Leadership.*** Once per turn, the matriarch can roar a special command or warning whenever an allied storm dragon that it can see within 60 feet of it makes an attack roll or a saving throw. The ally can add a d4 to its roll provided it can hear the matriarch. A creature can benefit from only one Leadership die at a time.
+>
+> ***Legendary Resistance (3/Day).*** If the dragon fails a saving throw, it can choose to succeed instead.
+>
+> ***Lightning Absorption.*** Whenever the dragon is subjected to lightning damage, it takes no damage and regains a number of hit points equal to the lightning damage dealt.
+>
+> ### Actions
+> ***Multiattack.*** The dragon makes two attacks: one with its bite and one with its claws.
+>
+> ***Bite.*** *Melee Weapon Attack:* +15 to hit, reach 15 ft., one target. *Hit:* 19 (2d10 + 8) piercing damage plus 14 (4d6) lightning damage.
+>
+> ***Claw.*** *Melee Weapon Attack:* +15 to hit, reach 10 ft., one target. *Hit:* 15 (2d6 + 8) slashing damage plus 14 (4d6) lightning damage.
+>
+> ***Tail Sweep.*** *Melee Weapon Attack:* +15 to hit, reach <br/> 20 ft., all targets in reach. *Hit:* 17 (2d8 + 8) bludgeoning damage plus 14 (4d6) lightning damage.
+>
+> ***Lightning Breath (Recharge 5-6).*** The dragon exhales lightning in a 90-foot cone. Each creature in that area must make a DC 23 Dexterity saving throw, taking 70 (20d6) lightning damage on a failed save, or half as much damage on a successful one. 
+<br/>    In addition, any creature damaged by the lightning breath must succeed a DC 23 Constitution saving throw or be paralyzed until the end of the dragon's next turn.
+>
+> ***Storm Strike.*** The dragon spits a bolt of lightning at a point it can see within 180 feet. Each creature within 10 feet of that point must make a DC 23 Dexterity saving throw, taking 42 (12d6) lightning damage on a failed save, or half as much damage on a successful one. 
+<br/>    In addition, any creature damaged by the storm strike has disadvantage on saving throws against effects that deal lightning damage until the end of the dragon's next turn.
+>
+>
+> ### Legendary Actions
+> The dragon can take 3 legendary actions, choosing from the options below. Only one legendary action option can be used at a time and only at the end of another creature's turn. The dragon regains spent legendary actions at the start of its turn.
+>
+> **Lightning Bolt.** *Ranged Spell Attack:* +15 to hit, range 
+<br/>    180 ft., one target. *Hit:* 14 (4d6) lightning damage.
+> <br/> **Gust of Wind.** A creature within 30 feet of the dragon 
+<br/>    must succeed on a DC 23 Strength saving throw or 
+<br/>    be knocked back up to 30 feet. 
+> <br/> **Thunderous Roar (Costs 2 Actions).** Each creature within 
+<br/>    45 feet of the dragon must make a DC 23 
+<br/>    Constitution saving throw or take 22 (5d8) thunder 
+<br/>    damage and become deafened for 1 minute. 
+<br/>    A successful save results in half damage and no 
+<br/>    other effect. The roar is audible for 300 feet.
+> <br/> **Wing Attack (Costs 2 Actions).** The dragon beats its 
+<br/>    wings. Each creature within 15 feet of the dragon 
+<br/>    must succeed on a DC 23 Dexterity saving throw or 
+<br/>    take 15 (2d6 + 8) bludgeoning damage and be 
+<br/>    knocked prone. The dragon can then fly up to half its 
+<br/>    flying speed.
+> <br/> **Breath Weapon (Costs 3 Actions).** The dragon uses its 
+<br/>    breath weapon, if it is available.
+
+#### Regional Effects
+The region around a storm dragon's lair is influenced by their magic, which creates one or more of the following effects:
+- Thunderstorms rage within 6 miles of the dragon's lair.
+
+If the dragon dies, the thunderstorms fade over the course of 1d10 days.
+
+<div class="pageLetter">S</div>
+<div class='footnote'>STORM DRAGONS</div>
