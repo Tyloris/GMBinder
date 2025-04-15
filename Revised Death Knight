@@ -1,0 +1,455 @@
+<style>
+/* GLOBAL FORMATTING  */
+
+  /* Resize page to international A4 */
+  .phb {
+    width: 210mm;
+    height: 296.8mm;
+  }
+  .phb:after { content: ""; }
+
+/* Temporary Fix for heading issues */
+    .phb p{ line-height: 15px; } 
+    .phb blockquote p{ line-height: 14px; } 
+    .phb h2{ line-height: 26px; } 
+    .phb h3{ line-height: 19px; } 
+    .phb h4{ line-height: 15px; padding-bottom: 3px; } 
+    .phb h5{ line-height: 17px; } 
+    th, td { line-height: 14px; }
+
+
+/* TABLE OF CONTENTS  */
+
+  /* toc specifically wants black text. This resets the headers*/
+  .toc a {
+    color: inherit !important;
+  }
+  /* Allow dot leaders to fill remaining space but not overlap */
+  .toc li span:nth-child(2) {
+    width: auto;
+    overflow: hidden;
+    white-space: nowrap;
+    display: block;
+  }
+  .toc li span:nth-child(2):after {
+    font-family: BookSanity;
+    font-size: 0.317cm;
+    font-weight: normal;
+    color: black;
+    content:
+      " ........................................"
+      "........................................."
+      ".........................................";
+    }
+
+  /* Style TOC page numbers*/
+  .toc li span:first-child {
+    float: right;
+    font-family: BookSanity;
+    font-size: 0.317cm;
+    font-weight: normal;
+    color: black;
+    margin-left: 1px;
+  }
+
+  /* Adjust TOC H3 styles */
+  .toc li h3 span:nth-child(2):after {
+  	content: " ";
+  }
+  .toc li h3 {
+    margin-bottom: 4px !important;
+    margin-top: 10px !important;
+    line-height: initial !important;
+  }
+  .toc li h3 span:first-child {
+  	line-height: 1.8em !important;
+  }
+
+  /* Reduce TOC list indentation*/
+  .toc ul ul {
+  	margin-left: 10px !important;
+  }
+  .toc>ul>li {
+    margin-bottom: initial !important;
+  }
+
+
+/* TABLES AND BLOCKS */
+
+  /* Clear internal padding and add gap above for green note blocks*/
+  .phb blockquote {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .phb blockquote { margin-top: 1em;
+  }
+
+
+/* INK BLOT STYLES */
+
+  /* Root style for inkblots. Use alone, or together with
+  one of the inkb lotstyle classes below. Essentially:
+  <img url='{url}' class='inkblot inkblot-blue' />
+  */
+  .inkblot {
+    position: absolute;
+    mix-blend-mode: multiply;
+    opacity: 0.6;
+  }
+
+  .inkblot-blue {
+    filter: hue-rotate(190deg) saturate(120%)
+  }
+
+  .inkblot-green {
+    filter: hue-rotate(120deg)
+  }
+
+</style>
+
+<style>
+/* Background */
+  .phb{ background-image: url('https://gmbinder.com/images/KN1O92T.png') }
+  .phb{ background-size: cover }
+
+/* Notes */
+  .phb section blockquote {background-color: #f6e5d4}
+  .phb hr + section blockquote tr:nth-child(odd) td {background-color: transparent;}
+
+/* Tables */
+  table tr:nth-child(odd) td {background-color: #cccccc}
+
+/* Footer */
+  .phb .pageNumber {color: rgba(0, 0, 0, 0.5)}
+  .phb .footnote {color: rgba(0, 0, 0, 0.5)}
+  .phb:nth-child(odd):after{ 
+    content          : '';
+    position         : absolute;
+    bottom           : -7px;
+    left             : 10px;
+    z-index          : -1;
+    height           : 336px;
+    width            : 100%;
+    background-image : url('https://www.gmbinder.com/images/bNTz1nk.png');
+    background-size  : cover;
+}
+
+.phb:nth-child(even):after{ 
+    content          : '';
+    position         : absolute;
+    bottom           : -7px;
+    left             : -10px;
+    z-index          : -1;
+    height           : 336px;
+    width            : 100%;
+    background-image : url('https://www.gmbinder.com/images/6NCzAN0.png');
+    background-size  : cover;
+}
+
+/* Page Number */
+.phb .pageNumber{
+    position   : absolute;
+    bottom     : 30px;
+    width      : 50px;
+    text-align : center;
+}
+.phb:nth-child(even) .pageNumber{
+    left      : 12px;
+}
+.phb:nth-child(odd) .pageNumber{
+    right      : 12px;
+}
+
+.phb .pageNumber.auto{
+    position   : absolute;
+    bottom     : 41px;
+    width      : 50px;
+    text-align : center;
+}
+.phb:nth-child(even) .pageNumber.auto{
+    left      : 12px;
+}
+.phb:nth-child(odd) .pageNumber.auto{
+    right      : 12px;
+}
+
+/* INK BLOT STYLES */
+
+  /* Root style for inkblots. Use alone, or together with
+  one of the inkb lotstyle classes below. Essentially:
+  <img url='{url}' class='inkblot inkblot-blue' />
+  */
+  .inkblot {
+    position: absolute;
+    mix-blend-mode: multiply;
+    opacity: 0.6;
+  }
+
+  .inkblot-blue {
+    filter: hue-rotate(190deg) saturate(120%)
+  }
+
+  .inkblot-green {
+    filter: hue-rotate(120deg)
+  }
+
+</style>
+
+<div style='margin-top:50px;'></div>
+
+## Death Knight
+*A hero... that's what you once were. You stood against the shadow, and purchased another dawn for this world at the cost of your life. But the evil you fought is not so easily banished, the victory you claimed not so easily held. The specter of death looms over this world again, it has found new champions to bring about its final reign. Knights of darkness, this is the hour of your dark rebirth . . .*
+
+<div style="text-align:Right"> 
+
+*— A knight of the Ebon Blade*  </div>
+
+A human clad in heavy armor, wielding a greatsword with both hands, as he clutches it close, runes flash along its edge, leaving a stream of black smoke behind his swings.
+
+An orc surrounded by kobolds, forces his axe into the ground as the earth around him withers and dies, fright­ening the kobolds as they run for their life.
+
+Biting cold rushes through the battle, as a lone blood elf walks forward, her armor clad in a layer of frost, she walks with firm steps, freezing the earth beneath her feet.
+
+No matter their past calling, death knights serve the powers of death, wielding weapons infused with runes of power. They are ruthless and practical warriors resurrected by the powerful val'kyrs and granted the powers of the revered death knights of the Ebon Hold. Although these warriors seem dead at a glance, they are very much alive.
+
+### Outcast for Life
+Although these death knights are not undead as the genera-tions before them, they carry much of the essence of the knights that came before them, and from a distance have the look of a dead person, their blank white stares peering at the world around them. Even though they are alive and not emotionless, it means little to most they meet who shun them because of what they have become. Death knights are bringers of death and destroy, a fact not easily forgotten.
+
+This has lead most death knights down a solitary path, many keep to the outskirts of towns and cities, or hide their appearance well before entering.
+
+### Grim Revival
+Being resurrected as a death knight is not a simple task, only complicated further by the scar it leaves on the newly resurrected, gaining the powers of the death knights weak-ens the soul for a tremendous time, a price that has to be paid. But not only does it drain the death knight, some scars are visible for all to see, their resurrection has
+<br> filled their body with necrotic energy that will 
+<br> forever linger within them, a trait always shown 
+<br> through their eyes, which will forever sit as two 
+<br> white lights in their sockets.
+
+### Steadfast Warriors
+Death knights are exceptional warriors, and in many ways similar to paladins, being keen with various weapons and able to fight in any armor, aiding their combat with the use of magic. They wield their empowered runic weapons and shadow magic which enables them to overpower most foes that would dare to stand against them, making them fearful fighters able to stand in any situation.
+
+\columnbreak
+
+<div style='margin-top:670px;'></div>
+
+### Creating a Death Knight
+As you make your death knight character, spend some time thinking about how this path was granted to you. The vast majority of death knights were raised under the control of the Lich King and later broke their bonds of enslavement. Consider how this change has affected your character and their view of the world, do they show distance or interest in what happens around them? Think about what relations your character may have to their family, do they still exist? would they accept them as they are now, or would they shun and banish them for what they have become? Perhaps you were once a figure of importance, a leader to others or a soldier in an army. 
+
+> ##### Variant Rule: On a Pale Horse
+> Dungeon Masters might consider making the creatures summoned by a death knight with *find steed* and *find greater steed* undead, rather than one of the creature types listed in those spells.
+
+<div class='footnote'>PART 1 | CLASSES</div>
+<img src='https://www.gmbinder.com/images/V3AJiIc.jpg' style='position:absolute; top:0px; right:-600px; width:1300px' />
+<img src='https://www.gmbinder.com/images/Npi5n8k.png' style='position:absolute; top:0px; right:-50px; width:870px; transform:scalex(-1)' />
+<img src='https://www.gmbinder.com/images/4RyvlFl.png' style='position:absolute; top:0px; right:-170px; width:650px' />
+
+\pagebreakNum
+
+<div class='classTable wide'>
+
+##### The Death Knight
+|Level|Proficiency<br>Bonus|Features                    |Runes<br>Known|Spells<br>Known|Spell<br>Slots|Slot<br>Level
+|:---:|:--:|:-------------------------------------------|:-:|:-:|:-:|:-:|
+| 1st | +2 | Dark Rebirth, Rune Weapons                 |2  |—  |—  |—  |
+| 2nd | +2 | Fighting Style, Runic Magic                |2  |2  |1  |1st|
+| 3rd | +2 | Knighthood, Rune Strikes                   |2  |3  |1  |1st|
+| 4th | +2 | Ability Score Improvement                  |2  |3  |1  |1st|
+| 5th | +3 | Extra Attack                               |3  |4  |1  |2nd|
+| 6th | +3 |                                            |3  |4  |1  |2nd|
+| 7th | +3 | Knighthood Feature                         |3  |5  |1  |2nd|
+| 8th | +3 | Ability Score Improvement                  |3  |5  |1  |2nd|
+| 9th | +4 | —                                          |4  |6  |2  |3rd|
+| 10th| +4 | Death's Advance                            |4  |6  |2  |3rd|
+| 11th| +4 | Knighthood Feature                         |4  |7  |2  |3rd|
+| 12th| +4 | Ability Score Improvement                  |4  |7  |2  |3rd|
+| 13th| +5 | —                                          |5  |8  |2  |4th|
+| 14th| +5 |                                            |5  |8  |2  |4th|
+| 15th| +5 | Knighthood Feature                         |5  |9  |2  |4th|
+| 16th| +5 | Ability Score Improvement                  |5  |9  |2  |4th|
+| 17th| +6 | —                                          |6  |10 |3  |5th|
+| 18th| +6 |                                            |6  |10 |3  |5th|
+| 19th| +6 | Ability Score Improvement                  |6  |11 |3  |5th|
+| 20th| +6 | Knighthood Feature                         |6  |11 |3  |5th|
+</div>
+
+    Think about how this destiny came to be, how you died and what stories it may tell. Think about the effects having been raised into undeath may have done to you, what trans­formation in personality might've occurred. What interests may have been lost from your previous life. Becoming a death knight is a reincarnation, one where you are trapped in your own body, with a new view of the world around you.
+
+#### Quick Build
+You can make a death knight quickly by following these suggestions. First, make Strength your highest ability score, followed by Charisma.
+
+#### Optional Rule: Multiclassing
+If your group uses the optional rule on multiclassing in the *Player's Handbook*, here's what you need to know if you choose death knight as one of your classes.
+
+***Ability Score Minimum.*** As a multiclass character, you must have at least a Strength and Charisma score of 13 to take a level in this class, or to take a level in another class if you are already a death knight.
+
+***Proficiencies Gained.*** If death knight isn't your initial class, here are the proficiencies you gain when you take your first level as a death knight: light armor, medium armor, simple weapons, martial weapons.
+
+***Spell Slots.*** Add half your levels (rounded up) in the death knight class to the appropriate levels from other class to determine your available spell slots.
+
+\columnbreak
+
+## Class Features
+As a death knight, you gain the following class features.
+
+#### Hit Points
+___
+- **Hit Dice:** 1d10 per death knight level
+- **Hit Points at 1st Level:** 10 + your Constitution modifier
+- **Hit Points at Higher Levels:** 1d10 (or 6) + your Constitution modifier per death knight level
+
+#### Proficiencies
+___
+- **Armor:** All armors
+- **Weapons:** Simple weapons, martial weapons
+- **Tools:** None
+___
+- **Saving Throws:** Constitution, Charisma
+- **Skills:** Choose two from Athletics, Deception, Intimidation, Investigation, Perception, and Stealth
+
+#### Equipment
+You start with the following equipment, in addition to the equipment granted by your background:
+- *(a)* a martial weapon or *(b)* two shortswords
+- *(a)* five javelins or *(b)* any simple weapon
+- *(a)* scale mail or *(b)* chain mail
+- *(a)* a dungeoneer's pack or *(b)* an explorer's pack
+- A trinket from your past life
+
+<div class='footnote'>PART 1 | CLASSES</div>
+
+\pagebreakNum
+
+### Dark Rebirth
+As a death knight, you straddle the line between the living and the dead, existing in both worlds and neither. You gain the following traits:
+
+ - You are considered both a humanoid and undead. You can be affected by anything that would affect either of those creature types. For example, because you are an undead, you will register on a paladin's Divine Sense, but because you are also a humanoid, you can be healed by that paladin's Lay on Hands.
+ - You don't need to sleep, instead you enter a semi- conscious state where you feed your eternal hunger by reminiscing on the agony you have caused. After doing so for 4 hours, you gain the same benefits that a human does from 8 hours of sleep.
+ - You have advantage on saves versus any effect that turns or exclusively affects undead, such as a priest's *shackle undead* spell.
+
+### Rune Weapons
+You can inscribe runes of power into a weapon, binding it to you and turning it into a channel for your magical abil-ities. You can perform the ritual over the course of 1 hour, which can be done during a short rest. The weapon must be within your reach throughout the ritual. 
+
+You start knowing two runes of power chosen from the list of runes at the end of the class description. You learn additional runes as you increase in level, as shown in the Runes Known column of the Death Knight table. When-ever you gain a level in this class, you can exchange one rune you know for another that you could learn. 
+
+In order to utilize your runes, you must have your rune weapon in hand. All of your runes must be on the same weapon. In addition to the runes of power that grant abil-ities, you know how to inscribe a lesser rune onto up to<br> two weapons. Inscribing a third lesser rune causes one of the previous lesser runes to become inert. 
+
+This lesser rune does not count against your runes known and grants the following benefits to the weapons:
+- You can't be disarmed of the weapon unless you are incapacitated. 
+- If it is on the same plane of existence as you, you can summon it as a bonus action on your turn, causing it to teleport instantly to your hands. You can teleport both weapons as part of the same bonus action.
+
+### Fighting Style
+At 2nd level, you adopt a style of fighting as your specialty. Choose one of the following options. You can’t take a fighting style more than once, even if you later get to choose again.
+
+#### Defense
+While you are wearing armor, you gain a +1 bonus to AC.
+
+#### Dueling
+When you are wielding a melee weapon in one hand and no other weapons, you gain a +2 bonus to damage rolls with that weapon.
+
+\columnbreak
+
+#### Great Weapon Fighting
+When you roll a 1 or 2 on a damage die for an attack you make with a melee weapon that you are wielding with two hands, you can reroll the die and must use the new roll. The weapon must have the two-handed or versatile property for you to gain this benefit.
+
+#### Mounted Combat
+While mounted and attacking a creature who is your mount's size or smaller, you gain a +1 bonus on attack rolls. Additionally, you have advantage on saving throws made to avoid falling off your mount and mounting or dismounting a creature costs you only 5 feet of movement, rather than half your speed.
+
+#### Profane Warrior
+You learn two cantrips of your choice from the warlock spell list. They count as death knight spells for you, and Charisma is your spellcasting ability for them. Whenever you gain a level in this class, you can replace one of these cantrips with another cantrip from the warlock spell list.
+
+#### Two-Weapon Fighting
+When you engage in two-weapon fighting, you can add your ability modifier to the damage of the second attack.
+
+
+### Rune Magic
+Also at 2nd level, you can draw upon the power of your runes to cast spells. See chapter 10 of the Player's Handbook for the general rules of spellcasting and chapter 6 of this book for the death knight spell list.
+
+#### Spell Slots
+The death knight table shows how many spell slots you have. The table also shows what the level of those slots is; all of your spell slots are the same level. To cast one of your death knight spells of 1st level or higher, you must expend a spell slot. You regain all expended spell slots when you finish a short or long rest.
+
+For example, when you are 9th level, you have two 3rd-level spell slots. To cast the 1st-level spell *ice knife*, you must spend one of those slots, and you cast it as a 3rd-level spell.
+
+#### Spells Known of 1st Level and Higher
+You know two 1st-level spells of your choice from the death knight spell list.
+
+The Spells Known column of the death knight table shows when you learn more death knight spells of your choice. Each of these spells must be of a level for which you have spell slots. For instance, when you reach 5th level in this class, you can learn one new spell of 1st or 2nd level.
+
+Additionally, when you gain a level in this class, you can choose one of the death knight spells you know and replace it with another spell from the death knight spell list, which also must be of a level for which you have spell slots.
+
+\pagebreakNum
+
+#### Spellcasting Ability
+Charisma is your spellcasting ability for your death knight spells, so you use your Charisma whenever a spell refers to your spellcasting ability. In addition, you use your Charisma modifier when setting the saving throw DC for a death knight spell you cast and when making an attack roll with one.
+
+<div style="text-align: Center">
+
+**Spell save DC** = 8 + your proficiency bonus + <br> your Charisma modifier
+
+**Spell attack modifier** = your proficiency bonus + <br> your Charisma modifier
+</div>
+
+#### Spellcasting Focus
+You can use a rune weapon as a spellcasting focus for your death knight spells.
+
+### Death's Advance
+Beginning at 10th level, you become as relentless as Death itself. Your speed increases by 10 feet. Additionally, non-magical difficult terrain does not reduce your speed.
+
+### Runeforging
+At 6th level, you learn to inscribe enchantments onto your rune weapons. Whenever you finish a long rest, you may inscribe one of the following runes onto your weapons. <br> You gain the benefits of the rune while wielding the rune weapons. You can only have one rune active at a time.
+
+#### Anger
+While carrying a runeblade inscribed with this rune, you are filled with the power of rage. You have advantage on Strength checks and your carrying capacity doubles.
+
+In addition, you can invoke the rune as a bonus action. When you do, you can expend any number of Hit Dice  to increase your Strength score by 2 for 10 minutes. This increase can cause your score to exceed 20, but not 30. Once you invoke the rune, you can’t do so again until you finish a short or long rest.
+
+#### Blood
+While carrying a runeblade inscribed with this rune, your control over blood expands. You have advantage on death saves and when you take only 1 point of piercing or slashing damage, you take no damage instead.
+
+In addition, you can invoke this rune as a bonus action. For 1 minute, you have advantage on your first attack roll each turn against any creature that doesn't have all its hit points. Once you invoke the rune, you can’t do so again until you finish a short or long rest.
+
+#### Bone
+While carrying a runeblade inscribed with this rune, you can call upon a protective shield of bone. You can gain the benefits of the Dodge action as a bonus action.
+
+In addition, you can invoke this rune as a bonus action. For 1 minute attack rolls against you have disadvantage, until you take any bludgeoning, piercing, or slashing damage. Once you invoke the rune, you can’t do so again until you finish a short or long rest.
+
+#### Cruelty
+While carrying a runeblade inscribed with this rune, you gain the skills needed to inflict pain on others. You have advantage on Charisma (Intimidate) and Wisdom (Insight) checks.
+
+In addition, you can invoke this rune when you deal damage with your rune weapon. The target's speed is reduced by 10 feet for 1 minute. Once you invoke the rune, you can’t do so again until you finish a short or long rest.
+
+#### Darkness
+While carrying a runeblade inscribed with this rune, you are cloaked in the power of shadows. You have advantage on Dexterity (Stealth) checks and and you have darkvision out to a range of 60 feet. If you already have darkvision, its range increases by 30 feet.
+
+In addition, you can invoke this rune 
+
+#### Death
+While carrying a runeblade inscribed with this rune,
+
+#### Horror
+While carrying a runeblade inscribed with this rune, you are able to inflict pure terror on those you face. 
+
+and advantage on saves versus the frightened condition.
+
+#### Hunger
+While carrying a runeblade inscribed with this rune,
+
+#### Madness
+While carrying a runeblade inscribed with this rune,
+
+#### Necrosis
+When you damage a creature with a runeblade inscribed with this rune, the target takes an additional 1d4 necrotic damage. 
+
+#### Plague
+While carrying a runeblade inscribed with this rune, you become insulated from the plagues you carry. You are immune to disease and have resistance to necrotic damage.
+
+#### Scourge
+While carrying a runeblade inscribed with this rune,
+
+#### Undeath
+While carrying a runeblade inscribed with this rune, your connection to undeath strengthens. You have advantage on saves versus the poisoned condition and you are resistant to poison damage.
+
+Additionally, you can invoke this rune as an action to cast the *animate dead* spell using a Rune Magic spell slot. Once you invoke this rune, you cannot do so again until you finish a long rest.
+
+#### Vengeance
+While carrying a runeblade inscribed with this rune,
+
+#### Winter
+While carrying a runeblade inscribed with this rune, you have become a creature of the winter wastes. You have resistance to cold damage and you can tolerate temperatures as low as -50 degrees Fahrenheit without any additional protection. 
