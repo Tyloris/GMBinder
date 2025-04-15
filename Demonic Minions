@@ -1,0 +1,655 @@
+<style>
+/* GLOBAL FORMATTING  */
+
+  /* Resize page to international A4 */
+  .phb {
+    width: 210mm;
+    height: 296.8mm;
+  }
+  .phb:after { content: ""; }
+  
+/* Temporary Fix for heading issues */
+    .phb p{ line-height: 15px; } 
+    .phb blockquote p{ line-height: 14px; } 
+    .phb h2{ line-height: 26px; } 
+    .phb h3{ line-height: 19px; } 
+    .phb h4{ line-height: 15px; padding-bottom: 3px; } 
+    .phb h5{ line-height: 17px; } 
+    th, td { line-height: 14px; }
+
+/* TABLE OF CONTENTS  */
+
+  /* toc specifically wants black text. This resets the headers*/
+  .toc a {
+    color: inherit !important;
+  }
+  /* Allow dot leaders to fill remaining space but not overlap */
+  .toc li span:nth-child(2) {
+    width: auto;
+    overflow: hidden;
+    white-space: nowrap;
+    display: block;
+  }
+  .toc li span:nth-child(2):after {
+    font-family: BookSanity;
+    font-size: 0.317cm;
+    font-weight: normal;
+    color: black;
+    content:
+      " ........................................"
+      "........................................."
+      ".........................................";
+    }
+
+  /* Style TOC page numbers*/
+  .toc li span:first-child {
+    float: right;
+    font-family: BookSanity;
+    font-size: 0.317cm;
+    font-weight: normal;
+    color: black;
+    margin-left: 1px;
+  }
+
+  /* Adjust TOC H3 styles */
+  .toc li h3 span:nth-child(2):after {
+  	content: " ";
+  }
+  .toc li h3 {
+    margin-bottom: 4px !important;
+    margin-top: 10px !important;
+    line-height: initial !important;
+  }
+  .toc li h3 span:first-child {
+  	line-height: 1.8em !important;
+  }
+
+  /* Reduce TOC list indentation*/
+  .toc ul ul {
+  	margin-left: 10px !important;
+  }
+  .toc>ul>li {
+    margin-bottom: initial !important;
+  }
+
+
+/* TABLES AND BLOCKS */
+
+  /* Clear internal padding and add gap above for green note blocks*/
+  .phb blockquote {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .phb blockquote { margin-top: 1em;
+  }
+
+
+/* INK BLOT STYLES */
+
+  /* Root style for inkblots. Use alone, or together with
+  one of the inkb lotstyle classes below. Essentially:
+  <img url='{url}' class='inkblot inkblot-blue' />
+  */
+  .inkblot {
+    position: absolute;
+    mix-blend-mode: multiply;
+    opacity: 0.6;
+  }
+
+  .inkblot-blue {
+    filter: hue-rotate(190deg) saturate(120%)
+  }
+
+  .inkblot-green {
+    filter: hue-rotate(120deg)
+  }
+
+</style>
+
+<style>
+/* Background */
+  .phb{ background-image: url('https://gmbinder.com/images/KN1O92T.png') }
+  .phb{ background-size: cover }
+
+/* Notes */
+  .phb section blockquote {background-color: #f6e5d4}
+  .phb hr + section blockquote tr:nth-child(odd) td {background-color: transparent;}
+
+/* Tables */
+  table tr:nth-child(odd) td {background-color: #cccccc}
+
+/* Footer */
+  .phb .pageNumber {color: rgba(0, 0, 0, 0.5)}
+  .phb .footnote {color: rgba(0, 0, 0, 0.5)}
+  .phb:nth-child(odd):after{ 
+    content          : '';
+    position         : absolute;
+    bottom           : -7px;
+    left             : 10px;
+    z-index          : -1;
+    height           : 336px;
+    width            : 100%;
+    background-image : url('https://www.gmbinder.com/images/bNTz1nk.png');
+    background-size  : cover;
+}
+
+.phb:nth-child(even):after{ 
+    content          : '';
+    position         : absolute;
+    bottom           : -7px;
+    left             : -10px;
+    z-index          : -1;
+    height           : 336px;
+    width            : 100%;
+    background-image : url('https://www.gmbinder.com/images/6NCzAN0.png');
+    background-size  : cover;
+}
+
+/* Page Number */
+.phb .pageNumber{
+    position   : absolute;
+    bottom     : 30px;
+    width      : 50px;
+    text-align : center;
+}
+.phb:nth-child(even) .pageNumber{
+    left      : 12px;
+}
+.phb:nth-child(odd) .pageNumber{
+    right      : 12px;
+}
+
+.phb .pageNumber.auto{
+    position   : absolute;
+    bottom     : 41px;
+    width      : 50px;
+    text-align : center;
+}
+.phb:nth-child(even) .pageNumber.auto{
+    left      : 12px;
+}
+.phb:nth-child(odd) .pageNumber.auto{
+    right      : 12px;
+}
+
+/* INK BLOT STYLES */
+
+  /* Root style for inkblots. Use alone, or together with
+  one of the inkb lotstyle classes below. Essentially:
+  <img url='{url}' class='inkblot inkblot-blue' />
+  */
+  .inkblot {
+    position: absolute;
+    mix-blend-mode: multiply;
+    opacity: 0.6;
+  }
+
+  .inkblot-blue {
+    filter: hue-rotate(190deg) saturate(120%)
+  }
+
+  .inkblot-green {
+    filter: hue-rotate(120deg)
+  }
+
+</style>
+
+<style>
+ 
+/* APPENDIX STYLES /
+ 
+  / Avoid upscaling first letter on an appendix page /
+  .phb:nth-of-type(n+0):nth-of-type(-n+100) h1+p::first-letter {
+    font-family: BookSanity;
+    font-size: .317cm;
+    text-rendering: optimizeLegibility;
+    float: initial;
+  }
+ 
+  / For creature statblocks within range (start and end must be specified),
+  don't show a background. Used for the appendix creatures */
+  .appendixStyle hr+section blockquote {
+    background: none;
+    border: none;
+    box-shadow: none;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+  }
+ 
+</style>
+
+<style>
+.descriptive.box {
+    padding: 8px;
+    border: solid lightgray;
+}
+</style>
+
+<div class='wide' style='text-align:center'><h2>Demonic Minions</h2></div>
+
+<div style='margin-top:530px'></div>
+
+If you selected the Grimoire of Servitude as your Dark Grimoire feature, you can summon any demonic minion you know from the below list at the end of a long rest. The minions are presented in alphabetical order.
+
+### Felguard
+As shock troops of the Legion, felguards are blindly obedient to the word of their master, acting with brute force to overcome all obstacles. Their total lack of imagination is seen as one of the benefits of summoning them, though the rituals involved have a tendency to drain the life from those too weak.
+
+### Felhunter
+Relentless hunters, these blind, magic-sniffing bloodhounds of the Legion are employed by their summoners as ruthless guard dogs, or hounds to track down and devour enemy spellcasters. The demons are loyal only to the strongest, and binding them to service is possible only through sheer force of will.
+
+### Imp
+Diminutive, inexpensive and high-strung, the fiery imp is the most easily summoned demon, and most often used by warlocks as everything from efficient long-range firepower, to lab assistants, to cannon fodder. Often summoned en masse, it is said by masters to their pupils, “There are always more imps.” Obedient and fearful, they are well aware of their expendable nature.
+
+\columnbreak
+
+<div style='margin-top:522px'></div>
+
+<div class='descriptive box'>
+
+***Pictured above from left to right:*** <br/> *Felguard, Succubus, Felhunter, Imp, Voidwalker, Infernal*
+
+</div>
+
+### Infernal
+The ultimate siege demon, infernals rain onto the planet as blazing meteorites wreathed in green fel flame, and then unfold into behemoth golems created only to destroy. Utterly mindless, their burning souls year for destruction. To summon one is a commitment to chaos, and banishing them is exceptionally difficult.
+
+### Succubus
+Spies and torturers of the demon world, succubi obey their summoners with enthusiasm and grace. Despite a tendency to grow protective or obsessive over their summoner, they are most often used as interrogators, spies and seductive distractions. Highly intelligent, succubi gain great pleasure through the misfortune of others.
+
+### Voidwalker
+Though not technically demons, voidwalkers can be bound by the same means by even young warlocks. Tiny fragments of the ever-hungering Void, voidwalkers are able to sustain extreme punishment before their discorporation, kept bound to the physical plane by their bracers. As simple-minded things of the void, they are ever seeking a chance to destroy those who dare bind them.
+
+<img src="https://www.gmbinder.com/images/AYuE5Qf.png" class="inkblot inkblot-green" style="top:-120px; right:100px; height:1000px; transform: rotate(-90deg)">
+
+<img src='https://www.gmbinder.com/images/1WjcEQ2.png' style='position:absolute; top:-70px; left:360px; height:650px' /> <!-- infernal -->
+<img src='https://www.gmbinder.com/images/mn01Y17.png' style='position:absolute; top:190px; left:420px; height:400px; mix-blend-mode:darken' /> <!-- voidwalker  -->
+<img src='https://www.gmbinder.com/images/DUNEQZA.png' style='position:absolute; top:-10px; left:-50px; height:540px; transform:scaleX(-1);'  /> <!-- felguard -->
+<img src='https://www.gmbinder.com/images/t23Tf3H.png' style='position:absolute; top:290px; left:140px; height:285px; transform:scaleX(-1)' /> <!-- felhunter -->
+<img src='https://www.gmbinder.com/images/jA343Jd.png' style='position:absolute; top:220px; left:30px; height:350px' /> <!-- succubus -->
+<img src='https://www.gmbinder.com/images/qdDDkm1.png' style='position:absolute; top:420px; left:500px; height:150px; mix-blend-mode:darken' /> <!-- imp -->
+
+<div class='footnote'>PART 1 | CLASSES</div>
+
+\pagebreakNum
+
+___
+> ## Felguard Minion
+> *Medium fiend (demon), lawful evil*
+> ___
+> - **Armor Class** 12 + PB
+> - **Hit Points** 2 + your intelligence modifier + twice your warlock level (the felguard has a number of Hit Dice [d8s] equal to your warlock level)
+> - **Speed** 30 ft.
+> ___
+> |  STR  |  DEX  |  CON  |  INT  |  WIS  |  CHA  |
+> |:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+> |16 (+3)|12 (+1)|14 (+2)|10 (+0)|12 (+1)|12 (+1)|
+> ___
+> - **Saving Throws** Str +3 plus PB, Con +2 plus PB
+> - **Skills** Athletics +3 plus PB, Intimidation +1 plus PB
+> - **Senses** darkvision 60 ft., passive Perception 11
+> - **Languages** Eredun, understands the languages of its summoner
+> ___
+> ***Heavy Strike.*** When the felguard hits a target, you can spend a soul shard to cast *earth tremor* ^XGE^ at a spell level equal to your PB centered on the target, without expending a spell slot. 
+> 
+> ***Legion Strike (3/day).*** When the felguard makes an attack, it can make another attack as a bonus action against a different creature within 5 feet of the first target.
+>
+> ### Actions
+> ***Legion Axe.*** *Melee Weapon Attack:* Your spell attack modifier to hit, reach 5 ft., one target. *Hit:* 1d10 + PB slashing damage.
+>
+> ### Reactions
+> ***Pursuit.*** When an enemy stops moving after leaving the felguard's reach, the felguard can move up to its speed towards the creature and make an attack against it. This movement does not provoke opportunity attacks. 
+
+\columnbreak
+___
+> ## Felhunter Minion
+> *Medium fiend (demon), neutral evil*
+> ___
+> - **Armor Class** 11 + PB
+> - **Hit Points** 2 + your intelligence modifier + twice your warlock level (the minion has a number of Hit Dice [d8s] equal to your warlock level)
+> - **Speed** 30 ft.
+> ___
+> |  STR  |  DEX  |  CON  |  INT  |  WIS  |  CHA  |
+> |:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+> |17 (+3)|12 (+1)|14 (+2)| 6 (-2)|12 (+1)|12 (+1)|
+> ___
+> - **Skills** Perception +1 plus PB, Survival +1 plus PB
+> - **Senses** blindsight 120 ft., passive Perception 11 + PB
+> - **Languages** —
+> ___
+> ***Mage Slayer.*** A creature dealt damage by the felhunter has disadvantage on Constitution saving throws made to maintain concentration on a spell this turn.
+>
+> ***Magic Resistance.*** The felhunter has advantage on saving throws against spells and other magical effects.
+>
+> ***Sense Magic.*** The felhunter can sense magic within 120 feet of it at will. This feature works like the *detect magic* spell, but is itself not magical.
+> 
+> ### Actions
+> ***Bite.*** *Melee Weapon Attack:* Your spell attack modifier to hit, reach 5 ft., one target. Hit: 1d6 + PB piercing damage.
+>
+> ### Reactions
+> ***Devour Magic.*** When a creature casts a spell at the felhunter and misses or the felhunter makes its saving throw, the felhunter can use its reaction and you can spend a soul shard to deal 1d6 psychic damage per spell level of the spell to the caster, causing the felhunter to gain temporary hit points equal to the damage dealt.
+
+<div class='footnote'>PART 1 | CLASSES</div>
+
+\pagebreakNum
+
+___
+> ## Imp Minion
+>*Small fiend (demon), chaotic evil*
+> ___
+> - **Armor Class** 10 + PB
+> - **Hit Points** 1 + your Intelligence modifier + twice your warlock level (the minion has a number of Hit Dice [d6s] equal to your warlock level)
+> - **Speed** 25 ft.
+>___
+> |  STR  |  DEX  |  CON  |  INT  |  WIS  |  CHA  |
+> |:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+> | 6 (-2)|15 (+2)|13 (+1)|15 (+2)| 9 (-1)|14 (+2)|
+>___
+> - **Saving Throws** Dex +2 plus PB, Wis -1 plus PB
+> - **Skills** Acrobatics +2 plus PB, Deception +2 plus PB, Insight -1 plus PB, Stealth +2 plus PB
+> - **Senses** darkvision 60 ft., passive Perception 9
+> - **Languages** Eredun, understands the languages of its summoner 
+> ___
+> ***Explosive Step.*** You can spend a soul shard to allow your imp to use its bonus action to teleport up to 60 feet to an unoccupied space it can see. Each creature within 10 feet of the space it left takes fire damage equal to 1d10 times your PB, or half damage on a successful Dexterity saving throw.
+> 
+> ### Actions
+> ***Fire Blast.*** *Ranged Weapon Attack:* Your spell attack modifier to hit, range 60 ft., one target. *Hit:* 1d6 + PB fire damage.
+> 
+> ### Reactions
+> ***Phase Shift (3/day).*** When the imp is subjected to an effect that allows it to make a saving throw to take half damage, it can  automatically succeed. 
+
+\columnbreak
+___
+> ## Infernal Minion
+> *Large construct (fiend), chaotic evil*
+> ___
+> - **Armor Class** 12 + PB
+> - **Hit Points** 3 + your Intelligence modifier + twice your warlock level (the minion has a number of Hit Dice [d10s] equal to your warlock level)
+> - **Speed** 30 ft.
+>___
+> |  STR  |  DEX  |  CON  |  INT  |  WIS  |  CHA  |
+> |:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+> |18 (+4)|10 (+0)|16 (+3)| 6 (-2)|10 (+0)| 6 (-2)|
+>___
+> - **Damage Resistances** psychic
+> - **Damage Immunities** fire, poison
+> - **Condition Immunities** charmed, exhausted, frightened, paralyzed, petrified, poisoned
+> - **Senses** darkvision 60 ft., passive Perception 10
+> - **Languages** understands the languages of its summoner but can't speak
+> ___
+> ***Fiery Skin.*** A creature that hits the infernal with a melee attack takes fire damage equal to your PB.
+>
+> ***Immolation Aura.*** You can spend a soul shard to cause the infernal to emit flames from its body for 1 minute. At the start of each of the infernal's turns for the duration, each creature within 5 feet of it takes fire damage equal to 1d6 plus PB, and flammable objects in the aura that aren't being worn or carried ignite.
+> 
+> ***Siege Monster.*** The infernal deals double damage to objects and structures.
+> 
+> ### Actions
+> ***Slam.*** *Melee Weapon Attack:* Your spell attack modifier to hit, reach 5 ft., one target. *Hit:* 1d8 bludgeoning damage plus PB fire damage.
+
+\pagebreakNum
+___
+> ## Succubus Minion
+>*Medium fiend (demon), chaotic evil*
+> ___
+> - **Armor Class** 11 + PB
+> - **Hit Points** 1 + your Intelligence modifier + twice your warlock level (the minion has a number of Hit Dice [d8s] equal to your warlock level)
+> - **Speed** 30 ft., fly 50 ft.
+> ___
+> |  STR  |  DEX  |  CON  |  INT  |  WIS  |  CHA  |
+> |:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+> | 8 (-1)|16 (+3)|13 (+1)|15 (+2)|13 (+1)|20 (+5)|
+>___
+> - **Saving Throws** Cha +5 plus PB, Wis +1 plus PB 
+> - **Skills** Deception +5 plus PB, Insight +1 plus PB, Persuasion +5 plus PB, Stealth +3 plus PB
+> - **Senses** darkvision 60 feet, passive Perception 11
+> - **Languages** Common, Eredun, understands the languages of its summoner, telepathy 60 ft.
+> ___
+> ***Innate Spellcasting.*** The succubus can cast the following spells at will: *friends*, *invisibility* (self only)
+>
+> ***Lash of Pain.*** When the succubus deals damage with its whip, you can spend a soul shard to cause the creature to become frightened of the succubus until the beginning of your minion's next turn.
+> 
+> ***Shapechanger.*** The succubus can use its action to polymorph into a Small or Medium humanoid, or back into its true form. Other than its size and speed, its statistics are the same in each form. Any equipment it is wearing or carrying isn't transformed. It reverts to its true form if it dies.
+>
+> ### Actions
+> ***Whip.*** *Melee Weapon Attack:* Your spell attack modifier to hit, reach 10 ft., one target. *Hit:* 1d4 + PB slashing damage.
+
+\columnbreak
+___
+> ## Voidwalker Minion
+> *Medium aberration (void), neutral evil*
+> ___
+> - **Armor Class** 13 + PB
+> - **Hit Points** 3 + your Intelligence modifier + twice your warlock level (the minion has a number of Hit Dice [d8s] equal to your warlock level)
+> - **Speed** 30 ft.
+> ___
+> |  STR  |  DEX  |  CON  |  INT  |  WIS  |  CHA  |
+> |:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+> |15 (+2)|10 (+0)|16 (+3)| 7 (-2)|14 (+2)| 7 (-2)|
+>___
+> - **Saving Throws** Con +3 plus PB, Wis +2 plus PB 
+> - **Damage Resistances** cold, necrotic
+> - **Damage Immunities** poison
+> - **Condition Immunities** exhausted, grappled, poisoned
+> - **Senses** darkvision 60 feet, passive Perception 12
+> - **Languages** Understands the languages of its summoner, telepathy 60 ft.
+> ___
+> ***Innate Spellcasting.*** The voidwalker can cast *armor of agathys* on itself at will.
+>
+> ***Shadow Stealth.*** While in dim light or darkness, the voidwalker has advantage on Stealth checks and can take the Hide action as a bonus action.
+>
+> ### Actions
+> ***Slam.*** *Melee Weapon Attack:* Your spell attack modifier to hit, reach 5 ft., one target. *Hit:* 1d8 + PB bludgeoning damage and the target has disadvantage on any attack roll it makes on a target other than the voidwalker until the beginning of the voidwalker's next turn.
+>
+> ***Consuming Shadows.*** You can spend a soul shard to cause each creature within 10 feet of the voidwalker to take damage equal to twice your PB, half in cold and half in necrotic, or half damage on a successful Constitution saving throw. The voidwalker gains temporary hit points equal to the amount of damage dealt.
+
+<div class='footnote'>PART 1 | CLASSES</div>
+
+\pagebreakNum
+
+# Appendix X: Character Names
+
+## Demonic Minion Names
+To randomly generate a name appropriate to your chosen minion, roll a d100 twice on the appropriate table below: Once to determine the name's prefix and once to determine the suffix. For example, rolling a 27 and a 83 on the Felguard Names table would result in the name *Ikzilvazul*.
+
+<div style='column-count:2'>
+
+##### Felguard Names
+d100    |Prefix  | Suffix
+--------|--------|-------
+01-03   |Akin    | ashak
+04-06   |Akra    | dhun
+07-09   |Blag    | faran
+10-12   |Bleek   | fazag
+13-15   |Chinil  | feril
+16-18   |Erak    | ghun
+19-21   |Flaa    | goril
+22-24   |Haa     | kazul
+25-27   |Ikzil   | kilig
+28-30   |Izik    | korak
+31-33   |Jhuu    | korill
+34-36   |Kee     | krill
+37-39   |Kir     | kryz
+40-42   |Klek    | maal
+43-45   |Koul    | minul
+46-48   |Kren    | nash
+49-51   |Krim    | nixx
+52-54   |Leesh   | raksha
+55-57   |Neel    | rike
+58-60   |Okin    | roon
+61-63   |Orik    | shak
+64-66   |Rivin   | shekor
+67-69   |Shaa    | shok
+70-72   |Skel    | shokin
+73-75   |Skree   | shril
+76-78   |Skurik  | thun
+79-81   |Thoo    | tom
+82-84   |Vazeel  | vazul
+85-87   |Vee     | vegen
+88-90   |Vinik   | zekeel
+91-93   |Zerik   | zeras
+94-96   |Zilik   | zinul
+97-00   |Zuril   | zugul
+
+\columnbreak
+
+##### Felhunter Names
+d100    |Prefix  | Suffix
+--------|--------|-------
+01-03   |Bhee    | dhon
+04-06   |Bruu    | dhum
+07-10   |Czaa    | dhun
+11-13   |Droo    | dom
+14-17   |Flaa    | drom
+18-20   |Fzuu    | dym
+21-24   |Gree    | fen
+25-27   |Ghaa    | fum
+28-31   |Gzaa    | fun
+32-34   |Haa     | fuun
+35-37   |Jhaa    | ghun
+38-41   |Jhuu    | grom
+42-44   |Khaa    | grym
+45-48   |Khii    | jhom
+49-51   |Khuu    | kum
+52-55   |Kree    | lum
+56-58   |Luu     | mon
+59-62   |Maa     | myn
+63-65   |Nhee    | nam
+66-68   |Phuu    | nhym
+69-72   |Pryy    | nom
+73-75   |Rhuu    | num
+76-79   |Shaa    | phom
+80-82   |Sloo    | roon
+83-86   |Sruu    | shon
+87-89   |Thoo    | thuun
+90-93   |Traa    | tom
+94-96   |Wraa    | zhem
+97-00   |Zhaa    | zuum
+
+\columnbreak
+
+<div style='margin-top:131px'></div>
+
+##### Imp Names
+d100    |Prefix  | Suffix
+--------|--------|-------
+01-03   |Aba     | bis
+04-06   |Az      | fip
+07-10   |Bel     | gup
+11-13   |Biz     | ham
+14-16   |Cho     | jub
+17-20   |Dag     | kin
+21-23   |Gak     | kol
+24-26   |Gar     | lop
+27-30   |Gel     | loz
+31-33   |Gob     | mat
+34-36   |Jak     | mir
+37-40   |Jub     | nam
+41-43   |Kar     | nar
+44-46   |Kup     | nik
+47-50   |Laz     | nip
+51-53   |Nal     | pad
+54-56   |Nok     | pep
+57-60   |Pag     | pit
+61-63   |Pip     | qua
+64-66   |Piz     | rin
+67-70   |Quz     | rot
+71-73   |Rul     | tai
+74-76   |Rup     | tal
+77-80   |Tar     | tik
+81-83   |Vol     | tip
+84-86   |Yar     | tog
+87-90   |Yaz     | tuk
+91-93   |Zep     | uri
+94-96   |Zig     | yal
+97-00   |Zil     | yap
+
+\columnbreak
+
+<div style='margin-top:131px'></div>
+
+##### Infernal Names
+
+[I have no source to draw upon for infernal names. Most are things like Blaze, Infernus, Obliteratus, or along those lines.]
+
+</div>
+
+\pagebreak
+
+<div style='column-count:2'>
+
+##### Succubus Names
+d100    |Prefix  | Suffix
+--------|--------|-------
+01-02   |Ael     | aith
+03-05   |Aez     | ana
+06-08   |An      | anda
+09-11   |Ang     | antia
+12-14   |Ann     | esta
+15-17   |Bet     | eth
+18-20   |Bron    | evere
+21-22   |Bronri  | ina
+23-25   |Bry     | lia
+26-28   |Carr    | lissa
+29-31   |Catt    | lith
+32-34   |Dar     | na
+35-37   |Dis     | neri
+38-40   |Dom     | neth
+41-42   |Drus    | ney
+43-45   |Eler    | nia
+46-48   |Fier    | nva
+49-51   |Gab     | nya
+52-54   |Glyn    | nys
+55-57   |Hel     | ona
+58-60   |Hes     | ora
+61-62   |Jhor    | rah
+63-65   |Kal     | riana
+66-68   |Lyn     | rida
+69-71   |Mir     | riel
+72-74   |Moo     | tai
+75-77   |Nag     | thea
+78-80   |Naz     | thun
+81-82   |Ni      | va
+83-85   |Nim     | vina
+86-88   |Sar     | wen
+89-91   |Sel     | wena
+92-94   |Sy      | wyn
+95-97   |Vil     | xia
+98-00   |Zah     | ynn
+
+\columnbreak
+
+##### Voidwalker Names
+d100    |Prefix  | Suffix
+--------|--------|-------
+01-03   |Bar     | dok
+04-06   |Bel     | gak
+07-10   |Char    | garth
+11-13   |Grak'   | gore
+14-17   |Graz'   | gorg
+18-20   |Grim    | grave
+21-24   |Hath    | gron
+25-27   |Hel     | juk
+28-31   |Huk     | kath
+32-34   |Jhaz    | krast
+35-37   |Jhom    | kresh
+38-41   |Juk     | krit
+42-44   |Kal'    | los
+45-48   |Klath   | mon
+49-51   |Kon     | moth
+52-55   |Krak    | nagma
+56-58   |Krag    | nak
+59-62   |Mak     | nar
+63-65   |Mezz    | nos
+66-68   |Orm     | nuz
+69-72   |Phan    | phog
+73-75   |Sar     | rath
+76-79   |Tang    | tast
+80-82   |Than    | taz
+83-86   |Thog    | thak
+87-89   |Thok    | thang
+90-93   |Zag'    | thyk
+94-96   |Zang    | vhug
+97-00   |Zhar'   | zazt
+
+</div>
