@@ -1,0 +1,74 @@
+##### Weather Spells
+Spell Name          | Spell Level   | Notes
+--------------------|---------------|--------
+Ash Storm           |               |
+Avalanche           |               |
+Black Ice           |               |
+Blizzard            |               |
+Cold Snap           |               |
+Create Bonfire      |               |
+Cyclone             |               |
+Dust Devil          |               |
+Drizzle             |               |
+Drought             |               |
+Fire Whirl          |               |
+Flash Flood         |               |
+Flurry              |               |
+Fog Cloud           |               |
+Fumarole            |               | Volcanic gases
+Gale                |               |
+Geyser              |               |
+Gust of Wind        |               |
+Hail Storm          |               | Upgraded Ice Storm (Larger pellets)
+Heat Haze           |               |
+Heat Wave           |               |
+Hurricane           |               |
+Ice Storm           |               |
+Landslide           |               |
+Maelstrom           |               |
+Monsoon             |               |
+Mudslide            |               |
+Obscuring Mist      |               |
+Rain Shower         |               |
+Rockfall            |               |
+Sand Storm          |               |
+Sinkhole            |               |
+Sleet Storm         |               |
+Smokescreen         |               |
+Snow Storm          |               |
+Thundershower       |               |
+Thunderstorm        |               |
+Tornado             |               |
+Tsunami             |               |
+Volcano             |               |
+Waterspout          |               |
+Whirlpool           |               |
+Wildfire            |               | Area is set ablaze
+
+\pagebreak
+
+#### Bardcraft
+
+Effect 1:
+Duration: 10 minutes, Upcast: to 1200 feet (5th level spell), to 1 mile (7th level spell)
+
+You amplify your voice, loud enough for you to be heard easily at a great distance. For the duration, your voice can be heard loudly and clearly by all listeners within 500 feet, even if other ambient noise would otherwise block the sound. Despite the volume, this doesn't make your voice jarring or distracting. This doesn't increase the range or area of other auditory or linguistic effects, and physical barriers such as walls and doors still block or muffle your voice as normal.
+
+Your loud voice makes it easier to Coerce others, and the acoustics assist in Performing at a large venue. You gain a +1 status bonus to checks to Coerce and auditory Performance checks to Perform at a large venue.
+
+You can Dismiss the spell.
+
+#### Elementalism
+
+Effect: 
+You draw water out of an object, possibly to clean up spills or quickly dry a soaked book or shirt. You draw up to a pint of water from the object; this dries objects of less than 1 Bulk. The water collects in a globule floating in your hand, which you can direct into a nearby container as part of Casting the Spell; otherwise, it splashes to the ground. Repeated applications of draw moisture can be used to dry larger objects, although doing so might take significant time. You can use this spell in especially humid environments to condense drinkable water from the air, though typically, you can't draw more than a few cups before depleting the ambient moisture.
+
+#### Unnamed Divination Utility Cantrip
+*Divination cantrip*
+
+Effect 1:
+Range: 10 feet, Area: 1 cubic foot, [Source.](https://2e.aonprd.com/Spells.aspx?ID=864)
+
+Your magic quickly flows over an area to help you count and catalog. Name a particular type of object you are looking for within the area. You gain an instant estimate of the quantity of the chosen objects that are clearly visible within the target area. The number is rounded to the largest digit. For example, you could look at a pile of 180 copper coins, and you would learn that it held about 200 coins, but you couldn't determine there were exactly 180 coins.
+
+The type of object you name can be as specific or general as you like—“dented copper coins” is as viable as “coins”—but the distinguishing features must be obvious at a glance, and the spell is automatically fooled by objects disguised as other objects. For instance, the spell would register copper coins plated in gold as gold coins, not copper coins.
