@@ -1,0 +1,584 @@
+<style>
+/* GLOBAL FORMATTING  */
+
+  /* Resize page to international A4 */
+  .phb {
+    width: 210mm;
+    height: 296.8mm;
+  }
+  .phb:after { content: ""; }
+
+
+/* Temporary Fix for heading issues */
+    .phb p{ line-height: 15px; } 
+    .phb blockquote p{ line-height: 14px; } 
+    .phb h2{ line-height: 26px; } 
+    .phb h3{ line-height: 19px; } 
+    .phb h4{ line-height: 15px; padding-bottom: 3px; } 
+    .phb h5{ line-height: 17px; } 
+    th, td { line-height: 14px; }
+
+/* TABLE OF CONTENTS  */
+
+  /* toc specifically wants black text. This resets the headers*/
+  .toc a {
+    color: inherit !important;
+  }
+  /* Allow dot leaders to fill remaining space but not overlap */
+  .toc li span:nth-child(2) {
+    width: auto;
+    overflow: hidden;
+    white-space: nowrap;
+    display: block;
+  }
+  .toc li span:nth-child(2):after {
+    font-family: BookSanity;
+    font-size: 0.317cm;
+    font-weight: normal;
+    color: black;
+    content:
+      " ........................................"
+      "........................................."
+      ".........................................";
+    }
+
+  /* Style TOC page numbers*/
+  .toc li span:first-child {
+    float: right;
+    font-family: BookSanity;
+    font-size: 0.317cm;
+    font-weight: normal;
+    color: black;
+    margin-left: 1px;
+  }
+
+  /* Adjust TOC H3 styles */
+  .toc li h3 span:nth-child(2):after {
+  	content: " ";
+  }
+  .toc li h3 {
+    margin-bottom: 4px !important;
+    margin-top: 10px !important;
+    line-height: initial !important;
+  }
+  .toc li h3 span:first-child {
+  	line-height: 1.8em !important;
+  }
+
+  /* Reduce TOC list indentation*/
+  .toc ul ul {
+  	margin-left: 10px !important;
+  }
+  .toc>ul>li {
+    margin-bottom: initial !important;
+  }
+
+
+/* TABLES AND BLOCKS */
+
+  /* Clear internal padding and add gap above for green note blocks*/
+  .phb blockquote {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .phb blockquote { margin-top: 1em;
+  }
+
+
+/* INK BLOT STYLES */
+
+  /* Root style for inkblots. Use alone, or together with
+  one of the inkb lotstyle classes below. Essentially:
+  <img url='{url}' class='inkblot inkblot-blue' />
+  */
+  .inkblot {
+    position: absolute;
+    mix-blend-mode: multiply;
+    opacity: 0.6;
+  }
+
+  .inkblot-blue {
+    filter: hue-rotate(190deg) saturate(120%)
+  }
+
+  .inkblot-green {
+    filter: hue-rotate(120deg)
+  }
+
+</style>
+
+<style>
+/* Background */
+  .phb{ background-image: url('https://gmbinder.com/images/KN1O92T.png') }
+  .phb{ background-size: cover }
+
+/* Notes */
+  .phb section blockquote {background-color: #f6e5d4}
+  .phb hr + section blockquote tr:nth-child(odd) td {background-color: transparent;}
+
+/* Tables */
+  table tr:nth-child(odd) td {background-color: #cccccc}
+
+/* Footer */
+  .phb .pageNumber {color: rgba(0, 0, 0, 0.5)}
+  .phb .footnote {color: rgba(0, 0, 0, 0.5)}
+  .phb:nth-child(odd):after{ 
+    content          : '';
+    position         : absolute;
+    bottom           : -7px;
+    left             : 10px;
+    z-index          : -1;
+    height           : 336px;
+    width            : 100%;
+    background-image : url('https://www.gmbinder.com/images/bNTz1nk.png');
+    background-size  : cover;
+}
+
+.phb:nth-child(even):after{ 
+    content          : '';
+    position         : absolute;
+    bottom           : -7px;
+    left             : -10px;
+    z-index          : -1;
+    height           : 336px;
+    width            : 100%;
+    background-image : url('https://www.gmbinder.com/images/6NCzAN0.png');
+    background-size  : cover;
+}
+
+/* Page Number */
+.phb .pageNumber{
+    position   : absolute;
+    bottom     : 30px;
+    width      : 50px;
+    text-align : center;
+}
+.phb:nth-child(even) .pageNumber{
+    left      : 12px;
+}
+.phb:nth-child(odd) .pageNumber{
+    right      : 12px;
+}
+
+.phb .pageNumber.auto{
+    position   : absolute;
+    bottom     : 41px;
+    width      : 50px;
+    text-align : center;
+}
+.phb:nth-child(even) .pageNumber.auto{
+    left      : 12px;
+}
+.phb:nth-child(odd) .pageNumber.auto{
+    right      : 12px;
+}
+
+/* INK BLOT STYLES */
+
+  /* Root style for inkblots. Use alone, or together with
+  one of the inkb lotstyle classes below. Essentially:
+  <img url='{url}' class='inkblot inkblot-blue' />
+  */
+  .inkblot {
+    position: absolute;
+    mix-blend-mode: multiply;
+    opacity: 0.6;
+  }
+
+  .inkblot-blue {
+    filter: hue-rotate(190deg) saturate(120%)
+  }
+
+  .inkblot-green {
+    filter: hue-rotate(120deg)
+  }
+
+</style>
+
+<div style='margin-top:530px'></div>
+
+## Necromancer
+
+### Resources
+- [Necromancer homebrew](https://www.reddit.com/r/UnearthedArcana/comments/ifqm73/necromancer_5e_v11/)
+- [Another](https://www.reddit.com/r/UnearthedArcana/comments/ugefnr/true_necromancer_by_sarkhon_finally_finishedor/)
+- [Entropy-based Spells](https://www.reddit.com/r/UnearthedArcana/comments/g092dv/school_of_entropy_a_necromancer_less_focused_on/)
+- [Lichdom subclass](https://www.reddit.com/r/UnearthedArcana/comments/vasbph/arcane_tradition_the_ascent_to_lichdom_because/)
+- [School of Entropy wizard subclass](https://www.reddit.com/r/UnearthedArcana/comments/g092dv/school_of_entropy_a_necromancer_less_focused_on/)
+
+<img src='https://www.gmbinder.com/images/f6zNiE2.jpg' style='position:absolute; top:0px; left:-400px; width:180%;' />
+<img src='https://www.gmbinder.com/images/76ytPWI.png' style='position:absolute; bottom:0px; left:0px; height:100%'/>
+<!-- <img src='https://www.gmbinder.com/images/aHfOpQs.png' style='position:absolute; top:70px; right:0px; height:60%;' /> -->
+
+\pagebreakNum
+
+<div class='classTable wide'>
+
+##### The Necromancer
+| Level | Proficiency<br>Bonus | Features | Cantrips<br>Known | |1st| |2nd| |3rd| |4th| |5th| | 6th| |7th| |8th| |9th <div style="position: absolute; top:100px; right:113px; width:200px; height:25px">—Spell Slots per Spell Level—</div>|
+|:---:|:--:|:---------------------|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+| 1st | +2 | Spellcasting, Death Knell, Necromantic Savant          |3||2||—||—||—||—||—||—||—||—|
+| 2nd | +2 | Channel Death (1/rest), Profane Study                  |3||3||—||—||—||—||—||—||—||—|
+| 3rd | +2 | Cantrip Formulas                                       |3||4||2||—||—||—||—||—||—||—|
+| 4th | +2 | Ability Score Improvement                              |4||4||3||—||—||—||—||—||—||—|
+| 5th | +3 | Destroy Undead (CR 1/2), Inured to Undeath             |4||4||3||2||—||—||—||—||—||—|
+| 6th | +3 | Profane Study feature, Channel Death (2/rest)          |4||4||3||3||—||—||—||—||—||—|
+| 7th | +3 | —                                                      |4||4||3||3||1||—||—||—||—||—|
+| 8th | +3 | Ability Score Improvement, Destroy Undead (CR 1)       |4||4||3||3||2||—||—||—||—||—|
+| 9th | +4 | —                                                      |4||4||3||3||3||1||—||—||—||—|
+| 10th| +4 | Profane Study feature                                  |4||4||3||3||3||2||—||—||—||—|
+| 11th| +4 | Destroy Undead (CR 2)                                  |5||4||3||3||3||2||1||—||—||—|
+| 12th| +4 | Ability Score Improvement                              |5||4||3||3||3||2||1||—||—||—|
+| 13th| +5 | —                                                      |5||4||3||3||3||2||1||1||—||—|
+| 14th| +5 | Profane Study feature, Destroy Undead (CR 3)           |5||4||3||3||3||2||1||1||—||—|
+| 15th| +5 | —                                                      |5||4||3||3||3||2||1||1||1||—|
+| 16th| +5 | Ability Score Improvement                              |5||4||3||3||3||2||1||1||1||—|
+| 17th| +6 | Destroy Undead (CR 4)                                  |5||4||3||3||3||2||1||1||1||1|
+| 18th| +6 | Channel Death (3/rest)                                 |5||4||3||3||3||3||1||1||1||1|
+| 19th| +6 | Ability Score Improvement                              |5||4||3||3||3||3||2||1||1||1|
+| 20th| +6 | UNKNOWN-20                                             |5||4||3||3||3||3||2||2||1||1|
+</div>
+
+### Creating a Necromancer
+
+#### Quick Build
+
+#### Multiclassing
+
+\columnbreak
+
+## Class Features
+As a necromancer, you gain the following class features.
+
+#### Hit Points
+___
+- **Hit Dice:** 1d6 per necromancer level
+- **Hit Points at 1st Level:** 6 + your Constitution modifier
+- **Hit Points at Higher Levels:** 1d6 (or 4) + your Constitution modifier per necromancer after 1st
+
+#### Proficiencies
+___
+- **Armor:** None
+- **Weapons:** Simple weapons
+- **Tools:** None
+___
+- **Saving Throws:** Constitution, Intelligence
+- **Skills:** Choose two skills from Arcana, Deception, History, Intimidation, Investigation, Medicine, Religion **[SKILLS]**
+
+#### Equipment
+You start with the following equipment, in addition to the equipment granted by your background
+
+- *(a)* a quarterstaff or *(b)* a sickle
+- *(a)* a component pouch or *(b)* an arcane focus
+- *(a)* a scholar's pack or *(b)* an explorer's pack
+- **[EQUIPMENT]** a spellbook
+
+\pagebreakNum
+
+### Spellcasting
+*1st-level necromancer feature*
+
+<div style='margin-top:-4px'></div>
+
+As a student of dark magic, you have a spellbook containing spells that show the first glimmerings of your true power.
+
+#### Cantrips
+At 1st level, you know three cantrips of your choice from the necromancer spell list. You learn additional necromancer cantrips of your choice at higher levels, as shown in the Cantrips Known column of the Necromancer table.
+
+#### Spellbook
+You have a spellbook containing six 1st-level necromancer spells of your choice. Your spellbook is the repository of the necromancer spells you know, except your cantrips, which are fixed in your mind.
+
+#### Preparing and Casting Spells
+The Necromancer table shows how many spell slots you have to cast your necromancer spells of 1st level and higher. To cast one of these spells, you must expend a slot of the spell's level or higher. You regain all expended spell slots when you finish a long rest.
+
+You prepare the list of necromancer spells that are available for you to cast. To do so, choose a number of necromancer spells from your spellbook equal to your Intelligence modifier + your necromancer level (minimum of one spell). The spells must be of a level for which you have spell slots.
+
+For example, if you're a 3rd-level necromancer, you have four 1st-level and two 2nd-level spell slots. With an Intelligence of 16, your list of prepared spells can include six spells of 1st or 2nd level, in any combination, chosen from your spellbook. If you prepare the 1st-level spell Magic Missile, you can cast it using a 1st-level or a 2nd-level slot. Casting the spell doesn't remove it from your list of prepared spells.
+
+You can change your list of prepared spells when you finish a long rest. Preparing a new list of necromancer spells requires time spent studying your spellbook and memorizing the incantations and gestures you must make to cast the spell: at least 1 minute per spell level for each spell on your list.
+
+#### Spellcasting Ability
+Intelligence is your spellcasting ability for your necromancer spells, since you learn your spells through dedicated study and memorization. You use your Intelligence whenever a spell refers to your spellcasting ability. In addition, you use your Intelligence modifier when setting the saving throw DC for a necromancer spell you cast and when making an attack roll with one.
+
+<div style="text-align: center">
+
+**Spell save DC** = 8 + your proficiency bonus + <br/> your Intelligence modifier
+
+**Spell attack modifier** = your proficiency bonus + <br/> your Intelligence modifier
+</div>
+
+#### Ritual Casting
+You can cast a necromancer spell as a ritual if that spell has the ritual tag and you have the spell in your spellbook. You don't need to have the spell prepared.
+
+\columnbreak
+
+#### Spellcasting Focus
+You can use an arcane focus as a spellcasting focus for your necromancer spells.
+
+#### Learning Spells of 1st Level and Higher
+Each time you gain a necromancer level, you can add two necromancer spells of your choice to your spellbook. Each of these spells must be of a level for which you have spell slots, as shown on the Necromancer table. On your adventures, you might find other spells that you can add to your spellbook (see the "Your Spellbook" sidebar).
+
+### Death Knell
+*1st-level necromancer feature*
+<div style='margin-top:-4px'></div>
+
+You gain the ability to reap life energy from creatures you kill with your spells. Once per turn when you kill one or more creatures with a spell of 1st level or higher, you regain hit points equal to twice the spell's level, or three times its level if the spell belongs to the school of necromancy. You don't gain this benefit for killing constructs or undead.
+
+### Necromantic Savant
+*1st-level necromancer feature*
+<div style='margin-top:-4px'></div>
+
+Due to your specialization in the studies of the dead, the gold and time you must spend to copy a necromancy spell into your spellbook is halved.
+
+Additionally, you have advantage on Intelligence checks made involving death, undeath, and the occult.
+
+### Channel Death
+*2nd-level necromancer feature*
+<div style='margin-top:-4px'></div>
+
+At 2nd level, you gain the ability to channel the raw energy of death, using that energy to fuel magical effects. You start with three such effects: Convert Energy, Turn Undead and an effect determined by your domain. Some studies grant you additional effects as you advance in levels, as noted in the study description.
+
+When you use your Channel Death, you choose which effect to create. You must then finish a short or long rest to use your Channel Death again.
+
+Some Channel Death effects require saving throws. When you use such an effect from this class, the DC equals your necromancer spell save DC.
+
+Beginning at 6th level, you can use your Channel Death twice between rests, and beginning at 18th level, you can use it three times between rests. When you finish a short or long rest, you regain your expended uses.
+
+#### Channel Death: Convert Energy
+You can expend a use of your Channel Death to fuel your spells. As a bonus action, you convert the energy of death into that of raw magic and regain one expended spell slot, the level of which can be no higher than half your proficiency bonus (rounded up). 
+
+The number of times you can use this feature is based on the level you've reached in this class: 2nd level, once; 6th level, twice; and 18th level, thrice. You regain all expended uses when you finish a long rest.
+
+\pagebreak
+
+#### Channel Death: Turn Undead
+As an action, you exercise your will to override those of the undead. Each undead that can see or hear you within 30 feet of you must make a Wisdom saving throw. If the creature fails its saving throw, it is turned for 1 minute or until it takes any damage.
+
+A turned creature must spend its turns trying to move as far away from you as it can, and it can't willingly move to a space within 30 feet of you. It also can't take reactions. For its action, it can use only the Dash action or try to escape from an effect that prevents it from moving. If there's nowhere to move, the creature can use the Dodge action.
+
+### Profane Study
+*2nd-level necromancer feature*
+<div style='margin-top:-4px'></div>
+
+Your choice grants you features at 2nd level, and again at 6th, 10th, and 14th level.
+
+### Cantrip Formulas
+*3rd-level necromancer feature* 
+<div style='margin-top:-4px'></div>
+
+You have scribed a set of arcane formulas in your spellbook that you can use to formulate a cantrip in your mind. Whenever you finish a long rest and consult those formulas in your spellbook, you can replace one necromancer cantrip you know with another cantrip from the necromancer spell list.
+
+### Destroy Undead
+*5th-level necromancer feature*
+<div style='margin-top:-4px'></div>
+
+When an undead fails its saving throw against your Turn Undead feature, the creature is instantly destroyed if its challenge rating is at or below a certain threshold, as shown on the Destroy Undead table.
+
+##### Destroy Undead
+Necromancer Level   | Destroys Undead of CR...
+--------------------|----
+5th | 1/2 or lower
+8th | 1 or lower
+11th| 2 or lower
+14th| 3 or lower
+17th| 4 or lower
+
+### Inured to Undeath
+*5th-level necromancer feature*
+<div style='margin-top:-4px'></div>
+
+You have resistance to necrotic damage, and your hit point maximum can't be reduced. You have spent so much time dealing with undead and the forces that animate them that you have become inured to some of their worst effects.
+
+### UNKNOWN-20
+*20th-level necromancer feature*
+<div style='margin-top:-4px'></div>
+
+
+\columnbreak
+
+## Profane Studies
+
+### Study of Domination
+#### Channel Death: ???
+*2nd-level Study of Domination feature*
+<div style='margin-top:-4px'></div>
+
+> Channel Divinity: Conquering Presence
+> XGE p37, Oath of Conquest paladin
+> [–]
+> You can use your Channel Divinity to exude a terrifying presence. As an action, you force each creature of your choice that you can see within 30 feet of you to make a Wisdom saving throw. On a failed save, a creature becomes frightened of you for 1 minute. The frightened creature can repeat this saving throw at the end of each of its turns, ending the effect on itself on a success.
+
+> Order Domain: Channel Divinity: Order's Demand
+> TCE p31
+> [–]
+> Starting at 2nd level, you can use your Channel Divinity to exert an intimidating presence over others.
+> 
+> As an action, you present your holy symbol, and each creature of your choice that can see or hear you within 30 feet of you must succeed on a Wisdom saving throw or be charmed by you until the end of your next turn or until the charmed creature takes any damage. You can also cause any of the charmed creatures to drop what they are holding when they fail the saving throw.
+
+#### ???
+*6th-level Study of Domination feature*
+<div style='margin-top:-4px'></div>
+
+#### ???
+*10th-level Study of Domination feature*
+<div style='margin-top:-4px'></div>
+
+#### ???
+*14th-level Study of Domination feature*
+<div style='margin-top:-4px'></div>
+
+
+### Study of Infection
+#### Channel Death: ???
+*2nd-level Study of Infection feature*
+<div style='margin-top:-4px'></div>
+
+#### ???
+*6th-level Study of Infection feature*
+<div style='margin-top:-4px'></div>
+
+Immunity to disease, can ignore poison resistance and immunity
+
+#### ???
+*10th-level Study of Infection feature*
+<div style='margin-top:-4px'></div>
+
+#### ???
+*14th-level Study of Infection feature*
+<div style='margin-top:-4px'></div>
+
+
+
+
+### Study of Reanimation
+
+<!--
+#### Channel Death: Control Undead
+*2nd-level Study of Skeletal Mastery feature*
+<div style='margin-top:-4px'></div>
+
+You can use your Channel Death to take control of an undead creature. As an action, you can choose one undead you can see within 60 feet of you. That creature must make a Charisma saving throw against your necromancer spell save DC. If it succeeds, you can't use this feature on it again for 24 hours. If it fails, it becomes friendly to you and obeys your commands until you use this Channel Death option again.
+
+Intelligent undead are harder to control in this way. If the target has an Intelligence of 8 or higher, it has advantage on the saving throw. If it fails the saving throw and has an Intelligence of 12 or higher, it can repeat the saving throw at the end of every hour until it succeeds and breaks free.
+-->
+
+#### Channel Death: Raise Dead
+*2nd-level Study of Reanimation feature*
+<div style='margin-top:-4px'></div>
+
+**[your tinkering has borne you a faithful companion, a steel defender.]** It's friendly to you and your companions, and it obeys your commands. See its game statistics in the Steel Defender stat block, which uses your proficiency bonus (PB) in several places. You determine the creature's appearance and whether it has two legs or four; your choice has no effect on its game statistics.
+
+In combat, the defender shares your initiative count, but it takes its turn immediately after yours. It can move and use its reaction on its own, but the only action it takes on its turn is the Dodge action, unless you take a bonus action on your turn to command it to take another action. That action can be one in its stat block or some other action. If you are incapacitated, the defender can take any action of its choice, not just Dodge.
+
+If the Mending spell is cast on it, it regains 2d6 hit points. If it has died within the last hour, you can use your smith's tools as an action to revive it, provided you are within 5 feet of it and you expend a spell slot of 1st level or higher. The steel defender returns to life after 1 minute with all its hit points restored.
+
+At the end of a long rest, you can create a new steel defender if you have smith's tools with you. If you already have a defender from this feature, the first one immediately perishes. The defender also perishes if you die.
+
+\pagebreak
+
+___
+> ## Skeletal Warrior
+> *Medium undead*
+> ___
+> - **Armor Class** 15 (armor scraps, shield)
+> - **Hit Points** 2 + your Intelligence modifier + five times your necromancer level (the warrior has a number of Hit Dice [d8s] equal to your necromancer level)
+> - **Speed** 30 ft.
+> ___
+> |  STR  |  DEX  |  CON  |  INT  |  WIS  |  CHA  |
+> |:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+> |14 (+2)|12 (+1)|14 (+2)| 4 (-3)|10 (+0)| 6 (-2)|
+>___
+>- **Saving Throws** Dex +1 plus PB, Con +2 plus PB
+>- **Skills** Athletics +2 plus PB, Perception +0 plus PB × 2
+>- **Damage Immunities** necrotic, poison
+>- **Condition Immunities** exhaustion, frightened, paralyzed, poisoned
+>- **Senses** darkvision 60 ft., passive Perception 10 + (PB × 2)
+>- **Languages** understands the languages you speak
+>- **Challenge** —
+>- **Proficiency Bonus** equals your bonus
+>___
+> ***Vigilant.*** The defender can't be surprised.  
+>
+> ***Turn Resistance.*** The skeletal warrior has advantage on saving throws against any effect that turns undead.
+>
+> ### Actions
+> ***Longsword.*** *Melee Weapon Attack:* your spell attack modifier to hit, reach 5 ft., one target you can see. *Hit:* 1d8 + 2 + PB slashing damage.
+>
+> ***Force-Empowered Rend.*** *Melee Weapon Attack:* your spell attack modifier to hit, reach 5 ft., one target you can see. *Hit:* 1d8 + PB force damage.  
+>
+> ***Repair (3/Day).*** The magical mechanisms inside the defender restore 2d8 + PB hit points to itself or to one construct or object within 5 feet of it.  
+>
+> ### Reactions
+> ***Deflect Attack.*** The defender imposes disadvantage on the attack roll of one creature it can see that is within 5 feet of it, provided the attack roll is against a creature other than the defender.
+
+
+
+
+Grave Bolt (Skeletal Only). Ranged Spell Attack: your spell attack modifier to hit, range 150 ft., one target. Hit: 2d4 + 3 + the spell's level necrotic damage.
+
+#### Undead Thralls
+*6th-level Study of Reanimation feature*
+<div style='margin-top:-4px'></div>
+
+You add the *animate dead* spell to your spellbook if it is not there already. When you cast *animate dead*, you can target one additional corpse or pile of bones, creating another zombie or skeleton, as appropriate.
+
+Whenever you create an undead using a necromancy spell, it has additional benefits:
+- The creature's hit point maximum is increased by an amount equal to your necromancer level.
+- The creature adds your proficiency bonus to its weapon damage rolls.
+
+#### Skeletal Mastery
+*10th-level Study of Reanimation feature*
+<div style='margin-top:-4px'></div>
+
+Multiattack?, plus Skeletal Mage option.
+
+#### ???
+*14th-level Study of Reanimation feature*
+<div style='margin-top:-4px'></div>
+
+Skeletal warrior becomes a skeletal mage? Or an alternate CD option?
+
+> Beginning at 15th level, when you cast a spell targeting yourself, you can also affect your beast companion with the spell if the beast is within 30 feet of you.
+
+> At 15th level, your Arcane Jolt and steel defender become more powerful:
+> - The extra damage and the healing of your Arcane Jolt both increase to 4d6.
+> - Your steel defender gains a +2 bonus to Armor Class.
+> - Whenever your steel defender uses its Deflect Attack, the attacker takes force damage equal to 1d4 + your Intelligence modifier.
+
+
+### Study of Lichdom
+
+#### Channel Death: Death Touch
+*2nd-level Study of Lichdom feature*
+<div style='margin-top:-4px'></div>
+
+Starting at 2nd level, you can use Channel Divinity to destroy another creature's life force by touch. When you hit a creature with a melee attack, you can use Channel Divinity to deal extra necrotic damage to the target. The damage equals 5 + twice your cleric level.
+
+#### ???
+*6th-level Study of Lichdom feature*
+<div style='margin-top:-4px'></div>
+
+#### ???
+*10th-level Study of Lichdom feature*
+<div style='margin-top:-4px'></div>
+
+#### ???
+*14th-level Study of Lichdom feature*
+<div style='margin-top:-4px'></div>
+
+\pagebreakNum
+
+<div style='column-count:2'>
+
+### Necromancer Spells
+
+</div>
+
+Wall of Bone
+- Like wall of stone, but with grasping skeletal arms
+- [3.5 version](https://dnd.arkalseif.info/spells/complete-arcane--55/wall-of-bones--482/index.html)
+- [PF Version](https://www.d20pfsrd.com/magic/all-spells/w/wall-of-bone/#:~:text=This%20spell%20creates%20a%20vertical,5%2Dfoot%20square%20per%20level.)
+- [5e Homebrew version](https://www.reddit.com/r/DnDHomebrew/comments/jprd5d/spells_of_osteomancy_wall_of_bones_and_calcified/)
+
+Bone Shield
+- A shared DK/necromancer spell
