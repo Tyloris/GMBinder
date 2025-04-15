@@ -1,0 +1,1350 @@
+<style>
+
+/* background image*/
+.phb {
+  background: white;
+}
+
+/* Text */
+.phb h1+p::first-letter {
+  float: none;
+  font-family: BookSanity;
+  font-size: 9.84pt;
+  color: #000;
+  line-height: 1.3em;
+  font-weight: normal;
+}
+
+.phb h4,
+.phb h3,
+.phb h2,
+.phb h1 {
+  font-family: BookSanity;
+  font-weight: normal;
+}
+
+.phb h1 {
+  font-size: 24pt;
+}
+
+.phb h2 {
+  font-size: 19pt;
+}
+
+.phb h3 {
+  font-size: 15pt;
+  border-bottom: 1pt solid #000
+}
+
+.phb h4 {
+  font-size: 12pt;
+}
+
+.phb h5 {
+  color: #000;
+}
+
+/* Tables */
+.phb table {
+  font-size: 9.84pt;
+}
+
+.phb table tbody tr:nth-child(odd) {
+  background-color: #f2f2f2;
+}
+
+/*change backing of rows*/
+/* Class Table */
+.phb .classTable {
+  border-image-source: none;
+  border: none;
+}
+
+.phb .classTable h5 {
+  font-family: Calibri;
+  font-weight: bold;
+}
+
+.phb .classTable table tbody tr:nth-child(odd) {
+  background-color: #FFF;
+}
+
+/* Description block */
+.phb .descriptive {
+  padding-left: 3px;
+  background-color: #e6e6e6;
+  border-image: none;
+  border: none;
+}
+
+.phb .descriptive p {
+  font-size: 9.84pt;
+}
+
+/* Note */
+.phb blockquote {
+  font-size:
+    9.84pt;
+  background-color: #e6e6e6;
+  border-width: 5px;
+  border-image-outset: 5px 0px;
+  box-shadow: 0px 1px 5px;
+}
+
+/* Stat Block */
+.phb hr+section blockquote {
+  background: white;
+  border: 3px solid #e6e6e6;
+  box-shadow: none;
+}
+
+.phb hr+section blockquote h3 {
+  font-family: Calibri;
+  border-bottom: 1px solid #000;
+}
+
+.phb hr+section blockquote hr+ul {
+  color: #000;
+}
+
+.phb hr+section blockquote table {
+  color: #000;
+}
+
+.phb hr+section blockquote hr {
+  background-image: url(https://gmbinder.com/images/MS0gM8Z.png)
+}
+
+/* footer */
+.phb:after {
+  display: none;
+}
+
+.phb .pageNumber {
+  color: #000;
+  font-size: 9.84pt;
+  bottom: 14mm;
+  right: 1.7cm
+}
+
+.phb .footnote {
+  color: #000;
+  font-size: 9.84pt;
+  bottom: 14mm;
+  left: 1.7cm;
+  text-align: left;
+  width: 600px;
+}
+
+.phb:nth-child(even) .pageNumber {
+  left: 18.19cm;
+}
+
+.phb:nth-child(even) .footnote {
+  left: 1.7cm;
+}
+
+.phb a {
+  color: black;
+}
+
+</style>
+
+# Chapter 6: Equipment
+
+## Coins
+Common coins come in several different denominations based on the relative worth of the metal from which they are made. The three most common coins are the gold piece (gp), the silver piece (sp), and the copper piece (cp).
+
+With one gold piece, a character can buy a bedroll, 50 feet of good rope, or a goat. A skilled (but not exceptional) artisan can earn one gold piece a day. The gold piece is the standard unit of measure for wealth, even if the coin itself is not commonly used. When merchants discuss deals that involve goods or services worth hundreds or thousands of gold pieces, the transactions don’t usually involve the exchange of individual coins. Rather, the gold piece is a standard measure of value, and the actual exchange is in gold bars, letters of credit, or valuable goods.
+
+One gold piece is worth ten silver pieces, the most prevalent coin among commoners. A silver piece buys a laborer’s work for half a day, a flask of lamp oil, or a night’s rest in a poor inn.
+
+One silver piece is worth ten copper pieces, which are common among laborers and beggars. A single copper piece buys a candle, a torch, or a piece of chalk.
+
+In addition, unusual coins made of other precious metals sometimes appear in treasure hoards. The electrum piece (ep) and the platinum piece (pp) originate from fallen empires and lost kingdoms, and they sometimes arouse suspicion and skepticism when used in transactions. An electrum piece is worth five silver pieces, and a platinum piece is worth ten gold pieces.
+
+A standard coin weighs about a third of an ounce, so fifty coins weigh a pound.
+
+Standard Exchange Rates
+Coin	CP	SP	EP	GP	PP
+Copper (cp)	1	1/10	1/50	1/100	1/1,000
+Silver (sp)	10	1	1/5	1/10	1/100
+Electrum (ep)	50	5	1	1/2	1/20
+Gold (gp)	100	10	2	1	1/10
+Platinum (pp)	1,000	100	20	10	1
+Selling Treasure
+Opportunities abound to find treasure, equipment, weapons, armor, and more in the dungeons you explore. Normally, you can sell your treasures and trinkets when you return to a town or other settlement, provided that you can find buyers and merchants interested in your loot.
+
+Arms, Armor, and Other Equipment. As a general rule, undamaged weapons, armor, and other equipment fetch half their cost when sold in a market. Weapons and armor used by monsters are rarely in good enough condition to sell.
+
+Magic Items. Selling magic items is problematic. Finding someone to buy a potion or a scroll isn’t too hard, but other items are out of the realm of most but the wealthiest nobles. Likewise, aside from a few common magic items, you won’t normally come across magic items or spells to purchase. The value of magic is far beyond simple gold and should always be treated as such.
+
+Gems, Jewelry, and Art Objects. These items retain their full value in the marketplace, and you can either trade them in for coin or use them as currency for other transactions. For exceptionally valuable treasures, the GM might require you to find a buyer in a large town or larger community first.
+
+Trade Goods. On the borderlands, many people conduct transactions through barter. Like gems and art objects, trade goods—bars of iron, bags of salt, livestock, and so on—retain their full value in the market and can be used as currency.
+
+##### Coin Values
+Coin        | Value in c | Value in s | Value in g
+------------|------------|------------|----------
+Copper (c)  | 1         | 1/100     | 1/10,000
+Silver (s)  | 100       | 1         | 1/100
+Gold (g)    | 10,000    | 100       | 1
+
+Values are displayed in 0g 0s 0c format.
+
+## Weapons
+The Weapons table in this section shows the game's main weapons. The table lists the cost and weight of each weapon, as well as the following details:
+___
+- **Category.** Every weapon falls into a category: Simple or Martial. Weapon proficiencies are usually tied to one of these categories. For example, you might have proficiency with Simple weapons.
+- **Melee or Ranged.** A weapon is classified as either Melee or Ranged. A Melee weapon is used to attack a target within 5 feet, whereas a Ranged weapon is used to attack at a greater distance.
+- **Damage.** The table lists the amount of damage a weapon deals when an attacker hits with it as well as the type of that damage.
+- **Properties.** Any properties a weapon has are listed in the Properties column. Each property is defined in the “Properties” section.
+- **Mastery.** Each weapon has a mastery property, which is defined in the “Mastery Properties” section later in this chapter. To use that property, you must have a feature that lets you use it.
+
+### Weapon Proficiency
+Anyone can wield a weapon, but you must have proficiency with it to add your Proficiency Bonus to an attack you make with it. A player character's features can provide weapon proficiencies. A monster is proficient with any weapon in its stat block.
+
+### Properties
+Here are definitions of the properties in the Properties column of the Weapons table.
+
+#### Ammunition	
+You can use a weapon that has the Ammunition property to make a ranged attack only if you have ammunition to fire from it. The type of ammunition required is specified with the weapon's range. Each attack expends one piece of ammunition. Drawing the ammunition is part of the attack (you need a free hand to load a one-handed weapon). After a fight, you can spend 1 minute to recover half the ammunition (round down) you used in the fight; the rest is lost.
+
+\columnbreak
+
+#### NEW: Aquatic
+When making an attack underwater with an aquatic weapon, you do not have disadvantage on attack rolls if you do not have a swim speed (see page 198 of the Player's Handbook for more details).
+
+#### NEW: Covert
+If you are hidden, a missed attack with a covert weapon does not reveal you.
+
+#### NEW: Double
+
+#### Finesse
+When making an attack with a Finesse weapon, use your choice of your Strength or Dexterity modifier for the attack and damage rolls. You must use the same modifier for both rolls.
+
+#### Heavy	
+You have Disadvantage on attack rolls with a Heavy weapon if it's a Melee weapon and your Strength score isn't at least 13 or if it's a Ranged weapon and your Dexterity score isn't at least 13.
+
+#### NEW: Hidden
+
+#### Light	
+When you take the Attack action on your turn and attack with a Light weapon, you can make one extra attack as a Bonus Action later on the same turn. That extra attack must be made with a different Light weapon, and you don’t add your ability modifier to the extra attack’s damage unless that modifier is negative. For example, you can attack with a Shortsword in one hand and a Dagger in the other using the Attack action and a Bonus Action, but you don't add your Strength or Dexterity modifier to the damage roll of the Bonus Action unless that modifier is negative.
+
+#### Loading	
+You can fire only one piece of ammunition from a Loading weapon when you use an action, a Bonus Action, or a Reaction to fire it, regardless of the number of attacks you can normally make.
+
+#### NEW: Nonlethal
+
+#### Range	
+A Range weapon has a range in parentheses after the Ammunition or Thrown property. The range lists two numbers. The first is the weapon’s normal range in feet, and the second is the weapon’s long range. When attacking a target beyond normal range, you have Disadvantage on the attack roll. You can't attack a target beyond the long range.
+
+#### Reach	
+A Reach weapon adds 5 feet to your reach when you attack with it, as well as when determining your reach for Opportunity Attacks with it.
+
+\pagebreakNum
+
+#### NEW: Splash
+All splash weapons are either ranged thrown weapons or pieces of ammunition. On a hit with a splash weapon, the weapon/ammunition is destroyed, and you don't add any ability modifier to the damage roll. All creatures within 5 feet of the target must succeed on a Dexterity saving throw (DC 10 or 8 + your proficiency bonus + your Dexterity modifier) or also suffer the splash weapon's damage. If you're proficient with the weapon, this saving throw is made against your Dexterity DC. If you're not proficient, the DC is 10.
+
+#### Thrown	
+If a weapon has the Thrown property, you can throw the weapon to make a ranged attack, and you can draw that weapon as part of the attack. If the weapon is a Melee weapon, use the same ability modifier for the attack and damage rolls that you use for a melee attack with that weapon.
+
+#### Two-Handed
+A Two-Handed weapon requires two hands when you attack with it.
+
+#### NEW: Unwieldy
+During your turn you cannot attack before or after moving with this weapon.
+
+#### NEW: Variable
+Can deal alternative damage type (ex: dagger--slashing/piercing)
+
+#### Versatile	
+A Versatile weapon can be used with one or two hands. A damage value in parentheses appears with the property. The weapon deals that damage when used with two hands to make a melee attack.
+
+### Mastery Properties
+Each weapon has a mastery property, which is usable only by a character who has a feature, such as Weapon Mastery, that unlocks the property for the character. The properties are defined below.
+
+#### Cleave
+If you hit a creature with a melee attack roll using this weapon, you can make a melee attack roll with the weapon against a second creature within 5 feet of the first that is also within your reach. On a hit, the second creature takes the weapon’s damage, but don't add your ability modifier to that damage unless that modifier is negative. You can make this extra attack only once per turn.
+
+#### Graze	
+If your attack roll with this weapon misses a creature, you can deal damage to that creature equal to the ability modifier you used to make the attack roll. This damage is the same type dealt by the weapon, and the damage can be increased only by increasing the ability modifier.
+
+#### Nick	
+When you make the extra attack of the Light property, you can make it as part of the Attack action instead of as a Bonus Action. You can make this extra attack only once per turn.
+
+#### Push	
+If you hit a creature with this weapon, you can push the creature up to 10 feet straight away from yourself if it is Large or smaller.
+
+#### Sap	
+If you hit a creature with this weapon, that creature has Disadvantage on its next attack roll before the start of your next turn.
+
+#### Slow	
+If you hit a creature with this weapon and deal damage to it, you can reduce its Speed by 10 feet until the start of your next turn. If the creature is hit more than once by weapons that have this property, the Speed reduction doesn’t exceed 10 feet.
+
+#### Topple	
+If you hit a creature with this weapon, you can force the creature to make a Constitution saving throw (DC 8 plus the ability modifier used to make the attack roll and your Proficiency Bonus). On a failed save, the creature has the Prone condition.
+
+#### Vex	
+If you hit a creature with this weapon and deal damage to the creature, you have Advantage on your next attack roll against that creature before the end of your next turn.
+
+> #### Improvised Weapons
+> If you use an object — such as a table leg, frying pan, or bottle — as a makeshift weapon, see Improvised Weapons in the rules glossary. Also see those rules if you wield a weapon in an unusual way, such as using a Ranged weapon to make a melee attack.
+> 
+> ##### Improvised Weapons (Rules Glossary)
+> An improvised weapon is an object wielded as a makeshift weapon, such as broken glass, a table leg, or a frying pan. A Simple or Martial weapon also counts as an improvised weapon if it's wielded in a way contrary to its design; if you use a Ranged weapon to make a melee attack or throw a Melee weapon that lacks the Thrown property, the weapon counts as an improvised weapon. An improvised weapon follows the rules below.
+> ___
+> - **Proficiency.** Don't add your Proficiency Bonus to attack rolls with an improvised weapon.
+> - **Damage.** On a hit, the weapon deals 1d4 damage of a type the DM thinks is appropriate for the object.
+> - **Range.** If you throw the weapon, it has a normal range of 20 feet and a long range of 60 feet.
+> - **Weapon Equivalents.** If an improvised weapon resembles a Simple or Martial weapon, the DM may say it functions as that weapon and uses that weapon's rules. For example, the DM could treat a table leg as a Club.
+
+
+\pagebreakNum
+
+<div class='classTable wide' style='font-size:12pt' />
+
+<div style='margin-top:-50px;'></div>
+
+##### Weapons
+| Name  | Damage            | | Properties|Mastery     | Weight    | Cost  |
+|-------|-------------------|-|-------------------------|---------------|:---------:|------:|
+*Simple Melee Weapons*  |
+&nbsp;&nbsp; Club	    | 1d4 Bludgeoning	| | Light	                                | Slow	| 2 lb.	| 1 SP
+&nbsp;&nbsp; Dagger	    | 1d4 Piercing	    | | Finesse, Light, Thrown (Range 20/60)	| Nick	| 1 lb.	| 2 GP
+&nbsp;&nbsp; Greatclub  | 1d8 Bludgeoning	| | Two-Handed	                            | Push	| 10 lb.| 2 SP
+&nbsp;&nbsp; Handaxe	| 1d6 Slashing  | | Light, Thrown (Range 20/60)	            | Vex	| 2 lb. | 5 GP
+&nbsp;&nbsp; Javelin	| 1d6 Piercing	| | Thrown (Range 30/120)	                | Slow	| 2 lb.	| 5 SP
+&nbsp;&nbsp; Light Hammer| 1d4 Bludgeoning	| | Light, Thrown (Range 20/60)	            | Nick	| 2 lb.	| 2 GP
+&nbsp;&nbsp; Mace       | 1d6 Bludgeoning	| | —	                                    | Sap	| 4 lb.	| 5 GP
+&nbsp;&nbsp; Quarterstaff| 1d6 Bludgeoning	| | Versatile (1d8)	                        | Topple| 4 lb.	| 2 SP
+&nbsp;&nbsp; Sickle	    | 1d4 Slashing	    | | Light	                                | Nick	| 2 lb. | 1 GP
+&nbsp;&nbsp; Spear	    | 1d6 Piercing	    | | Thrown (Range 20/60), Versatile (1d8)	| Sap	| 3 lb.	| 1 GP
+*Simple Ranged Weapons* |       | |                                         |       |       |
+&nbsp;&nbsp; Dart	    | 1d4 Piercing	    | | Finesse, Thrown (Range 20/60)	        | Vex	| 1/4 lb.| 5 CP
+&nbsp;&nbsp; Light Crossbow | 1d8 Piercing	| | Ammunition (Range 80/320; Bolt), Loading, Two-Handed | Slow	| 5 lb. | 25 GP
+&nbsp;&nbsp; Shortbow	| 1d6 Piercing	    | | Ammunition (Range 80/320; Arrow), Two-Handed | Vex | 2 lb.	| 25 GP
+&nbsp;&nbsp; Sling	    | 1d4 Bludgeoning	| | Ammunition (Range 30/120; Bullet)	    | Slow	| -	    | 1 SP
+*Martial Melee Weapons* |       | |                                         |       |       |
+&nbsp;&nbsp; Battleaxe	| 1d8 Slashing	    | | Versatile (1d10)	                    | Topple| 4 lb.	| 10 GP
+&nbsp;&nbsp; Flail	    | 1d8 Bludgeoning	| | —	                                    | Sap	| 2 lb.	| 10 GP
+&nbsp;&nbsp; Glaive	    | 1d10 Slashing	    | | Heavy, Reach, Two-Handed	            | Graze	| 6 lb.	| 20 GP
+&nbsp;&nbsp; Greataxe	| 1d12 Slashing	    | | Heavy, Two-Handed	                    | Cleave| 7 lb.	| 30 GP
+&nbsp;&nbsp; Greatsword	| 2d6 Slashing	    | | Heavy, Two-Handed	                    | Graze | 6 lb.	| 50 GP
+&nbsp;&nbsp; Halberd	    | 1d10 Slashing	    | | Heavy, Reach, Two-Handed	            | Cleave| 6 lb.	| 20 GP
+&nbsp;&nbsp; Lance	    | 1d10 Piercing	    | | Heavy, Reach, Two-Handed (unless mounted)| Topple| 6 lb.| 10 GP
+&nbsp;&nbsp; Longsword	| 1d8 Slashing	    | | Versatile (1d10)	                    | Sap	| 3 lb.	| 15 GP
+&nbsp;&nbsp; Maul	    | 2d6 Bludgeoning	| | Heavy, Two-Handed	                    | Topple| 10 lb.| 10 GP
+&nbsp;&nbsp; Morningstar	| 1d8 Piercing	    | | —	                                    | Sap	| 4 lb.	| 15 GP
+&nbsp;&nbsp; Pike	    | 1d10 Piercing	    | | Heavy, Reach, Two-Handed	            | Push	| 18 lb.| 5 GP
+&nbsp;&nbsp; Rapier	    | 1d8 Piercing	    | | Finesse	                                | Vex	| 2 lb.	| 5 GP
+&nbsp;&nbsp; Scimitar	| 1d6 Slashing	    | | Finesse, Light	                        | Nick	| 3 lb.	| 25 GP
+&nbsp;&nbsp; Shortsword	| 1d6 Piercing	    | | Finesse, Light	                        | Vex	| 2 lb.	| 10 GP
+&nbsp;&nbsp; Trident	    | 1d8 Piercing	    | | Thrown (Range 20/60), Versatile (1d10)	| Topple| 4lb.	| 5 GP
+&nbsp;&nbsp; Warhammer	| 1d8 Bludgeoning	| | Versatile (1d10)	                    | Push	| 5 lb.	| 15 GP
+&nbsp;&nbsp; War Pick	| 1d8 Piercing	    | | Versatile (1d10)	                    | Sap	| 2 lb.	| 5 GP
+&nbsp;&nbsp; Whip	    | 1d4 Slashing	    | | Finesse, Reach	                        | Slow	| 3 lb.	| 2 GP
+*Martial Ranged Weapons* |      | |                                         |       |       |
+&nbsp;&nbsp; Blowgun	    | 1 Piercing	    | | Ammunition (Range 25/100; Needle), Loading  | Vex | 1 lb. | 10 GP
+&nbsp;&nbsp; Hand Crossbow | 1d6 Piercing	| | Ammunition (Range 30/120; Bolt), Light, Loading	| Vex | 3 lb. | 75 GP
+&nbsp;&nbsp; Heavy Crossbow | 1d10 Piercing	| | Ammunition (Range 100/400; Bolt), Heavy, <br/> Loading, Two-Handed | Push | 18 lb. | 50 GP
+&nbsp;&nbsp; Longbow	    | 1d8 Piercing	    | | Ammunition (Range 150/600; Arrow), Heavy, <br/> Two-Handed    | Slow | 2 lb. | 50 GP
+&nbsp;&nbsp; Musket	    | 1d12 Piercing	    | | Ammunition (Range 40/120; Bullet), Loading, <br/> Two-Handed	| Slow	| 10 lb. | 500 GP
+&nbsp;&nbsp; Pistol	    | 1d10 Piercing	    | | Ammunition (Range 30/90; Bullet), Loading   | Vex | 3 lb. | 250 GP
+
+</div>
+
+\pagebreakNum
+
+<div class='classTable wide' />
+
+<div style='margin-top:-10px;'></div>
+
+##### Armor
+Armor                               | Armor Class (AC)          | | Strength    | Stealth	    | Weight | Cost
+-------------|--------------------------------------------------|-|-------------|---------------|-------:|-------:
+*Light Armor (1 Minute to Don or Doff)*                         | |             |               |        |
+&nbsp;&nbsp; Padded Armor           | 11 + Dex modifier	        | | -	        | Disadvantage	|  8 lb. | 5 GP
+&nbsp;&nbsp; Leather Armor          | 11 + Dex modifier	        | | -	        | -	            | 10 lb. | 10 GP
+&nbsp;&nbsp; Studded Leather Armor  | 12 + Dex modifier	        | | -	        | -	            | 13 lb. | 45 GP
+*Medium Armor (5 Minutes to Don and 1 Minute to Doff)*          | |             |               |        | 
+&nbsp;&nbsp; Hide Armor	            | 12 + Dex modifier (max 2) | | -	        | -	            | 12 lb. | 10 GP
+&nbsp;&nbsp; Chain Shirt	        | 13 + Dex modifier (max 2)	| | -	        | -	            | 20 lb. | 50 GP
+&nbsp;&nbsp; Scale Mail	            | 14 + Dex modifier (max 2)	| | -	        | Disadvantage	| 45 lb. | 50 GP
+&nbsp;&nbsp; Breastplate	        | 14 + Dex modifier (max 2) | | -	        | -	            | 20 lb. | 400 GP
+&nbsp;&nbsp; Half Plate Armor       | 15 + Dex modifier (max 2) | | -	        | Disadvantage	| 40 lb. | 750 GP
+*Heavy Armor (10 Minutes to Don and 5 Minutes to Doff)*         | |             |               |        |
+&nbsp;&nbsp; Ring Mail	            | 14	                    | | -	        | Disadvantage	| 40 lb. | 30 GP
+&nbsp;&nbsp; Chain Mail	            | 16	                    | | Str 13	    | Disadvantage	| 55 lb. | 75 GP
+&nbsp;&nbsp; Splint Armor           | 17	                    | | Str 15	    | Disadvantage	| 60 lb. | 200 GP
+&nbsp;&nbsp; Plate Armor	        | 18	                    | | Str 15	 | Disadvantage	| 65 lb. | 1,500 GP
+*Shield (Utilize Action to Don or Doff)* |                      | |          |               |        |
+&nbsp;&nbsp; Shield	                | +2	                    | | -	        | -	            |  6 lb. | 10 GP
+
+</div>
+
+<div style='margin-top:-25px;'></div>
+
+## Armor
+The Armor table lists the game’s main armor. The table includes the cost and weight of armor, as well as the following details:
+___
+- **Category.** Every type of armor falls into a category: Light, Medium, or Heavy. The category determines how long it takes to don or doff the armor (as shown in the table).
+- **Armor Class (AC).** The table’s Armor Class column tells you what your base AC is when you wear a type of armor. For example, if you wear Leather Armor, your base AC is 11 plus your Dexterity modifier, whereas your AC is 16 in Chain Mail.
+- **Strength.** If the table shows a Strength score in the Strength column for an armor type, that armor reduces the wearer’s speed by 10 feet unless the wearer has a Strength score equal to or higher than the listed score.
+- **Stealth.** If the table shows “Disadvantage” in the Stealth column for an armor type, the wearer has Disadvantage on Dexterity (Stealth) checks.
+
+
+### Armor Training
+Anyone can don armor or hold a Shield, but only those with training can use them effectively, as explained below. A character’s class and other features determine the character’s armor training. A monster has training with any armor in its stat block.
+
+#### Light, Medium, or Heavy Armor
+If you wear Light, Medium, or Heavy armor and lack training with it, you have Disadvantage on any D20 Test that involves Strength or Dexterity, and you can't cast spells.
+
+#### Shield
+You gain the Armor Class benefit of a Shield only if you have training with it.
+
+### One at a Time
+A creature can wear only one suit of armor at a time and wield only one Shield at a time.
+
+> ##### Variant: Equipment Sizes
+> In most campaigns, you can use or wear any equipment that you find on your adventures, within the bounds of common sense. For example, an orc adventurer won't fit in a halfling's Leather Armor, and a cloud giant’s robe would be far too large for a gnome.
+> 
+> The DM can impose more realism. For example, a suit of Plate Armor made for one human might not fit another one without significant alterations, and a guard's uniform might be visibly ill-fitting when an adventurer tries to wear it as a disguise.
+> 
+> Using this variant, when adventurers find armor, clothing, and similar items that are made to be worn, they might need to visit a smith, a tailor, a leatherworker, or a similar expert to make the item wearable. The cost for such work is 1d4 X 10 percent of the market price of the item.
+
+\pagebreakNum
+
+## Tools
+### Tool Proficiency
+### Artisan's Tools
+#### Alchemist's Supplies
+#### Brewer's Supplies
+#### Calligrapher's Supplies
+#### Carpenter's Tools
+#### Cartographer's Tools
+#### Cobbler's Tools
+#### Cook's Utensils
+#### Glassblower's Tools
+#### Jeweler's Tools
+#### Leatherworker's Tools
+#### Mason's Tools
+#### Painter's Supplies
+#### Potter's Tools
+#### Smith's Tools
+#### Tinker's Tools
+#### Weaver's Tools
+#### Woodcarver's Tools
+### Other Tools
+#### Disguise Kit
+#### Forgery Kit
+#### Gaming Set
+#### Herbalism Kit
+#### Musical Instrument
+#### Navigator's Tools
+#### Poisoner's Kit
+#### Thieves' Tools
+
+\pagebreakNum
+
+Item                        | Cost      | Weight
+----------------------------|-----------|-------|
+Ammunition                  |           |       |
+Backpack                    | 9s        |       | 1.25 gallon
+Barrel                      | 10s       |       | 32 gallons
+Basket                      | 3s 30c    |       | 1 bushel (8 gallons)
+Blanket                     | 2s 33c    |       |
+Book, 24 pages              | 14s       |       |
+Bottle                      | 40c       |       | 1 quart
+Bucket                      | 1s 40c    |       | 2 gallon
+Candle                      | 5c        |       |
+Case, scroll or map         | 2s 80c    |       | 
+Cask                        | 2s 80c    |       | 2 gallon
+Cauldron (2 gal)            | 16s       | 20 lb.
+Cauldron (4 gal)            | 25s 78c   | 40 lb.
+Chalk                       | 2c        |       |
+Crowbar                     | 5s 60c    |       |
+Fishing tackle              | 56c       |       |
+Flask                       | 33c       |       | 1 pint
+Flint and steel             | 28c       |       |
+Flask (drinking glass)      |
+Grappling hook              |
+Hammer                      |
+Hourglass                   | 7s        |       |
+Hunting trap                | 18s 75c   |       |
+Ink (1 oz)                  | 50c       |
+Jug                         | 1s 88c    |       | 1 gal
+Keg                         | 2s        |       | 15 gal
+Lock                        | 2s        |       |
+Magnifying glass            | 5s 60c    |       |
+Mirror, steel               | 56c       |       |
+Parchment (1 sheet)         | 50c       |       |
+Pick, miner's               | 9s 40c    |       |
+Pouch                       | 50c       |       | 
+Sack                        | 2s 33c    |       | 1 cubic foot
+Quiver                      | 1s 15c    |       | 10 arrows
+Rations (1 day)             | 1s 15c    |       |
+Saddlebags                  | 4s 70c    |       | ??
+Scale, merchant's           | 14s       |       |
+Spike, iron                 | 60c       |       | 
+Spyglass                    | 10s       |       |
+Torch                       | 10c       |       |
+Whetstone                   | 33c       |
+
+\pagebreakNum
+
+#### Ammunition
+##### Ammunition
+Type        | Amount | Storage  | Weight    | Cost
+----------------|----|----------|-----------|------
+Arrows	        | 20 | Quiver	| 1 lb.	    | 20s
+Bolts	        | 20 | Case	    | 1 1/2 lb.	| 20s
+Bullets, Firearm| 10 | Pouch    | 2 lb.	    | 
+Bullets, Sling	| 20 | Pouch	| 1 1/2 lb.	| 
+Needles	        | 50 | Pouch	| 1 lb.	    | 
+
+
+\pagebreakNum
+
+## Adventuring Gear
+#### Acid
+#### Alchemist's Fire
+#### Ammunition
+##### Ammunition
+Type            | Amount | Storage   | Weight | Cost
+----------------|----|----------|--|--------|--------
+Arrows	        | 20 | Quiver	| 1 lb.	    | 1 GP
+Bolts	        | 20 | Case	    | 1 1/2 lb.	| 1 GP
+Bullets, Firearm| 10 | Pouch    | 2 lb.	    | 3 GP
+Bullets, Sling	| 20 | Pouch	| 1 1/2 lb.	| 4 CP
+Needles	        | 50 | Pouch	| 1 lb.	    | 1 GP
+#### Antitoxin
+#### Arcane Focus
+#### Backpack
+#### Ball Bearings
+#### Barrel
+#### Basket
+#### Bedroll
+#### Bell
+#### Blanket
+#### Block and Tackle
+#### Book
+#### Bottle, Glass
+#### Bucket
+#### Caltrops
+#### Candle
+#### Case, Crossbow Bolt
+#### Case, Map or Scroll
+#### Chain
+#### Chest
+#### Climber's Kit
+#### Clothes, Fine
+#### Clothes, Traveler's
+#### Component Pouch
+#### Costume
+#### Crowbar
+#### Druidic Focus
+###### Druidic Focuses
+#### Flask
+#### Grappling Hook
+#### Healer's Kit
+#### Holy Symbol (Varies)
+#### Holy Water
+#### Hunting Trap
+#### Ink
+#### Ink Pen
+#### Jug
+#### Ladder
+#### Lamp
+#### Lantern, Bullseye
+#### Lantern, Hooded
+#### Lock
+#### Magnifying Glass
+#### Manacles
+#### Map
+#### Mirror
+#### Net
+#### Oil
+#### Paper
+#### Parchment
+#### Perfume
+#### Poison, Basic
+#### Pole
+#### Pot, Iron
+#### Potion of Healing
+#### Pouch
+#### Quiver
+#### Quiver (Spear/Javelin)
+#### Ram, Portable
+#### Rations
+#### Robe
+#### Rope
+#### Sack
+#### Shovel
+#### Signal Whistle
+#### Spell Scroll
+#### Spikes, Iron
+#### Spyglass
+#### String
+#### Tent
+#### Tinderbox
+#### Torch
+#### Vial
+#### Waterskin
+
+\pagebreak
+
+## Mounts and Vehicles
+### Mounts and Cargo
+### Barding
+### Saddles
+##### Mounts and Other Animals
+##### Tack, Harness, and Drawn Vehicles
+### Large Vehicles
+#### Speed
+#### Crew
+#### Passengers
+#### Damage Threshold
+#### Ship Repair
+## Services
+### Lifestyle Expenses
+#### Wretched
+#### Squalid
+#### Poor
+#### Modest
+#### Comfortable
+#### Wealthy
+#### Aristocratic
+### Food, Drink, and Lodging
+##### Food, Drink, and Lodging
+### Travel
+### Hirelings
+##### Hirelings
+### Spellcasting
+##### Spellcasting Services
+## Magic Items
+### Identifying a Magic Item
+### Attunement
+#### Attune During a Short Rest
+#### No More Than Three Items
+#### Ending Attunement
+### Wearing and Wielding Items
+#### Multiple Items of the Same Kind
+#### Paired Items
+## Crafting Equipment
+### Crafting Nonmagical Items
+#### Tools
+#### Raw Materials
+#### Time
+### Brewing Potions of Healing
+### Scribing Spell Scrolls
+#### Time and Cost
+#### Prerequisites for the Scribe
+#### Cantrips
+##### Spell Scroll Costs
+
+\pagebreakNum
+
+<div class='classTable wide' />
+
+##### Weapons
+| Name                              | Damage            |&nbsp;&nbsp;&nbsp;| Properties|Mastery     |  Range    | Weight    | Cost  |
+|-----------------------------------|-------------------|-|-------------------------|---------------|:---------:|----------:|------:|
+| *Unarmed Weapons*                 |                   | |                         |               |           |           |       |
+| &nbsp;&nbsp;&nbsp; Unarmed strike | 1 bludgeoning     | |                         |               |           |           |
+| &nbsp;&nbsp;&nbsp; Brass knuckles | +1 bludgeoning
+| &nbsp;&nbsp;&nbsp; Gauntlet       | +1 bludgeoning
+| &nbsp;&nbsp;&nbsp; Glove, padded  |
+| *Simple Melee Weapons*            |                   | |                         |               |           |           |       |
+| &nbsp;&nbsp;&nbsp; Baton          | 1d4 bludgeoning   | | Finesse, light          |
+| &nbsp;&nbsp;&nbsp; Club           | 1d4 bludgeoning   | | Light                   | Slow          |           | 2 lb.     | 1 sp  |
+| &nbsp;&nbsp;&nbsp; Crook          | 1d4 bludgeoning   | |
+| &nbsp;&nbsp;&nbsp; Dagger         | 1d4 piercing      | | Finesse, light, thrown  | Nick          | 20/60     | 1 lb.     | 2 gp  |
+| &nbsp;&nbsp;&nbsp; Flail, peasant | 
+| &nbsp;&nbsp;&nbsp; Fork           |
+| &nbsp;&nbsp;&nbsp; Greatclub      | 1d6 bludgeoning   | | Heavy, versatile (1d8)  |
+| &nbsp;&nbsp;&nbsp; Hammer, light  | 1d4 bludgeoning   | | 
+| &nbsp;&nbsp;&nbsp; Handaxe        | 1d6 slashing      | | Light
+| &nbsp;&nbsp;&nbsp; Javelin        | 1d6 piercing      | |
+| &nbsp;&nbsp;&nbsp; Longspear      | 1d8 piercing      | | Heavy, reach, two-handed    | 9 lb. | 5 gp
+| &nbsp;&nbsp;&nbsp; Mace           | 1d6 bludgeoning   
+| &nbsp;&nbsp;&nbsp; Machete        | 1d6 slashing      
+| &nbsp;&nbsp;&nbsp; Morningstar    | 
+| &nbsp;&nbsp;&nbsp; Pickaxe        | 1d4 piercing      | | 
+| &nbsp;&nbsp;&nbsp; Quarterstaff   | 1d6 bludgeoning   | | Double (1d6/1d6), versatile (1d8) | 
+| &nbsp;&nbsp;&nbsp; Sap            | 
+| &nbsp;&nbsp;&nbsp; Sickle         | 1d4 slashing      | | Light
+| &nbsp;&nbsp;&nbsp; Scythe         | 
+| &nbsp;&nbsp;&nbsp; Spear          | 1d6 piercing      | | Thrown, versatile (1d8)
+| &nbsp;&nbsp;&nbsp; Throwing axe   | 1d4 slashing      | | Light, thrown           |               | 20/60
+| &nbsp;&nbsp;&nbsp; Warclaw        | 
+| &nbsp;&nbsp;&nbsp; Wooden sword   |  
+| *Simple Ranged Weapons*           |                   | |                         |               |         |        |        |
+| &nbsp;&nbsp;&nbsp; Blowgun        | 1 piercing        | | Ammunition (needle), special |          | 25/100  | 1 lb.   | 1 gp |
+| &nbsp;&nbsp;&nbsp; Crossbow, heavy| 1d10 piercing     | | Ammunition (bolt), heavy, loading, <br/> two-handed, unwieldy | | | 18 lb. | 50 gp
+| &nbsp;&nbsp;&nbsp; Crossbow, light|
+| &nbsp;&nbsp;&nbsp; Dart           |
+| &nbsp;&nbsp;&nbsp; Sling          |
+| &nbsp;&nbsp;&nbsp; Slingstaff     |
+| &nbsp;&nbsp;&nbsp; Stonebow, heavy| 1d10 bludgeoning  | | Ammunition (bullett), heavy, loading, <br/> two-handed, unwieldy | | | 18 lb. | 50 gp
+| &nbsp;&nbsp;&nbsp; Stonebow, light|
+
+</div>
+
+\pagebreakNum
+
+<div class='classTable wide' />
+
+| Name                              | Damage            |&nbsp;&nbsp;&nbsp;| Properties|Mastery     |  Range    | Weight    | Cost  |
+|-----------------------------------|-------------------|-|-------------------------|---------------|:---------:|----------:|------:|
+| *Martial Melee Weapons*           |                   | |                         |               |         |        |        |
+| &nbsp;&nbsp;&nbsp; Ball and chain |
+| &nbsp;&nbsp;&nbsp; Battleaxe      |
+| &nbsp;&nbsp;&nbsp; Flail          |
+| &nbsp;&nbsp;&nbsp; Garrote        |
+| &nbsp;&nbsp;&nbsp; Glaive         |
+| &nbsp;&nbsp;&nbsp; Greataxe       |
+| &nbsp;&nbsp;&nbsp; Greatsword     |
+| &nbsp;&nbsp;&nbsp; Halberd        |
+| &nbsp;&nbsp;&nbsp; Lance          |
+| &nbsp;&nbsp;&nbsp; Longsword      |
+| &nbsp;&nbsp;&nbsp; Maul           |
+| &nbsp;&nbsp;&nbsp; Pike           |
+| &nbsp;&nbsp;&nbsp; Rapier         |
+| &nbsp;&nbsp;&nbsp; Scimitar       |
+| &nbsp;&nbsp;&nbsp; Shortsword     |
+| &nbsp;&nbsp;&nbsp; Trident        |
+| &nbsp;&nbsp;&nbsp; Warhammer      |
+| &nbsp;&nbsp;&nbsp; War pick       |
+| &nbsp;&nbsp;&nbsp; Whip           |
+| *Martial Ranged Weapons*          |                   | |                         |               |         |        |        |
+| &nbsp;&nbsp;&nbsp; Bolas          |
+| &nbsp;&nbsp;&nbsp; Boomerang      |
+| &nbsp;&nbsp;&nbsp; Crossbow, hand |
+| &nbsp;&nbsp;&nbsp; Crossbow, heavy repeating |
+| &nbsp;&nbsp;&nbsp; Crossbow, light repeating |
+| &nbsp;&nbsp;&nbsp; Lasso          |
+| &nbsp;&nbsp;&nbsp; Longbow        |
+| &nbsp;&nbsp;&nbsp; Net            |
+| &nbsp;&nbsp;&nbsp; Shortbow       |
+| &nbsp;&nbsp;&nbsp; Shuriken       |
+
+</div>
+
+\pagebreakNum
+
+<div class='classTable wide' />
+
+#####  Oversized Weapons
+| Name                              | Damage            |&nbsp;&nbsp;&nbsp;| Properties|Mastery     |  Range  | Weight | Cost   |
+|-----------------------------------|-------------------|-|-------------------------|---------------|:-------:|-------:|-------:|
+| *Simple Melee Weapons*            |                   | |                         |               |         |        |        |
+| &nbsp;&nbsp;&nbsp; Heavy dagger   |  1d6 piercing     | | Finesse, light, thrown  |               |  20/60  |  2 lb. |  8 gp  |
+| &nbsp;&nbsp;&nbsp; Greatspear     |  1d8 piercing     | | Oversized, thrown, versatile (1d10)| |  20/60  |  6 lb. |  4 gp  |
+| &nbsp;&nbsp;&nbsp; Tauren totem   | 1d12 bludgeoning  | | Two-handed              |               |         | 50 lb. | 20 gp  |
+| *Martial Melee Weapons*           |                   | |                         |               |         |        |        |
+| &nbsp;&nbsp;&nbsp; Execution axe  |  2d8 slashing     | | Heavy, two-handed       |               |         | 14 lb. |120 gp  |
+| &nbsp;&nbsp;&nbsp; Fullblade      |  2d8 slashing     | | Heavy?, two-handed      |               |         | 12 lb. |200 gp  |
+| &nbsp;&nbsp;&nbsp; Naga trident   | 1d10 piercing     | | Heavy?, two-handed      |               |         | 12 lb. | 50 gp  |
+| &nbsp;&nbsp;&nbsp; Nodachi        | 1d10 slashing     | | Versatile (1d12)        |               |         |  6 lb. | 60 gp  |
+| &nbsp;&nbsp;&nbsp; Tauren halberd | 1d12 slashing     | | Heavy, reach, two-handed|               |         | 25 lb. | 50 gp  |
+| *Martial Ranged Weapons*          |                   | |                         |               |         |        |        |
+| &nbsp;&nbsp;&nbsp; Crossbow, great| 1d12 piercing     | | Ammunition, heavy, loading, two-handed || 150/600 | 36 lb. |200 gp  |
+| &nbsp;&nbsp;&nbsp; Greatbow       | 1d10 piercing     | | Ammunition, heavy, two-handed |         | 150/600 |  4 lb. |200 gp  |
+
+</div>
+
+\pagebreakNum
+
+
+##### Weapon-Adjacent Items
+Flask Thrower (Crossbow)
+Grappling Hook Launcher (Crossbow)
+Net Launcher ("Gun")
+
+
+#### Changes
+- Greatclub loses two-handed property and gains heavy and versatile properties
+- Handaxe loses thrown property, to avoid making it strictly better than the light hammer. Hatchet created as throwing axe option
+- Blowgun changed to simple weapon, gains special property (can use Con in place of Dex for damage)
+- Heavy crossbow changed to simple weapon
+
+#### Weapon Descriptions
+***Blowgun.***
+
+\pagebreakNum
+
+Massive (5e Variant Rule)
+Jump to navigationJump to search
+Massive
+During your turn you cannot attack before or after moving with a massive weapon.
+
+https://www.dandwiki.com/wiki/Massive_(5e_Variant_Rule)
+
+
+
+
+A blowgun is a simple ranged weapon consisting of a narrow, long tube designed for firing light projectiles or darts. You attack with the by inserting a needle inside the pipe, then blowing sharply into one end to shoot the projectile out the opposite side. Unlike most ammunition weapons, a blowgun can be both loaded and fired using only one hand instead of two.
+
+Special. The force with which you shoot a blowgun needle depends on your exhalation power and lung capacity. When you use ammunition to make a ranged weapon attack with this blowgun, you can add your Constitution modifier to the damage roll instead of your Dexterity modifier.
+
+
+https://www.dandwiki.com/wiki/Blowgun,_Variant_(5e_Equipment)
+
+https://www.dandwiki.com/wiki/Pillar_(5e_Equipment)
+https://www.dandwiki.com/wiki/Oversized_(5e_Variant_Rule)
+
+#### Variant Rule: Oversized Weapons
+A weapon with the **oversized** property is an intermediate step between the Medium-sized weapons from the Player's Handbook and Large-sized weapons (DMG p. 278). The intent is that they can be used by Large-sized player characters in place of a Large-sized weapon, so they can deal the expected extra damage without being overpowered.
+
+##### Creating Oversized Weapons
+An oversized weapon is any weapon that has the oversized property applied to it. Follow the below guidelines when creating an oversized weapon: 
+
+***Damage.*** Increase the damage dealt by the weapon by one die size:
+- 1 → 1d4 → 1d6 → 1d8 → 1d10 → 1d12 → 2d8
+- 2d4 → 2d6 → 2d8
+
+***Weapon Properties.*** 
+___
+- ***Light.***
+
+***Other properties***
+Light. The weapon is only considered light if you are a Large creature, otherwise it is ignored.
+Finesse. The weapon is only considered finesse if you are a Large creature, otherwise it is ignored.
+Versatile. The weapon is only considered versatile if you are a Large creature, otherwise it is considered to be a two-handed weapon.
+Heavy. If you are a Medium creature, you have disadvantage on attack rolls with the weapon. If you are Small, you cannot wield the weapon at all.
+Thrown. You can only throw the weapon if you are Large.
+Two-handed. Add the heavy property if it did not already have it.
+
+Weight and Cost
+Quadruple the weight and cost of the weapon, and of any ammunition it uses.
+
+Oversized unarmed strike?
+Yes, works as above; a Large creature deals 1d4 bludgeoning damage with an unarmed strike.
+
+Other sized PCs
+Some homebrew feats and class features may allow a PC to wield an oversized weapon as if they were one size category larger. As an errata for these feats and features, the following is in effect:
+
+These effects do not have compounding effects unless otherwise stated.
+For medium-sized creatures, this effect applies to weapons only; it does not increase the damage of their unarmed strikes unless otherwise stated.
+For small-sized creatures, they may not wield oversized weapons as if they were large, but may wield any weapon as if they were medium sized. Similarly, tiny sized creatures may be treated as small. In both cases, this effect is optional, and there is no penalty for tiny sized creatures who still wish to wield an undersized weapon.
+For already large-sized creatures, this has no effect. However, with GM discretion, a "doubly-oversized" weapon variant may be created that they are allowed to wield.
+What about Large weapons?
+Large weapons deal double the damage dice (e.g. a Large shortsword deals 2d6 damage). Note that this rule is buried away in the "Creating a Monster" chapter of the DMG, and not the PHB. This rule is a guide to help a DM create monsters, so the DM should not feel obligated to allow the same rule to apply to PCs. Nonetheless, a DM might allow a PC to wield a Large weapon as-is; or allow them to wield it with disadvantage on attack rolls (as though it were Heavy for them).
+
+Examples
+Greatspear
+An oversized spear costs 2 gp and weighs 6 lb.
+When wielded by a Large creature: 1d8 piercing, thrown (20/60), versatile (1d10)
+When wielded by a Small or Medium creature: 1d8 piercing, two-handed
+Buster Sword, or Fullblade
+An oversized greatsword costs 100 gp and weighs 12 lb.
+When wielded by a Large creature: 2d8 slashing, heavy, two-handed
+When wielded by a Medium creature: 2d8 slashing, heavy, two-handed; disadvantage on attack rolls
+A small creature cannot wield this.
+Guan Do
+An oversized glaive costs 40 gp and weighs 12 lb.
+When wielded by a Large creature: 1d12 slashing, heavy, reach, two-handed
+When wielded by a Medium Creature: 1d12 slashing, heavy, reach, two-handed; disadvantage on attack rolls
+A small creature cannot wield this.
+Mini Ballista
+An oversized heavy crossbow costs 100 gp and weighs 36 lb.
+When wielded by a Large creature: 1d12 piercing, ammunition (range 100/400), heavy, loading, two-handed
+When wielded by a Medium creature: 1d12 piercing, ammunition (range 100/400), heavy, loading, two-handed; disadvantage on attack rolls
+A small creature cannot wield this.
+Nodachi, or Ōdachi
+An oversized katana costs 40 gp and weighs 6 lb.
+When wielded by a Large creature: 1d10 slashing, versatile (1d12); finesse while wielded in one hand
+When wielded by a Small or Medium creature: 1d10 slashing, two-handed
+Oversized Dagger
+An oversized dagger costs 4 gp and weighs 2 lb.
+When wielded by a Large creature: 1d6 piercing, finesse, light, thrown (range 20/60)
+When wielded by a Small or Medium creature: 1d6 piercing
+Oversized Longbow
+An oversized longbow costs 100 gp and weighs 4 lb.
+When wielded by a Large creature: 1d10 piercing, ammunition (range 150/600), heavy, two-handed
+When wielded by a Medium creature: 1d10 piercing, ammunition (range 150/600), heavy, two-handed; disadvantage on attack rolls
+A small creature cannot wield this.
+
+Wealth appears in many forms in Tamriel. Coins, gemstones, trade goods, art objects, animals, and property can reflect your character’s financial well-being. Members of the peasantry trade in goods, bartering for what they need and paying taxes in grain and cheese.
+
+Members of the nobility trade either in legal rights, such as the rights to a mine, a port, or farmland, or in gold bars, measuring gold by the pound rather than by the coin. Only merchants, adventurers, and those offering professional services for hire commonly deal in coins.
+
+Coinage
+Instead of copper, silver, electrum, and gold coins the land of Tamriel deals only in Septims, which are sometimes called Drakes. When translating prices in gold pieces from 5e to Septims, 1 gold piece is equal to 4 Septims.
+
+A standard coin weighs about a third of an ounce, so fifty coins weigh a pound.
+
+Wealth
+The economy of Tamriel is based mainly on bartering. Although many merchants deal in coin, many will trade for goods and jewels. Larger cities may refuse to barter for goods and wish to deal strictly in Septims.
+
+Further information: Equipment
+Currency
+The main currency in Tamriel is the Septim. It is named that way from the Septim Empire that ruled Tamriel from the end of the Second Era until the end of the Third Era. It's called this due to the bust of Tiber Septim on the face of the coin. It is also sometimes referred to as Drakes, due to the seal of Akatosh on the back side.
+
+Services
+Below are typical prices for services that might be offered by vendors, barkeeps, tavern owners, stablemasters, etc.
+
+Accommodations
+Lodging	Cost	Time
+Squalid	2	day
+Poor	5	day
+Modest	10	day
+Comfortable	25	day
+Wealthy	50	day
+Aristocratic	100	day
+Hovel	150	week
+Cabin	400	week
+House	1500	week
+Villa	5000	week
+Transportation
+Service	Septims
+Cart	1 per mile
+Rowboat	10 per mile
+Ship	40 per mile
+Hireling
+Service	Septims
+Sell Sword	10 per day
+Fighter's Guild	15 per day
+Messenger	1 per mile
+Food and Drink
+Food	Septims
+Sweet Roll	1
+Bread	2
+Butter	1
+Leg of Goat	3
+Venison Stew	8
+Mudcrab Legs	9
+Goat Cheese	8
+Eidar Cheese	10
+Drink	Septims
+Ale	5
+Spiced Wine	7
+Alto Wine	12
+Colovian Brandy	100
+
+
+
+Armor, +1, +2, or +3
+Armor (light, medium, or heavy), rare (+1), very rare (+2), or legendary (+3)
+
+You have a bonus to AC while wearing this armor, the bonus is determined by its rarity.
+
+When creating magical armor, consider using rare materials to describe these powerful armors. Of course, traditionally strong materials could be found in much lower quality. Use the following list as a guideline:
+
+Light Armor
+Rare (+1). Chitin, Mithril
+Very Rare (+2). Elven
+Legendary (+3). Dragonhide, Glass
+
+Medium Armor
+Rare (+1). Dreugh, Bonemold
+Very Rare (+2). Stahlrim, Orcish
+Legendary (+3). Dragonscale
+
+Heavy Armor
+Rare (+1). Dwemer, Adamantium
+Very Rare (+2). Ebony
+Legendary (+3). Daedric, Dragonplate
+
+
+Weapon, +1, +2, or +3
+Weapon (any), uncommon (+1), rare (+2), or rare (+3)
+
+You have a bonus to attack and damage rolls made with this magic weapon. The bonus is determined by the weapon's rarity.
+
+When creating magical weapons, consider using rare materials to describe these powerful weapons. Of course, traditionally strong materials could be found in much lower quality. Use the following list as a guideline:
+
+Magic Weapons
+Uncommon (+1). Elven, Mithril, Dwarven
+Rare (+2). Orcish, Adamantium, Ebony
+Very Rare (+3). Daedric, Dragonbone
+
+For more complicated weapon bonus', use the following guideline below:
+
+Material	Hit Bonus	Damage Bonus	Properties
+Iron	0	0	Magical creature like imps and werewolves have resistance
+Steel	0	0	Magical creature like imps and werewolves have resistance
+Silver	0	0	
+Mithril	+1	+1	
+Elven	+2	+1	Lightweight. Heavy weapons can be wielded by Small creatures
+Dwarven	+1	+2	
+Orcish	+2	+2	
+Adamantium	+2	+2	
+Ebony	+2	+3	
+Daedric	+3	+3	
+Dragonbone	+3	+3	
+
+
+Fishing Rod (5e Equipment)
+https://www.dandwiki.com/wiki/Fishing_Rod_(5e_Equipment)
+Fishing Rod
+Simple Melee Weapons
+Weapon	Cost	Damage	Weight	Properties
+Fishing Rod	20 gp	1 piercing	3 lb.	two-handed, finesse, reach, range (20/60), spooled (60 feet), Special
+A sturdy flexible rod of wood or metal, with a reel connected to a strong thin line with a hook on the end. This rod functions as a higher-quality replacement for a simpler rod that might be found as part of a set of fishing tackle.
+
+Special. When a creature takes the piercing damage from an attack made with this weapon, it becomes stuck with the hook and tethered to the rod out to the distance of the spooled line. On its turn, the tethered creature or another creature can use its action to attempt a DC 10 Strength (Medicine) check, taking the weapon's piercing damage from pulling out the hook on a success and ending the tethered condition.
+
+While a Medium or smaller creature is tethered, you can use an action to attempt to reel the line in. You make a Strength (Athletics) check contested by the creature’s Strength (Athletics) check. If the creature fails the check, you pull the creature up to your Strength score in feet toward you. If the creature succeeds the check, it is not pulled.
+
+Dealing 2 slashing damage to the line (AC 15) frees the tethered creature without harming it and breaks the line. The line is either also broken or the rod is dropped by you (your choice) if a tethered creature rolls a 15 or higher on the contested Strength (Athletics) check.
+
+Esoteric Weapon. You don't have proficiency with the fishing rod unless you are specifically stated to have proficiency in it, or if you have proficiency in improvised weapons.
+
+Weapon Mastery: Vex. If you are using weapon masteries, the fishing pole has the Vex weapon mastery.
+
+
+
+TRADE GOOD: Mana Dust. Forms the basis of mana potions and enchanting.
+
+\pagebreakNum
+
+<div class="table wide" />
+
+##### Gn2G Trade Goods
+Cost        | | Food and Spices         | Materials                     | Livestock
+-----------:|-|-------------------------|-------------------------------|-------------
+1c          | |                         |
+25c         | | 
+75c         | | 1 lb. of wheat          |
+1s          | | 1 lb. of iron           |
+1s 25c      | | 1 lb. of flour (wheat)  |
+1s 50c      | | 1 lb. of salt           |                               | one chicken
+3s          | |                         | 1 lb. of copper               |
+4s 50c      | | 1 lb. of ginger         | 
+7s          | |                         | 1 sq. yd. of canvas
+10s         | |                         | 1 sq. yd. of linen            
+12s         | | 1 lb. of cinnamon       | 1 sq. yd. of cotton cloth
+15s         | | 1 lb. of cloves         |                               | one goat
+18s         | | 1 lb. of pepper         |
+25s         | |                         |                               | one pig
+32s         | |                         | 1 lb. of silver               |
+1g 0s 0c    | |                         | 1 sq. yd. of silk cloth
+1g 60s 0c   | |                         |                               | one cow
+3g 20s 0c   | |                         | 1 lb. of gold                 | one ox
+4g 80s 0c   | | 1 lb. of saffron        | 
+??s         | |                         |                               | one sheep
+??g ??s ??c | |                         | 1 lb. of platinum             |
+
+</div>
+
+##### Lifestyle Expenses
+Lifestyle       | Price/Day
+----------------|----------
+Wretched        | —
+Squalid         |
+Poor            |
+Modest          |
+Comfortable     |
+Wealthy         |
+Aristocratic    |
+
+##### Ale, Drink, and Lodging
+Item                        | Cost
+----------------------------|-------
+*Ale*                       | 
+&nbsp;&nbsp; Gallon         |
+&nbsp;&nbsp; Mug            |
+Banquet (per person)        |
+Bread, loaf                 |
+Cheese, hunk                |
+*Inn stay (per day)*        |
+&nbsp;&nbsp; Squalid        |
+&nbsp;&nbsp; Poor           |
+&nbsp;&nbsp; Modest         |
+&nbsp;&nbsp; Comfortable    |
+&nbsp;&nbsp; Wealthy        |
+&nbsp;&nbsp; Aristocratic   |
+*Meals (per day)*           |
+&nbsp;&nbsp; Squalid        |
+&nbsp;&nbsp; Poor           |
+&nbsp;&nbsp; Modest         |
+&nbsp;&nbsp; Comfortable    |
+&nbsp;&nbsp; Wealthy        |
+&nbsp;&nbsp; Aristocratic   |
+Meat, chunk                 |
+*Wine*                      |
+&nbsp;&nbsp; Common (pitcher)|
+&nbsp;&nbsp; Fine (bottle)  |
+
+\pagebreakNum
+
+Item                        | Cost  | Weight
+----------------------------|-------|---------
+Abacus	                    | 2 gp  | 2 lb.
+Acid (vial)	                | 25 gp	| 1 lb.
+Alchemist's Fire (flask)	| 50 gp	| 1 lb.
+Antitoxin (vial)	        | 50 gp	| —
+Arcane Focus, Crystal	    | 10 gp	| 1 lb.
+Arcane Focus, Orb	        | 20 gp	| 3 lb.
+Arcane Focus, Rod	        | 10 gp	| 2 lb.
+Arcane Focus, Staff	        | 5 gp	| 4 lb.
+Arcane Focus, Wand	        | 10 gp	| 1 lb.
+Backpack	                | 2 gp	| 5 lb.
+Ball Bearings (bag of 1,000)| 1 gp	| 2 lb.
+Barrel	                    | 2 gp	| 70 lb.
+Basket	                    | 4 sp	| 2 lb.
+Bedroll	                    | 1 gp	| 7 lb.
+Bell	                    | 1 gp	| —
+Blanket	                    | 5 sp	| 3 lb.
+Block and Tackle	        | 1 gp	| 5 lb.
+Book	                    | 25 gp	| 5 lb.
+Bottle, Glass               | 2 gp	| 2 lb.
+Bucket	                    | 5 cp	| 2 lb.
+Caltrops (bag of 20)	    | 1 gp	| 2 lb.
+Candle	                    | 1 cp	| —
+Case, Crossbow Bolt	        | 1 gp	| 1 lb.
+Case, Map or Scroll	        | 1 gp	| 1 lb.
+Chain (10 feet)	            | 5 gp	| 10 lb.
+Chalk (1 piece)	            | 1 cp	| —
+Chest	                    | 5 gp	| 25 lb.
+Climber's Kit	            | 25 gp	| 12 lb.
+Clothes, Common	            | 5 sp	| 3 lb.
+Clothes, Costume	        | 5 gp	| 4 lb.
+Clothes, Fine	            | 15 gp	| 6 lb.
+Clothes, Traveler's         | 2 gp	| 4 lb.
+Component Pouch	            | 25 gp	| 2 lb.
+Crowbar	                    | 2 gp	| 5 lb.
+Druidic Focus, Sprig of Mistletoe | 1 gp | —
+Druidic Focus, Totem	    | 1 gp	| —
+Druidic Focus, Wooden Staff	| 5 gp	| 4 lb.
+Druidic Focus, Yew Wand	    | 10 gp	| 1 lb.
+Fishing Tackle	            | 1 gp	| 4 lb.
+Flask or Tankard	        | 2 cp	| 1 lb.
+Grappling Hook	            | 2 gp	| 4 lb.
+Hammer	                    | 1 gp	| 3 lb.
+Hammer, Sledge	            | 2 gp	| 10 lb.
+Healer's Kit	            | 5 gp	| 3 lb.
+Holy Symbol, Amulet	        | 5 gp	| 1 lb.
+Holy Symbol, Emblem	        | 5 gp	| —
+Holy Symbol, Reliquary	    | 5 gp	| 2 lb.
+Holy Water (flask)	        | 25 gp	| 1 lb.
+Hourglass	                | 25 gp	| 1 lb.
+Hunting Trap	            | 5 gp	| 25 lb.
+Ink (1 ounce bottle)	    | 10 gp	| —
+Ink Pen	                    | 2 cp	| —
+Jug or Pitcher	            | 2 cp	| 4 lb.
+Ladder (10-foot)	        | 1 sp	| 25 lb.
+Lamp	                    | 5 sp	| 1 lb.
+Lantern, Bullseye	        | 10 gp	| 2 lb.
+Lantern, Hooded	            | 5 gp	| 2 lb.
+Lock	                    | 10 gp	| 1 lb.
+Magnifying Glass	        | 100 gp| —
+Manacles	                | 2 gp	| 6 lb.
+Mess Kit	                | 2 sp	| 1 lb.
+Mirror, Steel	            | 5 gp	| ½ lb.
+Oil (flask)	                | 1 sp	| 1 lb.
+Paper (one sheet)	        | 2 sp	| —
+Parchment (one sheet)	    | 1 sp	| —
+Perfume (vial)	            | 5 gp	| —
+Pick, Miner's	            | 2 gp	| 10 lb.
+Piton	                    | 5 cp	| ¼ lb.
+Poison, Basic (vial)	    | 100 gp| —
+Pole (10-foot)	            | 5 cp	| 7 lb.
+Pot, Iron	                | 2 gp	| 10 lb.
+Potion of Healing	        | 50 gp	| ½ lb.
+Pouch	                    | 5 sp	| 1 lb.
+Quiver	                    | 1 gp	| 1 lb.
+Ram, Portable	            | 4 gp	| 35 lb.
+Rations (1 day)	            | 5 sp	| 2 lb.
+Robes	                    | 1 gp	| 4 lb.
+Rope, Hempen (50 feet)	    | 1 gp	| 10 lb.
+Rope, Silk (50 feet)	    | 10 gp	| 5 lb.
+Sack	                    | 1 cp	| ½ lb.
+Scale, Merchant's	        | 5 gp	| 3 lb.
+Sealing Wax	                | 4 sp	| —
+Shovel	                    | 2 gp	| 5 lb.
+Signal Whistle	            | 5 cp	| —
+Signet Ring	                | 5 gp	| —
+Soap	                    | 2 cp	| —
+Spellbook	                | 50 gp	| 3 lb.
+Spikes, Iron (10)	        | 1 gp	| 5 lb.
+Spyglass	                | 1,000 gp | 1 lb.
+Tent, two-person	        | 2 gp	| 20 lb.
+Tinderbox	                | 5 sp	| 1 lb.
+Torch	                    | 1 cp	| 1 lb.
+Vial	                    | 1 gp	| —
+Waterskin	                | 2 sp	| 5 lb. (full)
+Whetstone	                | 1 cp	| 1 lb.
+
+\pagebreakNum
+
+##### Container Capacity
+Container           | Capacity
+------------|---------
+Backpack[1]	        | 1 cubic foot/30 pounds of gear
+Barrel	            | 40 gallons liquid, 4 cubic feet solid
+Basket	            | 2 cubic feet/40 pounds of gear
+Bottle	            | 1½ pints liquid
+Bucket	            | 3 gallons liquid, 1/2 cubic foot solid
+Chest	            | 12 cubic feet/300 pounds of gear
+Flask or tankard    | 1 pint liquid
+Jug or pitcher	    | 1 gallon liquid
+Pot, iron	        | 1 gallon liquid
+Pouch	            | 1/5 cubic foot/6 pounds of gear
+Sack	            | 1 cubic foot/30 pounds of gear
+Vial	            | 4 ounces liquid
+Waterskin	        | 4 pints liquid
+
+<div class="table wide" />
+
+##### Gn2G Trade Goods++
+Cost        | | Food and Spices         | Materials                     | Livestock
+-----------:|-|-------------------------|-------------------------------|-------------
+1c          | |                         |
+25c         | | 
+75c         | | 1 lb. of wheat          |
+1s          | | 1 lb. of iron           |
+1s 25c      | | 1 lb. of flour (wheat)  |
+1s 50c      | | 1 lb. of salt           |                               | one chicken
+3s 20c      | |                         | 1 lb. of copper <br/> 1 lb. of tin |
+4s 50c      | | 1 lb. of ginger         | 
+6s 40c      | |                         | 1 lb. of bronze
+7s 00c      | |                         | 1 sq. yd. of canvas
+7s 75c      | |                         | 1 sq. yd. of wool
+10s         | |                         | 1 sq. yd. of linen            
+12s         | | 1 lb. of cinnamon       | 1 sq. yd. of cotton cloth
+15s         | | 1 lb. of cloves         |                               | one goat
+18s         | | 1 lb. of pepper         |
+25s         | |                         |                               | one pig
+32s         | |                         | 1 lb. of silver               |
+1g 0s 0c    | |                         | 1 sq. yd. of silk cloth
+1g 60s 0c   | |                         |                               | one cow
+3g 00s 00c
+3g 20s 0c   | |                         | 1 lb. of gold                 | one ox
+4g 80s 0c   | | 1 lb. of saffron        | 
+??s         | |                         |                               | one sheep
+??g ??s ??c | |                         | 1 lb. of platinum             |
+
+</div>
+
+
+\pagebreakNum
+
+<div class="table wide" />
+
+##### Trade Goods
+Cost |	Goods
+-----|----------
+1 cp |	1 lb. of wheat
+2 cp |	1 lb. of flour or one chicken
+5 cp |	1 lb. of salt
+1 sp |	1 lb. of iron or 1 sq. yd. of canvas
+5 sp |	1 lb. of copper or 1 sq. yd. of cotton cloth
+1 gp |	1 lb. of ginger or one goat
+2 gp |	1 lb. of cinnamon or pepper, or one sheep
+3 gp |	1 lb. of cloves or one pig
+5 gp |	1 lb. of silver or 1 sq. yd. of linen
+10 gp|	1 sq. yd. of silk or one cow
+15 gp|	1 lb. of saffron or one ox
+50 gp|	1 lb. of gold
+500 gp|	1 lb. of platinum
+
+##### [Trade Goods](https://www.dandwiki.com/wiki/5e_Trade_Goods)
+Use this table to supplement the trade goods in the Player's Handbook (p. 157).
+
+Cost        | | Food and Spices         | Materials                     | Livestock
+-----------:|-|-------------------------|-------------------------------|-------------
+1 cp        | | 1 lb. of rice  	        | One ashlar block[1]	
+2 cp	    | | Two dozen eggs <br/> 1 lb. of dried fruit <br/> 1 lb. root vegetables[2] <br/> 1 lb. of fungi | 1 lb. of coal		
+5 cp	    | | 1 lb. of cheese <br/> One salted herring                | One goose
+1 sp	    | | 1 lb. of beef or mutton <br/> 1 lb. of raw or fried beans | 1 lb. of zinc	
+2 sp	    | | 1 gallon of milk	    | 1 lb. of wool <br/> 1 lb. of tallow <br/> 1 lb. of lead	
+3 sp	    | | 1 pint molasses         | One fleece of wool (1,5 lb.)	
+5 sp	    | | 1 lb. of butter <br/> 1 salmon <br/> 1 gallon of cream <br/> 1 pint of maple syrup <br/> 1 lb. of tobacco | 1 lb. of wax <br/> 1 lb. of pewter	
+1 gp	    | | 1 lb. of alum <br/> 1 lb. of garlic <br/> 1 pint of honey <br/> 1 lb. of maple sugar | 1 lb. of cotton <br/> 1 lb. of ivory <br/> 1 lb. of tin	
+2 gp	    | | 1 lb. of camphor <br/> 1 lb. of nutmeg <br/> 1 lb. of sugar <br/> 1 lb. of tea | 1 lb. of bronze <br/> 1 lb. of brass <br/> 1 lb. of steel	
+3 gp	    | | One barrel[3] of poor-quality ale <br/> 1 lb. of frankincense <br/> 1 lb. of mustard		
+5 gp	    | | One barrel of medium-quality ale <br/> One quarter[4] of grain
+8 gp	    | | One barrel of good-quality ale <br/> 1 lb. of ginseng <br/> 1 lb. of myrrh		
+10 gp	    | | One barrel of salmon (cleaned and salted) <br/> One barrel of pork (salted)		
+15 gp	    | | One barrel of cheap wine		
+20 gp	    | | One barrel of beef (salted, aka "corned") | 1 lb. of electrum
+50 gp	    | | One barrel of fine wine | One sack of wool (170 fleeces)	
+200 gp		| |                         |                                | One slave, maid
+500 gp			
+
+[1] A dressed and faced masonry stone
+[2] Potatoes, carrots, turnips etc.
+[3] 60 gallons
+[4] Eight bushels, enough to make bread and porridge for one person for one year
+
+</div>
+
+adamantine bar
+arcanite bar
+brass bar (copper and zinc)
+bronze bar (copper and tin)
+copper bar
+dark iron bar
+gold bar
+iron bar
+mithril bar
+silver bar
+steel bar
+thorium bar
+tin bar
+truesilver bar
+
+Agate
+
+##### 10g Gemstones
+d20 | Stone (Description)
+----|-----------------------
+1   | Azurite (opaque mottled deep blue)
+2   | Banded agate (translucent striped brown, blue, white or red)
+3   | Blue quartz (transparent pale blue)
+4   | Eye agate (translucent circles of gray, white, brown, or green)
+5   | Hematite (opaque gray-black)
+
+##### 50g Gemstones
+d20 | Stone (Description)
+----|-----------------------
+1   |
+##### 100g Gemstones
+d20 | Stone (Description)
+----|-----------------------
+1   | Amethyst (transparent deep purple)
+##### 500g Gemstones
+d20 | Stone (Description)
+----|-----------------------
+1   |
+##### 1,000g Gemstones
+d20 | Stone (Description)
+----|-----------------------
+1   |
+##### 5,000g Gemstones
+d20 | Stone (Description)
+----|-----------------------
+1   |
+##### 10,000g Gemstones
+d20 | Stone (Description)
+----|-----------------------
+1   | Azerothian Diamond ()
+
+
+<!-- According to Wikipedia's definition of gemstone orders:
+- Jewelry stones, 1st order: Diamond, Ruby, Emerald, Blue Sapphire, Alexandrite, Natural marine pearls
+- Jewelry stones, 2nd order: Pink sapphire, demantoid, tsavorite, spinel, precious black opal, tanzanite
+- Jewelry stones, 3rd order: Yellow/Green/Violet Sapphires, Aquamarine, Orange topaz (imperial), elbaite, precious white and fire opal
+- Jewelry stones, 4th order: Tourmaline – Verdelite * Indicolite, polychromous * Beryl – Heliodor, pink, yellow-green * Topaz yellow, blue, pink * Peridot * Garnets – Spessartine (malaya), Rhodolite, Almandine, Pyrope * Amethyst * Citrine * Blue Turquoise
+- Jewelry-Industrial stones, 1st order: Lazurite * Jadeite * Nephrite * Malachite * Amber (Baltic amber) * Chrysoprase * Charoite
+- Jewelry-Industrial stones, 2nd order: Agate * Amazonite * Rhodonite * Colorless, smoky and pink quartz * Hematite * Common opal * Opaque iridescent feldspars
+- Industrial stones: Jasper * Graphic granite * Petrified wood * Cacholong (Porouse opal) * Marble onyx * Obsidian * Listwanite (green mica) * Jet * Selenite * Fluorite * Serpentinite * Aventurine quartzite * Ophicalcite (Serpentine/Calcite) * Pagodite (Pyrophyllite/Talc) -->
+
+Adamantine (used in powerful armors, also called adamantium, used in deathwing's armor and to bind Alexstrasza in Grim Batol. Assumed that it forms in the Elemental Plane of Earth.)
+Amethyst
+Nethershard (Crystallized, residual nether energy.)
+
+
+WoW Icon update.png	
+ [Copper Bar] [Tin Bar] [Bronze Bar] [Iron Bar] [Steel Bar] [Mithril Bar] [Thorium Bar] [Dark Iron Bar] [Enchanted Thorium Bar] [Silver Bar] [Gold Bar] [Truesilver Bar] [Arcanite Bar] [Sulfuron Ingot] [Enchanted Elementium Bar]
+
+wool
+cotton
+mageweave
+runecloth
+
+</div>
