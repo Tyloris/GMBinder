@@ -1,0 +1,845 @@
+<style>
+/* GLOBAL FORMATTING  */
+
+  /* Resize page to international A4 */
+  .phb {
+    width: 210mm;
+    height: 296.8mm;
+  }
+  .phb:after { content: ""; }
+
+
+/* TABLE OF CONTENTS  */
+
+  /* toc specifically wants black text. This resets the headers*/
+  .toc a {
+    color: inherit !important;
+  }
+  /* Allow dot leaders to fill remaining space but not overlap */
+  .toc li span:nth-child(2) {
+    width: auto;
+    overflow: hidden;
+    white-space: nowrap;
+    display: block;
+  }
+  .toc li span:nth-child(2):after {
+    font-family: BookSanity;
+    font-size: 0.317cm;
+    font-weight: normal;
+    color: black;
+    content:
+      " ........................................"
+      "........................................."
+      ".........................................";
+    }
+
+  /* Style TOC page numbers*/
+  .toc li span:first-child {
+    float: right;
+    font-family: BookSanity;
+    font-size: 0.317cm;
+    font-weight: normal;
+    color: black;
+    margin-left: 1px;
+  }
+
+  /* Adjust TOC H3 styles */
+  .toc li h3 span:nth-child(2):after {
+  	content: " ";
+  }
+  .toc li h3 {
+    margin-bottom: 4px !important;
+    margin-top: 10px !important;
+    line-height: initial !important;
+  }
+  .toc li h3 span:first-child {
+  	line-height: 1.8em !important;
+  }
+
+  /* Reduce TOC list indentation*/
+  .toc ul ul {
+  	margin-left: 10px !important;
+  }
+  .toc>ul>li {
+    margin-bottom: initial !important;
+  }
+
+
+/* TABLES AND BLOCKS */
+
+  /* Clear internal padding and add gap above for green note blocks*/
+  .phb blockquote {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .phb blockquote { margin-top: 1em;
+  }
+
+
+/* INK BLOT STYLES */
+
+  /* Root style for inkblots. Use alone, or together with
+  one of the inkb lotstyle classes below. Essentially:
+  <img url='{url}' class='inkblot inkblot-blue' />
+  */
+  .inkblot {
+    position: absolute;
+    mix-blend-mode: multiply;
+    opacity: 0.6;
+  }
+
+  .inkblot-blue {
+    filter: hue-rotate(190deg) saturate(120%)
+  }
+
+  .inkblot-green {
+    filter: hue-rotate(120deg)
+  }
+
+</style>
+
+<style>
+/* Background */
+  .phb{ background-image: url('https://gmbinder.com/images/KN1O92T.png') }
+  .phb{ background-size: cover }
+
+/* Notes */
+  .phb section blockquote {background-color: #f6e5d4}
+  .phb hr + section blockquote tr:nth-child(odd) td {background-color: transparent;}
+
+/* Tables */
+  table tr:nth-child(odd) td {background-color: #cccccc}
+
+/* Footer */
+  .phb .pageNumber {color: rgba(0, 0, 0, 0.5)}
+  .phb .footnote {color: rgba(0, 0, 0, 0.5)}
+  .phb:nth-child(odd):after{ 
+    content          : '';
+    position         : absolute;
+    bottom           : -7px;
+    left             : 10px;
+    z-index          : -1;
+    height           : 336px;
+    width            : 100%;
+    background-image : url('https://www.gmbinder.com/images/bNTz1nk.png');
+    background-size  : cover;
+}
+
+.phb:nth-child(even):after{ 
+    content          : '';
+    position         : absolute;
+    bottom           : -7px;
+    left             : -10px;
+    z-index          : -1;
+    height           : 336px;
+    width            : 100%;
+    background-image : url('https://www.gmbinder.com/images/6NCzAN0.png');
+    background-size  : cover;
+}
+
+/* Page Number */
+.phb .pageNumber{
+    position   : absolute;
+    bottom     : 30px;
+    width      : 50px;
+    text-align : center;
+}
+.phb:nth-child(even) .pageNumber{
+    left      : 12px;
+}
+.phb:nth-child(odd) .pageNumber{
+    right      : 12px;
+}
+
+.phb .pageNumber.auto{
+    position   : absolute;
+    bottom     : 41px;
+    width      : 50px;
+    text-align : center;
+}
+.phb:nth-child(even) .pageNumber.auto{
+    left      : 12px;
+}
+.phb:nth-child(odd) .pageNumber.auto{
+    right      : 12px;
+}
+
+/* INK BLOT STYLES */
+
+  /* Root style for inkblots. Use alone, or together with
+  one of the inkb lotstyle classes below. Essentially:
+  <img url='{url}' class='inkblot inkblot-blue' />
+  */
+  .inkblot {
+    position: absolute;
+    mix-blend-mode: multiply;
+    opacity: 0.6;
+  }
+
+  .inkblot-blue {
+    filter: hue-rotate(190deg) saturate(120%)
+  }
+
+  .inkblot-green {
+    filter: hue-rotate(120deg)
+  }
+
+</style>
+
+## Dracthyr
+
+*[Quote]*
+
+<div style="text-align:Left"> 
+
+*— ???* &nbsp;</div>
+<div style='margin-top:-5px'></div>
+
+[Introduction to Dracthyr]
+
+### Words
+
+Words
+
+### Words
+
+Words
+
+### Words
+
+Words
+
+### Affiliation
+
+### Names
+
+<img src='https://www.gmbinder.com/images/KJxoYyz.png' style='position:absolute; top:0px; right:-200px; width:620px' />
+
+\pagebreakNum
+
+#### Dracthyr Traits
+Your dracthyr character has characteristics in common with all other dracthyr.
+
+***Ability Score Increase.*** Your Constitution score increase by 2, and your Charisma score increases by 1.
+
+***Age.*** Dracthyr mature slightly slower than humans, reach&shy;ing adulthood around age 20 and can live thousands of years, exceeding the ancient ages of the night elves.
+
+***Size.*** Like humans, dracthyr vary widely in height and build, most standing well over 6 feet tall, and weigh around 250 pounds. Your size is Medium.
+
+***Speed.*** Your base walking speed is 30 feet. 
+
+***Darkvision.*** You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can’t discern color in darkness, only shades of gray.
+
+***Bite.*** Your fanged maw is a natural weapon, which you can use to make unarmed strikes. If you hit with it, you deal piercing damage equal to 1d6 + your Strength modifier, instead of the bludgeoning damage normal for an unarmed strike.
+
+***Claws.*** Your claws are natural weapons, which you can use to make unarmed strikes. If you hit with them, you deal slashing damage equal to 1d4 + your Strength modifier, instead of the bludgeoning damage normal for an unarmed strike.
+
+***Natural Armor.*** You have tough, scaly skin. When you aren't wearing armor, your AC is 13 + your Dexterity modifier. You can use your natural armor to determine your AC if the armor you wear would leave you with a lower AC. A shield's benefits apply as normal while you use your natural armor.
+
+***Wings.*** Because of your wings, your jump distance is doubled. You can also use the wings to glide, reducing your falling speed to 60 feet per round (taking no damage when landing) and allowing you to move horizontally up to 120 feet per round when doing so.
+
+When you reach 4th level, you can use your wings to fly with a speed equal to your walking speed. You can't use this flying speed if you're wearing heavy armor.
+
+***Visage Form.*** As an action, you can transform yourself into a more humanoid form. This form shares some draconic traits with your natural form--such as horns, scales in certain locations, slitted eyes, and so on--but otherwise appears as a humanoid, such as a human or elf. You always appear as the same humanoid whenever you transform. 
+
+You can transform back into a dracthyr as a free action on your turn, and any equipment worn by your humanoid form when you transform either falls to the ground in your space, merges into your dracthyr form, or is worn by it (your choice). Equipment that merges with the form has no effect until you leave the form.
+
+While in your humanoid form, you lose your bite, claws, and wings traits.
+
+***Languages.*** You can speak, read, and write Common and Draconic.
+
+\columnbreak
+
+##### Dracthyr Race Balance
+Trait           |                                                           | DB
+----------------|-----------------------------------------------------------|---
+ASI             | Constitution +2, Charisma +1                              | 12
+Size            | Medium size                                               | 0
+Speed           | 30 foot walking speed                                     | 0
+Darkvision      | 60 feet                                                   | 4
+Bite            | unarmed strike deals different physical damage (piercing) | 0
+Bite            | unarmed strike deals 1d6 + Strength modifier              | 1
+Bite            | unarmed strike doesn't require free hand                  | 1
+Claw            | unarmed strike deals different physical damage (slashing) | 0
+Claw            | unarmed strike deals 1d4 + Strength modifier              | 1
+Claw            | already possess a natural weapon (bite)                   | -1
+Natural Armor   | AC is 13 + Dexterity modifier                             | 2
+Wings           | double jump distance                                      | ?
+Wings           | can glide                                                 | ?
+Wings           | can fly at speed equal to walking speed (30 feet)         | 16
+Wings           | can fly in medium armor                                   | 2
+Wings           | delayed flight                                            | -?
+Visage Form     | alternate appearance (not as versatile as disguise self)  | 0
+**Total**       |                                                           | **38** *+/-* **?**
+
+
+\pagebreakNum
+
+<div style='margin-top:550px'></div>
+
+## Mechagnome
+
+*[Quote]*
+
+<div style="text-align:Left"> 
+
+*— Mimiron* &nbsp;</div>
+<div style='margin-top:-5px'></div>
+
+[Introduction to Ulduar mechagnomes]
+
+### Words
+
+Words
+
+### Words
+
+Words
+
+### Words
+
+Words
+
+### Affiliation
+
+### Names
+
+\columnbreak
+
+<div style='margin-top:600px'></div>
+
+### Mechagnome Traits
+Your mechagnome character has the following traits.
+
+***Creature Type.*** You are a construct.
+
+***Ability Score Increase.*** Your Intelligence increases by 2, and your Constitution score increases by 1.
+
+***Age.*** True mechagnomes do not age as long as they are regularly repaired and can remain inactive for thousands of years. Some have been around since before the Curse of Flesh appeared over 15,000 years ago, while others are recent creations.
+
+***Alignment.*** True mechagnomes tend to act rather robotic, being very pragmatic and objective. They tend towards lawfulness, though they usually show no predilection towards either good or evil.
+
+***Size.*** Most true mechagnomes are almost exactly the same size and weight, being 4 feet tall and weighing 60 pounds. Your size is Small.
+
+***Speed.*** Your base walking speed is 25 feet. Your speed is not reduced by wearing heavy armor.
+
+***Artificer's Lore.*** Whenever you make an Intelligence (History) check related to magic items, alchemical <br> objects, or technological devices, you can add twice your proficiency bonus, instead of any proficiency bonus you normally apply.
+
+<img src='https://www.gmbinder.com/images/2niqjYL.jpg' style='position:absolute; left:0px; top:0px; width:100%' />
+<img src='https://www.gmbinder.com/images/76ytPWI.png' style='position:absolute; left:0px; bottom:0px; width:105%' />
+
+\pagebreakNum
+
+&nbsp;&nbsp;&nbsp; ***Composite Plating.*** Your body is encased in protective sheets of metal, which can be enhanced with armor.
+- When you aren't wearing armor, your base AC is 13 + Dexterity modifier. You can use your natural armor to determine your AC if the armor you wear would leave you with a lower AC. A shield's benefits apply as normal while you use your natural armor.
+- You can don only armor with which you have proficiency. To don armor, you must incorporate it into your body over the course of 1 hour, during which you must remain in contact with the armor. To doff armor, you must spend 1 hour removing it. You can rest while donning or doffing armor in this way.
+- While you live, your armor can't be removed from your body against your will.
+
+***Mechanical Nature.*** You have resistance to poison damage and immunity to disease, and you have advantage on saving throws against being paralyzed or poisoned. You don’t need to eat, drink, or breathe. You don't need to sleep, and magic can't put you to sleep.
+
+***Mechanical Precision.*** You are proficient in one of the following skills of your choice: Arcana, History, Investigation, or Medicine. You are also proficient with one tool of your choice. Whenever you make an ability check with the chosen skill or tool, roll a d4 and add the number rolled to the check's total.
+
+***Standby Mode.*** When you take a long rest, you must spend at least six hours in an inactive, motionless state, rather than sleeping. In this state, you appear inert, but it doesn’t render you unconscious, and you can see and hear as normal.
+
+***True Life.*** If the *mending* spell is cast on you, you can expend a Hit Die, roll it, and regain a number of hit points equal to the roll plus your Constitution modifier (minimum of 1 hit point). In addition, your Titan-forged nature allows you to benefit from common spells that preserve life but that normally don’t affect constructs: *cure wounds*, *healing word*, and *spare the dying*.
+
+***Languages.*** You can speak, read, and write Common and Gnomish. Gnomish in many ways look like dwarven, it uses the same script, and is renowned for its technical treatises and its catalogs of knowledge about the natural world.
+
+<br/>
+
+##### Mechagnome Race Balance
+30  | True Mechagnome Race Total
+----|---------------------------
+-?  | Construct Type
+12  | ASI +3
+0   | Small Size
+-2  | 25 ft speed
+1   | Not Slowed by Armor
+1   | Artificer's Lore
+2   | 13 + Dex natural armor
+11  | Mechanical Nature Poison
+1   | Mechanical Precision
+1   | Standby Mode
+0   | Common & 1 Language
+
+\columnbreak
+
+> #### It Ain't Easy, Being a Machine
+> As constructs, mechagnomes have additional difficulties that other races do not have to deal with. They are unaffected by a number of spells both harmful and beneficial. Players should be aware of the difficulties that come with the decision to play a character of this race. 
+>
+> <br> You are unaffected by the following spells.
+>
+> Spell                           |Source |Level
+> --------------------------------|-------|--------
+> *Abi-Dalzim's horrid wilting*   | XGE   |8th
+> *antilife shell*                | PHB   |5th
+> *animate dead*                  | PHB   |3rd
+> *blight*                        | PHB   |4th
+> *calm emotions*                 | PHB   |2nd
+> *charm person*                  | PHB   |1st
+> *create undead*                 | PHB   |3rd
+> *crown of madness*              | PHB   |2nd
+> *dominate person*               | PHB   |5th
+> *heal*                          | PHB   |6th
+> *hold person*                   | PHB   |2nd
+> *magic jar*                     | PHB   |6th
+> *mass cure wounds*              | PHB   |5th
+> *mass heal*                     | PHB   |9th
+> *mass healing word*             | PHB   |3rd
+> *phantasmal force*              | PHB   |2nd
+> *power word heal*               | PHB   |9th
+> *prayer of healing*             | PHB   |2nd
+> *reincarnate*                   | PHB   |5th
+> *simulacrum*                    | PHB   |7th
+
+
+
+### New Equipment
+
+[Repair Kit.]
+
+[Spare Parts.]
+
+\pagebreakNum
+
+### Racial Feats
+
+#### [Draconic Aura]
+*Prerequisite: Dracthyr*
+
+[Benefit in an AoE around you when in Visage form. Based on the WoW dracthyr's Visage racial ability that increases out of combat health regeneration.]
+
+#### Draconic Breath
+*Prerequisite: Dracthyr*
+
+You are able to utilize the breath attack of the dragonflights. At the end of each long rest, you can choose a single dragonflight's breath to imitate: black, blue, bronze, green, or red.
+
+When you take the Attack action, you can replace one of your attacks with a blast of elemental energy, unleashing it in 15-foot cone. Each creature in that area must make a Dexterity saving throw. A creature takes 1d10 damage on a failed save, and half as much damage on a successful one. This damage increases by 1d10 when you reach 5th level (2d10), 11th level (3d10), and 17th level (4d10).
+
+The form of the breath attack and the damage type it deals depends on which dragonflight you are imitating, as seen on the Dragon Breath Types table. You can use your Breath Weapon a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest.
+
+##### Draconic Breath Types
+Dragonflight    | Breath Weapon | Damage Type
+----------------|---------------|-------------
+Black   | Shadowy fire          | Necrotic
+Blue    | Icy magic             | Cold
+Bronze  | Static-filled sand    | Lightning
+Green   | Green energy          | Acid
+Red     | Glowing fire          | Fire
+
+#### Draconic Combat
+*Prerequisite: Dracthyr*
+
+You have learned to better utilize your other limbs in combat. When you take the Attack action, you can replace one of your attacks with one of the following:
+- You beat your wings fiercely, creating a gust of wind in front of you. Each creature in a 15-foot cone must make a Strength saving throw.
+- You whip your tail in a quick swipe low to the ground, potentially knocking down enemies. Each creature within 5 feet of you must make a Dexterity saving throw or be knocked prone. 
+
+#### Draconic Fear
+*Prerequisite: Dracthyr*
+
+When angered, you radiate menace. You gain the following benefits:
+- Increase your Strength, Constitution, or Charisma score by 1, to a maximum of 20.
+- You can roar, forcing each creature of your choice within 30 feet of you to make a Wisdom saving throw (DC 8 + your proficiency bonus + your Charisma modifier). A target automatically succeeds on the save if it can’t hear or see you. On a failed save, a target becomes frightened for 1 minute. If the frightened target takes any damage, it can repeat the saving throw, ending the effect on itself on a success. You can use this trait a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest.
+
+#### Draconic Flight
+*Prerequisite: Dracthyr, 4th level or higher*
+
+You can now fly using your wings while wearing heavy armor. If you aren't wearing heavy armor, your flying speed increases by 30 feet.
+
+#### [Draconic Magic]
+*Prerequisite: Dracthyr*
+
+[Gives some basic low-level spellcasting.]
+
+#### [Draconic Resistance]
+*Prerequisite: Dracthyr*
+
+[Gain a switchable resistance to acid, cold, fire, lightning, or necrotic damage. Matches whatever breath attack you took for Draconic Breath.]
+
+#### [Draconic Senses]
+*Prerequisite: Dracthyr*
+
+[Blindsight, keen senses. See Awakened dracthyr ability.]
+
+#### [Mechanized Innards]
+*Prerequisite: Mechagnome or Gnome (mechagon)*
+
+[Choose X of the following benefits. Can take this feat multiple times.]
+- Database Access: Advantage on Intelligence checks
+- Electric Web: Can unleash lightning attack
+- Frickin Laser Beams: 
+- H.O.L.O.: Mirror image
+- Jetpack: Fly speed
+- Overclock: Take extra action?
+- X-Ray Vision
+
+**Combat Analysis.** When you make an attack roll and miss, you can roll a d4 and add the number rolled to your next attack roll against the same target.
+
+**Emergency Failsafe.** You can use your action to roll a number of d4s equal to your proficiency bonus. You regain a number of hit points equal to the number rolled + your Constitution modifier. You can also use this feature at the beginning of your turn if you are unconscious (no action required). Once you use this feature, you can't use it again until you finish a long rest.
+
+**Grappling Appendages.** You graft two mechanical appendages to your body, such as secondary arms or tentacles. They have a reach of 5 feet, and can lift a number of pounds equal to five times your Strength score. You can use them to do the following simple tasks: lift, drop, hold, push, or pull an object or a creature; open or close a door or a container; grapple someone; or make an unarmed strike. Your GM might allow other simple tasks to be added to that list of options. They can't wield weapons or shields or do anything that requires manual precision, such as using tools or magic items or performing the somatic components of a spell.
+
+**Integrated Database.** You have surgically integrated a database of knowledge into your brain. You gain proficiency in two of the following skills of your choice: Arcana, History, Investigation, Medicine, Nature, or Religion.
+
+\pagebreak
+
+# Extreme WIP Old Stuff
+
+
+##### Cursed Arakkoa
+Name                |CR |Size   |Notes
+--------------------|---|-------|-----
+Arakkoa             |1	|Medium |
+Arakkoa Ravenspeaker|3	|Medium |Can summon owl/raven companions
+Arakkoa Talonpriest	|6	|Medium |Can use elixir to shift into shadow realm
+
+##### High Arakkoa
+Name                |CR |Size   |Notes
+--------------------|---|-------|-----
+Arakkoa Blade-Dancer|#  |Large  |
+Arakkoa Dawn-Seeker	|4	|Large  |Member of the Order of the Awakened.
+Arakkoa High Sage	|8	|Large  |Summons a sun above head, can be used for directed beam attacks
+
+> ***Shadow Strike.*** As a bonus action, the arakkoa can expend a spell slot to cause its melee weapon attacks to magically deal an extra 10 (3d6) psychic damage to a target on a hit. This benefit lasts until the end of the turn. If the arakkoa expends a spell slot of 2nd level or higher, the extra damage increases by 1d6 for each level above 1st.
+>
+> ***Spellcasting.*** The arakkoa is a 5th-level spellcaster. Its spellcasting ability is Wisdom (spell save DC 13, +4 to hit with spell attacks). It has the following spells prepared:
+>
+> Cantrips (at will): *minor illusion, ✦ shadow bolt, <br/>&nbsp; thaumaturgy*
+> <br/> 1st level (4 slots): *✦ dark void, mage armor, silent image*
+> <br/> 2nd level (3 slots): *darkness, shadow blade ^XGE^*
+> <br/> 3rd level (2 slots): *bestow curse, major image* 
+
+\columnbreak
+___
+> ## Arakkoa <!-- https://wc5e-cr-calculator.frogvall.com/?0;12;17;2;13;2;5;0;0;0;0;0;0;0;0;0;0;;;;1;1;;;;;;;;;;1;;;;;;;;10;;;;;;;;;;; -->
+> *Medium humanoid (arakkoa), any alignment*
+> ___
+> - **Armor Class** 12
+> - **Hit Points** 17 (5d8)
+> - **Speed** 20 ft.
+> ___
+> |  STR  |  DEX  |  CON  |  INT  |  WIS  |  CHA  |
+> |:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+> |10 (+0)|14 (+2)|10 (+0)|15 (+2)|12 (+1)|10 (+0)|
+> ___
+> - **Saving Throws** Wis +3
+> - **Senses** darkvision 60 ft., passive Perception 11
+> - **Languages** Common, Ravenspeech
+> - **Challenge** 1/4 (50 XP)
+> ___
+> ***Curse of Sethe.*** Any time the arakkoa would deal radiant damage, it deals no damage and takes that much instead. It is also partially crippled, causing it to move 10 feet slower (included above) and to be unable to make more than one attack per turn.
+>
+> ***Sunlight Sensitivity.*** While in sunlight, the arakkoa has disadvantage on attack rolls and on Wisdom (Perception) checks that rely on sight.
+>
+> ### Actions
+> ***Dagger.*** *Melee Weapon Attack:* +2 to hit, reach 5 ft., one target. *Hit:* 2 (1d4) piercing damage, and the target must make a DC 13 Constitution saving throw, taking 5 (2d4) poison damage on a failed save, or half as much damage on a successful one.
+> 
+> ***Talons.*** *Melee Weapon Attack:* +2 to hit, reach 5 ft., one target. *Hit:* 2 (1d4) slashing damage.
+
+\pagebreak
+___
+> ## Arakkoa Ravenspeaker <!-- https://wc5e-cr-calculator.frogvall.com/?0;12;55;4;14;22;0;22;21;16;21;0;0;0;0;0;0;;;;1;1;;;;;;;;;;1;;;;;;;;10;;;;;;;2;2;1;6;Toll%20the%20Dead;Inflict%20Wounds -->
+> *Medium humanoid (arakkoa), any alignment*
+> ___
+> - **Armor Class** 12
+> - **Hit Points** 55 (10d8 + 55)
+> - **Speed** 20 ft.
+> ___
+> |  STR  |  DEX  |  CON  |  INT  |  WIS  |  CHA  |
+> |:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+> |10 (+0)|14 (+2)|12 (+1)|15 (+2)|12 (+1)|18 (+4)|
+> ___
+> - **Saving Throws** Wis +3
+> - **Senses** darkvision 60 ft., passive Perception 11
+> - **Languages** Common, Ravenspeech
+> - **Challenge** 3 (700 XP)
+> ___
+> ***Curse of Sethe.*** Any time the arakkoa would deal radiant damage, it deals no damage and takes that much instead. It is also partially crippled, causing it to move 10 feet slower (included above) and to be unable to make more than one attack per turn.
+>
+> ***Spellcasting.*** The arakkoa is a 4th-level spellcaster. Its spellcasting ability is Charisma (spell save DC 14). The arakkoa has the following priest spells prepared:
+> 
+> Cantrips (at will): *✦ spare the dying, thaumaturgy, toll <br/>&nbsp;&nbsp; the dead ^XGE^*
+> <br/> 1st level (4 slots): *cause fear ^XGE^, cure wounds, <br/>&nbsp;&nbsp; inflict wounds*
+> <br/> 2nd level (2 slots): *crown of madness, silence*
+>
+> ***Summon Ravens (1/day).*** The arakkoa can call for aid as a bonus action, causing three swarms of ravens to appear within 30 feet of it at the end of its next turn. The swarms are friendly towards the arakkoa, follow its spoken commands, and take their turn immediately after the arakkoa's. They remain for 10 minutes, until the arakkoa dies, or until the arakkoa dismisses it as a bonus action.
+>
+> ***Sunlight Sensitivity.*** While in sunlight, the arakkoa has disadvantage on attack rolls and on Wisdom (Perception) checks that rely on sight.
+>
+> ### Actions 
+> ***Talons.*** *Melee Weapon Attack:* +4 to hit, reach 5 ft., one target. *Hit:* 4 (1d4 + 2) slashing damage.
+
+
+___
+> ## Arakkoa Talonpriest
+> *Medium humanoid (arakkoa), any alignment*
+> ___
+> - **Armor Class** 12
+> - **Hit Points** 17 (5d8 + )
+> - **Speed** 20 ft.
+> ___
+> |  STR  |  DEX  |  CON  |  INT  |  WIS  |  CHA  |
+> |:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+> |10 (+0)|14 (+2)|12 (+1)|15 (+2)|12 (+1)|18 (+4)|
+> ___
+> - **Saving Throws** Wis +3
+> - **Senses** darkvision 60 ft., passive Perception 11
+> - **Languages** Common, Ravenspeech
+> - **Challenge** 3 (700 XP)
+> ___
+> ***Curse of Sethe.*** Any time the arakkoa would deal radiant damage, it deals no damage and takes that much instead. It is also partially crippled, causing it to move 10 feet slower (included above) and to be unable to make more than one attack per turn.
+>
+> ***Sunlight Sensitivity.*** While in sunlight, the arakkoa has disadvantage on attack rolls and on Wisdom (Perception) checks that rely on sight.
+>
+> ### Actions 
+> ***Talons.*** *Melee Weapon Attack:* +4 to hit, reach 5 ft., one target. *Hit:* 4 (1d4 + 2) slashing damage
+
+___
+> ## Dread Raven Hatchling <!-- https://wc5e-cr-calculator.frogvall.com/?0;11;22;3;13;6;0;6;0;6;0;0;0;0;0;0;0;;;;;1;;;;;;;;;;1;;;;;;;;10;;;;;;;;;;; -->
+> *Small beast, neutral*
+> ___
+> - **Armor Rating** 11
+> - **Hit Points** 22 (4d6 + 8)
+> - **Speed** 10 ft., fly 60 ft.
+> ___
+> |  STR  |  DEX  |  CON  |  INT  |  WIS  |  CHA  |
+> |:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+> |13 (+1)|12 (+1)|14 (+2)| 6 (-2)|11 (+0)| 7 (-2)|
+> ___
+> - **Skills** Perception +2
+> - **Senses** passive Perception 12
+> - **Languages** Understands Ravenspeech but can't speak
+> - **Challenge** 1/4 (50 XP)
+> ___
+> ***Keen Sight and Smell.*** The dread raven has advantage on Wisdom (Perception) checks that rely on sight or smell.
+>
+> ### Actions
+> ***Beak.*** *Melee Weapon Attack:* +3 to hit, reach 5 ft., one target. *Hit:* 4 (1d4 + 2) piercing damage.
+>
+> ***Headbutt.*** *Melee Weapon Attack:* +3 to hit, reach 5 ft., one target. *Hit:* 6 (1d6 + 2) bludgeoning damage.
+
+\pagebreak
+
+___
+> ## Dread Raven <!-- https://wc5e-cr-calculator.frogvall.com/?0;13;76;5;14;36;0;18;0;18;0;0;0;0;0;0;0;;;;;1;;;;;;;;;;1;;;;;;;;10;;;;;;;;;;; -->
+> *Large beast, neutral*
+> ___
+> - **Armor Rating** 13 (natural armor)
+> - **Hit Points** 76 (8d10 + 32)
+> - **Speed** 10 ft., fly 80 ft.
+> ___
+> |  STR  |  DEX  |  CON  |  INT  |  WIS  |  CHA  |
+> |:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+> |16 (+3)|13 (+1)|18 (+4)| 6 (-2)|13 (+1)| 7 (-2)|
+> ___
+> - **Skills** Perception +3
+> - **Senses** passive Perception 13
+> - **Languages** Understands Ravenspeech but can't speak
+> - **Challenge** 2 (450 XP)
+> ___
+> ***Keen Sight and Smell.*** The dread raven has advantage on Wisdom (Perception) checks that rely on sight or smell.
+>
+> ### Actions
+> ***Multiattack.*** The dread raven makes two attacks: one with its beak and one with its headbutt.
+>
+> ***Beak.*** *Melee Weapon Attack:* +5 to hit, reach 5 ft., one target. *Hit:* 8 (2d4 + 3) piercing damage.
+>
+> ***Headbutt.*** *Melee Weapon Attack:* +5 to hit, reach 5 ft., one target. *Hit:* 10 (2d6 + 3) bludgeoning damage. If the target it a creature, it must succeed at a DC 13 Strength saving throw or be knocked prone.
+>
+> ***Screech (Recharge 5-6).*** The dread raven lets out a terrible screech, affecting a 30-foot cone. Each creature in the area must make a DC 14 Constitution saving throw, taking 18 (4d8) thunder damage and becoming deafened for one minute on a failed save. On a success, a creature take half as much damage to no other ill effect. The screech can be heard out to 300 feet.
+
+\columnbreak
+___
+> ## Dread Raven Matriarch <!-- https://wc5e-cr-calculator.frogvall.com/?1;15;138;8;17;44;0;22;0;22;0;0;0;0;0;0;0;;;;;1;;;;;;;;;;1;;;;;;;;10;;;;;;;;;;; -->
+> *Large beast, neutral*
+> ___
+> - **Armor Rating** 15 (natural armor)
+> - **Hit Points** 138 (12d10 + 32)
+> - **Speed** 10 ft., fly 80 ft.
+> ___
+> |  STR  |  DEX  |  CON  |  INT  |  WIS  |  CHA  |
+> |:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+> |20 (+5)|15 (+2)|22 (+6)| 6 (-2)|15 (+2)| 7 (-2)|
+> ___
+> - **Skills** Perception +
+> - **Senses** passive Perception 13
+> - **Languages** Understands Ravenspeech but can't speak
+> - **Challenge** 2 (450 XP)
+> ___
+> ***Keen Sight and Smell.*** The dread raven has advantage on Wisdom (Perception) checks that rely on sight or smell.
+>
+> ### Actions
+> ***Multiattack.*** The dread raven makes two attacks: one with its beak and one with its headbutt.
+>
+> ***Beak.*** *Melee Weapon Attack:* +8 to hit, reach 5 ft., one target. *Hit:* 10 (2d4 + 5) piercing damage.
+>
+> ***Headbutt.*** *Melee Weapon Attack:* +5 to hit, reach 5 ft., one target. *Hit:* 12 (2d6 + 5) bludgeoning damage. If the target it a creature, it must succeed at a DC 16 Strength saving throw or be knocked prone.
+>
+> ***Screech (Recharge 5-6).*** The dread raven lets out a terrible screech, affecting a 45-foot cone. Each creature in the area must make a DC 17 Constitution saving throw, taking 22 (5d8) thunder damage and becoming deafened for one minute on a failed save. On a success, a creature take half as much damage to no other ill effect. The screech can be heard out to 300 feet.
+>
+> ***Wing Buffet.*** The dread raven beats its wings, sending a blast of air in a 15-foot cone. Each creature in the area must make a DC 16 Strength save or be knocked back up to 15 feet and fall prone. The dread raven can then move up to half its fly speed.
+
+\pagebreak
+
+<br />
+
+<div style='margin-top:610px;'></div>
+
+## Arakkoa
+
+*“Shadows gather when the raven swallows the day. Burning sky is extinguished as black wings fold gently about the heavens. Rest, my children, rest. For even <br /> the sun must sleep.”* <div style="text-align:Right"> 
+
+*— Rukhmar's lullaby, sung by her to the first arakkoa* </div>
+
+### Arakkoa Traits
+Your arakkoa has the following traits.
+
+***Ability Score Increase.*** Your Intelligence score increases by 2.
+
+***Age.*** Arakkoa reach adulthood at age 8 and rarely live longer than 60 years.
+
+***Alignment.*** ???
+
+***Size.*** Arakkoa are about 7 feet tall and weigh about 160 pounds. Your size is Medium. To set your height and weight randomly, start with rolling the size modifier:
+
+<div style="margin-top: -18px; font-family: ScalySans, sans-serif">
+
+<br>&nbsp;&nbsp;&nbsp; ***Size Modifier:*** 2d6
+<br>&nbsp;&nbsp;&nbsp; ***Height:*** 6 feet + 5 inches + your size modifier in inches
+<br>&nbsp;&nbsp;&nbsp; ***Weight in Pounds:*** 125 + (2d4 x your size modifier)
+
+</div>
+
+<div style='margin-top:-3px;'></div>
+
+&nbsp;&nbsp;&nbsp; ***Speed.*** Your base walking speed is 25 feet.
+
+\columnbreak
+
+<div style='margin-top:480px;'></div>
+
+
+***Talons.*** Your hands and feet possess sharp talons, which you can use to make unarmed attacks. If you hit with them, you deal slashing damage equal to 1d4 + your Dexterity modifier. You can make attacks with your taloned feet while flying.
+
+***Languages.*** You can speak, read, and write Common and Ravenspeech. Ravenspeech sounds like the rough caws of ravens and crows and is difficult to speak by other races. Its writing system looks similar to angular scratches from claws or talons.
+
+#### Cursed Arakkoa
+***Ability Score Increase.*** Your Wisdom increases by 1.
+
+***Curse of Sethe.*** Any time you would deal radiant damage, you deal no damage and take that much instead.
+
+***Sunlight Sensitivity.*** You have been shunned by the sun. You have disadvantage on attack rolls and Wisdom (Perception) checks that rely on sight when you, the target of the attack, or whatever you are trying to perceive is in direct sunlight.
+
+#### High Arakkoa
+***Ability Score Increase.*** Your Dexterity increases by 1.
+
+***Flight.*** You have a flying speed of 50 feet. In order to use this ability, you must be unencumbered, not wearing medium or heavy armor, and your hands must be free (not wielding or holding any objects). Your talons are strong enough to grasp and hold items while flying, but you cannot wield weapons in them.
+
+***Sunlight Dependency.*** The high arakkoa make such heavy use of harnessed sunlight that they have lost much of their nightvision. You have disadvantage on attack rolls and on Wisdom (Perception) checks that rely on sight when you, the target of your attack, or whatever you are trying to perceive are in dim light.
+
+
+<img src='https://www.gmbinder.com/images/Dr43rTJ.jpg' style='position:absolute; top:0px; left:0px; width:835px' />
+<img src='https://www.gmbinder.com/images/76ytPWI.png' style='position:absolute; bottom:0px; left:0px; width:860px' />
+<img src='https://wow.zamimg.com/modelviewer/live/webthumbs/npc/235/59371.png' style='position:absolute; top:200px; left:-60px; width:450px; transform:scaleX(-1);' />
+
+\pagebreakNum
+
+<div style='margin-top:610px;'></div>
+
+## High Arakkoa
+
+*“Shadows gather when the raven swallows the day. Burning sky is extinguished as black wings fold gently about the heavens. Rest, my children, rest. For even <br /> the sun must sleep.”* <div style="text-align:Right"> 
+
+*— Rukhmar's lullaby, sung by her to the first arakkoa* </div>
+
+### High Arakkoa Traits
+Your high arakkoa has the following traits.
+
+***Ability Score Increase.*** Your Intelligence score increases by 2 and your Dexterity score increases by 1.
+
+***Age.*** High arakkoa reach adulthood at age 8 and rarely live longer than 60 years.
+
+***Alignment.*** High arakkoa follow a rigid caste system and set of laws, and most possess a lawful alignment.
+
+***Size.*** High arakkoa are about 7 feet tall and weigh about 160 pounds. Your size is Medium. To set your height and weight randomly, start with rolling the size modifier:
+
+<div style="margin-top: -18px; font-family: ScalySans, sans-serif">
+
+<br>&nbsp;&nbsp;&nbsp; ***Size Modifier:*** 2d6
+<br>&nbsp;&nbsp;&nbsp; ***Height:*** 6 feet + 5 inches + your size modifier in inches
+<br>&nbsp;&nbsp;&nbsp; ***Weight in Pounds:*** 125 + (2d4 x your size modifier)
+
+</div>
+
+<div style='margin-top:-3px;'></div>
+
+&nbsp;&nbsp;&nbsp; ***Speed.*** Your base walking speed is 30 feet.
+
+\columnbreak
+
+<div style='margin-top:510px;'></div>
+
+***Flight.*** You have a flying speed of 60 feet. In order to use this ability, you must be unencumbered, not wearing medium or heavy armor, and your hands must be free (not wielding or holding any objects). Your talons are strong enough to grasp and hold items while flying, but you cannot wield weapons in them.
+
+***Talons.*** Your hands and feet possess sharp talons, which you can use to make unarmed attacks. If you hit with them, you deal slashing damage equal to 1d4 + your Dexterity modifier. You can make attacks with your taloned feet while flying.
+
+***Sunlight Dependency.*** The high arakkoa make such heavy use of harnessed sunlight that they have lost much of their nightvision. You have disadvantage on attack rolls and on Wisdom (Perception) checks that rely on sight when you, the target of your attack, or whatever you are trying to perceive are in dim light.
+
+***Languages.*** You can speak, read, and write Common and Ravenspeech. Ravenspeech sounds like the rough caws of ravens and crows and is difficult to speak by other races. Its writing system looks similar to angular scratches from claws or talons.
+
+***Caste.*** Arakkoa society is divided into strict castes, separated even before they receive a name. Some of these are the laborer, priest, and warrior castes. Choose one of these castes.
+
+#### Laborer Caste
+
+<img src='https://www.gmbinder.com/images/kdufXq1.jpg' style='position:absolute; top:0px; left:0px; width:835px' />
+<img src='https://www.gmbinder.com/images/76ytPWI.png' style='position:absolute; bottom:30px; left:0px; width:860px' />
+<img src='https://wow.zamimg.com/modelviewer/live/webthumbs/npc/24/57112.png' style='position:absolute; top:190px; left:-60px; width:450px; transform:scaleX(-1);' />
+
+\pagebreak
+
+#### Priest Caste
+
+***Sun Magic.*** You know the *light* cantrip. When you reach 3rd level, you can cast *color spray* once, and it recharges after a long rest. When you reach 5th level, you can cast *scorching ray* once, and it recharges after a long rest. Intelligence is your spellcasting ability for these spells.
+
+#### Warrior Caste
+***Keen Sight.*** Long hours of patrolling in the sky has sharpened your visual acuity. You have advantage on Wisdom (Perception) rolls that rely on sight.
+
+##### High Arakkoa
+Trait                               |RP
+------------------------------------|--
+ASI+2                               |8
+ASI+1                               |4
+Common + 1                          |0
+30 ft speed                         |0
+Standard fly 30 ft.                 |16
++10 ft fly speed                    |6
++10 ft fly speed                    |6
+Cannot wield weapons while flying   |-6
+1d4 unarmed strike                  |1
+Disadv on common rolls              |-16
+**Base Race Total**                 |19
+
+##### Priest Caste
+Trait                               |RP
+------------------------------------|--
+Base Race Total                     |25
+Standard Delayed Magic              |6
+
+##### Warrior Caste
+Trait                               |RP
+------------------------------------|--
+Base Race Total                     |25
+Adv on a common roll                |4
+
+
+
+<!-- <img src='https://www.gmbinder.com/images/PfbQRHe.jpg' style='position:absolute; top:0px; left:0px; width:835px' />
+<img src='https://www.gmbinder.com/images/76ytPWI.png' style='position:absolute; bottom:0px; left:0px; width:860px' /> --
+
+
+\pagebreakNum
+
+<img src='https://www.gmbinder.com/images/9Rl6CcU.jpg' style='position:absolute; left:-70px; bottom:-250px; width:600px'/>
+<img src='https://www.gmbinder.com/images/nzPYZyD.png' style='position:absolute; left:-220px; bottom:-410px; width:900px'/>
+<img src='https://www.gmbinder.com/images/h5HdqeC.png' style='position:absolute; left:400px; bottom:-40px; width:390px'/>
+<img src='https://www.gmbinder.com/images/QsfphOu.png' style='position:absolute; left:300px; bottom:130px; width:300px'/> -->
