@@ -1,0 +1,591 @@
+<style>
+/* GLOBAL FORMATTING  */
+
+  /* Resize page to international A4 */
+  .phb {
+    width: 210mm;
+    height: 296.8mm;
+  }
+  .phb:after { content: ""; }
+
+
+/* TABLE OF CONTENTS  */
+
+  /* toc specifically wants black text. This resets the headers*/
+  .toc a {
+    color: inherit !important;
+  }
+  /* Allow dot leaders to fill remaining space but not overlap */
+  .toc li span:nth-child(2) {
+    width: auto;
+    overflow: hidden;
+    white-space: nowrap;
+    display: block;
+  }
+  .toc li span:nth-child(2):after {
+    font-family: BookSanity;
+    font-size: 0.317cm;
+    font-weight: normal;
+    color: black;
+    content:
+      " ........................................"
+      "........................................."
+      ".........................................";
+    }
+
+  /* Style TOC page numbers*/
+  .toc li span:first-child {
+    float: right;
+    font-family: BookSanity;
+    font-size: 0.317cm;
+    font-weight: normal;
+    color: black;
+    margin-left: 1px;
+  }
+
+  /* Adjust TOC H3 styles */
+  .toc li h3 span:nth-child(2):after {
+  	content: " ";
+  }
+  .toc li h3 {
+    margin-bottom: 4px !important;
+    margin-top: 10px !important;
+    line-height: initial !important;
+  }
+  .toc li h3 span:first-child {
+  	line-height: 1.8em !important;
+  }
+
+  /* Reduce TOC list indentation*/
+  .toc ul ul {
+  	margin-left: 10px !important;
+  }
+  .toc>ul>li {
+    margin-bottom: initial !important;
+  }
+
+
+/* TABLES AND BLOCKS */
+
+  /* Adjust tables */
+  table tr:nth-child(odd) td { background-color: #FFF0f5; }
+  .phb hr+section blockquote tr:nth-child(odd) td { background-color: transparent; }
+
+  /* Clear internal padding and add gap above for green note blocks*/
+  .phb blockquote {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .phb blockquote { margin-top: 1em; }
+
+  /* Clear internal padding in creature statblocks */
+  .phb hr+section blockquote {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  .phb blockquote {
+    box-shadow: 1px 4px 14px rgba(0,0,0,0.42);
+  }
+
+  /* For creature statblocks within range (start and end must be specified),
+     don't show a background. Used for the appendix creatures */
+  .phb:nth-of-type(n+107):nth-of-type(-n+130) hr+section blockquote {
+      background: none;
+      border: none;
+      box-shadow: none;
+  }
+
+
+/* FOOTER */
+
+  /* Footnotes */
+  .phb .pageNumber {
+    color: #7e735c;
+    z-index: 1000;
+  }
+  .phb .footnote { color: #7e735c; }
+
+  /* On odd child pages, have the Monster Manual page tear and lettering */
+  .phb:nth-child(odd):after {
+    content: '';
+    height: 125px;
+    background-image: url(https://gmbinder.com/images/lLWeevR.png), url('https://gmbinder.com/images/YWardeu.png');
+    background-size: 120px 120px, 816px 55px;
+    background-repeat: no-repeat, no-repeat;
+    background-position: bottom right, bottom;
+  }
+
+  /* Hacked reverse of the Monster Manual page tear for alternating pages */
+  .phb:nth-child(even):after {
+    content: '';
+    height: 125px;
+    background-image: url(https://gmbinder.com/images/lLWeevR.png), url('https://gmbinder.com/images/YWardeu.png');
+    background-size: 120px 120px, 816px 55px;
+    background-repeat: no-repeat, no-repeat;
+    background-position: bottom right, bottom;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+  }
+
+  /* The letter in the Monster Manual page tear */
+  .pageLetter {
+    position: absolute;
+    right: 25px;
+    bottom: 87.5px;
+    color: #673e1c;
+    z-index: 1000;
+    font-size: 135%;
+  }
+
+  /* Reversed for alternating pages */
+  .phb:nth-child(even) .pageLetter {
+      left: 25px;
+  }
+
+
+/* MONSTER MANUAL LETTER SECTION HEADER */
+
+  /* Adds the surrounding framing for the big, bold monster letter headings */
+  .letterheader {
+    position: absolute;
+    top: 30px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: url(https://gmbinder.com/images/YH3aESG.png);
+    background-size: cover;
+    width: 775px;
+    height: 133px;
+  }
+
+  /* Base component for the actual letter in the heading */
+  .mmletter {
+      position: absolute;
+      top: 20px;
+      left: 0;
+      right: 0;
+      margin-left: auto;
+      margin-right: auto;
+      background-size: cover;
+      width: 163.2px;
+      height: 163.2px;
+  }
+
+  /* Use one in combination with .mmletter to show that letter */
+  .mml-a { background-image: url(https://gmbinder.com/images/fVVv93s.png); }
+  .mml-b { background-image: url(https://gmbinder.com/images/21X6N0B.png); }
+  .mml-c { background-image: url(https://gmbinder.com/images/MvnpOWF.png); }
+  .mml-d { background-image: url(https://gmbinder.com/images/AFbLU4P.png); }
+  .mml-e { background-image: url(https://gmbinder.com/images/28NVNf9.png); }
+  .mml-f { background-image: url(https://gmbinder.com/images/Oyrhmqy.png); }
+  .mml-g { background-image: url(https://gmbinder.com/images/fRyiQn4.png); }
+  .mml-h { background-image: url(https://gmbinder.com/images/N8NamlT.png); }
+  .mml-i { background-image: url(https://gmbinder.com/images/xWI93aa.png); }
+  .mml-j { background-image: url(https://gmbinder.com/images/GgIzsun.png); }
+  .mml-k { background-image: url(https://gmbinder.com/images/OcObsWl.png); }
+  .mml-l { background-image: url(https://gmbinder.com/images/B7AUyR6.png); }
+  .mml-m { background-image: url(https://gmbinder.com/images/q4wXoxt.png); }
+  .mml-n { background-image: url(https://gmbinder.com/images/OJtC4w9.png); }
+  .mml-o { background-image: url(https://gmbinder.com/images/adeRr5d.png); }
+  .mml-p { background-image: url(https://gmbinder.com/images/EEhcrSR.png); }
+  .mml-q { background-image: url(https://gmbinder.com/images/O1AhfzL.png); }
+  .mml-r { background-image: url(https://gmbinder.com/images/w66eIuZ.png); }
+  .mml-s { background-image: url(https://gmbinder.com/images/YEoe0PP.png); }
+  .mml-t { background-image: url(https://gmbinder.com/images/7Bk9D35.png); }
+  .mml-u { background-image: url(https://gmbinder.com/images/uVJZYUg.png); }
+  .mml-v { background-image: url(https://gmbinder.com/images/gKjngey.png); }
+  .mml-w { background-image: url(https://gmbinder.com/images/14WWpsC.png); }
+  .mml-x { background-image: url(https://gmbinder.com/images/ojIYjh0.png); }
+  .mml-y { background-image: url(https://gmbinder.com/images/Gi1ePwY.png); }
+  .mml-z { background-image: url(https://gmbinder.com/images/0ZTFNVs.png); }
+
+
+/* INK BLOT STYLES */
+
+  /* Root style for inkblots. Use alone, or together with
+  one of the inkb lotstyle classes below. Essentially:
+  <img url='{url}' class='inkblot inkblot-blue' />
+  */
+  .inkblot {
+    position: absolute;
+    mix-blend-mode: multiply;
+    opacity: 0.6;
+  }
+
+  .inkblot-blue {
+    filter: hue-rotate(190deg) saturate(120%)
+  }
+
+  .inkblot-green {
+    filter: hue-rotate(120deg)
+  }
+
+</style>
+
+## Elemental Drakes
+
+Elementals, the ancient proto-beings of a young world, take many forms.
+
+First seen by mortal eyes during the Cataclysm of Azeroth, elemental drakes were quite a surprise to enterprising adventurers. Powerful elementals taking a form identical to the great dragons of Azeroth, the elemental drakes of Deepholm and Skywall - elemental realms of Earth and Air respectively - represent only a fraction of the elemental world, and yet their very existence is a mystery.
+
+Enormous and deadly elemental predators, elemental drakes patrol their territories in their elemental homes without thought or agenda - they lack the deep and ancient intellect that true dragons possess, and instead live as powerful elemental beasts. Through their connection to their mother element, they demonstrate much of the power and danger seen in fleshy dragons, with powerful elemental breath and hurricane force within their wings - however, their animal instinct makes them impossible to reason with, and their size and habits make them far more dangerous than many other elementals, most of which are intelligent and sometimes not immediately hostile.
+
+In their elemental realms, these dragons have been seen fulfilling natural roles, but in the hands of more intelligent beings - higher elementals, cultists or cruel shamans - they have been subjugated into guards and mounts. This smuggling of drakes did not go unnoticed by the elementals of their home realms, but in the case of Deepholm, nobody much cared; in the case of Skywall, many of them were gifts by Ak’akir, the Windlord, to loyal followers. In all cases, these dragons did not adapt well to foreign climates, and none are seen naturally across Azeroth.
+
+***Draconic Origins.*** The elemental drakes represent an historian's conundrum; they appear to have existed for aeons uninterrupted, locked away from Azeroth since creation, and yet they are identical in almost every way to contemporary dragons. It is not known how this could have happened, but it is possible that these animalistic elementals are the oldest common ancestor to modern dragons, and as such, elemental drakes may be the precursor to all draconic life on Azeroth. The truth, of course, is unknown - elementals are not forthcoming with details, and the drakes cannot speak.
+
+### Stone Drakes
+
+The stalwart stone drakes found in Deepholm, the elemental plane of the Earth, were the first elemental drakes to be seen by mystified mortals. Undisturbed for aeons, generations of these drakes had hatched, lived, hunted, bred and died across the shelves of higher Deepholm, of which they have near-total domination, as the only true high-flying elementals of the realm. There they hunt the few fleshy creatures to be found in the elemental plane. They appear to be unconcerned with elemental matters; they follow only the strongest broodmother in a colony, and otherwise do not obey the word of shamans, or even of the Stonemother, Therazane.
+
+***Stone Nature.*** Their skins are solid rock, studded with gemstone growths, crystalline spines and horns, and wings webbed with mineral filament. They are exceptionally, impossibly heavy, and yet their flight seems effortless. This is yet another mystery of the elemental drakes.
+
+\columnbreak
+
+<div style='margin-top:420px;'></div>
+
+___
+> ## Stone Drake Hatchling <!-- https://wc5e-cr-calculator.frogvall.com/?0;14;26;5;13;28;0;7;0;7;0;0;0;0;0;0;0;;;1;;4;;;;;;;;;;3;;;;;;;;15;;;;;;;;;;; -->
+> *Small elemental (dragon), unaligned*
+> ___
+> - **Armor Class** 14 (natural armor)
+> - **Hit Points** 26 (4d6 + 12)
+> - **Speed** 30 ft., burrow 30 ft., climb 30 ft., fly 60 ft.
+> ___
+> |  STR  |  DEX  |  CON  |  INT  |  WIS  |  CHA  |
+> |:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+> |17 (+3)|10 (+0)|16 (+3)| 5 (-3)|10 (+0)| 6 (-2)|
+>___
+> - **Damage Vulnerabilities** thunder
+> - **Damage Immunities** poison
+> - **Condition Immunities** poisoned
+> - **Senses** darkvision 120 ft., passive Perception 10
+> - **Languages** —
+> - **Challenge** 1 (200 XP)
+> ___
+> ***Stone Climb.*** The drake can climb difficult earthen surfaces, including upside down on ceilings, without needing to make an ability check.
+>
+> ### Actions
+> ***Bite.*** *Melee Weapon Attack:* +5 to hit, reach 5 ft., one target. *Hit:* 7 (1d8 + 3) piercing damage.
+>
+> ***Spit Rock.*** *Ranged Weapon Attack:* +5 to hit, range 100/200 ft., one target. *Hit:* 6 (1d6 + 3) bludgeoning damage.
+>
+> ***Stone Breath (Recharge 5-6).*** The drake spits stones in a 15-foot cone. Each creature in that area must make a DC 13 Dexterity saving throw, taking 14 (4d6) bludgeoning damage on a failed save, or half as much damage on a successful one. A creature that fails the save by 5 or more is knocked prone. 
+
+\columnbreak
+
+<img src='https://www.gmbinder.com/images/0wY8WpJ.png' style='position:absolute; top:0px; right:-150px' />
+<img src='https://www.gmbinder.com/images/CRqcfac.png' class='inkblot inkblot-green' style='position:absolute; top:-150px; left:263px; width:900px; transform:rotate(-19deg) scaleX(-1)' />
+
+<div class="pageLetter">E</div>
+<div class='footnote'>ELEMENTAL DRAKES | Stone Drakes</div>
+
+\pagebreakNum
+
+___
+> ## Young Stone Drake <!-- https://wc5e-cr-calculator.frogvall.com/?1;16;105;8;16;48;0;38;0;38;0;0;0;0;0;0;0;;;1;;4;;;;;;;;;;3;;;;;;;;15;;;;;;;;;;; -->
+> *Large elemental (dragon), unaligned*
+> ___
+> - **Armor Class** 16 (natural armor)
+> - **Hit Points** 105 (10d10 + 50)
+> - **Speed** 40 ft., burrow 40 ft., climb 40 ft., fly 80 ft.
+> ___
+> |  STR  |  DEX  |  CON  |  INT  |  WIS  |  CHA  |
+> |:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+> |21 (+5)|10 (+0)|20 (+5)| 7 (-3)|12 (+1)| 8 (-1)|
+>___
+> - **Damage Vulnerabilities** thunder
+> - **Damage Immunities** poison
+> - **Condition Immunities** poisoned
+> - **Senses** darkvision 120 ft., passive Perception 11
+> - **Languages** —
+> - **Challenge** 6 (2,300 XP)
+> ___
+> ***Stone Climb.*** The drake can climb difficult earthen surfaces, including upside down on ceilings, without needing to make an ability check.
+>
+> ### Actions
+> ***Multiattack.*** The drake makes three attacks: either three with its spit rock or one with its bite and two with its claws.
+>
+> ***Bite.*** *Melee Weapon Attack:* +8 to hit, reach 10 ft., one target. *Hit:* 14 (2d8 + 5) piercing damage.
+>
+> ***Claw.*** *Melee Weapon Attack:* +8 to hit, reach 5 ft., one target. *Hit:* 12 (2d6 + 5) slashing damage.
+>
+> ***Spit Rock.*** *Ranged Weapon Attack:* +8 to hit, range 100/200 ft., one target. *Hit:* 12 (2d6 + 5) bludgeoning damage.
+>
+> ***Stone Breath (Recharge 5-6).*** The drake spits stones in a 30-foot cone. Each creature in that area must make a DC 16 Dexterity saving throw, taking 24 (7d6) bludgeoning damage on a failed save, or half as much damage on a successful one. A creature that fails the save by 5 or more is knocked prone. 
+
+\columnbreak
+
+> ##### Variant: Precious Stones
+> There are as many types of stone drakes as their are varieties of stone. Some drakes take after certain varieties, changing their breath weapons to take on one of the following properties:
+> 
+> **Phosphorescent.** The drake spews radiation, dealing necrotic damage and causing those who fail their saving throws to gain one level of exhaustion, and they must make a DC 11 Constitution saving throw or contract the radiation disease (Manual of Monsters page ###).
+>
+> **Sandstone.** The drake exhales a gust of sand, dealing slashing damage and blinding those who fail their saving throws until the end of the drake's next turn.
+>
+> **Slate.** The drake's breath weapon is a gust of stone dust, dealing no damage and requiring a Constitution saving throw instead. Each creature in the area who fails their save begins to turn to stone and is restrained. The restrained target must repeat the saving throw at the end of its next turn. On a success, the effect ends on the target. On a failure, the target is petrified until freed by the *greater restoration* spell or other magic.
+>
+> **Vitreous.** The drake unleashes a hail of sharp crystal shards, becoming a line 5 feet wide and twice as long as their original breath weapon. The attack deals piercing damage and those who fail their saving throw have their bodies embedded with small shards of volcanic glass. Each time they move more than half their speed, they take 2 (1d4) piercing damage from the shards. The shards can be removed with the *lesser restoration* spell or a DC 10 Wisdom (Medicine) check.
+>
+> **Volcanic.** The drake exhales a jet of lava, dealing fire damage instead. In addition, the area hit by the lava becomes difficult terrain for 1 minute. When a creature enters the area for the first time on a turn or starts its turn there, they take 5 (1d10) fire damage.
+
+<img src='https://www.gmbinder.com/images/KIDHxBQ.jpg' style='position:absolute; bottom:-60px; left:-110px; width:115%' />
+<img src='https://www.gmbinder.com/images/IVAoFBN.png' style='position:absolute; top:0px; left:0px; width:135%' />
+
+<div class="pageLetter">E</div>
+<div class='footnote'>ELEMENTAL DRAKES | Stone Drakes</div>
+
+\pagebreakNum
+
+___
+> ## Adult Stone Drake <!-- https://wc5e-cr-calculator.frogvall.com/?2;18;202;11;19;90;0;44;0;44;0;0;0;0;0;0;0;1;;1;;4;;;;;;;;;;3;;;;;;;;15;;;;;;;;;;; -->
+> *Huge elemental (dragon), unaligned*
+> ___
+> - **Armor Class** 18 (natural armor)
+> - **Hit Points** 202 (15d12 + 105)
+> - **Speed** 40 ft., burrow 40 ft., climb 40 ft., fly 80 ft.
+>___
+> |  STR  |  DEX  |  CON  |  INT  |  WIS  |  CHA  |
+> |:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+> |25 (+7)|10 (+0)|24 (+7)| 9 (-1)|14 (+2)|10 (+0)|
+>___
+> - **Damage Vulnerabilities** thunder
+> - **Damage Resistances** bludgeoning, piercing, and slashing from nonmagical attacks that aren't adamantine
+> - **Damage Immunities** poison
+> - **Condition Immunities** poisoned
+> - **Senses** darkvision 120 ft., passive Perception 12
+> - **Languages** —
+> - **Challenge** 12 (8,400 XP)
+> ___
+> ***Siege Monster.*** The drake deals double damage to objects and structures.
+> 
+> ***Stone Climb.*** The drake can climb difficult earthen surfaces, including upside down on ceilings, without needing to make an ability check.
+>
+> ### Actions
+> ***Multiattack.*** The drake makes three attacks: either three with its spit rock or one with its bite and two with its claws.
+>
+> ***Bite.*** *Melee Weapon Attack:* +11 to hit, reach 10 ft., one target. *Hit:* 16 (2d8 + 7) piercing damage.
+>
+> ***Claw.*** *Melee Weapon Attack:* +11 to hit, reach 5 ft., one target. *Hit:* 14 (2d6 + 7) slashing damage.
+>
+> ***Spit Rock.*** *Ranged Weapon Attack:* +11 to hit, range 100/200 ft., one target. *Hit:* 14 (2d6 + 7) bludgeoning damage.
+>
+> ***Stone Breath (Recharge 5-6).*** The drake exhales stones in a 60-foot cone. Each creature in that area must make a DC 19 Dexterity saving throw, taking 45 (13d6) bludgeoning damage on a failed save, or half as much damage on a successful one. A creature that fails the save by 5 or more is knocked prone. 
+
+### A Stone Drake's Lair
+Stone drake lairs are located in the immense caverns of Deepholm, where they can take full advantage of their flight abilities. Typically they nest near confluences of geomagnetic energies, often marked by veins of lava or forests of crystal shards.
+
+#### Lair Actions
+On initiative count 20 (losing initiative ties), the drake can take a lair action to cause one of the following effects:
+
+- Stalactites fall from the ceiling, striking up to three creatures underneath that the drake can see within 120 feet of it. The drake makes one ranged attack roll (+7 to hit) against each target. On a hit, the target takes 10 (3d6) piercing damage.
+
+\columnbreak
+___
+> ## Ancient Stone Drake <!-- https://wc5e-cr-calculator.frogvall.com/?3;20;292;15;23;160;0;50;0;50;0;0;0;0;0;0;0;1;;1;;4;;;;;;;;;;3;;;;;;;;15;;;;;;;;;;; --> <!-- Lair: https://wc5e-cr-calculator.frogvall.com/?3;20;292;15;23;160;36;50;36;50;36;0;0;0;0;0;0;1;;1;;4;;;;;;;;;;3;;;;;;;;15;;;;;;;;;;; -->
+> *Gargantuan elemental (dragon), unaligned*
+> ___
+> - **Armor Class** 20 (natural armor)
+> - **Hit Points** 292 (15d20 + 135)
+> - **Speed** 40 ft., burrow 40 ft., climb 40 ft., fly 80 ft.
+>___
+> |  STR  |  DEX  |  CON  |  INT  |  WIS  |  CHA  |
+> |:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+> |29 (+9)|10 (+0)|28 (+9)|11 (+1)|16 (+3)|12 (+1)|
+>___
+> - **Damage Vulnerabilities** thunder
+> - **Damage Resistances** bludgeoning, piercing, and slashing from nonmagical attacks that aren't adamantine
+> - **Damage Immunities** poison
+> - **Condition Immunities** poisoned
+> - **Senses** darkvision 120 ft., passive Perception 13
+> - **Languages** —
+> - **Challenge** 17 (18,000 XP), or 19 (22,000 XP) if encountered in lair
+> ___
+> ***Siege Monster.*** The drake deals double damage to objects and structures.
+>
+> ***Stone Climb.*** The drake can climb difficult earthen surfaces, including upside down on ceilings, without needing to make an ability check.
+>
+> ### Actions
+> ***Multiattack.*** The drake makes three attacks: either three with its spit rock or one with its bite and two with its claws.
+>
+> ***Bite.*** *Melee Weapon Attack:* +15 to hit, reach 10 ft., one target. *Hit:* 18 (2d8 + 9) piercing damage.
+>
+> ***Claw.*** *Melee Weapon Attack:* +15 to hit, reach 5 ft., one target. *Hit:* 16 (2d6 + 9) slashing damage.
+>
+> ***Spit Rock.*** *Ranged Weapon Attack:* +15 to hit, range 100/200 ft., one target. *Hit:* 16 (2d6 + 9) bludgeoning damage.
+>
+> ***Stone Breath (Recharge 5-6).*** The drake spits stones in a 90-foot cone. Each creature in that area must make a DC 23 Dexterity saving throw, taking 80 (23d6) bludgeoning damage on a failed save, or half as much damage on a successful one. A creature that fails the save by 5 or more is knocked prone. 
+
+- The drake unleashes a swirling cloud of crystal shards in 15-foot radius. Each creature in the area must make a DC 15 Dexterity saving throw, taking 22 (4d8) slashing damage on a failed save, or half as much on a successful one.
+- A crack in the ground splits open at a point of the drake's choosing within 120 feet, causing lava to spew forth in a 10-foot radius of that point. Each creature in the area must make a DC 15 Dexterity saving throw, taking 16 (3d10) fire damage on a failed save, or half as much on a successful one. The lava lingers for 1 minute, causing the area to become difficult terrain. When a creature enters the area for the first time on a turn or starts its turn there, they take 5 (1d10) fire damage.
+
+<div class="pageLetter">E</div>
+<div class='footnote'>ELEMENTAL DRAKES | Stone Drakes</div>
+
+\pagebreakNum
+
+<div style='margin-top:218px;'></div>
+
+### Storm Drakes 
+In Skywall, the kingdom of clouds occupied by air elementals, the elemental storm drakes drift lazily across the endless sky, held aloft by the myriad wind currents that make up their home. Only seldom do they leave the clouds, let alone land on their feet. Their sleek, pearlescent scales seem almost textureless, like glass, but their stormy moods and the hurricane force of their wings are more than tangible.
+
+***Stormguard.*** Storm drakes are utilized by the cunning elementals of air as guardians of the few constructed temples in Skywall, through subjugation and cruel magic. Here the drakes demonstrate a powerful and abiding territorial nature, enforcing hurricane force winds to drive away enemies - usually opposing elementals seeking to off a political foe, though more recently landbound adventurers have found just how dangerous these winds can be.
+
+___
+> ## Storm Drake Hatchling <!-- https://wc5e-cr-calculator.frogvall.com/?0;14;38;4;12;36;0;9;0;9;0;0;0;0;0;0;0;;;;;3;;;;;;;;;;1;;;;;;;;10;;;;;;;;;;; -->
+> *Small elemental (dragon), unaligned*
+> ___
+> - **Armor Class** 14
+> - **Hit Points** 38 (7d6 + 14)
+> - **Speed** 30 ft., fly 60 ft.
+> ___
+> |  STR  |  DEX  |  CON  |  INT  |  WIS  |  CHA  |
+> |:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+> |15 (+2)|14 (+2)|14 (+2)| 5 (-3)|14 (+2)| 6 (-2)|
+> ___
+> - **Damage Resistances** lightning, thunder
+> - **Senses** passive Perception 12
+> - **Languages** —
+> - **Challenge** 1 (200 XP)
+> ___
+>
+> ***Protective Winds.*** The drake adds its Wisdom modifier to its Armor Class.
+>
+> ### Actions
+> ***Bite.*** *Melee Weapon Attack:* +4 to hit, reach 5 ft., one target. *Hit:* 9 (2d6 + 2) piercing damage.
+>
+> ***Breath of the Four Winds (Recharge 5-6).*** The drake exhales strong winds in a 15-foot cone. Each creature in that area must make a DC 12 Dexterity saving throw, taking 18 (4d8) bludgeoning damage on a failed save, or half as much damage on a successful one.
+
+\columnbreak
+
+___
+> ## Young Storm Drake <!-- https://wc5e-cr-calculator.frogvall.com/?1;16;123;7;14;62;0;37;0;37;0;0;0;0;0;0;0;;;;;3;;;;;;;;;;1;;;;;;;;10;;;;;;;;;;; -->
+> *Large elemental (dragon), unaligned*
+> ___
+> - **Armor Class** 16
+> - **Hit Points** 123 (13d10 + 52)
+> - **Speed** 40 ft., fly 80 ft.
+> ___
+> |  STR  |  DEX  |  CON  |  INT  |  WIS  |  CHA  |
+> |:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+> |19 (+4)|16 (+3)|18 (+4)| 7 (-2)|16 (+3)| 8 (-1)|
+> ___
+> - **Damage Resistances** lightning, thunder
+> - **Senses** passive Perception 13
+> - **Languages** —
+> - **Challenge** 6 (2,300 XP)
+> ___
+>
+> ***Protective Winds.*** The drake adds its Wisdom modifier to its Armor Class.
+>
+> ### Actions
+> ***Multiattack.*** The drake makes three attacks: one with its bite and two with its claws.
+>
+> ***Bite.*** *Melee Weapon Attack:* +7 to hit, reach 10 ft., one target. *Hit:* 15 (2d10 + 4) piercing damage.
+>
+> ***Claws.*** *Melee Weapon Attack:* +7 to hit, reach 5 ft., one target. *Hit:* 11 (2d6 + 4) slashing damage.
+>
+> ***Breath of the Four Winds (Recharge 5-6).*** The drake exhales strong winds in a 30-foot cone. Each creature in that area must make a DC 14 Dexterity saving throw, taking 31 (7d8) bludgeoning damage on a failed save, or half as much damage on a successful one.
+
+> ##### Variant: The Four Winds
+> Some drakes show an affinity for the winds of one of the four cardinal directions. Their breath weapon changes to reflect this, gaining one of the following properties:
+> 
+> ***Breath of the North Wind.*** The drake's breath becomes wintry, dealing cold damage and causing creatures who fail their saving throw to have their movement speed reduced by 10 feet for 1 minute. In addition, the area affected by the breath weapon becomes difficult terrain for 1 minute due to leftover sleet.
+>
+> ***Breath of the East Wind.*** The drake's breath becomes that of a storm-force gale, extinguishing unprotected fires, dispersing vapors and gas, and causing creatures who fail their saving throw to be pushed back up to the far range of drake's breath weapon. 
+>
+> ***Breath of the South Wind.*** The drake's breath becomes laced with a thunderstorm, dealing lightning damage and causing those who fail their saving throw to become deafened for 1 minute.
+>
+> ***Breath of the West Wind.*** The drake's breath carries the scent of pollen and toxic spores. Creatures who fail their saving throw become poisoned until the beginning of the drake's next turn.
+
+<img src='https://www.gmbinder.com/images/QwMo62S.jpg' style='position:absolute; top:0px; left:-40px; width:60%; transform:scaleX(-1)' />
+<img src='https://www.gmbinder.com/images/z86Lpca.png' style='position:absolute; bottom:0px; right:-230px; height:140%' />
+
+<div class="pageLetter">E</div>
+<div class='footnote'>ELEMENTAL DRAKES | Storm Drakes</div>
+
+\pagebreakNum
+
+___
+> ## Adult Storm Drake <!-- https://wc5e-cr-calculator.frogvall.com/?2;18;212;10;16;116;0;43;0;43;0;0;0;0;0;0;0;;;1;;3;;;;;;;;;;1;;;;;;;;10;;;;;;;;;;; -->
+> *Huge elemental (dragon), unaligned*
+> ___
+> - **Armor Class** 18
+> - **Hit Points** 212 (17d12 + 102)
+> - **Speed** 40 ft., fly 80 ft.
+> ___
+> |  STR  |  DEX  |  CON  |  INT  |  WIS  |  CHA  |
+> |:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+> |23 (+6)|18 (+4)|22 (+6)| 9 (-1)|18 (+4)|10 (+0)|
+> ___
+> - **Damage Resistances** lightning, thunder
+> - **Senses** passive Perception 14
+> - **Languages** —
+> - **Challenge** 12 (8,400 XP)
+> ___
+> ***Buffeting Winds.*** Ranged attacks against the drake have disadvantage on the attack rolls.
+>
+> ***Protective Winds.*** The drake adds its Wisdom modifier to its Armor Class.
+>
+> ### Actions
+> ***Multiattack.*** The drake makes three attacks: one with its bite and two with its claws or gust.
+>
+> ***Bite.*** *Melee Weapon Attack:* +10 to hit, reach 10 ft., one target. *Hit:* 17 (2d10 + 6) piercing damage.
+>
+> ***Claws.*** *Melee Weapon Attack:* +10 to hit, reach 5 ft., one target. *Hit:* 13 (2d6 + 6) slashing damage.
+>
+> ***Gust.*** One target within 15 feet must make a DC 16 Strength saving throw. On a failure, the target takes 13 (3d8) bludgeo­ning damage and is flung up to 30 feet directly away from the drake and knocked prone. If the saving throw is successful, the target only takes half damage and isn't flung away or knocked prone.
+>
+> ***Breath of the Four Winds (Recharge 5-6).*** The drake exhales strong winds in a 60-foot cone. Each creature in that area must make a DC 16 Dexterity saving throw, taking 58 (13d8) bludgeoning damage on a failed save, or half as much damage on a successful one.
+
+### A Storm Drake's Lair
+A storm drake's lair is a location within Skywall, typically where at least two of the four winds meet. As such locations are typically locations of settlements, ancient storm drakes often are subjugated under the rule of a powerful djinn.
+
+#### Lair Actions
+On initiative count 20 (losing initiative ties), the drake can take a lair action to cause one of the following effects:
+- A lightning bolt touches down at a point the drake chooses within 120 feet. Each creature within 5 feet of that point must make a DC 15 Dexterity saving throw, taking 16 (3d10) lightning damage on a failed save, or half as much damage on a successful one. Creatures wearing armor made of metal have disadvantage on this saving throw.
+
+\columnbreak
+
+___
+> ## Ancient Storm Drake <!-- https://wc5e-cr-calculator.frogvall.com/?2;20;290;13;20;144;0;49;0;49;0;0;0;0;0;0;0;;;1;;3;;;;;;;;;;1;;;;;;;;10;;;;;;;;;;; --> <!-- Lair: https://wc5e-cr-calculator.frogvall.com/?3;20;314;14;21;162;32;49;32;49;32;0;0;0;0;0;0;;;1;;3;;;;;;;;;;1;;;;;;;;10;;;;;;;;;;; -->
+> *Gargantuan elemental (dragon), unaligned*
+> ___
+> - **Armor Class** 20
+> - **Hit Points** 314 (17d20 + 136)
+> - **Speed** 40 ft., fly 80 ft.
+> ___
+> |  STR  |  DEX  |  CON  |  INT  |  WIS  |  CHA  |
+> |:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+> |27 (+8)|20 (+5)|26 (+8)|11 (+0)|20 (+5)|11 (+0)|
+> ___
+> - **Damage Resistances** lightning, thunder
+> - **Senses** passive Perception 15
+> - **Languages** —
+> - **Challenge** 17 (18,000 XP) or 19 (22,000 XP) if encountered in lair
+> ___
+> ***Buffeting Winds.*** Ranged attacks against the drake have disadvantage on the attack rolls.
+>
+> ***Protective Winds.*** The drake adds its Wisdom modifier to its Armor Class.
+>
+> ### Actions
+> ***Multiattack.*** The drake makes three attacks: one with its bite and two with its claws or gust.
+>
+> ***Bite.*** *Melee Weapon Attack:* +14 to hit, reach 10 ft., one target. *Hit:* 19 (2d10 + 8) piercing damage.
+>
+> ***Claws.*** *Melee Weapon Attack:* +14 to hit, reach 5 ft., one target. *Hit:* 15 (2d6 + 8) slashing damage.
+>
+> ***Gust.*** One target within 10 feet must make a DC 21 Strength saving throw. On a failure, the target takes 13 (3d8) bludgeo­ning damage and is flung up to 30 feet directly away from the drake and knocked prone. If the saving throw is successful, the target only takes half damage and isn't flung away or knocked prone.
+>
+> ***Breath of the Four Winds (Recharge 5-6).*** The drake exhales strong winds in a 90-foot cone. Each creature in that area must make a DC 21 Dexterity saving throw, taking 81 (18d8) bludgeoning damage on a failed save, or half as much damage on a successful one.
+
+- A series of small twisters fills the area within a 60-foot radius of the drake. Each creature in the area other than the drake must make a DC 15 Dexterity saving throw or be knocked 1d6 x 10 feet straight up into the air, taking fall damage as normal.
+- The drake creates an area of strong wind in the shape of a 40-foot radius sphere centered on it. The wind moves in a single direction, such as north or west, chosen by the drake. Each creature that starts its turn in the area must succeed on a DC 15 Strength saving throw or be pushed 20 feet in the direction of the wind. Any creature in the area must spend 2 feet of movement for every 1 foot it moves against the wind, while movement speed in the direction of the wind is doubled. Gases and vapors are dispersed by the wind, and unprotected flames are extinguished. Protected flames, such as lanterns, have a 50 percent chance of being extinguished. The wind remains centered on the drake and lasts until it uses this lair action again or until it dies.
+
+<img src='https://www.gmbinder.com/images/q8hF8nw.jpg' style='position:absolute; top:0px; left:-205px; width:180%' />
+<img src='https://www.gmbinder.com/images/pZatMx5.png' style='position:absolute; bottom:0px; left:0px; width:100%' />
+
+<div class="pageLetter">E</div>
+<div class='footnote'>ELEMENTAL DRAKES | Storm Drakes</div>
