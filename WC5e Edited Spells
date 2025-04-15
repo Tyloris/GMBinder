@@ -1,0 +1,4301 @@
+<style>
+/* GLOBAL FORMATTING  */
+
+  /* Resize page to international A4 */
+  .phb {
+    width: 210mm;
+    height: 296.8mm;
+  }
+  .phb:after { content: ""; }
+
+/* Temporary Fix for heading issues */
+    .phb p{ line-height: 15px; } 
+    .phb blockquote p{ line-height: 14px; } 
+    .phb h2{ line-height: 26px; } 
+    .phb h3{ line-height: 19px; } 
+    .phb h4{ line-height: 15px; padding-bottom: 3px; } 
+    .phb h5{ line-height: 17px; } 
+    th, td { line-height: 14px; }
+
+/* TABLE OF CONTENTS  */
+
+  /* toc specifically wants black text. This resets the headers*/
+  .toc a {
+    color: inherit !important;
+  }
+  /* Allow dot leaders to fill remaining space but not overlap */
+  .toc li span:nth-child(2) {
+    width: auto;
+    overflow: hidden;
+    white-space: nowrap;
+    display: block;
+  }
+  .toc li span:nth-child(2):after {
+    font-family: BookSanity;
+    font-size: 0.317cm;
+    font-weight: normal;
+    color: black;
+    content:
+      " ........................................"
+      "........................................."
+      ".........................................";
+    }
+
+  /* Style TOC page numbers*/
+  .toc li span:first-child {
+    float: right;
+    font-family: BookSanity;
+    font-size: 0.317cm;
+    font-weight: normal;
+    color: black;
+    margin-left: 1px;
+  }
+
+  /* Adjust TOC H3 styles */
+  .toc li h3 span:nth-child(2):after {
+  	content: " ";
+  }
+  .toc li h3 {
+    margin-bottom: 4px !important;
+    margin-top: 10px !important;
+    line-height: initial !important;
+  }
+  .toc li h3 span:first-child {
+  	line-height: 1.8em !important;
+  }
+
+  /* Reduce TOC list indentation*/
+  .toc ul ul {
+  	margin-left: 10px !important;
+  }
+  .toc>ul>li {
+    margin-bottom: initial !important;
+  }
+
+
+/* TABLES AND BLOCKS */
+
+  /* Clear internal padding and add gap above for green note blocks*/
+  .phb blockquote {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .phb blockquote { margin-top: 1em;
+  }
+
+
+/* INK BLOT STYLES */
+
+  /* Root style for inkblots. Use alone, or together with
+  one of the inkb lotstyle classes below. Essentially:
+  <img url='{url}' class='inkblot inkblot-blue' />
+  */
+  .inkblot {
+    position: absolute;
+    mix-blend-mode: multiply;
+    opacity: 0.6;
+  }
+
+  .inkblot-blue {
+    filter: hue-rotate(190deg) saturate(120%)
+  }
+
+  .inkblot-green {
+    filter: hue-rotate(120deg)
+  }
+
+/* PAGE STYLE */
+
+   /* Background */
+     .phb{ background-image: url('https://gmbinder.com/images/KN1O92T.png') }
+     .phb{ background-size: cover }
+
+   /* Notes */
+     .phb section blockquote {background-color: #f6e5d4}
+     .phb hr + section blockquote tr:nth-child(odd) td {background-color: transparent;}
+
+   /* Tables */
+     table tr:nth-child(odd) td {background-color: #cccccc}
+
+   /* Footer */
+     .phb .pageNumber {color: rgba(0, 0, 0, 0.5)}
+     .phb .footnote {color: rgba(0, 0, 0, 0.5)}
+     .phb:nth-child(odd):after{ 
+       content          : '';
+       position         : absolute;
+       bottom           : -7px;
+       left             : 10px;
+       z-index          : -1;
+       height           : 336px;
+       width            : 100%;
+       background-image : url('https://www.gmbinder.com/images/bNTz1nk.png');
+       background-size  : cover;
+   }
+
+   .phb:nth-child(even):after{ 
+       content          : '';
+       position         : absolute;
+       bottom           : -7px;
+       left             : -10px;
+       z-index          : -1;
+       height           : 336px;
+       width            : 100%;
+       background-image : url('https://www.gmbinder.com/images/6NCzAN0.png');
+       background-size  : cover;
+   }
+
+   /* Page Number */
+   .phb .pageNumber{
+       position   : absolute;
+       bottom     : 30px;
+       width      : 50px;
+       text-align : center;
+   }
+   .phb:nth-child(even) .pageNumber{
+       left      : 12px;
+   }
+   .phb:nth-child(odd) .pageNumber{
+       right      : 12px;
+   }
+
+   .phb .pageNumber.auto{
+       position   : absolute;
+       bottom     : 41px;
+       width      : 50px;
+       text-align : center;
+   }
+   .phb:nth-child(even) .pageNumber.auto{
+       left      : 12px;
+   }
+   .phb:nth-child(odd) .pageNumber.auto{
+       right      : 12px;
+   }
+
+/* FRONT PAGE STYLES */
+
+  .cover-header-container {
+    display: block;
+    position: absolute;
+    width: 100%;
+    top: 80px;
+    left: 0;
+    right: 0;
+    clear: both;
+  }
+
+  .cover-header-logo {
+    display: block;
+    width: 700px;
+    margin: auto;
+  }
+
+  .cover-header-divider {
+    display: block;
+    width: 580px;
+    margin: -12px auto -6px;
+  }
+
+  .cover-header-title {
+    display: block;
+    width: 700px;
+    margin: auto;
+    color: white;
+    font-family: NodestoCaps,nodesto,sans-serif;
+    font-weight: normal;
+    font-size: 72px;
+    line-height: 72px;
+    text-align: center;
+    text-shadow: 2px 2px 4px #000, -2px 2px 4px #000, 2px -2px 4px #000, -2px -2px 4px #000;
+  }
+
+  .cover-footer-container {
+    display: block;
+    position: absolute;
+    width: 100%;
+    bottom: 28px;
+    left: 0;
+    right: 0;
+    clear: both;
+  }
+
+  .cover-footer-subtitle,
+  .cover-footer-version {
+    display: block;
+    width: 500px;
+    margin: auto;
+    color: white;
+    font-family: NodestoCaps,nodesto,sans-serif;
+    font-weight: normal;
+    text-align: center;
+    text-shadow: 1px 1px 2px #000, -1px 1px 2px #000, 0px 0px 2px #000;
+  }
+  .cover-footer-subtitle {
+    font-size: 28px;
+    line-height: 28px;
+  }
+  .cover-footer-version {
+    margin-top: 16px;
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+/* STAT BLOCKS */
+  /* For creature statblocks within range (start and end must be specified),
+     don't show a background. Used for the appendix creatures */
+  .phb:nth-of-type(n+140):nth-of-type(-n+200) hr+section blockquote {
+    background: none;
+    border: none;
+    box-shadow: none;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+  }
+
+</style>
+
+# Chapter 6: Spells
+This chapter describes the most common spells on Azeroth. The chapter begins with the spell lists of the spellcasting classes. The remainder contains spell descriptions, pre-sented in alphabetical order by the name of the spell. 
+
+While most spell descriptions are located in the Player's Handbook, some spells are described in other locations, as indicated by the table below.
+
+Symbol|Spell Location
+------|--------------------------
+✦ |In this chapter, under Spell Descriptions
+‡ | See [Comparison Document](https://www.gmbinder.com/share/-N2nBra4ZSsRlPNzRuJ8)
+^EGW^ | Explorer's Guide to Wildemount
+^ID:RotF^ | Icewind Dale: Rime of the Frostmaiden
+^LLK^ | Lost Laboratory of Kwalish
+^SCAG^ |Sword Coast Adventurer's Guide
+^TCE^ | Tasha's Cauldron of Everything
+^XGE^ |Xanathar's Guide to Everything
+
+<div style='margin-top:25px;'></div>
+
+<div class='footnote'>PART 2 | SPELLS </div>
+
+\pagebreakNum
+
+<div style='column-count:2'>
+
+### Death Kt. Spells
+
+##### 1st Level
+Absorb Elements ^XGE^
+<br/> ✦ Animate Crawling Claw
+<br/> ‡ ✦ Arctic Breath
+<br/> ✦ Bad Blood
+<br/> Bane
+<br/> Cause Fear ^XGE^
+<br/> ‡ ✦ Chains of Ice
+<br/> Command
+<br/> Compelled Duel
+<br/> ✦ Corpse Explosion
+<br/> ✦ Crippling Agony
+<br/> ✦ Death Grip
+<br/> Detect Evil and Good
+<br/> Detect Magic
+<br/> Detect Poison and Disease
+<br/> ✦ Dread Favor
+<br/> ‡ ✦ Entomb
+<br/> Fog Cloud
+<br/> Heroism
+<br/> Ice Knife ^XGE^
+<br/> ✦ Icy Touch
+<br/> ✦ Nauseating Poison
+<br/> Prot. from Evil and Good
+<br/> Ray of Sickness
+<br/> Thunderous Smite
+<br/> Wrathful Smite
+
+##### 2nd Level
+✦ Anti-Magic Shell
+<br/> Augury
+<br/> Blindness/Deafness
+<br/> ✦ Blood Boil
+<br/> Calm Emotions
+<br/> ‡ ✦ Cold Snap
+<br/> Crown of Madness
+<br/> Darkvision
+<br/> Find Steed
+<br/> Gentle Repose
+<br/> ✦ Ghastly Stench
+<br/> Hold Person
+<br/> ‡ ✦ Howling Blast
+<br/> ✦ Icebound Fortitude
+<br/> ✦ Poison Dart
+<br/> Ray of Enfeeblement
+<br/> Silence
+<br/> Snilloc's Snowball <br/>&nbsp;&nbsp;&nbsp; Swarm ^XGE^
+<br/> ✦ Vicious Vapors
+<br/> Zone of Truth
+
+\columnbreak
+
+<br/><div style='margin-top:20px;'></div>
+
+##### 3rd Level
+Animate Dead
+<br/> ‡ ✦ Asphyxiate
+<br/> Bestow Curse
+<br/> Clairvoyance
+<br/> Dispel Magic
+<br/> Enemies Abound ^XGE^
+<br/> Fear
+<br/> Feign Death
+<br/> ‡ ✦ Flash Freeze
+<br/> Gaseous Form
+<br/> Life Transference ^XGE^
+<br/> ✦ Mantle of the <br/>&nbsp;&nbsp;&nbsp; Fallen Crusader
+<br/> Phantom Steed
+<br/> Sleet Storm
+<br/> Speak with Dead
+<br/> ✦ Spider Bite
+<br/> Stinking Cloud
+<br/> Vampiric Touch
+<br/> Water Walk
+
+##### 4th Level
+Arcane Eye
+<br/> Banishment
+<br/> Blight
+<br/> ✦ Conjure Undead
+<br/> ✦ Control Undead
+<br/> ✦ Consumptive Field
+<br/> ✦ Death and Decay
+<br/> Death Ward
+<br/> Divination
+<br/> Find Greater Steed ^XGE^
+<br/> ✦ Ice Spike
+<br/> Ice Storm
+<br/> Phantasmal Killer
+<br/> ✦ Poison Puff
+<br/> Sickening Radiance ^XGE^
+<br/> Staggering Smite
+<br/> ✦ Stinging Swarm
+<br/> Stoneskin
+<br/> ‡ ✦ Suffocate
+<br/> Vitriolic Sphere ^XGE^
+
+##### 5th Level
+Antilife Shell
+<br/> ✦ Army of the Dead
+<br/> Banishing Smite
+<br/> Circle of Power
+<br/> Cloudkill
+<br/> Danse Macabre ^XGE^
+<br/> ✦ Death Chain
+<br/> Dispel Evil and Good
+<br/> Enervation ^XGE^
+<br/> Hallow
+<br/> Hold Monster
+<br/> Negative Energy Flood ^XGE^
+<br/> ✦ Unholy Weapon
+
+</div>
+
+<div class='footnote'>PART 2 | SPELLS </div>
+
+\pagebreakNum
+
+<div style='column-count:2'>
+
+### Druid Spells
+##### Cantrips (0 Level)
+Dancing Lights
+<br/> Druidcraft
+<br/> Guidance
+<br/> ✦ Lunar Strike
+<br/> Infestation
+<br/> Poison Spray
+<br/> Resistance
+<br/> Shape Water ^XGE^
+<br/> Shillelagh
+<br/> ✦ Solar Wrath
+<br/> Thorn Whip
+
+##### 1st Level
+Animal Friendship
+<br/> Beast Bond ^XGE^
+<br/> Cure Wounds
+<br/> Detect Magic
+<br/> Detect Poison and Disease
+<br/> Earth Tremor ^XGE^
+<br/> Entangle
+<br/> Expeditious Retreat
+<br/> Faerie Fire
+<br/> Fog Cloud
+<br/> Goodberry
+<br/> Healing Word
+<br/> Jump
+<br/> Longstrider
+<br/> ✦ Nauseating Poison
+<br/> Purify Food and Drink
+<br/> Sleep
+<br/> Snare ^XGE^
+<br/> Speak with Animals
+<br/> ✦ Starfire
+
+##### 2nd Level
+Animal Messenger
+<br/> Barkskin
+<br/> Beast Sense
+<br/> ✦ Cyclone
+<br/> Darkvision
+<br/> Dust Devil ^XGE^
+<br/> Enhance Ability
+<br/> Gust of Wind
+<br/> Hold Person
+<br/> Lesser Restoration
+<br/> Locate Animals or Plants
+<br/> Moonbeam
+<br/> Pass without Trace
+<br/> Protection from Poison
+<br/> Skywrite ^XGE^
+<br/> Spike Growth
+<br/> ✦ Stardust
+<br/> ✦ Sunfire/Moonfire
+<br/> ✦ Vicious Vapors
+<br/> Warding Wind ^XGE^
+
+\columnbreak
+
+<br/><div style='margin-top:20px;'></div>
+
+##### 3rd Level
+Catnap ^XGE^
+<br/> Conjure Animals
+<br/> Daylight
+<br/> Dispel Magic
+<br/> Feign Death
+<br/> Magic Circle
+<br/> Mass Healing Word
+<br/> Plant Growth
+<br/> Protection from Energy
+<br/> ✦ Rain of Spiders
+<br/> Revivify
+<br/> Speak with Plants
+<br/> ✦ Spider Bite
+<br/> ✦ Starsurge
+<br/> Stinking Cloud
+<br/> Water Breathing
+<br/> Wind Wall
+
+##### 4th Level
+Blight
+<br/> Charm Monster ^XGE^
+<br/> Confusion
+<br/> Conjure Woodland Beings
+<br/> Dominate Beast
+<br/> Freedom of Movement
+<br/> Grasping Vine
+<br/> Guardian of Nature
+<br/> Hallucinatory Terrain
+<br/> Locate Creature
+<br/> ✦ Poison Puff
+<br/> ✦ Stinging Swarm
+<br/> ✦ Ursol's Vortex
+<br/> Watery Sphere ^XGE^
+
+##### 5th Level
+Awaken
+<br/> Cloudkill
+<br/> Commune with Nature
+<br/> Control Winds ^XGE^
+<br/> Dawn ^XGE^
+<br/> Dream 
+<br/> Geas
+<br/> Greater Restoration
+<br/> Mass Cure Wounds
+<br/> Scrying
+<br/> Tree Stride
+<br/> Wrath of Nature ^XGE^
+
+##### 6th Level
+Conjure Fey
+<br/> Druid Grove ^XGE^
+<br/> ✦ Eclipse
+<br/> Find the Path
+<br/> Heal
+<br/> Investiture of Wind ^XGE^
+<br/> ✦ Starfall
+<br/> Sunbeam
+<br/> Transport via Plants
+<br/> Wall of Thorns
+<br/> Wind walk
+
+</div>
+
+\columnbreak
+
+<br/><div style='margin-top:20px;'></div>
+
+##### 7th Level
+Crown of Stars ^XGE^
+<br/> Mirage Arcana
+<br/> Regenerate
+<br/> Reverse Gravity
+<br/> Whirlwind ^XGE^
+
+##### 8th Level
+Animal Shapes
+<br/> Control Weather
+<br/> Feeblemind
+<br/> Sunburst
+
+##### 9th Level
+Foresight
+<br/> Mass Heal
+<br/> Shapechange
+<br/> Storm of Vengeance
+<br/> True Resurrection
+
+<div class='footnote'>PART 2 | SPELLS </div>
+
+\pagebreakNum
+
+<div style='column-count:2'>
+
+### Mage Spells
+##### Cantrips (0 Level)
+✦ Arcane Blast
+<br/> ✦ Arcane Bolt
+<br/> Blade Ward
+<br/> Control Flames ^XGE^
+<br/> Create Bonfire ^XGE^
+<br/> Dancing Lights
+<br/> Fire Bolt
+<br/> Frostbite ^XGE^
+<br/> Light
+<br/> Mage Hand
+<br/> Mending
+<br/> Message
+<br/> Minor Illusion
+<br/> Prestidigitation
+<br/> Produce Flame
+<br/> Ray of Frost
+<br/> Shape Water
+
+##### 1st Level
+Alarm
+<br/> Armor of Agathys
+<br/> Burning Hands
+<br/> Comprehend Languages
+<br/> Create or Destroy Water
+<br/> Detect Magic
+<br/> Disguise Self
+<br/> ‡ ✦ Entomb
+<br/> Expeditious Retreat
+<br/> Feather Fall
+<br/> Find Familiar
+<br/> Frost Fingers ^IDRotF^
+<br/> ✦ Frostfire Bolt
+<br/> Gift of Alacrity ^EGW^
+<br/> Hellish Rebuke
+<br/> Ice Knife ^XGE^
+<br/> Identify
+<br/> Illusory Script
+<br/> Jump
+<br/> Longstrider
+<br/> Mage Armor
+<br/> Magic Missile
+<br/> Magnify Gravity ^EGW^
+<br/> Shield
+<br/> Silent Image
+<br/> Snare ^XGE^
+<br/> Tenser's Floating Disk
+<br/> Unseen Servant
+
+##### 2nd Level
+Aganazzar's Scorcher ^XGE^
+<br/> Alter Self
+<br/> Arcane Lock
+<br/> ✦ Arcane Orb
+<br/> Blindness/Deafness
+<br/> Blur
+<br/> Cloud of Daggers
+<br/> ‡ ✦ Cold Snap
+<br/> Continual Flame
+<br/> Darkness
+<br/> Darkvision
+<br/> Detect Thoughts
+<br/> Dragon's Breath ^XGE^
+<br/> Enlarge/Reduce
+
+\columnbreak
+
+<br/><div style='margin-top:20px;'></div>
+
+<br/> Flame Arrows
+<br/> Flame Blade
+<br/> Flaming Sphere
+<br/> Flock of Familiars ^LLK^
+<br/> Fortune's Favor ^EGW^
+<br/> Gentle Repose
+<br/> ✦ Freezing Touch
+<br/> Heat Metal
+<br/> Hold Person
+<br/> Immovable Object ^EGW^
+<br/> Invisibility
+<br/> Knock
+<br/> Levitate
+<br/> ✦ Living Bomb
+<br/> Locate Object
+<br/> Magic Mouth
+<br/> Magic Weapon
+<br/> Mirror Image
+<br/> Misty Step
+<br/> Nystul's Magic Aura
+<br/> Pass without Trace
+<br/> Phantasmal Force
+<br/> Pyrotechnics ^XGE^
+<br/> Rope Trick
+<br/> Scorching Ray
+<br/> See Invisibility
+<br/> Shatter
+<br/> Silence
+<br/> Skywrite
+<br/> Snilloc's Snowball <br/>&nbsp;&nbsp;&nbsp; Swarm ^XGE^
+<br/> Spider Climb
+<br/> Suggestion
+<br/> Wristpocket ^EGW^
+
+##### 3rd Level
+✦ Arcane Explosion
+<br/> ✦ Arcane Lance
+<br/> Blink
+<br/> ✦ Blizzard
+<br/> Catnap ^XGE^
+<br/> Clairvoyance
+<br/> Counterspell
+<br/> Create food and Water
+<br/> Dispel Magic
+<br/> Feign Death
+<br/> Fireball
+<br/> ‡ ✦ Flash Freeze
+<br/> Fly
+<br/> Galder's Tower ^LLK^
+<br/> Glyph of Warding
+<br/> Haste
+<br/> Hypnotic Pattern
+<br/> Intellect Fortress ^TCE^
+<br/> Magic Circle
+<br/> Major Image
+<br/> Nondetection
+<br/> Protection from Energy
+<br/> Pulse Wave ^EGW^
+<br/> Remove Curse
+<br/> Sending
+<br/> Sleet Storm
+<br/> Slow
+<br/> ✦ Spellsteal
+<br/> Tidal Wave ^XGE^
+
+\columnbreak
+
+<br/><div style='margin-top:20px;'></div>
+
+<br/> Tiny Servant ^XGE^
+<br/> Tongues
+
+##### 4th Level
+✦ Amplify/Dampen Magic
+<br/> Arcane Eye
+<br/> ✦ Arcane Barrage
+<br/> Banishment
+<br/> Charm Monster ^XGE^
+<br/> Confusion
+<br/> Conjure Minor Elementals
+<br/> Dimension Door
+<br/> Fire Shield
+<br/> ✦ Force Blade
+<br/> Galder's <br/>&nbsp;&nbsp;&nbsp; Speedy Courier ^LLK^
+<br/> Gravity Sinkhole ^EGW^
+<br/> Greater Invisibility
+<br/> Hallucinatory Terrain
+<br/> ✦ Ice Block
+<br/> ✦ Ice Spike
+<br/> Ice Storm
+<br/> Leomund's Secret Chest
+<br/> Locate Creature
+<br/> Mordenkainen's <br/>&nbsp;&nbsp;&nbsp; Private Sanctum
+<br/> Otiluke's Resilient Sphere
+<br/> Polymorph
+<br/> Summon Elemental ^TCE^
+<br/> Wall of Fire
+
+##### 5th Level
+Animate Objects
+<br/> ✦ Arcane Storm
+<br/> Bigby's Hand
+<br/> Cone of Cold
+<br/> ✦ Conjure Servant
+<br/> Creation
+<br/> Dominate Person
+<br/> Far Step  ^XGE^
+<br/> Flame Strike
+<br/> Hold Monster
+<br/> Immolation ^XGE^
+<br/> Mislead
+<br/> Passwall
+<br/> Planar Binding
+<br/> Scrying
+<br/> Seeming
+<br/> Skill Empowerment ^XGE^
+<br/> Synaptic Static ^XGE^
+<br/> Teleportation Circle
+<br/> Wall of Force
+
+##### 6th Level
+Arcane Gate
+<br/> Contingency
+<br/> ✦ Create Mana Gem
+<br/> Disintegrate
+<br/> Globe of Invulnerability
+<br/> Gravity Fissure ^EGW^
+<br/> Guards and Wards
+<br/> Heroes' Feast
+<br/> Investiture of Flame ^XGE^
+<br/> Investiture of Ice ^XGE^
+
+\columnbreak
+
+<br/><div style='margin-top:20px;'></div>
+
+<br/> Mass Suggestion
+<br/> Mental Prison ^XGE^
+<br/> Otiluke's Freezing Sphere
+<br/> Programmed Illusion
+<br/> Scatter ^XGE^
+<br/> True Seeing
+<br/> Wall of Ice
+<br/> Word of Recall
+
+##### 7th Level
+✦ Comet Storm 
+<br/> Delayed Blast Fireball
+<br/> Etherealness
+<br/> Fire Storm
+<br/> Forcecage
+<br/> Mirage Arcane
+<br/> ✦ Glacial Spike
+<br/> Mordenkainen's <br/>&nbsp;&nbsp;&nbsp; Magnificent Mansion
+<br/> Reverse Gravity
+<br/> Prismatic Spray
+<br/> Project Image
+<br/> ✦ Pyroblast
+<br/> Sequester
+<br/> Teleport
+
+##### 8th Level
+✦ Alextrasza’s Fury
+<br/> Antimagic Field
+<br/> Clone
+<br/> Demiplane
+<br/> ✦ Ice Nova
+<br/> Illusory Dragon ^XGE^
+<br/> Incendiary Cloud
+<br/> Mind Blank
+<br/> Reality Break ^EGW^
+<br/> Tsunami
+
+##### 9th Level
+Blade of Disaster ^TCE^
+<br/> Foresight
+<br/> Gate
+<br/> Imprisonment
+<br/> Invulnerability ^XGE^
+<br/> ✦ Jaina's Flying Ship
+<br/> Mass Polymorph ^XGE^
+<br/> Prismatic Wall
+<br/> Meteor Swarm
+<br/> Ravenous Void ^EGW^
+<br/> Time Ravage ^EGW^
+<br/> Time Stop
+<br/> True Polymorph
+
+</div>
+
+<div class='footnote'>PART 2 | SPELLS </div>
+
+\pagebreakNum
+
+<!-- 
+> ##### Variant Rule: Wizardry
+> This list holds spells that are not in line with the Warcraft fantasy for mages, but a Dungeon Master could still allow a mage to learn. Many of these spells deal with necromancy or demonology, both of which are forbidden by most conclaves of magi. Others are powerful Wizard spells with no real equivalent in the Warcraft universe. 
+> <br/> 
+> <br/> 
+>##### Cantrips (0 Level) 
+> Chill Touch
+> <br/> ✦ Decompose
+> <br/> Sapping Sting ^EGW^
+> <br/> <br/>
+>##### 1st Level
+> Cause Fear ^XGE^
+> <br/> False Life
+> <br/> Ray of Sickness
+> <br/> Sleep
+> <br/> <br/>
+>##### 2nd Level
+> Ray of Enfeeblement
+> <br/> <br/>
+>##### 3rd Level
+> Animate Dead
+> <br/> Bestow Curse
+> <br/> Enemies Abound ^XGE^
+> <br/> Fear
+> <br/> Life Transference ^XGE^
+> <br/> Speak with Dead
+> <br/> Summon Lesser Demons ^XGE^
+> <br/> Summon Undead ^TCE^
+> <br/> Summon Shadowspawn ^TCE^
+> <br/> Vampiric Touch
+> <br/> <br/>
+>##### 4th Level
+> Summon Greater Demon ^XGE^
+> <br/> Vitriolic Sphere ^XGE^
+> <br/> <br/>
+>##### 5th Level
+> Danse Macabre ^XGE^
+> <br/> <br/>
+>##### 6th Level
+> Circle of Death
+> <br/> Create Undead ^XGE^
+> <br/> Forbiddance
+> <br/> <br/>
+>##### 7th Level
+> Create Magen ^IDRotF^
+> <br/> Finger of Death
+> <br/> Plane Shift
+> <br/> <br/>
+>##### 8th Level
+>Feeblemind
+> <br/> Mighty Fortress ^XGE^
+> <br/> <br/>
+>##### 9th Level
+> Wish
+> <br/> Dream of the Blue Veil ^TCE^
+
+\columnbreak
+
+-->
+
+<div style='column-count:2'>
+
+### Paladin Spells
+##### 1st Level
+✦ Avenger's Smite
+<br/> Bane
+<br/> Bless
+<br/> Ceremony ^XGE^
+<br/> Command
+<br/> Compelled Duel
+<br/> Cure Wounds
+<br/> Detect Evil and Good
+<br/> Divine Favor
+<br/> Healing Word
+<br/> Heroism
+<br/> Prot. from Evil and Good
+<br/> ✦ Repentance
+<br/> Sanctuary
+<br/> Searing Smite
+<br/> Shield of Faith
+<br/> Thunderous Smite
+<br/> Wrathful Smite
+
+##### 2nd Level
+Aid
+<br/> Branding Smite
+<br/> Enhance Ability
+<br/> Find Steed
+<br/> Flame Blade
+<br/> ✦ Guardian of the King
+<br/> ✦ Holy Prism
+<br/> Lesser Restoration
+<br/> Magic Weapon
+<br/> Prayer of Healing
+<br/> Protection from Poison
+<br/> ✦ Righteous Smite
+<br/> Warding Bond
+<br/> Zone of Truth
+
+##### 3rd Level
+✦ Aura of Faith
+<br/> Aura of Vitality
+<br/> Beacon of Hope
+<br/> ✦ Beacon of Light
+<br/> ✦ Blinding Light
+<br/> Blinding Smite
+<br/> Crusader's Mantle
+<br/> Daylight
+<br/> Dispel Magic
+<br/> ✦ Holy Wrath
+<br/> Life Transference ^XGE^
+<br/> Magic Circle
+<br/> Mass Healing Word
+<br/> Phantom Steed
+<br/> Protection from Energy
+<br/> Remove Curse
+<br/> Revivify
+
+##### 4th Level
+Aura of Life
+<br/> Aura of Purity
+<br/> Death Ward
+<br/> ✦ Divine Shield
+<br/> Find Greater Steed ^XGE^
+<br/> Guardian of Faith
+<br/> Locate Creature
+<br/> Staggering Smite
+
+\columnbreak
+
+<br/><div style='margin-top:20px;'></div>
+
+##### 5th Level
+Banishing Smite
+<br/> Circle of Power
+<br/> Destructive Wave
+<br/> Dispel Evil and Good
+<br/> Hallow
+<br/> Holy Weapon ^XGE^
+<br/> ✦ Light of the Protector
+<br/> Mass Cure Wounds
+<br/> Raise Dead
+<br/> Scrying
+<br/> Wall of Light ^XGE^
+
+</div>
+
+<div class='footnote'>PART 2 | SPELLS </div>
+
+\pagebreakNum
+
+<div style='column-count:2'>
+
+### Priest Spells
+##### Cantrips (0 Level)
+Guidance
+<br/> Light
+<br/> Mending
+<br/> ✦ Mind Blast
+<br/> Resistance
+<br/> Sacred Flame
+<br/> Spare the Dying
+<br/> Thaumaturgy
+<br/> Toll the Dead ^XGE^
+<br/> Word of Radiance ^XGE^
+
+##### 1st Level
+✦ Angelic Feather
+<br/> Arms of Hadar
+<br/> Bless
+<br/> Cause Fear ^XGE^
+<br/> Ceremony ^XGE^
+<br/> Cure Wounds
+<br/> ✦ Dark Void
+<br/> Detect Evil and Good
+<br/> Detect Magic
+<br/> Guiding Bolt
+<br/> Healing Word
+<br/> Inflict Wounds
+<br/> ✦ Mind Vision
+<br/> Prot. from Evil and Good
+<br/> Purify Food and Drink
+<br/> Sanctuary
+<br/> Shield of Faith
+
+##### 2nd Level
+Aid
+<br/> Blindness/Deafness
+<br/> Calm Emotions
+<br/> Crown of Madness
+<br/> Gentle Repose
+<br/> Healing Spirit ^XGE^
+<br/> Hold Person
+<br/> Lesser Restoration
+<br/> ✦ Mind Flay
+<br/> Mind Spike ^XGE^
+<br/> Prayer of Healing
+<br/> Protection from Poison
+<br/> ✦ Shackle Undead
+<br/> ✦ Shining Force
+<br/> Silence
+<br/> Suggestion
+
+##### 3rd Level
+Animate Dead
+<br/> ✦ Aura of Faith
+<br/> Beacon of Hope
+<br/> Bestow Curse
+<br/> Daylight
+<br/> Dispel Magic
+<br/> ✦ Divine Star
+<br/> Fear
+<br/> Feign Death
+<br/> Glyph of Warding
+<br/> Hunger of Hadar
+<br/> Life Transference ^XGE^
+<br/> Magic Circle
+<br/> Mass Healing Word
+
+\columnbreak
+
+<br/><div style='margin-top:20px;'></div>
+
+<br/> Protection from Energy
+<br/> Remove Curse
+<br/> Revivify
+<br/> Speak with Dead
+<br/> Spirit Guardians
+<br/> Tongues
+<br/> Vampiric Touch
+
+##### 4th Level
+Banishment
+<br/> Death Ward
+<br/> Divination
+<br/> Evard's Black Tentacles
+<br/> Freedom of Movement
+<br/> Guardian of Faith
+<br/> Locate Creature
+<br/> ✦ Void Shift
+
+##### 5th Level
+Dawn ^XGE^
+<br/> Dispel Evil and Good
+<br/> Geas
+<br/> Greater Restoration
+<br/> Hallow
+<br/> Mass Cure Wounds
+<br/> Negative Energy Flood ^XGE^
+<br/> Raise Dead
+<br/> Scrying
+<br/> ✦ Shadow Crash
+<br/> Wall of Light ^XGE^
+
+##### 6th Level
+Eyebite
+<br/> Find the Path
+<br/> Forbiddance
+<br/> Harm
+<br/> Heal
+<br/> Mass Suggestion
+<br/> True Seeing
+<br/> Word of Recall
+
+##### 7th Level
+Divine Word
+<br/> Etherealness
+<br/> Regenerate
+<br/> Resurrection
+<br/> Temple of the Gods ^XGE^
+
+##### 8th Level
+Abi-Dalzim's <br/>&nbsp;&nbsp;&nbsp; Horrid Wilting ^XGE^
+<br/> Antimagic Field
+<br/> Holy Aura
+<br/> Maddening Darkness ^XGE^
+<br/> Mind Blank
+
+##### 9th Level
+Foresight
+<br/> Mass Heal
+<br/> Psychic Scream ^XGE^
+<br/> True Resurrection
+
+
+</div>
+
+<div class='footnote'>PART 2 | SPELLS </div>
+
+\pagebreakNum
+
+<div style='column-count:2'>
+
+
+### Shaman Spells
+##### Cantrips (0 Level)
+Booming Blade ^SCAG^
+<br/> Control Flames ^XGE^
+<br/> Create Bonfire ^XGE^
+<br/> Fire Bolt
+<br/> Frostbite ^XGE^
+<br/> Gust ^XGE^
+<br/> ✦ Invoke Elements
+<br/> ✦ Lightning Blast
+<br/> ✦ Lightning Tendril
+<br/> Lightning Lure ^SCAG^
+<br/> Mending
+<br/> Mold Earth ^XGE^
+<br/> Produce Flame
+<br/> Ray of Frost
+<br/> Shape Water ^XGE^
+<br/> Shocking Grasp
+<br/> ✦ Spirit Strike
+<br/> Thunderclap ^XGE^
+<br/> ✦ Windborne Weapon
+
+##### 1st Level
+Absorb Elements ^XGE^
+<br/> ✦ Crashing Wave
+<br/> Create or Destroy Water
+<br/> Cure Wounds
+<br/> Detect Magic
+<br/> Detect Poison and Disease
+<br/> Earth Tremor ^XGE^
+<br/> ✦ Electric Smite
+<br/> ✦ Elemental Shock
+<br/> Fog Cloud
+<br/> ✦ Gale Bolt
+<br/> ✦ Lightning Shield
+<br/> ✦ Rain of Frogs
+<br/> Searing Smite
+<br/> ✦ Spiritual Consultation
+<br/> ✦ Stone Fist
+<br/> ✦ Thunder Punch
+<br/> Thunderous Smite
+<br/> Thunderwave
+<br/> ✦ Water Blast
+
+##### 2nd Level
+Augury
+<br/> ✦ Become Fire
+<br/> ✦ Become Stone
+<br/> ✦ Become Water
+<br/> ✦ Become Wind
+<br/> Continual Flame
+<br/> ✦ Crackle
+<br/> ✦ Cyclone
+<br/> ✦ Dancing Wave
+<br/> Dust Devil ^XGE^
+<br/> ✦ Earth Ripple
+<br/> Gust of Wind
+<br/> ✦ Hurricane Slash
+<br/> Healing Spirit ^XGE^
+<br/> Heat Metal
+<br/> ✦ Lava Burst
+<br/> Lesser Restoration
+<br/> Maximilian's <br/>&nbsp;&nbsp;&nbsp; Earthen Grasp ^XGE^
+<br/> Protection from Poison
+
+\columnbreak
+
+<br/><div style='margin-top:20px;'></div>
+
+<br/> Shatter
+<br/> Skywrite ^XGE^
+<br/> Warding Wind ^XGE^
+
+##### 3rd Level
+Call Lightning
+<br/> ✦ Chain Heal
+<br/> ✦ Create Effigy
+<br/> Counterspell
+<br/> Dispel Magic
+<br/> ✦ Earthen Spike
+<br/> ✦ Electrocute
+<br/> Erupting Earth ^XGE^
+<br/> Lightning Bolt
+<br/> Magic Circle
+<br/> Meld Into Stone
+<br/> Protection from Energy
+<br/> Revivify
+<br/> Spirit Guardians
+<br/> ✦ Thunder Pulse
+<br/> Thunder Step ^XGE^
+<br/> Tidal Wave ^XGE^
+<br/> ✦ Vortex Blast
+<br/> Wall of Water ^XGE^
+<br/> Water Breathing
+<br/> ✦ Water Cannon
+<br/> Water Walk
+<br/> Wind Wall
+
+##### 4th Level
+✦ Aero Barrage
+<br/> Conjure Minor Elementals
+<br/> Control Water
+<br/> Elemental Bane ^XGE^
+<br/> Freedom of Movement
+<br/> ✦ Echoing Lance
+<br/> ✦ Geyser
+<br/> ✦ Jumping Jolt
+<br/> Locate Creature
+<br/> ✦ Orbital Stones
+<br/> Polymorph
+<br/> Stone Shape
+<br/> Stoneskin
+<br/> Storm Sphere ^XGE^
+<br/> Wall of Fire
+<br/> Watery Sphere ^XGE^
+
+##### 5th Level
+✦ Bloodlust
+<br/> Commune with Nature
+<br/> Conjure Elemental
+<br/> Control Winds ^XGE^
+<br/> ✦ Fissure
+<br/> Greater Restoration
+<br/> ✦ Healing Rain
+<br/> Legend Lore
+<br/> Maelstrom ^XGE^
+<br/> Mass Cure Wounds
+<br/> ✦ Pressure Cutter
+<br/> ✦ Reincarnation
+<br/> Scrying
+<br/> ✦ Sky Burst
+
+\columnbreak
+
+<br/><div style='margin-top:20px;'></div>
+
+<br/> Steel Wind Strike ^XGE^
+<br/> ✦ Thundercrack
+<br/> ✦ Tornado
+<br/> Wall of Stone
+
+##### 6th Level
+Bones of the Earth ^XGE^
+<br/> Chain Lightning
+<br/> Flesh to Stone
+<br/> ✦ Form of Fire
+<br/> ✦ Form of Ice
+<br/> ✦ Form of Stone
+<br/> ✦ Form of Water
+<br/> ✦ Form of Wind
+<br/> Investiture of Flame ^XGE^
+<br/> Investiture of Ice ^XGE^
+<br/> Investiture of Stone ^XGE^
+<br/> Investiture of Wind ^XGE^
+<br/> Move Earth
+<br/> Primordial Ward ^XGE^
+<br/> Wind Walk
+
+##### 7th Level
+Etherealness
+<br/> Fire Storm
+<br/> Regenerate
+<br/> Whirlwind ^XGE^
+
+##### 8th Level
+✦ Cataclysm
+<br/> Control Weather
+<br/> Earthquake
+<br/> Tsunami
+
+##### 9th Level
+Foresight
+<br/> ✦ Form of the Elements
+<br/> Imprisonment
+<br/> Mass Heal
+<br/> Storm of Vengeance
+<br/> True Resurrection
+
+\columnbreak
+
+<br/>
+
+</div>
+
+<div class='footnote'>PART 2 | SPELLS </div>
+
+\pagebreakNum
+
+<div style='column-count:2'>
+
+### Warlock Spells
+##### Cantrips (0 Level)
+Acid Splash
+<br/> Blade Ward
+<br/> Chill Touch
+<br/> Create Bonfire ^XGE^
+<br/> ✦ Decompose
+<br/> ✦ Diabolism
+<br/> ✦ Fel Flame
+<br/> Friends
+<br/> Fire Bolt
+<br/> Green-Flame Blade ^TCE^
+<br/> Mage Hand
+<br/> Produce Flame
+<br/> Sapping Sting ^EGW^
+<br/> ✦ Shadow Bolt
+<br/> ✦ Shadow Glide
+<br/> Toll the Dead ^XGE^
+<br/> ✦ Touch of Chaos
+
+##### 1st Level
+Alarm
+<br/> Arms of Hadar
+<br/> Bane
+<br/> Cause Fear ^XGE^
+<br/> Chromatic Orb
+<br/> Comprehend Languages
+<br/> ✦ Demon Skin
+<br/> Detect Magic
+<br/> ✦ Drain Life
+<br/> Expeditious Retreat
+<br/> False Life
+<br/> Find Familiar
+<br/> Hellish Rebuke
+<br/> Hex
+<br/> Identify
+<br/> Illusory Script
+<br/> Jump
+<br/> Ray of Sickness
+<br/> Shield
+<br/> Sleep
+<br/> Tasha's Caustic Brew ^TCE^
+<br/> Tasha's Hideous Laughter
+<br/> Unseen Servant
+<br/> Witch Bolt
+
+##### 2nd Level
+Aganazzar's Scorcher ^XGE^
+<br/> Alter Self
+<br/> Arcane Lock
+<br/> Cloud of Daggers
+<br/> Continual Flame
+<br/> ✦ Create Healthstone
+<br/> Crown of Madness
+<br/> Darkness
+<br/> Darkvision
+<br/> Dragon's Breath
+<br/> Enthrall
+<br/> Find Steed
+<br/> Flame Blade
+<br/> Heat Metal
+<br/> Hold Person
+<br/> Invisibility
+<br/> Knock
+<br/> Levitate
+
+\columnbreak
+
+<br/><div style='margin-top:20px;'></div>
+
+<br/> Locate Object
+<br/> Melf's Acid Arrow 
+<br/> Mind Spike ^XGE^
+<br/> Misty Step
+<br/> Phantasmal Force
+<br/> Pyrotechnics ^XGE^
+<br/> Ray of Enfeeblement
+<br/> Scorching Ray
+<br/> Shadow Blade ^XGE^
+<br/> Spider Climb
+<br/> Suggestion
+<br/> Tasha's Mind Whip ^TCE^
+<br/> Web
+
+##### 3rd Level
+Bestow Curse
+<br/> Clairvoyance
+<br/> ✦ Create Effigy
+<br/> Counterspell
+<br/> Dispel Magic
+<br/> Elemental Weapon
+<br/> ✦ Erode
+<br/> Enemies Abound ^XGE^
+<br/> Fear
+<br/> Fly
+<br/> Gaseous Form
+<br/> Haste
+<br/> ✦ Hellfire
+<br/> Hunger of Hadar
+<br/> Hypnotic Pattern
+<br/> Life Transference ^XGE^
+<br/> Major Image
+<br/> Melf's Minute Meteors
+<br/> Phantom Steed
+<br/> Protection From Energy
+<br/> Remove Curse
+<br/> Sending
+<br/> Speak With Dead
+<br/> Summon Lesser <br/>&nbsp;&nbsp;Demons ^XGE^
+<br/> Summon Shadow-<br/>&nbsp;&nbsp;spawn ^TCE^
+<br/> Summon Undead ^TCE^
+<br/> Tiny Servant ^XGE^
+<br/> Tongues
+<br/> Vampiric Touch
+<br/> Water Breathing
+<br/> Water Walk
+
+##### 4th Level
+Arcane Eye
+<br/> Banishment
+<br/> Blight
+<br/> Charm Monster ^XGE^
+<br/> Compulsion
+<br/> Death Ward
+<br/> Evard's Black Tentacles
+<br/> Find Greater Steed ^XGE^
+<br/> ✦ Fire and Brimstone
+<br/> Greater Invisibility
+<br/> Hallucinatory Terrain
+<br/> Leomund's Secret Chest
+<br/> Locate Creature
+
+\columnbreak
+
+<br/><div style='margin-top:20px;'></div>
+
+<br/> Mordenkainen's Faithful <br/>&nbsp;&nbsp; Hound
+<br/> Otiluke's Resilient Sphere
+<br/> Phantasmal Killer
+<br/> Shadow of Moil ^XGE^
+<br/> Sickening Radiance ^XGE^
+<br/> Summon Aberration ^TCE^
+<br/> Summon Greater <br/>&nbsp;&nbsp;Demon ^XGE^
+<br/> Vitriolic Sphere ^XGE^
+
+##### 5th Level
+✦ Acid Rain
+<br/> Antilife Shell
+<br/> ✦ Create Soulstone
+<br/> Danse Macabre ^XGE^
+<br/> Dispel Evil and Good
+<br/> Dominate Person
+<br/> Enervation ^XGE^
+<br/> Far Step ^XGE^
+<br/> Geas
+<br/> Hold Monster
+<br/> Immolation ^XGE^
+<br/> Insect Plague
+<br/> Modify Memory
+<br/> Negative Energy Flood ^XGE^
+<br/> ✦ Rain of Fire
+<br/> Rary's Telepathic Bond
+<br/> ✦ Ritual of Summoning
+<br/> Scrying
+<br/> Synaptic Static ^XGE^
+<br/> Teleportation Circle
+<br/> Wall of Force
+
+##### 6th Level
+Arcane Gate
+<br/> Circle of Death
+<br/> Contingency
+<br/> ✦ Create Soulwell
+<br/> Create Undead
+<br/> Disintegrate
+<br/> Drawmij's Instant &nbsp;&nbsp;Summons
+<br/> Eyebite
+<br/> Globe of Invulnerability
+<br/> Harm
+<br/> Investiture of Flame ^XGE^
+<br/> Magic Jar
+<br/> Mass Suggestion
+<br/> Mental Prison ^XGE^
+<br/> Otto's Irresistible Dance
+<br/> Planar Ally
+<br/> Scatter ^XGE^
+<br/> ✦ Shadowfury
+<br/> Soul Cage ^XGE^
+<br/> Summon Fiend ^TCE^
+<br/> Tasha's Otherworldy <br/> &nbsp;&nbsp; Guise ^TCE^
+<br/> True Seeing
+<br/> Word of Recall
+
+\columnbreak
+
+<br/><div style='margin-top:20px;'></div>
+
+##### 7th Level
+Delayed Blast Fireball
+<br/> Etherealness
+<br/> Finger of Death
+<br/> Fire Storm
+<br/> Forcecage
+<br/> ✦ Inferno
+<br/> Mordenkainen's Sword
+<br/> Sequester
+<br/> Teleport
+
+##### 8th Level
+Abi-Dalzim's Horrid <br/>&nbsp;&nbsp;Wilting ^XGE^
+<br/> Antimagic Field
+<br/> ✦ Cataclysm
+<br/> Clone
+<br/> Demiplane
+<br/> Dominate Monster
+<br/> Feeblemind
+<br/> Glibness
+<br/> Maddening Darkness ^XGE^
+<br/> Reality Break ^EGW^
+<br/> Telepathy
+
+##### 9th Level
+Blade of Disaster ^TCE^
+<br/> Gate
+<br/> Imprisonment
+<br/> Meteor Swarm
+<br/> Psychic Scream ^XGE^
+<br/> Ravenous Void ^EGW^
+<br/> Weird
+
+</div>
+
+<div class='footnote'>PART 2 | MAGIC</div>
+
+\pagebreakNum
+
+<!-- > ##### Variant Rule: On a Pale Horse
+> GMs might consider making the creatures summoned by a death knight with *find steed* and *find greater steed* undead, rather than one of the creature types listed in those spells.
+
+> ##### Variant Rule: Xorothian Steed
+> GMs might prefer making the creatures summoned by a warlock with the *find steed* and *find greater steed* fiends instead of the other creature types listed in those spells. Additionally, the *find greater steed* spell can summon a felsteed in addition to the other creatures listed. -->
+
+## New Spells By Level
+
+<div style='column-count:2'>
+
+##### Cantrips (0 Level)
+Arcane Blast
+<br/> Arcane Bolt
+<br/> Decompose
+<br/> Diabolism
+<br/> Fel Flame
+<br/> Invoke Elements
+<br/> Lightning Blast
+<br/> Lightning Tendril
+<br/> Lunar Strike
+<br/> Mind Blast
+<br/> Shadow Bolt
+<br/> Shadow Glide
+<br/> Solar Wrath
+<br/> Spirit Strike
+<br/> Touch of Chaos
+<br/> Windborne Weapon
+
+##### 1st Level
+Angelic Feather
+<br/> Animate Crawling Claw
+<br/> Arctic Breath
+<br/> Avenger's Smite
+<br/> Bad Blood
+<br/> Chains of Ice
+<br/> Corpse Explosion
+<br/> Crashing Wave
+<br/> Crippling Agony
+<br/> Dark Void
+<br/> Death Grip
+<br/> Demon Skin
+<br/> Drain Life
+<br/> Dread Favor
+<br/> Electric Smite
+<br/> Elemental Shock
+<br/> Entomb
+<br/> Frostfire Bolt
+<br/> Gale Bolt
+<br/> Icy Touch
+<br/> Lightning Shield
+<br/> Mind Vision
+<br/> Nauseating Poison
+<br/> Rain of Frogs
+<br/> Repentance
+<br/> Starfire
+<br/> Thunder Punch
+<br/> Water Blast
+
+\columnbreak
+
+##### 2nd Level
+Anti-Magic Shell
+<br/> Arcane Orb
+<br/> Become Fire
+<br/> Become Stone
+<br/> Become Water
+<br/> Become Wind
+<br/> Blood Boil
+<br/> Cold Snap
+<br/> Crackle
+<br/> Create Healthstone
+<br/> Cyclone
+<br/> Dancing Wave
+<br/> Earth Ripple
+<br/> Freezing Touch
+<br/> Living Bomb
+<br/> Ghastly Stench
+<br/> Guardian of the King
+<br/> Holy Prism
+<br/> Howling Blast
+<br/> Hurricane Slash
+<br/> Icebound Fortitude
+<br/> Lava Burst
+<br/> Mind Flay
+<br/> Poison Dart
+<br/> Righteous Smite
+<br/> Shackle Undead
+<br/> Shining Force
+<br/> Stardust
+<br/> Sunfire/Moonfire
+<br/> Vicious Vapors
+
+##### 3rd Level
+Arcane Explosion
+<br/> Arcane Lance
+<br/> Asphyxiate
+<br/> Aura of Faith
+<br/> Beacon of Light
+<br/> Blinding Light
+<br/> Blizzard
+<br/> Chain Heal
+<br/> Create Effigy
+<br/> Divine Star
+<br/> Earthen Spike
+<br/> Electrocute
+<br/> Erode
+<br/> Flash Freeze
+<br/> Hellfire
+<br/> Holy Wrath
+<br/> Mantle of the Fallen 
+<br/> &nbsp; Crusader
+<br/> Rain of Spiders
+<br/> Spellsteal
+<br/> Spider Bite
+<br/> Starsurge
+<br/> Thunder Pulse
+<br/> Vortex Blast
+<br/> Water Cannon
+
+\columnbreak
+
+<br/><div style='margin-top:30px;'></div>
+
+##### 4th Level
+Aero Barrage
+<br/> Amplify/Dampen Magic
+<br/> Arcane Barrage
+<br/> Conjure Undead
+<br/> Control Undead
+<br/> Consumptive Field
+<br/> Death and Decay
+<br/> Divine Shield
+<br/> Echoing Lance
+<br/> Fire and Brimstone
+<br/> Force Blade
+<br/> Geyser
+<br/> Ice Block
+<br/> Ice Spike
+<br/> Jumping Jolt
+<br/> Orbital Stones
+<br/> Poison Puff
+<br/> Stinging Swarm
+<br/> Suffocate
+<br/> Ursol's Vortex
+<br/> Void Shift
+
+##### 5th Level
+Acid Rain
+<br/> Arcane Storm
+<br/> Army of the Dead
+<br/> Bloodlust
+<br/> Conjure Servant
+<br/> Create Soulstone
+<br/> Death Chain
+<br/> Fissure
+<br/> Healing Rain
+<br/> Light of the Protector
+<br/> Pressure Cutter
+<br/> Rain of Fire
+<br/> Reincarnation
+<br/> Ritual of Summoning
+<br/> Shackle Undead
+<br/> Shadow Crash
+<br/> Shining Force
+<br/> Sky Burst
+<br/> Thundercrack
+<br/> Tornado
+<br/> Unholy Weapon
+
+<br/><div style='margin-top:30px;'></div>
+
+##### 6th Level
+Create Mana Gem
+<br/> Create Soulwell
+<br/> Eclipse
+<br/> Form of Fire
+<br/> Form of Ice
+<br/> Form of Stone
+<br/> Form of Water
+<br/> Form of Wind
+<br/> Shadowfury
+<br/> Starfall
+
+##### 7th Level
+Comet Storm
+<br/> Glacial Spike
+<br/> Inferno
+<br/> Pyroblast
+
+##### 8th Level
+Alexstraza's Fury
+<br/> Cataclysm
+<br/> Ice Nova
+
+##### 9th Level
+Form of the Elements
+<br/> Jaina's Flying Ship
+
+</div>
+
+<!--
+<img src='https://www.gmbinder.com/images/72nPPab.jpg' style='position:absolute; top:0px; right:-250px; height:100%' />
+<img src='https://www.gmbinder.com/images/9wnUwNO.png' style='position:absolute; top:0px; left:-300px; height:100%; transform:scaleX(-1)' /> 
+-->
+
+<div class='footnote'>PART 2 | MAGIC</div>
+
+\pagebreakNum
+
+## Spell Descriptions
+The new spells are presented in alphabetical order.
+
+#### Acid Rain
+*5th-level conjuration*
+___
+- **Casting Time:** 1 action
+- **Range:** 300 feet
+- **Components:** V, S
+- **Duration:**  Concentration, up to 1 minute
+___
+Acid rain begins falling within a 40-foot-radius 60-foot-high cylinder centered on a point you choose within range. When a creature moves into the spell's area for the first time on a turn or starts its turn there, the creature must succeed on a Dexterity saving throw or take 6d4 acid damage and become covered in acid. On a successful save, a creature takes half the initial damage and is not covered in acid.
+
+A creature takes 3d4 acid damage if it ends its turn while covered with acid. The target or a creature within 5 feet of it can end this damage by using its action to clear away the acid.
+
+#### Aero Barrage
+*4th-level transmutation*
+___
+- **Casting Time:** 1 Action
+- **Range:** 120 feet
+- **Components:** V, S
+- **Duration:**  Instantaneous
+___
+You create four lances of rapidly spinning condensed wind and hurl them at targets within range. You can hurl them at one target or several. 
+
+Make a ranged spell attack for each lance. On a hit, the target takes 2d8 slashing damage and is knocked 10 feet backwards.
+
+***At Higher Levels.*** When you cast this spell using a spell slot of 5th level or higher, you create one additional lance for each slot level above 4th.
+
+#### Alextrasza’s Fury
+*8th-level evocation*
+___
+- **Casting Time:** 1 action
+- **Range:** Self (60-foot cone)
+- **Components:** V, S
+- **Duration:** Instantaneous
+___
+Your hands burst into flames as you push a roaring wave of fire outward from yourself. Each creature in a 60-foot cone must make a Constitution saving throw. On a failed save, a target takes 12d6 fire damage and is stunned until the end of their next turn. On a successful save, a target takes half as much damage and isn't stunned. The fire spreads around corners. It ignites flammable objects in the area that aren’t being worn or carried. A creature killed by this spell is reduced to ash.
+
+\columnbreak
+
+#### Amplify/Dampen Magic
+*4th-level abjuration*
+___
+- **Casting Time:** 1 action
+- **Range:** Touch
+- **Components:** S, M (something of value to the creature)
+- **Duration:** Concentration, up to 1 minute
+___
+You manipulate the flow of mana rushing through a creature, if the creature is unwilling you must succeed on a melee spell attack before you can manipulate their flow. When you touch a creature with this spell, you choose which effect you want to affect the creature with for the spells duration.
+
+***Amplify.*** You amplify a creatures magical prowess. The creature takes additional damage when hit by a spell, deals additional damage when casting a spell, and restores additional hit points to a creature with a spell by an amount equal to your spellcasting modifier.
+
+***Dampen.*** You dampen a creatures magical prowess. The creature reduces damage taken by spells, damage dealt by spells, and the number of hit points restored to it by a spell by an amount equal to your spellcasting modifier.
+
+#### Angelic Feather
+*1st-level enchantment*
+___
+- **Casting Time:** 1 action
+- **Range:** Touch
+- **Components:** V, S, M (a feather)
+- **Duration:** Concentration, up to 1 minute
+___
+You touch one creature within reach, granting it the swiftness of an angelic being. For the duration of the spell, the creature can take the Dash, Disengage, or Dodge action as a bonus action on its turn.
+
+#### Animate Crawling Claw
+*1st-level necromancy (ritual)*
+___
+- **Casting Time:** 1 minute
+- **Range:** 10 feet
+- **Components:** V, S, M (a used butcher's knife and a humanoid's hand, severed in the last 7 days)
+- **Duration:** Instantaneous
+___
+You bind a severed hand to your will, haunting and animating it as a crawling claw (the GM has the creature's game statistics). The hand is under your control for 24 hours, after which the hand becomes inactive and can't be animated again. 
+
+On each of your turns, you can use a bonus action to mentally command the crawling claw. You decide what action the creature will take and where it will move during its next turn, or you can issue a general command for it to follow to the best of its understanding. If you issue no commands, the claw follows its last command to the best of its ability. Once given an order, the claw continues to follow it until its task is complete.
+
+***At Higher Levels.*** When you cast this spell using a spell slot of 2nd level or higher, the crawling claw remains active for an additional 24 hours for every slot level above 1st. When cast using a spell slot of 5th level or higher, the crawling claw remains active until slain.
+
+<img src='https://www.gmbinder.com/images/FpArRam.png' style='position:absolute; bottom:-10px; right:-90px; transform:rotate(18deg)' />
+
+<div class='footnote'>PART 2 | SPELLS </div>
+
+\pagebreakNum
+
+#### Arcane Barrage
+*4th-level evocation*
+___
+- **Casting Time:** 1 action
+- **Range:** 120 feet
+- **Components:** V, S
+- **Duration:** Instantaneous
+___
+You manifest twin bolts of raw force that streak in a double helix pattern towards a target you can see within range, causing the target to take 10d4 force damage. The target must then make a Strength save or be pushed up to 20 feet directly away from you.
+
+***At Higher Levels.*** When you cast this spell using a <br/> spell slot of 5th level or higher, the damage increases by 2d4 for each slot level above 4th.
+
+#### Arcane Blast
+*Evocation cantrip*
+___
+- **Casting Time:** 1 action
+- **Range:** 60 feet
+- **Components:** V, S
+- **Duration:** Instantaneous
+___
+You extend your hand and create a burst of arcane energy on a target within range, dealing force damage equal to 1d4 + your spellcasting ability modifier. 
+
+A creature forced to make a Constitution saving throw to maintain concentration because of this spell makes the saving throw with disadvantage.
+
+This spell’s damage increases by 2d4 when you reach 5th level (3d4), 11th level (5d4), and 17th level (7d4).
+
+#### Arcane Bolt
+*Evocation cantrip*
+___
+- **Casting Time:** 1 action
+- **Range:** 120 ft.
+- **Components:** V, S
+- **Duration:**  Instantaneous
+___
+
+You hurl a mote of arcane energy at a creature or object within range. Make a ranged spell attack against the target. On a hit, the target takes 2d4 force damage.
+
+This spell's damage increases by 2d4 when you reach 5th level (4d4), 11th level (6d4), and 17th level (8d4).
+
+#### Arcane Explosion
+*3rd-level evocation*
+___
+- **Casting Time:** 1 action
+- **Range:** Self (10-foot-radius sphere)
+- **Components:** V, S
+- **Duration:** Instantaneous
+___
+You draw from the fluctuating arcane near you and burst with a wave of arcane power. Each other creature within range must make a Dexterity saving throw. On a failed save, a target takes 6d8 force damage and can't take reactions until the start of its next turn. On a successful save, a target takes half as much damage and can use its reactions as normal.
+
+***At Higher Levels.*** When you cast this spell using a spell slot of 4th level or higher, the damage increases by 1d8 for each slot level above 3rd.
+
+\columnbreak
+
+#### Arcane Lance
+*3rd-level evocation*
+___
+- **Casting Time:** 1 Action
+- **Range:** Self (30-foot line)
+- **Components:** V, S
+- **Duration:** Instantaneous
+___
+You gather raw arcane energy in your hand and expel it in a lance of power forming a line 30 foot long and 5 foot wide. Each creature in a line takes 8d4 force damage.
+
+***At Higher Levels.*** When you cast this spell using a spell slot of 4th level or higher, the damage increases by 1d4 for each slot level above 3rd.
+
+#### Arcane Orb
+*2nd-level evocation*
+___
+- **Casting Time:** 1 action
+- **Range:** 5 feet
+- **Components:** V, S
+- **Duration:** Concentration, up to 1 minute
+___
+You create a Tiny orb of pure arcane energy that hovers within range, and designate a target creature within 120 feet. 
+
+For the duration of the spell, at the end of each of your turns, the orb grows larger and moves 30 feet directly toward the creature. If the orb reaches the target, it will detonate dealing 6d4 force damage and an additional 1d4 damage for each round since you cast the spell to the target. 
+
+The spell ends after it deals damage. If the orb does not reach the target before the spell ends, it fades away without dealing damage.
+
+#### Arcane Storm
+*5th-level evocation*
+___
+- **Casting Time:** 1 Action
+- **Range:** 120 feet
+- **Components:** V, S
+- **Duration:** Concentration, up to 1 minute
+___
+You conjure a storm of arcane energy erupting from a point of your choice within range. The arcane storm fills a 10-foot radius, 40-foot-high cylinder. When the storm appears, each creature within its area takes 8d4 force damage.
+
+A creature takes 1d4 force damage for each 5 feet they move through the storm, and if a creature ends their turn within the aether storm, they take 8d4 force damage. On your turn, you can move the storm 10 feet in any direction as a bonus action.
+
+***At Higher Levels.*** When you cast this spell using a spell slot of 6th level or higher, the damage increases by 1d4 for each slot level above 5th.
+
+#### Arctic Breath
+*1st-level conjuration*
+___
+- **Casting Time:** 1 action
+- **Range:** Self (30 foot line)
+- **Components:** V, S
+- **Duration:**  Instantaneous
+___
+A line of freezing arctic wind 30 feet long and 5 feet wide blasts out from you in a direction you choose. Each creature in the line must make a Dexterity saving throw. On a failed save, a creature takes 2d8 cold damage and their movement speed is reduced by 10 feet until the end of their next turn. On a successful save, a creature takes half as much damage and isn't slowed.
+
+<div class='footnote'>PART 2 | SPELLS </div>
+
+\pagebreakNum
+
+***At Higher Levels.*** When you cast this spell using a spell slot of 2nd level or higher, the damage increases by 1d8 for each slot level above 1st.
+
+#### Army of the Dead
+*5th-level necromancy*
+___
+- **Casting Time:** 1 action
+- **Range:** Self
+- **Components:** V, S, M (brain matter from a humanoid killed within the past 24 hours)
+- **Duration:** Concentration, up to 1 minute
+___
+You utter profane words, and summon an army of the dead to kill and consume everything in its path. It appears centered around your space, and uses the Army of the Dead stat block. The swarm of undead disappears when it drops to 0 hit points or when the spell ends.
+
+The army is an ally to you and your companions. In combat, the creature shares your initiative count, but it takes its turn immediately after yours. It obeys your verbal commands (no action required by you). If you don't issue any, it uses its action to move and attack the closest hostile creature.
+
+If you stop concentrating on the spell before it reaches its full duration, the army remains for 1d6 rounds, but you lose control of it. It spends its turns pursuing and attacking the nearest creatures to the best of its ability. 
+
+#### Asphyxiate
+*3rd-level necromancy*
+___
+- **Casting Time:** 1 action
+- **Range:** 30 feet
+- **Components:** S
+- **Duration:** Concentration, up to 1 minute
+___
+Shadowy tendrils extend from you and swirl around the throat of a creature you can see within range. The target must make a successful Constitution saving throw or be restrained and incapacitated for the spells duration. While restrained in this way, the target is unable to speak. At the end of each of its turns, the target can make another Constitution saving throw. On a success, the spell ends on the target.
+
+#### Aura of Faith
+*3rd-level abjuration*
+___
+- **Casting Time:** 1 action
+- **Range:** Self (30-foot radius)
+- **Components:** V, S, M (a small parchment with a bit of holy text written on it)
+- **Duration:** Concentration, up to 10 minutes
+___
+Protective energy emanates from you in a 30-foot radius. Until the spell ends, the aura moves with you, centered on you. Each non hostile creature in the aura (including you) gains a +2 bonus to AC. A creature cannot simultaneously benefit from both this spell and *shield of faith*.
+
+\columnbreak
+
+<div style='margin-top:270px;'></div>
+
+___
+> ## Army of the Dead
+> *Huge swarm of Medium undead, neutral evil*
+> ___
+> - **Armor Class** 8
+> - **Hit Points** 100
+> - **Speed** 20 ft.
+> ___
+> |  STR  |  DEX  |  CON  |  INT  |  WIS  |  CHA  |
+> |:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+> |19 (+4)| 6 (-2)|16 (+3)| 3 (-4)| 6 (-2)| 5 (-3)|
+> ___
+> - **Damage Immunities** necrotic, poison
+> - **Condition Immunities** blinded, charmed, deafened, exhaustion, frightened, grappled, incapacitated, paralyzed, petrified, poisoned, prone, restrained, stunned, unconscious
+> - **Senses** darkvision 60 ft., passive perception 8
+> - **Languages** understands the languages you speak
+> - **Challenge** — Proficiency Bonus equals your bonus
+> ___
+> **Swarm.** The army can occupy another creature's space and vice versa, and the army can move through any opening large enough for a Medium zombie. The army can't regain hit points or gain temporary hit points. 
+> 
+> **Overwhelming.** Whenever a hostile creature ends its turn occupying the army's space, the army can make an immediate Slams attack against it. 
+> 
+> **Undead Fortitude.** If the army takes damage, it must make a Constitution saving throw with a DC of 5 + the damage taken, unless the damage is radiant or from a critical hit. On a success, the army takes no damage instead.
+>
+> ### Actions
+> ***Multiattack.*** The army can make up to three Slams attacks, and each attack must be against a different target.
+> 
+> ***Slams.*** *Melee Weapon Attack:* your spell attack modifier to hit, reach 5 ft., one target. *Hit:* 4d6 + 4 bludgeoning damage, or 2d6 + 2 bludgeoning damage if the army has half of its hit points or fewer. If the target is Large or smaller, it is also grappled (escape DC equals your spell save DC).
+
+<img src='https://www.gmbinder.com/images/o4OIXbK.jpg' style='position:absolute; top:0px; right:-30px; width:450px; height:534px' />
+<img src='https://www.gmbinder.com/images/huxbNse.png' style='position:absolute; top:0px; right:0px; height:100%' />
+
+<div class='footnote'>PART 2 | SPELLS </div>
+
+\pagebreakNum
+
+#### Avenger’s Smite
+*1st-level evocation*
+___
+- **Casting Time:** 1 action
+- **Range:** Special
+- **Components:** V, S, M (a melee weapon or shield)
+- **Duration:** Instantaneous
+___
+Your weapon or shield becomes wreathed in energy as you throw it, allowing it to curve and rebound off of objects to strike at distant enemies. 
+
+Make a ranged spell attack against a target that you can see within 30 feet, ignoring half-cover. On a hit, the target takes 1d8 bludgeoning damage and 1d6 radiant damage. Your weapon or shield returns to your hand when the spell ends.
+
+***At Higher Levels.*** When you cast this spell using a spell slot of 2nd level or higher, your thrown weapon or shield can rebound after an attack, allowing you to make one additional consecutive attack for each slot level above 1st. Each consecutive attack must be against a target within 30 feet of the previous target, though you can attack the same creature or object multiple times.
+
+#### Bad Blood
+*1st-level necromancy*
+___
+- **Casting Time:** 1 action
+- **Range:** 60 feet
+- **Components:** V, S, M (a piece of rotten meat)
+- **Duration:** Concentration, up to 1 minute
+___
+Targeting a creature you can see within range, you attempt to corrupt its blood. Creatures without blood are immune to this effect. The target must make a Constitution saving throw. On failure, they take 1d12 poison damage and become poisoned for the duration.
+
+At the end of each of its turns, the target can make another Constitution saving throw. On a success, the spell ends on the target, on failure; they take an additional 1d4 poison as the poison continues to ravage them.
+
+***At Higher Levels.*** When you cast this spell using a spell slot of 2nd level or higher, you can target one additional target for each slot level above 2nd. The targets must be within 30 feet of each other when you target them.
+
+#### Beacon of Light
+*3rd-level evocation*
+___
+- **Casting Time:** 1 bonus action
+- **Range:** 60 feet
+- **Components:** V, S
+- **Duration:** Concentration, up to 10 minutes
+___
+You extend your hand a place a holy mark on a creature within range. Whenever you restore hit points to a target with a spell slot, the marked creature regains a number of hit points equal to your spellcasting modifier. The spell ends if the creature is ever outside the spell's range.
+
+\columnbreak
+
+#### Become Fire
+*2nd-level transmutation*
+___
+- **Casting Time:** 1 bonus action
+- **Range:** Self
+- **Components:** V, S
+- **Duration:**  1 round
+___
+You become a burst of elemental flames. Until the start of your next turn, you gain the following benefits:
+
+* You are resistant to fire damage and to bludgeoning, piercing, and slashing damage from nonmagical attacks.
+* You can move through the space of other creatures and ignore difficult terrain. The first time you enter the space of another creature on a turn, it takes 1d6 fire damage.
+* Once during your turn when you roll fire damage, you can maximize the value of one die of fire damage.
+
+#### Become Stone
+*2nd-level transmutation*
+___
+- **Casting Time:** 1 bonus action
+- **Range:** Self
+- **Components:** V, S
+- **Duration:**  1 round
+___
+You solidify into a stone. Until the start of your next turn, you gain the following benefits: 
+* You are petrified. 
+* Your AC becomes 20 and you gain 10 temporary hit points. Any remaining temporary hit points fade when the spell ends.
+
+#### Become Water
+*2nd-level transmutation*
+___
+- **Casting Time:** 1 bonus action
+- **Range:** Self
+- **Components:** V, S
+- **Duration:**  1 round
+___
+You become a burst of elemental water. Until the start of your next turn, you gain the following benefits:
+* You are resistant to bludgeoning, piercing, and slashing damage from nonmagical attacks.
+* You can move through the space of other creatures and ignore difficult terrain; the first time you move through a Large or smaller creature on a turn, it must pass a Strength saving throw or be knocked prone.
+
+#### Become Wind
+*2nd-level transmutation*
+___
+- **Casting Time:** 1 bonus action
+- **Range:** Self
+- **Components:** V, S
+- **Duration:**  1 round
+___
+You become a burst of elemental wind. Until the start of the next turn, you gain the following benefits: 
+* You gain resistance to lightning damage and bludgeoning, piercing, and slashing damage from nonmagical attacks. 
+* You gain a flying speed of 30 feet, can move through the space of other creatures, and can ignore difficult terrain, but will fall at the start of your next turn if not held aloft.
+
+<div class='footnote'>PART 2 | SPELLS </div>
+
+\pagebreakNum
+
+#### Blinding Light
+*3rd-level evocation*
+___
+- **Casting Time:** 1 action
+- **Range:** Self (30-foot-radius)
+- **Components:** V, S
+- **Duration:** Instantaneous
+___
+You cause dazzling light to burst forth around you. Each creature within a 30-foot-radius of you must succeed on a Constitution saving throw, or be blinded for 1 minute or until it takes damage. 
+
+A creature blinded by this spell can make another Constitution saving throw at the end of each of its turns. On a successful save, it is no longer blinded.
+
+#### Blizzard
+*3rd-level evocation*
+___
+- **Casting Time:** 1 action
+- **Range:** 120 feet
+- **Components:** V, S, M (shards of glass)
+- **Duration:** Concentration, up to 1 minute
+___
+A cold light flashes from your hand into the sky as blue shards hurl down in a 20-foot-radius, 40-foot-high cylinder centered on a point within range. Until the spell ends, shards of freezing ice rain down upon the area. 
+When a creature enters the spell's area for the first time on a turn or starts its turn there, it must make a Dexterity saving throw. A target takes 3d6 cold damage on a failed save, or half as much damage on a successful one.
+
+***At Higher Levels.*** When you cast this spell using a spell slot of 4th level or higher, the damage increases by 1d6 for each slot level above 3rd.
+
+#### Blood Boil
+*2nd-level necromancy*
+___
+- **Casting Time:** 1 bonus action
+- **Range:** Self (15-foot radius)
+- **Components:** V, S
+- **Duration:** Instantaneous
+___
+You reach out with unholy power, causing the blood in the veins of nearby creatures to boil. Each creature you choose within 15 feet of you must succeed on a Constitution saving throw or take 2d4 fire damage plus 2d4 necrotic damage. <br/> A creature that succeeds on its saving throw takes half as much damage. Creatures that have no blood or vital fluids are immune to the effects of this spell.
+
+***At Higher Levels.*** When you cast this spell using a spell slot of 3rd level or higher, the fire and necrotic damage each increase by 1d4 for each slot level above 2nd.
+
+#### Bloodlust
+*5th-level enchantment*
+___
+- **Casting Time:** 1 action
+- **Range:** self (30-feet radius)
+- **Components:** V, S
+- **Duration:**  Concentration, up to 1 minute
+___
+You imbue creatures of your choice within range with the will and determination to fight harder. Each target gains the following benefits for the duration of the spell.
+
+- The target is immune to being frightened and any frightened condition on the target is surpressed for the spell's duration.
+- Whenever the target makes an attack roll or a saving throw before the spell ends, the target can roll a d4 and add the number rolled to the attack roll or saving throw.
+- The target gains temporary hit points equal to your spellcasting ability modifier at the start of each of its turns. When the spell ends, the target loses any remaining temporary hit points from this spell.
+
+#### Cataclysm
+*8th-level conjuration*
+___
+- **Casting Time:** 1 action
+- **Range:** 150 feet
+- **Components:** V, S, M (a piece of charcoal)
+- **Duration:** Instantaneous
+___
+You cause the ground to crack and split, with molten magma and fire spitting up out in a 60-foot radius centered on a point within range. Each creature in the area must make a Dexterity saving throw or take 10d6 fire damage, taking half damage on a success.
+
+A creature who takes fire damage from this is set aflame, taking an additional 2d6 fire damage at the beginning of each of their turns. They or another adjacent creature can use their action to put out the flames, taking 1d4 fire damage in the process.
+
+The ground in the area of this spell remains damaged, turning into difficult terrain. It remains hot for 1 minute, and any creature who enters the area for the first time on their turn or starts their turn there takes 1d4 fire damage.
+
+#### Chain Heal
+*3rd-level evocation*
+___
+- **Casting Time:** 1 action
+- **Range:** 30 feet (15-feet between targets)
+- **Components:** V, S
+- **Duration:** Instantaneous
+___
+A beam of restorative energies surges through a friendly creatures. Choose a target you can see within range, then choose a target you can see within range of it, and another within range of the second target. You can't choose the same target more than once. Each target chosen by this spell regains a number of hit points equal to 2d4 + your spellcasting ability modifier. This spell has no effect on undead or constructs.
+
+***At Higher Levels.*** When you cast this spell using a spell slot of 4th level or higher, the chain heal surges through one additional target for each slot level above 3rd.
+
+#### Chains of Ice
+*1st-level evocaation*
+___
+- **Casting Time:** 1 action
+- **Range:** 60 feet
+- **Components:** V
+- **Duration:** 1 minute
+___
+Frost ridden chains erupt from the ground beneath a target that you can see within range. The target must succeed on a Strength saving throw, or have their movement speed halved for the spell’s duration.
+
+The chained target must make a Strength saving throw at the end of each of its turns. On a successful save, the chains break and the spell ends on the target.
+
+***At Higher Levels.*** When you cast this spell using a spell slot of 2nd level or higher, you can target one additional creature for each slot level above 2nd.
+
+<div class='footnote'>PART 2 | SPELLS </div>
+
+\pagebreakNum
+
+#### Comet Storm
+*7th-level conjuration*
+___
+- **Casting Time:** 1 action
+- **Range:** 60 feet
+- **Components:** V, S, M (seven hailstones)
+- **Duration:** Instantaneous
+___
+Frozen chunks of ice plummet to the ground at seven different points you can see within range. Each creature within a 5-foot-radius of each point you choose must make a Dexterity saving throw. A creature takes 4d8 bludgeoning damage and 4d8 cold damage on a failed save, or half as much damage on a successful one. Any creature that fails its saving throw is also knocked prone. A creature in the area of more than one frozen burst is affected only once. 
+
+The spell damages objects in the area that aren't being worn or carried, and extinguishes nonmagical flames. 
+
+***At Higher Levels.*** When you cast this spell using a spell slot of 8th level or higher, you summon an additional comet for each slot level above 7th.
+
+#### Cold Snap
+*2nd-level evocation*
+___
+- **Casting Time:** 1 action
+- **Range:** 90 ft (5 ft radius)
+- **Components:** S
+- **Duration:**  Instantaneous
+___
+With a snap of your fingers a swirling burst of freezing wind erupts at a point you choose within range. Each creature in a 5-foot-radius sphere centered on that point must make a Constitution saving throw. On a failed save, a creature takes 3d8 cold damage and becomes stuck in the ice, reducing their movement speed by 10 feet until the start of your next turn. On a success, the target takes half as much damage and is not stuck in ice. 
+
+The ground in the area is covered with slick ice and snow, making it difficult terrain until the start of your next turn.
+
+***At Higher Levels.*** When you cast this spell using a spell slot of 3rd level or higher, the damage increases by 1d8 for each slot level above 2nd.
+
+\columnbreak
+
+#### Conjure Servant
+*5th-level conjuration*
+___
+- Casting Time: 1 minute
+- Range: 90 feet
+- Components: A flawless shard of crystal
+- Duration: Concentration, up to 1 hour
+___
+You coalesce arcane energies into the form of an elemental servant. When you cast this spell, an arcane elemental appears in an unoccupied 10 foot cube within range. The elemental disappears when it drops to 0 hit points or when the spell ends.
+
+The elemental is friendly to you and your companions for the duration. Roll initiative for the elemental, which has its own turns. As long as the elemental is under your control, you maintain a telepathic link to it as long as it is within 90 feet. It obeys any verbal or mental commands that you issue to it (no action required by you). If you don’t issue any commands to the elemental, it defends itself from hostile creatures but otherwise takes no actions. The GM has the elemental’s statistics. 
+
+***At Higher Level:*** If you cast this spell using a spell slot of 7th level or higher, the duration is 8 hours. If you use a spell slot of 8th level or higher, the duration is 24 hours. If you use a 9th level spell slot, the elemental remains and follows your orders until destroyed. Using a spell slot of 7th level or higher grants a duration that doesn't require concentration, though you can only have one servant at a time; summoning an additional servant causes the previous one to disappear.
+
+#### Conjure Undead
+*4th-level conjuration*
+___
+- **Casting Time:** 1 action
+- **Range:** 60 feet
+- **Components:** V, S, M (viscera from a creature killed <br/> within the past 24 hours)
+- **Duration:** Concentration, up to 1 hour
+___
+You summon an undead of challenge rating 5 or lower from the crypts and slaughterhouses of Northrend. It appears in an unoccupied space that you can see within range. The undead creature disappears when it drops to 0 hit points or when the spell ends.
+
+The undead creature is friendly to you and your companions for the duration. Roll initiative for the creature, which has its own turns. It obeys any verbal commands that you issue to it (no action required by you). If you issue no command, it spends its turn attacking any creature within reach that has attacked it.
+
+If your concentration is broken, the undead creature doesn't disappear. Instead, you lose control of the undead creature, the undead spends the rest of the spell’s duration pursuing and attacking the nearest non-undead to the best of its ability. An uncontrolled undead creature can't be dismissed by you, and it disappears 1 hour after you summoned it.
+
+The GM has the undead creature's statistics.
+
+***At Higher Levels.*** When you cast this spell using a spell slot of 5th level or higher, the challenge rating increases by 1 for each slot level above 4th.
+
+<div class='footnote'>PART 2 | SPELLS </div>
+
+\pagebreakNum
+
+#### Consumptive Field
+*4th-level necromancy*
+___
+- **Casting Time:** 1 action
+- **Range:** Self (15-foot radius)
+- **Components:** V
+- **Duration:** Concentration, up to 1 minute
+___
+A consumptive death field radiates from you in an aura with a 15-foot radius. Until the spell ends, the aura moves with you, centered on you. When a hostile creature enters the aura for the first time on a turn or starts its turn there, it must make a Constitution saving throw. On a failed save, the creature takes 2d6 necrotic damage, and you regain hit points equal to half the necrotic damage dealt. Undead are unaffected by this spell.
+
+***At Higher Levels.*** When you cast this spell using a spell slot of 5th level or higher, the damage increases by 1d6 for each slot level above 4th.
+
+#### Control Undead
+*4th-level necromancy*
+___
+- **Casting Time:** 1 action
+- **Range:** 60 feet
+- **Components:** V, S, M (a link of chains carved from obsidian worth 400 gp)
+- **Duration:** Concentration, up to 1 hour
+___
+You attempt to bind an undead creature that you can see within range. It must succeed on a Wisdom saving throw or become bound to serve you for the duration of the spell. While the creature is bound, you have a telepathic link with it as long as the two are you on the same plane of existence, which you can use to mentally issue commands (no action required).
+
+It is under the Dungeon Master's control, but must follow your commands to the best of its ability for as long as it is bound to you. You might command the creature to attack an enemy, guard a location, or fetch an object. If the creature completes the command and doesn't receive further direction from you, it defends and preserves itself to the best of its ability. During combat, the creature rolls its own initiative and has its own turns.
+
+You can use your action to take total and precise control of the target. Until the end of your next turn, the creature takes only the actions you choose, and doesn't do anything that you don't allow it to do. During this time, you can also cause the creature to use a reaction, but this requires you to use your own reaction as well.
+
+Each time the creature takes damage, it makes a new Wisdom saving throw against the spell. If the saving throw succeeds, the spell ends. Once the spell has ended, the creature cannot be controlled again this way for 24 hours.
+
+\columnbreak
+
+#### Corpse Explosion
+*1st-level necromancy*
+___
+- **Casting Time:** 1 action
+- **Range:** 120 feet
+- **Components:** S, M (a corpse, which the spell destroys)
+- **Duration:** Instantaneous
+___
+The corpse of a recently deceased creature rapidly bloats at your command and erupts in a gruesome explosion. You target the corpse of a creature that's been dead for no longer than 1 minute that you can see within range. Each creature within 5 feet of that corpse must make a Dexterity saving throw. A target takes 2d6 necrotic damage on a failed save, or half as much damage on a successful one. The radius of the explosion increases by 5 feet for every size category of the corpse above Medium.
+
+A corpse detonated in this way is destroyed and cannot be raised or resurrected by any ability that requires a com&shy;plete corpse. Not all creatures leave a corpse; constructs and oozes almost never do, neither do incorporeal undead. 
+
+***At Higher Levels.*** When you cast this spell using a spell slot of 2nd level or higher, the damage increases by 2d6 for each slot level above 1st.
+
+#### Crackle
+*2nd-level evocation*
+___
+- **Casting Time:** 1 action
+- **Range:** 60 feet
+- **Components:** V, S
+- **Duration:** Instantaneous
+___
+You create three arcs of lightning striking targets in range. You can direct them at one target or several.
+
+Make a ranged spell attack for each arc. On a hit, the target takes 1d12 lightning damage. If three or more arcs hit a single target, they must make a Constitution saving throw or become shocked, stunning them until the start of their next turn.
+
+***At Higher Levels.*** When you cast this spell using a spell slot of 3rd level or higher, you create one additional arc for each slot level above 2nd.
+
+#### Crashing Wave
+*1st-level conjuration*
+___
+- **Casting Time:** 1 action
+- **Range:** Self (15 foot cone)
+- **Components:** V, S
+- **Duration:**  Instantaneous
+___
+A wave of water sweeps out from you. Each creature in a 15-foot cone must make a Strength saving throw. On a failed save, a creature takes 2d6 bludgeoning damage and is knocked 10 feet away from you. If a creature is knocked into a wall, another creature, or fails by 5 or more, it is additionally knocked prone. 
+
+On a successful save, the creature takes half as much damage and is not knocked back. If there is a source of water of at least 5 cubic feet within 5 feet of you when you cast the spell, you can displace that water, increasing the range of the spell to a 25 foot cone.
+
+***At Higher Levels.*** When you cast this spell using a spell lot of 2nd level or higher, the damage increases by 1d6 for each level above 1st.
+
+<div class='footnote'>PART 2 | SPELLS </div>
+
+\pagebreakNum
+
+#### Create Effigy
+*3rd-level necromancy (ritual)*
+___
+- **Casting Time:** 1 minute
+- **Range:** 5 feet 
+- **Components:** V, S, M (a piece of the target’s body, such as nail clippings, lock of hair, or drop of blood; a doll that resembles a creature of the target’s type; and a ruby worth 100 gp; all of which are consumed by the spell)
+- **Duration:** Instantaneous
+___
+You create an effigy of a creature that is linked to the creature's physical body. The effigy has 6d6 hit points. Any time the effigy takes damage while within 1 mile of the target creature and on the same plane, the creature must make a Constitution saving throw or take damage of the same amount and type as was dealt to the effigy. On a successful saving throw, the target creature takes half damage.
+
+In addition, you or another creature can use an action to damage the effigy in one of the following specific ways:
+* ***Blind.*** You stab the effigy in the eyes, if it has any. The effigy takes 1 damage (not taken by the target creature), and the target creature must succeed on a Constitution saving throw or else be blinded until the start of your next turn.
+* ***Cripple.*** You stab the effigy in one of its limbs, if it has any.  The effigy takes 1 damage (not taken by the target creature), and the target creature must succeed on a Constitution saving throw or else have disadvantage on all attack rolls using that limb, as well as have its movement speed halved if the limb was used for mobility, until the start of your next turn.
+* ***Deafen.*** You stab the effigy in the ears, if it has any. The effigy takes 1 damage (not taken by the target creature), and the target creature must succeed on a Constitution saving throw or else be deafened until the start of your next turn.
+* ***Destroy.*** You physically break or destroy the effigy somehow. The target creature must succeed on a Constitution saving throw or else take necrotic damage equal to the effigy's remaining hit points. On a successful saving throw, the target creature takes half damage. The effigy's hit points then reach 0, and the effect of this spell ends.
+
+Whenever the target creature is forced to make a saving throw to resist the effects of this spell, it momentarily senses the rough distance and direction to the effigy.
+
+If the target is further than 1 mile from the effigy or on another plane of existence from it, they are immune to the effects of this spell, but the link still remains. If the target ever comes within 1 mile of the effigy or returns to the same plane of existence as it, they can once again be subject to the effects of this spell. 
+
+The effect ends if the effigy's hit points reach zero, the destroy action is taken, or if the target creature dies. *Remove curse* or another similar effect of 3rd level or higher cast on either the effigy or the target will also sever the link between the two.
+
+If you cast this spell and attempt to create an effigy of a creature while another effigy of that creature created by you still has hit points, the spell fails.
+
+***At Higher Level.*** When you cast this spell with a spell slot of 4th level or higher, the effigy gains an additional 2d6 hit points per spell slot level above 3rd
+
+\columnbreak
+
+#### Create Healthstone
+*2nd level conjuration*
+___
+- **Casting Time:** 1 action
+- **Range:** Touch
+- **Components:** V, S
+- **Duration:** Instantaneous
+___
+You create a fist-sized glowing green stone in your hand. A creature can use its action to crush the stone, destroying it and regaining hit points equal to 1d10 + your spellcasting modifier. The stone loses its abilities if not used within 24 hours.
+
+**At Higher Levels:** When you cast this spell using a spell slot of 3rd level or higher, the healing increases by 1d10 for each slot level above 2nd.
+
+#### Create Mana Gem
+*6th-level conjuration*
+___
+- **Casting Time:** 8 hours
+- **Range:** Self
+- **Components:** V, S, M (a sapphire worth 1,000 gp, consumed by the spell)
+- **Duration:** Until dispelled
+___
+You condense your mana into a prepared gemstone, creating a reservoir of power to draw upon.
+
+When you cast a spell of 5th level or below while holding this mana gem, you can choose not to expend the spell slot, instead drawing upon the mana contained within the gem to power the spell. 
+
+The mana gem holds enough mana to power 40 spell levels worth of spells at creation. Each time you cast a spell using the mana gem, it loses a number of spell levels equal to the level of the spell cast. If the gem has less spell levels remaining than the level of the spell you are attempting to cast, the spell fails. You automatically know how many spell levels the mana gem has remaining when you touch it.
+
+Only you can benefit from a mana gem you have created. If you cast this spell again, any currently created mana gem is instantly destroyed.
+
+#### Create Soulstone
+*5th level conjuration (ritual)*
+___
+- **Casting Time:** 10 minutes
+- **Range:** Self (30 feet)
+- **Components:** V, S, M (a crystal orb worth 50 gp)
+- **Duration:** 10 days
+___
+You bind the souls of creatures to the world of the living, allowing them to come back from the brink of death. When you cast this spell, select up to six willing creatures within range. If any of the targets would be reduced to 0 hit points during the spell's duration, they are reduced to 1 hit point instead and the material component is consumed. When the spell ends, each creature that been targeted by the spell is alerted that the spell has ended and which creature had been saved. The spell cannot alert or save creatures on another plane of existence than the material component.
+
+If you cast this spell again, the effect of any previously cast create soulstone spell ends. The spell ends prematurely if its material component is ever not on your person. A creature can only benefit from one soulstone at a time.
+
+<div class='footnote'>PART 2 | SPELLS </div>
+
+\pagebreakNum
+
+#### Create Soulwell
+*6th level conjuration*
+___
+- **Casting Time:** 10 minutes
+- **Range:** 5 feet
+- **Components:** V, S
+- **Duration:** 1 minute
+___
+You cause a runed stone altar to appear in an unoccupied space within range. An allied creature can use its action to reach into the liquid that fills the basin to withdraw a glowing green stone. When the spell ends, the altar disappears, but the stones remain until used or 24 hours pass, whichever is first. A creature can crush the stone as an action to regain hit points equal to 4d10 + your spellcasting modifier.
+
+**At Higher Levels:** When you cast this spell using a spell slot of 7th level or higher, the healing increases by 1d10 for each slot level above 6th.
+
+#### Crippling Agony
+*1st-level necromancy*
+___
+- **Casting Time:** 1 action
+- **Range:** 60 feet
+- **Components:** V, S, M (a joint bone)
+- **Duration:**  Concentration, up to 1 minute
+
+You can inflicted crippling agony on a foe. Choose one creature that you can see within range to make a Constitution saving throw. If the target fails, it becomes crippled with horrific pain. Whenever the creation moves more than half of it's movement speed or takes an action, the crippling pain causes it to take 1d6 necrotic damage.
+
+It can repeat the saving throw at the end of each of its turns, ending the spell on a success.
+
+#### Cyclone
+*2nd-level conjuration*
+___
+- **Casting Time:** 1 action
+- **Range:** 60 feet
+- **Components:** V, S
+- **Duration:** Concentration, up to 1 minute
+___
+A whirl of wind forms around a Large or smaller creature that you can see within range. The target must make a Strength saving throw. On a failed save, the target is lifted off the ground and is restrained for the spell's duration.
+
+As an action, you can cause the cyclone to move up to 20 feet in a direction of your choice. A creature restrained by the cyclone moves with it. If the cyclone moves through a space too narrow for its restrained creature, the creature breaks out and the spell ends.
+
+To break out, the restrained target can use its action to make a Strength check against your spell save DC. On a success, the target escapes and is no longer restrained by the hand. The cyclone then vanishes.
+
+#### Dancing Wave
+*2nd-level conjuration*
+___
+- **Casting Time:** 1 action
+- **Range:** 30 feet
+- **Components:** V, S
+- **Duration:**  Concentration, up to 1 minute
+___
+You summon a surging mass of water into existence at a point on the ground within range. The mass of water remains cohesive filling a 5 foot radius, though only rises 3 feet from the ground. The area is difficult terrain for any creature without a swimming speed.
+
+For the duration of the spell, as a bonus action you can move the wave of water up to 30 feet along a surface in any direction. The first time the wave enters any creature's space during a your turn, they must make a Strength saving throw or take 1d6 bludgeoning damage and be knocked prone. A creature automatically fails this saving throw if they are prone.
+
+#### Dark Void
+*1st-level evocation*
+___
+- **Casting Time:** 1 action
+- **Range:** 30 feet
+- **Components:** V, S, M (a holy symbol)
+- **Duration:** Instantaneous
+___
+You grasp the fabric around a target within range, pulling necromantic energies from it and creatures of your choice within 5 feet of it. A target must make a Constitution saving throw, taking 2d4 necrotic damage on a failed save, or half as much damage on a successful one.
+
+***At Higher Levels.*** When you cast this spell using a spell slot of 2nd level or higher, the damage increases by 1d4 for each slot level above 1st.
+
+#### Death and Decay
+*4th-level necromancy*
+___
+- **Casting Time:** 1 action
+- **Range:** 60 feet
+- **Components:** V, S
+- **Duration:** Concentration, up to 1 minute
+___
+You reach out towards a point you can see within range, creating a 20-foot radius sphere filled with festering, necro&shy;tic energy that withers and decays everything within it. When a creature enters the blighted area for the first time on a turn or starts its turn there, it must make a Constitu&shy;tion saving throw. 
+
+On a failed save, the creature takes 4d8 necrotic damage. In addition, until the beginning of its next turn, the creature subtracts 1d4 from all of its attack rolls and saving throws, as if under the effect of the bane spell. On a successful save, the creature takes half as much damage, and suffers no additional effects.
+
+Undead creatures in the spell’s area take no damage, and are bolstered by its necrotic power. While standing in the spell’s area, undead creatures add 1d4 to their attack rolls and saving throws, as if under the effect of a bless spell.
+
+***At Higher Levels.*** When you cast this spell using a spell slot of 5th level or higher, the damage increases by 1d8 for each slot level above 4th.
+
+#### Death Chain
+*5th-level necromancy*
+___
+- **Casting Time:** 1 action
+- **Range:** Self (20-foot radius)
+- **Components:** V, S
+- **Duration:** Concentration, up to 1 minute
+___
+Ghastly chains erupt from you towards up to three different creatures you can see within range. Make a ranged spell attack against each target. On a hit, a target takes 4d8 necrotic damage and becomes chained together with you and any other target hit for the spell's duration.
+
+<div class='footnote'>PART 2 | SPELLS </div>
+
+\pagebreakNum
+
+Chained creatures must succeed on a Strength saving throw to move more than 20 feet away from you. On a successful save, the target breaks the chain, ending the spell’s effect on them. Whenever you or another chained creature takes damage from a weapon attack or spell, each other creature chained together (including you) takes psychic damage equal to half the damage taken.
+
+Damage you take through this spell does not prompt a Constitution saving throw to maintain concentration on it.
+
+#### Death Grip
+*1st-level evocation*
+___
+- **Casting Time:** 1 bonus action
+- **Range:** 60 feet
+- **Components:** V, S
+- **Duration:** Instantaneous
+___
+Necrotic energy grasps around a Huge or smaller creature you can see that is currently at least 10 feet away from you, and within the spell’s range. The creature must make a successful Strength saving throw or be moved to an empty space within 5 feet of you, and your next attack roll against them this turn is made with advantage.
+
+#### Decompose
+*Necromancy cantrip*
+___
+- **Casting Time:** 1 action
+- **Range:** Touch
+- **Components:** V, S
+- **Duration:** 1 minute
+___
+You reach out and touch the corpse of a creature. Over the next minute, the corpse begins to rapidly decompose, sprouting fungus and moss as it begins to degrade into compost and mulch. An odd-colored flower or two may also spring from the corpse in this time. Applicable requirements for resurrection are unaffected by this decomposition.
+
+#### Demon Skin
+*1st-level transmutation*
+___
+- **Casting Time:** 1 action
+- **Range:** Self
+- **Components:** V, S, M (dried skin of a demon or fiend)
+- **Duration:** 8 hours
+___
+Your skin becomes covered in a layer of fel energy, infusing you with fiendish vigor. Your base Armor Class becomes 8 + your spellcasting ability modifier (minimum AC 10). 
+
+Additionally, your current hit points and hit point maximum each increase by 2. If ending the spell would cause your current hit point total to drop to 0 or lower, it drops to 1 instead.
+
+***At Higher Levels:*** When you cast this spell using a spell slot of 2nd level or higher, the Armor Class granted by the spell increases by 1 and your current hit point total and hit point maximum each increase by 2 for each slot level above 1st.
+
+\columnbreak
+
+#### Diabolism
+*Necromancy cantrip*
+___
+- **Casting Time:** 1 action
+- **Range:** Self
+- **Components:** S
+- **Duration:** Up to 1 hour
+___
+This spell channels a small amount of dark energy. You create one of the following magical effects within range:
+- Choose a point within 30 feet. In a 5-foot radius of that point, bright light becomes dim light, and dim light becomes darkness for 1 hour. Any light sources within the area have the light they produce suppressed for the duration.
+- An object up to 1 cubic foot in size or an area up to 1 square foot that you touch lightly decays. Wood rots, glass cracks, flowers wilt. Casting the spell and then continuing to touch the target advances the decay; after 1 minute, the target is destroyed. This spell cannot affect creatures, magical objects, or sturdy materials like metal and stone.
+- You can reanimate a Tiny 0 CR beast for 1 hour. It is undead and obeys all of your commands to the best of it's abilities, though it cannot attack. You cannot use this effect again until the reanimated creature dies, or the effect ends.
+- You instantaneously light a candle, torch, or small campfire. The fire glows your choice of a smoldering red, bright green, or shadowy purple until extinguished.
+- Your fingertip glows green or purple for up to 1 minute. While it glows, you can use your finger to draw glowing lines of the same color on a solid surface that last for 1 hour.
+
+If you cast this spell multiple times, you can have up to three of its non-instantaneous effects active at a time, and you can dismiss such an effect as an action.
+
+#### Divine Star
+*3rd-level evocation*
+___
+- **Casting Time:** 1 action
+- **Range:** self (30-foot line)
+- **Components:** V, S
+- **Duration:** Instantaneous
+___
+A star of divine energy streaks forward in a 30 feet long and 5 feet wide line from you in a direction you choose. Each friendly creature in the stars path regains 1d6 hit points, and each hostile creature must make a Dexterity saving throw, taking 1d6 radiant damage on a failed save, or half as much damage on a successful one.
+
+***At Higher Levels.*** When you cast this spell using a spell slot of 4th level or higher, the spells healing and damage increases by 1d6 for each slot level above 3rd.
+
+<div class='footnote'>PART 2 | SPELLS </div>
+
+\pagebreakNum
+
+#### Divine Shield
+*4th-level abjuration*
+___
+- **Casting Time:** 1 action
+- **Range:** Self
+- **Components:** V, S, M (a small silver mirror)
+- **Duration:** Concentration, up to 1 minute
+___
+A ward of divine energy surrounds your body, warding you against attacks. For the duration, you are considered to be immune to damage dealt by weapon attacks, spells, and spell-like effects. The spell does not protect you against natural sources of damage, such as molten lava or falling.
+
+If you make an attack or cast a spell that affects an enemy creature, this spell ends.
+
+#### Drain Life
+*1st-level necromancy*
+___
+- **Casting Time:** 1 Action
+- **Range:** 30 feet
+- **Components:** V, S
+- **Duration:** Concentration, up to 1 minute
+___
+You cause a green stream of energy to trail from the target creature's eyes and mouth and into your hand, forming a continuous stream of energy to bind you two together.
+
+Make a ranged spell attack against that creature. On a hit, the target takes 1d8 necrotic damage, and on each of your subsequent turns for the duration, you can use your bonus action to deal 1d8 necrotic damage to the target automatically. Each time the target takes damage from this spell, you regain a number of hit points equal to half the damage dealt and their maximum hit point total is reduced by the same amount. This reduction lasts until they finish a long rest.
+
+On a miss, you can spend your action on subsequent turns within the spell’s duration to make another ranged spell attack against the same creature. The spell ends if you use your action to do anything else. 
+
+The spell ends if your target is more than 30 feet away from you or has total cover from you at the end of your turn. This spell has no effect on the creature if they are a construct or undead.
+
+***At Higher Levels:*** When you cast this spell using a spell slot of 2nd level or higher, the initial damage increases by 1d8 for each slot level above 1st. The damage dealt as a bonus action also increases by 1d8 for every two slot levels above 1st.
+
+#### Dread Favor
+*1st-level necromancy*
+___
+- **Casting Time:** 1 bonus action
+- **Range:** Self
+- **Components:** V, S 
+- **Duration:** Concentration, up to 1 minute
+___
+You are empowered by the suffering of your victims. Until the spell ends, your weapon attacks deal an extra 1d4 necrotic damage on a hit.
+
+\columnbreak
+
+#### Earth Ripple
+*2nd-level transmutation*
+___
+- **Casting Time:** 1 action
+- **Range:** 60 feet
+- **Components:** V, S
+- **Duration:**  Instantaneous
+___
+You cause the earth to deform and ripple, a target creature must make a Dexterity saving throw or suffer one of the following effects (your choice):
+
+* It is pulled into the earth, taking 1d8 bludgeoning damage and reducing its movement speed to zero until a creature within 5 feet spends an action to dig it free.
+* It is slammed 5 feet in a direction of your choice by a wave of earth, taking 2d8 bludgeoning damage and being knocked prone. 
+* It is impaled by a spike of earth, taking 4d8 piercing damage.
+
+#### Earthen Spike
+*3rd-level transmutation*
+___
+- **Casting Time:** 1 action
+- **Range:** 60 feet
+- **Components:** V, S, M (a granite pebble)
+- **Duration:** Concentration, up to 1 hour
+___
+You place your hand on the ground and evoke the element of earth, erupting a spike of earth at a point within range. A 5-foot radius, 15-foot high spike of earth erupts from that point. Each creature within that area must make a Dexterity saving throw. On a failed save, a creature takes 6d8 bludgeoning damage, or half as much damage on a success. Each creature affected by this spike is pushed away from the point of the spell to the nearest empty space. A creature who failed the saving throw falls prone.
+
+The earthen spike remains for the duration of the spell or until your concentration is broken at which point it crumbles, leaving its area as difficult terrain. When it crumbles, each creature within 5 feet of it must succeed on a Dexterity saving throw or take 1d6 bludgeoning damage. 
+
+***At Higher Levels.*** When you cast this spell using a spell slot of 4th level or higher, the damage increases by 1d8 for each slot level above 3rd.
+
+#### Echoing Lance
+*4th-level evocation*
+___
+- **Casting Time:** 1 action
+- **Range:** 60 feet
+- **Components:** V, S
+- **Duration:**  Concentration, up to 1 minute
+___
+You emit a targeted burst of intense thunder at a creature within range. The target must make a Constitution saving throw. On a failure, they take 3d8 thunder damage and become stunned for the duration by the intense sound. On a successful save, the target takes half as much damage and isn't stunned.
+
+At the end of each of its turns, the target can make another Constitution saving throw. On a success, the spell ends, on failure, they take an additional 1d8 thunder from the echoes within their mind.
+
+***At Higher Levels.*** When you cast this spell using a spell slot of 5th level or higher, the damage increases by 1d8 for each slot level above 4th.
+
+<div class='footnote'>PART 2 | SPELLS </div>
+
+\pagebreakNum
+
+#### Eclipse
+*6th-level transmutation*
+___
+- **Casting Time:** 1 minute
+- **Range:** Self (5-mile radius)
+- **Components:** V, S, M (a vial of water from a moonwell)
+- **Duration:** Concentration, up to 8 hours
+___
+You create an artificial solar eclipse affecting the land within 5 miles of you for the duration. You must be outdoors during the day to cast this spell. Moving to a place where you don't have a clear path to the sky ends the spell early.
+
+Once you cast this spell, the sun is gradually covered by a false disk while the moon fades away. After 1 minute, any bright light the sun sheds is reduced to dim light. After 10 minutes, the sun is completely obscured and the moon has vanished, resulting in total darkness. 
+
+When the eclipse is total (during complete darkness), any effect relying on the sun or moon automatically fails. When the spell ends, the sky gradually restores itself. Dim light returns after 1 minute and bright light after 10 minutes.
+
+#### Electric Smite
+*1st-level evocation*
+___
+- **Casting Time:** 1 bonus action
+- **Range:** Self
+- **Components:** V, S
+- **Duration:**  1 round
+
+You channel lightning into your hands. The next time you hit a creature with a melee attack (including a melee spell attack) before the start of your next turn, the target takes 1d12 lightning damage and must make a Constitution saving throw. On a failed save, the target becomes shocked, stunned until the start of their next turn. 
+
+The spell ends after dealing damage, or at the start of your next turn, whichever occurs first.
+
+#### Electrocute
+*3rd-level evocation*
+___
+- **Casting Time:** 1 action
+- **Range:** 60 feet
+- **Components:** V, S
+- **Duration:**  Instantaneous
+___
+A massive arc of lightning leaps from your hand to a target you can see within range. The target must make a Constitution saving throw. On a failed save, the target takes 4d12 lightning damage and is stunned until the start of your next turn. On a successful save, the target takes half as much damage and isn't stunned.
+
+***At Higher Levels.*** When you cast this spell using a spell slot of 4th level or higher, the damage increases by 1d12 for each slot level above 3rd.
+
+\columnbreak
+
+#### Elemental Shock
+*1st-level evocation*
+___
+- **Casting Time:** 1 action
+- **Range:** 60 feet
+- **Components:** V, S, M (a piece of brimstone, granite, glass, and a feather)
+- **Duration:** Instantaneous
+___
+You manifest a burst of elemental force around a creature within range. You choose acid, cold, fire, lightning, or thunder for the shock you make, the creature must then make a Dexterity saving throw. Taking 3d8 of the chosen damage type on a failed save, or half as much on a success.
+
+***At Higher Levels.*** When you cast this spell using a spell slot of 2nd level or higher, the damage increases by 1d8 for each slot level above 1st.
+
+#### Entomb
+*1st-level transmutation*
+___
+- **Casting Time:** 1 action
+- **Range:** 60 feet
+- **Components:** V, S
+- **Duration:**  Concentration, up to 1 minute
+___
+You attempt to encase a Medium or smaller creature you can see within ice. The creature must make a Strength saving throw or become restrained by ice for the duration. At the end of each of its turns, the target takes 1d8 cold damage and can make another Strength saving throw. On success, the spell ends on the target.
+
+If the creature takes more than 5 fire or bludgeoning damage from a single damage roll while restrained, the ice breaks and the target is freed, ending the spell for the target.
+
+***At Higher Levels.*** When you cast this spell using a spell slot of 2nd level or higher, the damage increases by 1d8 for each slot level above 1st.
+
+#### Erode
+*3rd-level conjuration*
+___
+- **Casting Time:** 1 action
+- **Range:** 20 feet
+- **Components:** V, S
+- **Duration:**  Instantaneous
+___
+You blast a target with a glob of acid. The target must make a Dexterity saving throw. On failure, the target takes 8d4 acid damage immediately and becomes covered in acid. On a success, the target takes half as much damage and is not covered in acid. While covered in acid, the target takes 2d4 acid damage at the end of each of its turns. The target or a creature within 5 feet of it can end this damage by using its action to clear away the acid. 
+
+***At Higher Levels.*** When you cast this spell using a spell slot of 4th level or higher, the damage (both initial and later) increases by 1d4 for each slot level above 3rd.
+
+<div class='footnote'>PART 2 | SPELLS </div>
+
+\pagebreakNum
+
+#### Fel Flame
+*Evocation cantrip*
+___
+- **Casting Time:** 1 action
+- **Range:** 60 feet
+- **Components:** V, S
+- **Duration:** Instantaneous
+___
+A green flame skitters across the ground towards a creature within range. Make a ranged spell attack against the target. On a hit, the target takes 1d8 fire damage. Fel flame ignores fire resistance, and creatures immune to fire damage are considered to be resistant.
+
+This spell's damage increases by 1d8 when you reach 5th level (2d8), 11th level (3d8), and 17th level (4d8). 
+
+#### Fire and Brimstone
+*4th-level evocation*
+___
+- **Casting Time:** 1 action
+- **Range:** 60 feet
+- **Components:** V, S
+- **Duration:** Instantaneous
+___
+You form six orbs of fire above your head, which you launch at targets within 20 feet of a point you choose within range. You can direct the orbs to hit one target or several. A target takes 1d10 fire damage for each orb that strikes it, and can attempt a Dexterity saving throw to take half as much damage. Each target only makes one saving throw, regardless of how many orbs it is struck by.
+
+***At Higher Levels.*** When you cast this spell using a spell slot of 5th level or higher, the spell creates one more orb for each spell level above 4th.
+
+#### Fissure
+*5th-level transmutation*
+___
+- **Casting Time:** 1 Action
+- **Range:** Self (60 foot line)
+- **Components:** V, S
+- **Duration:** Instantaneous
+___
+You rend asunder the earth in a 60-foot-long 5-foot-wide line, targeting an area of dirt, sand, or rock at least 10 feet deep. 
+
+Creatures in that line must make a Dexterity saving throw. On a failure, a creature falls into a suddenly opened crevice in the ground, falling into it before it snaps shut, crushing them. Creatures that fail the saving throw take 6d10 bludgeoning damage from the fall and crushing. The creature is buried in 10 feet of rubble, and creatures without a burrowing speed require 25 feet of movement to extract themselves from the loose rubble to return to where they failed the saving throw. If they end their turn while buried, they take an additional 1d10 bludgeoning damage.
+
+\columnbreak
+
+#### Flash Freeze
+*3rd-level evocation*
+___
+- **Casting Time:** 1 action
+- **Range:** Self (30-foot cone)
+- **Components:** V, S
+- **Duration:**  Instantaneous
+___
+A freezing wind ripples outward. Each creature in a 30-foot cone must make a Constitution saving throw. On a failed save, a creature takes 4d8 cold damage and is restrained by ice until the start of your next turn. On a successful save, the target takes half as much damage and isn't restrained.
+
+***At Higher Levels.*** When you cast this spell using a spell slot of 4th level or higher, the damage increases by 1d8 for each slot level above 3rd.
+
+#### Force Blade
+*4th level evocation*
+___
+- **Casting Time:** 1 bonus action
+- **Range:** Self (10 feet)
+- **Components:** V, S
+- **Duration:** Concentration, up to 1 minute
+___
+You create an oversized blade of pure scintillating force energy in your hand. For the duration of the spell, as an action, you can sweep the blade through up to two creatures within reach, dealing 2d12 force damage to each.
+
+***At Higher Levels.*** When you cast it using a 5th- or 6th-level spell slot, the damage increases to 3d12. When you cast it using a spell slot of 7th level or higher, the damage increases to 4d12.
+
+#### Form of Fire
+*6th-level transmutation*
+___
+- **Casting Time:** 1 action
+- **Range:** Self
+- **Components:** V, S
+- **Duration:**  Concentration, up to 10 minutes
+___
+You become elemental fire, shedding bright light in a 30-foot radius and dim light for an additional 30 feet. Until the spell ends, you gain the following benefits:
+* You are immune to fire damage.
+* You can move through the space of other creatures and ignore difficult terrain. The first time on your turn you enter the space of another creature, it takes 1d6 fire damage.
+* If a creature within 5 feet hits you with a melee attack, it takes 1d6 fire damage.
+* You can use your action to create a line of fire 30 feet long and 5 feet wide extending from you in a direction of your choice. Each creature in the line must make a Dexterity saving throw. A creature takes 6d6 fire damage on a failed save, or half as much damage on a successful one.
+* During your turn, if you roll fire damage, you can maximize one die of the fire damage dealt.
+
+<div class='footnote'>PART 2 | SPELLS </div>
+
+\pagebreakNum
+
+#### Form of Ice
+*6th-level transmutation*
+___
+- **Casting Time:** 1 action
+- **Range:** Self
+- **Components:** V, S
+- **Duration:**  Concentration, up to 10 minutes
+___
+You freeze over, taking on a form of elemental ice. Until the spell ends, you gain the following benefits:
+
+* You are immune to cold damage.
+* You can move across difficult terrain created by ice or snow without spending extra movement.
+* The ground in a 10-foot radius around you is icy and is difficult terrain for creatures other than you. The radius moves with you.
+* You can use your action to create a 30-foot cone of freezing wind extending from your outstretched hand in a direction you choose. Each creature in the cone must make a Constitution saving throw. A creature takes 4d8 cold damage on a failed save, or half as much damage on a successful one. A creature that fails its save against this effect has its speed halved until the start of your next turn.
+* During your turn, if you roll cold damage, you gain temporary hit points equal to one die rolled (your choice).
+
+#### Form of Stone
+*6th-level transmutation*
+___
+- **Casting Time:** 1 action
+- **Range:** Self
+- **Components:** V, S
+- **Duration:**  Concentration, up to 10 minutes
+___
+
+You become made of stone. Until the spell ends, you gain the following benefits:
+
+* You have resistance to bludgeoning, piercing, and slashing damage from nonmagical attacks. 
+* You can move across difficult terrain made of earth or stone without spending extra movement. You can move through solid earth or stone as if it was air and without destabilizing it, but you can't end your movement there. If you do so, you are ejected to the nearest unoccupied space, this spell ends, and you are stunned until the end of your next turn.
+* You can use your action to call spikes of stone to raise from the ground. All creatures of your choice within 15 feet of you must make a Dexterity saving throw. A creature takes 4d8 piercing damage on a failed save, or half as much on a successful one. Their space becomes difficult terrain either way.
+
+\columnbreak
+
+#### Form of Water
+*6th-level transmutation*
+___
+- **Casting Time:** 1 action
+- **Range:** Self
+- **Components:** V, S
+- **Duration:**  Concentration, up to 10 minutes
+___
+You become a surge of elemental water. Until the spell ends, you gain the following benefits:
+
+* You have resistance to bludgeoning, piercing, and slashing damage from nonmagical attacks.
+* You can move through the space of other creatures and ignore difficult terrain; the first time you move through a Large or smaller creature, it must pass a Strength saving throw or be knocked prone.
+* You can use your action to unleash a blast of water 15 feet long and 5 feet wide extending from you in a direction your choice. Each creature in the line must make a Strength saving throw. A creature takes 5d6 bludgeoning damage and is knocked prone on a failed save, or half as much and isn't knocked prone on a successful one.
+
+#### Form of Wind
+*6th-level transmutation*
+___
+- **Casting Time:** 1 action
+- **Range:** Self
+- **Components:** V, S
+- **Duration:**  Concentration, up to 10 minutes
+___
+You become a gust of elemental wind. Until the spell ends, you gain the following benefits:
+
+* You have a flying speed of 60 feet.
+* You can move through and occupy the space of other creatures, and you ignore difficult terrain.
+* You are invisible.
+* You can use your action to unleash a powerful blast of wind in a 30 foot cone. Each creature in the cone must make a Strength saving throw. A creature takes 4d8 bludgeoning damage is knocked 15 feet away from you on a failed save, or takes half as much damage and isn't knocked backward on a successful one.
+
+
+
+<div class='footnote'>PART 2 | SPELLS </div>
+
+\pagebreakNum
+
+#### Form of the Elements
+*9th-level transmutation*
+___
+- **Casting Time:** 1 action
+- **Range:** Self
+- **Components:** V, S
+- **Duration:**  Concentration, up to 10 minutes
+___
+For the duration of the spell, you become a chaotic surge of elemental force. You gain the following benefits:
+
+* You have a flying speed and a swim speed of 60 feet.
+* You can move through and occupy the space of other creatures, and you ignore difficult terrain.
+* You can move through solid earth or stone as if it was air and without destabilizing it, but you can't end your movement there. If you do so, you are ejected to the nearest unoccupied space, this spell ends, and you are stunned until the end of your next turn.
+* You are immune to acid, cold, fire, lightning, and thunder damage. You also have resistance to bludgeoning, piercing, and slashing damage from nonmagical attacks.
+* You do not need to breathe.
+
+Additionally, at the beginning of each of your turns, select one of the following abilities. You gain the benefits of that ability until your next turn.
+* **Fire:** The first time you enter the space of another creature, it takes 2d6 fire damage. If a creature within 5 feet hits you with a melee attack, it takes 2d6 fire damage.
+* **Ice:** The air in a 10-foot radius around you is reduced to subarctic temperatures. A creature who enters the radius for the first time has their speed reduced by half until the beginning of your next turn.
+* **Stone:** You have resistance to all damage.
+* **Water:** The first time you move through a Huge or smaller creature, it must pass a Strength saving throw or be knocked prone.
+* **Wind:** You are invisible.
+
+\columnbreak
+
+Finally, you can use any of the following actions during the spell's duration:
+* **Arctic Wind.** You create a 30-foot cone of freezing wind extending from your outstretched hand in a direction you choose. Each creature in the cone must make a Constitution saving throw. A creature takes 4d8 cold damage on a failed save, or half as much damage on a successful one. A creature that fails its save against this effect has its speed halved until the start of your next turn.
+* **Backdraft.** You create a 30-foot long, 5-foot wide line of fire extending from you in a direction of your choice. Each creature in the line must make a Dexterity saving throw. A creature takes 6d6 fire damage on a failed save, or half as much damage on a successful one.
+* **Hurricane Blast.** You unleash a powerful blast of wind in a 30-foot cone. Each creature in the cone must make a Strength saving throw. A creature takes 4d8 bludgeoning damage is knocked 15 feet away from you on a failed save, or takes half as much damage and isn't knocked backward on a successful one.
+* **Hydro Cannon.** You unleash a 15-foot long, 5-foot wide blast of water extending from you in a direction your choice. Each creature in the line must make a Strength saving throw. A creature takes 5d6 bludgeoning damage and is knocked prone on a failed save, or half as much and isn't knocked prone on a successful one.
+* **Stone Spikes.** You call spikes of stone from the ground. All creatures of your choice within 15 feet of you must make a Dexterity saving throw. A creature takes 4d8 piercing damage on a failed save, or half as much on a successful one. Their space becomes difficult terrain either way.
+
+
+**[NOTE: Somewhat incomplete. Used to just be "you gain the benefits of all five of the Form of X spells, but I tried putting them together in a single spell and patch the holes. Ended up being a bit more than I intended. Some of the damages might need to be tweaked up?]**
+
+<div class='footnote'>PART 2 | SPELLS </div>
+
+\pagebreakNum
+
+#### Freezing Touch
+*2nd-level evocation*
+___
+- **Casting Time:** 1 action
+- **Range:** Touch
+- **Components:** V, S, M (a shard of glass or ice)
+- **Duration:** 1 minute
+___
+Your fingers become cold to the touch as frost manifests on their surface. Make a melee spell attack against a creature within range. On a hit, the creature is incapacitated and restrained until the spell ends as ice encap&shy;sulates their body. The spell ends for an affected creature if it takes any damage or if someone else uses an action to break the creature out of the ice.
+
+#### Frostfire Bolt
+*1st-level evocation*
+___
+- **Casting Time:** 1 action
+- **Range:** 120 feet
+- **Components:** V, S, M (a piece of glass and sulfur)
+- **Duration:**  Instantaneous
+___
+You hurl a bolt of blue flames at a creature within range. Make a ranged spell attack against the creature. On a hit, the target takes 2d6 fire damage and 2d6 cold damage.
+
+***At Higher Levels.*** When you cast this spell using a spell slot of 2nd level or higher, the fire and cold damage increases by 1d6 for each slot level above 1st.
+
+#### Gale Bolt
+*1st-level evocation*
+___
+- **Casting Time:** 1 action
+- **Range:** 120 feet
+- **Components:** V, S
+- **Duration:**  Instantaneous
+___
+A blast of concentrated wind streaks toward a creature of your choice within range. Make a ranged spell attack against the target. On a hit, the target takes 2d8 bludgeoning damage and if it is Large or smaller is knocked 10 feet away from you.
+
+***At Higher Levels.*** When you cast this spell using a spell lot of 2nd level or higher, the damage increases by 1d8 for each level above 1st.
+
+#### Geyser
+*4th-level conjuration*
+___
+- **Casting Time:** 1 action
+- **Range:** 120 feet
+- **Components:** V, S
+- **Duration:**  Instantaneous
+___
+You cause a massive eruption of water to blast upwards from the ground at a point within range. Creatures within 10 feet of the point must make a Dexterity saving throw or take 4d6 bludgeoning damage and be knocked 60 feet into the air. On a successful save, creatures take half as much damage, and are instead knocked their choice of 10 feet away from the point or 10 feet upward.
+
+\columnbreak
+
+#### Ghastly Stench
+*2nd-level necromancy*
+___
+- **Casting Time:** 1 action
+- **Range:** Self (15-foot radius)
+- **Components:** V, S
+- **Duration:** Concentration, up to 10 minutes
+___
+You emanate the putrid stench of death. For the duration, each creature that starts its turn within 15 feet of you must succeed on a Constitution saving throw or be poisoned until the start of its next turn.
+
+***At Higher Levels.*** When you cast this spell using a spell slot of 3rd level or higher, you can increase the radius of this spell by 5 feet for each slot level above 2nd.
+
+#### Glacial Spike
+*7th-level evocation*
+___
+- **Casting Time:** 1 action
+- **Range:** 120 feet
+- **Components:** V, S
+- **Duration:** Instantaneous
+___
+You form a large spike of ice above your head, and launch it at a creature that you can see within range, causing it to shatter across their body. The target must make a Dexterity saving throw. It takes 8d8 + 40 cold damage on a failed save, or half as much damage on a successful one. 
+
+If this damage reduces a creature to 0 hit points, it is reduced to shards of ice, leaving behind everything it was wearing and carrying. The creature can be restored to life only by means of a true resurrection or a wish spell.
+
+#### Guardian of the King
+*2nd-level abjuration*
+___
+- **Casting Time:** 1 reaction, which you take when a creature is hit by an attack or spell
+- **Range:** 30 feet
+- **Components:** V, S
+- **Duration:** 1 round
+___
+A barrier of holy light shields the triggering creature. Until the start of your next turn, the creature gains resistance to all damage dealt by weapon attacks, spells, and spell-like effects, including against the triggering attack. The spell does not protect you against natural sources of damage, such as molten lava or falling.
+
+#### Healing Rain
+*5th-level transmutation*
+___
+- **Casting Time:** 1 action
+- **Range:** 120 feet
+- **Components:** V, S, M (a vial of rain water)
+- **Duration:** Concentration, up to 1 minute
+___
+You summon a cloud at a point within range, blanketing a 15-foot radius area around it in rain. Each friendly creature enters the rain for the first time on their turn, or starts their turn within the rain regains 2d6 hit points. The healing rain extinguishes nonmagical fires within its area of effect.
+
+***At Higher Levels.*** When you cast this spell using a spell slot of 7th level or higher, the healing increases by 1d6 for every two slot levels above 5th.
+
+<div class='footnote'>PART 2 | SPELLS </div>
+
+\pagebreakNum
+
+#### Hellfire
+*3rd-level conjuration* 
+___
+- **Casting Time:** 1 action
+- **Range:** Self (20-foot radius)
+- **Components:** V, S
+- **Duration:** Instantaneous
+___
+Fire erupts from your body, dealing 3d6 fire to you. Each creature within a 20-foot radius must make a Dexterity saving throw. A creature takes 10d6 fire on a failed save, or half on a successful one.
+
+Fire damage dealt by this spell ignores fire resistance and immunity.
+
+***At Higher Levels.*** When you cast this spell using a spell slot of 4th level or higher, you take an additional 1d6 fire damage and each creature takes an additional 2d6 fire damage for each slot level above 3rd.
+
+#### Holy Prism
+*2nd-level evocation*
+___
+- **Casting Time:** 1 action
+- **Range:** 60 feet
+- **Components:** S
+- **Duration:** Instantaneous
+___
+A streak of light surges from you to one creature within range and scatters on impact, touching three additional creatures of your choice within 5 feet of the target. Each creature gains one of the following effects of your choice.
+
+**Harm.** The creature must succeed on a Dexterity saving throw, taking 2d4 radiant damage on a failed save, or half as much damage on a successful one.
+
+**Heal.** The creature regains a number of hit points equal to 1d4 + your spellcasting ability.
+
+***At Higher Levels.*** When you cast this spell using a spell slot of 3rd level or higher, you may increase the damage and healing by 1d4 for each slot level above 2nd, or choose one additional creature within 5 feet of the target for each slot level above 2nd.
+
+#### Holy Wrath
+*3rd-level evocation*
+___
+- **Casting Time:** 1 action
+- **Range:** Self (15-foot-radius)
+- **Components:** V, S
+- **Duration:** Instantaneous
+___
+You release a burst of radiant energy in a blast. Each creature of your choice within a 20-foot-radius of you must make a Wisdom saving throw. A target takes 6d6 radiant damage on a failed save, or half as much damage on a successful one. The blast spreads around corners.
+
+***At Higher Levels.*** When you cast this spell using a spell slot of 4th level or higher, the damage increases by 1d6 for each slot level above 3rd.
+
+\columnbreak
+
+#### Howling Blast
+*2nd-level evocation*
+___
+- **Casting Time:** 1 action
+- **Range:** 60 feet
+- **Components:** V, S
+- **Duration:** 1 round
+___
+An icy gale suddenly erupts around a point of your choice within range. Each creature in a 15-foot-radius sphere centered on that point must make a Constitution saving throw. A creature takes 3d8 cold damage on a failed save, or half as much damage on a successful one. A cold fog hangs in the air afterwards, making the area heavily obscured. It lasts for the duration or until a wind of moderate or greater speed (at least 10 miles per hour) disperses it.
+
+***At Higher Levels.*** When you cast this spell using a spell slot of 3rd level or higher, the damage increases by 1d8 for each slot level above 2nd.
+
+#### Hurricane Slash
+*2nd-level evocation*
+___
+- **Casting Time:** 1 action
+- **Range:** Self (30-foot line)
+- **Components:** V, S
+- **Duration:**  Instantaneous
+___
+You condense wind into a razor sharp blast that shreds a 30-foot-long 5-foot-wide line. Creatures in the area must make a Dexterity saving throw. A creature takes 3d8 slashing damage on a failed save or half as much on a success.
+
+***At Higher Levels.*** When you cast this spell using a spell slot of 3rd level or higher, you can create an additional line of effect. A creature in the area of more than one slash is affected only once.
+
+#### Ice Block
+*4th-level abjuration*
+___
+- **Casting Time:** 1 reaction, when you take damage
+- **Range:** Self
+- **Components:** V, S
+- **Duration:**  Concentration, up to 1 minute
+___
+Ice rapidly materializes around you, protecting you from harm. You gain 40 temporary hit points and immunity to cold damage for the spells duration. While the spell is active you can't move and take any actions or reactions. The spell remains until the temporary hit points have been expended or for the spell's duration.
+
+#### Ice Nova
+*8th-level evocation*
+___
+- **Casting Time:** 1 action
+- **Range:** 120 feet
+- **Components:** V, S, M (glass dust and water)
+- **Duration:** Instantaneous
+___
+Frigid cold rapidly expands in a 15-foot-radius centered on a point you you can see within range. Each creature in the cold must succeed on a Dexterity saving throw. On a failed save, a creature takes 10d6 cold damage and is restrained for 1 minute as ice encases the lower part of their legs. On a successful save, it takes half as much damage and isn't restrained by this spell.
+
+<div class='footnote'>PART 2 | SPELLS </div>
+
+\pagebreakNum
+
+A creature restrained by the ice can use its action to make a Strength check against your spell save DC. On a success, it frees itself. Alternatively, the ice can be broken by dealing a total of 40 hit points worth of damage to it. It has an armor class of 10.
+
+#### Ice Spike
+*4th-level evocation*
+___
+- **Casting Time:** 1 action
+- **Range:** 60 feet
+- **Components:** V, S
+- **Duration:**  Instantaneous
+___
+You create a lance of ice that shoots up from the ground to impale a creature within range. The target must make a Dexterity saving throw. The target takes 4d8 piercing damage and 4d8 cold damage on a failed save. The target takes only the 4d8 cold damage on a successful save.
+
+***At Higher Levels.*** When you cast this spell using a spell slot of 6th or 7th level, you can create a second spike. When you cast this spell using a spell slot of 8th or 9th level, you can create a third spike. Additional spikes can target the same or different creatures.
+
+#### Icebound Fortitude
+*2nd-level transmutation*
+___
+- **Casting Time:** 1 reaction, which you take when you are dealt bludgeoning, piercing, or slashing damage
+- **Range:** Self
+- **Components:** V, S
+- **Duration:** 1 round
+___
+You temporarily freeze your own blood and make your skin as hard as ice. Until the start of your next turn, you have resistance to bludgeoning, piercing, and slashing damage, including against the triggering damage.
+
+#### Icy Touch
+*1st-level necromancy*
+___
+- **Casting Time:** 1 action
+- **Range:** 60 feet
+- **Components:** V, S
+- **Duration:** 1 round
+___
+You summon icy energy to strike against a creature you can see within range, freezing them with the chill of the grave. Make a ranged spell attack against the creature to assail it with the chill of the grave. On a hit, the target takes 3d8 cold damage, and it can't regain hit points until the start of your next turn. Until then, the target’s skin grows as pale as ice. If you hit a celestial target, it also has disadvantage on attack rolls against you until the end of your next turn. 
+
+***At Higher Levels.*** When you cast this spell using a spell slot of 2nd level or higher, the damage increases by 1d8 for each slot level above 1st. 
+
+<div class='footnote'>PART 2 | SPELLS </div>
+
+\pagebreakNum
+
+#### Inferno
+*7th-level conjuration*
+___
+- **Casting Time:** 1 action
+- **Range:** 90 feet
+- **Components:** V, S, M (demon blood within an emerald vial worth at least 700 gp)
+- **Duration:** Concentration, up to 1 hour
+___
+You conjure an infernal, a construct of stone and fel flame from the Twisting Nether. It manifests in an unoccupied space that you can see within range. It uses the Infernal Summon stat block. The creature disappears when it drops to 0 hit points or when dismissed as an action.
+
+The creature is an ally to you and your companions. In combat, the creature shares your initiative count, but it takes its turn immediately after yours. It obeys your verbal commands (no action required by you). If you issue no command, it spends its turn attacking any creature within reach that has attacked it.
+
+If your concentration is broken, the infernal doesn't disappear. Instead, you lose control of it, and it spends the rest of the spell’s duration pursuing and attacking the nearest living creature to the best of its ability. An uncontrolled infernal can't be dismissed by you, and it disappears 1 hour after you summoned it.
+
+***At Higher Levels.*** When you cast this spell using a spell slot of 8th level or higher, use the higher level wherever the spell's level appears in the stat block.
+
+\columnbreak
+
+<div style='margin-top:230px;'></div>
+
+___
+> ## Infernal Summon
+> *Large construct (demon), chaotic evil*
+> ___
+>- **Armor Class** 7 + the level of the spell (natural armor)
+>- **Hit Points** 85 + 15 for each spell level above 7th
+>- **Speed** 30 ft.
+>___
+>|  STR  |  DEX  |  CON  |  INT  |  WIS  |  CHA  |
+>|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+>|18 (+4)|10 (+0)|16 (+3)| 6 (-2)|10 (+0)| 6 (-2)|
+>___
+> - **Damage Resistances** bludegoning, piercing, and slashing damage from nonmagial attacks not made with adamantine weapons; fire 
+> - **Damage Immunities** poison, psychic
+> - **Condition Immunities** charmed, exhausted, frightened, paralyzed, petrified, poisoned
+> - **Senses** darkvision 60 ft., passive Perception 10
+> - **Languages** understands the languages you speak
+> - **Challenge** —
+>
+>___
+>***Immolation Aura.*** Any creature that starts its turn within 5 feet of the infernal, or hits it with a melee weapon attack, takes 1d10 + this spell’s level fire damage.
+>
+>***Immutable Form.*** The infernal is immune to any spell or effect that would alter its form.
+>
+>***Magic Resistance.*** The infernal has advantage on saving throws against spells and other magical effects.
+>
+> ***Meteoric Impact.*** When the infernal is summoned, it appears up to 60 feet in the air. When it lands, each creature within 10 feet of it must make a Dexterity save or take damage as if struck by its Slam attack and fall prone. A successful save results in half damage and no other effect.
+>
+>***Siege Monster.*** The infernal deals double damage to objects and structures.
+>
+>### Actions
+>***Multiattack.*** The infernal makes a number of attacks equal to one-third this spell's level (rounded down).  
+>
+>***Slam.*** *Melee Weapon Attack:* your spell attack modifier to hit, reach 5 ft., one target. *Hit:* 2d8 + 4 + the spell’s level bludgeoning damage plus 3 (1d6) fire damage.
+
+
+<img src='https://www.gmbinder.com/images/Zvvr01c.jpg' style='position:absolute; top:0px; left:180px; width:820px; transform:scaleX(-1)' />
+<img src='https://www.gmbinder.com/images/huxbNse.png' style='position:absolute; top:0px; right:0px; height:100%' />
+
+<div class='footnote'>PART 2 | SPELLS </div>
+
+\pagebreakNum
+
+#### Invoke Elements
+*Transmutation cantrip*
+___
+- **Casting Time:** 1 action
+- **Range:** 30 feet
+- **Components:** V, S
+- **Duration:** Up to 1 minute
+___
+You invoke a minor portion of the elements. You create one of the following magical effects within range:
+- You create a harmless sensory effect that predicts what the weather will be for the next 24 hours. This effect persists for 1 round.
+- You light or put out a small flame.
+- You cause flames to flicker, brighten, dim, or change color for 1 minute.
+- You cause harmless tremors in the ground for 1 minute.
+- You cool or heat up a small amount of liquid.
+
+If you cast this spell multiple times, you can have up to three of its 1-minute effects active at a time, and you can dismiss such an effect as an action.
+
+#### Jaina's Flying Ship
+*9th-level transmutation*
+___
+- **Casting Time:** 1 minute
+- **Range:** Touch
+- **Components:** V, S
+- **Duration:** 24 hours
+___
+You channel your powers into a nonmagical ship within range, the ship can be no larger than 100 feet long, and 30 feet wide. For the spell's duration, the ship gains a flying speed of 60 feet, the ship changes direction and altitude at your command, continuing its course until a new command is given or the spells duration ends.
+
+The flying ship has an Armor Class of 15, and 300 hit points; immunity to poison and psychic damage, and immunity to all conditions.
+
+It has a maximum carrying capacity of 50 tons (limited by the size of the ship itself). It is not slowed by any weight until its maximum capacity is reached, at which point the ship loses its flying property and falls at a rate of 60 feet per round until it hits the ground. It takes no falling damage from the fall, and its passengers are unharmed
+
+You can make this effect permanent by casting this spell on the same ship once per week for one year.
+
+#### Jumping Jolt
+*4th-level evocation*
+___
+- **Casting Time:** 1 action
+- **Range:** 60 feet
+- **Components:** V, S
+- **Duration:**  Instantaneous
+___
+You release an arc of lighting at a creature within range. Make a ranged spell attack roll against the target. On hit, the target takes 4d12 lightning damage, and you can cause the spell to jump to another target within 20 feet of the first target making a new attack roll for each target. The spell cannot hit the same target twice, or jump to a target out of the spells range. The spell can jump a maximum of five times.
+
+On a miss, the target takes half as much damage and the spell does not jump to a new target.
+
+***At Higher Levels.*** When you cast this spell using a spell slot of 5th level or higher, the starting damage increases by 1d12 for each slot level above 4th.
+
+#### Lava Burst
+*2nd-level evocation*
+___
+- **Casting Time:** 1 action
+- **Range:** 60 feet
+- **Components:** V, S
+- **Duration:** Instantaneous
+___
+You manifest molten stone and magma into a ferocious ball, and hurl it at a target within range. The target must make a Dexterity saving throw. On a failed save, it takes 3d6 fire damage and 3d6 bludgeoning damage, or half as much on a successful one.
+
+***At Higher Levels.*** When you cast this spell using a spell slot of 3rd level or higher, the damage increases by 1d6 fire and bludgeoning damage for each slot above 2nd.
+
+#### Light of the Protector
+*5th-level evocation*
+___
+- **Casting Time:** 1 action
+- **Range:** Self
+- **Components:** V, S
+- **Duration:** Instantaneous
+___
+You feel the warmth of the light within you as a surge of positive energy washes through you, restoring a number of hit points equal to 5d12 + 30. This spell also ends blindness, deafness, and any diseases affecting you.
+
+#### Lightning Blast
+*Evocation cantrip*
+___
+- **Casting Time:** 1 action
+- **Range:** 60 feet
+- **Components:** S
+- **Duration:** Instantaneous
+___
+An arc of lightning streaks from your palms towards a creature within range. Make a ranged spell attack. On a hit, the target takes 1d8 lightning damage. If the target is wearing armor made of metal, it instead takes 1d12 lightning damage.
+
+This spell's damage increases by 1d8 when you reach 5th level (2d8 or 2d12), 11th level (3d8 or 3d12), and 17th level (4d8 or 4d12).
+
+#### Lightning Charged
+ *2nd-level evocation*
+___
+- **Casting Time:** 1 action
+- **Range:** Touch
+- **Components:** V, S, M (a piece of metal once used in a lightning rod)
+- **Duration:** 10 minutes
+___
+You channel lightning energy into a creature. The energy is harmless to the creature, but escapes in dangerous bursts to other nearby creatures. 
+
+Every time that creature strikes another creature with a melee attack, a spell with a range of touch, is struck by another creature with a melee attack, or ends their turn while grappling or being grappled by another creature, they deal 1d6 lightning damage to that creature.
+
+Once this spell has discharged 6 times (dealing up to 6d6 damage), the spell ends.
+
+***At Higher Levels.*** The spell can discharge damage 2 additional times (dealing 2d6 more total damage) before the spell ends for each slot level above 2nd.
+
+<div class='footnote'>PART 2 | SPELLS </div>
+
+\pagebreakNum
+
+#### Lightning Tendril
+*1st-level evocation*
+___
+- **Casting Time:** 1 bonus action
+- **Range:** Self (20 feet)
+- **Components:** V, S, M (a twig from a tree that has been struck by lightning)
+- **Duration:** Concentration, up to 1 minute
+___
+Crackling beams of blue energy leap from your hands. For the duration of the spell, as an action, you can direct them toward a creature within range, dealing 1d12 lightning damage to that creature.
+
+***At Higher Levels.*** When you cast this spell using a 3rd- or 4th-level spell slot, the damage increases to 2d12 and the range increases to 30 feet. When you cast it using a 5th- or 6th-level spell slot, the damage increases to 3d12 and the range increases to 60 feet. When you cast it using a spell slot of 7th level or higher, the damage increases to 4d12 and the range increases to 120 feet.
+
+#### Lightning Shield
+*1st-level abjuration*
+___
+- **Casting Time:** 1 bonus action
+- **Range:** 60 feet
+- **Components:** S
+- **Duration:** Concentration, up to 10 minutes
+___
+You call upon the element of air and surround a friendly target within range with a field of crackling electricity. Until the spell ends, the target gains a +1 bonus to AC and when a creature hits it with a melee attack, that creature takes 1d4 lightning damage.
+
+***At Higher Levels.*** When you cast this spell using a spell slot of 2nd level or higher, the damage increases by 1d4 for each slot level above 1st.
+
+#### Living Bomb
+*2nd-level evocation*
+___
+- **Casting Time:** 1 action
+- **Range:** 60 feet
+- **Components:** V, S, M (a flammable liquid)
+- **Duration:**  Concentration, up to 1 minute
+___
+You manipulate the mana flowing through a creature within range, making it burn from the inside with a roaring fire. The target must make a Constitution saving throw. On a failed save it takes 1d10 fire damage, or half as much on a successful one. At the start of each of your turns for the spells duration, the target must make another Constitution saving throw as it takes the damage again.
+
+When the spell ends the target and each creature within 10 feet of it must succeed on a Dexterity saving throw or take 2d6 fire damage.
+
+***At Higher Levels.*** When you cast this spell using a spell slot of 3rd level or higher, the damage of the explosion increases by 1d6 for each slot level above 2nd.
+
+\columnbreak
+
+#### Lunar Strike
+*Evocation cantrip*
+___
+- **Casting Time:** 1 action
+- **Range:** 60 feet
+- **Components:** V, S
+- **Duration:** Instantaneous
+___
+A streak of lunar energy flares through the air, dealing 1d4 force damage to a target within range. Each creature within 5 feet of the target takes half as much force damage.
+
+If cast while outdoors with a clear view of the moon, the spell deals an additional 1d4 damage to the initial target.
+
+***At Higher Levels.*** The spell's damage increases by one die when you reach 5th level (2d4), 11th level (3d4), and 17th level (4d4).
+
+#### Mantle of the Fallen Crusader
+*3rd-level evocation*
+___
+- **Casting Time:** 1 action
+- **Range:** Self (30-foot radius)
+- **Components:** V
+- **Duration:** Concentration, up to 1 minute
+___
+Unholy power radiates from you in an aura with a 30-foot radius, awakening bloodlust in friendly creatures. Until the spell ends, the aura moves with you, centered on you. While in the aura, each nonhostile creature in the aura (including you) deals an extra 1d4 necrotic damage when it hits with a weapon attack.
+
+#### Mind Blast
+*Evocation cantrip*
+___
+- **Casting Time:** 1 action
+- **Range:** 60 feet
+- **Components:** V, S
+- **Duration:** Instantaneous
+___
+You attempt to pierce through the mental defenses of a creature you can see within range. The target must succeed on a Wisdom saving throw or take 1d8 psychic damage.
+
+This spell's damage increases by 1d8 when you reach 5th level (2d8), 11th level (3d8), and 17th level (4d8).
+
+#### Mind Flay
+*2nd-level enchantment*
+___
+- **Casting Time:** 1 action
+- **Range:** 120 feet
+- **Components:** V
+- **Duration:** Concentration, up to 1 minute
+___
+You wreathe the mind of a creature you can see within range. The target must make a Wisdom saving throw. On a failed save, the creature takes 2d6 psychic damage and has disadvantage on all attack rolls and ability checks for the spells duration, and on as successful save, the creature takes half damage but suffers no other effects of the spell.
+
+At the end of each of its turns, the creature can make a Wisdom saving throw, ending the spell on a success.
+
+***At Higher Levels.*** When you cast this spell using a spell slot of 3rd level or higher, the damage increases by 1d6 for each slot level above 2nd.
+
+<div class='footnote'>PART 2 | SPELLS </div>
+
+\pagebreakNum
+
+#### Mind Vision
+*1st-level divination*
+___
+- **Casting Time:** 1 action
+- **Range:** Touch
+- **Components:** V, S
+- **Duration:** Concentration, up to 1 hour
+___
+You extend your arm and touch a willing creature within reach. For the duration of the spell, you see through the creatures eyes and hear what it hears. During this time, you lose of your own senses and are considered blinded, deafened, and stunned. You can end your mind vision as a free action on your turn.
+
+#### Nauseating Poison
+*1st-level necromancy*
+___
+- **Casting Time:** 1 bonus action
+- **Range:** Self
+- **Components:** V, S
+- **Duration:**  1 round
+___
+You shroud your hand, a weapon you are holding, or a natural weapon in dark ichorous miasma.  The next time you hit a creature with a melee attack (including a melee spell attack) before the start of your next turn, the attack deals an extra 1d12 poison damage and the target must succeed on a Constitution saving throw or be poisoned until the end of your next turn.
+
+The spell ends after dealing damage, or at the start of your next turn, whichever occurs first.
+
+#### Orbital Stones
+*4th-level transmutation*
+___
+- **Casting Time:** 1 action
+- **Range:** Self
+- **Components:** V, S
+- **Duration:**  Concentration, up to 1 minute
+___
+You lift three inanimate Small or Medium sized rocks or similar objects from within 10 feet of you, causing them to defy gravity and slowly circle you. With all three stones orbiting, you have three quarters cover. With at least one stone remaining, you have half cover.
+
+As a bonus action while at least one stone remains in orbit, you can magically fling a stone at target within 60 feet. Make a ranged spell attack roll. On hit, the target takes 3d10 bludgeoning damage and is knocked backward 5 feet.
+
+#### Poison Dart
+*2nd-level transmutation*
+___
+- **Casting Time:** 1 action
+- **Range:** 60 ft
+- **Components:** V, S
+- **Duration:**  Instantaneous
+___
+You conjure a dart of pure poison and hurl it at a creature you can see within range. Make a ranged spell attack. On a hit, the target takes 3d12 poison damage and must succeed a Constitution saving throw or become poisoned until the start of your next turn.
+
+***At Higher Levels.*** When you cast this spell using a spell slot of 3rd level or higher, the damage increases by 1d12 for each slot level above 2nd.
+
+\columnbreak
+
+#### Poison Puff
+*4th-level transmutation*
+___
+- **Casting Time:** 1 action
+- **Range:** Self (30-foot cone)
+- **Components:** V, S
+- **Duration:** 1 round
+___
+You exhale a cloud of poison that magically expands to fill a 30 foot cone. Creatures in that area must make a Constitution saving throw. On a failure, they take 4d12 poison damage and become poisoned until the start of their next turn. On a success, the target takes half as much damage and is not poisoned.
+
+The area is lightly obscured until the start of your turn, and any creature that ends their turn within the area takes 2d4 poison damage.
+
+#### Pressure Cutter
+*5th-level conjuration*
+___
+- **Casting Time:** 1 action
+- **Range:** Self (60 foot line)
+- **Components:** V, S
+- **Duration:**  Instantaneous
+___
+You unleash a blast of highly pressurized water in a 60-foot-long 15-foot-wide line, slashing through everything in its path. Each creature in the line must make a Dexterity saving throw, taking 10d6 slashing damage on a failure. On a successful save, a creature takes half as much damage.
+
+***At Higher Levels.*** When you cast this spell using a spell lot of 6th level or higher, the damage increases by 1d6 for each level above 5th.
+
+#### Pyroblast
+*7th-level evocation*
+___
+- **Casting Time:** 1 action
+- **Range:** 120 feet
+- **Components:** V, S, M (a piece of brimstone)
+- **Duration:**  Instantaneous
+___
+You clasp your hands together, conjuring a ball of dripping magma, launching it at a creature or object within range. Make a ranged spell attack against the target. On a hit, the target takes 13d10 fire damage and ignites. Until a creature takes an action to douse the fire, the target takes 1d10 fire damage at the start of each of its turns.
+
+***At Higher Levels.*** When you cast this spell using a spell slot of 8th level or higher, the initial damage increases by 1d10 for each slot level above 7th.
+
+#### Rain of Fire
+*5th-level evocation*
+___
+- **Casting Time:** 1 action
+- **Range:** 120 feet
+- **Components:** V, S
+- **Duration:** Concentration, up to 1 minute
+___
+A rain of small meteorites fall from the sky, exploding on impact. You cause them to fall at a point within range and in a 15-foot radius area around it. Each creature entering the area for the first time on their turn, or who starts their turn there, must make a Dexterity saving throw, taking 2d6 bludgeoning damage and 3d6 fire damage on a failed save, or half as much on a success.
+
+As a bonus action you can move the cloud up to 15 feet to a point you can see. Unattended flammable objects in the area are ignited.
+
+<div class='footnote'>PART 2 | SPELLS </div>
+
+\pagebreakNum
+
+***At Higher Levels:*** When you cast this spell using a spell slot of 6th level or higher, it deals an additional 1d12 points of fire damage for each spell level above 5th.
+
+#### Rain of Frogs
+*1st-level conjuration*
+___
+- **Casting Time:** 1 action
+- **Range:** 90 feet
+- **Components:** V, S
+- **Duration:** Concentration, up to 1 minute
+___
+Until the spell ends, frogs fall from the sky in a 20-foot-tall cylinder with a 40-foot radius centered on a point you choose within range. The area is lightly obscured.
+
+When a creature enters the spell's area for the first time on a turn or starts its turn there, it takes 1d4 bludgeoning damage (no save). The fallen frogs immediately flee, turning the area into difficult terrain.
+
+Until the spell ends, you can use a bonus action on each of your turns to move the cylinder up to 40 feet.
+
+
+#### Rain of Spiders
+*3rd-level conjuration*
+___
+- **Casting Time:** 1 bonus action
+- **Range:** 60 feet
+- **Components:** V, S, M (a spider leg)
+- **Duration:**  Concentration, up to 1 minute.
+___
+A vertical column of spiders begins to rain down in 20 foot radius, 40 foot high cylinder, centered on a location you specify. A swarm of spiders descends onto each creature within the cylinder. The GM has the creature's game statistics.
+
+This swarm is considered to be climbing on the target creature and moves with them, even if they leave the affected area, and takes its turn immediately after that creature's turn. A creature can make use its action to attempt to get them off, making a Strength (Athletics) or Dexterity (Acrobatics) check against the spell save DC of the caster. 
+
+The swarm will attack the creature it fell on if it can, or move to chase them if it has been knocked off of them. Any spiders that remain when the spell ends disappear.
+
+#### Reincarnation
+*5th-level necromancy*
+___
+- **Casting Time:** 10 minutes
+- **Range:** Self
+- **Components:** V, S, M (a bejeweled ankh worth 500 gp)
+- **Duration:** 10 days
+___
+You protect your soul with the power of the elements. If you die during the spell's duration, you are instantly returned to life with half your hit points and the material component is consumed. 
+
+This spell neutralizes any poisons and cures normal diseases afflicting you when you died. It doesn't, however, remove magical diseases, curses, and the like; if such effects aren't removed prior to dying, they still afflict you. 
+
+This spell closes all mortal wounds and restores any missing body parts.
+
+Coming back from the dead is an ordeal. You take a −4 penalty to all attack rolls, saving throws, and ability checks. Every time you finish a long rest, the penalty is reduced by 1 until it disappears.
+
+If you cast this spell again, the effect of any previously cast reincarnation spell ends. The spell ends prematurely <br/> if its material component is ever not on your person.
+
+#### Repentance
+*1st-level enchantment*
+___
+- **Casting Time:** 1 reaction, which you take when you are targeted by a weapon or spell attack
+- **Range:** 30 feet
+- **Components:** V
+- **Duration:** 1 round
+___
+A sense of remorse rushes over the triggering creature. The creature must first make a Wisdom saving throw. On a failed save, the creature must choose a new target or lose the attack or spell. 
+
+#### Righteous Smite
+*2nd-level evocation*
+___
+- **Casting Time:** 1 bonus action
+- **Range:** Self
+- **Components:** V
+- **Duration:** Concentration, up to 1 minute
+___
+The next time you hit with a melee weapon attack during this spell's duration, your attack deals an extra 2d6 radiant damage, and the next attack roll mde against this target before the end of your next turn has advantage.
+
+***At Higher Levels.*** When you cast this spell using a spell slot of 3rd level or higher, the extra damage increases by 1d6 for each slot level above 2nd.
+
+#### Ritual of Summoning
+*5th-level conjuration (ritual)*
+___
+- **Casting Time:** 10 minutes
+- **Range:** 10 feet
+- **Components:** V, S, M (a blood sapphire worth 100 gp)
+- **Duration:** 1 hour
+___
+You call forth a summoning portal in an empty space within range. Appearing as a shadowy statue of a cloaked figure, holding open the cloak to reveal a gapping swirl into the twisting nether.
+
+Using 1 minute, you can channel energy into the statue, and call forth the true name of a creature. If the creature is on your plane of existence, a shimmering mirror appears in front of it that only it can see, through the mirror the creature is able to perceive you and your surroundings, but you can not see it. 
+
+A creature can choose to ignore the mirror, in which case it vanishes after 1 minute and a new mirror can't appear in front of that creature again for another 24 hours, or pass through it, in which case it is teleported to the space in front of the summoning stone. 
+
+The ritual of summoning is only able to call creatures to it, a creature can't use the summoning stone to traverse back to their previous location.
+
+#### Shackle Undead
+*2nd-level enchantment*
+___
+- **Casting Time:** 1 action
+- **Range:** 60 feet
+- **Components:** V, S, M (a short piece of chain)
+- **Duration:** 1 minute
+___
+Choose an undead creature that you can see within range. The target must succeed on a Wisdom saving throw or be stunned for the duration or until it takes damage. At the end of each of its turns, the target can make a new Wisdom saving throw. On a success, the spell ends on the target.
+
+<div class='footnote'>PART 2 | SPELLS </div>
+
+\pagebreakNum
+
+***At Higher Levels.*** When you cast this spell using a spell slot of 3rd level or higher, you can target on additional creature for each slot level above 2nd. The creatures must be within 30 feet of each other when you target them.
+
+#### Shadow Bolt
+*Necromancy cantrip*
+___
+- **Casting Time:** 1 action
+- **Range:** 120 feet
+- **Components:** V, S
+- **Duration:** Instantaneous
+___
+You fire a blast of necrotic energy at a creature within range. Make a ranged spell attack against the target. On a hit, the target takes 1d12 necrotic damage. 
+
+Whenever you roll a 12 on the damage dice for this spell, you take 1 necrotic damage as backlash. If you roll multiple 12s, the damage is considered from a single source for purposes of concentration.
+
+The spell’s damage dealt increases by one die when you reach 5th level (2d12), 11th level (3d12), and 17th level (4d12). 
+
+#### Shadow Crash
+*5th-level necromancy*
+___
+- **Casting Time:** 1 action
+- **Range:** 120 feet
+- **Components:** V, S
+- **Duration:** Instantaneous
+___
+Shadow energy drips from your palm as you pull it towards the ground and blanket a point that you can see within range in darkness. Each creature in a 20-foot-radius sphere centered on that point must make a Constitution saving throw. A creature takes 8d8 necrotic damage on a failed save, or half as much damage on a successful one. The darkness spreads around corner and the area of the spell is heavily obscured by magical darkness until the end of your next turn.
+
+***At Higher Levels.*** When you cast this spell using a spell slot of 6th level or higher, the damage increases by 1d8 for each slot level above 5th.
+
+#### Shadow Glide
+*Conjuration cantrip*
+___
+- **Casting Time:** 1 bonus action
+- **Range:** Self (5 feet)
+- **Components:** V
+- **Duration:** Instantaneous
+___
+Obscured by shadows, you teleport to an unoccupied space you can see within 5 feet.
+
+#### Shadowfury
+*6th-level enchantment*
+___
+- **Casting Time:** 1 action
+- **Range:** 60 feet
+- **Components:** V, S
+- **Duration:** Concentration, up to 1 minute
+___
+You extend your arm and draw shadow energy down upon creatures within a 10-foot radius of a point within range. Each creature takes 5d8 psychic damage and must succeed on a Wisdom saving throw or be stunned for the duration of the spell. 
+
+A stunned creature must make a Constitution saving throw at the end of each of its turns. On a successful save, this stunning effect ends.
+
+#### Shining Force
+*2nd-level abjuration*
+___
+- **Casting Time:** 1 action
+- **Range:** 30 feet
+- **Components:** V, S
+- **Duration:** Concentration, up to 1 minute
+___
+Bright light bursts out from a creature you can see within range, pushing away hostile creatures. Each creature of your choice within a 10-foot-radius of the target must succeed a Dexterity saving throw, or be pushed 10 feet away from the target and be knocked prone. For the duration of the spell, you can use your action to burst the shining force from the chosen creature again.
+
+#### Sky Burst
+*5th-level evocation*
+___
+- **Casting Time:** 1 action
+- **Range:** 120 feet
+- **Components:** V, S
+- **Duration:**  Instantaneous
+___
+Five bolts of lightning strike five points of your choice that you can see within range. Each creature within 5 feet of the chosen points must make a Dexterity saving throw. A creature takes 4d12 lightning damage on a failed save, or half as much on a successful one. A creature in the area of more than one lightning burst is affected only once.
+
+***At Higher Levels.*** When you cast this spell using a spell slot of 6th level or higher, you can call down an additional bolt of lightning targeting another point within range for each slot level above 5th.
+
+#### Solar Wrath
+*Evocation cantrip*
+___
+- **Casting Time:** 1 action
+- **Range:** 60 feet
+- **Components:** V, S
+- **Duration:** Instantaneous
+___
+You release a blast of the sun's wrath against a creature within range. Make a ranged spell attack against the creature. On a hit, the target takes 1d8 radiant damage and, until the end of your next turn, they radiate bright light in a 10 foot radius and dim light for an additional 10 feet.
+
+This spell's damage increases by 1d8 when you reach 5th level (2d8), 11th level (3d8), and 17th level (4d8).
+
+#### Spellsteal
+*3rd-level abjuration*
+___
+- **Casting Time:** 1 action
+- **Range:** 60 feet
+- **Components:** V, S
+- **Duration:** Instantaneous
+___
+Choose a creature that you can see within range. A 1st level spell effect of your choosing that affects the target is transferred to you. For its remaining duration, the spell's effect is applied to you as if you had cast it yourself. 
+
+If the stolen spell requires concentration, you need to concentrate on it. You do not need to provide any additional spellcasting components, if any were required by the stolen spell. Spellsteal has no effect on spells that create or summon creatures, or on spell effects that can’t be removed by *dispel magic*. 
+
+You cannot change the stolen spell from how it was originally cast, unless its description explicitly allows it to be changed after being cast. 
+
+<div class='footnote'>PART 2 | SPELLS </div>
+
+\pagebreakNum
+
+To steal a spell effect of 2nd level or higher, make an ability check using your spellcasting ability. The DC equals 10 + the spell's level. On a successful check, you successfully steal the spell. 
+
+***At Higher Levels.*** When you cast this spell using a spell slot of 4th level or higher, the spell level where you automatically succeed the check increases by one for each slot level above 3rd.
+
+#### Spider Bite
+*3rd-level transmutation*
+___
+- **Casting Time:** 1 action
+- **Range:** Touch
+- **Components:** V, S
+- **Duration:** Instantaneous
+___
+You prick a target with a tiny magical fang of venom. Make a melee spell attack against a creature within reach. On a hit, the target takes 4d12 poison damage and must succeed on a Constitution saving throw or becoming poisoned for 1 minute. At the end of each of its turns, the target can make another Constitution saving throw. On a success, the target is no longer poisoned.
+
+If you miss your melee attack roll, you can concentrate (as if concentrating on a spell) to maintain the attack for another attempt until the end of your next turn. (You may make subsequent attempts until you hit or lose concentration)
+
+***At Higher Levels.*** When you cast this spell using a spell slot of 4th level or higher, the damage increases by 1d12 for each slot level above 3rd.
+
+#### Spirit Strike
+*Conjuration cantrip*
+___
+- **Casting Time:** 1 bonus action
+- **Range:** Self
+- **Components:** V, S, M (a shed claw or fang)
+- **Duration:** 1 minute
+___
+The first time you hit with a natural weapon attack or unarmed strike during this spell's duration, an ethereal animal spirit briefly manifests over your weapon. The target suffers from the attack's normal effects and they take an additional 1d6 force damage. The spell then ends.
+
+The number of attacks this spell affects increases when you reach certain levels. It affects two attacks at 5th level, three attacks at 11th level, and four attacks at 17th level.
+
+
+#### Spiritual Consultation
+*1st-level necromancy*
+___
+- **Casting Time:** 1 minute
+- **Range:** Self
+- **Components:** V, S, M (1 gp worth of incense, which the spell consumes)
+- **Duration:**  10 minutes.
+
+You call forth a spirit that is proficient in a single Intelligence- or Wisdom-based skill. The spirit is ethereal and ephemeral and cannot interact with physical objects, but can provide guidance on matters relating to the skill selected when you summon it.
+
+You can treat any check you make in the skill as if you have proficiency with it so long as the spirit can communicate with you. Alternatively, if the ability check is an Intelligence or Wisdom check you can have the spirit make the check, and it has a +8 modifier for the skill was summoned for.
+
+The spirit will follow you and cannot stray more than 5 feet from you. You can choose to release it early, dismissing it back from whence it came.
+
+#### Stardust
+*2nd-level evocation*
+___
+- **Casting Time:** 1 action
+- **Range:** Self (30-foot cone)
+- **Components:** V, S
+- **Duration:** Instantaneous
+___
+You evoke a burst of brilliant particles of stellar energy sweeping out in a 30-cone originating from you. Creatures in the radius take 3d4 force damage and the next attack roll made against them before the start of your next turn has advantage.
+
+#### Starfall
+*6th-level evocation*
+___
+- **Casting Time:** 1 action
+- **Range:** 300 feet
+- **Components:** V, S, M (a pinch of powdered glass)
+- **Duration:** 1 round
+___
+Countless flashes of pure moonlight fall to the ground in a 20-foot-radius, 40-foot-high cylinder centered on a point within range. Each creature in the cylinder must make a Dexterity saving throw. A creature takes 10d6 radiant damage on a failed save, or half as much damage on a successful one. A creature who failed the saving throw is also blinded until the end of your next turn. 
+
+If cast while outdoors with a clear view of the moon, the spell deals an additional 2d6 radiant damage.
+
+***At Higher Levels.*** When you cast this spell using a spell slot of 7th level or higher, the damage increases by 1d6 for each slot level above 6th.
+
+#### Starfire
+*1st-level evocation*
+___
+- **Casting Time:** 1 action
+- **Range:** 120 feet
+- **Components:** V, S
+- **Duration:** Instantaneous
+___
+A flash of light streaks down upon a creature of your choice within range. Make a ranged spell attack against the target. On a hit, the target takes 3d6 radiant damage, and is blinded until the end of your next turn. The blindness ends early if the target takes damage from a weapon attack or spell, as the stardust blocking its eyes is swept away. 
+
+If cast while outdoors with a clear view of the moon, the spell deals an additional 1d6 radiant damage.
+
+***At Higher Levels.*** When you cast this spell using a spell slot of 3rd level or higher, the damage increases by 1d12 for every two slot levels above 1st.
+
+<div class='footnote'>PART 2 | SPELLS </div>
+
+\pagebreakNum
+
+#### Starsurge
+*3rd-level evocation*
+___
+- **Casting Time:** 1 action
+- **Range:** Self (100-foot line)
+- **Components:** V, S, M (a rod of glass and a vial of water from a moonwell)
+- **Duration:** Instantaneous
+___
+A blast of intense moonlight bursts forward in a line 100 feet long and 5 feet wide out from you in a direction you choose. Each creature in the burst's path must make a Dexterity saving throw; creatures sensitive to sunlight have disadvantage on their save. A creature takes 6d6 radiant damage on a failed save, or half as much damage on a successful one. 
+
+If cast while outdoors with a clear view of the moon, the spell deals an additional 2d6 radiant damage.
+
+***At Higher Levels.*** When you cast this spell using a spell slot of 4th level or higher, the damage increases by 1d6 for each slot level above 3rd.
+
+#### Stinging Swarm
+*4th-level conjuration*
+___
+- **Casting Time:** 1 action
+- **Range:** 60 ft
+- **Components:** V, S
+- **Duration:**  Concentration, up to 1 minute
+___
+You conjure a magical swarm of flying insects that fill a 5 foot cube within range. For the duration of the spell, the swarm is magically replenished and cannot be destroyed. As a bonus action, you can direct the swarm to move up to 30 feet. If the swarm enters another creature's space, it stops and swarms them, stinging repeatedly, and cannot be moved until the start of your next turn. The creature takes 2d4 piercing damage and must make a Constitution saving throw, taking 2d12 poison damage on failure.
+
+#### Stone Fist
+*1st-level transmutation*
+___
+- **Casting Time:** 1 action
+- **Range:** Self
+- **Components:** V, S
+- **Duration:** 1 round
+___
+You turn your hand and forearm (or similar appendage) to stone until the start of your next turn. As part of casting the spell, you can make a melee spell attack against one creature you can reach. On a hit, the target takes 2d10 bludgeoning damage.
+
+Until the start of your next turn, you can use your reaction when you take slashing or piercing damage from an attack to gain resistance to damage from that attack. 
+
+***At Higher Levels.*** When you cast this spell using a spell slot of 2nd level or higher, the damage increases by 1d10 for each slot level above 1st.
+
+\columnbreak
+
+#### Sunfire/Moonfire
+*2nd-level evocation*
+___
+- **Casting Time:** 1 action
+- **Range:** 60 feet
+- **Components:** V, S
+- **Duration:** Instantaneous
+___
+Choose one target within range. That target must make a Dexterity saving throw or take 6d4 damage as a beam of energy strikes down from above. Each creature within 5 feet of it must also make a Dexterity save or take 3d4 damage. A successful saving throw for any target results in half damage. 
+
+The damage type is determined by the time of day: during the day, the strike is a burst of solar energy and deals fire damage. At night, the strike is composed of lunar energy and deals force damage. If cast while outdoors with a clear view of the sun or moon (as appropriate), the spell deals an additional 1d4 damage of its type to all creatures.
+
+***At Higher Levels.*** When you cast this spell using a spell slot of 3rd level or higher, the damage to the initial target increases by 2d4 and the damage to nearby creatures increases by 1d4 for each slot level above 2nd.
+
+#### Suffocate
+*4th-level transmutation*
+___
+- **Casting Time:** 1 action
+- **Range:** 60 feet
+- **Components:** V, S
+- **Duration:**  Concentration, up to 1 minute
+___
+You create a whirling sphere of air around a creature that causes them to struggle to breathe. The target must make a Constitution saving throw. On a failure, the target loses 5d8 hit points due to lack of air, has disadvantage on all ability checks, and cannot speak. On a success, the target takes half as much damage and suffers no other effects. For the duration, as an action, you can force the creation to make a saving throw against the ability again.
+
+If a target fails their saving throw against this spell 3 times in a row, they become incapacitated until they succeed on a save or the spell ends. If you don’t use your action to force the target to make a save, it counts as a success.
+
+A creature that does not need to breathe is unaffected by this spell.
+
+#### Thundercrack
+*5th-level evocation*
+___
+- **Casting Time:** 1 action
+- **Range:** Self (120-foot cone)
+- **Components:** V, S
+- **Duration:**  Instantaneous
+___
+You cause a crack of thunder to resonate throughout a huge area. Each creature in a 120-foot cone must make a Constitution saving throw. On a failed save, a creature takes 6d8 thunder damage. On a successful save, a creature takes half as much damage. A creature automatically succeed on its saving throw if it is more than 60 feet from you.
+
+***At Higher Levels.*** When you cast this spell using a spell slot of 6th level or higher, the damage increases by 1d8 for each slot level above 5th.
+
+<div class='footnote'>PART 2 | SPELLS </div>
+
+\pagebreakNum
+
+#### Thunder Pulse
+*3rd-level evocation*
+___
+- **Casting Time:** 1 action
+- **Range:** Self (15-foot cone)
+- **Components:** V, S
+- **Duration:**  Concentration, up to 1 minute
+___
+You gather the sound of thunder and can expel as a shockwave in a 15 foot cone. Each creature in that area must make a Constitution saving throw. On a failed save, a creature takes 3d8 thunder damage is knocked 10 feet away. On a successful save, the creature takes half as much damage and not being knocked away.
+
+You can create a new shockwave as your action on subsequent turn until the spell ends.
+
+***At Higher Levels.*** When you cast this spell using a spell slot of 3rd level or higher, the damage increases by 1d8 for each slot level above 2nd.
+
+#### Thunder Punch
+*1st-level evocation*
+___
+- **Casting Time:** 1 action
+- **Range:** Touch
+- **Components:** V, S
+- **Duration:**  Instantaneous
+___
+You charge your hand (or similar appendage) with thunder power. Make a melee spell attack against a creature. On a hit, there is a thunderous crash audible from up to 300 feet of you and the target takes 3d8 thunder damage, and is knocked 10 feet away from you.
+
+***At Higher Levels.*** When you cast this spell using a spell slot of 2nd level or higher, the damage increases by 1d8 for each slot level above 1st.
+
+#### Tornado
+*5th-level transmutation*
+___
+- **Casting Time:** 1 action
+- **Range:** 120 feet
+- **Components:** V, S
+- **Duration:**  Concentration, up to 1 minute
+___
+A whirling tornado erupts, filling a 20-foot-radius, 40-foot-high cylinder centered on a point within range.
+
+Any creature that starts its turn within the tornado must make a Strength saving throw. On a failed save, the creature takes 4d8 bludgeoning damage and is pushed 10 feet away and 40 feet up. On a successful save, the creature takes half as much damage and isn't pushed.
+
+As a bonus action, you can move the tornado up to 30 feet in any direction. Any ranged weapon attack against a target within 20 feet of the tornado has disadvantage, and any ranged attack that passes through it automatically misses.
+
+\columnbreak
+
+#### Touch of Chaos
+*Evocation cantrip*
+___
+- **Casting time:** 1 action
+- **Range:** 120 feet
+- **Components:** V, S
+- **Duration:** Instantaneous
+___
+You launch a beam of raw chaos energy at a creature or object within range. Make a ranged spell attack against the target. On a hit, roll a d8 to determine the damage type it deals on the table below. Then roll 1d8 for damage.
+
+d8 |Damage Type |d8 |Damage Type
+---|------------|---|-----------
+1  | Acid		| 5  | Lightning
+2  | Cold		| 6 | Poison
+3  | Fire		| 7 | Psychic
+4  | Force		| 8 | Thunder
+
+The spell creates more than one beam when you reach higher levels: two beams at 5th level, three beams at 11th level, and four beams at 17th level. You can direct the beams at the same target or at different ones. Make a separate attack roll and damage type roll for each beam.
+
+#### Unholy Weapon
+*5th-level evocation*
+___
+- **Casting Time:** 1 bonus action
+- **Range:** Touch
+- **Components:** V, S
+- **Duration:** Concentration, up to 1 hour
+___
+You imbue a weapon you touch with unholy power. Until the spell ends, the weapon creates an area of darkness <br/> in a 30-foot radius and dim light for an additional 30 feet. The bearer of the unholy weapon is immune to this effect. In addition, weapon attacks made with it deal an extra 2d8 necrotic damage on a hit. If the weapon isn’t already a magic weapon, it becomes one for the duration.
+
+As a bonus action on your turn, you can dismiss this <br/> spell and cause the weapon to emit a torrent of corrupting shadows. Each creature of your choice that you can see within 30 feet of the weapon must make a Constitution saving throw. On a failed save, a creature takes 4d8 necro&shy;tic damage, and it is blinded for 1 minute. On a successful save, a creature takes half as much damage and isn’t blinded. At the end of each Of its turns, a blinded creature can make a Constitution saving throw, ending the effect on itself on a success.
+
+#### Ursol's Vortex
+*4th-level conjuration*
+___
+- **Casting Time:** 1 action
+- **Range:** 60 feet
+- **Components:** V, S
+- **Duration:** Concentration, up to 1 minute
+___
+Choose a point that you can see within range. An elemental force that resembles a swirling vortex extends in a 10-foot radius from the point and lasts for the spell's duration.
+
+The area is considered to be difficult terrain and any creature who enters or starts their turn in the vortex must make a Strength saving throw. On failed save, the creature takes 2d6 bludgeoning damage and is pulled to an empty space nearest the vortex's center. On a successful save, the creature takes half as much damage and isn't pulled towards the center of the vortex.
+
+<div class='footnote'>PART 2 | SPELLS </div>
+
+\pagebreakNum
+
+As a bonus action, you can move the vortex up to 30 feet in any direction.
+
+***At Higher Levels.*** When you cast this spell using a spell slot of 5th level or higher, the damage increases by 1d6 for each slot level above 4th.
+
+#### Vicious Vapors
+*2nd-level transmutation*
+___
+- **Casting Time:** 1 action
+- **Range:** 60 ft
+- **Components:** V, S
+- **Duration:**  Concentration, up to 1 minute
+___
+You fill the air with poisonous vapors in a cube 5 feet on each side. A creature must make a Constitution saving throw when it enters the spell's area for the first time on their turn or starts its turn there. On a failed save, they take 1d12 poison damage and become poisoned until the end of their next turn. On a successful save, they take half as much damage and do not become poisoned.
+
+You can move the cloud of vapors up to 20 feet as a bonus action during your turn.
+
+#### Void Shift
+*4th-level necromancy*
+___
+- **Casting Time:** 1 action
+- **Range:** 60 feet
+- **Components:** V, S
+- **Duration:** Instantaneous
+___
+You call upon the void to shift the health of you and another creature. Choose a willing creature within range, you and the chosen creature exchange your current hit points, to a maximum of 40 hit points from each creature.
+
+***At Higher Levels.*** When you cast this spell using a spell slot of 5th level or higher, the maximum hit points you can exchange increases by 10 for each slot level above 4th.
+
+#### Vortex Blast
+*3rd-level evocation*
+___
+- **Casting Time:** 1 Action
+- **Range:** Self (30-foot cone)
+- **Components:** V, S
+- **Duration:**  Instantaneous
+___
+You create a sudden violent vortex that blasts outwards in a 30-foot cone, tossing characters and objects within the area. Creatures in the area take 2d6 bludgeoning damage and must succeed a Strength saving throw or be knocked 20 feet backward and 40 feet upward.
+
+***At Higher Levels.*** When you cast this spell using a spell slot of 4th level or higher, the damage increases by 1d6 for each slot level above 3rd.
+
+#### Water Blast
+*1st-level conjuration*
+___
+- **Casting Time:** 1 action
+- **Range:** 30 feet
+- **Components:** V, S
+- **Duration:**  Instantaneous
+___
+
+You conjure a ball of water before hurling it at a target. Make a ranged spell attack against the target. On a hit, the target takes 3d6 bludgeoning damage and if it is Large or smaller must make a Strength saving throw or be knocked prone.
+
+***At Higher Levels.*** When you cast this spell using a spell lot of 2nd level or higher, the damage increases by 1d6 for each level above 1st.
+
+#### Water Cannon
+*3rd-level evocation*
+___
+- **Casting Time:** 1 action
+- **Range:** Self (30-foot line)
+- **Components:** V, S
+- **Duration:**  Instantaneous
+___
+You unleash a spout of water that blasts out in a line 30-foot-long and 5 foot-wide-line. Creatures in the area must make a Strength saving throw, or take 6d6 bludgeoning damage and be pushed to an open space at the end of the line away from you. If there is no open space to move to (for example they would move into a wall or another creature), they are pushed to the closest space and take an additional 2d6 bludgeoning damage and are knocked prone. On a successful save, they take half as much damage and are not pushed.
+
+#### Windborne Weapon
+*Transmutation cantrip*
+___
+- **Casting Time:** 1 action
+- **Range:** 150 feet
+- **Components:** V, S, M (a piece of ammunition or weapon with the thrown property worth at least 1 cp)
+- **Duration:** Instantaneous
+___
+Make an attack using this spell's material component as part of the action used to cast this spell, turning it into a ranged spell attack. This attack ignores cover. On hit, it deals 1d8 damage of the weapon's damage type.
+
+***At Higher Levels.*** This spell's damage increases by 1d8 when you reach 5th level (2d8), 11th level (3d8), and 17th level (4d8).
+
+<div class='footnote'>PART 2 | SPELLS </div>
+
+\pagebreakNum
+
+## Initial Changelog
+- Asphyxiate and Freezing Touch no longer suffocate targets.
+- Changed/Rebalanced: Cataclysm, Drain Life, Lunar Strike, Rain of Fire, Starfall, Starfire, Starsurge
+- Summon Undead renamed to Conjure Undead, to avoid confusion with the version from TCE
+- Added: Create Healthstone, Create Soulstone, Create Soulwell, Decompose (Credit Matt Mercer's Critical Role), Diabolism [(Original Idea Credit)](https://www.dndbeyond.com/spells/141243-diabolism), Fire and Brimstone, Shadow Glide, Touch of Chaos
+
+## Second Changelog
+### New Spells
+- From [Kibble's Generic Elemental Spells](https://www.gmbinder.com/share/-MW5r6wBJTW_lOU6gLyU): Acid Rain, Aero Barrage, Arcane Lance, Arcane Storm, Arctic Breath, Bad Blood, Become Fire, Become Stone, Become Water, Become Wind, Cold Snap, Crackle, Crashing Wave, Dancing Wave, Earth Ripple, Echoing Lance, Electric Smite, Electrocute, Entomb, Erode, Fissure, Flash Freeze, Force Blade, Form of Fire, Form of Ice, Form of Stone, Form of the Elements, Form of Water, Form of Wind, Gale Bolt, Geyser, Hurricane Slash, Ice Spike, Jumping Jolt, Lightning Charged, Lightning Tendril, Nauseating Poison, Orbital Stones, Poisoned Dart, Poison Puff, Pressure Cutter, Sky Burst, Spider Bite, Stinging Swarm, Stone Fist, Suffocate, Thundercrack, Thunder Pulse, Thunder Punch, Tornado, Vicious Vapors, Vortex Blast, Water Cannon, Windborne Weapon
+- From [5e Spells - Occultist Spells by KibblesTasty](https://www.gmbinder.com/share/-M-Bo99CPI2-ebNpctvb): Crippling Agony, Rain of Spiders, Spiritual Consultation
+- From [Libris Mortis - 5e Spells by badooga](https://www.gmbinder.com/share/-Lyfkj5gGCuIqDlMuwPs): Animate Crawling Claw, Consumptive Field, Ghastly Stench
+- From [Create Effigy by Enraric](https://www.reddit.com/r/UnearthedArcana/comments/c5r02o/create_effigy_v21_hurt_and_harass_your_victims/): Create Effigy
+- From DndBeyond: [Chaos ~~Sphere~~Aura](https://www.dndbeyond.com/spells/913691-chaos-sphere)
+- From Silverblade's Champions of Azeroth: Comet Storm
+- From the [WC5e Spell Ideas document](https://docs.google.com/document/d/1leVhF4UYMKO9PWmVkBq-gX1PyJ_xe9pvzaOpytaeIvg/edit#): Aura of Faith, Avenger's Smite, Conjure Servant, Create Mana Gem, Hellfire, Inferno, Rain of Frogs
+
+### Spell List Changes
+#### Additions
+- **Death Knights:** Animate Crawling Claw, Arctic Breath, Bad Blood, Cold Snap, *Cloudkill*, Consumptive Field, Crippling Agony, Entomb, Flash Freeze, Ghastly Stench, Nauseating Poison, Poison Dart, Poison Puff, Spider Bite, Stinging Swarm, *Stinking Cloud*, Vicious Vapors
+- **Druids:** *Cloudkill*, *Infestation*, Nauseating Poison, Poison Puff, *Poison Spray*, Rain of Spiders, Spider Bite, Stardust, *Stinking Cloud*, Sunfire/Moonfire, Vicious Vapors
+- **Mages:** Arcane Bolt, Arcane Lance, Arcane Orb, Arcane Storm, Arctic Breath, Cold Snap, Conjure Servant, Create Mana Gem, Entomb, Flash Freeze, Force Blade, Prismatic Spray
+- **Paladins:** Aura of Faith, Avenger's Smite
+- **Priests:** Aura of Faith
+- **Shamans:** Aero Barrage, Become Fire, Become Stone, Become Water, Become Wind, Crackle, Crashing Wave, Create Effigy, Dancing Wave, Electric Smite, Electrocute, *Fire Storm*, Fissure, Form of Fire, Form of Ice, Form of Stone, Form of the Elements, Form of Water, Form of Wind, Gale Bolt, Geyser, Hurricane Slash, Jumping Jolt, Orbital Stones, Pressure Cutter, Rain of Frogs, *Ray of Frost*, Sky Burst, Spiritual Consultation, Stone Fist, Thundercrack, Thunder Pulse, Thunder Punch, Tornado, Vortex Blast, Water Blast, Water Cannon, Windborne Weapon
+- **Warlocks:** Acid Rain, Create Effigy, Erode, Hellfire, Inferno
+
+#### Removals:
+- **Druids:** Primal Savagery
+- **Death Knights:** Deathwyrm's Fury
+- **Mages:** Conjure Elemental, Flurry
+- **Shamans:** Antimagic Field, Prismatic Spray
+
+#### Unassigned:
+- Lightning Charged (should be artificer)
+
+### Spell-Specific Changes
+- Amplify or Dampen Magic renamed to Amplify/Dampen Magic, to match Enlarge/Reduce. Also lets it fit on one line in the spell lists.
+- Arcane Barrage no longer requires an attack roll. Damage reduced from a max of 15d4 to 10d4. Knockback effect now tied to secondary Strength save, max knockback reduced from 30 feet to 20. Damage now increases by 2d4 per spell slot level.
+- Arcane Blast no longer require a Dexterity save. Base damage changed to 1d4 + spellcasting ability modifier, increasing by 2d4.
+- Army of the Dead changed to Silverblade's version.
+- Bloodlust and Heroism drops the "and Heroism" part of its name, to avoid confusion with the existing spell.
+- Cataclysm: hopefully cleared up [Issue #808](https://github.com/WC5E/Warcraft-5e-Conversion/issues/808) on the github by removing the word "spell" from the line "A creature who takes fire damage from this spell--"
+- Conjure Undead (formerly known as Summon Undead) no longer allows you to choose which undead type you summon, like other conjure spells.
+- Deathwyrm's Fury spell removed.
+- Dominate Undead renamed to Control Undead, reworked so that it doesn't apply the charmed condition and therefore isn't functionally useless. Based on the conversation in [Issue #806](https://github.com/WC5E/Warcraft-5e-Conversion/issues/806).
+- Eclipse altered. No longer references Elune and An'she, requires concentration, max duration increased to 8 hours, and reworded how darkness appears.
+- Flurry spell removed.
+- Lunar Strike no longer requires a saving throw. Damage changed to 1d4 to initial target (+1d4 if in moonlight) and half damage to all creatures in an AoE. 
+- Mind blast reduced from d10 to d8 damage.
+- Shadow bolt now always deals d12 damage with no optional self-damage component. Instead, you take 1 damage per 12 rolled on a die.
+
+\pagebreak
+
+## Design Notes
+- Force damage spells that don't require saves to deal damage are designed to deal 25% less damage than average (using the rule of "spells that deal no damage on a successful save deal 25% more" from the DMG).
+- Death Knights and Druids get poison damage spells. DKs because of plague, druids because of animal venom.
+
+### Chaos "Element"
+ Does not deal a predetermined damage type, instead rolling a d8 on a table to choose an element: acid, cold, fire, force, lightning, poison, psychic, or thunder. Typically has two different sets of damage dice (such as 2d8 + 2d6), where you choose one of the d8s for damage type. If the same number is rolled twice on one of the dice sets, an additional effect occurs.
+
+##### Chaos Element Spells
+Level   | Spells
+--------|:-------:
+Cantrip |✦ Touch of Chaos
+1st     |Chaos Bolt ^XGE^
+2nd     |
+3rd     |✦ Chaos Aura, ✦ Chaos Wave
+4th     |
+5th     |✦ Chaos Breach
+
+**[Due to being incomplete, chaos spells are not integrated at this time. See next page for sketched ideas.]**
+
+\columnbreak
+
+##### Rolling Doubles (or more) Chances
+Die<br/>Size | 2 Dice | 3 Dice | 4 Dice | 5 Dice | 6 Dice <div style="position: absolute; top:68px; right:60px; width:200px; height:25px">——Chance——</div>
+----|-------|-------|-------|-------|-------|
+d4  | 25%   | 62.5% | 90.6% | 100%  | 100%
+d6  | 16.7% | 44.4% | 72.2% | 90.7% | 98.5%
+d8  | 12.5% | 34.4% | 59.0% | 79.5% | 92.3%
+d10 | 10%   | 28%   | 49.6% | 69.8% | 84.9%
+d12 | 8.33% | 23.6% | 42.7% | 61.8% | 77.7%
+d20 | 5%    | 14.5% | 27.3% | 41.9% | 56.4%
+
+##### Single target spell damage table
+Spell<br/>Level | Damage<br/>Die | Damage<br/>Range | Average<br/>Damage
+--------|-------|-------|-----------
+Cantrip |1d10   |1-10   |5.5
+1st     |2d10   |2-20   |11
+2nd     |3d10   |3-30   |16.5
+3rd     |5d10   |5-50   |27.5
+4th     |6d10   |6-60   |33
+5th     |8d10   |8-80   |44
+6th     |10d10  |10-100 |55
+7th     |11d10  |11-110 |60.5
+8th     |12d10  |12-120 |66
+9th     |15d10  |15-150 |82.5
+
+##### Multi-target spell damage table
+Spell<br/>Level | Damage<br/>Die | Damage<br/>Range | Average<br/>Damage
+--------|---------------|-------------------|-----------
+Cantrip |1d6    |1-6    |3.5
+1st     |2d6    |2-12   |7
+2nd     |4d6    |4-24   |14
+3rd     |6d6    |6-36   |21
+4th     |7d6    |7-42   |24.5
+5th     |8d6    |8-48   |28
+6th     |11d6   |11-66  |38.5
+7th     |12d6   |12-72  |42
+8th     |13d6   |13-78  |45.5
+9th     |14d6   |14-84  |48
+
+\pagebreak
+
+#### Chaos Aura
+*3rd-level evocation*
+___
+- **Casting Time:** 1 action
+- **Range:** Self (15 feet)
+- **Components:** V, S
+- **Duration:** Concentration, up to 1 minute
+___
+You create a roiling aura of chaotic energies that stretches from you in a 15-foot radius. Until the spell ends, the aura moves with you, centered on you. 
+
+Whenever another creature ends its turn in the aura or enters it for the first time on a turn, they must make a Constitution saving throw. A creature takes 3d8 + 2d6 damage on a failed save, or half as much on a successful one. Choose one of the d8s whenever you deal damage. The number rolled on that die determines the type of the damage dealt, as shown below.
+
+d8 |Damage Type |d8 |Damage Type
+---|------------|---|-----------
+1  | Acid		| 5 | Lightning
+2  | Cold		| 6 | Poison
+3  | Fire		| 7 | Psychic
+4  | Force		| 8 | Thunder
+
+**[Double die effect.]**
+
+**[Can use a BA to buff other chaos spells? Can roll more d8s for sake of choosing damage types?]**
+
+***At Higher Levels.*** When you cast this spell using a spell slot of 4th level or higher, the spell deals an additional 1d6 damage for each slot level above 3rd.
+
+#### Chaos Breach
+*5th-level evocation*
+___
+- **Casting Time:** 1 action
+- **Range:** 
+- **Components:** V, S
+- **Duration:** Instantaneous
+___
+You launch an intense beam of chaotic energies at a target within range. The target must make a Constitution saving throw, taking 4d8 + 5d6 damage, or half as much on a successful saving throw. Choose one of the d8s. The number rolled on that die determines the spell's damage type, as shown below.
+
+d8 |Damage Type |d8 |Damage Type
+---|------------|---|-----------
+1  | Acid		| 5 | Lightning
+2  | Cold		| 6 | Poison
+3  | Fire		| 7 | Psychic
+4  | Force		| 8 | Thunder
+
+If you roll the same number on both d8s, the spell deals an additional 2d8 damage to the target. Choose one of the d8s to determine the new damage type. This effect repeats until two different numbers are rolled.
+
+Until the end of your next turn (including against this spell), the target is more susceptible to the spell's initial damage type. If the creature has immunity to this damage type, it is reduced to resistance, and if it has resistance, it is suppressed for the duration.
+
+\columnbreak
+
+#### Chaos Wave
+*3rd-level evocation*
+___
+- **Casting Time:** 1 action
+- **Range:** Self (30-foot cone)
+- **Components:** V, S
+- **Duration:** Instantaneous
+___
+You release a wave of chaotic energy in a 30-foot cone. Each creature in the area must make a saving throw or take 2d8 + 2d6 damage and suffer an additional effect. A successful save results in half damage and no other effect. Choose one of the d6s and one of the d8s for each target. The number rolled on the d6 determines the spell's saving throw and additional effect and the number rolled on the d8 determines the spell's damage type, as shown below.
+
+d6| Saving Throw | Additional Effect
+--|--------------|---------
+1 | Strength     | Pushed away from you a number of feet equal to 1d4 x 5. 
+2 | Dexterity    | Knocked prone.
+3 | Constitution | Stunned until the end of its next turn.
+4 | Intelligence | Subtract 1d4 from the next saving throw it makes before the end of your next turn.
+5 | Wisdom       | Takes an additional 1d10 force damage.
+6 | Charisma     | Subtract 1d4 from the next attack roll it makes before the end of your next turn.
+
+**[Note that the above effects were pulled from a different homebrew. Some are clearly better than others, so needs to be reworked.]**
+
+d8 |Damage Type |d8 |Damage Type
+---|------------|---|-----------
+1  | Acid		| 5 | Lightning
+2  | Cold		| 6 | Poison
+3  | Fire		| 7 | Psychic
+4  | Force		| 8 | Thunder
+
+
+\pagebreakNum
+
+#### Mass Teleport
+*9th-level conjuration*
+___
+- **Casting Time:** 1 minute
+- **Range:** 300 feet
+- **Components:** V, M (expensive component, consumed)
+- **Duration:** Instantaneous
+---
+This spell instantly transports you and any number of willing creatures and/or objects of your choice that you can see within range to a destination you select. All creatures and objects must be able to fit entirely inside a 300-foot cube. You can designate creatures and objects you cannot see as targets as long as they are within an object you can see; for example, creatures inside a building.
+
+The destination you choose must be known to you, and it must be on the same plane of existence as you. Your familiarity with the destination determines whether you arrive there successfully. The DM rolls d100 and consults the table.
+
+##### Teleportation
+| Familiarity | Mishap | Similar Area | Off Target | On Target |
+|---|:---:|:---:|:---:|:---:|
+| Associated object | — | — | — | 01–100 |
+| Very familiar | 01–05 | 06–13 | 14–24 | 25–100 |
+| Seen casually | 01–33 | 34–43 | 44–53 | 54–100 |
+| Viewed once | 01–43 | 44–53 | 54–73 | 74–100 |
+| Description | 01–43 | 44–53 | 54–73 | 74–100 |
+| False destination | 01–50 | 51–100 | — | — |
+
+***Familiarity.*** "Associated object" means that you possess an object taken from the desired destination within the last six months, such as a book from a wizard's library, bed linen from a royal suite, or a chunk of marble from a lich's secret tomb.
+
+"Very familiar" is a place you have been very often, a place you have carefully studied, or a place you can see when you cast the spell. "Seen casually" is someplace you have seen more than once but with which you aren't very familiar. "Viewed once" is a place you have seen once, possibly using magic. "Description" is a place whose location and appearance you know through someone else's description, perhaps from a map.
+
+"False destination" is a place that doesn't exist. Perhaps you tried to scry an enemy's sanctum but instead viewed an illusion, or you are attempting to teleport to a familiar location that no longer exists.
+
+***On Target.*** You and your group (or the target object) appear where you want to.
+
+***Off Target.*** You and your group (or the target object) appear a random distance away from the destination in a random direction. Distance off target is 1d10 × 1d10 percent of the distance that was to be traveled. For example, if you tried to travel 120 miles, landed off target, and rolled a 5 and 3 on the two d10s, then you would be off target by 15 percent, or 18 miles. The DM determines the direction off target randomly by rolling a d8 and designating 1 as north, 2 as northeast, 3 as east, and so on around the points of the compass. If you were teleporting to a coastal city and wound up 18 miles out at sea, you could be in trouble.
+
+***Similar Area.*** You and your group (or the target object) wind up in a different area that's visually or thematically similar to the target area. If you are heading for your home laboratory, for example, you might wind up in another wizard's laboratory or in an alchemical supply shop that has many of the same tools and implements as your laboratory. Generally, you appear in the closest similar place, but since the spell has no range limit, you could conceivably wind up anywhere on the plane.
+
+***Mishap.*** The spell's unpredictable magic results in a difficult journey. Each teleporting creature (or the target object) takes 3d10 force damage, and the DM rerolls on the table to see where you wind up (multiple mishaps can occur, dealing damage each time).
