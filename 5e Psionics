@@ -1,0 +1,653 @@
+<style>
+/* GLOBAL FORMATTING  */
+
+  /* Resize page to international A4 */
+  .phb {
+    width: 210mm;
+    height: 296.8mm;
+  }
+  .phb:after { content: ""; }
+
+/* Temporary Fix for heading issues */
+    .phb p{ line-height: 15px; } 
+    .phb blockquote p{ line-height: 14px; } 
+    .phb h2{ line-height: 26px; } 
+    .phb h3{ line-height: 19px; } 
+    .phb h4{ line-height: 15px; padding-bottom: 3px; } 
+    .phb h5{ line-height: 17px; } 
+    th, td { line-height: 14px; }
+
+/* TABLE OF CONTENTS  */
+
+  /* toc specifically wants black text. This resets the headers*/
+  .toc a {
+    color: inherit !important;
+  }
+  /* Allow dot leaders to fill remaining space but not overlap */
+  .toc li span:nth-child(2) {
+    width: auto;
+    overflow: hidden;
+    white-space: nowrap;
+    display: block;
+  }
+  .toc li span:nth-child(2):after {
+    font-family: BookSanity;
+    font-size: 0.317cm;
+    font-weight: normal;
+    color: black;
+    content:
+      " ........................................"
+      "........................................."
+      ".........................................";
+    }
+
+  /* Style TOC page numbers*/
+  .toc li span:first-child {
+    float: right;
+    font-family: BookSanity;
+    font-size: 0.317cm;
+    font-weight: normal;
+    color: black;
+    margin-left: 1px;
+  }
+
+  /* Adjust TOC H3 styles */
+  .toc li h3 span:nth-child(2):after {
+  	content: " ";
+  }
+  .toc li h3 {
+    margin-bottom: 4px !important;
+    margin-top: 10px !important;
+    line-height: initial !important;
+  }
+  .toc li h3 span:first-child {
+  	line-height: 1.8em !important;
+  }
+
+  /* Reduce TOC list indentation*/
+  .toc ul ul {
+  	margin-left: 10px !important;
+  }
+  .toc>ul>li {
+    margin-bottom: initial !important;
+  }
+
+
+/* TABLES AND BLOCKS */
+
+  /* Clear internal padding and add gap above for green note blocks*/
+  .phb blockquote {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .phb blockquote { margin-top: 1em;
+  }
+
+
+/* INK BLOT STYLES */
+
+  /* Root style for inkblots. Use alone, or together with
+  one of the inkb lotstyle classes below. Essentially:
+  <img url='{url}' class='inkblot inkblot-blue' />
+  */
+  .inkblot {
+    position: absolute;
+    mix-blend-mode: multiply;
+    opacity: 0.6;
+  }
+
+  .inkblot-blue {
+    filter: hue-rotate(190deg) saturate(120%)
+  }
+
+  .inkblot-green {
+    filter: hue-rotate(120deg)
+  }
+
+</style>
+
+<style>
+/* Background */
+  .phb{ background-image: url('https://gmbinder.com/images/KN1O92T.png') }
+  .phb{ background-size: cover }
+
+/* Notes */
+  .phb section blockquote {background-color: #f6e5d4}
+  .phb hr + section blockquote tr:nth-child(odd) td {background-color: transparent;}
+
+/* Tables */
+  table tr:nth-child(odd) td {background-color: #cccccc}
+
+/* Footer */
+  .phb .pageNumber {color: rgba(0, 0, 0, 0.5)}
+  .phb .footnote {color: rgba(0, 0, 0, 0.5)}
+  .phb:nth-child(odd):after{ 
+    content          : '';
+    position         : absolute;
+    bottom           : -7px;
+    left             : 10px;
+    z-index          : -1;
+    height           : 336px;
+    width            : 100%;
+    background-image : url('https://www.gmbinder.com/images/bNTz1nk.png');
+    background-size  : cover;
+}
+
+.phb:nth-child(even):after{ 
+    content          : '';
+    position         : absolute;
+    bottom           : -7px;
+    left             : -10px;
+    z-index          : -1;
+    height           : 336px;
+    width            : 100%;
+    background-image : url('https://www.gmbinder.com/images/6NCzAN0.png');
+    background-size  : cover;
+}
+
+  /* Footer with white text against dark backgrounds */
+  .phb .footnote.footnote-white,
+  .phb .footnote.footnote-white + .pageNumber,
+  .phb .footnote.footnote-white + section .pageNumber {
+    color: rgba(255,255,255,0.8);
+  }
+
+
+/* Page Number */
+.phb .pageNumber{
+    position   : absolute;
+    bottom     : 30px;
+    width      : 50px;
+    text-align : center;
+}
+.phb:nth-child(even) .pageNumber{
+    left      : 12px;
+}
+.phb:nth-child(odd) .pageNumber{
+    right      : 12px;
+}
+
+.phb .pageNumber.auto{
+    position   : absolute;
+    bottom     : 41px;
+    width      : 50px;
+    text-align : center;
+}
+.phb:nth-child(even) .pageNumber.auto{
+    left      : 12px;
+}
+.phb:nth-child(odd) .pageNumber.auto{
+    right      : 12px;
+}
+
+</style>
+
+## Psionic Magic
+### Psionic Energy
+Certain racial traits, class features, or other abilities provide characters with a wellspring of psionic energy known as Psionic Energy dice that can be used to fuel psychic powers.
+
+***Psionic Energy Dice.*** The number of Psionic Energy dice you have, and their size, depends on their source. Multiple sources of Psionic Energy dice do not stack: Use only the highest die size and number of dice. Some powers expend the Psionic Energy dice they use, and you can't use a power if it requires you to use a die when your dice are all expended.
+
+You regain all your expended Psionic Energy dice when you finish a long rest. In addition, as a bonus action, you can regain one expended Psionic Energy die, but you can't do so again until you finish a short or long rest.
+
+***Dice Size.*** Unless otherwise stated, your Psionic Energy dice are d6s. The size of these dice may increase with certain feats or if you have levels in a class that provides Psionic Energy dice, such as the Psi Warrior fighter subclass or the Soulknife rogue subclass. 
+
+***Multiclassing.*** If you have levels in multiple classes with Psionic Energy dice, add those levels together for the purposes of determining the size of those dice.
+
+### Psionic Magic
+***Psionic Components.*** Psionic magic, like traditional magic spells such as those cast by a cleric or wizard, has physical requirements known as spell components: verbal, somatic, and material components. Unlike traditional spells, these components are used as mnemonic tools to help reduce the immense mental burden of casting psionic magic.
+
+A verbal component may not be a prayer to a god or an arcane set of sounds whose specific pitch and resonance conjure a spell, but may instead be a nursery rhyme that brings forth memories of childhood slumber to cause a group of goblins to fall asleep. A somatic component may not be an intricate set of movements, but instead could be gestures with subconscious associations, such as "a raised arm warding off a blow to help bring forth a magical shield.
+
+Similarly, certain material components may have symbolic associations that help form a psionic spell. As an example, the phrase *a copper penny for your thoughts* is common enough that the use of a copper piece can help form the mindset needed to cast the *detect thoughts* spell. Alternatively, the energy from the destruction of a consumed component can help provide a boost to bring forth more powerful magic.
+
+***Ignoring Components.*** Since these components are merely mnemonic aids, a user of psionic magic can cast spells without providing one or more of them. However, doing so is difficult and mentally straining. The caster must make an ability check using their spellcasting modifier against a DC of 10 + the spell's level. On a failure, the spell fails and the spell slot is wasted. This ability does not allow a caster to ignore the requirement of material components with a cost.
+
+\columnbreak
+
+## Sources 
+### Psionic Races
+- [3.5 SRD - Psionic Races](https://srd.dndtools.org/srd/races/racesPsionic.html). Reference material.
+- [Dromite - Shovewere](https://www.reddit.com/r/dndnext/comments/fpt1fw/dromite_for_5th_edition/). Ideas taken: Energy ray differences based on caste.
+- [Dromite - KenMarable](https://www.dndbeyond.com/races/577-dromite). Ideas taken: Dissolution caste, alternate fire caste name, additional caste powers.
+- [Shardmind by Shoony](https://homebrewery.naturalcrit.com/share/z0nufWGx9fPS)
+- [Shardmind](https://docs.google.com/document/d/1UADYE4W6KCt7V2KjJT915rChnLvHarGBtHgXPhWQQSU/edit)
+- [Psionic Character Options](https://www.gmbinder.com/share/-M5QW87r8dYPT-GrGoW3)
+
+\pagebreak
+
+## Dragonborn, Gem
+
+\pagebreak
+
+## Dromites
+### Dromite Traits
+Your dromite character has the following traits.
+
+***Ability Score Increase.*** Your Charisma score increases by 2.
+
+***Creature Type.*** You are a Humanoid.
+
+***Age.*** Dromites mature a little faster than humans and live less than a century.
+
+***Alignment.*** Dromites tend towards no particular alignment. The best and the worst are found among them.
+
+***Size.*** Dromites stand about 3 feet tall and weight about 35 pounds. Your size is Small.
+
+***Speed.*** Your base walking speed is 25 feet.
+
+***Blindsight.*** Due to your antennae, you have blindsight with a range of 10 feet. Within that range, you can effect&shy;ively see anything that isn't behind total cover, even if you're blinded or in darkness. Moreover, you can see an invisible creature within that range, unless the creature successfully hides from you.
+
+***Collective Experience.*** You can actively tap into the Dromite hive-mind to gain an edge in situations that you are not personally experienced in. As a bonus action, you tap into the hive-mind and may roll one Psionic Energy die to any ability check in which you do not already have proficiency. 
+
+You can use this bonus action a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest.
+
+***Compound Eyes.*** You have proficiency in Perception.
+
+***Energy Beam.*** You know the *energy beam* talent. The damage type you deal with it is determined by your caste. The save DC is Charisma-based.
+
+***Keen Smell.*** Thanks to your antennae, you have advantage on Wisdom (Perception), Wisdom (Survival), and Intelligence (Investigation) checks that involve smell.
+
+***Natural Armor.*** You have a hardened layer of skin, similar to an exoskeleton. When you aren’t wearing armor, your base AC is 12 + your Dexterity modifier. You can use your natural armor to determine your AC if the armor you wear would leave you with a lower AC. A shield’s benefits apply as normal while you use your natural armor.
+
+***Naturally Psionic.*** Dromites are naturally psionic creatures. You have a number of Psionic Energy dice equal to your proficiency bonus, each of which are a d4. You have one or more powers which use these dice, based on your caste.
+
+***Caste.*** Dromites are arranged into four castes: the glimmer caste, ice caste, pyre caste, and voice caste. Choose one of these castes.
+
+#### Dissolution Caste
+Dissolution Caste dromites have the following traits.
+
+***Ability Score Increase.*** Your Constitution score increases by 1.
+
+***Acid Affinity.*** You have resistance to acid damage and deal acid damage with your energy beam.
+
+***Find the Weak Spot.*** When you make an attack roll against a construct or object, you can expend a Psionic Energy die and add the number rolled to the total.
+
+
+#### Glimmer Caste
+Rarely resting in their pursuit of life’s tasks, the Glimmer Caste always seems to move at high speed. Members of the Glimmer Caste often seem to succeed at whatever they put their minds to, if not at first than on one of their many subsequent attempts. As such they’re seen in many positions across Dromite hive-cities.
+
+***Ability Score Increase.*** Your Dexterity score increases by 1.
+
+***Lightning Affinity.*** You have resistance to lightning damage and deal lightning damage with your energy beam.
+
+***Speed Burst.*** When you move on your turn in combat, you can double your speed until the end of the turn. Once you use this trait, you can't use it again until you move 0 feet on one of your turns, unless you expend a Psionic Energy die.
+
+#### Ice Caste
+Slow to make decisions but often right. The analytical Ice Caste are often the scholars and artisans of a Dromite hive-city.
+
+***Ability Score Increase.*** Your Intelligence score increases by 1.
+
+***Calculating Mind.*** If you fail an Intelligence ability check, you can roll one Psionic Energy die and add the number rolled to the check, potentially turning failure into success. You expend the die only if the roll succeeds.
+
+***Cold Affinity.*** You have resistance to cold damage and deal cold damage with your energy beam.
+
+#### Pyre Caste
+Quick to anger, but also quick to laugh and forgive. Members of the Pyre Caste often serve as warriors and laborers within Dromite society.
+
+***Ability Score Increase.*** Your Strength score increases by 1.
+
+***Bold Spirit.*** You have advantage on saving throws against the frightened condition.
+
+***Fire Affinity.*** You have resistance to fire damage and deal fire damage with your energy beam.
+
+#### Voice Caste
+Consummate artists who revel in all types of performance but especially song. The Voice Caste are most often the artists and entertainers in a hive-city but they’re also commonly seen as diplomats and envoys in lands beyond.
+
+***Ability Score Increase.*** Your Wisdom score increases by 1.
+
+***Musical Talent.*** When you make a Charisma (Performance) check or an ability check involving musical instruments, you can roll a Psionic Energy die and add the number rolled to the ability check.
+
+***Powerful Hearing.*** You have advantage on Wisdom (Perception) checks that rely on hearing and on saving throws against the deafened condition.
+
+***Thunder Affinity.*** You have resistance to thunder damage and deal thunder damage with your energy beam.
+
+\pagebreak
+
+## Elans
+### Elan Traits
+Your elan character has the following traits.
+
+***Ability Score Increase.*** Like humans, elans have a widely varied nature. Increase one ability score by 2 and increase a different one by 1, or increase three different scores by 1.
+
+***Creature Type.*** You are a Humanoid.
+
+***Age.*** Elans usually start their new life as a young adult in their early twenties. An elan has no theoretical maximum lifespan, potentially living for thousands of years.
+
+***Alignment.*** Elans tend toward no particular alignment. The best and the worst are found among them.
+
+***Size.*** Elans vary widely in height and build, from barely 5 feet to well over 6 feet tall. Regardless of your position in that range, your size is Medium.
+
+***Speed.*** Your base walking speed is 30 feet.
+
+***Aberrant Mind.*** Although human in appearance, elans have rather alien minds. You count as an aberration instead of humanoid for the purposes of spell and effects that cause the charmed, frightened, or paralyzed conditions.
+
+***Meditation.*** Elans don't need to sleep. Instead, you meditate in a deep trance for 4 hours a day. While in this trance, you concentrate on suffusing your body with psionic energy, healing the hurts of the day, and restoring animation and resiliency to your tissues. After resting in this way, you gain the same benefit that a human does from 8 hours of sleep.
+
+***Naturally Psionic.*** Elans are naturally psionic creatures. You have a number of Psionic Energy dice equal to your proficiency bonus, each of which are a d6.
+
+***Repletion.*** You can take an action to expend a Psionic Energy die, channeling your psionic power to nourish yourself for the next 24 hours, as if you consumed sufficient food and water for a day.
+
+***Resilience.*** When you take damage, you can use your reaction to expend one Psionic Energy die and roll it. Add your Intelligence, Wisdom, or Charisma modifier to the number rolled, and reduce the damage by that total. Choose which ability score to use when you select this race.
+
+***Resistance.*** If you fail a saving throw, you can roll one Psionic Energy die and add the number rolled to the save, potentially turning failure into success. You expend the die only if the roll succeeds.
+
+***Telepathy.*** You can speak telepathically to any creature you can see within 60 feet of you. Your telepathic utterances are in a language you know, and the creature understands you only if it knows that language. Your communication doesn't give the creature the ability to respond to you telepathically.
+
+***Languages.*** You can speak, read, and write Common and one extra language of your choice. Elans typically learn the languages of other peoples they deal with, including obscure dialects. They are fond of sprinkling their speech with words borrowed from other tongues: Orc curses, Elvish musical expressions, Dwarvish military phrases, and so on.
+
+\pagebreak
+## Foulborn
+- 4e Player's Handbook 3
+
+\pagebreak
+
+## Locathah
+(Deep One Hybrid. Needs name change/lore.)
+- Ability Scores: Str +2; Dex +1
+- Size: Medium
+- Speed: 30 ft., swim 30 ft.
+- Age. Locathah mature to adulthood by the age of 10 but have been known to live up to 80 years.
+- Alignment. Most locathah are true neutral or have some aspect of neutrality in their alignment. They tend toward good, coming from a culture where compassion for the downtrodden is a commonality.
+- Natural Armor. You have tough, scaly skin. When you aren't wearing armor, your AC is 12 + your Dexterity modifier. You can use your natural armor to determine your AC if the armor you wear would leave you with a lower AC. A shield's benefits apply as normal while you use your natural armor.
+- Observant & Athletic. You have proficiency in the Athletics and Perception skills.
+- Leviathan Will. You have advantage on saving throws against being charmed, frightened, paralyzed, poisoned, stunned, or put to sleep.
+- Limited Amphibiousness. You can breathe air and water, but you need to be submerged at least once every 4 hours to avoid suffocating.
+- Size. Locathah stand between 5 and 6 feet tall and average about 150 pounds. Your size is Medium.
+- Language. You can speak, read, and write Aquan and Common.
+
+\pagebreak
+
+## Maenads
+### Maenad Traits
+***Ability Score Increase.*** Your Charisma score increases by 2.
+
+***Creature Type.*** You are a Humanoid.
+
+***Age.*** Maenads mature at the same rate as humans, but they're considered young until they reach the age of 50. On average, they live about 350 years.
+
+***Alignment.*** Maenads know that self-control is their best path to a fulfilling life. Thus, they lean strongly toward law. Generally, they value and protect others’ self-control as well as their own, and so are good-aligned more often than not.
+
+***Size.*** Maenads are somewhat taller than humans, and they range from 5 to well over 6 feet tall. Your size is Medium.
+
+***Speed.*** Your base walking speed is 30 feet.
+
+***Inner Rage.*** You are immune to the *calm emotions* spell.
+
+***Natural Sailor.*** You have advantage on checks made with water vechicles and Strength (Athletics) checks made to swim.
+
+***Naturally Psionic.*** Maenads are naturally psionic creatures. You have a number of Psionic Energy dice equal to your proficiency bonus, each of which are a d6.
+
+***Outburst.*** As a bonus action, you can dampen your mental processes to gain a boost of raw power. This transformation lasts for 1 minute, until you die, or until you revert to normal as a bonus action. You can outburst a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest. For the duration of the outburst, you gain the following:
+- You have advantage on all Strength checks and saving throws.
+- Once per turn, when you make a melee weapon attack using Strength, you can roll a Psionic Energy die and add it to the damage roll.
+- You have disadvantage on all Intelligence and Charisma checks and saving throws.
+- You have disadvantage on concentration checks.
+
+***Scream of Rage.*** When you take the Attack action on your turn, you can replace one of your attacks with an infused scream of rage, affecting a 15-foot cone. Each creature in that area must make a Constitution saving throw (DC = 8 + your Constitution modifier + your proficiency bonus). 
+
+On a failed save, the creature takes 1d10 thunder damage and is deafened until the beginning of your next turn. The  or half as much damage on a successful save. This damage increases by 1d10 when you reach 5th level (2d10), 11th level (3d10), and 17th level (4d10).
+
+You can use your Scream of Rage a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest.
+
+\pagebreak
+
+## Shardmind
+### Shardmind Traits
+***Ability Score Increase.*** Your Intelligence score increases by 2. Your Wisdom or Charisma score increases by 1.
+
+***Age.***
+
+***Alignment.*** 
+
+***Size.*** Shardminds stand about 6 feet tall and weight about 200 pounds. Your size is Medium.
+
+***Speed.*** Your base walking speed is 30 feet.
+
+***Creature Type.*** You are a Construct.
+
+***Hardened Crystal.*** Your body is composed of thousands of crystal shards. While you aren't wearing armor, your Armor Class is 14 + your Dexterity modifier. You can use your natural armor to determine your AC if the armor you wear would leave you with a lower AC. A shield's benefits apply as normal while you use your natural armor.
+
+***Crystalline Body.*** You have resistance to poison damage and immunity to disease, and you have advantage on saving throws against being paralyzed or poisoned. You don't need to eat, drink, or breathe.
+
+***Crystalline Mind.*** You have resistance to psychic damage. You can telepathically speak to any creature you can see within 30 feet of you. You don't need to share a language with the creature for it to understand your telepathy, but it must be able to understand at least one language. 
+
+***Living Construct.*** If the *mending* spell is cast on you, you can spend a Hit Die, roll it, and regain a number of hit points equal to the roll plus your Constitution modifier (minimum of 1 hit point).
+
+In addition, you are able to benefit from several spells that preserve life but that normally don't affect Constructs: *cure wounds*, *healing word*, *mass cure wounds*, *mass healing word*, and *spare the dying*.
+
+***Shard Swarm.*** As a bonus action, you loosen your mental grip on your physical form, turning into a swarm of shards and teleporting up to 30 feet to an unoccupied space you can see. You can use this trait a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest.
+
+Starting at 3rd level, you can distract nearby foes when you use this trait, giving you advantage on attack rolls against creatures within 5 feet until the end of your turn.
+
+***Languages.*** 
+
+\pagebreak
+
+## Synad
+### Synad Traits
+
+\pagebreak
+## Thri-Kreen
+#### Thri-kreen Traits
+***Ability Score Increase.*** Your Dexterity increases by 2. Your Strength increases by 1.
+
+***Creature Type.*** You are a Monstrosity.
+
+***Age.*** Thri-kreen age and reach adulthood twice as fast as humans, rarely living longer than thirty years.
+
+***Alignment.*** Thri-kreen have virtually no social structure other than the clutches they form with their closest allies. The notion of sophisticated rules for social behavior is foreign to them. They are almost always chaotic in alignment, and often neutral with respect to good and evil.
+
+***Size.*** Thri-kreen are typically six to seven feet tall and weigh about 200 pounds. Your size is Medium.
+
+***Speed.*** Your walking speed is 40 feet.
+
+***Desert Carapace.*** While you aren’t wearing armor, your carapace gives you a base Armor Class of 13 + your Dexterity modifier and advantage on Dexterity (Stealth) checks made to hide in a desert. You can use your natural armor to determine your AC if the armor you wear would leave you with a lower AC. A shield’s benefits apply as normal while you use your natural armor. 
+
+***Darkvision.*** You can see in dim light within 60 feet of yourself as if it were bright light, and in darkness as if it were dim light. You discern colors in that darkness only as shades of gray.
+
+***Desert Acclimated.*** You are acclimated to extreme heat environments.
+
+***Natural Weapons.*** Your mandibles and each of your four claws are natural weapons, which you can use to make unarmed strikes. If you hit with them, the strike deals 1d4 + your Strength modifier piercing damage (with your bite) or slashing damage (with your claws), instead of the bludgeoning damage normal for an unarmed strike.
+
+***Poisonous Bite.*** Starting at Xth level, when hit with your bite attack, you can choose to inject poison. The target must make a Constitution saving throw (DC 8 + your proficiency bonus + your Constitution modifier). On a failed save, the creature is paralyzed for 1 minute. The creature can attempt another saving throw at the beginning of each of its turns, ending the effect on a success.
+
+You can use this trait a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest.
+
+***Non-Humanoid Shape.*** Due to their six-limbed forms, thri-kreen cannot easily wear armor designed for four-limbed creatures. Armor can be converted to fit a thri-kreen by spending an additional 50% of its cost.
+
+***Secondary Arms.*** You have two slightly smaller secondary arms below your primary pair of arms. The secondary arms can manipulate an object, open or close a door or container, pick up or set down a Tiny object, or wield a weapon that has the light property.
+
+***Sleepless.*** You do not require sleep and magic can't put you to sleep. You can choose to remain conscious during a long rest, though you must still refrain from strenuous activity to gain the benefit of the rest.
+
+***Standing Leap.*** Your long jump is up to 40 feet and your high jump is up to 20 feet, with or without a running start.
+
+***Thri-Kreen Weapon Training.*** You have proficiency with the dart, halberd, glaive, and pike.
+
+***Naturally Psionic.*** Thri-Kreen naturally have a Psionic Talent die, the starting size of which is a d6. See Psionic Talent on page 1 for the basic rules on Psionic Talent dice. You can use your Psionic Talent die in the following ways:
+___
+- ***Thri-Kreen Telepathy.*** As long as your Psionic Talent die is available, you can speak telepathically to any creature you can see within 120 feet of you. Your telepathic utterances are in a language you know, and the creature understands you only if it knows that language. Your communication doesn’t give the creature the ability to respond to you telepathically.
+- ***Chameleon Carapace.*** As an action, you can change the color of your carapace to match the color and texture of your surroundings, giving you advantage on Dexterity (Stealth) checks made to hide in those surroundings when not wearing armor. This benefit lasts until you finish a long rest or use this action again. When you take this action, your Psionic Talent die decreases by one die size.
+
+***Languages.*** You can speak, read, and write Kreen. Kreen is a language made by the clacking of mandibles and waving of antannae, a method of communication difficult to interpret and impossible to duplicate by other creatures. You can read and write Common, but cannot speak it (or any other language) without the usage of your telepathy.
+
+\pagebreak
+## Xephs
+### Xeph Traits
+***Ability Score Increase.*** Your Dexterity increases by 2. Your Charisma increases by 1.
+
+***Creature Type.*** You are a Humanoid.
+
+***Age.*** Xeph reach adulthood at about the same rate as humans, but age a little slower and can live up to 150 years old.
+
+***Alignment.*** 
+
+***Size.*** Xeph are usually slightly shorter than humans. Your size is Medium.
+
+***Speed.*** Your walking speed is 30 feet.
+
+***Darkvision.*** You can see in dim light within 60 feet of yourself as if it were bright light, and in darkness as if it were dim light. You discern colors in that darkness only as shades of gray.
+
+***Acrobatic Entertainer.*** You have proficiency in Acrobatics and Performance.
+
+***Psionic Resistance.*** You have advantage on all Intelligence, Wisdom, and Charisma saving throws against magic.
+
+***Naturally Psionic.*** Xeph are naturally psionic creatures. You have a number of Psionic Energy dice equal to your proficiency bonus, each of which are a d4.
+___
+- **Burst.** You can put on a burst of speed as a bonus action, increasing your movement speed by 10 feet for 1 minute. When you take this bonus action, your Psionic Talent die decreases by one die size.
+- **Soulknife.** As long as your Psionic Talent die is available, you can create a shimmering blade of psychic energy. Whenever you take the Attack action, you can manifest a psychic dagger from your free hand and make the attack with that blade. It can deal either piercing or psychic damage on a hit (your choice). The blade vanishes immediately after it hits or misses its target, and it leaves no mark on its target if it deals psychic damage.
+- This movement speed boost increases by 10 feet when you reach 5th level (+20 feet), 11th level (+30 feet), and 17th level (+40 feet).
+
+***Languages.*** You can speak, read, and write Common and Xeph.
+
+\pagebreak
+## Yuan-Ti
+
+\pagebreak
+
+##### Random Starting Ages
+Race    | Adulthood | Barbarian <br/> Rogue <br/> Sorcerer <br/> Soulknife <br/> Wilder | Bard <br/> Fighter <br/> Paladin <br/> Ranger <br/> Psychic Warrior | Cleric <br/> Druid <br/> Monk <br/> Psion <br/> Wizard |
+--------|:---------:|:------:|:--------:|:-------:
+Dromite     | 13 years  | +1d4  | +1d6  | +2d6
+Duergar     | 40 years  | +3d6  | +5d6  | +7d6
+Elan        | 20 years  | +2d4  | +2d6  | +3d6
+Githyanki   | 15 years  | +1d4  | +1d6  | +2d6
+Githzerai   | 15 years  | +1d4  | +1d6  | +2d6
+Half-giant  | 30 years  | +3d6  | +2d6  | +4d6
+Human       | 15 years  | +1d4  | +1d6  | +2d6
+Maenad      | 40 years  | +1d6  | +4d6  | +6d6
+Thri-kreen  |  6 years  | +1d4  | +1d4  | +1d4
+Xeph        | 18 years  | +1d4  | +2d4  | +2d6
+
+##### Aging Effects
+Race        | Middle<br/>Age | Old | Venerable  | Maximum<br/>Age
+------------|:---------:|:---------:|:---------:|:---------------:|
+Dromite     | 30 years  | 55 years  | 75 years  | +2d20 years
+Duergar     | 125 years | 188 years | 250 years | +2d% years
+Elan        | 200 years | 400 years | 1,000 years| +10d% years
+Githyanki   | 35 years  | 50 years  | 70 years  | +2d20 years
+Githzerai   | 35 years  | 55 years  | 80 years  | +2d20 years
+Half-giant  | 60 years  | 80 years  | 120 years | +4d% years
+Human       | 35 years  | 53 years  | 70 years  | +2d20 years
+Maenad      | 90 years  | 150 years | 220 years | +2d% years
+Thri-kreen  | 16 years  | 20 years  | 25 years  | +1d4 years
+Xeph        | 45 years  | 85 years  | 120 years | +2d20 years
+
+##### Bonus Power Points
+| Race          | Bonus<br/>Points | Level<br/>Adjustment |
+|---------------|-----------------:|---------------------:|
+| Blue          | 1 | +1 |
+| Dromite       | 1 | +1 |
+| Duergar       | 3 | +1 |
+| Elan          | 2 | +0 |
+| Githyanki     | 3 | +2 |
+| Githzerai     | 2 | +2 |
+| Half-Giant    | 2 | +1 |
+| Maenad        | 2 | +0 |
+| Synad         | 3 | +0 |
+| Thri-kreen    | 1 | +2 |
+| Xeph          | 1 | +0 |
+| (Wild Talent) | 2 | N/A |
+
+\columnbreak
+##### Random Height and Weight
+Race &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     | | Base <br/> Height |&nbsp;&nbsp;| Height <br/> Modifier |&nbsp;&nbsp;| Base<br/>Weight | | Weight Modifier 
+--------------------|-|:------------------|-|:------------------|-|:---------------|-|:-------------|
+Dromite             | | 2′ 8″ | | +2d4    | | 30 lb.    | | × 1 lb.
+Duergar, male       | | 3′ 9″ | | +2d4    | | 110 lb.   | | × (2d4) lb.
+Duergar, female     | | 3′ 7″ | | +2d4    | | 80 lb.    | | × (2d4) lb.
+Elan, male          | | 4′ 10″| | +2d10   | | 120 lb.   | | × (2d4) lb.
+Elan, female        | | 4′ 5″ | | +2d10   | | 85 lb.    | | × (2d4) lb.
+Githyanki, male     | | 5′ 3″ | | +2d10   | | 120 lb.   | | × (2d4) lb.
+Githyanki, female   | | 5′ 2″ | | +2d10   | | 85 lb.    | | × (2d4) lb.
+Githzerai, male     | | 5′ 2″ | | +2d10   | | 110 lb.   | | × (2d4) lb.
+Githzerai, female   | | 5′ 1″ | | +2d10   | | 80 lb.    | | × (2d4) lb.
+Half-giant, male    | | 6′ 4″ | | +2d12   | | 220 lb.   | | × (2d6) lb.
+Half-giant, female  | | 6′ 1" | | +2d12   | | 180 lb.   | | × (2d6) lb.
+Human, male         | | 4' 10"| | +2d10   | | 120 lb.   | | × (2d4) lb.
+Human, female       | | 4' 5" | | +2d10   | | 85 lb.    | | × (2d4) lb.
+Maenad, male        | | 5′ 4″ | | +2d10   | | 150 lb.   | | × (2d4) lb.
+Maenad, female      | | 5′ 3″ | | +2d10   | | 120 lb.   | | × (2d4) lb.
+Thri-kreen, male    | | 5′ 2″ | | +2d10   | | 135 lb.   | | × (2d6) lb.
+Thri-kreen, female  | | 4′ 6″ | | +2d10   | | 100 lb.   | | × (2d6) lb.
+Xeph, male          | | 4′ 8″ | | +2d10   | | 100 lb.   | | × (2d4) lb.
+Xeph, female        | | 4′ 4″ | | +2d10   | | 75 lb.    | | × (2d4) lb.
+
+
+\pagebreak
+
+# Psionic Classes
+## Subclasses
+### Artificer: Aegis
+### Barbarian: 
+### Bard: 
+### Cleric: 
+### Druid: 
+### Fighter: Psi Warrior
+### Fighter: 
+### Monk: Shard Disciple
+- Shardmind racial class. See 4e book Player's Handbook 3, page 19
+
+### Monk: 
+### Paladin: 
+### Ranger: 
+### Rogue: Soulknife
+### Rogue: 
+### Sorcerer: Aberrant Mind
+### Sorcerer: 
+### Warlock: 
+### Wizard: Cerebremancy
+
+## Psionic Feats
+
+### Elan XXX
+*Prerequisite: Elan*
+
+You gain the following abilities:
+- ***Reconstruction.*** You can take a bonus action to try to repair damaged tissues; you can take this bonus action even when unconscious. Roll your Psionic Energy die. You can expend up to that many Hit Dice to regain hit points, as if you had done so as part of a short rest.
+- **Retaliation/Retribution.** Deal psychic damage to attacker.
+
+### Shardmind Feats
+- https://dnd4.fandom.com/wiki/Shard_swarm
+
+## Psionic Backgrounds
+## Psionic Equipment
+#### Deep Crystal Weapon
+## Psionic Spells
+#### Adapt Body
+#### Attraction
+#### Aura Sight
+#### Aversion
+#### Blind Spot
+*Enchantment cantrip*
+___
+- **Casting Time:** 1 action
+- **Range:** 120 feet
+- **Components:** V, S
+- **Duration:** Concentration, up to 1 minute
+---
+You erase your image from the mind of one creature you can see within 120 feet of you; the target must succeed on a Wisdom saving throw, or you are invisible to it until the spell ends or you do something harmful to it. If you do anything that would cause the creature to suspect an invisible creature, such as opening a locked door, it can attempt another saving throw to end the spell.
+
+***Make into a 1st-level spell?***
+
+#### Create Psicrystal
+*Transmutation cantrip*
+
+#### Crystal Shard
+*Conjuration cantrip*
+___
+- **Casting Time:** 1 action
+- **Range:** 120 feet
+- **Components:** V, S
+- **Duration:** Instantaneous
+---
+You create and fire a shard of crystal at a creature you can see within range. Make a ranged spell attack against the target. On a hit, the target takes 1d10 piercing damage.
+
+The spell creates more than one shard when you reach higher levels: two shards at 5th level, three shards at 11th level, and four shards at 17th level. You can direct the shards at the same target or at different ones. Make a separate attack roll for each shard
+
+\pagebreakNum
+
+#### Energy Beam
+As an action, you target one creature you can see within 90 feet of you. The target must succeed on a Dexterity saving throw or take 1d8 acid, cold, fire, lightning, or thunder damage (your choice).
+
+The talent's damage increases by 1d8 when you reach 5th level (2d8), 11th level (3d8), and 17th level (4d8).
