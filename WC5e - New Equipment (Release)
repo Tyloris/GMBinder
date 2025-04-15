@@ -1,0 +1,461 @@
+<style>
+
+/* background image*/
+.phb {
+  background: white;
+}
+
+/* Text */
+.phb h1+p::first-letter {
+  float: none;
+  font-family: BookSanity;
+  font-size: 9.84pt;
+  color: #000;
+  line-height: 1.3em;
+  font-weight: normal;
+}
+
+.phb h4,
+.phb h3,
+.phb h2,
+.phb h1 {
+  font-family: BookSanity;
+  font-weight: normal;
+}
+
+.phb h1 {
+  font-size: 30pt;
+}
+
+.phb h2 {
+  font-size: 21, 84pt;
+}
+
+.phb h3 {
+  font-size: 18pt;
+  border-bottom: 1pt solid #000
+}
+
+.phb h4 {
+  font-size: 14, 88pt;
+}
+
+.phb h5 {
+  color: #000;
+}
+
+/* Tables */
+.phb table {
+  font-size: 9.84pt;
+}
+
+.phb table tbody tr:nth-child(odd) {
+  background-color: #f2f2f2;
+}
+
+/*change backing of rows*/
+/* Class Table */
+.phb .classTable {
+  border-image-source: none;
+  border: none;
+}
+
+.phb .classTable h5 {
+  font-family: Calibri;
+  font-weight: bold;
+}
+
+.phb .classTable table tbody tr:nth-child(odd) {
+  background-color: #FFF;
+}
+
+/* Description block */
+.phb .descriptive {
+  padding-left: 3px;
+  background-color: #e6e6e6;
+  border-image: none;
+  border: none;
+}
+
+.phb .descriptive p {
+  font-size: 9.84pt;
+}
+
+/* Note */
+.phb blockquote {
+  font-size:
+    9.84pt;
+  background-color: #e6e6e6;
+  border-width: 5px;
+  border-image-outset: 5px 0px;
+  box-shadow: 0px 1px 5px;
+}
+
+/* Stat Block */
+.phb hr+section blockquote {
+  background: white;
+  border: 3px solid #e6e6e6;
+  box-shadow: none;
+}
+
+.phb hr+section blockquote h3 {
+  font-family: Calibri;
+  border-bottom: 1px solid #000;
+}
+
+.phb hr+section blockquote hr+ul {
+  color: #000;
+}
+
+.phb hr+section blockquote table {
+  color: #000;
+}
+
+.phb hr+section blockquote hr {
+  background-image: url(https://gmbinder.com/images/MS0gM8Z.png)
+}
+
+/* footer */
+.phb:after {
+  display: none;
+}
+
+.phb .pageNumber {
+  color: #000;
+  font-size: 9.84pt;
+  bottom: 14mm;
+  right: 1.7cm
+}
+
+.phb .footnote {
+  color: #000;
+  font-size: 9.84pt;
+  bottom: 14mm;
+  left: 1.7cm;
+  text-align: left;
+  width: 600px;
+}
+
+.phb:nth-child(even) .pageNumber {
+  left: 18.19cm;
+}
+
+.phb:nth-child(even) .footnote {
+  left: 1.7cm;
+}
+
+.phb a {
+  color: black;
+}
+
+</style>
+
+# Chapter 4: New Equipment
+Azeroth is home to a great many intelligent races, each with their own unique set of cultures and craftsmen. From the great dwarven smiths of Ironforge to the brilliant gnomish engineers of Gadgetzan, from the bubbling cauldrons of the undead alchemists of Undercity to the durable leatherwork of the tauren of Mulgore, there are quality creations in every corner of the world.
+
+New forms of nonmagical equipment, from weapons to tools, that originate in this setting are collected in this chapter, to be used alongside the equipment presented in Chapter 5 of the Player's Handbook.
+
+## Magic and Technology
+<!-- Goblins and gnomes have shown great ingenuity in using natural materials and science to create items ranging from simple explosives to mechanical lifeforms. Magic is also rather ubiquitous; whether crafted intentionally by spellcasters and craftsmen or arising naturally from the presence or demise of powerful magical creatures, magic items practically litter the world.
+
+Commerce is the lifeblood of any world and Azeroth is no different. Goblins are shameless profiteers, willing to put themselves at risk by conducting trade across faction lines in search of wealth. Additionally, auction houses are common features in large cities, where harvested materials and discovered artifacts are sold to the highest bidder--or whoever is willing to meet the buyout price. 
+
+These elements combined make Warcraft a setting with a very active market goods both magical and mundane. A  -->
+
+Warcraft as a setting is perhaps best described as both *High Magic* and *Sword and Sorcery*, as defined on <br/> page 38 of the Dungeon Master's Guide. Mundane magic equipment is commonplace, particularly in larger cities.
+
+Elven cities such as Silvermoon and Darnassus are renowned for their streetside displays and mystical enclaves, and the floating mage city of Dalaran is said to practically overflow with arcane power. Most other major cities share this phenomena, to some extent; playing host to guilds and orders that dedicate themselves to different magical arts.
+
+Azeroth is also a world of gunpowder, steam engines, and clockwork devices. Some technological creations are so advanced that they blur the line between magic and the mundane. Gnomes and goblins search for oil and esoteric substances to power their sprawling tech-hub cities and settlements.
+
+## Starting Equipment
+When you create your character, follow the standard rules located in the Player's Handbook for determining your starting equipment. If you choose the alternative option of starting with a number of gold pieces based on your class, consult the Starting Wealth by Class table below.
+
+##### Starting Wealth by Class
+|&nbsp; Class        | Funds       | Average|
+|:-------------------|------------:|-------:|
+|&nbsp; Death Knight | 4d4 x 10 gp | 100 gp |
+|&nbsp; Demon Hunter | 2d4 x 10 gp |  50 gp |
+|&nbsp; Druid        | 2d4 x 10 gp |  50 gp |
+|&nbsp; Hunter       | 5d4 x 10 gp | 125 gp |
+|&nbsp; Mage         | 4d4 x 10 gp | 100 gp |
+|&nbsp; Monk         | 2d4 x 10 gp |  50 gp |
+|&nbsp; Paladin      | 5d4 x 10 gp | 125 gp |
+|&nbsp; Priest       | 4d4 x 10 gp | 100 gp |
+|&nbsp; Rogue        | 4d4 x 10 gp | 100 gp |
+|&nbsp; Shaman       | 5d4 x 10 gp | 125 gp |
+|&nbsp; Warlock      | 4d4 x 10 gp | 100 gp |
+|&nbsp; Warrior      | 5d4 x 10 gp | 125 gp |
+
+<div style='margin-top:-15px;'></div>
+
+\columnbreak
+
+> #### Variant: Silver Standard
+> In most D&D settings, gold is the most common coin and therefore the standard unit of wealth, aka the "gold standard." 
+>
+> While this remains true in Azeroth, the ratios of the values of coins differs. Instead of a ratio of 1:10 (Ex: 1 gp to 10 sp), the Warcraft setting uses a ratio of 1:100 (1 gp to 100 sp). Platinum and electrum pieces are not used in this system.
+>
+> In terms of roleplaying, this ensures that gold is more rarely handed out and therefore feels more rewarding to earn. The GM can choose to implement this system, aka the "silver standard," by making the following changes:
+> - Prices in terms of gp are now in sp. For example, a dagger worth 2 gp is now worth 2 sp.
+> - Prices in terms of sp are now 1/10 their original value. For example, a club worth 1 sp is now worth 1/10 sp, or 10 cp.
+> - Prices in terms of cp do not change. 
+> - The following trade goods now have new prices: 1 lb. of silver (50 sp), 1 lb. of gold (5,000 sp), and 1 lb. of platinum (500,000 sp).
+>
+> ##### Silver Standard Exchange Rates
+> Coin          | cp        | sp        | gp        |
+> --------------|----------:|----------:|----------:|
+> Copper (cp)   | 1         | 1/100     | 1/10,000  |
+> Silver (sp)   | 100       | 1         | 1/100     |
+> Gold (gp)     | 10,000    | 100       | 1         |
+
+<div style='margin-top:20px;'></div>
+
+##  New Weapons
+Azeroth is home to many cultures, some of whom have their own unique weapons. Some weapons can be described as those already existing in Chapter 5 of the Player's Handbook, such as the umbral crescent of the night elves as a scimitar.
+
+Others exist that are unique enough to require their own entry. These are intended to be general weapons and do not conform to a specific culture: the warglaive can equally apply to that wielded by blood elven demon hunters as it does troll shadow hunters, and the chakram could be either those thrown by the winged arakkoa or represent the moon glaives used by the night elven sentinels.
+
+\pagebreakNum
+
+<div class='classTable wide'>
+
+##### New Weapons
+
+|&nbsp; Name | Cost |&nbsp;&nbsp;&nbsp;&nbsp;| Damage | Weight |&nbsp;&nbsp;&nbsp;&nbsp;| Properties |
+|--------------------------------|------:|-|:---------------|------:|-|------------------------------|
+|&nbsp; *Simple Melee Weapons*          |       ||                 |       ||
+|&nbsp;&nbsp;&nbsp; Bayonet      | 2 gp  || 1d6 piercing    | 1 lb. || Special, versatile (1d8)
+|&nbsp;&nbsp;&nbsp; Knuckledusters| 2 gp  || 1d4 bludgeoning | 1 lb. || Glove, light
+|&nbsp;&nbsp;&nbsp; Scythe       | 5 gp  || 1d8 slashing    | 5 lb. || Two-handed
+|&nbsp; *Martial Melee Weapons*          |       ||                 |       ||
+|&nbsp;&nbsp;&nbsp; Battle Totem | 35 gp || 1d12 bludgeoning|35 lb. || Heavy, two-handed
+|&nbsp;&nbsp;&nbsp; Boomerang    | 25 gp || 1d6 bludgeoning | 2 lb. || Finesse, returning, thrown (range 30/120)
+|&nbsp;&nbsp;&nbsp; Chakram      | 25 gp || 1d6 slashing    | 2 lb. || Finesse, returning, thrown (range 30/120)
+|&nbsp;&nbsp;&nbsp; Greatspear   | 40 gp || 2d6 piercing    |12 lb. || Heavy, two-handed
+|&nbsp;&nbsp;&nbsp; Spiked Chain | 15 gp || 1d6 slashing    | 5 lb. || Finesse, reach, two-handed
+|&nbsp;&nbsp;&nbsp; Twinblade    | 50 gp || 1d8 slashing    | 5 lb. || Special, two-handed 
+|&nbsp;&nbsp;&nbsp; Warclaw      | 12 gp || 1d6 slashing    | 2 lb. || Glove, light
+|&nbsp;&nbsp;&nbsp; Warglaive    | 25 gp || 1d6 slashing    | 2 lb. || Light, thrown (range 20/60)
+|&nbsp; *Martial Ranged Weapons*         |       ||                 |       ||                                                       |
+|&nbsp;&nbsp;&nbsp; Blunderbuss  | 85 gp || 2d6 piercing    |10 lb. || Firearm (range 20/60), loading, two-handed  |
+|&nbsp;&nbsp;&nbsp; Bolas        | 5 gp  || —               | 1 lb. || Special, thrown (range 20/60)
+|&nbsp;&nbsp;&nbsp; Musket       | 75 gp || 1d12 piercing   |10 lb. || Firearm (range 60/240), loading, two-handed |
+|&nbsp;&nbsp;&nbsp; Net Launcher | 50 gp || —               |10 lb. || Ammunition (range 40/160), loading, special, <br/> two-handed |
+|&nbsp;&nbsp;&nbsp; Pistol       | 75 gp || 1d8 piercing    | 3 lb. || Firearm (range 30/120), loading, light      |
+
+</div>
+
+### New Weapon Properties
+New weapon properties are described here.
+
+***Firearm.*** You can use a weapon that has the firearm property to make a ranged attack only if you have ammunition to fire from the weapon. Each time you attack with the weapon, you expend one piece of ammunition. Drawing the ammunition from a bullet pouch is part of the attack (you need a free hand to load a one-handed weapon). When fired, this weapon creates a loud noise (easily heard up to 300 feet away), a small flash of light, and the smell of burnt explosives. Ammunition fired by this weapon is destroyed. If you use a weapon that has the firearm property to make a melee attack, you treat the weapon as an improvised weapon.
+
+***Glove.*** A glove weapon is worn on your hand or forearm, and you cannot be disarmed of it. Your attacks with a glove weapon count as both an unarmed strike and a weapon attack. You can hold objects, wield weapons, and cast spells with a hand fitted with a glove weapon, but you can only attack with the glove weapon if that hand is unoccupied. It takes an action to don or doff a glove weapon.
+
+***Returning.*** When you throw this weapon and miss, it returns to your hand when the attack resolves.
+
+\columnbreak
+
+<div style='margin-top:20px;'></div>
+
+> ##### Azeroth's Guns: Primitive or Modern?
+> In our world, firearms have gone through hundreds of years of development, starting from a curiosity so inaccurate, slow, and unreliable that it was only useful in massed numbers and eventually developing into the key component of modern combat. 
+> 
+> The setting of Azeroth on the other hand has a very loose definition on what level of firearms technology it utilizes. A blunderbuss can be seen alongside a sniper rifle, with the rare automatic rifles regulated to being belt-fed variants used on large siege vehicles. The setting runs on "rule of cool," with most firearms using a flintlock aesthetic with a focus on long guns over handguns (which are typically very rare).
+>
+> Following this pattern, the firearms depicted in this chapter are meant to be simplified represen&shy;tations that can be used alongside other projectile weapons like bows, crossbows, and slings. More advanced versions than these do exist within the setting, but should be regarded as more like magic items than simple equipment.
+
+\pagebreakNum
+
+### Special Weapons
+Weapons with special rules are described here.
+
+***Bayonet.*** This blade can be attached or removed from the end of a crossbow or firearm as an action, allowing it to be used it to be used as a melee weapon instead of an improvised one. In order to use the bayonet's versatile property, the attached weapon must have the two-handed property. While the most common form of bayonet is a slim blade for piercing, other forms of bayonet exist such as those that appear as axe blades or hammer heads, dealing slashing or bludgeoning damage as appropriate.
+
+***Bolas.*** A Large or smaller creature hit by a bolas is grappled until it is freed. A bolas has no effect on creatures that are formless, who are Huge or larger, or do not have limbs such as legs or wings that can be bound to immobilize them. A creature can use its action to make a DC 10 Strength check, freeing itself or another creature within its reach on a success. Dealing 5 slashing damage to the bolas (AC 10) also frees the creature without harming it, ending the effect and destroying the bolas.
+
+***Net Launcher.*** This weapon allows you to make an attack with a net at a greater distance (see chapter 5 of the Player's Handbook for more rules on the net). A net must be folded before it can be used as ammunition; folding a net takes <br/> 1 minute, after which it can be used as ammunition instead of a weapon.
+
+***Twinblade.*** This weapon has a set of twin blades on either side of its hilt. If you make an attack with it as part of the Attack action on your turn, you can use a bonus action imme&shy;diately after to make another melee attack with it. This attack deals 1d4 slashing damage on a hit, instead of 1d8.
+
+## New Adventuring Gear
+This section describes items that have special rules or require further explanation.
+
+***Banner.*** This vertical flag on a 10-foot pole is typically used to indicate the position of a commander on the battlefield and to relay their commands.
+
+***Binoculars.*** When looking at distant objects through the twin tubes of this device, they appear to be twice as close. Typical binoculars are only effective when looking at objects more than 120 feet away but less than 1/2 mile.
+
+***Bipod.*** This simple device can be attached to a crossbow or firearm, allowing it to be braced against the ground, a low wall, or other such object. You do not have disadvantage on attack rolls when firing an attached ranged weapon while prone.
+
+***Bullet Pouch.*** A watertight leather pouch or bandolier, capable of holding up to forty firearm bullets.
+
+***Buzzbox.*** This device, contained within a small backpack, allows the wearer to communicate with other buzzboxes within 5 miles of it. The device's range is reduced by dense materials. For every 3 feet of wood or dirt, 1 foot of stone, 1 inch of common metal, or thin sheet of lead, its range is halved (down to a minimum of 120 feet). 
+
+***Calculator.*** This palm-sized but bulky mechanical device can be used to perform basic trigonometry and arithmetic functions, printing the results on a thin strip of paper.
+
+\columnbreak
+
+<div class='classTable' >
+
+##### New Adventuring Gear
+
+|&nbsp; Name | Cost |&nbsp;&nbsp;&nbsp;| Weight &nbsp;|
+|----------------------------------------|------:|-|------------:|
+|&nbsp; *Ammunition*                     |       ||        &nbsp;|
+|&nbsp;&nbsp;&nbsp; Firearm bullets (40) |  1 gp ||  5 lb. &nbsp;|
+|&nbsp; Banner                           | 10 gp ||  5 lb. &nbsp;|
+|&nbsp; Binoculars                       |200 gp ||  1 lb. &nbsp;|
+|&nbsp; Bipod                            |  5 gp ||1/4 lb. &nbsp;|
+|&nbsp; Bullet pouch                     |  2 gp ||  2 lb. &nbsp;|
+|&nbsp; Buzzbox                          |2,000 gp || 10 lb. &nbsp;|
+|&nbsp; Calculator                       | 50 gp ||  1 lb. &nbsp;|
+|&nbsp; Clockwork toy                    | 50 gp ||  1 lb. &nbsp;|
+|&nbsp; Clothes, cold weather            | 10 gp ||  8 lb. &nbsp;|
+|&nbsp; Clothes, hot weather             | 10 gp ||  2 lb. &nbsp;|
+|&nbsp; Compass                          |100 gp ||1/4 lb. &nbsp;|
+|&nbsp; Dynamite (stick)                 |100 gp ||  1 lb. &nbsp;|
+|&nbsp; Firework, signal                 | 25 gp ||  1 lb. &nbsp;|
+|&nbsp; Flashlight                       | 50 gp ||  2 lb. &nbsp;|
+|&nbsp; Glowstick                        |  5 cp ||  —     &nbsp;|
+|&nbsp; Goggles                          |  1 gp ||1/2 lb. &nbsp;|
+|&nbsp; *Grenades*                       |       ||        &nbsp;|
+|&nbsp;&nbsp;&nbsp; Fragmentation        |150 gp ||  2 lb. &nbsp;|
+|&nbsp;&nbsp;&nbsp; Incendiary           |150 gp ||  2 lb. &nbsp;|
+|&nbsp;&nbsp;&nbsp; Smoke                | 25 gp ||  2 lb. &nbsp;|
+|&nbsp; *Holy Symbols*                   |       ||        &nbsp;|
+|&nbsp;&nbsp;&nbsp; Libram               | 25 gp ||  5 lb. &nbsp;|
+|&nbsp;&nbsp;&nbsp; Rush'kah             | 10 gp ||  1 lb. &nbsp;|
+|&nbsp; Lantern, electric                | 50 gp ||  1 lb. &nbsp;|
+|&nbsp; Lighter                          | 25 gp ||  —     &nbsp;|
+|&nbsp; Music Box                        | 20 gp ||  1 lb. &nbsp;|
+|&nbsp; Parachute                        |250 gp || 30 lb. &nbsp;|
+|&nbsp; Scope                            |1,000 gp ||  1 lb. &nbsp;|
+|&nbsp; Snap-o-Matic                     |1,000 gp ||  1 lb. &nbsp;|
+|&nbsp; Timepiece                        | 50 gp ||  —     &nbsp;|
+
+</div>
+
+&nbsp;&nbsp;&nbsp; ***Clockwork Toy.*** This toy is a clockwork animal, monster, or person, such as a frog, mouse, bird, dragon, or soldier. When placed on the ground, the toy moves 5 feet across the ground on each of your turns in a random direction. It makes noises as appropriate to the creature it represents.
+
+***Clothes, Cold Weather.*** Made of heavy cloth and fur, these clothes allow you to automatically succeed on saving throws against the effects of extreme cold. They provide no benefit if they are no longer dry.
+
+\pagebreakNum
+
+&nbsp;&nbsp;&nbsp; ***Clothes, Hot Weather.*** Made of thin, breezy cloth, these clothes allow you to automatically succeed on saving throws against the effects of extreme heat.
+
+***Compass.*** A simple device that always points north, unless disrupted by nearby magnetic fields. All Wisdom (Survival) checks made to determine location and direction while using a compass are made with advantage.
+
+***Dynamite.*** As an action, a creature can light a stick of dynamite and throw it at a point up to 60 feet away. Each creature within 5 feet of that point must make a DC 13 Dexterity saving throw, taking 3d6 bludgeoning damage on a failed save, or half as much damage on a successful one.
+
+A character can bind up to eight sticks together over 1 minute so they explode at the same time. Each additional stick increases the damage by 1d6 (to a maximum of 10d6) and the burst radius by 5 feet (to a maximum of 20 feet). A set of bound dynamite cannot be thrown more than 10 feet, but deals double damage to objects and structures.
+
+Dynamite can be rigged with a longer fuse to explode after a set amount of time, usually 1 to 6 rounds. Roll initiative for the dynamite. After the set number of rounds goes by, the dynamite explodes on that initiative.
+
+***Firework, Signal.*** A simple rocket that propels itself for 150 feet then explodes in a burst of colored sparks. When fired into the air, the explosion can be seen for up to 15 miles. 
+
+***Lighter.*** This small container is capable of producing a tiny flame that sheds bright light in 5-foot radius and dim light for an additional 5 feet. Using it to light a torch—or anything else with exposed fuel—takes a ***BONUS*** action.
+
+***Flashlight.*** This tube-shaped device, sometimes called an "electric torch," can be turned on or off as an action. It casts bright light in 60-foot cone and dim light for an additional 60 feet. A flashlight is powered by turning a crank on the side. Turning the crank for 10 minutes provides enough power for 8 hours.
+
+***Glowstick.*** As an action, you can light one or more glowsticks, providing bright light in a 5-foot radius and dim light for an additional 5 feet. A lit glowstick starts to fade after 8 hours, no longer illuminating its surroundings (though it still sheds enough light to be noticed in the dark for another 4 hours). Once lit, a glowstick cannot be extinguished.
+
+***Goggles.*** A set of goggles protects your eyes from wind, smoke, and other irritants. Goggles sometimes have special lenses, such as smoky glass to protect from bright lights and sparks or magnifying lenses for precision work.
+
+***Grenade, Fragmentation.*** As an action, you can throw the grenade up to 60 feet away. Each creature within 5 feet of that point must succeed on a DC 12 Dexterity saving throw or take 3d6 piercing damage.
+
+***Grenade, Incendiary.*** As an action, you can throw the grenade up to 60 feet away. Each creature within 5 feet of that point must succeed on a DC 12 Dexterity saving throw or take 1d6 fire damage and be set on fire. A creature on fire take 1d6 fire damage at the end of each of their turns unless they take an action make a DC 10 Dexterity check to extinguish the flame.
+
+***Grenade, Smoke.*** As an action, you can throw the grenade up to 60 feet away. One round after a smoke grenade lands, it emits a cloud of smoke that creates a heavily obscured area in a 20-foot radius. A moderate wind (at least 10 miles per hour) disperses the smoke in 4 rounds; a strong wind (20 or more miles per hour) disperses it in 1 round.
+
+***Lantern, Electric.*** An electric lantern has three settings, which you can switch between as an action: high, low, and off. When on the high setting, it sheds bright light in a 30-foot radius and dim light for an additional 30 feet. On the low setting, it sheds dim light for 5 feet. An electric lantern is powered by turning a crank on the side. Turning the crank for 10 minutes provides enough power for 8 hours on the high setting, or 48 hours on the low setting.
+
+***Libram.*** This book of prayers, philosophy, and holy teachings can be used as a holy symbol.
+
+***Music Box.*** When opened. this music box plays a single song at a moderate volume. The box stops playing when it reaches the song's end or when it is closed.
+
+***Parachute.*** When wearing this backpack-shaped piece of gear, you can deploy it as a reaction while falling. If deployed while at least 120 feet above the ground, your falling speed is reduced to 60 feet per round until you land, taking no damage. While falling, your size becomes one size larger for purposes of space. Once it has been used, the parachute takes 10 minutes to repack.
+
+***Rush'kah.*** This carved and painted wooden mask the size of a small shield is typically used by troll cultures as holy symbols for their spirit worship.
+
+***Scope.*** A scope can be attached to a two-handed firearm or crossbow using 1 minute. You can use your bonus action to aim through the scope, gaining disadvantage on attack rolls against targets in normal range but removing the disadvantage of attacking at long range until the beginning of your next turn.
+
+***Snap-o-matic.*** This device can be used to capture the image of whatever it is looking at and print it out on a small piece of special paper called film. When used, a small flashlight on the front of the device flashes brightly. Spare cartidges of film, each containing enough for ten snap-shots, can be bought for 1 gp each.
+
+***Spyglass.*** When looking at distant objects through the twin tubes of this device, they appear to be twice as close. Spyglasses have an adjustable range, but are usually only effective when looking at objects more than 1/2 mile away.
+
+***Timepiece.*** This pocket-sized device keeps perfect time. Wealthy gnomes and goblins are known to have elaborately decorated versions kept on a thin chain about their waist.
+
+## New Tools
+The following items can be selected as tool proficiencies in addition to the options presented in Chapter 5 of the Player's Handbook.
+
+***Engineer's tools.*** This set of artisan's tools allows you to craft and maintain a wide variety of marvels, from firearms and explosives to gadgets and constructs. <!-- ***Gunsmith's tools.*** These artisan's tools are used not only to craft firearms and their ammunition, but explosives such as dynamite and grenades. --> 
+
+***Enchanter's supplies.*** These artisan's tools are used to inspect and manipulate magic items and spells.
+
+***Hearthstone card set.*** This game pits two opponents against each other using decks of thirty constructed by each player pulled from thousands of potential cards. Each card set comes with a protective box that includes dice, the rule book, and a catalog of official cards.
+
+***Pandaren jihui board.*** This board game is designed to allow for both players to arrive at a satisfying conclusion and thus is a good way to pass the time peacefully.
+
+\pagebreakNum
+
+&nbsp;&nbsp;&nbsp; ***Suturing kit.*** This set of needles, thread, and other tools is used to stitch together flesh. The usage of this kit varies from stapling together large wounds to creating taxidermy. Corporeal undead such as the forsaken have made use of these kits to repair and replace their rotting flesh and limbs. Proficiency with this kit allows you to add your proficiency bonus to any ability checks you make to stitch flesh or even simpler materials such as cloth or leather.
+
+### Expanded Tool Descriptions
+Below are expanded descriptions of potential uses of the new tools, following the rules set forth in Chapter 2 of Xanathar's Guide to Everything.
+
+#### Enchanter's Supplies
+These supplies are used to inspect and manipulate magic items and spells.
+
+***Components.*** A set of enchanter's supplies includes several pouches of magic-infused powders and crystal shards, as well as small brushes, tweezers, a runed metal rod, and a pair of crystal lenses.
+
+***Arcana.*** Proficiency with enchanter's supplies allows you to unlock more information on Arcana checks involving magic items.
+
+***Investigation.*** When you inspect or research a magic item, your proficiency with enchanter's supplies grants additional insight.
+
+***Detect Magic.*** By closely inspecting an item for 10 minutes, your proficiency with enchanter's supplies allows you to duplicate the effects of the *identify* spell. By using your enchanter's supplies and spending 1 minute walking around an area with no more than a 30 foot radius, you can instantaneously identify any magical auras, as the *detect magic* spell.
+
+##### Enchanter's Supplies
+Activity                                | DC
+----------------------------------------|-----
+Determine whether an item is magical    | 10
+Disable a magical trap                  | Varies
+
+#### Engineer's Tools
+A set of engineer's tools allows you to craft and maintain a wide variety of marvels, from firearms and explosives to gadgets and constructs.
+
+***Components.*** Engineer's tools come in a metal box with compartments containing a plethora of springs, gears, wires, powders, and other parts, as well as a variety of hammers, screwdrivers, and wrenches.
+
+***Arcana, History.*** Your expertise lends you additional insight into firearms, explosives, and mechanical constructs or devices.
+
+***Investigation, Perception.*** You can spot clues and make deductions that others might overlook when firearms, explosives, or mechanical constructs or devices are involved in an investigation.
+
+***Repair.*** As part of a short rest, you can repair a single damaged firearm. With sufficient spare parts, you can restore 10 hit points to a mechanical construct or device for each hour of work.
+
+***Mechanical Crafting.*** You can use this tool proficiency to create mechanical items. A character can spend money to collect raw materials, which weigh 1 pound for every 50 gp spent. The GM can allow a character to make a check using the indicated skill with advantage. As part of a long rest, you can use engineer's tools to make twenty firearm bullets or one stick of dynamite, electric lantern, flashlight, grenade, music box, scope, or spyglass. Subtract half the value of the created item from the total gp worth of raw materials you are carrying.
+
+##### Engineer's Tools
+Activity                                | DC
+----------------------------------------|-----
+Craft bullets using an unusual material | 15
+Disarm an explosive                     | Varies
+
+
+<div class='classTable' >
+
+##### New Tools
+
+|&nbsp; Name | Cost |&nbsp;&nbsp;&nbsp;| Weight &nbsp;|
+|----------------------------------------|------:|-|------------:|
+|&nbsp; *Artisan's Tools*                |       ||        &nbsp;|
+|&nbsp;&nbsp;&nbsp; Engineer's Tools     | 50 gp || 15 lb. &nbsp;|
+|&nbsp;&nbsp;&nbsp; Enchanter's Supplies | 30 gp ||  5 lb. &nbsp;|
+|&nbsp; *Gaming Sets*                    |       ||        &nbsp;|
+|&nbsp;&nbsp;&nbsp; Hearthstone card set |  5 gp ||  —     &nbsp;|
+|&nbsp;&nbsp;&nbsp; Pandaren jihui board |  5 gp ||  2 lb. &nbsp;|
+|&nbsp; *Musical Instruments*            |       ||        &nbsp;|
+|&nbsp;&nbsp;&nbsp; War Drums            | 50 gp || 20 lb. &nbsp;|
+|&nbsp; Suturing Kit                     | 25 gp ||  3 lb. &nbsp;|
+
+</div>
+
