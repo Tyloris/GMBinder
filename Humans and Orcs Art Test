@@ -1,0 +1,799 @@
+<style>
+/* GLOBAL FORMATTING  */
+
+  /* Resize page to international A4 */
+  .phb {
+    width: 210mm;
+    height: 296.8mm;
+  }
+  .phb:after { content: ""; }
+
+/* Temporary Fix for heading issues */
+    .phb p{ line-height: 15px; } 
+    .phb blockquote p{ line-height: 14px; } 
+    .phb h2{ line-height: 26px; } 
+    .phb h3{ line-height: 19px; } 
+    .phb h4{ line-height: 15px; padding-bottom: 3px; } 
+    .phb h5{ line-height: 17px; } 
+    th, td { line-height: 14px; }
+
+
+/* TABLE OF CONTENTS  */
+
+  /* toc specifically wants black text. This resets the headers*/
+  .toc a {
+    color: inherit !important;
+  }
+  /* Allow dot leaders to fill remaining space but not overlap */
+  .toc li span:nth-child(2) {
+    width: auto;
+    overflow: hidden;
+    white-space: nowrap;
+    display: block;
+  }
+  .toc li span:nth-child(2):after {
+    font-family: BookSanity;
+    font-size: 0.317cm;
+    font-weight: normal;
+    color: black;
+    content:
+      " ........................................"
+      "........................................."
+      ".........................................";
+    }
+
+  /* Style TOC page numbers*/
+  .toc li span:first-child {
+    float: right;
+    font-family: BookSanity;
+    font-size: 0.317cm;
+    font-weight: normal;
+    color: black;
+    margin-left: 1px;
+  }
+
+  /* Adjust TOC H3 styles */
+  .toc li h3 span:nth-child(2):after {
+  	content: " ";
+  }
+  .toc li h3 {
+    margin-bottom: 4px !important;
+    margin-top: 10px !important;
+    line-height: initial !important;
+  }
+  .toc li h3 span:first-child {
+  	line-height: 1.8em !important;
+  }
+
+  /* Reduce TOC list indentation*/
+  .toc ul ul {
+  	margin-left: 10px !important;
+  }
+  .toc>ul>li {
+    margin-bottom: initial !important;
+  }
+
+
+/* TABLES AND BLOCKS */
+
+  /* Clear internal padding and add gap above for green note blocks*/
+  .phb blockquote {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .phb blockquote { margin-top: 1em;
+  }
+
+
+/* INK BLOT STYLES */
+
+  /* Root style for inkblots. Use alone, or together with
+  one of the inkb lotstyle classes below. Essentially:
+  <img url='{url}' class='inkblot inkblot-blue' />
+  */
+  .inkblot {
+    position: absolute;
+    mix-blend-mode: multiply;
+    opacity: 0.6;
+  }
+
+  .inkblot-blue {
+    filter: hue-rotate(190deg) saturate(120%)
+  }
+
+  .inkblot-green {
+    filter: hue-rotate(120deg)
+  }
+
+/* PAGE STYLE */
+
+   /* Background */
+     .phb{ background-image: url('https://gmbinder.com/images/KN1O92T.png') }
+     .phb{ background-size: cover }
+
+   /* Notes */
+     .phb section blockquote {background-color: #f6e5d4}
+     .phb hr + section blockquote tr:nth-child(odd) td {background-color: transparent;}
+
+   /* Tables */
+     table tr:nth-child(odd) td {background-color: #cccccc}
+
+   /* Footer */
+     .phb .pageNumber {color: rgba(0, 0, 0, 0.5)}
+     .phb .footnote {color: rgba(0, 0, 0, 0.5)}
+     .phb:nth-child(odd):after{ 
+       content          : '';
+       position         : absolute;
+       bottom           : -7px;
+       left             : 10px;
+       z-index          : -1;
+       height           : 336px;
+       width            : 100%;
+       background-image : url('https://www.gmbinder.com/images/bNTz1nk.png');
+       background-size  : cover;
+   }
+
+   .phb:nth-child(even):after{ 
+       content          : '';
+       position         : absolute;
+       bottom           : -7px;
+       left             : -10px;
+       z-index          : -1;
+       height           : 336px;
+       width            : 100%;
+       background-image : url('https://www.gmbinder.com/images/6NCzAN0.png');
+       background-size  : cover;
+   }
+
+   /* Page Number */
+   .phb .pageNumber{
+       position   : absolute;
+       bottom     : 30px;
+       width      : 50px;
+       text-align : center;
+   }
+   .phb:nth-child(even) .pageNumber{
+       left      : 12px;
+   }
+   .phb:nth-child(odd) .pageNumber{
+       right      : 12px;
+   }
+
+   .phb .pageNumber.auto{
+       position   : absolute;
+       bottom     : 41px;
+       width      : 50px;
+       text-align : center;
+   }
+   .phb:nth-child(even) .pageNumber.auto{
+       left      : 12px;
+   }
+   .phb:nth-child(odd) .pageNumber.auto{
+       right      : 12px;
+   }
+
+/* FRONT PAGE STYLES */
+
+  .cover-header-container {
+    display: block;
+    position: absolute;
+    width: 100%;
+    top: 80px;
+    left: 0;
+    right: 0;
+    clear: both;
+  }
+
+  .cover-header-logo {
+    display: block;
+    width: 700px;
+    margin: auto;
+  }
+
+  .cover-header-divider {
+    display: block;
+    width: 580px;
+    margin: -12px auto -6px;
+  }
+
+  .cover-header-title {
+    display: block;
+    width: 700px;
+    margin: auto;
+    color: white;
+    font-family: NodestoCaps,nodesto,sans-serif;
+    font-weight: normal;
+    font-size: 72px;
+    line-height: 72px;
+    text-align: center;
+    text-shadow: 2px 2px 4px #000, -2px 2px 4px #000, 2px -2px 4px #000, -2px -2px 4px #000;
+  }
+
+  .cover-footer-container {
+    display: block;
+    position: absolute;
+    width: 100%;
+    bottom: 28px;
+    left: 0;
+    right: 0;
+    clear: both;
+  }
+
+  .cover-footer-subtitle,
+  .cover-footer-version {
+    display: block;
+    width: 500px;
+    margin: auto;
+    color: white;
+    font-family: NodestoCaps,nodesto,sans-serif;
+    font-weight: normal;
+    text-align: center;
+    text-shadow: 1px 1px 2px #000, -1px 1px 2px #000, 0px 0px 2px #000;
+  }
+  .cover-footer-subtitle {
+    font-size: 28px;
+    line-height: 28px;
+  }
+  .cover-footer-version {
+    margin-top: 16px;
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+/* STAT BLOCKS */
+  /* For creature statblocks within range (start and end must be specified),
+     don't show a background. Used for the appendix creatures */
+  .phb:nth-of-type(n+140):nth-of-type(-n+200) hr+section blockquote {
+    background: none;
+    border: none;
+    box-shadow: none;
+<style> .phb#p1:after { display:none; } </style>
+
+<div style='margin-top:350px;'></div>
+
+## Orc
+*To pretend the demonic corruption did not exist is to forget how dreadful the impact was. To make ourselves into victims, rather than claiming our participation in our own destruction. We chose this path, we orcs. We chose it right up until it was too late to turn back. And having made that choice, we can, with the knowledge that we have of the end of that dark and shameful road, choose not to take it.*
+<div style="text-align:Right"> 
+
+*— Warchief Thrall* &nbsp;</div>
+<div style='margin-top:-5px'></div>
+
+When the orcs were freed from the Burning Legion, they experienced a spiritual revolution as the unnatural blood&shy;lust left their bodies, connecting them with states of heart and mind that were common to their ancestors. This new generation of orcs for the most part followed Thrall as he forged the Horde through shamanism and tribal traditions.
+
+Though prone to fits of rage in warfare, orcs tend to display a curious feral grace that can rival even the finest fencing of an elven noble. The orcs of today continue to stand in drastic contrast to those that were enslaved by the Burning Legion, who embodied a bestial and diabolical force which was barely being controlled by warlock magic.
+
+### Mindful Individuals
+To orcs, prowess in battle bestows great personal honor on an individual. This notion of honor pervades every echelon of orcish culture, and the loss or gain of honor has equal consequence to all orcs regardless of their stature. 
+
+Even the naming of orcs is temporary until they have performed rites of passage; only when orcs bring honor to themselves and thus to their clan do elders grant them adult names based upon their deeds. Orcs may appear quick to anger but they are tempered by the wisdom of <br> the shamans, who are revered across Horde society.
+
+While many in the Alliance still perceive the orcs as brutish or even mindless, they have forged a complex culture embracing many occupations and many different races. No doubt Thrall's leadership aided in bringing this about, yet it is apparent that the Alliance has underesti&shy;mated the orcs' ability to construct a society that is highly influential in world affairs.
+
+\columnbreak
+
+<div style='margin-top:595px;'></div>
+
+### A Spiritual Connection
+As far back as orcish history has been recorded, shaman have been mentioned, and learning to speak with the elemental spirits of Draenor was a pivotal achievement in destiny for the orc clans. The first orcs to learn the ways of shamanism hailed from the Shadowmoon clan, but many clans claim the mythical "First Shaman" arose from their ranks, even though the truth is that no one is sure of his or her allegiance.
+
+Several orc shaman worship or at least acknowledge <br> the Earth Mother, the benevolent creator deity primarily worshipped by the tauren.
+
+### Frightful Appearance
+Orc males are massive and brutish looking creatures. Weighing in at 250 to 350 pounds and standing from 6 to 7 feet in height, they are not a small race. Even orc women tend to be only a half-foot or so shorter than most males, having broad shoulders and muscular, powerful bodies.
+
+Orcs tend to have bristly hair and beards, often black or brown in color. Their skin ranges from a light green to a dark drab olive. Eyes range in color from a fierce red to a pale blue. Orcs have broad, flat noses, tusk-like teeth jutting from their lower and sometimes upper jaws, and large, pointed ears. They favor clothes of hide, and armor and arm themselves with a variety of gear.
+
+<div class='footnote'>PART 1 | RACES</div>
+<img src='https://www.gmbinder.com/images/E086d0Y.jpg' style='position:absolute; top:-50px; right:0px; width:800px' />
+<img src='https://www.gmbinder.com/images/L60ii4e.png' style='position:absolute; top:0px; right:0px; width:900px; transform:scaley(-1)' />
+<img src='https://www.gmbinder.com/images/tPFTqoe.png' style='position:absolute; top:100px; right:0px; width:400px' />
+
+\pagebreakNum
+
+### Affiliation
+Orcs are members of the Horde and it would not exist with&shy;out them. They forged the Orcish Horde prior to the First War and the New Horde—also known as the Horde—during the Third War as the orcs made a lasting bond with races native to the continent of Kalimdor. Much of the Horde continues to be influenced by orcish culture and laws.
+
+Although most orcs are members of the Horde, there are those who chose to isolate themselves from its influence and affiliated races. These reclusive clans are rarely friendly towards the Horde or its races and some show open hostility.
+
+### Orc Names and Clans
+Most orcish names derive from words in their language that have some complex meaning or hidden significance to their families. Typically, this is the name of a favorite thing or relative. Family names don’t exist; most orcs have last names related to some great deed of heroism or honor.
+
+Orcs typically form into similarly minded groups known as clans. Each clan is lead by a chieftain and the leader of all clans is known as the Warchief, a title given to the leader of the current Horde. Some clans are ancestral and well-established, while others were established relatively recently by specific people for a specific purpose. In the latter case, loyalty is typically only held to the clan leader; once they die, the clan disperses.
+
+The clan system has largely been abolished during the reign of Thrall as the Warchief in favor of a single Horde. Still, there are some who proudly bear the name of ancient clans or follow their ways. Below are seven orc clans who have been major players in the history of both Azeroth and Draenor, though many more exist.
+<div style='margin-top:-18px;'></div>
+
+<br>**Male Names:** Grom, Thrum, Drog, Gorrum, Harg, Thurg, <br>&nbsp;&nbsp;&nbsp; Karg, Regg, Kavenk, Uketel, Thrarturg, Crurn
+<br>**Female Names:** Groma, Hargu, Igrim, Agra, Dragga, <br>&nbsp;&nbsp;&nbsp; Grima, Fehmo, Mohma, Sherge, Zuri, Orgis
+<br>**Deed Names:** Cravensmile, Steelflame, Twinthunder, <br>&nbsp;&nbsp;&nbsp; Gravepride, Aridfire, Coldbrass, Foebinder, Elfkiller
+
+#### Blackrock
+The Blackrock are a disciplined, organized, 
+<br/> and militaristic clan who boast expert smiths 
+<br/> and metalworkers who utilize the tough ore 
+<br/> from which they share their name. The 
+<br/> Blackrock shamans used elemental forges 
+<br/> and were among the first to descend into 
+<br/> using fel magic.
+
+Blackrock orcs typically have gray-hued skin from their time living under mountains. Male orcs of the Blackrock Clan never cut their hair until they come of age, at which point their head is shaved and their role in this extremely regimented society is determined.
+
+The Blackrocks follow the ways of either a mystic or warrior clan.
+
+\columnbreak
+
+#### Bleeding Hollow
+The Bleeding Hollow gain their name from the 
+<br/> ritual performed by their chieftains and elders, 
+<br/> where they ritualistically gouge out an eye in 
+<br/> exchange for visions of the future, often of the 
+<br/> time of their death. 
+
+Hailing from the jungles of old Draenor, they 
+<br/> imbue themselves with berserk fury, slather their 
+<br/> weapons in hallucinogenic venom, and stalk prey from the treetops, branding their victims' final moments with visions of pure horror.
+
+The orcs of the Bleeding Hollow follow the ways of the hunter and mystic clans.
+
+#### Frostwolf
+The Frostwolves are known for two things: their 
+<br/> prowess in single combat and their close bonds 
+<br/> with the wolves with which they share their 
+<br/> name. Though smaller than many other orc clans, 
+<br/> it is from them that the Warchief of the Horde 
+<br/> known as Thrall was descended. 
+
+No two creatures will share a stronger relation-
+<br/>ship than that of a Frostwolf orc and his or her 
+<br/> companion wolf. The two eat, sleep, and fight side by 
+<br/> side until one or both dies an honorable death. Even 
+<br/> then, sometimes not even death itself can stop a frostwolf from coming to the aid of its beloved orc.
+
+The Frostwolves follow the ways of hunter and warrior clans.
+
+#### Shadowmoon
+These highly spiritual and shamanistic orcs 
+<br/> come from Shadowmoon Valley in old Draenor, 
+<br/> whose magic was derived from the moon, earth,
+<br/> and stars. Considered to be the first shamans, a key 
+<br/> source of their power was their understanding of
+<br/> the movements of the stars and their omens. Their 
+<br/> skin was often marked with bone-white tattoos and
+<br/> secret runes used to enhance their connections to the elements and their ancestors.
+
+Despite these peaceful origins, it was the Shadowmoon chieftain Ner'zhul who led the orcs in the second invasion of Azeroth, who created so many portals on Draenor that the planet was shattered into the broken Outland, and whose spirit was twisted by the demon Kil'jaeden into becoming the Lich King. Due to his actions, very few Shadowmoon orcs remain.
+
+Orcs of the Shadowmoon clan almost exclusively follow the path of a mystic clan.
+
+#### Shattered Hand
+A relatively recently formed clan, this 
+<br/> group of outcasts and former gladiator 
+<br/> slaves gained their name both from how the 
+<br/> slaves escaped their cuffs and from the self-
+<br/> mutilation practices they sometimes perform 
+<br/> in honor of it. They were known for being 
+<br/> vicious warriors with a need to inflict pain on others.
+
+Most of those who remained on Draenor when it was shattered into Outland were corrupted further into the demonic Fel Orcs, with their chieftain Kargath Bladefist becoming the Warchief of this new Fel Horde. Those few who were trapped in Azeroth eventually formed the Order of the Shattered Hand (or just "the Hand"), a multi-racial organization of spies and assassins working for the new Horde under Thrall.
+
+The Shattered Hand follow the ways of all clans.
+
+<img src='https://www.gmbinder.com/images/4JIFFWR.png' style='position:absolute; top:660px; left:290px; width:125px' /> <!-- Icon of the Blackrock Clan -->
+<img src='https://www.gmbinder.com/images/76hRPzp.png' style='position:absolute; top:35px; right:0px; width:130px' /> <!-- Icon of the Bleeding Hollow Clan -->
+<img src='https://www.gmbinder.com/images/rBsVY8r.png' style='position:absolute; top:235px; right:-8px; width:130px' /> <!-- Icon of the Frostwolf Clan -->
+<img src='https://www.gmbinder.com/images/2tRvXMz.png' style='position:absolute; top:470px; right:-6px; width:135px' /> <!-- Icon of the Shadowmoon Clan -->
+<img src='https://www.gmbinder.com/images/TtEPYSD.png' style='position:absolute; top:770px; right:15px; width:140px' /> <!-- Icon of the Shattered Hand Clan -->
+
+\pagebreakNum
+
+#### Thunderlord
+Formed over 800 years ago, this clan gains its 
+<br/> name from an ancient chieftain who single-
+<br/> handedly defeated a giant at the pinnacle 
+<br/> of Thunder Peak. This clan is famous not 
+<br/> for their actions during the invasions of 
+<br/> Azeroth, but for being near peerless hunters 
+<br/> and masters of beasts.
+
+Unlike the Frostwolves and similar clans, the Thunderlords sought to dominate the land instead of adapting to it. They used riding wolves, rylak air support, and clefthoof beasts of burden to great effect, specializing in group tactics and coordinated assaults to take down larger prey. However this focus tended to leave them individually weak and few remain today.
+
+Thunderlords are quintessential examples of a hunter clan.
+
+#### Warsong
+The orcs of the Warsong clan were among 
+<br/> the most feared warriors of Draenor and 
+<br/> have played major roles in nearly every 
+<br/> version of the Horde. Their name comes from 
+<br/> their fearsome battle cries, the great war 
+<br/> drums they march to, and the holes carved into 
+<br/> their weapons that caused them to whistle and wail 
+<br/> when swung through the air.
+
+One of their most famous figures was Grommash "Grom" Hellscream, the first orc who drank the blood of the powerful demon Mannoroth the Destructor, which infected the orcs with his demonic taint. Grommash was a legendary warrior and chieftain, as well as mentor and chief lieutenant to Thrall during the Third War. Ultimately Grom would give his life to defeat Mannoroth, freeing the orcs from their enslavement to the Burning Legion.
+
+The Warsong clan are perhaps some of the greatest examples of an orc warrior clan.
+
+### Orc Traits
+Your orc character has the following racial traits.
+
+***Creature Type.*** You are a Humanoid. You are also considered an orc for any prerequisite or effect that requires you to be an orc.
+
+***Ability Score Increase.*** Your Strength score increases by 1, and your Constitution score increases by 1.
+
+***Age.*** Orcs mature a little faster than humans, reaching adulthood around age 14. They age noticeably faster and rarely live longer than 75 years.
+
+***Alignment.*** Orcs might not have an innate tendency toward evil, but many end up there. Evil or not, many orcs lean toward a chaotic alignment.
+
+***Size.*** Orcs are between 6 and 7 feet tall and muscularly built, averaging around 300 pounds. Your size is Medium. 
+
+***Speed.*** Your base walking speed is 30 feet. 
+
+***Hardiness.*** You have advantage on saves against being stunned or exhausted.
+
+***Relentless Endurance.*** When you are reduced to 0 hit points but not killed, you can drop to 1 hit point instead. You must then finish a long rest to use this feature again.
+
+***Savage Attacks.*** When you score a critical hit with a melee weapon attack, you can roll one of the weapon's damage dice one additional time and add it to the extra damage of the critical hit.
+
+***Languages.*** You can speak, read, and write Common and Orcish. Orcish is a harsh, grating language with hard consonants. It has no script of its own but is written in a mix of dwarven runes and common.
+
+***Clans.*** Orcs are taught different skills depending on their clan. Orcish clans are categorized into three: hunter clans, mystic clans, and warrior clans. Choose one of these clans and work with your DM to determine the significance of your chosen clan.
+
+#### Hunter Clans
+Some orc clans prefer a more stealth approach to things, hiding and waiting for the perfect time to ambush, such as the Shattered Hand clan, and the Bleeding Hollow clan. 
+
+***Ability Score Increase.*** Your Dexterity score <br> increases by 1.
+
+***Ambusher.*** You gain proficiency in the Perception and Stealth skills.
+
+***Surprise Attack.*** If you hit a creature with an attack roll, the creature takes an extra 2d6 damage if it hasn't taken a turn yet in the current combat.
+
+#### Mystic Clans
+Not many orc clans go in for the use of magic, and those that do are usually more secretive than the rest. Generally less keen on working with other clans are spend their time as a nomadic folk rather than settling in a certain area. Such clans include The Shadowmoon, and Stormreaver. 
+
+***Ability Score Increase.*** Your choice of your Intelligence or Wisdom score increases by 1.
+
+***Ancestral Call.*** You know the *guidance* cantrip. Starting at 3rd level, you can cast the *heroism* spell with this trait. Starting 5th level, you can also cast the *augury* spell with this trait, without requiring a material component.
+
+Once you cast *heroism* or *augury* with this trait, you can't cast that spell with it again until you finish a long rest. You can also cast either of those spells using any spell slots you have of the appropriate level. Intelligence, Wisdom, or Charisma is your spellcasting ability for these spells when you cast them with this trait (choose when you select this race).
+
+***Mystic Lore.*** You are proficient with the following skills: Medicine and Nature.
+
+#### Warrior Clans
+Most known orc clans go for the brute forced approach, entering combat gladly with raised weapons, hammering down everything in their way. Some of the larger clans include Warsong, Burning Blade, and the Frostwolves. 
+
+***Ability Score Increase.*** Your Strength score <br> increases by 1.
+
+***Adrenaline Rush.*** You can take the Dash action as a bonus action. You can use this trait a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest.
+
+Whenever you use this trait, you gain a number of temporary hit points equal to your proficiency bonus.
+
+***Intimidating Stature.*** You gain proficiency in the Athletics and Intimidation skills.
+
+<img src='https://www.gmbinder.com/images/mPPx1bF.png' style='position:absolute; top:40px; left:283px; width:140px' /> <!-- Icon of the Thunderlord Clan -->
+<img src='https://www.gmbinder.com/images/B7KiCAd.png' style='position:absolute; top:300px; left:290px; width:130px' /> <!-- Icon of the Warsong Clan -->
+
+\pagebreakNum
+
+<div style='margin-top:350px;'></div>
+
+## Orc
+*To pretend the demonic corruption did not exist is to forget how dreadful the impact was. To make ourselves into victims, rather than claiming our participation in our own destruction. We chose this path, we orcs. We chose it right up until it was too late to turn back. And having made that choice, we can, with the knowledge that we have of the end of that dark and shameful road, choose not to take it.*
+<div style="text-align:Right"> 
+
+*— Warchief Thrall* &nbsp;</div>
+<div style='margin-top:-5px'></div>
+
+When the orcs were freed from the Burning Legion, they experienced a spiritual revolution as the unnatural blood&shy;lust left their bodies, connecting them with states of heart and mind that were common to their ancestors. This new generation of orcs for the most part followed Thrall as he forged the Horde through shamanism and tribal traditions.
+
+Though prone to fits of rage in warfare, orcs tend to display a curious feral grace that can rival even the finest fencing of an elven noble. The orcs of today continue to stand in drastic contrast to those that were enslaved by the Burning Legion, who embodied a bestial and diabolical force which was barely being controlled by warlock magic.
+
+### Mindful Individuals
+To orcs, prowess in battle bestows great personal honor on an individual. This notion of honor pervades every echelon of orcish culture, and the loss or gain of honor has equal consequence to all orcs regardless of their stature. 
+
+Even the naming of orcs is temporary until they have performed rites of passage; only when orcs bring honor to themselves and thus to their clan do elders grant them adult names based upon their deeds. Orcs may appear quick to anger but they are tempered by the wisdom of <br> the shamans, who are revered across Horde society.
+
+While many in the Alliance still perceive the orcs as brutish or even mindless, they have forged a complex culture embracing many occupations and many different races. No doubt Thrall's leadership aided in bringing this about, yet it is apparent that the Alliance has underesti&shy;mated the orcs' ability to construct a society that is highly influential in world affairs.
+
+\columnbreak
+
+<div style='margin-top:462px;'></div>
+
+### A Spiritual Connection
+As far back as orcish history has been recorded, shaman have been mentioned, and learning to speak with the elemental spirits of Draenor was a pivotal achievement in destiny for the orc clans. The first orcs to learn the ways of shamanism hailed from the Shadowmoon clan, but many clans claim the mythical "First Shaman" arose from their ranks, even though the truth is that no one is sure of his or her allegiance.
+
+Several orc shaman worship or at least acknowledge <br> the Earth Mother, the benevolent creator deity primarily worshipped by the tauren.
+
+### Frightful Appearance
+Orc males are massive and brutish looking creatures. Weighing in at 250 to 350 pounds and standing from 6 to 7 feet in height, they are not a small race. Even orc women tend to be only a half-foot or so shorter than most males, having broad shoulders and muscular, powerful bodies.
+
+Orcs tend to have bristly hair and beards, often black or brown in color. Their skin ranges from a light green to a dark drab olive. Eyes range in color from a fierce red to a pale blue. Orcs have broad, flat noses, tusk-like teeth jutting from their lower and sometimes upper jaws, and large, pointed ears. They favor clothes of hide, and armor and arm themselves with a variety of gear.
+
+### Orc Clans
+Orcs typically form into similarly minded groups known as clans. Each clan is lead by a chieftain and the leader of all clans is known as the Warchief, a title given to the leader of the current Horde. Some clans are ancestral and well-established, while others were established relatively recently by specific people for a specific purpose. In the latter case, loyalty is typically only held to the clan leader; once they die, the clan disperses.
+
+<div class='footnote'>PART 1 | RACES</div>
+<img src='https://www.gmbinder.com/images/E086d0Y.jpg' style='position:absolute; top:-50px; right:0px; width:800px' />
+<img src='https://www.gmbinder.com/images/tPFTqoe.png' style='position:absolute; top:100px; right:0px; width:400px' />
+<img src='https://www.gmbinder.com/images/L60ii4e.png' style='position:absolute; top:0px; right:0px; width:900px; transform:scaley(-1)' />
+
+\pagebreakNum
+
+The clan system has largely been abolished during the reign of Thrall as the Warchief in favor of a single Horde. Still, there are some who proudly bear the name of ancient clans or follow their ways. Below are seven orc clans who have been major players in the history of both Azeroth and Draenor, though many more exist.
+
+#### Blackrock
+The Blackrock are a disciplined, organized, 
+<br/> and militaristic clan who boast expert smiths 
+<br/> and metalworkers who utilize the tough ore 
+<br/> from which they share their name. The 
+<br/> Blackrock shamans used elemental forges 
+<br/> and were the first to descend into using fel 
+<br/> magic during the First and Second Wars.
+
+Blackrock orcs typically have gray-hued skin from their time living under mountains. Male orcs of the Blackrock Clan never cut their hair until they come of age, at which point their head is shaved and their role in this extremely regimented society is determined.
+
+The Blackrocks follow the ways of either a mystic or warrior clan.
+
+#### Bleeding Hollow
+The Bleeding Hollow gain their name from 
+<br/> the ritual performed by their chieftains and 
+<br/> elders, where they ritualistically gouge out 
+<br/> an eye in exchange for visions of the future, 
+<br/> often of the time of their death. 
+
+Hailing from the jungles of old Draenor, they 
+<br/> imbue themselves with berserk fury, slather their 
+<br/> weapons in hallucinogenic venom, and stalk prey from the treetops, branding their victims' final moments with visions of pure horror.
+
+The orcs of the Bleeding Hollow follow the ways of the hunter and mystic clans.
+
+#### Frostwolf
+The Frostwolves are known for two things: 
+<br/> their prowess in single combat and their 
+<br/> close bonds with the wolves with which they 
+<br/> share their name. Though smaller than many 
+<br/> other orc clans, it is from them that the 
+<br/> Warchief of the Horde known as Thrall 
+<br/> was descended. 
+
+No two creatures will share a stronger relation-
+<br/>ship than that of a Frostwolf orc and his or her 
+<br/> companion wolf. The two eat, sleep, and fight side by 
+<br/> side until one or both dies an honorable death. Even 
+<br/> then, sometimes not even death itself can stop a frostwolf from coming to the aid of its beloved orc.
+
+The Frostwolves follow the ways of hunter and warrior clans.
+
+#### Shadowmoon
+These highly spiritual and shamanistic 
+<br/> orcs come from Shadowmoon Valley in old 
+<br/> Draenor, whose magic was derived from the 
+<br/> moon, earth, and stars. Considered to be the 
+<br/> first shamans, a key source of their power was 
+<br/> their understanding of the movements of the 
+<br/> stars and their omens. Their skin was often marked with bone-white tattoos and secret runes used to enhance their connections to the elements and their ancestors.
+
+Despite these peaceful origins, it was the Shadowmoon chieftain Ner'zhul who led the orcs in the second invasion of Azeroth, who created so many portals on Draenor that the planet was shattered into the broken Outland, and whose spirit was twisted by the demon Kil'jaeden into becoming the Lich King. Due to his actions, very few Shadowmoon orcs remain.
+
+Orcs of the Shadowmoon clan almost exclusively follow the path of a mystic clan.
+
+#### Shattered Hand
+A relatively recently formed clan, this 
+<br/> group of outcasts and former gladiator 
+<br/> slaves gained their name both from how the 
+<br/> slaves escaped their cuffs and from the self-
+<br/> mutilation practices they sometimes perform 
+<br/> in honor of it. They were known for being 
+<br/> vicious warriors with a need to inflict pain on others.
+
+Most of those who remained on Draenor when it was shattered into Outland were corrupted further into the demonic Fel Orcs, with their chieftain Kargath Bladefist becoming the Warchief of this new Fel Horde. Those few who were trapped in Azeroth eventually formed the Order of the Shattered Hand (or just "the Hand"), a multi-racial organization of spies and assassins working for the new Horde under Thrall.
+
+The Shattered Hand follow the ways of all clans.
+
+#### Thunderlord
+Formed over 800 years ago, this clan gains its 
+<br/> name from an ancient chieftain who single-
+<br/> handedly defeated a giant at the pinnacle 
+<br/> of Thunder Peak. This clan is famous not 
+<br/> for their actions during the invasions of 
+<br/> Azeroth, but for being near peerless hunters 
+<br/> and masters of beasts.
+
+Unlike the Frostwolves and similar clans, the Thunderlords sought to dominate the land instead of adapting to it. They used riding wolves, rylak air support, and clefthoof beasts of burden to great effect, specializing in group tactics and coordinated assaults to take down larger prey. However this focus tended to leave them individually weak and few remain today.
+
+Thunderlords are quintessential examples of a hunter clan.
+
+#### Warsong
+The orcs of the Warsong clan were among 
+<br/> the most feared warriors of Draenor and 
+<br/> have played major roles in nearly every 
+<br/> version of the Horde. Their name comes from 
+<br/> their fearsome battle cries, the great war 
+<br/> drums they march to, and the holes carved into 
+<br/> their weapons that caused them to whistle and 
+<br/> wail when swung through the air.
+
+One of their most famous figures was Grommash "Grom" Hellscream, the first orc who drank the blood of the powerful demon Mannoroth the Destructor, which infected the orcs with his demonic taint. Grommash was a legendary warrior and chieftain, as well as mentor and chief lieutenant to Thrall during the Third War. Ultimately Grom would give his life to defeat Mannoroth, freeing the orcs from their enslavement to the Burning Legion.
+
+The Warsong clan are perhaps some of the greatest examples of an orc warrior clan.
+
+<img src='https://www.gmbinder.com/images/4JIFFWR.png' style='position:absolute; top:130px; left:290px; width:125px' /> <!-- Icon of the Blackrock Clan -->
+<img src='https://www.gmbinder.com/images/76hRPzp.png' style='position:absolute; top:360px; left:288px; width:125px' /> <!-- Icon of the Bleeding Hollow Clan -->
+<img src='https://www.gmbinder.com/images/rBsVY8r.png' style='position:absolute; top:570px; left:290px; width:125px' /> <!-- Icon of the Frostwolf Clan -->
+<img src='https://www.gmbinder.com/images/2tRvXMz.png' style='position:absolute; top:820px; left:285px; width:125px' /> <!-- Icon of the Shadowmoon Clan -->
+<img src='https://www.gmbinder.com/images/TtEPYSD.png' style='position:absolute; top:160px; right:15px; width:140px' /> <!-- Icon of the Shattered Hand Clan -->
+<img src='https://www.gmbinder.com/images/mPPx1bF.png' style='position:absolute; top:450px; right:5px; width:150px' /> <!-- Icon of the Thunderlord Clan -->
+<img src='https://www.gmbinder.com/images/B7KiCAd.png' style='position:absolute; top:710px; right:5px; width:150px' /> <!-- Icon of the Warsong Clan -->
+
+\pagebreak
+
+### Affiliation
+Orcs are members of the Horde and it would not exist with&shy;out them. They forged the Orcish Horde prior to the First War and the New Horde—also known as the Horde—during the Third War as the orcs made a lasting bond with races native to the continent of Kalimdor. Much of the Horde continues to be influenced by orcish culture and laws.
+
+Although most orcs are members of the Horde, there are those who chose to isolate themselves from its influence and affiliated races. These reclusive clans are rarely friendly towards the Horde or its races and some show open hostility.
+
+### Orc Names
+Most orcish names derive from words in their language that have some complex meaning or hidden significance to their families. Typically, this is the name of a favorite thing or relative. Family names don’t exist; most orcs have last names related to some great deed of heroism or honor.
+
+<div style='margin-top:-18px;'></div>
+
+<br>**Male Names:** Grom, Thrum, Drog, Gorrum, Harg, Thurg, <br>&nbsp;&nbsp;&nbsp; Karg, Regg, Kavenk, Uketel, Thrarturg, Crurn
+<br>**Female Names:** Groma, Hargu, Igrim, Agra, Dragga, <br>&nbsp;&nbsp;&nbsp; Grima, Fehmo, Mohma, Sherge, Zuri, Orgis
+<br>**Deed Names:** Cravensmile, Steelflame, Twinthunder, <br>&nbsp;&nbsp;&nbsp; Gravepride, Aridfire, Coldbrass, Foebinder, Elfkiller
+
+### Orc Traits
+Your orc character has the following racial traits.
+
+***Creature Type.*** You are a Humanoid. You are also considered an orc for any prerequisite or effect that requires you to be an orc.
+
+***Ability Score Increase.*** Your Strength score increases by 1, and your Constitution score increases by 1.
+
+***Age.*** Orcs mature a little faster than humans, reaching adulthood around age 14. They age noticeably faster and rarely live longer than 75 years.
+
+***Alignment.*** Orcs might not have an innate tendency toward evil, but many end up there. Evil or not, many orcs lean toward a chaotic alignment.
+
+***Size.*** Orcs are between 6 and 7 feet tall and muscularly built, averaging around 300 pounds. Your size is Medium. 
+
+***Speed.*** Your base walking speed is 30 feet. 
+
+***Hardiness.*** You have advantage on saves against being stunned or exhausted.
+
+***Relentless Endurance.*** When you are reduced to 0 hit points but not killed, you can drop to 1 hit point instead. You must then finish a long rest to use this feature again.
+
+***Savage Attacks.*** When you score a critical hit with a melee weapon attack, you can roll one of the weapon's damage dice one additional time and add it to the extra damage of the critical hit.
+
+***Languages.*** You can speak, read, and write Common and Orcish. Orcish is a harsh, grating language with hard consonants. It has no script of its own but is written in a mix of dwarven runes and common.
+
+***Clans.*** Orcs are taught different skills depending on their clan. Orcish clans are categorized into three: hunter clans, mystic clans, and warrior clans. Choose one of these clans and work with your DM to determine the significance of your chosen clan.
+
+#### Hunter Clans
+Some orc clans prefer a more stealth approach to things, hiding and waiting for the perfect time to ambush, such as the Shattered Hand clan, and the Bleeding Hollow clan. 
+
+***Ability Score Increase.*** Your Dexterity score <br> increases by 1.
+
+***Ambusher.*** You gain proficiency in the Perception and Stealth skills.
+
+***Surprise Attack.*** If you hit a creature with an attack roll, the creature takes an extra 2d6 damage if it hasn't taken a turn yet in the current combat.
+
+#### Mystic Clans
+Not many orc clans go in for the use of magic, and those that do are usually more secretive than the rest. Generally less keen on working with other clans are spend their time as a nomadic folk rather than settling in a certain area. Such clans include The Shadowmoon, and Stormreaver. 
+
+***Ability Score Increase.*** Your choice of your Intelligence or Wisdom score increases by 1.
+
+***Ancestral Call.*** You know the *guidance* cantrip. Starting at 3rd level, you can cast the *heroism* spell with this trait. Starting 5th level, you can also cast the *augury* spell with this trait, without requiring a material component.
+
+Once you cast *heroism* or *augury* with this trait, you can't cast that spell with it again until you finish a long rest. You can also cast either of those spells using any spell slots you have of the appropriate level. Intelligence, Wisdom, or Charisma is your spellcasting ability for these spells when you cast them with this trait (choose when you select this race).
+
+***Mystic Lore.*** You are proficient with the following skills: Medicine and Nature.
+
+#### Warrior Clans
+Most known orc clans go for the brute forced approach, entering combat gladly with raised weapons, hammering down everything in their way. Some of the larger clans include Warsong, Burning Blade, and the Frostwolves. 
+
+***Ability Score Increase.*** Your Strength score <br> increases by 1.
+
+***Adrenaline Rush.*** You can take the Dash action as a bonus action. You can use this trait a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest.
+
+Whenever you use this trait, you gain a number of temporary hit points equal to your proficiency bonus.
+
+***Intimidating Stature.*** You gain proficiency in the Athletics and Intimidation skills.
+
+<img src='https://www.gmbinder.com/images/RjHe5sR.png' style='position:absolute; bottom:40px; right:40px; width:350px' /> <!-- Icon of Battle, the Orc Icon -->
+
+\pagebreak
+
+
+
+<div style='margin-top:546px'></div>
+
+## Human
+*No one feels he deserves it. Because no one does. It's grace, pure and simple, we are inherently unworthy, simply because we're human. Aye the elves, dwarves, and all the other races are flawed. But the Light loves us anyway. It loves us for what we sometimes can rise to in rare moments. It loves us for what we can do to help others.*
+<div style="text-align:Right"> 
+
+*— Uther the Lightbringer* &nbsp;</div>
+<div style='margin-top:-5px'></div>
+
+Human kingdoms have existed for thousand of years, and humans themselves for thousands more. Their short lives in comparison to dwarves and elves pushes them to achieve as much as they can in the years they are given. Their valor, optimism, and stubbornness have led them to build some of the greatest kingdoms on Azeroth, some of which still stand a millennium later. Whatever have pushed them down, it has only strengthened the bond between those that still stand.
+
+### A Broad Spectrum
+With their penchant for migration and conquest, humans are more physically diverse than any other race. There is no typical human. An individual can stand from 5 feet to a little over 6 feet tall and weigh from 125 to 250 pounds. Human skin shades range from nearly black to very pale, and hair colors from black to blond (curly, kinky, or straight); males might sport facial hair that is sparse or thick. Humans reach adulthood in their late teens and rarely live even a single century.
+
+\columnbreak
+
+<br>
+<div style='margin-top:448px'></div>
+
+### Variety in All Things
+Humans are the most adaptable and ambitious people among Azeroth's races. They have widely varying tastes, morals, and customs in the many different kingdoms where they have settled. When they settle though, they stay: they build cities to last for the ages, and great kingdoms that can persist for long centuries. They live fully in the present but also plan for the future, striving to leave a lasting legacy.
+
+### Proudly Standing
+Despite what atrocities have happened to them, humans remain hardy and brave, thoroughly committed to building strong societies, reinforcing their kingdoms, and reclaiming lost nations. Years of war have tempered their resolve, and they are more determined than ever before. Their value of virtue, honor and courage shine their ranks.
+
+### Faithful
+Among all human nations, the holy light is a central part of civilized society. By most it is considered the only religion and a staple of worship, respect, and honor. The religion is widely worshiped throughout Azeroth, yet humans were the first to utilize its powers in an offensive manner with the creation of paladins. Throughout their kingdoms, churches of the holy light can be found, an organization dedicated to creating a world of honor, and justice.
+
+### Affiliation
+Humans began the Alliance and it could not exist without them. Humans and orcs joined forces to face the Burning Legion years ago, but old habits returned once they dispatched the demon threat. Although the Alliance and Horde leaders bear a healthy respect for each another, old racial hatreds still stir within the hearts of their troops. 
+
+They respect the races of their alliance, and carries no ill wish against any of them. They know they are the center stone of the alliance, and that a good relationship is key.
+
+<div class='footnote'>PART 1 | RACES</div>
+<img src='https://www.gmbinder.com/images/Ke9OOwE.png' style='position:absolute; top:0px; right:-30px; width:1000px' />
+<img src='https://www.gmbinder.com/images/pbSeYXZ.png' style='position:absolute; top:50px; right:0px; width:800px; transform:scalex(-1)' />
+<img src='https://www.gmbinder.com/images/x6YvTEU.png' style='position:absolute; top:20px; right:240px; width:650px;transform:scalex(-1)' />
+
+\pagebreakNum
+
+<div style='margin-top:300px'></div>
+
+### Human Names and Ethnicities
+Having so much more variety than other cultures, humans as a whole have no typical names. Some human parents give their children names from other languages, such as Dwarven or Darnassian, but most parents give names that are linked to their region's culture or to the naming traditions of their ancestors.
+
+The material culture and physical characteristics of humans can change wildly from region to region. For example, the clothing, architecture, cuisine, music, and literature are different in the peninsula of Gilneas than in the southern kingdom of Stormwind. Human physical characteristics, though, vary according to the ancient migrations of the earliest humans, so that the humans of the Eastern Kingdoms have every possible variation of coloration and features.
+
+Seven human kingdoms and ethnic groups are widely recognized. These groups, and the typical names of their members, can be used as inspiration no matter which kingdom your human is in.
+
+#### Alterac
+Found in the Alterac mountains, Alteracis are of moderate height and muscular built, with skin hues of pale and fair skin. Their hair is usually silver or blonde, and their eye color varies widely, though light colorations are common.
+<div style='margin-top:-18px;'></div>
+
+<br>**Alteraci Names:** Alteracis generally use names taken from <br>&nbsp;&nbsp;&nbsp; the humans of Stromgarde or Lordaeron, and have no <br>&nbsp;&nbsp;&nbsp; names specific to them.
+
+#### Dalaran
+Dalaranians are slender, fair-skinned folk with brown hair that ranges from blond to almost black. Most are of moderate height and have blue or green eyes. But these traits are hardly universal. Humans of Dalaran come from far and wide across the Eastern Kingdoms to study or seek refuge within the floating city.
+<div style='margin-top:-18px;'></div>
+
+<br>**Dalaranian Names:** Dalaranians have no names specific <br>&nbsp;&nbsp;&nbsp; to them, the ethnicity of their people vary beyond mere <br>&nbsp;&nbsp;&nbsp; humans and names are used from a variety of races.
+
+#### Gilneas
+Gilneans are tall, fair to amber-skinned folk with blue or steely gray eyes. Most have hair ranging from wine-red or light brown to raven-black.
+<div style='margin-top:-18px;'></div>
+
+\columnbreak
+
+<div style='margin-top:300px'></div>
+
+<br>**Gilnean Names:** (Male) Blake, Chris, Fenegan, Gerard, <br>&nbsp;&nbsp;&nbsp; James, Sean, Sebastian, Vincent; (female) Amelia, <br>&nbsp;&nbsp;&nbsp; Ashley, Celestine, Loren, Mary, Melinda, Mia, Tess; <br>&nbsp;&nbsp;&nbsp; (surnames) Broderick, Cleese, Crowly, Godfrey, Walden
+
+#### Kul Tiras
+Native to the Kul Tiran isles, Kul Tirans are generally tall and muscular, with fair to amber skin similar to that of gilneans, brown to black hair, and light colored eyes.<div style='margin-top:-18px;'></div>
+
+<br>**Kul Tiran Names:** (Male) Cyrus, Denzel, Elijah, Herold, <br>&nbsp;&nbsp;&nbsp; Patrick, Ron, Wesley, Will; (female) Fray, Helena, Jess, <br>&nbsp;&nbsp;&nbsp; Joan, Kate, Leila, Louisa, Taylor; (surnames) Clark, <br>&nbsp;&nbsp;&nbsp; Ledger, Mueller, Page, Wellard
+
+#### Lordaeron
+Widespread along the Eastern Kingdoms northern realm, Lordaeronians are of medium height and slender built, with pale skin. Their hair and eye color varies widely, but silver or light colored hair and blue eyes are common. <div style='margin-top:-18px;'></div>
+
+<br>**Lordaeronian Names:** (Male) Alexi, Aurius, Gannon, <br>&nbsp;&nbsp;&nbsp; Menard, Norwyn, Othmar, Urias, Wallace; (female) <br>&nbsp;&nbsp;&nbsp; Arenya, Diahann, Ellaine, Illucia, Jandice, Lydie, Malina, <br>&nbsp;&nbsp;&nbsp; Merla; (surnames) Barton, Camden, Godwin, Hayden
+
+#### Stormwind
+Found within the southern region of the Eastern King-doms, Stormwindians are of moderate height and build, with skin hues ranging from tawny to fair. Their hair varies widely from blonde to brown, as does their eyes, though brown is most common.
+<div style='margin-top:-18px;'></div>
+
+<br>**Stormwindian Names:** (Male) Ander, Dungar, Harlan, <br>&nbsp;&nbsp;&nbsp; Jesper, Jocryn, Maginor, Osric, Renato; (female) Dalga, <br>&nbsp;&nbsp;&nbsp; Einris, Ilsa, Jalane, Karrina, Laurena,  Maris, Sarisse; <br>&nbsp;&nbsp;&nbsp; (surnames) Ayrole, Bolero, Cordell, Leifeld, Stanford
+
+#### Stromgarde
+Shorter in build than most other humans, Stromics have generally pale skin contrasted by brown or black hair, and dark colored eyes.
+<div style='margin-top:-18px;'></div>
+
+<br>**Stromic Names:** (Male) Adrien, Emmir, Galen, Ganar, <br>&nbsp;&nbsp;&nbsp; Thoras, Tyrreth, Urnor, Wyenas; (female) Amina, Céline, <br>&nbsp;&nbsp;&nbsp; Clarisse, Ella, Emeline, Iris, Mara, Marine; (surnames) <br>&nbsp;&nbsp;&nbsp; Brewston, Farthing, Gilbreath, Swale, Tubal
+
+<img src='https://www.gmbinder.com/images/owPHSrW.png' style='position:absolute; top:-40px; left:-75px; width:120%' />
+<img src='https://www.gmbinder.com/images/3e9S91s.png' style='position:absolute; top:180px; left:0px; width:100%; transform:scaleY(-1)' />
