@@ -1,0 +1,880 @@
+<style>
+/* GLOBAL FORMATTING  */
+
+  /* Resize page to international A4 */
+  .phb {
+    width: 210mm;
+    height: 296.8mm;
+  }
+  .phb:after { content: ""; }
+
+
+/* TABLE OF CONTENTS  */
+
+  /* toc specifically wants black text. This resets the headers*/
+  .toc a {
+    color: inherit !important;
+  }
+  /* Allow dot leaders to fill remaining space but not overlap */
+  .toc li span:nth-child(2) {
+    width: auto;
+    overflow: hidden;
+    white-space: nowrap;
+    display: block;
+  }
+  .toc li span:nth-child(2):after {
+    font-family: BookSanity;
+    font-size: 0.317cm;
+    font-weight: normal;
+    color: black;
+    content:
+      " ........................................"
+      "........................................."
+      ".........................................";
+    }
+
+  /* Style TOC page numbers*/
+  .toc li span:first-child {
+    float: right;
+    font-family: BookSanity;
+    font-size: 0.317cm;
+    font-weight: normal;
+    color: black;
+    margin-left: 1px;
+  }
+
+  /* Adjust TOC H3 styles */
+  .toc li h3 span:nth-child(2):after {
+  	content: " ";
+  }
+  .toc li h3 {
+    margin-bottom: 4px !important;
+    margin-top: 10px !important;
+    line-height: initial !important;
+  }
+  .toc li h3 span:first-child {
+  	line-height: 1.8em !important;
+  }
+
+  /* Reduce TOC list indentation*/
+  .toc ul ul {
+  	margin-left: 10px !important;
+  }
+  .toc>ul>li {
+    margin-bottom: initial !important;
+  }
+
+
+/* TABLES AND BLOCKS */
+
+  /* Clear internal padding and add gap above for green note blocks*/
+  .phb blockquote {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .phb blockquote { margin-top: 1em;
+  }
+
+
+/* INK BLOT STYLES */
+
+  /* Root style for inkblots. Use alone, or together with
+  one of the inkb lotstyle classes below. Essentially:
+  <img url='{url}' class='inkblot inkblot-blue' />
+  */
+  .inkblot {
+    position: absolute;
+    mix-blend-mode: multiply;
+    opacity: 0.6;
+  }
+
+  .inkblot-blue {
+    filter: hue-rotate(190deg) saturate(120%)
+  }
+
+  .inkblot-green {
+    filter: hue-rotate(120deg)
+  }
+
+</style>
+
+<style>
+/* Background */
+  .phb{ background-image: url('https://gmbinder.com/images/KN1O92T.png') }
+  .phb{ background-size: cover }
+
+/* Notes */
+  .phb section blockquote {background-color: #f6e5d4}
+  .phb hr + section blockquote tr:nth-child(odd) td {background-color: transparent;}
+
+/* Tables */
+  table tr:nth-child(odd) td {background-color: #cccccc}
+
+/* Footer */
+  .phb .pageNumber {color: rgba(0, 0, 0, 0.5)}
+  .phb .footnote {color: rgba(0, 0, 0, 0.5)}
+  .phb:nth-child(odd):after{ 
+    content          : '';
+    position         : absolute;
+    bottom           : -7px;
+    left             : 10px;
+    z-index          : -1;
+    height           : 336px;
+    width            : 100%;
+    background-image : url('https://www.gmbinder.com/images/bNTz1nk.png');
+    background-size  : cover;
+}
+
+.phb:nth-child(even):after{ 
+    content          : '';
+    position         : absolute;
+    bottom           : -7px;
+    left             : -10px;
+    z-index          : -1;
+    height           : 336px;
+    width            : 100%;
+    background-image : url('https://www.gmbinder.com/images/6NCzAN0.png');
+    background-size  : cover;
+}
+
+/* Page Number */
+.phb .pageNumber{
+    position   : absolute;
+    bottom     : 30px;
+    width      : 50px;
+    text-align : center;
+}
+.phb:nth-child(even) .pageNumber{
+    left      : 12px;
+}
+.phb:nth-child(odd) .pageNumber{
+    right      : 12px;
+}
+
+.phb .pageNumber.auto{
+    position   : absolute;
+    bottom     : 41px;
+    width      : 50px;
+    text-align : center;
+}
+.phb:nth-child(even) .pageNumber.auto{
+    left      : 12px;
+}
+.phb:nth-child(odd) .pageNumber.auto{
+    right      : 12px;
+}
+
+/* INK BLOT STYLES */
+
+  /* Root style for inkblots. Use alone, or together with
+  one of the inkb lotstyle classes below. Essentially:
+  <img url='{url}' class='inkblot inkblot-blue' />
+  */
+  .inkblot {
+    position: absolute;
+    mix-blend-mode: multiply;
+    opacity: 0.6;
+  }
+
+  .inkblot-blue {
+    filter: hue-rotate(190deg) saturate(120%)
+  }
+
+  .inkblot-green {
+    filter: hue-rotate(120deg)
+  }
+
+</style>
+
+<div style='margin-top:460px'></div>
+
+## Demon Hunter
+*The enemy came into our world, desiring to extinguish all life. They slaughtered our loved ones, razed our homes..  our cities. You could not stop them. So you came to me, nothing but rage and determination left, I taught you that what once tormented you could give you power.*
+
+*Now you know, no sacrifice is too great if it brings an end to the Burning Legion*
+<div style="text-align:Right"> 
+
+*— Illidan Stormrage*  </div>
+
+A lone night elf clutching a pair of curved blades, peers to the ground as enemies surround him on all sides, before leaping backwards over the heads of his enemies, swinging his swords at one of them in the process.
+
+A blood elf sprints to the distant aid of her allies, a pair of heavy warglaives in her hands, she releases the fel within, leaving a trail of fel in her path as she rushes in inhumane speed to their aid to jump on the nearest enemy.
+
+A heavily built human standing afar as his allies engage a massive demon, in two swift motions he effortlessly slings his warglaives through the air at the demon, making deep gauges in its hide before returning to his firm grasp.
+
+These hunters have sworn their life to a sacred cause, al-though their motivation may vary, demon hunters are one of Azeroths protectors, these agile hunters carry exceptio-nal skill against the foe they face. They wield both mortal strength and the devastating effects of fel magic, carrying out both with extreme precision
+
+
+### Feared and Revered
+Society often shun demon hunters. Most don't understand the sacrifice that they make, therefore, many choose to become outcasts from their societies. 
+
+
+\columnbreak
+
+<br>
+<div style='margin-top:606px;'></div>
+
+
+Eyes are commonly turned at them when they wade through towns, most distrust and fear them for what they have become.
+
+    Even though the world are untrusting of demon hunters, it matters not the the hunter themselves, cause they are protectors of the common folk against threats wishing the destruction of Azeroth, and most importantly demon. They are not righteous like paladins that fight for the Holy Light, or selfless like some rogues and warriors. They are the force who battles evil and although shunned by common folk, their aid is appreciated by experienced fighters.
+
+### Power Granted for a Price
+Demon hunters are not trained like warriors are, they are created. It is a harsh and incurable process, leaving scars on the individual that will never heal. Most who attempt to undergo the rites to become a demon hunter end up dying from the horrors of what now possess them, or kills them-selves because of what they have seen. 
+
+
+
+<div class='footnote'>PART 1 | CLASSES</div>
+<img src='https://www.gmbinder.com/images/8KgGgYA.jpg' style='position:absolute; top:0px; right:-75px; width:1100px' />
+<img src='https://www.gmbinder.com/images/kDzvP48.png' style='position:absolute; top:-40px; right:0px; width:900px' />
+<img src='https://www.gmbinder.com/images/UYHVPmU.png' style='position:absolute; top:0px; right:-160px; width:600px' />
+
+\pagebreakNum
+<div class='classTable wide'>
+
+##### Demon Hunter
+| Level | Proficiency Bonus | Chaos Die | Demonic Mutations | Arts Knowns | Features |  
+|:-----:|:-----------------:|:---------:|:---:|:-------:|:---:| 
+| 1st   | +2 | _ | _ | _ | Unarmored Defense, Spectral Sight |
+| 2nd   | +2 | 1d4 | _ | 1 | Illidari Initiation, Fel | 
+| 3rd   | +2 | 1d4 | 1 | 2 | Demonic Mark, Demonic Mutations | 
+| 4th   | +2 | 1d4 | 1 | 2 | Ability Score Improvement | 
+| 5th   | +3 | 1d6 | 1 | 2 | Extra Attack, Demon's Bite | 
+| 6th   | +3 | 1d6 | 1 | 2 | Metamorphosis | 
+| 7th   | +3 | 1d6 | 1 | 3 | Evasion |
+| 8th   | +3 | 1d6 | 2 | 3 | Ability Score Improvement | 
+| 9th   | +4 | 1d6 | 2 | 3 | Empowered Wards | 
+| 10th  | +4 | 1d6 | 2 | 3 | Demonic Mark Feature | 
+| 11th  | +4 | 1d8 | 2 | 4 | Metamorphosis Improvement, Illidari Mastery | 
+| 12th  | +4 | 1d8 | 2 | 4 | Ability Score Improvement | 
+| 13th  | +5 | 1d8 | 2 | 4 | Demonic Mark Feature | 
+| 14th  | +5 | 1d8 | 3 | 4 | Soul Cleave | 
+| 15th  | +5 | 1d8 | 3 | 4 | Revealing Gaze |
+| 16th  | +5 | 1d8 | 3 | 5 | Ability Score Improvement | 
+| 17th  | +6 | 1d10| 3 | 5 | Demonic Mark Feature | 
+| 18th  | +6 | 1d10| 3 | 5 | Demon Soul | 
+| 19th  | +6 | 1d10| 4 | 5 | Ability Score Improvement | 
+| 20th  | +6 | 1d10| 4 | 5 | True Metamorphosis |
+
+</div>
+
+At its very core of becoming a demon hunter is the con-sumption of a demon's soul in a ceremony, forever binding it to the demon hunter and suppressing it from taking control through magical inscriptions on the hunters skin, infused with fel. Finishing the binding of soul to the demon hunter by burning out their eyes with a magically imbued blade, forever binding the chaotic soul of the demon to the hunter. Other processes are done to create a demon hunter, slowly creating a fully fleshed demon hunter by removing much of who they were in their past lives.
+
+### Creating a Demon Hunter
+As you make your demon hunter character,  consider why your character decided to undergo the deadly rituals. Were your family slaughtered by demons of the Burning Legion? Did you strive for greater power through fel and how to control it? Were you full of rage and anger and wished to put it to use beyond raw strength? perhaps you went through their rituals unwillingly, and by a miracle survived the demons attempts to take control? Think of the demon hunters that put you through the rituals and did the rites on you, your relationship to them, are you angry at them for what they have done? pleased with their accomplishment?
+
+Think about what affect the transformation has done on you, physically as well as mentally. All demon hunters who survive the transformation grows horns, varying for tiny studs to massive horns stretching the length of their head. Some demon hunters grow scales on parts of their body, claws on their hands, or have entire limbs misshapen 
+
+into a crude limb of a demon being. No demon hunter goes through the rites unchanged, and no two hunters come out with the same mutations.
+
+#### Quick Build
+You can make a demon hunter quickly by following these suggestions. First, make Dexterity your highest ability score, followed by Charisma.
+
+
+## Class Features
+As a demon hunter, you gain the following class features:
+#### Hit Points
+___
+- **Hit Dice:** 1d8 per demon hunter level
+- **Hit Points at 1st Level:** 8 + your Constitution modifier
+- **Hit Points at Higher Levels:** 1d8 (or 5) + your Constitution modifier per demon hunter level after 1st
+
+\pagebreakNum
+
+#### Proficiencies
+
+- **Armor:** light armor 
+- **Weapons:** Simple weapons, martial weapons, warglaives
+- **Tools:** None
+___
+- **Saving Throws:** Dexterity, Charisma
+- **Skills:** choose two skills from Acrobatics, Arcana, Athletics, Insight, Intimidation, Perception, Stealth, Survival
+
+#### Equipment
+You start with the following equipment, in addition to the equipment granted by your background:
+- *(a)* two warglaives or *(b)* two martial weapons
+- *(a)* two daggers or *(b)* 10 darts
+- *(a)* a dungeoneer's pack or *(b)* an explorer's pack
+- a trinket from your past life
+
+### Illidari Initiation 
+*1st-level Demon Hunter feature*
+
+<div style='margin-top:-4px;'></div>
+
+You have completed your initial training and rituals to become a true demon hunter. You gain the following benefits:
+* You can speak, read and write in Eredun 
+* You have advantage on all Wisdom and Intelligence checks made against and about fiends. 
+* You appear as both humanoid and fiend (demon) to any effect that detects fiends or demons, but are not affected by those that adversely affect those creature types, like magic circle or dispel evil and good.
+You cannot be possessed by a fiend or demon.
+
+In addition, while you are wearing no armor and not wielding a shield, your AC equals 10 + your Dexterity modifier + your Charisma modifier. 
+
+### Spectral Sight
+*1st-level Demon Hunter feature*
+
+<div style='margin-top:-4px;'></div>
+
+You have ritually blinded your eyes, you eye sockets infused with magic, giving you a new sight that pierces through darkness and magic. You are immune to the blinded condition, and you can use your action to attune your senses to demonic energies. Until the end of your next turn, you know the location of any fiend within 60 feet of you that isn't behind total cover and that isn't protected from divination magic. This sense doesn't tell you anything about a creature's capabilities or identity. Alternatively, you can expend a use of Spectral Sight to cast *detect magic*.
+
+You can use this feature a number of times equal to 1 + your Charisma modifier. When you finish a long rest, you regain all expended uses. 
+
+When you reach 9th level, you can focus your vision to pierce through matter as well as magic. You can expend two uses of Spectral sight to see into and through solid matter within 30 feet. To you, solid objects within range appear transparent and don't prevent light from passing through them.
+
+This x-ray vision can penetrate 1 foot of stone, 1 inch of common metal, or up to 3 feet of wood or dirt. Thicker substances block the vision, as does a thin sheet of lead.
+
+### Fighting Style
+*2nd-level Demon Hunter feature*
+
+<div style='margin-top:-4px;'></div>
+
+You adopt a particular style of fighting as your specialty. Choose one of the following options. You can't take a Fighting Style option more than once, even if you later get to choose again.
+
+#### Dueling
+When you are wielding a melee weapon in one hand and no other weapons, you gain a +2 bonus to damage rolls with that weapon.
+
+#### Great Weapon Fighting
+When you roll a 1 or 2 on a damage die for an attack you make with a melee weapon that you are wielding with two hands, you can reroll the die and must use the new roll, even if the new roll is a 1 or a 2. The weapon must have the two-handed or versatile property for you to use this benefit.
+
+#### Hellish Warrior
+You learn two cantrips of your choice from the warlock spell list. They count as demon hunter spells for you, and Charisma is your spellcasting ability for them. Whenever you gain a level in this class, you can replace one of these cantrips with another cantrip from the warlock spell list.
+
+#### Two-Weapon Fighting
+When you engage in two-weapon fighting, you can add your ability modifier to the damage of the second attack.
+
+> #### Optional Class Features
+> See Tasha's Cauldron of Everything, Pg. 41 for additional Fighting Styles. The Blind Fighting, Superior Technique, and Unarmed Fighting styles are appropriate choices for this class.
+
+
+### Chaos Arts 
+*2nd-level Demon Hunter feature*
+
+<div style='margin-top:-4px;'></div>
+
+You learn to invoke some of the chaotic demonic energies within you at the cost of your own vitality. You have a Chaos Die, which starts as a 1d4. To invoke a Chaos Art, you roll this die and lose a number of hit points equal to the result, which cannot be reduced in any way. You can only invoke a Chaos Die once for a feature unless otherwise stated. 
+
+When a feature says you can invoke Chaos, it means you roll this die to use the feature. You know the Chaos Blade art and one additional Chaos Art. You learn more Chaos Arts as you gain demon hunter levels, as denoted in the Arts Known column of the Demon hunter table. 
+
+\pagebreakNum
+
+Whenever a feature denotes that it does Chaos damage, the damage type is based on the result of the roll. if youd roll multiple Chaos Dice for that feature, you choose which die determines the damage type. If any Chaos Dice roll to the same result, you instead choose a type from the table. 
+
+| Number rolled   | Damage Type |
+|:---:|:-----------:|
+|  1  | Acid |
+|  2  | Cold |
+|  3  | Fire |
+|  4  | Force |
+|  5  | Lightning |
+|  6  | Poison |
+|  7  | Psychic |
+|  8  | Thunder |
+|  9  | Necrotic |
+|  10 | Radiant | 
+
+Starting at 5th level, your Chaos Die increases to 1d6, and increases again at 11th level (1d8) and 17th (1d10) level. 
+
+#### Chaos Blades 
+As a bonus action, you invoke Chaos to infuse a weapon you are currently wielding with chaotic energies, which last until you finish a short or long rest. You can infuse another weapon you are currently wielding with the same bonus action by invoking Chaos an additional time. 
+
+While active, attacks from this weapon deals additional damage equal to one roll of your Chaos Die. While a weapon is imbued in this way, all its damage counts as magical. 
+
+### Demonic Mutations 
+*3rd-level Demon Hunter feature*
+
+<div style='margin-top:-4px;'></div>
+
+The demonic power within yourself has begun to mutate your body. You gain a demonic mutation, detailed at the end of the class description. When you gain certain demon hunter levels, you gain additional mutations of your choice, as shown in the demonic Mutations column of the Demon Hunter table.
+
+You only gain the base benefits of your demonic mutations. At higher levels, when you use your
+Metamorphosis feature, you can gain your mutations' Empowered Mutation benefits.
+
+### Demonic Mark
+*3rd-level Demon Hunter feature*
+
+<div style='margin-top:-4px;'></div>
+
+You bind the demon soul within you to your being for all eternity and cover your own body in magical tattoos. Choose the mark left upon you by your bound demon: Mark of Havoc, Mark of Vengeance, and Mark of Wrath, all of which are detailed at the end of the class description.
+
+Your chosen mark grants you features at 3rd level and again at 6th, 10th, 13th, and 17th level.
+
+\columnbreak
+
+### Ability Score Improvement
+When you reach 4th level, and again at 8th, 12th, 16th, and 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using your feature. 
+
+### Extra Attack
+*5th-level Demon Hunter feature*
+
+<div style='margin-top:-4px;'></div>
+
+You can attack twice, instead of once, whenever you take the Attack action on your turn. 
+
+### Demon's Bite
+*5th-level Demon Hunter feature*
+
+<div style='margin-top:-4px;'></div>
+
+If you would invoke Chaos as a part of an action, you can then immediately make one melee weapon attack as a bonus action. If you are engaged in two-weapon fighting, you can instead make two melee weapon attacks, one with each weapon. 
+
+### Metamorphosis
+*6th-level Demon Hunter feature*
+
+<div style='margin-top:-4px;'></div>
+
+You can let the demon bound within you take control. On your turn, you can as a bonus action let your bound demon morph your body with demonic features for 1 minute. While in Metamorphosis, you gain the following benefits. 
+* your creature type becomes fiend
+* You gain a number of temporary hit points equal to your demon hunter level plus your Charisma modifier. These temporary hit points only last while you are in this form.
+* Whenever you would invoke Chaos, you can roll an additional Chaos die. 
+
+Once you use Metamorphosis, you can't use it again until you finish a long rest, unless you invoke three Chaos Dice. 
+
+Starting at 11th level, you regain all expended uses of this feature on finishing a short or long rest instead.
+
+### Evasion
+*7th-level Demon Hunter feature*
+
+<div style='margin-top:-4px;'></div>
+
+Your instinctive agility lets you dodge out of the way of certain area effects, such as a blue dragon's lightning breath or a *fireball* spell. When you are subjected to an effect that allows you to make a Dexterity saving throw to take only half damage, you instead take no damage if you succeed on the saving throw, and only half damage if you fail. 
+
+### Empowered Wards
+*9th-level Demon Hunter feature*
+
+<div style='margin-top:-4px;'></div>
+
+Your demonic connection further augments your wards you. Whenever a fiend forces you to make a saving throw, you roll it with advantage, and whenever you make an Strength, Dexterity, or Constitution saving throw, you may add your Charisma modifier to the check (minimum of 1).
+
+\pagebreak
+
+### Illidari Mastery
+*11th-level Demon Hunter feature*
+
+<div style='margin-top:-4px;'></div>
+
+You have mastered combat against demons. fiends cannot roll attack rolls with advantage against you, and if you would make an attack roll against a fiend with disadvantage, you instead roll normally, as long as your target isn't hidden from you. 
+
+In addition, once per turn, when you would roll a Chaos die, you can choose to reroll and use either result. 
+
+### Revealing Gaze
+*15th-level Demon Hunter feature*
+
+<div style='margin-top:-4px;'></div>
+
+Your Spectral Sight becomes more attuned to your demonic form. You gain a blindsight of 30 feet, and by expending two uses of Spectral Sight, you can cast the *true seeing* spell on yourself without components. 
+
+### Demon Soul
+*18th-level Demon Hunter feature*
+
+<div style='margin-top:-4px;'></div>
+
+The primal fel that courses through your body has granted you extraordinary power. Any Chaos damage dealt ignores resistance to the damage type. If a creature is immune to the damage dealt by your Chaos damage, they instead take half damage, instead of no damage.
+
+Additionally, you gain an extraordinary lifespan: you are immune to any effect that would age you, and you can't die from old age.
+
+### Prepared 
+*20th-level Demon Hunter feature*
+
+<div style='margin-top:-4px;'></div>
+
+Your supernatural senses allow you to act at a moments notice. You can take two turns during the first round of any combat. You take your first turn on initiative count 30 and your second turn at your rolled initiative.
+
+In addition, whenever you roll a Chaos Die and roll the maximum amount, you can reroll it and add it to the total of the roll. 
+
+(Play into getting the benefits of Empowered Mutations here, temporarily? )
+
+## Demonic Mark 
+Each demon hunter have absorbed the soul of a demon and fights a continuous battle for control with this demon. Even though the hunter is in control, the demon within will show itself and force some of its qualities upon its demon hunter. Although demon souls are unpredictable, most of their souls fall into one of the following categories and leaving a mark of havoc, vengeance, or wrath on the demon hunter.
+
+### Mark of  Havoc 
+Havoc demon hunters unleashes the potent energy stored up within them, they are the pinnacle of close quarter fighting, harnessing the destructive powers of fel in to bolster their grasp on the battlefield. Demon hunters marked with havoc are known for their unpredictable nature, immense speed, and ability to funnel fel directly into their attacks.
+
+\columnbreak
+
+#### Momentum 
+*3rd-level Mark of Havoc feature*
+
+<div style='margin-top:-4px;'></div>
+
+You gain the Demonic Hooves Mutation, and whenever you move more than 15 feet before an attack, you have advantage on your next attack roll, until the end of your turn. You may only benefit from this feature once per turn. 
+
+#### Fel Rush 
+*3rd-level Mark of Havoc feature*
+
+<div style='margin-top:-4px;'></div>
+
+While you have your Chaos Blades active, you gain a 10 foot bonus to your movement speed, and whenever you take the Dash or Disengage action, during your movement, if you would pass a creature, you can invoke Chaos to deal damage to them during your movement. 
+
+#### Blur
+*6th-level Mark of Havoc feature*
+
+<div style='margin-top:-4px;'></div>
+
+When you take the Attack action on your turn, you can choose to gain the benefit of the Dodge action until the start of your next turn.
+
+#### Blade Dance (Replace? )
+*10th-level Mark of Havoc feature*
+
+<div style='margin-top:-4px;'></div>
+
+You manage to cover small distances in the blink of an eye, creating an intricate dance of blades and chaos. When you take the Attack action you can teleport up to 10 feet before each attack to an unoccupied space you can see.
+
+If you attack at least two different creatures with the action, you can make one additional attack with it against a third creature.
+
+#### Demonic Presence 
+*13th-level Mark of Havoc feature*
+
+<div style='margin-top:-4px;'></div>
+
+Your agility makes you seem as if you are in more places than once and as if a creature cant escape. You count as adjacent to every creature within 15 feet of you for the purposes of opportunity attacks, and whenever a creature moves out of this area, you can use your reaction to move up to half your movement toward them and make one melee weapon attack against them. 
+
+#### (17th)
+Eye Beam, Vengeful Retreat, Isolated Prey 
+
+### Mark of Vengeance 
+Vengeance demon hunters empowers themselves through the energies within, they are hunters that continue to be able to stand and fight when all else fails. By empowering themselves they are to take an enormous amount of hits and still come out victorious by the fights end.
+
+#### Thick Skin 
+*3rd-level Mark of Vengeance feature*
+
+<div style='margin-top:-4px;'></div>
+
+Your body becomes more resolute at taking punishment. You gain the Demon Skin mutation, and while you arent wearing heavy armor, you gain the following benefits:
+* Any damage you take is reduced by 2 
+* Your hit point maximum cannot be reduced by any means. 
+
+\pagebreakNum
+
+#### Fueled by Pain 
+*3rd-level Mark of Vengeance feature*
+
+<div style='margin-top:-4px;'></div>
+
+You learn to turn your pain into power. While you are below your maximum hit points, you gain one of the following benefits:
+
+* You can invoke Chaos to take the Dash or Help Action . 
+* When you make a Strength or Dexterity saving throw or check, you can invoke Chaos, take damage, and add the result to the check.
+* When you make a Constitution saving throw or check, you can invoke Chaos, take damage, and add the result to the check. 
+
+In addition, while below half your hit points maximum, you gain one the following benefits:
+* When you roll a Chaos Die, you can choose to roll the maximum instead.
+* Once per turn, you can invoke Chaos without taking damage. 
+
+#### Sundering Soul 
+*6th-level Mark of Vengeance feature*
+
+<div style='margin-top:-4px;'></div>
+
+When you drop a creature to 0 hit points while your Chaos Blade is active, you regain hit points equal to one roll of their Hit Die plus your Charisma modifier, and the next weapon attack you make with advantage. 
+
+#### Revel in Pain 
+*10th-level Mark of Vengeance feature*
+
+<div style='margin-top:-4px;'></div>
+
+Seeing or enduring pain further invigorates you. As a reaction to you or an ally falling below half their maximum hit points, you can enter into an enhanced state for 1 minute. During this time, your speed is increased by 15 feet, you have resistance to all damage, and your Chaos Blades do an additional die of damage. This state ends early if you fall unconscious.
+
+Once you use this ability, you can’t use it again until you finish a long rest.
+
+
+#### Mutual Suffering 
+*13th-level Mark of Vengeance feature*
+
+<div style='margin-top:-4px;'></div>
+
+When a creature does damage to you while you are below half your hit point maximum, you can invoke Chaos with your reaction to deal damage to that creature equal to half the damage you took. 
+#### Last Resort 
+*17th-level Mark of Vengeance feature*
+
+<div style='margin-top:-4px;'></div>
+
+You are able to draw life from your demon mark to escape death. When you are reduced to 0 hit points, you instead drop to 1 hit point and immediately use your Metamorphosis feature. While in Metamorphosis this way, you gain a number of temporary hit points equal to your demon hunter level each turn, and you are under the effect of your Revel in Pain feature. This last for the duration of Metamorphosis, or until you are not at 1 hit point. 
+
+Once you use this feature, you gain you cannot do so again until you finish a long rest. 
+
+(Alternatively, let it work off gaining levels of exhaustion and only last for 1 round)
+
+
+##### Ideas
+Fel Devastation, Ruinous Bulwark 
+
+### Wrath 
+Wrath demon hunters draws upon the chaotic energies infused on their skin, twisting the chaos into flames of fel that they can unleash upon a target from afar. They harness the destructive fel into ruthless display of power and agony. These demon hunters are rarely show the same hunger as other 'new' Illidari, they are hunters with a prey in mind, a person whom they won't stop for until they are no more.
+
+#### Fel Sorcery
+*3rd-level Mark of Wrath feature*
+
+<div style='margin-top:-4px;'></div>
+
+You can augment your combat techniques with the ability to cast spells. See chapter 10 of the Player's Handbook for the general rules of spellcasting and chapter 6 for the warlock spell list.
+
+***Cantrips.*** You learn two cantrips of your choice from the warlock spell list. You learn an additional warlock cantrip of your choice at 10th level.
+
+***Spell Slots.*** The The Mark of Wrath Spellcasting table shows how many spell slots you have. The table also shows what the level of those slots is; all of your spell slots are the same level. To cast one of your warlock spells of 1st level or higher, you must expend a spell slot. You regain all expended spell slots when you finish a short or long rest.
+
+For example, when you are 8th level, you have two 2nd-level spell slots. To cast the 1st-level spell *Witch Bolt*, you must spend one of those slots, and you cast it as a 2nd-level spell.
+
+***Spells Known of 1st Level and Higher.*** At 3rd level, you know two 1st-level spells of your choice from the warlock spell list.
+
+The Spells Known column of the Mark of Wrath Spellcasting table shows when you learn more warlock spells of your choice of 1st level and higher. A spell you choose must be of a level no higher than what’s shown in the table’s Slot Level column for your level. When you reach 11th level, for example, you learn a new warlock spell, which can be 1st, 2nd, or 3rd level.
+
+Additionally, when you gain a level in this class and mark, you can choose one of the warlock spells you know and replace it with another spell from the warlock spell list, which also must be of a level for which you have spell slots.
+
+***Spellcasting Ability.*** Charisma is your spellcasting ability for your warlock spells, so you use your Charisma whenever a spell refers to your spellcasting ability. In addition, you use your Charisma modifier when setting the saving throw DC for a warlock spell you cast and when making an attack roll with one.
+
+<div style="text-align: center">
+
+**Spell save** DC = 8 + your proficiency bonus + your Charisma modifier
+
+**Spell attack modifier** = your proficiency bonus + your Charisma modifier
+</div>
+
+    ***Spellcasting Focus.*** You can use an arcane focus as a spellcasting focus for your warlock spells.
+
+#### Felblade
+*3rd-level Mark of Wrath feature*
+
+<div style='margin-top:-4px;'></div>
+
+While you have an active Chaos Blades, you can use your weapon as a spellcasting focus for your warlock spells, and when you attack with that weapon, you can use your Charisma modifier, instead of Strength or Dexterity, for the attack and damage rolls.
+
+\pagebreakNum
+
+#### Mana Burn 
+*3rd-level Mark of Wrath feature*
+
+<div style='margin-top:-4px;'></div>
+
+You gain the Demonic Flames mutation, and when you would deal Chaos damage to a creature who can cast spells, you roll an additional Chaos die and add it to the total damage, and you regain hit points equal to half this amount.
+
+#### Sigils of Suffering 
+*6th-level Mark of Wrath feature*
+
+<div style='margin-top:-4px;'></div>
+
+Starting at 6th level, you learn to apply sigils to your foes, branding them. When you a hit a creature with a weapon attack or a demon hunter spell, you can apply one of the sigils below to them. A sigil last for 1 minute, or until you apply a new sigil. 
+
+Once applied you cannot apply a sigil again until you finish a short or long rest, or unless you invoke two Chaos Dice. 
+
+##### Sigil of Silence 
+Whenever a creature affected by this sigil attempts to cast a spell or makes a concentration check for a spell, they take one Chaos die of damage. This damage does not trigger another concentration check, but does get added to any damage that might have triggered a concentration check .  
+
+##### Sigil of Chains 
+A creature affected by this sigil cannot take reactions, and have their movement halved. In addition, whenever that creature attempts to move more than 10 feet on their turn, they must succeed on a Strength saving throw, or have their movement drop to 0 until the end of their turn and take one Chaos die of damage. 
+
+##### Sigil of Misery
+A creature affected by this sigil is more susceptible to pain. Once per turn, when they would take damage, they take additional damage equal to one roll of your Chaos die. 
+
+##### Sigil of Binding
+A creature affected by this sigil cannot take the Dash or Disengage action, and  and if the creature attempts to teleport or leave their current plane via ability, spell, or portal, they take one Chaos die of damage and must make a Wisdom saving throw. On a failure, the teleport or plane shift fails.
+
+##### Sigil of Flames
+When you hit a creature affected by this sigil with your Chaos Blades, they take an additional die of Chaos damage. 
+
+##### Sigil of Weakness
+You have advantage on weapon attack rolls against a creature affected by this sigil. 
+
+##### Sigil of Vulnerability
+A creature affected by this sigil has disadvantage against your demon hunter spells. 
+
+#### Unleashed Power
+*10th-level Mark of Wrath feature*
+
+<div style='margin-top:-4px;'></div>
+
+As a bonus action, you can regain an expended spell slot by invoking a number of Chaos Dice equal to the spell's level. You cannot use this feature to restore a spell slot with a higher slot level than you can cast through Fel Sorcery, and each time you use this feature after the first, you must invoke an additional Chaos Die.
+
+#### 14th level feature
+*13th-level Mark of Wrath feature*
+
+<div style='margin-top:-4px;'></div>
+
+You can exact revenge upon spellcasters. When you succeed on a saving throw against a spell, you can use your reaction to move up to your speed toward the caster. You can then make one weapon attack against it, provided it is within the weapon's range or reach.
+
+#### 18th level feature 
+*17th-level Mark of Wrath feature*
+
+<div style='margin-top:-4px;'></div>
+
+You can maintain two sigils at once and gain a bonus to attack rolls and saving throws equal to the number of sigils you are maintaining. 
+
+\pagebreak
+
+## Demonic Mutations 
+
+#### Demonic Claws. 
+You manifest claws, which are natural weapons for you. They count as simple weapons and deal one Chaos Die plus your ability modifier. In addition, when you make an attack with your natural weapons on your turn, you can make an additional attack with them as a bonus action. 
+
+***Empowered Mutations.*** You can now make two weapon attacks with your natural weapons when you use your bonus action.
+
+#### Demonic Eyes 
+You gain proficiency in either the Investigation or Perception skill, and you treat a result of 9 or lower on a d20 roll as a 10 made with the chosen skill.  
+
+***Empowered Mutation.*** You can see normally in both normal and magical darkness within 60 feet of you and are able to discern colors in darkness. 
+
+### Demonic Flames
+You gain a new attack option that you can use with the Attack action. This special attack is a ranged spell attack with a range of 30 feet. You are proficient with it, and you add your Charisma modifier to its attack and damage rolls. On a successful hit, this special attack deals damage equal to one Chaos Die. 
+
+When you take the Attack action and use this special attack, you can spend your bonus action to make two of these special attacks.
+
+When you gain the Extra Attack feature, this special attack can be used for any of the attacks you make as part of the Attack action.
+
+***Empowered Mutation.*** When you hit a creature with a Demonic Flame attack, the creature must succeed on a Dexterity saving throw against your Chaos save DC or have disadvantage on attack rolls until the end of their next turn as fel flames briefly wreathe their body.
+
+#### Demonic Heart
+You gain resistance from poison damage, and advantage against poisons and diseases.
+
+***Empowered Mutation.*** You cannot gain exhaustion levels, and ignore any you have while in Metamorphosis. 
+
+#### Demonic Hooves
+You gain a bonus to your movement speed equal to five times your proficiency bonus, and you may use your Dexterity instead of Strength to jump.
+
+***Empowered Mutation.*** You gain advantage on Dexterity checks and saving throws, and ignore nonmagical difficult terrain. 
+
+#### Demonic Horns
+XXXX
+
+#### Demonic Might 
+Demonic power bolsters your strength. Your carrying capacity (including maximum load and maximum lift) is
+doubled, and you have advantage on Strength checks and saving throws.
+
+***Empowered Mutation.*** Your size doubles in all dimensions, and your weight is multiplied by eight. This growth increases your size by one category. Your equipment changes size accordingly while in your possession.
+
+#### Demonic Skin
+You do not suffer adverse effects from extreme cold or heat, and your hit point maximum increase by an amount equal to your demon hunter level. 
+
+***Empowered Mutation.*** You have resistance to bludgeoning, piercing, and slashing damage. 
+
+#### Demonic Spikes
+Your body is adorned with fearsome demonic spikes. You have advantage on ability checks to start or escape grapples. When you successfully start a grapple, you can deal Chaos damage equal to your Charisma modifier to the grappled creature. When you start your turn grappling a creature or being grappled by a creature, that creature takes Chaos damage equal to your Charisma modifier. 
+
+***Empowered Mutation.*** You add your Chaos die to the Chaos damage dealt by this mutation's base benefit. Whenever a creature successfully hits you with a melee attack, they take Chaos damage equal to your Chaos die.
+
+#### Demonic Tail 
+You gain a swim speed equal to your base movement speed, and you have advantage against grapple checks or effects that would knock you prone. 
+
+***Empowered Mutation.*** Whenever you make a successful melee weapon attack against a creature one size larger than you or smaller, you can force it to make a Strength saving throw against your Chaos save DC. On a failed save, your target is knocked prone or pushed 15 feet away from you (your choice).
+
+#### Demonic Voice
+You gain proficiency in either the Deception or Persuasion skill, and you treat a result of 9 or lower on a d20 roll as a 10 when making a check with the chosen skill. 
+
+***Empowered Mutation.*** Whenever you succeed on a Charisma saving throw or check, the creature who forced it must succeed on a Charisma saving throw against your Chaos save DC or be charmed by you for 1 minute. 
+
+#### Demonic Visage
+You gain advantage on Intimidation checks, and gain advantage against effects that would frighten or charm you. 
+
+***Empowered Mutation.*** When you enter metamorphosis or score a critical hit, all creatures of your choice within 30 feet of you must succeed on a Wisdom saving throw against your Chaos save DC, or be frightened of you until you the start of your next turn. 
+
+#### Demonic Wings
+As a reaction when falling, you can manifest demonic wings suitable to for gliding. Until you land, you can slow your rate of descent to 30 feet per round. You cannot ascend while falling, but can otherwise gilde freely using your movement. When you land, you take no falling damage and can land on your feet.
+
+***Empowered Mutation.*** You gain a flying speed equal to 10 times your proficiency bonus. 
+
+
+<!-- Greater Mutation. If you move at least 20 feet in a straight
+line toward a target right before making a melee weapon
+attack against it, that attack deals additional felfire damage
+equal to your chaos die. -->
+
+\pagebreakNum
+
+## Chaos Arts
+
+#### Blur 
+You may invoke Chaos as a bonus action to warp the air around you; you are considered to be behind half cover until the start of your next turn.
+
+#### Chaos Brand
+When you hit a creature with a weapon attack, you can invoke Chaos and brand them until the start of your next turn. While branded, any damage they receive from spells is increased by one roll of your Chaos Die. 
+
+#### Chaos Nova 
+Once per turn, when you hit a creature with a weapon attack, you can invoke Chaos to force the creature to succeed on a Constitution saving throw against your Chaos save DC or gain one level of exhaustion. This exhaustion last until the creature regains hit points or until it succeeds on the Constitution saving throw, which it can reroll at the end of each of its turns. 
+
+#### CLeansed in Flames
+When you start your turn while affected by the frightened or charmed condition, you can invoke Chaos to reroll the saving throw. If your result is 4 or more, you make this saving throw with advantage. 
+
+#### Consume Magic
+When you hit a creature with a weapon attack, you can attempt to consume the residual magic on a creature. You can invoke Chaos, and if the result is equal to or greater than twice the level of the an active spell on the creature, the spell ends on them, and you gain temporary hit points equal to the 5 times the spell's level
+
+#### Deflect
+When you are targeted for an attack, you can invoke Chaos and add half the result to your AC for that attack, possibly turning a hit into a miss.  
+
+#### Disrupt
+When you hit a creature with a weapon attack, you can invoke Chaos and disrupt their ability to cast spells. Until the start of your next turn, whenever the creature attempts to cast a spell, they take one Chaos Die of damage
+
+#### Fel Enhancement
+When you make an ability check, you can invoke Chaos and add it to the result. 
+
+#### Imprison
+When you hit a humanoid, beast, or fiend with a weapon attack, you can invoke Chaos, and if the creature's CR is equal to or less than the roll, the creature is incapacitated until the start of your next turn. 
+
+#### Torment 
+As an action, you can invoke Chaos to inflict a creature you can see within 60 feet of you with perpetual torment which must make a Wisdom saving throw. On a failed save, the creature takes one Chaos die of damage, and has disadvantage on all attack rolls against targets other than you until the end of your next turn. In addition, whenever the creature attacks another creature but you, they take damage equal to your Charisma modifier.
+
+
+\pagebreak
+
+#### Old Content
+
+#### Vengeful Retreat
+Starting at 13th level, you learn to take creature advantage of moving away from your foes. Once per turn, when you would gain the benefit of the Disengage action, you may dismiss your Chaos Form to make one weapon attack as a part of that action.
+
+#### Immolation Aura
+Starting at 17th level, you can invoke an aura of fierce chaos energies inside you in your demonic form. When you use your Metamorphosis feature, and as a bonus action for its duration, you can force each creature within 10 feet to make a Dexterity saving throw (DC = 8 + prof + your Charisma modifier), taking 1d10 chaos damage on a fail, or half as much on a success.
+
+#### Demonic Knowledge
+Starting at 3rd level, you gain greater knowledge of fel and demonic forces. You gain proficiency in the Arcana skill, and whenever you would make an Intelligence or Wisdom ability check that pertains to fiends or demons, you may use your Charisma modifier for this ability check. 
+
+
+#### Sigil of Suppression
+At 13th level, you are able to suppress the magical abilities of a creature hit by your chaos flames. When you hit a creature with your Chaos Flames, you can choose to mark them with this sigil. This sigil last for 1 hour, or until you dismiss it (no action required). You can use your reaction when the creature casts a spell, creating the effects of a *counterspell* spell on the creature. You use Charisma as your spellcasting modifier for the sake of this feature, and if you need to make an ability check for this spell, you may add one Chaos Die to the check. 
+
+You can use this feature twice, and regain all expended uses when you finish a long rest. 
+
+<!-- https://dnd-5e-homebrew.tumblr.com/post/138790269566/demon-hunter-class-by-sonixinos 
+https://www.dandwiki.com/wiki/Demon_Hunter_(5e_Class)
+
+--> 
+
+
+
+
+
+___
+___
+> ## Infernal
+> *Large construct, unaligned*
+> ___
+> - **Armor Class** 17 (natural armor)
+> - **Hit Points** 178 (17d10 + 85)
+> - **Speed** 30 ft.
+> ___
+> STR|DEX|CON|INT|WIS|CHA
+> ---|---|---|---|---|---
+> 22(+6)|9(-1)|20(+5)|3(-4)|11(+0)|1(-5)
+> ___
+> - **Damage Immunities** fire, poison, psychic; bludgeoning, piercing, and slashing from nonmagical weapons that aren't adamantine
+> - **Condition Immunities** charmed, exhaustion, frightened, paralyzed, petrified, poisoned
+> - **Senses** darkvision 120 ft., passive Perception 10
+> - **Languages** understands Eredun but can't speak
+> - **Challenge** 12 (8,400 XP)
+> ___
+> ***Death Throes.*** When the infernal dies, it explodes, and each creature within 30 feet of it must make a DC 17 Dexterity saving throw, taking 28 (8d6) fire damage on a failed save, or half as much damage on a successful one. The explosion ignites flammable Objects in that area that aren't being worn or carried. 
+> 
+> ***Fire Aura.*** At the start of each of the infernal's turns, each creature within 5 feet of it takes 7 (2d6) fire damage, and flammable Objects in the aura that aren't being worn or carried Ignite. A creature that touches the infernal or hits it with a melee Attack while within 5 feet of it takes 7 (2d6) fire damage.
+> 
+> ***Illumination.***  The infernal sheds bright light in a 30-foot radius and dim light in an additional 30 feet.
+>
+> ***Meteoric Impact.*** A summoned infernal appears in the air and slams to the ground with devastating force. Each creature in a 20-foot radius of where it appears takes 3d6 bludgeoning and 2d6 fire damage. The impact sets fire to unattended flammable objects and does not damage the infernal. The ground in this area of effect becomes difficult terrain.
+> 
+> ***Immutable Form.*** The infernal is immune to any spell or effect that would alter its form.
+> 
+> ***Magic Resistance.*** The infernal has advantage on saving throws against spells and other magical effects.
+> 
+> ***Magic Weapons.*** The infernal's weapon attacks are magical.
+> 
+> ***Siege Monster:*** The infernal deals double damage to Objects and structures.
+> 
+> ### Actions
+> ***Multiattack.*** The infernal makes two slam attacks.
+> 
+> ***Slam.*** *Melee Weapon Attack:* +10 to hit, reach 5 ft., one target. *Hit:* 19 (3d8 + 6) bludgeoning damage plus 7 (2d6) fire. If the target is a creature or a flammable object, it ignites. Until a creature takes an action to douse the fire, the target takes 5 (1d10) fire damage at the start of each of its turns.
